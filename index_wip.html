@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nathan Sanchiz-Viel</title>
+<style>
+
+body {
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 40px;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration:none;
+}
+
+a, span.link {
+  color: #235191;
+}
+
+a:hover {
+  color: black;
+}
+
+a:active, span.active {
+   color: red;
+}
+
+.publication {
+  margin-bottom: 10px;
+}
+
+paper_title {
+  margin-bottom: 0px;
+}
+
+authors {
+  font-size: 12px;
+  margin-top: -5px;
+  text-wrap: nowrap;
+}
+
+conference {
+  font-size: 12px;
+  margin-top: -3px;
+  text-wrap: nowrap;
+}
+
+news {
+  text-wrap: nowrap;
+}
+
+.photo {
+  max-width: 100px; /* Adjust as needed */
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+br2 {
+  display: block; /* makes it have a width */
+  content: ""; /* clears default height */
+  margin-top: -10px; /* change this to whatever height you want it */
+}
+
+</style>
+</head>
+<body>
+
+
+
+
+<img src="photo.jpeg" alt="Photo" class="photo">
+<h1>
+  Nathan Sanchiz-Viel
+</h1>
+<p>Research Scientist</p>
+
+
+
+
+<h2>Bio</h2>
+
+<p>I am currently a Research Scientist at Mines ParisTech PSL, specializing in 3D digitalization and processing with a focus on system-oriented applications. I earned my PhD from Université de Picardie Jules Verne, under the supervision of El Mustapha Mouaddib. My doctoral research concentrated on radiometric calibration and registration of LiDAR point clouds, utilizing corrected intensity data to enhance the alignment of 3D digital twins of cultural heritage sites.
+<br>
+<br>
+Following my PhD, I completed a postdoctoral research project focused on the development of a multi-server network system for integrating LiDAR data, obstacle detection through deep learning, and SLAM algorithms. This system featured multi-service capabilities, real-time processing, and multi-stakeholder interfaces.
+<br>
+<br>
+Currently, in my second postdoc, I am working on the development of volumetric video technologies for applications in art and crafting, further expanding my expertise in innovative 3D imaging techniques.
+
+
+
+
+
+<h2>Work</h2>
+
+Volumetric Video for Art and Crafting
+
+Development of algorithms and graphics programming into a custom Vulkan-based engine to
+support volumetric video, focusing on 3D registration, reconstruction, real-time rendering of
+several depth camera sensors and 3D generation via latent diffusion.
+
+<img src="volucap.gif" width="30%" />
+
+
+Development of a multi-server network system integrating LiDAR data, obstacle detection
+through deep learning, and SLAM algorithm, with multi-service capabilities, real-time pro-
+cessing (under 50 ms), and multi-stakeholder interfacing.
+
+<img src="trainsystem.png" width="100%" />
+
+
+Point cloud radiometric calibration and registration for three-dimensional cultural
+heritage reconstruction
+
+For digitizing large-scale cultural heritage artifacts, LiDAR scanners create point clouds from
+multiple viewpoints, requiring precise registration to align them. This work uses intensity data
+from LiDAR for radiometric calibration, improving alignment by making intensity independent
+of viewpoint and enhancing point cloud correspondence.
+
+
+<div class="publication">
+  <paper_title>
+    <a
+      href="https://www.sciencedirect.com/science/article/pii/S0924271620303221">
+      Radiometric Correction of Laser Scanning Intensity Data Applied For Terrestrial Laser Scanning
+    </a>
+  </paper_title>
+  <br2>
+  <authors>
+    Nathan Sanchiz-Viel, Estelle Bretagne, El Mustapha Mouaddib, and Pascal Dassonvalle
+  </authors>
+  <br2>
+  <conference>
+    ISPRS Journal of Photogrammetry and Remote Sensing
+  </conference>
+</div>
+
+
+
+<h2>Contact</h2>
+<p>
+  nathan.sanchizviel@pm.me<br>
+</p>
+
+</body>
+</html>
