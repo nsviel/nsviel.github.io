@@ -590,28 +590,28 @@
   {
     "objectID": "fr/teaching/bigdata/index.html",
     "href": "fr/teaching/bigdata/index.html",
-    "title": "Big Data",
+    "title": "Introduction au Big Data",
     "section": "",
     "text": "Ce cours de Big Data introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets.\n\n\n\n\n\n\nPériode\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2\n\n\n\n\n\n\n\n\nCours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
   },
   {
     "objectID": "fr/teaching/bigdata/index.html#planning-indicatif",
     "href": "fr/teaching/bigdata/index.html#planning-indicatif",
-    "title": "Big Data",
+    "title": "Introduction au Big Data",
     "section": "",
     "text": "Période\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2"
   },
   {
     "objectID": "fr/teaching/bigdata/index.html#cours-magistraux",
     "href": "fr/teaching/bigdata/index.html#cours-magistraux",
-    "title": "Big Data",
+    "title": "Introduction au Big Data",
     "section": "",
     "text": "Cours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
   },
   {
     "objectID": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
     "href": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
-    "title": "Big Data",
+    "title": "Introduction au Big Data",
     "section": "",
     "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
   },
@@ -863,28 +863,28 @@
   {
     "objectID": "fr/teaching/syntheseimage/index.html",
     "href": "fr/teaching/syntheseimage/index.html",
-    "title": "Synthèse d’Images par Rendu Inverse",
+    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "",
     "text": "Cette partie du cours traite de la synthèse d’images réalistes par rendu inverse, en s’intéressant à la génération de nouvelles images à partir d’images existantes. Elle aborde d’abord des méthodes de synthèse 2D à partir d’images, telles que l’interpolation et l’extrapolation.\nLe cours introduit ensuite la photogrammétrie comme cadre permettant de produire des images réalistes à partir de reconstructions multi-vues. Il présente enfin différentes représentations pour la synthèse de vues, des nuages de points et splats aux représentations continues modernes, et en analyse les apports et les limites pour la production d’images réalistes.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\nCours 5 : HTML\nCours 6 : HTML\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nAtelier 1\nPDF\nZIP\n\n\nAtelier 2\nPDF\nZIP\n\n\nAtelier 3\nPDF\nZIP"
   },
   {
     "objectID": "fr/teaching/syntheseimage/index.html#cours",
     "href": "fr/teaching/syntheseimage/index.html#cours",
-    "title": "Synthèse d’Images par Rendu Inverse",
+    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "",
     "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\nCours 5 : HTML\nCours 6 : HTML"
   },
   {
     "objectID": "fr/teaching/syntheseimage/index.html#ateliers",
     "href": "fr/teaching/syntheseimage/index.html#ateliers",
-    "title": "Synthèse d’Images par Rendu Inverse",
+    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "",
     "text": "Sujet\nDonnées\n\n\n\n\nAtelier 1\nPDF\nZIP\n\n\nAtelier 2\nPDF\nZIP\n\n\nAtelier 3\nPDF\nZIP"
   },
   {
     "objectID": "fr/index.html",
     "href": "fr/index.html",
-    "title": "Menu",
+    "title": "Teaching",
     "section": "",
     "text": "Cours\nNiveau\n\n\n\n\nTraitement Informatique des Données\nL1\n\n\nIntroduction au Big Data\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nM1\n\n\nReconstruction 3D\nM2"
   },
