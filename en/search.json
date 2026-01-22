@@ -1,0 +1,1318 @@
+[
+  {
+    "objectID": "section/index.html",
+    "href": "section/index.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Cours\nNiveau\n\n\n\n\nTraitement Informatique des Données\nL1\n\n\nIntroduction au Big Data\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nM1\n\n\nReconstruction 3D\nM2"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#comment-analyser-des-données-réelles-sans-se-perdre-dans-le-code-ni-les-outils",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#comment-analyser-des-données-réelles-sans-se-perdre-dans-le-code-ni-les-outils",
+    "title": "Teaching",
+    "section": "Comment analyser des données réelles sans se perdre dans le code ni les outils ?",
+    "text": "Comment analyser des données réelles sans se perdre dans le code ni les outils ?"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#quest-ce-que-faire-une-analyse-de-données",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#quest-ce-que-faire-une-analyse-de-données",
+    "title": "Teaching",
+    "section": "Qu’est-ce que faire une analyse de données ?",
+    "text": "Qu’est-ce que faire une analyse de données ?"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#une-première-intuition",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#une-première-intuition",
+    "title": "Teaching",
+    "section": "Une première intuition",
+    "text": "Une première intuition\nAnalyser des données, ce n’est pas :\n\n\nappliquer une formule\nlancer une commande magique\nproduire immédiatement un résultat"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#concept-clé",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#concept-clé",
+    "title": "Teaching",
+    "section": "Concept clé",
+    "text": "Concept clé\n\nAnalyser des données, c’est transformer des données brutes\nen informations compréhensibles."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#lanalyse-comme-processus",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#lanalyse-comme-processus",
+    "title": "Teaching",
+    "section": "L’analyse comme processus",
+    "text": "L’analyse comme processus\n\nUne analyse de données, c’est :\n\n\n\n\n\n\n\nG\n\n\nA\n\nregarder les données\n\n\n\nB\n\nles transformer\n\n\n\nA-&gt;B\n\n\n\n\n\nC\n\nobserver le résultat\n\n\n\nB-&gt;C\n\n\n\n\n\nD\n\najuster\n\n\n\nC-&gt;D\n\n\n\n\n\nD-&gt;A\n\n\n\n\n\n\n\n\n\n\n\n👉 Ce cycle est itératif."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#exemples-de-transformations",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#exemples-de-transformations",
+    "title": "Teaching",
+    "section": "Exemples de transformations",
+    "text": "Exemples de transformations\n\nTransformer des données, c’est par exemple :\n\n\nsélectionner des colonnes\nfiltrer des lignes\nregrouper des valeurs\ncalculer des statistiques simples\nrésumer l’information\n\n\n\n👉 Rien de tout cela n’est automatique."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#où-intervient-le-code",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#où-intervient-le-code",
+    "title": "Teaching",
+    "section": "Où intervient le code ?",
+    "text": "Où intervient le code ?\nPour enchaîner ces transformations,\non a besoin d’un langage.\n\n👉 En data science, ce langage est très souvent Python."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#rôle-des-bibliothèques-python",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#rôle-des-bibliothèques-python",
+    "title": "Teaching",
+    "section": "Rôle des bibliothèques Python",
+    "text": "Rôle des bibliothèques Python\nEn Python, on n’écrit presque jamais tout à partir de zéro.\nOn utilise des bibliothèques, c’est-à-dire :\n\n\ndes outils spécialisés\ndéjà écrits\ntestés\nréutilisables\n\n\n\n👉 Elles permettent de se concentrer sur l’analyse."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#exemples-de-bibliothèques-vue-densemble",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#exemples-de-bibliothèques-vue-densemble",
+    "title": "Teaching",
+    "section": "Exemples de bibliothèques (vue d’ensemble)",
+    "text": "Exemples de bibliothèques (vue d’ensemble)\nSans entrer dans le détail :\n\npandas → manipuler des données tabulaires\nnumpy → calculs numériques\nmatplotlib / seaborn → visualisation\nscikit-learn → modèles simples\n\n\nChaque bibliothèque correspond à un type de transformation."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#vers-la-notion-de-pipeline",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#vers-la-notion-de-pipeline",
+    "title": "Teaching",
+    "section": "Vers la notion de pipeline",
+    "text": "Vers la notion de pipeline\n\nUne analyse complète (ou pipeline) ressemble rarement à une seule action.\n\nElle prend plutôt la forme :\n\ndonnées\nnettoyage\n\ntransformation\n\nanalyse\n\nrésultats\n\n\n\n👉 Nous verrons des exemples de pipeline"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#pipeline-définition-simple",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#pipeline-définition-simple",
+    "title": "Teaching",
+    "section": "Pipeline (définition simple)",
+    "text": "Pipeline (définition simple)\nUn pipeline est une suite d’étapes organisées\nqui transforment des données en résultats.\n\nMême données + mêmes étapes = mêmes résultats"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#environnement",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#environnement",
+    "title": "Teaching",
+    "section": "Environnement",
+    "text": "Environnement\nPour travailler sur ce processus de façon efficace,\nil faut un environnement adapté.\n\nC’est le role des notebooks"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#phrase-à-retenir",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#phrase-à-retenir",
+    "title": "Teaching",
+    "section": "Phrase à retenir",
+    "text": "Phrase à retenir\n\nAnalyser des données,\nc’est enchaîner des transformations de manière cohérente"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#pourquoi-en-data-science-on-ne-commence-presque-jamais-par-écrire-un-programme-complet",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#pourquoi-en-data-science-on-ne-commence-presque-jamais-par-écrire-un-programme-complet",
+    "title": "Teaching",
+    "section": "Pourquoi, en data science, on ne commence presque jamais par écrire un programme complet ?",
+    "text": "Pourquoi, en data science, on ne commence presque jamais par écrire un programme complet ?\n\nUn notebook sert à explorer vite (boucle courte) avant de structurer."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#sans-ça",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#sans-ça",
+    "title": "Teaching",
+    "section": "Sans ça",
+    "text": "Sans ça\n\n\ndémarrage difficile\npeu adapté à l’exploration\ndébogage lent\nrigidité face aux essais / erreurs"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#notebook-lenvironnement-de-travail-en-data",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#notebook-lenvironnement-de-travail-en-data",
+    "title": "Teaching",
+    "section": "Notebook : l’environnement de travail en data",
+    "text": "Notebook : l’environnement de travail en data"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#quest-ce-quun-notebook",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#quest-ce-quun-notebook",
+    "title": "Teaching",
+    "section": "Qu’est-ce qu’un notebook ?",
+    "text": "Qu’est-ce qu’un notebook ?\nUn notebook est un document interactif qui permet de :\n\n\nécrire du code par étapes\nexécuter ce code cellule par cellule\nvoir immédiatement les résultats\ndocumenter le raisonnement\n\n\n\nOn explore avant de structurer."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#le-notebook-environnement-dexploration-interactive",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#le-notebook-environnement-dexploration-interactive",
+    "title": "Teaching",
+    "section": "Le notebook = environnement d’exploration interactive",
+    "text": "Le notebook = environnement d’exploration interactive\nUn notebook est un fichier, le plus souvent avec l’extension :\n\n.ipynb\n\n\nCe fichier contient :\n\ndu code\ndu texte (commentaires, explications)\ndes résultats d’exécution (tableaux, graphiques, sorties)\n\n\n\nTout est enregistré au même endroit."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#architecture",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#architecture",
+    "title": "Teaching",
+    "section": "Architecture",
+    "text": "Architecture"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#ide-integrated-development-environment",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#ide-integrated-development-environment",
+    "title": "Teaching",
+    "section": "IDE (Integrated Development Environment)",
+    "text": "IDE (Integrated Development Environment)"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#integrated-development-environment",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#integrated-development-environment",
+    "title": "Teaching",
+    "section": "Integrated Development Environment",
+    "text": "Integrated Development Environment"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#integrated-development-environment-1",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#integrated-development-environment-1",
+    "title": "Teaching",
+    "section": "Integrated Development Environment",
+    "text": "Integrated Development Environment"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#integrated-development-environment-2",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#integrated-development-environment-2",
+    "title": "Teaching",
+    "section": "Integrated Development Environment",
+    "text": "Integrated Development Environment"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#jupyter-ide",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#jupyter-ide",
+    "title": "Teaching",
+    "section": "Jupyter IDE",
+    "text": "Jupyter IDE\n\nJupyter Notebook != Jupyter Lab"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#jupyter-notebook",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#jupyter-notebook",
+    "title": "Teaching",
+    "section": "Jupyter Notebook",
+    "text": "Jupyter Notebook"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#jupyter-lab",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#jupyter-lab",
+    "title": "Teaching",
+    "section": "Jupyter Lab",
+    "text": "Jupyter Lab"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#analyse-réelle-dans-un-notebook",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#analyse-réelle-dans-un-notebook",
+    "title": "Teaching",
+    "section": "Analyse réelle dans un notebook",
+    "text": "Analyse réelle dans un notebook\n\n\nCharger les données\nRegarder les premières lignes\nNettoyer progressivement\nCalculer / résumer\nVisualiser"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#ce-que-montre-un-notebook",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#ce-que-montre-un-notebook",
+    "title": "Teaching",
+    "section": "Ce que montre un notebook",
+    "text": "Ce que montre un notebook\n\nUn notebook montre :\n\n\n\nle raisonnement\nles essais\nles choix intermédiaires\n\n\n\nLe notebook est un format de raisonnement interactif"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#un-notebook-cest-loutil-pour-raccourcir-la-boucle-essai-résultat-ajustement.",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#un-notebook-cest-loutil-pour-raccourcir-la-boucle-essai-résultat-ajustement.",
+    "title": "Teaching",
+    "section": "Un notebook, c’est l’outil pour raccourcir la boucle essai → résultat → ajustement.",
+    "text": "Un notebook, c’est l’outil pour raccourcir la boucle essai → résultat → ajustement."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#pourquoi-structurer-une-analyse-en-pipeline",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#pourquoi-structurer-une-analyse-en-pipeline",
+    "title": "Teaching",
+    "section": "Pourquoi structurer une analyse en pipeline ?",
+    "text": "Pourquoi structurer une analyse en pipeline ?"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#intuition",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#intuition",
+    "title": "Teaching",
+    "section": "Intuition",
+    "text": "Intuition\nQuand on analyse des données :\n\n\non fait des allers-retours\non modifie des étapes\non recommence souvent\n\n\n\n👉 alors tu ne sais pas encore quelle analyse faire."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#phrase-à-retenir-1",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#phrase-à-retenir-1",
+    "title": "Teaching",
+    "section": "Phrase à retenir",
+    "text": "Phrase à retenir\n\nEn analyse de données,\nce n’est pas le pipeline qui compte d’abord,\nmais la question qu’il sert."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#ce-quil-faut-retenir",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#ce-quil-faut-retenir",
+    "title": "Teaching",
+    "section": "Ce qu’il faut retenir",
+    "text": "Ce qu’il faut retenir\nAujourd’hui, l’idée centrale est simple :\n\nUne analyse de données, c’est un processus.\nPas une commande magique."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#trois-repères",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#trois-repères",
+    "title": "Teaching",
+    "section": "Trois repères",
+    "text": "Trois repères\n\n\n1. On part d’une question\n2. On enchaîne des transformations cohérentes\n3. On structure le tout en pipeline\n\n\n\n👉 Le code n’est qu’un moyen de rendre ce processus efficace."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#la-règle-dor",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#la-règle-dor",
+    "title": "Teaching",
+    "section": "La règle d’or",
+    "text": "La règle d’or\n\nLa question guide le pipeline,\nle pipeline guide les transformations,\nles transformations produisent les résultats."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#ce-quon-va-faire-ensuite",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#ce-quon-va-faire-ensuite",
+    "title": "Teaching",
+    "section": "Ce qu’on va faire ensuite",
+    "text": "Ce qu’on va faire ensuite\nDans la suite du cours, on va :\n\n\nouvrir un notebook\ncharger un premier jeu de données\nconstruire un mini-pipeline (nettoyage → transformation → analyse)\n\n\n\n👉 Objectif : voir le processus “en vrai”."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/index.html#réponse-à-la-question-de-départ",
+    "href": "section/teaching/bigdata/CM/CM2/index.html#réponse-à-la-question-de-départ",
+    "title": "Teaching",
+    "section": "Réponse à la question de départ",
+    "text": "Réponse à la question de départ\n\nOn analyse des données réelles\nen partant d’une question claire,\nen structurant l’analyse en pipeline,\net en utilisant les outils comme des moyens —\njamais comme des objectifs.\n\n\n👉 En analyse de données,\nle plus important n’est pas l’outil,\nmais la question que l’on cherche à résoudre."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#transition",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#transition",
+    "title": "Teaching",
+    "section": "Transition",
+    "text": "Transition\nDans le CM2, on a posé le cadre : question → pipeline → transformations.\n\nAujourd’hui : on ouvre un dataset réel et on affronte le vrai problème.\n\n\n\nLes données ne sont pas “sales” : elles sont incompatibles avec la question."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#fil-conducteur",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#fil-conducteur",
+    "title": "Teaching",
+    "section": "Fil conducteur",
+    "text": "Fil conducteur\nTrois idées :\n\nNettoyer = définir un contrat entre la question et les données\nExplorer = tester des hypothèses (pas “regarder”)\nUn pipeline = une suite de décisions auditables (et rejouables)"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#pourquoi-le-nettoyage-est-en-réalité-une-opération-scientifique",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#pourquoi-le-nettoyage-est-en-réalité-une-opération-scientifique",
+    "title": "Teaching",
+    "section": "Pourquoi le “nettoyage” est en réalité une opération scientifique ?",
+    "text": "Pourquoi le “nettoyage” est en réalité une opération scientifique ?"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#problème",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#problème",
+    "title": "Teaching",
+    "section": "Problème",
+    "text": "Problème\nOn croit que nettoyer, c’est “corriger des erreurs”.\n\nMais dès que vous modifiez une valeur, vous faites un choix.\n\n\n👉 Un choix = une hypothèse implicite sur le monde."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#intuition",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#intuition",
+    "title": "Teaching",
+    "section": "Intuition",
+    "text": "Intuition\nNettoyer, c’est rendre explicite la compatibilité entre :\n\n\nce que la question demande\nce que les données permettent\n\n\n\n👉 On passe d’un fichier à une représentation."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#concept-clé-le-contrat-de-données",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#concept-clé-le-contrat-de-données",
+    "title": "Teaching",
+    "section": "Concept clé : le contrat de données",
+    "text": "Concept clé : le contrat de données\nNettoyer = construire un contrat minimal :\n\n\nquelles unités ? quels types ?\nquelles valeurs autorisées ?\nquelle granularité ?\nquels manquants acceptables ?\nquelles règles d’exclusion ?\n\n\n\n👉 Ce contrat dépend de la question, pas de la “beauté” du dataset."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#exemple-de-contrat-minimal",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#exemple-de-contrat-minimal",
+    "title": "Teaching",
+    "section": "Exemple de contrat minimal",
+    "text": "Exemple de contrat minimal\nPour une analyse donnée, on décide par exemple :\n\nune ligne = un individu\nune date = jour calendaire (UTC)\nâge ∈ [0, 100]\nvaleurs manquantes tolérées : ≤ 5 %\n\n👉 Ce sont des choix, pas des vérités."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#ce-que-le-contrat-exclut",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#ce-que-le-contrat-exclut",
+    "title": "Teaching",
+    "section": "Ce que le contrat exclut",
+    "text": "Ce que le contrat exclut\nUn contrat sert aussi à dire :\n\n\nce qu’on ne traite pas\nce qu’on ignore volontairement\nce qui sera discuté plus tard\n\n\n👉 Ne pas exclure = décider implicitement."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#mauvais-réflexe",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#mauvais-réflexe",
+    "title": "Teaching",
+    "section": "Mauvais réflexe",
+    "text": "Mauvais réflexe\n\n“On nettoiera plus tard.”\n\n\n👉 Sans contrat explicite,\nle nettoyage devient arbitraire."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#bon-réflexe",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#bon-réflexe",
+    "title": "Teaching",
+    "section": "Bon réflexe",
+    "text": "Bon réflexe\n\n“Pour cette question,\nvoici les hypothèses que j’accepte.”"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#à-retenir",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#à-retenir",
+    "title": "Teaching",
+    "section": "À retenir",
+    "text": "À retenir\n\nLe contrat transforme un dataset\nen objet scientifique discutable."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#question-contrat-données-analysables",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#question-contrat-données-analysables",
+    "title": "Teaching",
+    "section": "Question → Contrat → Données analysables",
+    "text": "Question → Contrat → Données analysables\n\n\n\n\n\n\n\nG\n\n\nQ\n\nQuestion\n(ce qu'on veut conclure)\n\n\n\nC\n\nContrat de données\n(types, unités, règles)\n\n\n\nQ-&gt;C\n\n\n\n\n\nD\n\nDonnées analysables\n(sous hypothèses)\n\n\n\nC-&gt;D\n\n\n\n\n\n\n\n\n\n\n\n👉 Le contrat rend les hypothèses visibles."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#phrase-à-retenir",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#phrase-à-retenir",
+    "title": "Teaching",
+    "section": "Phrase à retenir",
+    "text": "Phrase à retenir\n\nNettoyer n’est pas “faire disparaître le bruit”.\nNettoyer, c’est expliciter les hypothèses qui rendent l’analyse possible."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#comment-explorer-sans-confondre-observer-et-conclure",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#comment-explorer-sans-confondre-observer-et-conclure",
+    "title": "Teaching",
+    "section": "Comment explorer sans confondre “observer” et “conclure” ?",
+    "text": "Comment explorer sans confondre “observer” et “conclure” ?"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#problème-1",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#problème-1",
+    "title": "Teaching",
+    "section": "Problème",
+    "text": "Problème\nL’exploration est souvent vue comme :\n\n\nafficher des lignes\nfaire quelques stats\ntracer un graphique\n\n\n\n👉 Ça produit des images, pas de la compréhension."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#intuition-1",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#intuition-1",
+    "title": "Teaching",
+    "section": "Intuition",
+    "text": "Intuition\nExplorer, c’est faire du diagnostic :\n\n\ntester des hypothèses simples\ndétecter les incohérences\nrepérer les variables “dangereuses”\n\n\n\n👉 L’Analyse exploratoire des données (Exploratory Data Analysis - EDA), c’est du contrôle qualité guidé par la question."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#concept-clé-hypothèses-testables",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#concept-clé-hypothèses-testables",
+    "title": "Teaching",
+    "section": "Concept clé : hypothèses testables",
+    "text": "Concept clé : hypothèses testables\nAvant toute analyse, on peut formuler des hypothèses “faibles” :\n\n\nordres de grandeur plausibles\ndistributions attendues\ncohérences logiques (ex: âge ≥ 0)\nstabilité temporelle / géographique\n\n\n\n👉 Si une hypothèse faible échoue, la suite est suspecte."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#eda-analyse",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#eda-analyse",
+    "title": "Teaching",
+    "section": "EDA ≠ Analyse",
+    "text": "EDA ≠ Analyse\n\n\npas de conclusion finale\npas de storytelling\npas de décision métier\n\n\n👉 L’EDA prépare l’analyse,\nelle ne la remplace pas."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#hypothèses-faibles-exemples",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#hypothèses-faibles-exemples",
+    "title": "Teaching",
+    "section": "Hypothèses faibles (exemples)",
+    "text": "Hypothèses faibles (exemples)\n\n95 % des valeurs sont non manquantes\npas de doublons exacts\nordres de grandeur réalistes\npas de rupture temporelle brutale"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#quand-une-hypothèse-échoue",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#quand-une-hypothèse-échoue",
+    "title": "Teaching",
+    "section": "Quand une hypothèse échoue",
+    "text": "Quand une hypothèse échoue\nDeux options seulement :\n\n\najuster le contrat\nreformuler la question\n\n\n👉 Continuer “comme si de rien n’était” est une erreur."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#erreur-fréquente",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#erreur-fréquente",
+    "title": "Teaching",
+    "section": "Erreur fréquente",
+    "text": "Erreur fréquente\n\n“Les données sont mauvaises.”\n\n👉 Non.\nLes hypothèses étaient incorrectes ou implicites."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#à-retenir-1",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#à-retenir-1",
+    "title": "Teaching",
+    "section": "À retenir",
+    "text": "À retenir\n\nL’EDA sert à éviter\nde construire une analyse sur du sable."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#eda-comme-boucle-de-vérification",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#eda-comme-boucle-de-vérification",
+    "title": "Teaching",
+    "section": "EDA comme boucle de vérification",
+    "text": "EDA comme boucle de vérification\n\n\n\n\n\n\n\nG\n\n\nH\n\nHypothèses faibles\n(plausibilité, cohérence)\n\n\n\nT\n\nTests rapides\n(stats, contrôles, comptages)\n\n\n\nH-&gt;T\n\n\n\n\n\nU\n\nMise à jour\n(contrat, nettoyage, question)\n\n\n\nT-&gt;U\n\n\n\n\n\nU-&gt;H\n\n\n\n\n\n\n\n\n\n\n\n👉 Explorer = itérer sur des hypothèses, pas “faire des graphes”."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#phrase-à-retenir-1",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#phrase-à-retenir-1",
+    "title": "Teaching",
+    "section": "Phrase à retenir",
+    "text": "Phrase à retenir\n\nExplorer, c’est vérifier ce que vous croyez savoir sur les données —\navant de vérifier ce que vous voulez conclure."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#quest-ce-quun-pipeline-sérieux-dans-un-notebook",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#quest-ce-quun-pipeline-sérieux-dans-un-notebook",
+    "title": "Teaching",
+    "section": "Qu’est-ce qu’un pipeline “sérieux” dans un notebook ?",
+    "text": "Qu’est-ce qu’un pipeline “sérieux” dans un notebook ?"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#problème-2",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#problème-2",
+    "title": "Teaching",
+    "section": "Problème",
+    "text": "Problème\nDans un notebook, on peut vite obtenir un résultat…\n\n… sans pouvoir expliquer précisément comment on y est arrivé.\n\n\n👉 Le risque : une analyse non rejouable, non justifiable."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#intuition-2",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#intuition-2",
+    "title": "Teaching",
+    "section": "Intuition",
+    "text": "Intuition\nUn pipeline “sérieux” a trois propriétés :\n\n\nrejouable (mêmes étapes → mêmes sorties)\nlocalisable (où une décision a été prise)\nauditables (pourquoi cette règle ?)\n\n\n\n👉 Ça n’impose pas un outil : ça impose une structure."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#concept-clé-checkpoints-assertions",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#concept-clé-checkpoints-assertions",
+    "title": "Teaching",
+    "section": "Concept clé : checkpoints + assertions",
+    "text": "Concept clé : checkpoints + assertions\nDeux habitudes simples qui changent tout :\n\n\nCheckpoints : sauvegarder les états clés (après nettoyage, après transformation)\nAssertions : vérifier les invariants (types, bornes, contraintes)\n\n\n\n👉 On transforme un notebook “exploration” en notebook “preuve”."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#figure-pipeline-avec-décisions-vérifiables",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#figure-pipeline-avec-décisions-vérifiables",
+    "title": "Teaching",
+    "section": "Figure — Pipeline avec décisions vérifiables",
+    "text": "Figure — Pipeline avec décisions vérifiables\n\n\n\n\n\n\n\nG\n\n\nA\n\nChargement\n\n\n\nB\n\nContrat + contrôles\n(assertions)\n\n\n\nA-&gt;B\n\n\n\n\n\nC\n\nNettoyage\n(règles explicites)\n\n\n\nB-&gt;C\n\n\n\n\n\nD\n\nCheckpoint\n(données analysables)\n\n\n\nC-&gt;D\n\n\n\n\n\nC-&gt;D\n\n\n\n\n\nE\n\nTransformation\n(features, agrégations)\n\n\n\nD-&gt;E\n\n\n\n\n\nF\n\nAnalyse\n(réponse à la question)\n\n\n\nE-&gt;F\n\n\n\n\n\nF-&gt;B\n\n\n\n\n\n\n\n\n\n\n\n👉 Chaque étape est une décision qu’on peut relire et discuter."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#phrase-à-retenir-2",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#phrase-à-retenir-2",
+    "title": "Teaching",
+    "section": "Phrase à retenir",
+    "text": "Phrase à retenir\n\nUn pipeline n’est pas une suite de cellules :\nc’est une suite de décisions explicitables et rejouables."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#synthèse",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#synthèse",
+    "title": "Teaching",
+    "section": "Synthèse",
+    "text": "Synthèse\n\nNettoyer = écrire un contrat (hypothèses explicites)\nExplorer = tester des hypothèses faibles\nPipeline = rendre les décisions auditables"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#règle-dor",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#règle-dor",
+    "title": "Teaching",
+    "section": "Règle d’or",
+    "text": "Règle d’or\n\nLa question fixe le contrat.\nLe contrat contraint le nettoyage.\nLe nettoyage rend l’exploration fiable.\nL’exploration rend l’analyse défendable."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#démo-contexte",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#démo-contexte",
+    "title": "Teaching",
+    "section": "Démo — Contexte",
+    "text": "Démo — Contexte\nNous disposons d’un dataset recensant les attaques de requins dans le monde sur environ 100 ans.\n\n\nsources multiples\npays, dates, circonstances\ndonnées hétérogènes\n\n\n👉 Dataset réel, imparfait, non standardisé."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#démo-question",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#démo-question",
+    "title": "Teaching",
+    "section": "Démo — Question",
+    "text": "Démo — Question\n\nComment l’évolution temporelle des attaques de requins peut-elle être interprétée à l’échelle mondiale sur le dernier siècle ?\n\n\n👉 Question descriptive, pas causale."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#démo-extrait-brut-des-données",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#démo-extrait-brut-des-données",
+    "title": "Teaching",
+    "section": "Démo — Extrait brut des données",
+    "text": "Démo — Extrait brut des données\n\n\n\nDate\nCountry\nArea\nActivity\nFatal\n\n\n\n\n1921-07-14\nAustralia\nNew South Wales\nSwimming\nNo\n\n\n1957\nUSA\nFlorida\nSurfing\n\n\n\n1978-09\nSouth Africa\nKwaZulu-Natal\nFishing\nNo\n\n\n2003-01-12\n\nCalifornia\nSwimming\nNo\n\n\n2016-10-?\nReunion\n\nSurfing\nYes\n\n\n\n\n👉 Tout est déjà problématique."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#démo-problèmes-immédiatement-visibles",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#démo-problèmes-immédiatement-visibles",
+    "title": "Teaching",
+    "section": "Démo — Problèmes immédiatement visibles",
+    "text": "Démo — Problèmes immédiatement visibles\n\n\ndates incomplètes ou imprécises\n\npays / régions manquants\n\nactivités non standardisées\n\nvariables booléennes ambiguës\n\n\n\n👉 Impossible d’analyser sans décider."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#démo-contrat-de-données-décisions-explicites",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#démo-contrat-de-données-décisions-explicites",
+    "title": "Teaching",
+    "section": "Démo — Contrat de données (décisions explicites)",
+    "text": "Démo — Contrat de données (décisions explicites)\nPour cette question, on décide :\n\n\nune ligne = une attaque déclarée\n\ndate → année uniquement\n\npays obligatoire (sinon exclusion)\n\npériode : 1920–2020\n\nactivité ignorée\n\nfatalité conservée mais secondaire\n\n\n\n👉 Le contrat simplifie volontairement."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#démo-ce-que-le-contrat-exclut",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#démo-ce-que-le-contrat-exclut",
+    "title": "Teaching",
+    "section": "Démo — Ce que le contrat exclut",
+    "text": "Démo — Ce que le contrat exclut\n\n\ncomparaisons fines entre activités\n\nanalyses locales par région\n\ninterprétations causales\n\n\n\n👉 Ce n’est pas un défaut,\nc’est un choix assumé."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#démo-eda-hypothèses-faibles-testées",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#démo-eda-hypothèses-faibles-testées",
+    "title": "Teaching",
+    "section": "Démo — EDA : hypothèses faibles testées",
+    "text": "Démo — EDA : hypothèses faibles testées\nAvant toute analyse :\n\n\nnombre d’attaques/an plausible\n\npas de rupture absurde (ex: 0 → 5000)\n\ncouverture géographique stable après 1950\n\n\n\n👉 On teste la cohérence, pas des théories."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#démo-résultat-possible-interprétable",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#démo-résultat-possible-interprétable",
+    "title": "Teaching",
+    "section": "Démo — Résultat possible (interprétable)",
+    "text": "Démo — Résultat possible (interprétable)\nAprès nettoyage + agrégation :\n\n\naugmentation progressive du nombre d’attaques reportées\n\nforte accélération après 1950\n\nstabilisation récente\n\n\n\n👉 Résultat descriptif, pas explicatif."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#démo-limites-à-annoncer-explicitement",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#démo-limites-à-annoncer-explicitement",
+    "title": "Teaching",
+    "section": "Démo — Limites à annoncer explicitement",
+    "text": "Démo — Limites à annoncer explicitement\n\n\nbiais de déclaration historique\n\namélioration des sources récentes\n\naugmentation de l’exposition humaine\n\n\n\n👉 Le résultat dépend du contrat."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#démo-message-clé",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#démo-message-clé",
+    "title": "Teaching",
+    "section": "Démo — Message clé",
+    "text": "Démo — Message clé\nCette analyse ne dit pas\n\n“les requins attaquent plus”,\n\nelle dit\n\n“les attaques rapportées évoluent dans le temps\nsous ces hypothèses”."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM3/index.html#démo-ce-que-montre-vraiment-cet-exemple",
+    "href": "section/teaching/bigdata/CM/CM3/index.html#démo-ce-que-montre-vraiment-cet-exemple",
+    "title": "Teaching",
+    "section": "Démo — Ce que montre vraiment cet exemple",
+    "text": "Démo — Ce que montre vraiment cet exemple\n\n\nun dataset réel est ambigu\n\nle contrat rend l’analyse possible\n\nl’EDA protège contre les erreurs grossières\n\nle résultat est conditionnel"
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/index.html",
+    "href": "section/teaching/syntheseimage/index.html",
+    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
+    "section": "",
+    "text": "Cette partie du cours traite de la synthèse d’images réalistes par rendu inverse, en s’intéressant à la génération de nouvelles images à partir d’images existantes. Elle aborde d’abord des méthodes de synthèse 2D à partir d’images, telles que l’interpolation et l’extrapolation.\nLe cours introduit ensuite la photogrammétrie comme cadre permettant de produire des images réalistes à partir de reconstructions multi-vues. Il présente enfin différentes représentations pour la synthèse de vues, des nuages de points et splats aux représentations continues modernes, et en analyse les apports et les limites pour la production d’images réalistes.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\nCours 5 : HTML\nCours 6 : HTML\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nAtelier 1\nPDF\nZIP\n\n\nAtelier 2\nPDF\nZIP\n\n\nAtelier 3\nPDF\nZIP"
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/index.html#cours",
+    "href": "section/teaching/syntheseimage/index.html#cours",
+    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
+    "section": "",
+    "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\nCours 5 : HTML\nCours 6 : HTML"
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/index.html#ateliers",
+    "href": "section/teaching/syntheseimage/index.html#ateliers",
+    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
+    "section": "",
+    "text": "Sujet\nDonnées\n\n\n\n\nAtelier 1\nPDF\nZIP\n\n\nAtelier 2\nPDF\nZIP\n\n\nAtelier 3\nPDF\nZIP"
+  },
+  {
+    "objectID": "section/blog/article_2.html",
+    "href": "section/blog/article_2.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Outil\nRôle\n\n\n\n\nQuarto\ninfrastructure centrale\n\n\nManim\nvisualisation rigoureuse\n\n\nJupyter\ncalcul reproductible\n\n\nTypst\npublication moderne\n\n\nPandoc\nconversion universelle\n\n\nGit\nmémoire et traçabilité\n\n\nIA\namplification cognitive"
+  },
+  {
+    "objectID": "section/blog/article_1.html",
+    "href": "section/blog/article_1.html",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "",
+    "text": "J’ai passé des années à fabriquer mes cours avec LibreOffice Impress. J’y ai laissé du temps, de l’énergie et une partie de ma santé mentale. Puis j’ai découvert Quarto. Trois mois plus tard, je produis plus de cours, mieux structurés, bilingues, maintenables, compatibles IA… et je dors mieux. Cet article raconte comment et pourquoi.\nSpoiler : ce n’est pas juste un changement d’outil, c’est un changement de paradigme."
+  },
+  {
+    "objectID": "section/blog/article_1.html#tldr-pour-les-pressés",
+    "href": "section/blog/article_1.html#tldr-pour-les-pressés",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "",
+    "text": "J’ai passé des années à fabriquer mes cours avec LibreOffice Impress. J’y ai laissé du temps, de l’énergie et une partie de ma santé mentale. Puis j’ai découvert Quarto. Trois mois plus tard, je produis plus de cours, mieux structurés, bilingues, maintenables, compatibles IA… et je dors mieux. Cet article raconte comment et pourquoi.\nSpoiler : ce n’est pas juste un changement d’outil, c’est un changement de paradigme."
+  },
+  {
+    "objectID": "section/blog/article_1.html#le-problème-que-je-narrivais-plus-à-ignorer",
+    "href": "section/blog/article_1.html#le-problème-que-je-narrivais-plus-à-ignorer",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "2 1. Le problème que je n’arrivais plus à ignorer",
+    "text": "2 1. Le problème que je n’arrivais plus à ignorer\nPendant longtemps, je n’ai pas remis en question mon outil de présentation. LibreOffice Impress faisait « le job ». Enfin… plus ou moins.\nMais les symptômes étaient là :\n\nune modification mineure qui prend 20 minutes,\ndes slides dupliquées partout,\ndes versions légèrement différentes du même cours,\ndes fichiers impossibles à maintenir d’une année sur l’autre,\nune impression permanente de bricolage.\n\nEt surtout ce ratio absurde : 15 heures de préparation pour 2 heures de cours.\nÀ un moment, ce n’est plus de la pédagogie, c’est de l’artisanat sous perfusion café."
+  },
+  {
+    "objectID": "section/blog/article_1.html#trois-mois-à-observer-et-à-douter",
+    "href": "section/blog/article_1.html#trois-mois-à-observer-et-à-douter",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "3 2. Trois mois à observer (et à douter)",
+    "text": "3 2. Trois mois à observer (et à douter)\nJe n’ai pas sauté sur le premier outil venu. Pendant environ trois mois, j’ai :\n\nanalysé mes propres diapos (objectivement moches et fragiles),\nregardé celles de mes collègues (sans jugement… enfin presque),\nlisté les vrais problèmes (pas les symptômes),\ncherché comment me passer d’Impress, pas par snobisme, mais par nécessité.\n\nJe ne cherchais pas « un meilleur PowerPoint ». Je cherchais un système.\nEt puis, presque par hasard, je tombe sur Quarto."
+  },
+  {
+    "objectID": "section/blog/article_1.html#la-claque-découvrir-quarto",
+    "href": "section/blog/article_1.html#la-claque-découvrir-quarto",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "4 3. La claque : découvrir Quarto",
+    "text": "4 3. La claque : découvrir Quarto\nQuarto, à la base, ce n’est pas un outil de slides. C’est un système de publication texte-first, pensé pour la recherche, la documentation, les rapports.\nEt pourtant…\n\ndu Markdown lisible,\nun YAML déclaratif,\nReveal.js intégré proprement,\nexport HTML / PDF / slides,\ncompatibilité parfaite avec Git,\net surtout : du texte structuré.\n\nJe m’y mets « pour voir ».\nDeux jours plus tard :\n\n« Attends… donc là, je modifie une phrase, et elle est correcte partout ? »\n\nC’est le début de la fin pour Impress."
+  },
+  {
+    "objectID": "section/blog/article_1.html#le-vrai-changement-penser-en-chaîne-de-production",
+    "href": "section/blog/article_1.html#le-vrai-changement-penser-en-chaîne-de-production",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "5 4. Le vrai changement : penser en chaîne de production",
+    "text": "5 4. Le vrai changement : penser en chaîne de production\nAvec Quarto, j’ai arrêté de :\n\nfabriquer des slides,\narranger des blocs visuels,\nmicro-optimiser des mises en page.\n\nJ’ai commencé à :\n\nécrire des cours,\nstructurer mes idées,\nséparer fond et forme.\n\nUn fichier .qmd n’est pas une présentation. C’est une source unique de vérité.\nÀ partir de là, les slides ne sont qu’un rendu parmi d’autres.\nC’est exactement à ce moment-là que l’artisanat devient industriel."
+  },
+  {
+    "objectID": "section/blog/article_1.html#industrialiser-ne-veut-pas-dire-déshumaniser",
+    "href": "section/blog/article_1.html#industrialiser-ne-veut-pas-dire-déshumaniser",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "6 5. Industrialiser ne veut pas dire déshumaniser",
+    "text": "6 5. Industrialiser ne veut pas dire déshumaniser\nImportant : industrialiser ≠ standardiser le contenu.\nCe que j’ai standardisé :\n\nla structure des cours,\nles sections récurrentes (objectifs, notions, activités),\nles conventions d’écriture,\nles templates.\n\nRésultat :\n\nmoins de charge cognitive,\nplus de cohérence,\nplus de temps pour la pédagogie réelle.\n\nAujourd’hui, je suis passé à environ 10 heures de préparation pour 9 heures de cours.\nCe n’est pas de la magie. C’est de l’ingénierie."
+  },
+  {
+    "objectID": "section/blog/article_1.html#lia-le-stagiaire-parfait-mais-quil-faut-encadrer",
+    "href": "section/blog/article_1.html#lia-le-stagiaire-parfait-mais-quil-faut-encadrer",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "7 6. L’IA : le stagiaire parfait (mais qu’il faut encadrer)",
+    "text": "7 6. L’IA : le stagiaire parfait (mais qu’il faut encadrer)\nQuarto a un super-pouvoir inattendu : il est parfaitement lisible par l’IA.\nUn .qmd bien structuré, c’est le rêve d’un modèle de langage.\nJ’utilise l’IA pour :\n\ngénérer des exemples,\ncréer des exercices progressifs,\nproposer des quiz,\ntraduire en anglais,\nreformuler pour différents niveaux.\n\nMais jamais pour décider à ma place.\nL’IA est un assistant, pas un enseignant."
+  },
+  {
+    "objectID": "section/blog/article_1.html#bonus-inattendu-le-bilinguisme-sans-douleur",
+    "href": "section/blog/article_1.html#bonus-inattendu-le-bilinguisme-sans-douleur",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "8 7. Bonus inattendu : le bilinguisme sans douleur",
+    "text": "8 7. Bonus inattendu : le bilinguisme sans douleur\nAvec ce système, j’ai pu mettre en place un site pédagogique bilingue FR / EN.\nDeux versions, même structure, mêmes templates.\nAvant, traduire un cours était une punition. Aujourd’hui, c’est une opération contrôlée.\nEt non, je ne reviendrai jamais en arrière."
+  },
+  {
+    "objectID": "section/blog/article_1.html#pourquoi-je-pense-que-ce-modèle-va-se-généraliser",
+    "href": "section/blog/article_1.html#pourquoi-je-pense-que-ce-modèle-va-se-généraliser",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "9 8. Pourquoi je pense que ce modèle va se généraliser",
+    "text": "9 8. Pourquoi je pense que ce modèle va se généraliser\nParce qu’il coche toutes les cases :\n\nformats ouverts,\npérennité,\ncompatibilité IA,\nmaintenabilité,\nmutualisation possible.\n\nEt surtout : il redonne du temps et de l’énergie aux enseignants."
+  },
+  {
+    "objectID": "section/blog/article_1.html#conclusion-et-avertissement",
+    "href": "section/blog/article_1.html#conclusion-et-avertissement",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "10 9. Conclusion (et avertissement)",
+    "text": "10 9. Conclusion (et avertissement)\nQuarto n’est pas un gadget.\nC’est une infrastructure pédagogique.\nLe danger n’est pas de trop automatiser. Le danger, c’est de continuer à bricoler en pensant que c’est normal.\nSi tu prépares des cours, que tu es fatigué, et que tu as l’impression de refaire sans cesse la même chose :\n👉 le problème n’est peut-être pas toi."
+  },
+  {
+    "objectID": "section/blog/article_1.html#annexe-pourquoi-cet-article",
+    "href": "section/blog/article_1.html#annexe-pourquoi-cet-article",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "11 Annexe : pourquoi cet article",
+    "text": "11 Annexe : pourquoi cet article\nParce qu’il existe très peu de retours d’expérience honnêtes sur ces sujets. Parce que l’ingénierie pédagogique mérite mieux que des astuces bricolées. Et parce que oui : parfois, un outil change vraiment la donne."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#plan-du-cm1-1h30",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#plan-du-cm1-1h30",
+    "title": "Teaching",
+    "section": "Plan du CM1 (1h30)",
+    "text": "Plan du CM1 (1h30)\n\n\nLe pipeline de rendu (rappel) et ce que signifie “l’inverser”\nLe problème : passer de l’image à une explication (et pourquoi c’est difficile)\nPremière borne : synthèse 2D image→image\nCorrespondances & warping : la brique conceptuelle centrale du TP1\nLimites structurelles → pourquoi on aura besoin du 3D (CM2/TP2)\n\n\n\n👉 Objectif aujourd’hui : comprendre quoi on fait en 2D et pourquoi ça coince."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#ce-cours-nest-pas",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#ce-cours-nest-pas",
+    "title": "Teaching",
+    "section": "Ce cours n’est pas…",
+    "text": "Ce cours n’est pas…\n\n\nun cours de diffusion / génération text→image\nun cours de shading / matériaux / illumination\nun cours de perception / reconnaissance\n\n\n\nC’est un cours représentations + rendu : qu’est-ce qu’on représente pour pouvoir rendre ?"
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#fil-directeur-2d-3d-continu",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#fil-directeur-2d-3d-continu",
+    "title": "Teaching",
+    "section": "Fil directeur (2D → 3D → continu)",
+    "text": "Fil directeur (2D → 3D → continu)\n\n\n\n\n\n\n\nG\n\n\nA\n\nCM1/TP1\nSynthèse 2D\n(image → image)\n\n\n\nB\n\nCM2/TP2\nPhotogrammétrie\n(image → structure 3D)\n\n\n\nA-&gt;B\n\n\n\n\n\nC\n\nCM3–CM6/TP3\nSynthèse de vues\n(structure → image)\npoints/splats/GS/NeRF\n\n\n\nB-&gt;C"
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#sortie-attendue-à-la-fin-du-cm1",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#sortie-attendue-à-la-fin-du-cm1",
+    "title": "Teaching",
+    "section": "Sortie attendue à la fin du CM1",
+    "text": "Sortie attendue à la fin du CM1\nVous devez pouvoir répondre à :\n\n\nQu’est-ce que “rendu inverse” dans notre sens ?\nPourquoi l’inversion est mal posée ?\nQu’est-ce qu’on peut déjà faire en 2D (sans 3D) ?\nQuels artefacts sont structurels (donc inévitables en 2D) ?"
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#rendu-direct-vs-rendu-inverse",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#rendu-direct-vs-rendu-inverse",
+    "title": "Teaching",
+    "section": "Rendu direct vs rendu inverse",
+    "text": "Rendu direct vs rendu inverse"
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#rappel-pipeline-de-rendu-version-minimale",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#rappel-pipeline-de-rendu-version-minimale",
+    "title": "Teaching",
+    "section": "Rappel : pipeline de rendu (version minimale)",
+    "text": "Rappel : pipeline de rendu (version minimale)\nOn part d’une scène (géométrie + apparence) + caméra → on obtient une image.\n\n\n\n\n\n\n\nG\n\n\nS\n\nScène\n(3D + apparence)\n\n\n\nR\n\nRendu\n(projection + intégration)\n\n\n\nS-&gt;R\n\n\n\n\n\nC\n\nCaméra\n(pose + intr.)\n\n\n\nC-&gt;R\n\n\n\n\n\nI\n\nImage\n(2D)\n\n\n\nR-&gt;I\n\n\n\n\n\n\n\n\n\n\n\n👉 Rendu direct : scene → image."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#rendu-inverse-idée-générale",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#rendu-inverse-idée-générale",
+    "title": "Teaching",
+    "section": "Rendu inverse : idée générale",
+    "text": "Rendu inverse : idée générale\nOn observe une image (ou plusieurs) et on cherche une représentation compatible.\n\n\n\n\n\n\n\nG\n\n\nI\n\nImages\n(observations)\n\n\n\nX\n\nReprésentation\n(inconnue)\n\n\n\nI-&gt;X\n\n\n\n\n\nI2\n\nRendu\n→ images (prévision)\n\n\n\nX-&gt;I2\n\n\n\n\n\n\n\n\n\n\n\n-&gt; On choisit une représentation “juste assez structurée” pour synthétiser de nouvelles vues."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#point-clé-on-ne-reconstruit-pas-la-vérité",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#point-clé-on-ne-reconstruit-pas-la-vérité",
+    "title": "Teaching",
+    "section": "Point clé : on ne reconstruit pas “la vérité”",
+    "text": "Point clé : on ne reconstruit pas “la vérité”\n\n\nUne image est compatible avec plusieurs scènes / explications.\nOn cherche une représentation utile au rendu (et pas une vérité physique).\n\n\n\n👉 On juge une inversion par sa capacité à re-rendre (prédire) correctement."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#pourquoi-linversion-est-difficile",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#pourquoi-linversion-est-difficile",
+    "title": "Teaching",
+    "section": "Pourquoi l’inversion est difficile ?",
+    "text": "Pourquoi l’inversion est difficile ?\nParce que beaucoup d’informations sont “perdues” dans l’image :\n\nprofondeur (3D → 2D)\nocclusions (ce qui est caché)\nambiguïtés (textures répétées, surfaces planes…)\ndépendance au point de vue\n\n\nEn général : problème mal posé (pas de solution unique)."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#méthode-de-pensée-du-cours",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#méthode-de-pensée-du-cours",
+    "title": "Teaching",
+    "section": "Méthode de pensée du cours",
+    "text": "Méthode de pensée du cours\nOn va progresser par besoin de structure :\n\nEn 2D, on “triche” intelligemment : on manipule l’image.\nPuis on se heurte à des limites → on introduit la 3D (photogrammétrie).\nPuis on compare des représentations modernes pour le rendu.\n\n\n👉 Aujourd’hui : borne basse = image→image."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#première-borne-synthèse-2d-imageimage",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#première-borne-synthèse-2d-imageimage",
+    "title": "Teaching",
+    "section": "Première borne : synthèse 2D image→image",
+    "text": "Première borne : synthèse 2D image→image"
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#problème-cm1-créer-une-nouvelle-image-sans-3d",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#problème-cm1-créer-une-nouvelle-image-sans-3d",
+    "title": "Teaching",
+    "section": "Problème CM1 : créer une nouvelle image sans 3D",
+    "text": "Problème CM1 : créer une nouvelle image sans 3D\nEntrée : images existantes (même scène / sujet proche)\nSortie : une nouvelle image (intermédiaire ou extrapolée)\n\nOn ne veut pas estimer explicitement la géométrie 3D."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#interpolation-naïve-blending",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#interpolation-naïve-blending",
+    "title": "Teaching",
+    "section": "Interpolation naïve (blending)",
+    "text": "Interpolation naïve (blending)\nOn mélange pixel à pixel :\n\\[\nI_\\alpha = (1-\\alpha)I_1 + \\alpha I_2,\\quad \\alpha\\in[0,1]\n\\]\n\nArtefact typique : ghosting / double contours.\n\n\nPourquoi ? Parce qu’on mélange des pixels qui ne correspondent pas au même point de la scène."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#ce-quil-manque-au-blending-qui-correspond-à-quoi",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#ce-quil-manque-au-blending-qui-correspond-à-quoi",
+    "title": "Teaching",
+    "section": "Ce qu’il manque au blending : “qui correspond à quoi”",
+    "text": "Ce qu’il manque au blending : “qui correspond à quoi”\nPour synthétiser proprement, il faut une notion de correspondances :\n\nce pixel dans (\\(I_1\\)) ↔︎ ce pixel dans (\\(I_2\\))\nautrement dit : une déformation (warping) entre images\n\n\n👉 Première grande idée du cours : correspondances 2D–2D."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#warping-concept-sans-formalisme-lourd",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#warping-concept-sans-formalisme-lourd",
+    "title": "Teaching",
+    "section": "Warping : concept (sans formalisme lourd)",
+    "text": "Warping : concept (sans formalisme lourd)\nOn veut une fonction (\\(W\\)) qui déplace les pixels :\n\\[\nI_1 \\xrightarrow[]{W} I_{1\\rightarrow 2}\n\\]\nIntuition :\n\nsi (\\(W\\)) est bonne, les structures s’alignent,\nensuite le blending devient beaucoup plus cohérent."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#synthèse-2d-guidée-le-cœur-du-tp1",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#synthèse-2d-guidée-le-cœur-du-tp1",
+    "title": "Teaching",
+    "section": "Synthèse 2D “guidée” (le cœur du TP1)",
+    "text": "Synthèse 2D “guidée” (le cœur du TP1)\n\n\n\n\n\n\n\nG\n\n\nI1\n\nImage I1\n\n\n\nW\n\nCorrespondances\n+ warping\n\n\n\nI1-&gt;W\n\n\n\n\n\nI2\n\nImage I2\n\n\n\nI2-&gt;W\n\n\n\n\n\nB\n\nFusion\npondérée\n\n\n\nW-&gt;B\n\n\n\n\n\nO\n\nImage\nsynthétisée\n\n\n\nB-&gt;O\n\n\n\n\n\n\n\n\n\n\n\nPipeline minimal : correspondances → warping → fusion."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#correspondances-ce-que-cest-ce-que-ça-fait",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#correspondances-ce-que-cest-ce-que-ça-fait",
+    "title": "Teaching",
+    "section": "Correspondances : ce que c’est, ce que ça fait",
+    "text": "Correspondances : ce que c’est, ce que ça fait"
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#définition-simple",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#définition-simple",
+    "title": "Teaching",
+    "section": "Définition simple",
+    "text": "Définition simple\nUne correspondance 2D–2D = une paire de points :\n\\[\n\\mathbf{x}_1 \\in I_1 \\quad \\leftrightarrow \\quad \\mathbf{x}_2 \\in I_2\n\\]\n\nInterprétation : “même point du monde” vu dans deux images."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#doù-viennent-les-correspondances",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#doù-viennent-les-correspondances",
+    "title": "Teaching",
+    "section": "D’où viennent les correspondances ?",
+    "text": "D’où viennent les correspondances ?\nDeux grandes familles (TP1) :\n\nmanuelles : points cliqués (robuste, mais peu dense)\nautomatiques : détecteurs + appariement (dense, mais erreurs possibles)\n\n\n👉 Ce cours est conceptuel : on s’intéresse à l’effet des correspondances."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#qualité-des-correspondances-qualité-du-rendu",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#qualité-des-correspondances-qualité-du-rendu",
+    "title": "Teaching",
+    "section": "Qualité des correspondances = qualité du rendu",
+    "text": "Qualité des correspondances = qualité du rendu\n\n\nSi elles sont fausses → déformations absurdes.\nSi elles sont mal réparties → zones “flottantes” / non contraintes.\nSi elles couvrent bien l’image → warping plus stable.\n\n\n\nTP1 : vous verrez directement l’impact de la densité et de la distribution."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#warping-global-vs-local",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#warping-global-vs-local",
+    "title": "Teaching",
+    "section": "Warping global vs local",
+    "text": "Warping global vs local\nOn peut approximer (W) de plusieurs façons :\n\nglobal (rigide) : affine / projectif → simple mais limité\nlocal (flexible) : morceaux / interpolations → mieux mais fragile\n\n\n👉 Plus c’est flexible, plus on peut “coller” à l’image… mais plus on peut se tromper."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#interpolation-guidée-recette-mentale",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#interpolation-guidée-recette-mentale",
+    "title": "Teaching",
+    "section": "Interpolation guidée : recette mentale",
+    "text": "Interpolation guidée : recette mentale\n\nDéformer (\\(I_1\\)) vers la vue intermédiaire\nDéformer (\\(I_2\\)) vers la vue intermédiaire\nFusionner\n\n\\[\n\\tilde I_\\alpha = (1-\\alpha) \\, W_\\alpha(I_1) + \\alpha \\, W_{1-\\alpha}(I_2)\n\\]\n\nMême si la formule change, l’idée reste : aligner avant de mélanger."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#extrapolation-2d-sortir-de-lintervalle",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#extrapolation-2d-sortir-de-lintervalle",
+    "title": "Teaching",
+    "section": "Extrapolation 2D : “sortir de l’intervalle”",
+    "text": "Extrapolation 2D : “sortir de l’intervalle”\nInterpolation : on reste “entre” les vues.\nExtrapolation : on pousse au-delà.\n\nPourquoi c’est plus dur ?\n\non invente des zones jamais vues,\nles occlusions explosent,\nles erreurs de correspondances s’amplifient."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#occlusions-le-mur-conceptuel-de-la-2d",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#occlusions-le-mur-conceptuel-de-la-2d",
+    "title": "Teaching",
+    "section": "Occlusions : le mur conceptuel de la 2D",
+    "text": "Occlusions : le mur conceptuel de la 2D\nEn 2D, on n’a pas explicitement :\n\nqui est devant quoi,\nquelles zones sont cachées puis révélées.\n\nConséquence :\n\ntrous, déchirures (disocclusions),\nduplications,\nincohérences locales.\n\n\n👉 Ces artefacts ne sont pas “des bugs” : ce sont des limites structurelles."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#limites-2d-besoin-de-structure",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#limites-2d-besoin-de-structure",
+    "title": "Teaching",
+    "section": "Limites 2D → besoin de structure",
+    "text": "Limites 2D → besoin de structure"
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#ce-que-la-2d-sait-faire-très-bien",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#ce-que-la-2d-sait-faire-très-bien",
+    "title": "Teaching",
+    "section": "Ce que la 2D sait faire (très bien)",
+    "text": "Ce que la 2D sait faire (très bien)\n\n\ninterpolation douce entre vues proches\npetites variations de point de vue\nmorphing contrôlé (si correspondances propres)"
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#ce-que-la-2d-ne-peut-pas-résoudre-proprement",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#ce-que-la-2d-ne-peut-pas-résoudre-proprement",
+    "title": "Teaching",
+    "section": "Ce que la 2D ne peut pas résoudre proprement",
+    "text": "Ce que la 2D ne peut pas résoudre proprement\n\n\ngrandes variations de point de vue\nfortes occlusions / disocclusions\nobjets fins / transparences / réflexions complexes\nextrapolation stable"
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#la-question-qui-force-le-passage-au-3d",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#la-question-qui-force-le-passage-au-3d",
+    "title": "Teaching",
+    "section": "La question qui force le passage au 3D",
+    "text": "La question qui force le passage au 3D\nSi on veut une synthèse de vues cohérente géométriquement, il manque :\n\n\nune notion de profondeur\nune notion de visibilité (z-buffer implicite)\nune notion de caméra (pose / projection)\n\n\n\n👉 CM2/TP2 : photogrammétrie = image → structure 3D (poses + points)."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#transition-conceptuelle",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#transition-conceptuelle",
+    "title": "Teaching",
+    "section": "Transition conceptuelle",
+    "text": "Transition conceptuelle\n\n\n\n\n\n\n\nG\n\n\nA\n\n2D : correspondances\n→ warping\n\n\n\nB\n\nLimites : occlusions\n+ profondeur absente\n\n\n\nA-&gt;B\n\n\n\n\n\nC\n\n3D : correspondances\n→ poses + structure\n\n\n\nB-&gt;C"
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#à-retenir-cm1",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#à-retenir-cm1",
+    "title": "Teaching",
+    "section": "À retenir (CM1)",
+    "text": "À retenir (CM1)\n\n\nRendu inverse = trouver une représentation compatible avec les images pour pouvoir re-synthétiser.\nEn 2D, la brique centrale = correspondances 2D–2D.\nAligner avant de mélanger : warping → fusion.\nLes occlusions et la profondeur manquante imposent une limite structurelle."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#connexion-directe-avec-le-tp1",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#connexion-directe-avec-le-tp1",
+    "title": "Teaching",
+    "section": "Connexion directe avec le TP1",
+    "text": "Connexion directe avec le TP1\nDans le TP1 vous allez :\n\ntester le blending naïf → observer ghosting\ncréer des correspondances → voir l’effet de leur qualité\nfaire du warping → puis une interpolation guidée\ntenter une extrapolation → constater les limites\n\n\n👉 Votre rapport = pas “ça marche / ça marche pas”, mais quels artefacts et pourquoi."
+  },
+  {
+    "objectID": "section/teaching/syntheseimage/CM/CM1/index.html#préparer-cm2",
+    "href": "section/teaching/syntheseimage/CM/CM1/index.html#préparer-cm2",
+    "title": "Teaching",
+    "section": "Préparer CM2",
+    "text": "Préparer CM2\nQuestion de sortie :\n\nQu’est-ce qui manque à la 2D pour gérer proprement la visibilité et les nouvelles vues ?\n\n\nRéponse attendue :\nstructure 3D + caméras → photogrammétrie."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#mise-en-perspective",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#mise-en-perspective",
+    "title": "Teaching",
+    "section": "Mise en perspective",
+    "text": "Mise en perspective\nJusqu’ici, on a appris à :\n\n\nposer une question claire\nconstruire un pipeline cohérent\nnettoyer et explorer de manière défendable\n\n\n\n👉 En entreprise, ce n’est pas suffisant.\n\n\n\nUne bonne analyse doit survivre au temps, aux collègues et aux décisions."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#question-centrale",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#question-centrale",
+    "title": "Teaching",
+    "section": "Question centrale",
+    "text": "Question centrale\n\nComment concevoir une analyse de données\nqui reste valable, compréhensible et utile\nau-delà du notebook et du stagiaire qui l’a produite ?"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#fil-conducteur",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#fil-conducteur",
+    "title": "Teaching",
+    "section": "Fil conducteur",
+    "text": "Fil conducteur\nTrois exigences (pro) :\n\n\nTransmissible : quelqu’un d’autre peut reprendre\nRobuste : la conclusion résiste au changement\nUtilisable : le message passe hors de l’équipe data\n\n\n\n👉 Ce CM parle moins de code, et plus de durabilité."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#ce-qui-change-en-situation-pro",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#ce-qui-change-en-situation-pro",
+    "title": "Teaching",
+    "section": "Ce qui change en situation pro",
+    "text": "Ce qui change en situation pro\nDans un cours, on vise souvent : “le bon résultat”.\nEn entreprise, on vise plutôt :\n\nun raisonnement stable + des décisions discutables + un livrable réutilisable"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#pourquoi-une-analyse-correcte-peut-échouer-en-situation-professionnelle",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#pourquoi-une-analyse-correcte-peut-échouer-en-situation-professionnelle",
+    "title": "Teaching",
+    "section": "Pourquoi une analyse “correcte” peut échouer en situation professionnelle ?",
+    "text": "Pourquoi une analyse “correcte” peut échouer en situation professionnelle ?"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#situation-réelle",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#situation-réelle",
+    "title": "Teaching",
+    "section": "Situation réelle",
+    "text": "Situation réelle\nVous rendez votre analyse.\n\nSix mois plus tard :\n\n\n\nles données ont changé\nla question a évolué\nvous n’êtes plus là\n\n\n\n👉 Personne n’ose toucher à votre notebook."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#problème-fondamental",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#problème-fondamental",
+    "title": "Teaching",
+    "section": "Problème fondamental",
+    "text": "Problème fondamental\nCe qui échoue n’est pas le code.\n\nCe qui échoue, c’est la transmission du raisonnement."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#intuition-clé",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#intuition-clé",
+    "title": "Teaching",
+    "section": "Intuition clé",
+    "text": "Intuition clé\nUne analyse professionnelle doit :\n\n\nsurvivre à son auteur\nêtre comprise par d’autres métiers\nêtre réutilisable dans un autre contexte\n\n\n\n👉 L’analyse devient un objet collectif."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#concept-clé-analyse-comme-artefact-décisionnel",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#concept-clé-analyse-comme-artefact-décisionnel",
+    "title": "Teaching",
+    "section": "Concept clé : analyse comme artefact décisionnel",
+    "text": "Concept clé : analyse comme artefact décisionnel\n\nUne analyse n’est pas un résultat,\nc’est un support de décision.\n\n\n👉 Elle doit expliciter ce qu’on peut conclure…\net ce qu’on ne peut pas."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#analyse-et-décision",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#analyse-et-décision",
+    "title": "Teaching",
+    "section": "Analyse et décision",
+    "text": "Analyse et décision\n\n\n\n\n\n\n\nG\n\n\nD\n\nDonnées\n(incomplètes)\n\n\n\nA\n\nAnalyse\n(sous hypothèses)\n\n\n\nD-&gt;A\n\n\n\n\n\nR\n\nRecommandations\nconditionnelles\n\n\n\nA-&gt;R\n\n\n\n\n\nC\n\nDécisions\nhumaines\n\n\n\nR-&gt;C\n\n\n\n\n\n\n\n\n\n\n\n👉 L’analyse n’automatise pas la décision."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#antipattern-professionnel",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#antipattern-professionnel",
+    "title": "Teaching",
+    "section": "Anti‑pattern professionnel",
+    "text": "Anti‑pattern professionnel\n\n\n“On a un chiffre, donc on décide.”\n“Le modèle a dit X.”\n“Le graphique est clair.”\n\n\n\n👉 Un chiffre sans hypothèses = un risque."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#ce-qui-manque-souvent-dans-les-analyses-correctes",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#ce-qui-manque-souvent-dans-les-analyses-correctes",
+    "title": "Teaching",
+    "section": "Ce qui manque souvent dans les analyses “correctes”",
+    "text": "Ce qui manque souvent dans les analyses “correctes”\nTrois éléments oubliés :\n\n\nContexte : pourquoi cette question maintenant ?\nHypothèses : ce qu’on suppose vrai\nLimites : où ça peut casser\n\n\n\n👉 Sans ça, l’analyse n’est pas transmissible."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#checklist-de-transmission-très-courte",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#checklist-de-transmission-très-courte",
+    "title": "Teaching",
+    "section": "Check‑list de transmission (très courte)",
+    "text": "Check‑list de transmission (très courte)\nÀ minima, un autre doit pouvoir répondre à :\n\n\nQuelle était la question exacte ?\nQuelles données (version, période) ?\nQuelles règles clés / paramètres ?\nQuelle conclusion + dans quelles limites ?"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#phrase-à-retenir",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#phrase-à-retenir",
+    "title": "Teaching",
+    "section": "Phrase à retenir",
+    "text": "Phrase à retenir\n\nUne bonne analyse éclaire une décision,\nelle ne la remplace jamais."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#comment-rendre-une-analyse-robuste-au-changement",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#comment-rendre-une-analyse-robuste-au-changement",
+    "title": "Teaching",
+    "section": "Comment rendre une analyse robuste au changement ?",
+    "text": "Comment rendre une analyse robuste au changement ?"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#réalité-professionnelle",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#réalité-professionnelle",
+    "title": "Teaching",
+    "section": "Réalité professionnelle",
+    "text": "Réalité professionnelle\nDans le temps :\n\n\nles données évoluent\nles règles métier changent\nles indicateurs dérivent\n\n\n\n👉 Une analyse figée devient rapidement fausse."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#intuition",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#intuition",
+    "title": "Teaching",
+    "section": "Intuition",
+    "text": "Intuition\nOn ne rend pas une analyse robuste en la rendant plus complexe.\n\nOn la rend robuste en rendant ses hypothèses visibles et modulables."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#concept-clé-scénarios-et-invariants",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#concept-clé-scénarios-et-invariants",
+    "title": "Teaching",
+    "section": "Concept clé : scénarios et invariants",
+    "text": "Concept clé : scénarios et invariants\nDeux niveaux à distinguer :\n\n\nInvariants : ce qui doit toujours rester vrai\nScénarios : ce qui peut varier (seuils, règles, filtres)\n\n\n\n👉 Une analyse sérieuse sépare les deux."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#exemple-concret-invariants-vs-scénarios",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#exemple-concret-invariants-vs-scénarios",
+    "title": "Teaching",
+    "section": "Exemple concret (invariants vs scénarios)",
+    "text": "Exemple concret (invariants vs scénarios)\nImaginez un indicateur de “clients actifs”.\n\n\nInvariant : “actif” = au moins 1 action mesurable\nScénario : fenêtre temporelle (7j / 30j / 90j)\n\n\n\n👉 Les disputes pro viennent souvent des scénarios déguisés en invariants."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#analyse-paramétrée",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#analyse-paramétrée",
+    "title": "Teaching",
+    "section": "Analyse paramétrée",
+    "text": "Analyse paramétrée\n\n\n\n\n\n\n\nG\n\n\nI\n\nInvariants\n(définitions, unités, sens)\n\n\n\nP\n\nPipeline\nstable\n\n\n\nI-&gt;P\n\n\n\n\n\nS\n\nScénarios\n(paramètres ajustables)\n\n\n\nS-&gt;P\n\n\n\n\n\nO\n\nRésultats\ncomparables\n\n\n\nP-&gt;O\n\n\n\n\n\n\n\n\n\n\n\n👉 On change les paramètres, pas la logique."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#robustesse-sensibilité-pas-certitude",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#robustesse-sensibilité-pas-certitude",
+    "title": "Teaching",
+    "section": "Robustesse = sensibilité (pas certitude)",
+    "text": "Robustesse = sensibilité (pas certitude)\nUne analyse robuste ne “prouve” pas.\n\nElle montre que la conclusion\ntient dans une plage raisonnable de scénarios."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#minitest-de-robustesse-à-faire-systématiquement",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#minitest-de-robustesse-à-faire-systématiquement",
+    "title": "Teaching",
+    "section": "Mini‑test de robustesse (à faire systématiquement)",
+    "text": "Mini‑test de robustesse (à faire systématiquement)\n\n\nchanger 1 paramètre important\ncomparer la conclusion\nsi elle bascule, le dire\n\n\n\n👉 Un résultat qui s’effondre au moindre réglage est fragile."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#bonne-pratique-clé",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#bonne-pratique-clé",
+    "title": "Teaching",
+    "section": "Bonne pratique clé",
+    "text": "Bonne pratique clé\n\n\ndocumenter les hypothèses\nisoler les paramètres\ncomparer plusieurs scénarios\n\n\n\n👉 Une analyse devient un outil de discussion."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#phrase-à-retenir-1",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#phrase-à-retenir-1",
+    "title": "Teaching",
+    "section": "Phrase à retenir",
+    "text": "Phrase à retenir\n\nUne analyse robuste n’est pas figée :\nelle est paramétrée."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#comment-communiquer-une-analyse-à-des-nondata-scientists",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#comment-communiquer-une-analyse-à-des-nondata-scientists",
+    "title": "Teaching",
+    "section": "Comment communiquer une analyse à des non‑data scientists ?",
+    "text": "Comment communiquer une analyse à des non‑data scientists ?"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#problème-classique",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#problème-classique",
+    "title": "Teaching",
+    "section": "Problème classique",
+    "text": "Problème classique\n\n\ntrop de graphiques\ntrop de chiffres\ntrop de jargon\n\n\n\n👉 Le message se perd."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#intuition-1",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#intuition-1",
+    "title": "Teaching",
+    "section": "Intuition",
+    "text": "Intuition\nLa valeur d’une analyse ne dépend pas de :\n\n\nla sophistication du modèle\nle volume de code\n\n\n\nElle dépend de la clarté du message transmis."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#concept-clé-narration-analytique",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#concept-clé-narration-analytique",
+    "title": "Teaching",
+    "section": "Concept clé : narration analytique",
+    "text": "Concept clé : narration analytique\nCommuniquer une analyse, c’est raconter :\n\n\nla question posée\nles hypothèses retenues\nles limites\nles implications concrètes\n\n\n\n👉 Pas le pipeline complet."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#format-1-slide-décision-professionnel",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#format-1-slide-décision-professionnel",
+    "title": "Teaching",
+    "section": "Format “1 slide décision” (professionnel)",
+    "text": "Format “1 slide décision” (professionnel)\nUne bonne synthèse tient souvent sur :\n\n\n1 phrase de conclusion\n2–3 faits qui la soutiennent\n1 encadré “hypothèses & limites”\n1 recommandation conditionnelle\n\n\n\n👉 Tout le reste est en annexe."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#ce-quil-faut-dire-explicitement",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#ce-quil-faut-dire-explicitement",
+    "title": "Teaching",
+    "section": "Ce qu’il faut dire explicitement",
+    "text": "Ce qu’il faut dire explicitement\nUn non‑data veut surtout savoir :\n\n\nÀ quel point on peut se fier à ce résultat ?\nDans quelles conditions il ne tient plus ?\nQue fait‑on ensuite ?"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#analyse-comme-récit-structuré",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#analyse-comme-récit-structuré",
+    "title": "Teaching",
+    "section": "Analyse comme récit structuré",
+    "text": "Analyse comme récit structuré\n\n\n\n\n\n\n\nG\n\n\nQ\n\nQuestion\n\n\n\nH\n\nHypothèses\n\n\n\nQ-&gt;H\n\n\n\n\n\nF\n\nFaits établis\n\n\n\nH-&gt;F\n\n\n\n\n\nL\n\nLimites\n\n\n\nF-&gt;L\n\n\n\n\n\nI\n\nImplications\n\n\n\nL-&gt;I\n\n\n\n\n\n\n\n\n\n\n\n👉 Le code reste en annexe."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#ce-quil-faut-éviter-vraiment",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#ce-quil-faut-éviter-vraiment",
+    "title": "Teaching",
+    "section": "Ce qu’il faut éviter (vraiment)",
+    "text": "Ce qu’il faut éviter (vraiment)\n\n\nraconter le notebook\n“voici tous les graphes”\nconfondre précision et clarté\n\n\n\n👉 Plus vous montrez, plus vous diluez."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#phrase-à-retenir-2",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#phrase-à-retenir-2",
+    "title": "Teaching",
+    "section": "Phrase à retenir",
+    "text": "Phrase à retenir\n\nUne analyse qui ne peut pas être expliquée\nsimplement ne sera pas utilisée."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#démo-situation",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#démo-situation",
+    "title": "Teaching",
+    "section": "Démo — Situation",
+    "text": "Démo — Situation\nVotre responsable demande :\n\n\n“J’ai 2 minutes. C’est quoi le message ?”\n\n\n\n👉 Objectif : une synthèse décisionnelle."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#démo-slide-décision-structure",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#démo-slide-décision-structure",
+    "title": "Teaching",
+    "section": "Démo — Slide décision (structure)",
+    "text": "Démo — Slide décision (structure)\nUne “slide décision” contient :\n\n\nConclusion (1 phrase)\nFaits (3 bullets max)\nHypothèses / limites (1 encadré)\nRecommandation (conditionnelle)"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#démo-exemple-de-formulation",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#démo-exemple-de-formulation",
+    "title": "Teaching",
+    "section": "Démo — Exemple de formulation",
+    "text": "Démo — Exemple de formulation\n\nConclusion : “L’indicateur X augmente sur 12 mois.”\n\n\nFaits :\n\nhausse régulière sur 4 trimestres\ntendance stable sur plusieurs scénarios\npas de rupture détectée dans les données\n\n\n\nLimites : “Résultat sensible à la définition de X (fenêtre 30j vs 90j).”"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#démo-recommandation-conditionnelle",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#démo-recommandation-conditionnelle",
+    "title": "Teaching",
+    "section": "Démo — Recommandation conditionnelle",
+    "text": "Démo — Recommandation conditionnelle\nUne recommandation pro ressemble à :\n\n“Si l’objectif est Y, alors on recommande A.\nSi la contrainte Z s’impose, alors on recommande B.”\n\n\n👉 L’analyse outille une décision : elle n’impose pas."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#exemple-mesurer-une-variabilité",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#exemple-mesurer-une-variabilité",
+    "title": "Teaching",
+    "section": "Exemple — Mesurer une variabilité",
+    "text": "Exemple — Mesurer une variabilité\nOn observe une moyenne…\nmais une moyenne seule peut être trompeuse.\n\n\ndeux groupes peuvent avoir la même moyenne\nmais des dispersions très différentes\n\n\n\n👉 L’écart-type sert à répondre à une question simple :"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#à-quoi-sert-lécart-type",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#à-quoi-sert-lécart-type",
+    "title": "Teaching",
+    "section": "À quoi sert l’écart-type ?",
+    "text": "À quoi sert l’écart-type ?\n\nÀ mesurer à quel point les valeurs sont dispersées autour d’une moyenne.\n\n\n👉 Il ne “corrige” pas la moyenne, il en donne le contexte."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#décision-permise-interdite",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#décision-permise-interdite",
+    "title": "Teaching",
+    "section": "Décision permise / interdite",
+    "text": "Décision permise / interdite\n\n\nécart-type faible → moyenne représentative\nécart-type élevé → moyenne fragile\n\n\n\n👉 La question n’est pas “comment le calculer”,\nmais “peut-on raisonnablement résumer par une moyenne ?”"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#synthèse",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#synthèse",
+    "title": "Teaching",
+    "section": "Synthèse",
+    "text": "Synthèse\n\n\nUne analyse est un artefact collectif\nElle doit être robuste au changement\nElle doit être compréhensible hors du notebook"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#règle-dor-prospective",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#règle-dor-prospective",
+    "title": "Teaching",
+    "section": "Règle d’or (prospective)",
+    "text": "Règle d’or (prospective)\n\nUne bonne analyse ne répond pas seulement à la question d’aujourd’hui :\nelle prépare les questions de demain."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM4/index.html#et-après",
+    "href": "section/teaching/bigdata/CM/CM4/index.html#et-après",
+    "title": "Teaching",
+    "section": "Et après ?",
+    "text": "Et après ?\nDans la suite :\n\n\ntransformer une analyse en livrable pro\nséparer notebook / rapport / décision\nsimuler des revues critiques (“et si… ?”)\n\n\n\n👉 Objectif : penser comme un data scientist professionnel, pas comme un exécutant."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/notebook/notebook.html",
+    "href": "section/teaching/bigdata/CM/CM2/notebook/notebook.html",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "",
+    "text": "Comment analyser des données réelles sans se perdre dans le code ni les outils ?\nOn va suivre un mini-pipeline : 1. Charger des données 2. Regarder (inspection rapide) 3. Nettoyer (valeurs manquantes / types) 4. Transformer (features simples) 5. Analyser (statistiques + visualisation)\n\nObjectif : voir le processus “en vrai”."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#question-de-départ",
+    "href": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#question-de-départ",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "",
+    "text": "Comment analyser des données réelles sans se perdre dans le code ni les outils ?\nOn va suivre un mini-pipeline : 1. Charger des données 2. Regarder (inspection rapide) 3. Nettoyer (valeurs manquantes / types) 4. Transformer (features simples) 5. Analyser (statistiques + visualisation)\n\nObjectif : voir le processus “en vrai”."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#imports",
+    "href": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#imports",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "0) Imports",
+    "text": "0) Imports\n\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\npd.set_option('display.max_columns', 50)\npd.set_option('display.width', 120)\nnp.random.seed(42)"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#charger-un-premier-jeu-de-données",
+    "href": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#charger-un-premier-jeu-de-données",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "1) Charger un premier jeu de données",
+    "text": "1) Charger un premier jeu de données\nOn utilise un dataset local fourni par scikit-learn (pas besoin d’Internet).\n\nfrom sklearn.datasets import load_iris\n\niris = load_iris(as_frame=True)\ndf = iris.frame.copy()\ndf.rename(columns={\"target\": \"species\"}, inplace=True)\ndf[\"species\"] = df[\"species\"].map(dict(enumerate(iris.target_names)))\n\ndf.head()\n\n\n\n\n\n\n\n\nsepal length (cm)\nsepal width (cm)\npetal length (cm)\npetal width (cm)\nspecies\n\n\n\n\n0\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n1\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n2\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n3\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n4\n5.0\n3.6\n1.4\n0.2\nsetosa"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#regarder-les-données-inspection",
+    "href": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#regarder-les-données-inspection",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "2) Regarder les données (inspection)",
+    "text": "2) Regarder les données (inspection)\nOn veut répondre à des questions simples : - Quelles colonnes ? - Quelles valeurs manquantes ? - Quels ordres de grandeur ?\n\ndf.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 150 entries, 0 to 149\nData columns (total 5 columns):\n #   Column             Non-Null Count  Dtype  \n---  ------             --------------  -----  \n 0   sepal length (cm)  150 non-null    float64\n 1   sepal width (cm)   150 non-null    float64\n 2   petal length (cm)  150 non-null    float64\n 3   petal width (cm)   150 non-null    float64\n 4   species            150 non-null    object \ndtypes: float64(4), object(1)\nmemory usage: 6.0+ KB\n\n\n\ndf.describe(include='all')\n\n\n\n\n\n\n\n\nsepal length (cm)\nsepal width (cm)\npetal length (cm)\npetal width (cm)\nspecies\n\n\n\n\ncount\n150.000000\n150.000000\n150.000000\n150.000000\n150\n\n\nunique\nNaN\nNaN\nNaN\nNaN\n3\n\n\ntop\nNaN\nNaN\nNaN\nNaN\nsetosa\n\n\nfreq\nNaN\nNaN\nNaN\nNaN\n50\n\n\nmean\n5.843333\n3.057333\n3.758000\n1.199333\nNaN\n\n\nstd\n0.828066\n0.435866\n1.765298\n0.762238\nNaN\n\n\nmin\n4.300000\n2.000000\n1.000000\n0.100000\nNaN\n\n\n25%\n5.100000\n2.800000\n1.600000\n0.300000\nNaN\n\n\n50%\n5.800000\n3.000000\n4.350000\n1.300000\nNaN\n\n\n75%\n6.400000\n3.300000\n5.100000\n1.800000\nNaN\n\n\nmax\n7.900000\n4.400000\n6.900000\n2.500000\nNaN"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#simuler-un-problème-réaliste-valeurs-manquantes",
+    "href": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#simuler-un-problème-réaliste-valeurs-manquantes",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "3) (Simuler) un problème réaliste : valeurs manquantes",
+    "text": "3) (Simuler) un problème réaliste : valeurs manquantes\nPour illustrer le nettoyage, on introduit volontairement quelques NaN.\n\ndf_dirty = df.copy()\n\n# Introduire ~5% de valeurs manquantes dans deux colonnes\nmask1 = np.random.rand(len(df_dirty)) &lt; 0.05\nmask2 = np.random.rand(len(df_dirty)) &lt; 0.05\n\ndf_dirty.loc[mask1, \"sepal length (cm)\"] = np.nan\ndf_dirty.loc[mask2, \"petal width (cm)\"] = np.nan\n\ndf_dirty.isna().mean().sort_values(ascending=False)\n\nsepal length (cm)    0.06\npetal width (cm)     0.06\nsepal width (cm)     0.00\npetal length (cm)    0.00\nspecies              0.00\ndtype: float64"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#nettoyage",
+    "href": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#nettoyage",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "4) Nettoyage",
+    "text": "4) Nettoyage\nIci, stratégie simple : imputation par médiane (sur les colonnes numériques).\n\ndf_clean = df_dirty.copy()\n\nnum_cols = df_clean.select_dtypes(include=[\"number\"]).columns\nfor c in num_cols:\n    df_clean[c] = df_clean[c].fillna(df_clean[c].median())\n\ndf_clean.isna().sum()\n\nsepal length (cm)    0\nsepal width (cm)     0\npetal length (cm)    0\npetal width (cm)     0\nspecies              0\ndtype: int64"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#transformation-feature-engineering-léger",
+    "href": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#transformation-feature-engineering-léger",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "5) Transformation (feature engineering léger)",
+    "text": "5) Transformation (feature engineering léger)\nOn crée 2 variables simples : - ratio pétale/sepale - surface approx. pétale (longueur × largeur)\nL’idée : transformations cohérentes au service d’une question.\n\ndf_feat = df_clean.copy()\n\ndf_feat[\"petal_area\"] = df_feat[\"petal length (cm)\"] * df_feat[\"petal width (cm)\"]\ndf_feat[\"petal_to_sepal_ratio\"] = df_feat[\"petal length (cm)\"] / df_feat[\"sepal length (cm)\"]\n\ndf_feat.head()\n\n\n\n\n\n\n\n\nsepal length (cm)\nsepal width (cm)\npetal length (cm)\npetal width (cm)\nspecies\npetal_area\npetal_to_sepal_ratio\n\n\n\n\n0\n5.1\n3.5\n1.4\n0.2\nsetosa\n0.28\n0.274510\n\n\n1\n4.9\n3.0\n1.4\n0.2\nsetosa\n0.28\n0.285714\n\n\n2\n4.7\n3.2\n1.3\n0.2\nsetosa\n0.26\n0.276596\n\n\n3\n4.6\n3.1\n1.5\n0.2\nsetosa\n0.30\n0.326087\n\n\n4\n5.0\n3.6\n1.4\n0.2\nsetosa\n0.28\n0.280000"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#analyse",
+    "href": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#analyse",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "6) Analyse",
+    "text": "6) Analyse\nExemple de question (simple) : &gt; Quelles variables distinguent le mieux les espèces ?\nOn commence par une analyse descriptive : moyennes par espèce.\n\nsummary = df_feat.groupby(\"species\").mean(numeric_only=True)\nsummary\n\n\n\n\n\n\n\n\nsepal length (cm)\nsepal width (cm)\npetal length (cm)\npetal width (cm)\npetal_area\npetal_to_sepal_ratio\n\n\nspecies\n\n\n\n\n\n\n\n\n\n\nsetosa\n5.064\n3.428\n1.462\n0.284\n0.4266\n0.289655\n\n\nversicolor\n5.924\n2.770\n4.260\n1.326\n5.7204\n0.719572\n\n\nvirginica\n6.548\n2.974\n5.552\n1.964\n10.9490\n0.849610\n\n\n\n\n\n\n\n\nVisualisation rapide\nUn graphique simple pour rendre visible une séparation.\n\nplt.figure()\nfor sp, g in df_feat.groupby(\"species\"):\n    plt.scatter(g[\"petal length (cm)\"], g[\"petal width (cm)\"], label=sp, alpha=0.8)\nplt.xlabel(\"petal length (cm)\")\nplt.ylabel(\"petal width (cm)\")\nplt.legend()\nplt.title(\"Iris: séparation par espèces (pétales)\")\nplt.show()"
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#récap-pipeline-ce-quon-a-fait",
+    "href": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#récap-pipeline-ce-quon-a-fait",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "7) Récap pipeline (ce qu’on a fait)",
+    "text": "7) Récap pipeline (ce qu’on a fait)\n\nDonnées : iris\nNettoyage : NaN → médiane\nTransformation : petal_area, petal_to_sepal_ratio\nAnalyse : stats par groupe + scatter plot\n\n\nPhrase à retenir\n\nLe plus important n’est pas l’outil, mais la question que le pipeline sert."
+  },
+  {
+    "objectID": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#option-exercice-minute",
+    "href": "section/teaching/bigdata/CM/CM2/notebook/notebook.html#option-exercice-minute",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "(Option) Exercice minute",
+    "text": "(Option) Exercice minute\n\nPropose une nouvelle question sur ces données.\nDis quelles transformations seraient nécessaires.\nQuelle visualisation ferait sens ?"
+  },
+  {
+    "objectID": "section/teaching/bigdata/index.html",
+    "href": "section/teaching/bigdata/index.html",
+    "title": "Introduction au Big Data",
+    "section": "",
+    "text": "Ce cours de Big Data introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets.\n\n\n\n\n\n\nPériode\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2\n\n\n\n\n\n\n\n\nCours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
+  },
+  {
+    "objectID": "section/teaching/bigdata/index.html#planning-indicatif",
+    "href": "section/teaching/bigdata/index.html#planning-indicatif",
+    "title": "Introduction au Big Data",
+    "section": "",
+    "text": "Période\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2"
+  },
+  {
+    "objectID": "section/teaching/bigdata/index.html#cours-magistraux",
+    "href": "section/teaching/bigdata/index.html#cours-magistraux",
+    "title": "Introduction au Big Data",
+    "section": "",
+    "text": "Cours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+  },
+  {
+    "objectID": "section/teaching/bigdata/index.html#travaux-pratiques-et-projets",
+    "href": "section/teaching/bigdata/index.html#travaux-pratiques-et-projets",
+    "title": "Introduction au Big Data",
+    "section": "",
+    "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
+  },
+  {
+    "objectID": "section/cv/personal.html",
+    "href": "section/cv/personal.html",
+    "title": "Nathan Sanchiz-Viel",
+    "section": "",
+    "text": "Welcome here !"
+  }
+]
