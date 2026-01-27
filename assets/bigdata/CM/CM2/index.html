@@ -7,7 +7,7 @@
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
   <title>Teaching – CM2 - Big Data</title>
@@ -29,8 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/theme/quarto-6014ed483d51142c95ef96c35774b61e.css">
   <link href="../../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -123,17 +122,24 @@
     }
   </style>
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 
-<section id="comment-analyser-des-données-réelles-sans-se-perdre-dans-le-code-ni-les-outils" class="slide level2 title center" data-background-color="#2b4050">
+<section>
+<section id="section" class="title-slide slide level1 center" data-background-image="image/astronaut.jpg">
+<h1></h1>
+<div class="absolute" style="font-size:1em; padding: 0.25em 0.5em; background-color: rgba(0, 0, 0, .75); backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); border-radius: 2px;top: 75%; left: 55%; ">
+<p>Introduction au Big Data</p>
+</div>
+</section>
+<section id="comment-analyser-des-données-réelles-sans-se-perdre-dans-le-code-ni-les-outils" class="slide level2 question">
 <h2>Comment analyser des données réelles sans se perdre dans le code ni les outils ?</h2>
 <!-- BLOC: Intro 5min -->
 </section>
-<section id="mise-en-situation" class="title-slide slide level1 center" data-background-color="#1c1c1c">
-<h1>Mise en situation</h1>
+<section id="mise-en-situation" class="slide level2">
+<h2>Mise en situation</h2>
 <p>Vous êtes situation comme stagiaire data dans une grande entreprise.</p>
 <div class="blue fragment">
 <p>On vous confie un dossier contenant :</p>
@@ -150,20 +156,19 @@
 </blockquote>
 </div>
 <!-- BLOC: Bloc_1 15min -->
-</section>
-
+</section></section>
 <section>
-<section id="bloc-1" class="title-slide slide level1 center" data-background-color="#ffffff">
+<section id="bloc-1" class="title-slide slide level1 block center">
 <h1>Bloc 1</h1>
 
 </section>
-<section id="quest-ce-que-faire-une-analyse-de-données" class="slide level2 center" data-background-color="#2b4050">
+<section id="quest-ce-que-faire-une-analyse-de-données" class="slide level2 question">
 <h2>Qu’est-ce que <em>faire une analyse de données</em> ?</h2>
 </section>
-<section id="une-première-intuition" class="slide level2" data-background-color="#1c1c1c">
+<section id="une-première-intuition" class="slide level2">
 <h2>Une première intuition</h2>
 <p>Analyser des données, ce n’est pas :</p>
-<div class="red">
+<div class="red highlight-last">
 <ul>
 <li class="fragment">appliquer une formule</li>
 <li class="fragment">lancer une commande magique</li>
@@ -171,14 +176,14 @@
 </ul>
 </div>
 </section>
-<section id="concept-clé" class="slide level2" data-background-color="#1c1c1c">
+<section id="concept-clé" class="slide level2">
 <h2>Concept clé</h2>
 <div class="green">
 <p><strong>Analyser des données, c’est transformer des données brutes<br>
 en informations compréhensibles.</strong></p>
 </div>
 </section>
-<section id="lanalyse-comme-processus" class="slide level2" data-background-color="#1c1c1c">
+<section id="lanalyse-comme-processus" class="slide level2">
 <h2>L’analyse comme processus</h2>
 <!-- TODO: image schéma circulaire, données -> transformations -> résultats -> retour-->
 <p>Une analyse de données, c’est :</p>
@@ -249,7 +254,7 @@ en informations compréhensibles.</strong></p>
 <p>👉 Ce cycle est <strong>itératif</strong>.</p>
 </div>
 </section>
-<section id="exemples-de-transformations" class="slide level2" data-background-color="#1c1c1c">
+<section id="exemples-de-transformations" class="slide level2">
 <h2>Exemples de transformations</h2>
 <!-- TODO: Une image montrant : une table brute puis une table nettoyée / agrégée -->
 <p>Transformer des données, c’est par exemple :</p>
@@ -266,7 +271,7 @@ en informations compréhensibles.</strong></p>
 <p>👉 Rien de tout cela n’est automatique.</p>
 </div>
 </section>
-<section id="où-intervient-le-code" class="slide level2" data-background-color="#1c1c1c">
+<section id="où-intervient-le-code" class="slide level2">
 <h2>Où intervient le code ?</h2>
 <p>Pour enchaîner ces transformations,<br>
 on a besoin d’un langage.</p>
@@ -274,7 +279,7 @@ on a besoin d’un langage.</p>
 <p>👉 En data science, ce langage est <span class="red"><strong>très</strong></span> souvent <strong>Python</strong>.</p>
 </div>
 </section>
-<section id="rôle-des-bibliothèques-python" class="slide level2" data-background-color="#1c1c1c">
+<section id="rôle-des-bibliothèques-python" class="slide level2">
 <h2>Rôle des bibliothèques Python</h2>
 <p>En Python, on n’écrit presque jamais tout à partir de zéro.</p>
 <p>On utilise des <strong>bibliothèques</strong>, c’est-à-dire :</p>
@@ -290,7 +295,7 @@ on a besoin d’un langage.</p>
 <p>👉 Elles permettent de se concentrer sur l’analyse.</p>
 </div>
 </section>
-<section id="exemples-de-bibliothèques-vue-densemble" class="slide level2" data-background-color="#1c1c1c">
+<section id="exemples-de-bibliothèques-vue-densemble" class="slide level2">
 <h2>Exemples de bibliothèques (vue d’ensemble)</h2>
 <p>Sans entrer dans le détail :</p>
 <ul>
@@ -303,7 +308,7 @@ on a besoin d’un langage.</p>
 <p>Chaque bibliothèque correspond à un type de transformation.</p>
 </blockquote>
 </section>
-<section id="vers-la-notion-de-pipeline" class="slide level2" data-background-color="#1c1c1c">
+<section id="vers-la-notion-de-pipeline" class="slide level2">
 <h2>Vers la notion de pipeline</h2>
 <!-- TODO: schema simple Données → Nettoyage → Analyse → Résultats -->
 <p>Une analyse complète (ou pipeline) ressemble rarement à une seule action.</p>
@@ -324,7 +329,7 @@ on a besoin d’un langage.</p>
 <p>👉 Nous verrons des exemples de pipeline</p>
 </div>
 </section>
-<section id="pipeline-définition-simple" class="slide level2" data-background-color="#1c1c1c">
+<section id="pipeline-définition-simple" class="slide level2">
 <h2>Pipeline (définition simple)</h2>
 <p>Un <strong>pipeline</strong> est une suite d’étapes organisées<br>
 qui transforment des données en résultats.</p>
@@ -332,7 +337,7 @@ qui transforment des données en résultats.</p>
 <p><strong>Même données + mêmes étapes = mêmes résultats</strong></p>
 </blockquote>
 </section>
-<section id="environnement" class="slide level2" data-background-color="#1c1c1c">
+<section id="environnement" class="slide level2">
 <h2>Environnement</h2>
 <p>Pour travailler sur ce processus de façon efficace,<br>
 il faut un environnement adapté.</p>
@@ -340,7 +345,7 @@ il faut un environnement adapté.</p>
 <p>C’est le role des notebooks</p>
 </blockquote>
 </section>
-<section id="phrase-à-retenir" class="slide level2" data-background-color="#1c1c1c">
+<section id="phrase-à-retenir" class="slide level2">
 <h2>Phrase à retenir</h2>
 <blockquote>
 <p><strong>Analyser des données</strong>,<br>
@@ -349,17 +354,17 @@ c’est enchaîner des transformations de manière cohérente</p>
 <!-- BLOC: Bloc_2 15min --->
 </section></section>
 <section>
-<section id="bloc-2" class="title-slide slide level1 center" data-background-color="#ffffff">
+<section id="bloc-2" class="title-slide slide level1 block center">
 <h1>Bloc 2</h1>
 
 </section>
-<section id="pourquoi-en-data-science-on-ne-commence-presque-jamais-par-écrire-un-programme-complet" class="slide level2 center" data-background-color="#2b4050">
+<section id="pourquoi-en-data-science-on-ne-commence-presque-jamais-par-écrire-un-programme-complet" class="slide level2 question">
 <h2>Pourquoi, en data science, on ne commence presque jamais par écrire un programme complet ?</h2>
 <div class="fragment green">
 <p>Un notebook sert à explorer vite (boucle courte) avant de structurer.</p>
 </div>
 </section>
-<section id="sans-ça" class="slide level2" data-background-color="#1c1c1c">
+<section id="sans-ça" class="slide level2">
 <h2>Sans ça</h2>
 <div class="red">
 <ul>
@@ -370,11 +375,11 @@ c’est enchaîner des transformations de manière cohérente</p>
 </ul>
 </div>
 </section>
-<section id="notebook-lenvironnement-de-travail-en-data" class="slide level2" data-background-color="#1c1c1c">
+<section id="notebook-lenvironnement-de-travail-en-data" class="slide level2">
 <h2>Notebook : l’environnement de travail en data</h2>
 
 <img data-src="image/jupyter.webp" class="r-stretch"></section>
-<section id="quest-ce-quun-notebook" class="slide level2" data-background-color="#1c1c1c">
+<section id="quest-ce-quun-notebook" class="slide level2">
 <h2>Qu’est-ce qu’un notebook ?</h2>
 <p>Un <strong>notebook</strong> est un document interactif qui permet de :</p>
 <div class="green">
@@ -389,7 +394,7 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p><strong>On explore avant de structurer.</strong></p>
 </blockquote>
 </section>
-<section id="le-notebook-environnement-dexploration-interactive" class="slide level2" data-background-color="#1c1c1c">
+<section id="le-notebook-environnement-dexploration-interactive" class="slide level2">
 <h2>Le notebook = environnement d’exploration interactive</h2>
 <p>Un <strong>notebook</strong> est un fichier, le plus souvent avec l’extension :</p>
 <blockquote>
@@ -427,10 +432,10 @@ c’est enchaîner des transformations de manière cohérente</p>
 <h2>Integrated Development Environment</h2>
 
 <img data-src="image/jupyter_lab.svg" class="r-stretch"></section>
-<section id="jupyter-ide" class="slide level2" data-background-color="#cac9c9">
+<section id="jupyter-ide" class="slide level2">
 <h2>Jupyter IDE</h2>
 <div class="r-fit-text">
-<p>Jupyter Notebook != Jupyter Lab</p>
+<p>Jupyter Notebook <span class="math inline">\(\neq\)</span> Jupyter Lab</p>
 </div>
 </section>
 <section id="jupyter-notebook" class="slide level2" data-background-color="#cac9c9">
@@ -441,7 +446,7 @@ c’est enchaîner des transformations de manière cohérente</p>
 <h2>Jupyter Lab</h2>
 
 <img data-src="image/jupyter_ide_1.svg" class="r-stretch"></section>
-<section id="analyse-réelle-dans-un-notebook" class="slide level2" data-background-color="#1c1c1c">
+<section id="analyse-réelle-dans-un-notebook" class="slide level2">
 <h2>Analyse réelle dans un notebook</h2>
 <div class="green">
 <ul>
@@ -453,7 +458,7 @@ c’est enchaîner des transformations de manière cohérente</p>
 </ul>
 </div>
 </section>
-<section id="ce-que-montre-un-notebook" class="slide level2" data-background-color="#1c1c1c">
+<section id="ce-que-montre-un-notebook" class="slide level2">
 <h2>Ce que montre un notebook</h2>
 <div class="fragment">
 <p>Un notebook montre :</p>
@@ -469,22 +474,297 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p>Le notebook est un format de raisonnement interactif</p>
 </blockquote>
 </section>
-<section id="section" class="slide level2" data-background-video="image/notebook.mkv" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<section id="section-1" class="slide level2" data-background-video="image/notebook.mkv" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
 <h2></h2>
 </section>
-<section id="un-notebook-cest-loutil-pour-raccourcir-la-boucle-essai-résultat-ajustement." class="slide level2 center" data-background-color="#1c1c1c">
+<section id="un-notebook-cest-loutil-pour-raccourcir-la-boucle-essai-résultat-ajustement." class="slide level2 center">
 <h2>Un notebook, c’est l’outil pour raccourcir la boucle essai → résultat → ajustement.</h2>
+<!-- BLOC: Pause 5min -->
+</section></section>
+<section id="pause" class="title-slide slide level1 center">
+<h1>Pause</h1>
+<div id="timer" style="font-size:2em; text-align:center;">
+<p>05:00</p>
+</div>
+<button id="start-timer">
+▶ Start
+</button>
+<script>
+let interval = null;
+let time = 5 * 60;
+
+const el = document.getElementById("timer");
+const btn = document.getElementById("start-timer");
+
+function update() {
+  const m = String(Math.floor(time / 60)).padStart(2, "0");
+  const s = String(time % 60).padStart(2, "0");
+  el.textContent = `${m}:${s}`;
+}
+
+btn.addEventListener("click", () => {
+  if (interval) return; // évite double start
+
+  update();
+  interval = setInterval(() => {
+    if (time > 0) {
+      time--;
+      update();
+    }
+  }, 1000);
+});
+</script>
+<!-- BLOC: Bloc_2bis (15–18 slides) -->
+</section>
+
+<section>
+<section id="bloc-2bis" class="title-slide slide level1 block center">
+<h1>Bloc 2bis</h1>
+
+</section>
+<section id="avec-quoi-travaille-t-on-concrètement" class="slide level2 question">
+<h2>Avec quoi travaille-t-on concrètement ?</h2>
+<p>Dans un notebook, on ne manipule pas “des fichiers”.</p>
+<div class="green">
+<p>On manipule des <strong>objets de données</strong>.</p>
+</div>
+<div class="fragment">
+<p>👉 L’objet le plus courant en data science : <strong>le DataFrame</strong></p>
+</div>
+</section>
+<section id="intuition-un-dataframe-cest-quoi" class="slide level2">
+<h2>Intuition : un DataFrame, c’est quoi ?</h2>
+<p>Un <strong>DataFrame</strong>, c’est :</p>
+<div class="blue">
+<ul>
+<li class="fragment">une table</li>
+<li class="fragment">avec des lignes</li>
+<li class="fragment">et des colonnes</li>
+</ul>
+</div>
+<div class="fragment">
+<p>👉 Comme un tableau Excel… <strong>mais en mémoire</strong></p>
+</div>
+</section>
+<section id="dataframe-fichier" class="slide level2">
+<h2>DataFrame ≠ fichier</h2>
+<p>Un fichier (CSV, Excel…) :</p>
+<div class="red">
+<ul>
+<li class="fragment">est stocké sur le disque</li>
+<li class="fragment">est passif</li>
+</ul>
+</div>
+<p>Un DataFrame :</p>
+<div class="green">
+<ul>
+<li class="fragment">vit dans la mémoire du programme</li>
+<li class="fragment">peut être transformé</li>
+<li class="fragment">peut être recalculé</li>
+</ul>
+</div>
+</section>
+<section id="exemple-mental" class="slide level2">
+<h2>Exemple mental</h2>
+<p>Imagine un fichier :</p>
+<pre><code>
+ventes.csv
+</code></pre>
+<p>Quand on le charge :</p>
+<div class="fragment blue">
+<p>Le fichier devient un <strong>DataFrame</strong> nommé par exemple : <code>df_ventes</code></p>
+</div>
+<div class="fragment">
+<p>👉 Toute l’analyse se fait <strong>sur le DataFrame</strong>, pas sur le fichier</p>
+</div>
+</section>
+<section id="structure-dun-dataframe" class="slide level2">
+<h2>Structure d’un DataFrame</h2>
+<p>Un DataFrame contient :</p>
+<div class="blue">
+<ul>
+<li class="fragment">des <strong>colonnes</strong> → variables</li>
+<li class="fragment">des <strong>lignes</strong> → observations</li>
+</ul>
+</div>
+<div class="fragment">
+<p>👉 Chaque cellule = une valeur</p>
+</div>
+</section>
+<section id="colonnes-questions-possibles" class="slide level2">
+<h2>Colonnes = questions possibles</h2>
+<p>Chaque colonne correspond à une information :</p>
+<div class="green">
+<ul>
+<li class="fragment">date</li>
+<li class="fragment">prix</li>
+<li class="fragment">âge</li>
+<li class="fragment">pays</li>
+<li class="fragment">catégorie</li>
+</ul>
+</div>
+<div class="fragment">
+<p>👉 Les colonnes définissent <strong>ce que tu peux analyser</strong></p>
+</div>
+</section>
+<section id="lignes-observations" class="slide level2">
+<h2>Lignes = observations</h2>
+<p>Chaque ligne représente :</p>
+<div class="blue">
+<ul>
+<li class="fragment">une vente</li>
+<li class="fragment">un client</li>
+<li class="fragment">un événement</li>
+<li class="fragment">une mesure</li>
+</ul>
+</div>
+<div class="fragment">
+<p>👉 Plus il y a de lignes, plus il y a de données</p>
+</div>
+</section>
+<section id="taille-des-données" class="slide level2">
+<h2>Taille des données</h2>
+<p>Un DataFrame peut contenir :</p>
+<div class="blue">
+<ul>
+<li class="fragment">100 lignes</li>
+<li class="fragment">10 000 lignes</li>
+<li class="fragment">10 millions de lignes</li>
+</ul>
+</div>
+<div class="fragment">
+<p>👉 Même structure, <strong>échelle différente</strong></p>
+</div>
+</section>
+<section id="big-data-une-question-déchelle" class="slide level2">
+<h2>Big Data : une question d’échelle</h2>
+<p>Le <strong>Big Data</strong>, ce n’est pas un type spécial de données.</p>
+<div class="red">
+<p>Ce sont les <strong>mêmes concepts</strong>…</p>
+</div>
+<div class="fragment green">
+<p>… mais à une échelle plus grande</p>
+</div>
+</section>
+<section id="les-3-problèmes-quand-les-données-grandissent" class="slide level2">
+<h2>Les 3 problèmes quand les données grandissent</h2>
+<p>Quand le volume augmente :</p>
+<div class="red">
+<ul>
+<li class="fragment">lenteur</li>
+<li class="fragment">mémoire limitée</li>
+<li class="fragment">calculs coûteux</li>
+</ul>
+</div>
+<div class="fragment">
+<p>👉 D’où l’importance de bien structurer l’analyse</p>
+</div>
+</section>
+<section id="regarder-avant-danalyser" class="slide level2">
+<h2>Regarder avant d’analyser</h2>
+<p>Avant toute analyse, on fait presque toujours :</p>
+<div class="blue">
+<ul>
+<li class="fragment">afficher les premières lignes</li>
+<li class="fragment">vérifier les colonnes</li>
+<li class="fragment">regarder la taille</li>
+</ul>
+</div>
+<div class="fragment">
+<p>👉 Comprendre <strong>avant</strong> de transformer</p>
+</div>
+</section>
+<section id="données-réelles-données-imparfaites" class="slide level2">
+<h2>Données réelles = données imparfaites</h2>
+<p>Dans la vraie vie, un DataFrame contient souvent :</p>
+<div class="red">
+<ul>
+<li class="fragment">des valeurs manquantes</li>
+<li class="fragment">des erreurs</li>
+<li class="fragment">des formats incohérents</li>
+</ul>
+</div>
+<div class="fragment">
+<p>👉 Le nettoyage est <strong>inevitable</strong></p>
+</div>
+</section>
+<section id="nettoyer-ce-nest-pas-tricher" class="slide level2">
+<h2>Nettoyer, ce n’est pas tricher</h2>
+<p>Nettoyer des données, ce n’est pas :</p>
+<div class="red">
+<ul>
+<li class="fragment">modifier la réalité</li>
+</ul>
+</div>
+<p>C’est :</p>
+<div class="green">
+<ul>
+<li class="fragment">rendre les données exploitables</li>
+<li class="fragment">expliciter les choix</li>
+</ul>
+</div>
+</section>
+<section id="transformation-analyse" class="slide level2">
+<h2>Transformation ≠ analyse</h2>
+<div class="blue">
+<ul>
+<li class="fragment">Nettoyer</li>
+<li class="fragment">Filtrer</li>
+<li class="fragment">Regrouper</li>
+</ul>
+</div>
+<div class="fragment">
+<p>👉 Ce sont des <strong>transformations</strong></p>
+</div>
+<div class="fragment green">
+<p>L’analyse vient <strong>après</strong></p>
+</div>
+</section>
+<section id="le-dataframe-comme-matière-première" class="slide level2">
+<h2>Le DataFrame comme matière première</h2>
+<p>On peut voir le DataFrame comme :</p>
+<div class="green">
+<ul>
+<li class="fragment">une matière brute</li>
+<li class="fragment">que l’on façonne</li>
+<li class="fragment">étape par étape</li>
+</ul>
+</div>
+<div class="fragment">
+<p>👉 C’est le cœur du pipeline</p>
+</div>
+</section>
+<section id="transition-vers-le-pipeline" class="slide level2">
+<h2>Transition vers le pipeline</h2>
+<div class="blue">
+<p>Une analyse, c’est donc :</p>
+</div>
+<ul>
+<li class="fragment">partir d’un DataFrame</li>
+<li class="fragment">appliquer des transformations</li>
+<li class="fragment">produire des résultats</li>
+</ul>
+<div class="fragment">
+<p>👉 C’est exactement ce qu’on appelle un <strong>pipeline</strong></p>
+</div>
+</section>
+<section id="phrase-à-retenir-1" class="slide level2">
+<h2>Phrase à retenir</h2>
+<blockquote>
+<p><strong>Le DataFrame est l’objet central<br>
+de toute analyse de données en Python.</strong></p>
+</blockquote>
 <!-- BLOC: Bloc_3 15–20min -->
 </section></section>
 <section>
-<section id="bloc-3" class="title-slide slide level1 center" data-background-color="#ffffff">
+<section id="bloc-3" class="title-slide slide level1 block center">
 <h1>Bloc 3</h1>
 
 </section>
-<section id="pourquoi-structurer-une-analyse-en-pipeline" class="slide level2 center" data-background-color="#2b4050">
+<section id="pourquoi-structurer-une-analyse-en-pipeline" class="slide level2 question">
 <h2>Pourquoi structurer une analyse en pipeline ?</h2>
 </section>
-<section id="intuition" class="slide level2" data-background-color="#1c1c1c">
+<section id="intuition" class="slide level2">
 <h2>Intuition</h2>
 <p>Quand on analyse des données :</p>
 <div class="red">
@@ -498,7 +778,7 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p>👉 alors tu ne sais pas encore quelle analyse faire.</p>
 </div>
 </section>
-<section id="phrase-à-retenir-1" class="slide level2" data-background-color="#1c1c1c">
+<section id="phrase-à-retenir-2" class="slide level2">
 <h2>Phrase à retenir</h2>
 <blockquote>
 <p><strong>En analyse de données,<br>
@@ -508,11 +788,11 @@ mais la question qu’il sert.</strong></p>
 <!-- BLOC: Conclusion-->
 </section></section>
 <section>
-<section id="conclusion" class="title-slide slide level1 center" data-background-color="#ffffff">
+<section id="conclusion" class="title-slide slide level1 block center">
 <h1>Conclusion</h1>
 
 </section>
-<section id="ce-quil-faut-retenir" class="slide level2" data-background-color="#1c1c1c">
+<section id="ce-quil-faut-retenir" class="slide level2">
 <h2>Ce qu’il faut retenir</h2>
 <p>Aujourd’hui, l’idée centrale est simple :</p>
 <div class="green">
@@ -520,7 +800,7 @@ mais la question qu’il sert.</strong></p>
 Pas une commande magique.</p>
 </div>
 </section>
-<section id="trois-repères" class="slide level2" data-background-color="#1c1c1c">
+<section id="trois-repères" class="slide level2">
 <h2>Trois repères</h2>
 <div class="blue">
 <ul>
@@ -533,7 +813,7 @@ Pas une commande magique.</p>
 <p>👉 Le code n’est qu’un moyen de rendre ce processus efficace.</p>
 </div>
 </section>
-<section id="la-règle-dor" class="slide level2" data-background-color="#1c1c1c">
+<section id="la-règle-dor" class="slide level2">
 <h2>La règle d’or</h2>
 <blockquote>
 <p><strong>La question guide le pipeline,<br>
@@ -541,7 +821,7 @@ le pipeline guide les transformations,<br>
 les transformations produisent les résultats.</strong></p>
 </blockquote>
 </section>
-<section id="ce-quon-va-faire-ensuite" class="slide level2" data-background-color="#1c1c1c">
+<section id="ce-quon-va-faire-ensuite" class="slide level2">
 <h2>Ce qu’on va faire ensuite</h2>
 <p>Dans la suite du cours, on va :</p>
 <div class="blue">
@@ -555,7 +835,7 @@ les transformations produisent les résultats.</strong></p>
 <p>👉 Objectif : voir le processus “en vrai”.</p>
 </div>
 </section>
-<section id="réponse-à-la-question-de-départ" class="slide level2" data-background-color="#1c1c1c">
+<section id="réponse-à-la-question-de-départ" class="slide level2">
 <h2>Réponse à la question de départ</h2>
 <blockquote>
 <p><strong>On analyse des données réelles<br>

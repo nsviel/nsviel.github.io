@@ -7,6 +7,13 @@
     "text": "Comment analyser des données réelles sans se perdre dans le code ni les outils ?"
   },
   {
+    "objectID": "assets/bigdata/CM/CM2/index.html#mise-en-situation",
+    "href": "assets/bigdata/CM/CM2/index.html#mise-en-situation",
+    "title": "Teaching",
+    "section": "Mise en situation",
+    "text": "Mise en situation\nVous êtes situation comme stagiaire data dans une grande entreprise.\n\nOn vous confie un dossier contenant :\n\nplusieurs fichiers de données\ndes formats différents\npeu de documentation\n\n\nOn vous demande :\n\n\n« Analyse ces données et explique-nous ce que tu observes. »"
+  },
+  {
     "objectID": "assets/bigdata/CM/CM2/index.html#quest-ce-que-faire-une-analyse-de-données",
     "href": "assets/bigdata/CM/CM2/index.html#quest-ce-que-faire-une-analyse-de-données",
     "title": "Teaching",
@@ -165,7 +172,7 @@
     "href": "assets/bigdata/CM/CM2/index.html#jupyter-ide",
     "title": "Teaching",
     "section": "Jupyter IDE",
-    "text": "Jupyter IDE\n\nJupyter Notebook != Jupyter Lab"
+    "text": "Jupyter IDE\n\nJupyter Notebook \\(\\neq\\) Jupyter Lab"
   },
   {
     "objectID": "assets/bigdata/CM/CM2/index.html#jupyter-notebook",
@@ -203,6 +210,125 @@
     "text": "Un notebook, c’est l’outil pour raccourcir la boucle essai → résultat → ajustement."
   },
   {
+    "objectID": "assets/bigdata/CM/CM2/index.html#avec-quoi-travaille-t-on-concrètement",
+    "href": "assets/bigdata/CM/CM2/index.html#avec-quoi-travaille-t-on-concrètement",
+    "title": "Teaching",
+    "section": "Avec quoi travaille-t-on concrètement ?",
+    "text": "Avec quoi travaille-t-on concrètement ?\nDans un notebook, on ne manipule pas “des fichiers”.\n\nOn manipule des objets de données.\n\n\n👉 L’objet le plus courant en data science : le DataFrame"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#intuition-un-dataframe-cest-quoi",
+    "href": "assets/bigdata/CM/CM2/index.html#intuition-un-dataframe-cest-quoi",
+    "title": "Teaching",
+    "section": "Intuition : un DataFrame, c’est quoi ?",
+    "text": "Intuition : un DataFrame, c’est quoi ?\nUn DataFrame, c’est :\n\n\nune table\navec des lignes\net des colonnes\n\n\n\n👉 Comme un tableau Excel… mais en mémoire"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#dataframe-fichier",
+    "href": "assets/bigdata/CM/CM2/index.html#dataframe-fichier",
+    "title": "Teaching",
+    "section": "DataFrame ≠ fichier",
+    "text": "DataFrame ≠ fichier\nUn fichier (CSV, Excel…) :\n\n\nest stocké sur le disque\nest passif\n\n\nUn DataFrame :\n\n\nvit dans la mémoire du programme\npeut être transformé\npeut être recalculé"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#exemple-mental",
+    "href": "assets/bigdata/CM/CM2/index.html#exemple-mental",
+    "title": "Teaching",
+    "section": "Exemple mental",
+    "text": "Exemple mental\nImagine un fichier :\n\nventes.csv\n\nQuand on le charge :\n\nLe fichier devient un DataFrame nommé par exemple : df_ventes\n\n\n👉 Toute l’analyse se fait sur le DataFrame, pas sur le fichier"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#structure-dun-dataframe",
+    "href": "assets/bigdata/CM/CM2/index.html#structure-dun-dataframe",
+    "title": "Teaching",
+    "section": "Structure d’un DataFrame",
+    "text": "Structure d’un DataFrame\nUn DataFrame contient :\n\n\ndes colonnes → variables\ndes lignes → observations\n\n\n\n👉 Chaque cellule = une valeur"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#colonnes-questions-possibles",
+    "href": "assets/bigdata/CM/CM2/index.html#colonnes-questions-possibles",
+    "title": "Teaching",
+    "section": "Colonnes = questions possibles",
+    "text": "Colonnes = questions possibles\nChaque colonne correspond à une information :\n\n\ndate\nprix\nâge\npays\ncatégorie\n\n\n\n👉 Les colonnes définissent ce que tu peux analyser"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#lignes-observations",
+    "href": "assets/bigdata/CM/CM2/index.html#lignes-observations",
+    "title": "Teaching",
+    "section": "Lignes = observations",
+    "text": "Lignes = observations\nChaque ligne représente :\n\n\nune vente\nun client\nun événement\nune mesure\n\n\n\n👉 Plus il y a de lignes, plus il y a de données"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#taille-des-données",
+    "href": "assets/bigdata/CM/CM2/index.html#taille-des-données",
+    "title": "Teaching",
+    "section": "Taille des données",
+    "text": "Taille des données\nUn DataFrame peut contenir :\n\n\n100 lignes\n10 000 lignes\n10 millions de lignes\n\n\n\n👉 Même structure, échelle différente"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#big-data-une-question-déchelle",
+    "href": "assets/bigdata/CM/CM2/index.html#big-data-une-question-déchelle",
+    "title": "Teaching",
+    "section": "Big Data : une question d’échelle",
+    "text": "Big Data : une question d’échelle\nLe Big Data, ce n’est pas un type spécial de données.\n\nCe sont les mêmes concepts…\n\n\n… mais à une échelle plus grande"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#les-3-problèmes-quand-les-données-grandissent",
+    "href": "assets/bigdata/CM/CM2/index.html#les-3-problèmes-quand-les-données-grandissent",
+    "title": "Teaching",
+    "section": "Les 3 problèmes quand les données grandissent",
+    "text": "Les 3 problèmes quand les données grandissent\nQuand le volume augmente :\n\n\nlenteur\nmémoire limitée\ncalculs coûteux\n\n\n\n👉 D’où l’importance de bien structurer l’analyse"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#regarder-avant-danalyser",
+    "href": "assets/bigdata/CM/CM2/index.html#regarder-avant-danalyser",
+    "title": "Teaching",
+    "section": "Regarder avant d’analyser",
+    "text": "Regarder avant d’analyser\nAvant toute analyse, on fait presque toujours :\n\n\nafficher les premières lignes\nvérifier les colonnes\nregarder la taille\n\n\n\n👉 Comprendre avant de transformer"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#données-réelles-données-imparfaites",
+    "href": "assets/bigdata/CM/CM2/index.html#données-réelles-données-imparfaites",
+    "title": "Teaching",
+    "section": "Données réelles = données imparfaites",
+    "text": "Données réelles = données imparfaites\nDans la vraie vie, un DataFrame contient souvent :\n\n\ndes valeurs manquantes\ndes erreurs\ndes formats incohérents\n\n\n\n👉 Le nettoyage est inevitable"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#nettoyer-ce-nest-pas-tricher",
+    "href": "assets/bigdata/CM/CM2/index.html#nettoyer-ce-nest-pas-tricher",
+    "title": "Teaching",
+    "section": "Nettoyer, ce n’est pas tricher",
+    "text": "Nettoyer, ce n’est pas tricher\nNettoyer des données, ce n’est pas :\n\n\nmodifier la réalité\n\n\nC’est :\n\n\nrendre les données exploitables\nexpliciter les choix"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#transformation-analyse",
+    "href": "assets/bigdata/CM/CM2/index.html#transformation-analyse",
+    "title": "Teaching",
+    "section": "Transformation ≠ analyse",
+    "text": "Transformation ≠ analyse\n\n\nNettoyer\nFiltrer\nRegrouper\n\n\n\n👉 Ce sont des transformations\n\n\nL’analyse vient après"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#le-dataframe-comme-matière-première",
+    "href": "assets/bigdata/CM/CM2/index.html#le-dataframe-comme-matière-première",
+    "title": "Teaching",
+    "section": "Le DataFrame comme matière première",
+    "text": "Le DataFrame comme matière première\nOn peut voir le DataFrame comme :\n\n\nune matière brute\nque l’on façonne\nétape par étape\n\n\n\n👉 C’est le cœur du pipeline"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#transition-vers-le-pipeline",
+    "href": "assets/bigdata/CM/CM2/index.html#transition-vers-le-pipeline",
+    "title": "Teaching",
+    "section": "Transition vers le pipeline",
+    "text": "Transition vers le pipeline\n\nUne analyse, c’est donc :\n\n\npartir d’un DataFrame\nappliquer des transformations\nproduire des résultats\n\n\n👉 C’est exactement ce qu’on appelle un pipeline"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#phrase-à-retenir-1",
+    "href": "assets/bigdata/CM/CM2/index.html#phrase-à-retenir-1",
+    "title": "Teaching",
+    "section": "Phrase à retenir",
+    "text": "Phrase à retenir\n\nLe DataFrame est l’objet central\nde toute analyse de données en Python."
+  },
+  {
     "objectID": "assets/bigdata/CM/CM2/index.html#pourquoi-structurer-une-analyse-en-pipeline",
     "href": "assets/bigdata/CM/CM2/index.html#pourquoi-structurer-une-analyse-en-pipeline",
     "title": "Teaching",
@@ -217,8 +343,8 @@
     "text": "Intuition\nQuand on analyse des données :\n\n\non fait des allers-retours\non modifie des étapes\non recommence souvent\n\n\n\n👉 alors tu ne sais pas encore quelle analyse faire."
   },
   {
-    "objectID": "assets/bigdata/CM/CM2/index.html#phrase-à-retenir-1",
-    "href": "assets/bigdata/CM/CM2/index.html#phrase-à-retenir-1",
+    "objectID": "assets/bigdata/CM/CM2/index.html#phrase-à-retenir-2",
+    "href": "assets/bigdata/CM/CM2/index.html#phrase-à-retenir-2",
     "title": "Teaching",
     "section": "Phrase à retenir",
     "text": "Phrase à retenir\n\nEn analyse de données,\nce n’est pas le pipeline qui compte d’abord,\nmais la question qu’il sert."
