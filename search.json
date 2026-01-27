@@ -4,28 +4,28 @@
     "href": "assets/bigdata/CM/CM2/index.html#comment-analyser-des-données-réelles-sans-se-perdre-dans-le-code-ni-les-outils",
     "title": "Teaching",
     "section": "Comment analyser des données réelles sans se perdre dans le code ni les outils ?",
-    "text": "Comment analyser des données réelles sans se perdre dans le code ni les outils ?"
+    "text": "Comment analyser des données réelles sans se perdre dans le code ni les outils ?\n\nIdée clé : Analyser des données réelles, ce n’est pas appliquer une recette magique, c’est comprendre une situation."
   },
   {
     "objectID": "assets/bigdata/CM/CM2/index.html#mise-en-situation",
     "href": "assets/bigdata/CM/CM2/index.html#mise-en-situation",
     "title": "Teaching",
     "section": "Mise en situation",
-    "text": "Mise en situation\nVous êtes situation comme stagiaire data dans une grande entreprise.\n\nOn vous confie un dossier contenant :\n\nplusieurs fichiers de données\ndes formats différents\npeu de documentation\n\n\nOn vous demande :\n\n\n« Analyse ces données et explique-nous ce que tu observes. »"
+    "text": "Mise en situation\nVous êtes stagiaire data dans une grande entreprise.\n\nOn vous confie un dossier contenant :\n\nplusieurs fichiers de données\ndes formats différents\npeu de documentation\n\n\nOn vous demande :\n\n\n« Analyse ces données et explique-nous ce que tu observes. »\n\n\n\nIdée clé : En data, on commence presque toujours avec des données imparfaites et peu documentées."
   },
   {
     "objectID": "assets/bigdata/CM/CM2/index.html#quest-ce-que-faire-une-analyse-de-données",
     "href": "assets/bigdata/CM/CM2/index.html#quest-ce-que-faire-une-analyse-de-données",
     "title": "Teaching",
     "section": "Qu’est-ce que faire une analyse de données ?",
-    "text": "Qu’est-ce que faire une analyse de données ?"
+    "text": "Qu’est-ce que faire une analyse de données ?\n\nIdée clé : Analyser = transformer des données brutes en informations compréhensibles."
   },
   {
     "objectID": "assets/bigdata/CM/CM2/index.html#une-première-intuition",
     "href": "assets/bigdata/CM/CM2/index.html#une-première-intuition",
     "title": "Teaching",
     "section": "Une première intuition",
-    "text": "Une première intuition\nAnalyser des données, ce n’est pas :\n\n\nappliquer une formule\nlancer une commande magique\nproduire immédiatement un résultat"
+    "text": "Une première intuition\nAnalyser des données, ce n’est pas :\n\n\nappliquer une formule\nlancer une commande magique\nproduire immédiatement un résultat\n\n\n\nIdée clé : L’analyse n’est ni une formule, ni une commande, ni un résultat immédiat."
   },
   {
     "objectID": "assets/bigdata/CM/CM2/index.html#concept-clé",
@@ -39,28 +39,28 @@
     "href": "assets/bigdata/CM/CM2/index.html#lanalyse-comme-processus",
     "title": "Teaching",
     "section": "L’analyse comme processus",
-    "text": "L’analyse comme processus\n\nUne analyse de données, c’est :\n\n\n\n\n\n\n\nG\n\n\nA\n\nregarder les données\n\n\n\nB\n\nles transformer\n\n\n\nA-&gt;B\n\n\n\n\n\nC\n\nobserver le résultat\n\n\n\nB-&gt;C\n\n\n\n\n\nD\n\najuster\n\n\n\nC-&gt;D\n\n\n\n\n\nD-&gt;A\n\n\n\n\n\n\n\n\n\n\n\n👉 Ce cycle est itératif."
+    "text": "L’analyse comme processus\n\nUne analyse de données, c’est :\n\n\n\n\n\n\n\nG\n\n\nA\n\nregarder les données\n\n\n\nB\n\nles transformer\n\n\n\nA-&gt;B\n\n\n\n\n\nC\n\nobserver le résultat\n\n\n\nB-&gt;C\n\n\n\n\n\nD\n\najuster\n\n\n\nC-&gt;D\n\n\n\n\n\nD-&gt;A\n\n\n\n\n\n\n\n\n\n\n\n👉 Ce cycle est itératif.\n\n\nIdea: L’analyse suit un cycle itératif (regarder → transformer → observer → ajuster)."
   },
   {
     "objectID": "assets/bigdata/CM/CM2/index.html#exemples-de-transformations",
     "href": "assets/bigdata/CM/CM2/index.html#exemples-de-transformations",
     "title": "Teaching",
     "section": "Exemples de transformations",
-    "text": "Exemples de transformations\n\nTransformer des données, c’est par exemple :\n\n\nsélectionner des colonnes\nfiltrer des lignes\nregrouper des valeurs\ncalculer des statistiques simples\nrésumer l’information\n\n\n\n👉 Rien de tout cela n’est automatique."
+    "text": "Exemples de transformations\n\nTransformer des données, c’est par exemple :\n\n\nsélectionner des colonnes\nfiltrer des lignes\nregrouper des valeurs\ncalculer des statistiques simples\nrésumer l’information\n\n\n\n👉 Rien de tout cela n’est automatique.\n\n\nIdea:  Les transformations servent à rendre les données lisibles et exploitables."
   },
   {
     "objectID": "assets/bigdata/CM/CM2/index.html#où-intervient-le-code",
     "href": "assets/bigdata/CM/CM2/index.html#où-intervient-le-code",
     "title": "Teaching",
     "section": "Où intervient le code ?",
-    "text": "Où intervient le code ?\nPour enchaîner ces transformations,\non a besoin d’un langage.\n\n👉 En data science, ce langage est très souvent Python."
+    "text": "Où intervient le code ?\nPour enchaîner ces transformations,\non a besoin d’un langage.\n\n👉 En data science, ce langage est très souvent Python.\n\n\nIdea:  Le code sert à enchaîner des transformations, pas à remplacer la réflexion."
   },
   {
     "objectID": "assets/bigdata/CM/CM2/index.html#rôle-des-bibliothèques-python",
     "href": "assets/bigdata/CM/CM2/index.html#rôle-des-bibliothèques-python",
     "title": "Teaching",
     "section": "Rôle des bibliothèques Python",
-    "text": "Rôle des bibliothèques Python\nEn Python, on n’écrit presque jamais tout à partir de zéro.\nOn utilise des bibliothèques, c’est-à-dire :\n\n\ndes outils spécialisés\ndéjà écrits\ntestés\nréutilisables\n\n\n\n👉 Elles permettent de se concentrer sur l’analyse."
+    "text": "Rôle des bibliothèques Python\nEn Python, on n’écrit presque jamais tout à partir de zéro.\nOn utilise des bibliothèques, c’est-à-dire :\n\n\ndes outils spécialisés\ndéjà écrits\ntestés\nréutilisables\n\n\n\n👉 Elles permettent de se concentrer sur l’analyse.\n\n\nIdea:  Les bibliothèques sont des outils spécialisés pour se concentrer sur l’analyse."
   },
   {
     "objectID": "assets/bigdata/CM/CM2/index.html#exemples-de-bibliothèques-vue-densemble",
@@ -74,21 +74,21 @@
     "href": "assets/bigdata/CM/CM2/index.html#vers-la-notion-de-pipeline",
     "title": "Teaching",
     "section": "Vers la notion de pipeline",
-    "text": "Vers la notion de pipeline\n\nUne analyse complète (ou pipeline) ressemble rarement à une seule action.\n\nElle prend plutôt la forme :\n\ndonnées\nnettoyage\n\ntransformation\n\nanalyse\n\nrésultats\n\n\n\n👉 Nous verrons des exemples de pipeline"
+    "text": "Vers la notion de pipeline\n\nUne analyse complète (ou pipeline) ressemble rarement à une seule action.\n\nElle prend plutôt la forme :\n\ndonnées\nnettoyage\n\ntransformation\n\nanalyse\n\nrésultats\n\n\n\n👉 Nous verrons des exemples de pipeline\n\n\nIdea:  Une analyse complète est une suite d’étapes organisées, pas une action unique."
   },
   {
     "objectID": "assets/bigdata/CM/CM2/index.html#pipeline-définition-simple",
     "href": "assets/bigdata/CM/CM2/index.html#pipeline-définition-simple",
     "title": "Teaching",
     "section": "Pipeline (définition simple)",
-    "text": "Pipeline (définition simple)\nUn pipeline est une suite d’étapes organisées\nqui transforment des données en résultats.\n\nMême données + mêmes étapes = mêmes résultats"
+    "text": "Pipeline (définition simple)\nUn pipeline est une suite d’étapes organisées\nqui transforment des données en résultats.\n\nMême données + mêmes étapes = mêmes résultats\n\n\nIdea:  Même données + mêmes étapes = mêmes résultats."
   },
   {
     "objectID": "assets/bigdata/CM/CM2/index.html#environnement",
     "href": "assets/bigdata/CM/CM2/index.html#environnement",
     "title": "Teaching",
     "section": "Environnement",
-    "text": "Environnement\nPour travailler sur ce processus de façon efficace,\nil faut un environnement adapté.\n\nC’est le role des notebooks"
+    "text": "Environnement\nPour travailler sur ce processus de façon efficace,\nil faut un environnement adapté.\n\nC’est le role des notebooks\n\n\nIdea:  Un bon environnement facilite l’exploration et la compréhension."
   },
   {
     "objectID": "assets/bigdata/CM/CM2/index.html#phrase-à-retenir",
@@ -222,6 +222,27 @@
     "title": "Teaching",
     "section": "Intuition : un DataFrame, c’est quoi ?",
     "text": "Intuition : un DataFrame, c’est quoi ?\nUn DataFrame, c’est :\n\n\nune table\navec des lignes\net des colonnes\n\n\n\n👉 Comme un tableau Excel… mais en mémoire"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#un-dataframe-cest-quoi",
+    "href": "assets/bigdata/CM/CM2/index.html#un-dataframe-cest-quoi",
+    "title": "Teaching",
+    "section": "Un DataFrame, c’est quoi ?",
+    "text": "Un DataFrame, c’est quoi ?\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\nid\npays\ncategorie\nprix\nqtt\n\n\n\n\n0\n2024-01-03\nC001\nFrance\nLivre\n15.0\n2\n\n\n1\n2024-01-03\nC002\nFrance\nJeu\n35.0\n1\n\n\n2\n2024-01-04\nC003\nEspagne\nLivre\n12.0\n3\n\n\n3\n2024-01-05\nC001\nFrance\nJeu\n35.0\n1\n\n\n4\n2024-01-06\nC004\nItalie\nLivre\n18.0\n1\n\n\n\n\nRangés"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#un-dataframe-cest-quoi-1",
+    "href": "assets/bigdata/CM/CM2/index.html#un-dataframe-cest-quoi-1",
+    "title": "Teaching",
+    "section": "Un DataFrame, c’est quoi ?",
+    "text": "Un DataFrame, c’est quoi ?\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\nid\npays\ncategorie\nprix\nqtt\n\n\n\n\n0\n2024-01-03\nC001\nFrance\nLivre\n15.0\n2\n\n\n1\n2024-01-03\nC002\nFrance\nJeu\n35.0\n1\n\n\n2\n2024-01-04\nC003\nEspagne\nLivre\n12.0\n3\n\n\n3\n2024-01-05\nC001\nFrance\nJeu\n35.0\n1\n\n\n4\n2024-01-06\nC004\nItalie\nLivre\n18.0\n1\n\n\n\n\ncolonnes"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM2/index.html#un-dataframe-cest-quoi-2",
+    "href": "assets/bigdata/CM/CM2/index.html#un-dataframe-cest-quoi-2",
+    "title": "Teaching",
+    "section": "Un DataFrame, c’est quoi ?",
+    "text": "Un DataFrame, c’est quoi ?\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\nid\npays\ncategorie\nprix\nqtt\n\n\n\n\n0\n2024-01-03\nC001\nFrance\nLivre\n15.0\n2\n\n\n1\n2024-01-03\nC002\nFrance\nJeu\n35.0\n1\n\n\n2\n2024-01-04\nC003\nEspagne\nLivre\n12.0\n3\n\n\n3\n2024-01-05\nC001\nFrance\nJeu\n35.0\n1\n\n\n4\n2024-01-06\nC004\nItalie\nLivre\n18.0\n1\n\n\n\n\ndonnés"
   },
   {
     "objectID": "assets/bigdata/CM/CM2/index.html#dataframe-fichier",

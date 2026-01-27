@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/theme/quarto-6014ed483d51142c95ef96c35774b61e.css">
+  <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/theme/quarto-323c7c68024ecce3eb00ac243c3b5e50.css">
   <link href="../../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -121,6 +121,7 @@
       margin-right: 0; 
     }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script>
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -136,11 +137,24 @@
 </section>
 <section id="comment-analyser-des-données-réelles-sans-se-perdre-dans-le-code-ni-les-outils" class="slide level2 question">
 <h2>Comment analyser des données réelles sans se perdre dans le code ni les outils ?</h2>
+<aside class="notes">
+<p><strong>Idée clé</strong> : Analyser des données réelles, ce n’est pas appliquer une recette magique, c’est comprendre une situation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- BLOC: Intro 5min -->
 </section>
 <section id="mise-en-situation" class="slide level2">
 <h2>Mise en situation</h2>
-<p>Vous êtes situation comme stagiaire data dans une grande entreprise.</p>
+<p>Vous êtes stagiaire data dans une grande entreprise.</p>
 <div class="blue fragment">
 <p>On vous confie un dossier contenant :</p>
 <ul>
@@ -155,6 +169,19 @@
 <p>« Analyse ces données et explique-nous ce que tu observes. »</p>
 </blockquote>
 </div>
+<aside class="notes">
+<p><strong>Idée clé</strong> : En data, on commence presque toujours avec des données imparfaites et peu documentées.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- BLOC: Bloc_1 15min -->
 </section></section>
 <section>
@@ -164,6 +191,19 @@
 </section>
 <section id="quest-ce-que-faire-une-analyse-de-données" class="slide level2 question">
 <h2>Qu’est-ce que <em>faire une analyse de données</em> ?</h2>
+<aside class="notes">
+<p><strong>Idée clé</strong> : Analyser = transformer des données brutes en informations compréhensibles.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="une-première-intuition" class="slide level2">
 <h2>Une première intuition</h2>
@@ -175,6 +215,19 @@
 <li class="fragment">produire immédiatement un résultat</li>
 </ul>
 </div>
+<aside class="notes">
+<p><strong>Idée clé</strong> : L’analyse n’est ni une formule, ni une commande, ni un résultat immédiat.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="concept-clé" class="slide level2">
 <h2>Concept clé</h2>
@@ -253,6 +306,19 @@ en informations compréhensibles.</strong></p>
 <div class="fragment">
 <p>👉 Ce cycle est <strong>itératif</strong>.</p>
 </div>
+<aside class="notes">
+<p><strong>Idea: </strong>L’analyse suit un cycle itératif (regarder → transformer → observer → ajuster).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="exemples-de-transformations" class="slide level2">
 <h2>Exemples de transformations</h2>
@@ -270,6 +336,19 @@ en informations compréhensibles.</strong></p>
 <div class="fragment">
 <p>👉 Rien de tout cela n’est automatique.</p>
 </div>
+<aside class="notes">
+<p><strong>Idea: </strong> Les transformations servent à rendre les données lisibles et exploitables.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="où-intervient-le-code" class="slide level2">
 <h2>Où intervient le code ?</h2>
@@ -278,6 +357,19 @@ on a besoin d’un langage.</p>
 <div class="fragment">
 <p>👉 En data science, ce langage est <span class="red"><strong>très</strong></span> souvent <strong>Python</strong>.</p>
 </div>
+<aside class="notes">
+<p><strong>Idea: </strong> Le code sert à enchaîner des transformations, pas à remplacer la réflexion.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="rôle-des-bibliothèques-python" class="slide level2">
 <h2>Rôle des bibliothèques Python</h2>
@@ -294,6 +386,19 @@ on a besoin d’un langage.</p>
 <div class="fragment">
 <p>👉 Elles permettent de se concentrer sur l’analyse.</p>
 </div>
+<aside class="notes">
+<p><strong>Idea: </strong> Les bibliothèques sont des outils spécialisés pour se concentrer sur l’analyse.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="exemples-de-bibliothèques-vue-densemble" class="slide level2">
 <h2>Exemples de bibliothèques (vue d’ensemble)</h2>
@@ -328,6 +433,19 @@ on a besoin d’un langage.</p>
 <div class="fragment">
 <p>👉 Nous verrons des exemples de pipeline</p>
 </div>
+<aside class="notes">
+<p><strong>Idea: </strong> Une analyse complète est une suite d’étapes organisées, pas une action unique.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="pipeline-définition-simple" class="slide level2">
 <h2>Pipeline (définition simple)</h2>
@@ -336,6 +454,19 @@ qui transforment des données en résultats.</p>
 <blockquote>
 <p><strong>Même données + mêmes étapes = mêmes résultats</strong></p>
 </blockquote>
+<aside class="notes">
+<p><strong>Idea: </strong> Même données + mêmes étapes = mêmes résultats.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="environnement" class="slide level2">
 <h2>Environnement</h2>
@@ -344,6 +475,19 @@ il faut un environnement adapté.</p>
 <blockquote>
 <p>C’est le role des notebooks</p>
 </blockquote>
+<aside class="notes">
+<p><strong>Idea: </strong> Un bon environnement facilite l’exploration et la compréhension.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="phrase-à-retenir" class="slide level2">
 <h2>Phrase à retenir</h2>
@@ -544,6 +688,231 @@ btn.addEventListener("click", () => {
 </div>
 <div class="fragment">
 <p>👉 Comme un tableau Excel… <strong>mais en mémoire</strong></p>
+</div>
+</section>
+<section id="un-dataframe-cest-quoi" class="slide level2">
+<h2>Un DataFrame, c’est quoi ?</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 20%">
+<col style="width: 18%">
+<col style="width: 13%">
+<col style="width: 18%">
+<col style="width: 10%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><span class="red">date</span></th>
+<th><span class="red column_o">id</span></th>
+<th><span class="red">pays</span></th>
+<th><span class="red">categorie</span></th>
+<th><span class="red">prix</span></th>
+<th><span class="red">qtt</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="blue row_a">0</span></td>
+<td>2024-01-03</td>
+<td>C001</td>
+<td>France</td>
+<td>Livre</td>
+<td>15.0</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td><span class="blue">1</span></td>
+<td><span class="data_o">2024-01-03</span></td>
+<td>C002</td>
+<td>France</td>
+<td>Jeu</td>
+<td>35.0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><span class="blue">2</span></td>
+<td>2024-01-04</td>
+<td>C003</td>
+<td>Espagne</td>
+<td>Livre</td>
+<td><span class="data_a">12.0</span></td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td><span class="blue row_o">3</span></td>
+<td>2024-01-05</td>
+<td>C001</td>
+<td>France</td>
+<td>Jeu</td>
+<td>35.0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><span class="blue">4</span></td>
+<td>2024-01-06</td>
+<td>C004</td>
+<td>Italie</td>
+<td>Livre</td>
+<td>18.0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment center">
+<p><span class="blue row">Rangés</span> <span class="leaderline" start=".row" data-end=".row_o"></span> <span class="leaderline" start=".row" data-end=".row_a"></span></p>
+</div>
+</section>
+<section id="un-dataframe-cest-quoi-1" class="slide level2">
+<h2>Un DataFrame, c’est quoi ?</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 20%">
+<col style="width: 18%">
+<col style="width: 13%">
+<col style="width: 18%">
+<col style="width: 10%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><span class="red">date</span></th>
+<th><span class="red column_o">id</span></th>
+<th><span class="red">pays</span></th>
+<th><span class="red">categorie</span></th>
+<th><span class="red column_a">prix</span></th>
+<th><span class="red">qtt</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="blue">0</span></td>
+<td>2024-01-03</td>
+<td>C001</td>
+<td>France</td>
+<td>Livre</td>
+<td>15.0</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td><span class="blue">1</span></td>
+<td><span class="data_o">2024-01-03</span></td>
+<td>C002</td>
+<td>France</td>
+<td>Jeu</td>
+<td>35.0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><span class="blue">2</span></td>
+<td>2024-01-04</td>
+<td>C003</td>
+<td>Espagne</td>
+<td>Livre</td>
+<td><span class="data_a">12.0</span></td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td><span class="blue row_o">3</span></td>
+<td>2024-01-05</td>
+<td>C001</td>
+<td>France</td>
+<td>Jeu</td>
+<td>35.0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><span class="blue">4</span></td>
+<td>2024-01-06</td>
+<td>C004</td>
+<td>Italie</td>
+<td>Livre</td>
+<td>18.0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<div class="center">
+<p><span class="red column">colonnes</span> <span class="leaderline" start=".column" data-end=".column_o"></span> <span class="leaderline" start=".column" data-end=".column_a"></span></p>
+</div>
+</section>
+<section id="un-dataframe-cest-quoi-2" class="slide level2">
+<h2>Un DataFrame, c’est quoi ?</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 20%">
+<col style="width: 18%">
+<col style="width: 13%">
+<col style="width: 18%">
+<col style="width: 10%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><span class="red">date</span></th>
+<th><span class="red column_o">id</span></th>
+<th><span class="red">pays</span></th>
+<th><span class="red">categorie</span></th>
+<th><span class="red">prix</span></th>
+<th><span class="red">qtt</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="blue">0</span></td>
+<td>2024-01-03</td>
+<td>C001</td>
+<td>France</td>
+<td>Livre</td>
+<td>15.0</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td><span class="blue">1</span></td>
+<td><span class="data_o">2024-01-03</span></td>
+<td>C002</td>
+<td>France</td>
+<td>Jeu</td>
+<td>35.0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><span class="blue">2</span></td>
+<td>2024-01-04</td>
+<td>C003</td>
+<td>Espagne</td>
+<td>Livre</td>
+<td><span class="data_a">12.0</span></td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td><span class="blue row_o">3</span></td>
+<td>2024-01-05</td>
+<td>C001</td>
+<td>France</td>
+<td>Jeu</td>
+<td>35.0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><span class="blue">4</span></td>
+<td>2024-01-06</td>
+<td>C004</td>
+<td>Italie</td>
+<td>Livre</td>
+<td>18.0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<div class="center">
+<p><span class="data">donnés</span> <span class="leaderline" start=".data" data-end=".data_o"></span> <span class="leaderline" start=".data" data-end=".data_a"></span></p>
 </div>
 </section>
 <section id="dataframe-fichier" class="slide level2">
@@ -866,6 +1235,7 @@ mais la question que l’on cherche à résoudre.</strong></p>
   <script src="../../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../../../site_libs/revealjs/plugin/reveal-leaderline/reveal-leader-line.js"></script>
   <script src="../../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1058,7 +1428,7 @@ mais la question que l’on cherche à résoudre.</strong></p>
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealLeaderline, QuartoSupport,
 
           RevealMath,
           RevealNotes,
