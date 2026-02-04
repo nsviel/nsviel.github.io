@@ -406,305 +406,368 @@
     "text": "Réponse à la question de départ\n\nOn analyse des données réelles\nen partant d’une question claire,\nen structurant l’analyse en pipeline,\net en utilisant les outils comme des moyens —\njamais comme des objectifs.\n\n\n👉 En analyse de données,\nle plus important n’est pas l’outil,\nmais la question que l’on cherche à résoudre."
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#transition",
-    "href": "assets/bigdata/CM/CM3/index.html#transition",
+    "objectID": "assets/bigdata/CM/CM3/index.html#section",
+    "href": "assets/bigdata/CM/CM3/index.html#section",
     "title": "Teaching",
-    "section": "Transition",
-    "text": "Transition\nDans le CM2, on a posé le cadre : question → pipeline → transformations.\n\nAujourd’hui : on ouvre un dataset réel et on affronte le vrai problème.\n\n\n\nLes données ne sont pas “sales” : elles sont incompatibles avec la question."
+    "section": "",
+    "text": "Introduction au Big Data"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#fil-conducteur",
-    "href": "assets/bigdata/CM/CM3/index.html#fil-conducteur",
+    "objectID": "assets/bigdata/CM/CM3/index.html#comment-produire-une-connaissance-sans-se-raconter-dhistoires",
+    "href": "assets/bigdata/CM/CM3/index.html#comment-produire-une-connaissance-sans-se-raconter-dhistoires",
     "title": "Teaching",
-    "section": "Fil conducteur",
-    "text": "Fil conducteur\nTrois idées :\n\nNettoyer = définir un contrat entre la question et les données\nExplorer = tester des hypothèses (pas “regarder”)\nUn pipeline = une suite de décisions auditables (et rejouables)"
+    "section": "Comment produire une connaissance sans se raconter d’histoires ?",
+    "text": "Comment produire une connaissance sans se raconter d’histoires ?"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#pourquoi-le-nettoyage-est-en-réalité-une-opération-scientifique",
-    "href": "assets/bigdata/CM/CM3/index.html#pourquoi-le-nettoyage-est-en-réalité-une-opération-scientifique",
+    "objectID": "assets/bigdata/CM/CM3/index.html#mise-en-situation",
+    "href": "assets/bigdata/CM/CM3/index.html#mise-en-situation",
     "title": "Teaching",
-    "section": "Pourquoi le “nettoyage” est en réalité une opération scientifique ?",
-    "text": "Pourquoi le “nettoyage” est en réalité une opération scientifique ?"
+    "section": "Mise en situation",
+    "text": "Mise en situation\nVous arrivez devant le sujet du projet 1 ou 2 et vous vous dites :\n\nOkay, mais je fais quoi ?\n\n\nEt comment ?\n\n\nEt je commence par quoi ?\n\n\nEt comment avoir une bonne note ?"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#problème",
-    "href": "assets/bigdata/CM/CM3/index.html#problème",
+    "objectID": "assets/bigdata/CM/CM3/index.html#bloc-1",
+    "href": "assets/bigdata/CM/CM3/index.html#bloc-1",
     "title": "Teaching",
-    "section": "Problème",
-    "text": "Problème\nOn croit que nettoyer, c’est “corriger des erreurs”.\n\nMais dès que vous modifiez une valeur, vous faites un choix.\n\n\n👉 Un choix = une hypothèse implicite sur le monde."
+    "section": "Bloc 1",
+    "text": "Bloc 1"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#intuition",
-    "href": "assets/bigdata/CM/CM3/index.html#intuition",
+    "objectID": "assets/bigdata/CM/CM3/index.html#un-retour-sur-les-tps",
+    "href": "assets/bigdata/CM/CM3/index.html#un-retour-sur-les-tps",
     "title": "Teaching",
-    "section": "Intuition",
-    "text": "Intuition\nNettoyer, c’est rendre explicite la compatibilité entre :\n\n\nce que la question demande\nce que les données permettent\n\n\n\n👉 On passe d’un fichier à une représentation."
+    "section": "Un retour sur les TPs",
+    "text": "Un retour sur les TPs"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#concept-clé-le-contrat-de-données",
-    "href": "assets/bigdata/CM/CM3/index.html#concept-clé-le-contrat-de-données",
+    "objectID": "assets/bigdata/CM/CM3/index.html#noubliez-pas-lintro-de-votre-document",
+    "href": "assets/bigdata/CM/CM3/index.html#noubliez-pas-lintro-de-votre-document",
     "title": "Teaching",
-    "section": "Concept clé : le contrat de données",
-    "text": "Concept clé : le contrat de données\nNettoyer = construire un contrat minimal :\n\n\nquelles unités ? quels types ?\nquelles valeurs autorisées ?\nquelle granularité ?\nquels manquants acceptables ?\nquelles règles d’exclusion ?\n\n\n\n👉 Ce contrat dépend de la question, pas de la “beauté” du dataset."
+    "section": "N’oubliez pas l’intro de votre document !",
+    "text": "N’oubliez pas l’intro de votre document !\n\n\nPour les projets :\n\nindiquez bien Prenom NOM pour toutes les personnes de votre groupe !"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#exemple-de-contrat-minimal",
-    "href": "assets/bigdata/CM/CM3/index.html#exemple-de-contrat-minimal",
+    "objectID": "assets/bigdata/CM/CM3/index.html#section-1",
+    "href": "assets/bigdata/CM/CM3/index.html#section-1",
     "title": "Teaching",
-    "section": "Exemple de contrat minimal",
-    "text": "Exemple de contrat minimal\nPour une analyse donnée, on décide par exemple :\n\nune ligne = un individu\nune date = jour calendaire (UTC)\nâge ∈ [0, 100]\nvaleurs manquantes tolérées : ≤ 5 %\n\n👉 Ce sont des choix, pas des vérités."
+    "section": "",
+    "text": "Un bon exemple"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#ce-que-le-contrat-exclut",
-    "href": "assets/bigdata/CM/CM3/index.html#ce-que-le-contrat-exclut",
+    "objectID": "assets/bigdata/CM/CM3/index.html#catégories",
+    "href": "assets/bigdata/CM/CM3/index.html#catégories",
     "title": "Teaching",
-    "section": "Ce que le contrat exclut",
-    "text": "Ce que le contrat exclut\nUn contrat sert aussi à dire :\n\n\nce qu’on ne traite pas\nce qu’on ignore volontairement\nce qui sera discuté plus tard\n\n\n👉 Ne pas exclure = décider implicitement."
+    "section": "Catégories",
+    "text": "Catégories"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#mauvais-réflexe",
-    "href": "assets/bigdata/CM/CM3/index.html#mauvais-réflexe",
+    "objectID": "assets/bigdata/CM/CM3/index.html#genre",
+    "href": "assets/bigdata/CM/CM3/index.html#genre",
     "title": "Teaching",
-    "section": "Mauvais réflexe",
-    "text": "Mauvais réflexe\n\n“On nettoiera plus tard.”\n\n\n👉 Sans contrat explicite,\nle nettoyage devient arbitraire."
+    "section": "Genre",
+    "text": "Genre"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#bon-réflexe",
-    "href": "assets/bigdata/CM/CM3/index.html#bon-réflexe",
+    "objectID": "assets/bigdata/CM/CM3/index.html#nombre-tweet",
+    "href": "assets/bigdata/CM/CM3/index.html#nombre-tweet",
     "title": "Teaching",
-    "section": "Bon réflexe",
-    "text": "Bon réflexe\n\n“Pour cette question,\nvoici les hypothèses que j’accepte.”"
+    "section": "Nombre tweet",
+    "text": "Nombre tweet"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#à-retenir",
-    "href": "assets/bigdata/CM/CM3/index.html#à-retenir",
+    "objectID": "assets/bigdata/CM/CM3/index.html#nombre-retweet",
+    "href": "assets/bigdata/CM/CM3/index.html#nombre-retweet",
     "title": "Teaching",
-    "section": "À retenir",
-    "text": "À retenir\n\nLe contrat transforme un dataset\nen objet scientifique discutable."
+    "section": "Nombre retweet",
+    "text": "Nombre retweet"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#question-contrat-données-analysables",
-    "href": "assets/bigdata/CM/CM3/index.html#question-contrat-données-analysables",
+    "objectID": "assets/bigdata/CM/CM3/index.html#state",
+    "href": "assets/bigdata/CM/CM3/index.html#state",
     "title": "Teaching",
-    "section": "Question → Contrat → Données analysables",
-    "text": "Question → Contrat → Données analysables\n\n\n\n\n\n\n\nG\n\n\nQ\n\nQuestion\n(ce qu'on veut conclure)\n\n\n\nC\n\nContrat de données\n(types, unités, règles)\n\n\n\nQ-&gt;C\n\n\n\n\n\nD\n\nDonnées analysables\n(sous hypothèses)\n\n\n\nC-&gt;D\n\n\n\n\n\n\n\n\n\n\n\n👉 Le contrat rend les hypothèses visibles."
+    "section": "State",
+    "text": "State"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#phrase-à-retenir",
-    "href": "assets/bigdata/CM/CM3/index.html#phrase-à-retenir",
+    "objectID": "assets/bigdata/CM/CM3/index.html#nettoyage-des-données",
+    "href": "assets/bigdata/CM/CM3/index.html#nettoyage-des-données",
     "title": "Teaching",
-    "section": "Phrase à retenir",
-    "text": "Phrase à retenir\n\nNettoyer n’est pas “faire disparaître le bruit”.\nNettoyer, c’est expliciter les hypothèses qui rendent l’analyse possible."
+    "section": "Nettoyage des données",
+    "text": "Nettoyage des données\n\nAttention"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#comment-explorer-sans-confondre-observer-et-conclure",
-    "href": "assets/bigdata/CM/CM3/index.html#comment-explorer-sans-confondre-observer-et-conclure",
+    "objectID": "assets/bigdata/CM/CM3/index.html#nettoyage-des-données-1",
+    "href": "assets/bigdata/CM/CM3/index.html#nettoyage-des-données-1",
     "title": "Teaching",
-    "section": "Comment explorer sans confondre “observer” et “conclure” ?",
-    "text": "Comment explorer sans confondre “observer” et “conclure” ?"
+    "section": "Nettoyage des données",
+    "text": "Nettoyage des données\nIl ne faut pas remplacer les NaN ou l’absence de valeur par 0 ou supprimer la ligne !!!\n\nSinon on crée / détériore l’information\nEt statistiquement, le résultat ne vaut plus rien\n\n\n\nIl peut s’agir d’un mauvais encodage\nou simplement d’une absence de mesure\n\n\n\nLe mieux est de transformer cette valeur en une catégorie explicite :\n\n\nNaN / None (valeur manquante)\nou une variable booléenne associée (mesuré / non mesuré)\n\n\n\n\n\nUne donnée manquante est une information en soi."
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#problème-1",
-    "href": "assets/bigdata/CM/CM3/index.html#problème-1",
+    "objectID": "assets/bigdata/CM/CM3/index.html#bloc-2",
+    "href": "assets/bigdata/CM/CM3/index.html#bloc-2",
     "title": "Teaching",
-    "section": "Problème",
-    "text": "Problème\nL’exploration est souvent vue comme :\n\n\nafficher des lignes\nfaire quelques stats\ntracer un graphique\n\n\n\n👉 Ça produit des images, pas de la compréhension."
+    "section": "Bloc 2",
+    "text": "Bloc 2"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#intuition-1",
-    "href": "assets/bigdata/CM/CM3/index.html#intuition-1",
+    "objectID": "assets/bigdata/CM/CM3/index.html#comment-et-pourquoi-faire-une-bonne-figure-informative",
+    "href": "assets/bigdata/CM/CM3/index.html#comment-et-pourquoi-faire-une-bonne-figure-informative",
     "title": "Teaching",
-    "section": "Intuition",
-    "text": "Intuition\nExplorer, c’est faire du diagnostic :\n\n\ntester des hypothèses simples\ndétecter les incohérences\nrepérer les variables “dangereuses”\n\n\n\n👉 L’Analyse exploratoire des données (Exploratory Data Analysis - EDA), c’est du contrôle qualité guidé par la question."
+    "section": "Comment (et pourquoi) faire une bonne figure informative ?",
+    "text": "Comment (et pourquoi) faire une bonne figure informative ?"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#concept-clé-hypothèses-testables",
-    "href": "assets/bigdata/CM/CM3/index.html#concept-clé-hypothèses-testables",
+    "objectID": "assets/bigdata/CM/CM3/index.html#pourquoi-faire-une-figure",
+    "href": "assets/bigdata/CM/CM3/index.html#pourquoi-faire-une-figure",
     "title": "Teaching",
-    "section": "Concept clé : hypothèses testables",
-    "text": "Concept clé : hypothèses testables\nAvant toute analyse, on peut formuler des hypothèses “faibles” :\n\n\nordres de grandeur plausibles\ndistributions attendues\ncohérences logiques (ex: âge ≥ 0)\nstabilité temporelle / géographique\n\n\n\n👉 Si une hypothèse faible échoue, la suite est suspecte."
+    "section": "Pourquoi faire une figure ?",
+    "text": "Pourquoi faire une figure ?\n\nUne image vaut mille mots\n\n\nC’est l’une des meilleures structures pour extraire une information d’un flot de données.\nMais ce n’est pas une finalité et ne constitue pas une information en soi.\n\n\n\nElle permet un support et une synthèse, mais doit être précédée d’une analyse\n\n-&gt; La conclusion de l’analyse de la figure est une finalité"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#eda-analyse",
-    "href": "assets/bigdata/CM/CM3/index.html#eda-analyse",
+    "objectID": "assets/bigdata/CM/CM3/index.html#le-problème",
+    "href": "assets/bigdata/CM/CM3/index.html#le-problème",
     "title": "Teaching",
-    "section": "EDA ≠ Analyse",
-    "text": "EDA ≠ Analyse\n\n\npas de conclusion finale\npas de storytelling\npas de décision métier\n\n\n👉 L’EDA prépare l’analyse,\nelle ne la remplace pas."
+    "section": "Le problème",
+    "text": "Le problème\n\nBeaucoup s’arrêtent à créer la figure, puis mettre un truc évident en dessous.\n\n\n\n\nNop\n\n\nce n’est que la première étape\n\n\n\n\n\nVoyez ça comme une pyramide :"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#hypothèses-faibles-exemples",
-    "href": "assets/bigdata/CM/CM3/index.html#hypothèses-faibles-exemples",
+    "objectID": "assets/bigdata/CM/CM3/index.html#quest-ce-quune-bonne-figure",
+    "href": "assets/bigdata/CM/CM3/index.html#quest-ce-quune-bonne-figure",
     "title": "Teaching",
-    "section": "Hypothèses faibles (exemples)",
-    "text": "Hypothèses faibles (exemples)\n\n95 % des valeurs sont non manquantes\npas de doublons exacts\nordres de grandeur réalistes\npas de rupture temporelle brutale"
+    "section": "Qu’est ce qu’une bonne figure ?",
+    "text": "Qu’est ce qu’une bonne figure ?\nL’information doit se voir du premier coup d’oeuil\n\n\néchelle adéquate\naxes lisibles et bien définis\nbon “cadrage des données”\ncolorscheme bien adapté"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#quand-une-hypothèse-échoue",
-    "href": "assets/bigdata/CM/CM3/index.html#quand-une-hypothèse-échoue",
+    "objectID": "assets/bigdata/CM/CM3/index.html#multidimensional-analysis-1d",
+    "href": "assets/bigdata/CM/CM3/index.html#multidimensional-analysis-1d",
     "title": "Teaching",
-    "section": "Quand une hypothèse échoue",
-    "text": "Quand une hypothèse échoue\nDeux options seulement :\n\n\najuster le contrat\nreformuler la question\n\n\n👉 Continuer “comme si de rien n’était” est une erreur."
+    "section": "Multidimensional analysis (1D)",
+    "text": "Multidimensional analysis (1D)\nUne seule dimension\n\n\nrenseigne sur une seule variable (quantité, fréquence)\nlecture rapide et intuitive\nfaible charge cognitive\nmessage clair et direct (niveau 1)\n\n\n\n\npas de relation entre variables\npeu de contexte explicatif\nrisque de simplification excessive\ninformation limitée"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#erreur-fréquente",
-    "href": "assets/bigdata/CM/CM3/index.html#erreur-fréquente",
+    "objectID": "assets/bigdata/CM/CM3/index.html#multidimensional-analysis-2d",
+    "href": "assets/bigdata/CM/CM3/index.html#multidimensional-analysis-2d",
     "title": "Teaching",
-    "section": "Erreur fréquente",
-    "text": "Erreur fréquente\n\n“Les données sont mauvaises.”\n\n👉 Non.\nLes hypothèses étaient incorrectes ou implicites."
+    "section": "Multidimensional analysis (2D+)",
+    "text": "Multidimensional analysis (2D+)\nDeux dimensions (et plus)\n\n\nrenseigne sur deux (ou plus) variables\npermet de comparer et de révéler des relations\napporte du contexte et de la profondeur (niveau 2+)\nplus riche analytiquement\n\n\n\n\nlecture plus complexe\ncharge cognitive plus élevée\nrisque de confusion si mal conçue\nnécessite une légende / explication claire"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#à-retenir-1",
-    "href": "assets/bigdata/CM/CM3/index.html#à-retenir-1",
+    "objectID": "assets/bigdata/CM/CM3/index.html#avant-de-montrer-une-figure-pose-toi-ces-questions",
+    "href": "assets/bigdata/CM/CM3/index.html#avant-de-montrer-une-figure-pose-toi-ces-questions",
     "title": "Teaching",
-    "section": "À retenir",
-    "text": "À retenir\n\nL’EDA sert à éviter\nde construire une analyse sur du sable."
+    "section": "Avant de montrer une figure, pose-toi ces questions :",
+    "text": "Avant de montrer une figure, pose-toi ces questions :\n\n\nQuel message unique doit-elle transmettre ?\nQuelle variable est prioritaire ?\nÀ qui s’adresse la figure ?\n\n\n\n\nEst-ce que la figure se comprend sans explication ?\nEst-ce que la couleur apporte une information ?\nEst-ce que je pourrais dire la conclusion sans montrer la figure ?"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#eda-comme-boucle-de-vérification",
-    "href": "assets/bigdata/CM/CM3/index.html#eda-comme-boucle-de-vérification",
+    "objectID": "assets/bigdata/CM/CM3/index.html#les-différents-types-de-plots-et-pourquoi-ça-compte",
+    "href": "assets/bigdata/CM/CM3/index.html#les-différents-types-de-plots-et-pourquoi-ça-compte",
     "title": "Teaching",
-    "section": "EDA comme boucle de vérification",
-    "text": "EDA comme boucle de vérification\n\n\n\n\n\n\n\nG\n\n\nH\n\nHypothèses faibles\n(plausibilité, cohérence)\n\n\n\nT\n\nTests rapides\n(stats, contrôles, comptages)\n\n\n\nH-&gt;T\n\n\n\n\n\nU\n\nMise à jour\n(contrat, nettoyage, question)\n\n\n\nT-&gt;U\n\n\n\n\n\nU-&gt;H\n\n\n\n\n\n\n\n\n\n\n\n👉 Explorer = itérer sur des hypothèses, pas “faire des graphes”."
+    "section": "Les différents types de plots (et pourquoi ça compte)",
+    "text": "Les différents types de plots (et pourquoi ça compte)\n\nUn graphique n’est jamais neutre :\nil impose une manière de lire l’information.\n\n\nUn mauvais plot peut masquer l’information\nUn plot inadapté peut induire une mauvaise interprétation\n\n\n\nLa question guide le graphique, pas l’inverse."
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#phrase-à-retenir-1",
-    "href": "assets/bigdata/CM/CM3/index.html#phrase-à-retenir-1",
+    "objectID": "assets/bigdata/CM/CM3/index.html#en-pratique",
+    "href": "assets/bigdata/CM/CM3/index.html#en-pratique",
     "title": "Teaching",
-    "section": "Phrase à retenir",
-    "text": "Phrase à retenir\n\nExplorer, c’est vérifier ce que vous croyez savoir sur les données —\navant de vérifier ce que vous voulez conclure."
+    "section": "En pratique …",
+    "text": "En pratique …\n1plt.figure()\nplt.plot(tweets_par_heure.index, tweets_par_heure.values, marker='o')\n2plt.title(\"Évolution du volume de tweets par heure de la journée\")\nplt.xlabel(\"Heure (24h)\")\nplt.ylabel(\"Nombre de tweets\")\n3plt.grid(True, alpha=0.5)\nplt.show()\n\n1\n\nCrée une nouvelle figure / une nouvelle “toile”\n\n2\n\nDéfinie les titres des axes et de la figure, sinon on ne sait pas de quoi on parle\n\n3\n\nLa grille pour une bonne visibilité"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#quest-ce-quun-pipeline-sérieux-dans-un-notebook",
-    "href": "assets/bigdata/CM/CM3/index.html#quest-ce-quun-pipeline-sérieux-dans-un-notebook",
+    "objectID": "assets/bigdata/CM/CM3/index.html#parfois-il-faut-reformater-un-peu",
+    "href": "assets/bigdata/CM/CM3/index.html#parfois-il-faut-reformater-un-peu",
     "title": "Teaching",
-    "section": "Qu’est-ce qu’un pipeline “sérieux” dans un notebook ?",
-    "text": "Qu’est-ce qu’un pipeline “sérieux” dans un notebook ?"
+    "section": "Parfois il faut reformater un peu",
+    "text": "Parfois il faut reformater un peu\n...\n1df['half_hour'] = (df['tweet_created'].dt.hour + (df['tweet_created'].dt.minute &gt;= 30) * 0.5)\n...\n2plt.xlim(0, 23)\nplt.ylim(bottom=0)\n3plt.xticks(range(24))\n4ax.fill_between(tweets_par_heure.index, tweets_par_heure.values, 0, alpha=0.3)\nplt.show()\n\n1\n\nAugmenter la résolution du graphe\n\n2\n\nImposer une limites sur les axes\n\n3\n\nDéfinir le nombre de tics adéquat\n\n4\n\nFill pour une meilleurs lisibilité"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#problème-2",
-    "href": "assets/bigdata/CM/CM3/index.html#problème-2",
+    "objectID": "assets/bigdata/CM/CM3/index.html#ou-remettre-à-léchelle",
+    "href": "assets/bigdata/CM/CM3/index.html#ou-remettre-à-léchelle",
     "title": "Teaching",
-    "section": "Problème",
-    "text": "Problème\nDans un notebook, on peut vite obtenir un résultat…\n\n… sans pouvoir expliquer précisément comment on y est arrivé.\n\n\n👉 Le risque : une analyse non rejouable, non justifiable."
+    "section": "Ou remettre à l’échelle",
+    "text": "Ou remettre à l’échelle\n...\n1ax.hist(vals, bins=np.arange(vals.min(), vals.max() + 2), edgecolor=\"green\")\n...\n2plt.yscale(\"log)\nplt.show()\n\n1\n\nFaire en sorte que les bins soient unitaires\n\n2\n\nEchelle logarithmique pour des valeurs extremements différentes"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#intuition-2",
-    "href": "assets/bigdata/CM/CM3/index.html#intuition-2",
+    "objectID": "assets/bigdata/CM/CM3/index.html#bloc-3",
+    "href": "assets/bigdata/CM/CM3/index.html#bloc-3",
     "title": "Teaching",
-    "section": "Intuition",
-    "text": "Intuition\nUn pipeline “sérieux” a trois propriétés :\n\n\nrejouable (mêmes étapes → mêmes sorties)\nlocalisable (où une décision a été prise)\nauditables (pourquoi cette règle ?)\n\n\n\n👉 Ça n’impose pas un outil : ça impose une structure."
+    "section": "Bloc 3",
+    "text": "Bloc 3"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#concept-clé-checkpoints-assertions",
-    "href": "assets/bigdata/CM/CM3/index.html#concept-clé-checkpoints-assertions",
+    "objectID": "assets/bigdata/CM/CM3/index.html#ok-mais-euh-quest-ce-quon-cherche-au-juste",
+    "href": "assets/bigdata/CM/CM3/index.html#ok-mais-euh-quest-ce-quon-cherche-au-juste",
     "title": "Teaching",
-    "section": "Concept clé : checkpoints + assertions",
-    "text": "Concept clé : checkpoints + assertions\nDeux habitudes simples qui changent tout :\n\n\nCheckpoints : sauvegarder les états clés (après nettoyage, après transformation)\nAssertions : vérifier les invariants (types, bornes, contraintes)\n\n\n\n👉 On transforme un notebook “exploration” en notebook “preuve”."
+    "section": "OK mais euh… qu’est ce qu’on cherche au juste ?",
+    "text": "OK mais euh… qu’est ce qu’on cherche au juste ?"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#figure-pipeline-avec-décisions-vérifiables",
-    "href": "assets/bigdata/CM/CM3/index.html#figure-pipeline-avec-décisions-vérifiables",
+    "objectID": "assets/bigdata/CM/CM3/index.html#réponse-à-répondre-à-quelque-chose",
+    "href": "assets/bigdata/CM/CM3/index.html#réponse-à-répondre-à-quelque-chose",
     "title": "Teaching",
-    "section": "Figure — Pipeline avec décisions vérifiables",
-    "text": "Figure — Pipeline avec décisions vérifiables\n\n\n\n\n\n\n\nG\n\n\nA\n\nChargement\n\n\n\nB\n\nContrat + contrôles\n(assertions)\n\n\n\nA-&gt;B\n\n\n\n\n\nC\n\nNettoyage\n(règles explicites)\n\n\n\nB-&gt;C\n\n\n\n\n\nD\n\nCheckpoint\n(données analysables)\n\n\n\nC-&gt;D\n\n\n\n\n\nC-&gt;D\n\n\n\n\n\nE\n\nTransformation\n(features, agrégations)\n\n\n\nD-&gt;E\n\n\n\n\n\nF\n\nAnalyse\n(réponse à la question)\n\n\n\nE-&gt;F\n\n\n\n\n\nF-&gt;B\n\n\n\n\n\n\n\n\n\n\n\n👉 Chaque étape est une décision qu’on peut relire et discuter."
+    "section": "Réponse : à répondre à quelque chose",
+    "text": "Réponse : à répondre à quelque chose\n\nUne petite métaphore :\n\n\n\n→ Il faut d’abord une question comme objectif"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#phrase-à-retenir-2",
-    "href": "assets/bigdata/CM/CM3/index.html#phrase-à-retenir-2",
+    "objectID": "assets/bigdata/CM/CM3/index.html#la-clé-du-problème-la-question",
+    "href": "assets/bigdata/CM/CM3/index.html#la-clé-du-problème-la-question",
     "title": "Teaching",
-    "section": "Phrase à retenir",
-    "text": "Phrase à retenir\n\nUn pipeline n’est pas une suite de cellules :\nc’est une suite de décisions explicitables et rejouables."
+    "section": "La clé du problème : la question",
+    "text": "La clé du problème : la question\n\n\nSans question, pas d’objectif.\nSans objectif, pas de repères.\nSans repères, pas de démarrage.\nSans démarrage, pas d’idée.\nSans idée, on saute sur l’IA.\nAvec l’IA, on fait du copier-coller.\nEt du copier-coller donne… une réponse qui ne répond à rien."
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#synthèse",
-    "href": "assets/bigdata/CM/CM3/index.html#synthèse",
+    "objectID": "assets/bigdata/CM/CM3/index.html#formuler-une-question-qui-a-du-sens",
+    "href": "assets/bigdata/CM/CM3/index.html#formuler-une-question-qui-a-du-sens",
     "title": "Teaching",
-    "section": "Synthèse",
-    "text": "Synthèse\n\nNettoyer = écrire un contrat (hypothèses explicites)\nExplorer = tester des hypothèses faibles\nPipeline = rendre les décisions auditables"
+    "section": "Formuler une question qui a du sens",
+    "text": "Formuler une question qui a du sens\n\nUne bonne analyse commence toujours\npar une bonne question.\n\n\nUne bonne question est :\n\nprécise\ncontextualisée\nfalsifiable\nliée à une décision\n\n\n\nUne mauvaise question est :\n\nvague\norientée\ndescriptive sans objectif\nposée après les résultats"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#règle-dor",
-    "href": "assets/bigdata/CM/CM3/index.html#règle-dor",
+    "objectID": "assets/bigdata/CM/CM3/index.html#question-mal-posée-biais-danalyse",
+    "href": "assets/bigdata/CM/CM3/index.html#question-mal-posée-biais-danalyse",
     "title": "Teaching",
-    "section": "Règle d’or",
-    "text": "Règle d’or\n\nLa question fixe le contrat.\nLe contrat contraint le nettoyage.\nLe nettoyage rend l’exploration fiable.\nL’exploration rend l’analyse défendable."
+    "section": "Question mal posée = biais d’analyse",
+    "text": "Question mal posée = biais d’analyse\n\nLa plupart des biais ne viennent pas des données,\nmais de la question initiale.\n\n\nExemples de biais courants :\n\nbiais de confirmation\nbiais de sélection\nbiais de cadrage (framing)\n\n\n\n\nOn trouve toujours quelque chose…\nquand on cherche mal."
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#démo-contexte",
-    "href": "assets/bigdata/CM/CM3/index.html#démo-contexte",
+    "objectID": "assets/bigdata/CM/CM3/index.html#question-et-prise-de-décision",
+    "href": "assets/bigdata/CM/CM3/index.html#question-et-prise-de-décision",
     "title": "Teaching",
-    "section": "Démo — Contexte",
-    "text": "Démo — Contexte\nNous disposons d’un dataset recensant les attaques de requins dans le monde sur environ 100 ans.\n\n\nsources multiples\npays, dates, circonstances\ndonnées hétérogènes\n\n\n👉 Dataset réel, imparfait, non standardisé."
+    "section": "Question et prise de décision",
+    "text": "Question et prise de décision\n\nUne analyse n’est utile\nque si elle éclaire une décision.\n\n\nAvant d’analyser, demandez-vous :\n\nquelle décision dépend du résultat ?\nqu’est-ce qui changerait selon la réponse ?\n\n\n\nSans décision :\n\npas de critère de réussite\npas d’interprétation claire"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#démo-question",
-    "href": "assets/bigdata/CM/CM3/index.html#démo-question",
+    "objectID": "assets/bigdata/CM/CM3/index.html#le-paradoxe-de-hempel",
+    "href": "assets/bigdata/CM/CM3/index.html#le-paradoxe-de-hempel",
     "title": "Teaching",
-    "section": "Démo — Question",
-    "text": "Démo — Question\n\nComment l’évolution temporelle des attaques de requins peut-elle être interprétée à l’échelle mondiale sur le dernier siècle ?\n\n\n👉 Question descriptive, pas causale."
+    "section": "Le paradoxe de Hempel",
+    "text": "Le paradoxe de Hempel\n\nConfirmer une hypothèse\nn’est pas toujours la tester.\n\n\nExemple :\n\n« Tous les corbeaux sont noirs »\n\n\n\nObserver :\n\nun corbeau noir → confirme\nune voiture rouge → confirme aussi (!)\n\n\n\n\nUne question mal formulée\npeut être confirmée par n’importe quoi."
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#démo-extrait-brut-des-données",
-    "href": "assets/bigdata/CM/CM3/index.html#démo-extrait-brut-des-données",
+    "objectID": "assets/bigdata/CM/CM3/index.html#en-résumé",
+    "href": "assets/bigdata/CM/CM3/index.html#en-résumé",
     "title": "Teaching",
-    "section": "Démo — Extrait brut des données",
-    "text": "Démo — Extrait brut des données\n\n\n\nDate\nCountry\nArea\nActivity\nFatal\n\n\n\n\n1921-07-14\nAustralia\nNew South Wales\nSwimming\nNo\n\n\n1957\nUSA\nFlorida\nSurfing\n\n\n\n1978-09\nSouth Africa\nKwaZulu-Natal\nFishing\nNo\n\n\n2003-01-12\n\nCalifornia\nSwimming\nNo\n\n\n2016-10-?\nReunion\n\nSurfing\nYes\n\n\n\n\n👉 Tout est déjà problématique."
+    "section": "En résumé",
+    "text": "En résumé\n\nLa question détermine\nce que l’on voit…\net ce que l’on ne voit pas."
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#démo-problèmes-immédiatement-visibles",
-    "href": "assets/bigdata/CM/CM3/index.html#démo-problèmes-immédiatement-visibles",
+    "objectID": "assets/bigdata/CM/CM3/index.html#scikit-learn-quest-ce-que-cest",
+    "href": "assets/bigdata/CM/CM3/index.html#scikit-learn-quest-ce-que-cest",
     "title": "Teaching",
-    "section": "Démo — Problèmes immédiatement visibles",
-    "text": "Démo — Problèmes immédiatement visibles\n\n\ndates incomplètes ou imprécises\n\npays / régions manquants\n\nactivités non standardisées\n\nvariables booléennes ambiguës\n\n\n\n👉 Impossible d’analyser sans décider."
+    "section": "Scikit-learn : qu’est-ce que c’est ?",
+    "text": "Scikit-learn : qu’est-ce que c’est ?\n\nUne boîte à outils pour explorer, tester\net comparer des approches d’analyse.\n\n\nScikit-learn fournit :\n\ndes algorithmes de classification\nde régression\nde clustering\nde réduction de dimension\ndes outils d’évaluation\n\n\n\nScikit-learn n’est pas :\n\nune boîte magique\nun remplaçant de la réflexion\nun outil qui choisit à votre place"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#démo-contrat-de-données-décisions-explicites",
-    "href": "assets/bigdata/CM/CM3/index.html#démo-contrat-de-données-décisions-explicites",
+    "objectID": "assets/bigdata/CM/CM3/index.html#comment-sen-servir-intelligemment",
+    "href": "assets/bigdata/CM/CM3/index.html#comment-sen-servir-intelligemment",
     "title": "Teaching",
-    "section": "Démo — Contrat de données (décisions explicites)",
-    "text": "Démo — Contrat de données (décisions explicites)\nPour cette question, on décide :\n\n\nune ligne = une attaque déclarée\n\ndate → année uniquement\n\npays obligatoire (sinon exclusion)\n\npériode : 1920–2020\n\nactivité ignorée\n\nfatalité conservée mais secondaire\n\n\n\n👉 Le contrat simplifie volontairement."
+    "section": "Comment s’en servir intelligemment",
+    "text": "Comment s’en servir intelligemment\n\nLes outils disponibles donnent des pistes de réflexion.\n\n\nSe poser les bonnes questions :\n\nEst-ce un problème de groupes ? → clustering\nEst-ce une relation ? → régression\nEst-ce une prédiction ? → classification\nEst-ce trop complexe ? → réduction de dimension\n\n\n\nAller voir :\n\nla documentation\nla liste des algorithmes\nles exemples fournis\n\n\n\n\nL’outil ne donne pas la réponse,\nil suggère quel type de question poser."
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#démo-ce-que-le-contrat-exclut",
-    "href": "assets/bigdata/CM/CM3/index.html#démo-ce-que-le-contrat-exclut",
+    "objectID": "assets/bigdata/CM/CM3/index.html#lia-comme-tuteur-et-non-comme-serviteur",
+    "href": "assets/bigdata/CM/CM3/index.html#lia-comme-tuteur-et-non-comme-serviteur",
     "title": "Teaching",
-    "section": "Démo — Ce que le contrat exclut",
-    "text": "Démo — Ce que le contrat exclut\n\n\ncomparaisons fines entre activités\n\nanalyses locales par région\n\ninterprétations causales\n\n\n\n👉 Ce n’est pas un défaut,\nc’est un choix assumé."
+    "section": "L’IA comme tuteur et non comme serviteur",
+    "text": "L’IA comme tuteur et non comme serviteur\n\nL’IA n’est pas là pour faire à votre place,\nmais pour vous aider à mieux faire.\n\n\n\nL’IA comme serviteur\n\nécrit sans objectif clair\nremplace la réflexion\nproduit du copier-coller\nmasque l’incompréhension\n\n\nL’IA comme tuteur\n\naide à reformuler une question\npropose des pistes ou des exemples\nexplique un concept bloquant\naide à structurer une démarche"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#démo-eda-hypothèses-faibles-testées",
-    "href": "assets/bigdata/CM/CM3/index.html#démo-eda-hypothèses-faibles-testées",
+    "objectID": "assets/bigdata/CM/CM3/index.html#lia-comme-tuteur-et-non-comme-serviteur-1",
+    "href": "assets/bigdata/CM/CM3/index.html#lia-comme-tuteur-et-non-comme-serviteur-1",
     "title": "Teaching",
-    "section": "Démo — EDA : hypothèses faibles testées",
-    "text": "Démo — EDA : hypothèses faibles testées\nAvant toute analyse :\n\n\nnombre d’attaques/an plausible\n\npas de rupture absurde (ex: 0 → 5000)\n\ncouverture géographique stable après 1950\n\n\n\n👉 On teste la cohérence, pas des théories."
+    "section": "L’IA comme tuteur et non comme serviteur",
+    "text": "L’IA comme tuteur et non comme serviteur\n\nL’IA est efficace après la réflexion,\n\n\npas à la place de la réflexion."
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#démo-résultat-possible-interprétable",
-    "href": "assets/bigdata/CM/CM3/index.html#démo-résultat-possible-interprétable",
+    "objectID": "assets/bigdata/CM/CM3/index.html#lexemple-des-artistes",
+    "href": "assets/bigdata/CM/CM3/index.html#lexemple-des-artistes",
     "title": "Teaching",
-    "section": "Démo — Résultat possible (interprétable)",
-    "text": "Démo — Résultat possible (interprétable)\nAprès nettoyage + agrégation :\n\n\naugmentation progressive du nombre d’attaques reportées\n\nforte accélération après 1950\n\nstabilisation récente\n\n\n\n👉 Résultat descriptif, pas explicatif."
+    "section": "L’exemple des artistes",
+    "text": "L’exemple des artistes\n\nOn se demandait si l’IA allait supprimer leur travail.\n\n\nAujourd’hui, un bon workflow d’artiste (e.g. dans le jeu vidéo ou le concept art) c’est souvent de partir d’un draft généré par l’IA puis de le modifier, corriger et enrichir.\n\n\n\nL’IA :\n\naccélère la phase de brouillon\nexplore rapidement des pistes\nréduit le temps sur les tâches répétitives\n\n\nL’artiste :\n\nchoisit\najuste\ncorrige\ndonne du sens et une intention"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#démo-limites-à-annoncer-explicitement",
-    "href": "assets/bigdata/CM/CM3/index.html#démo-limites-à-annoncer-explicitement",
+    "objectID": "assets/bigdata/CM/CM3/index.html#lexemple-des-artistes-1",
+    "href": "assets/bigdata/CM/CM3/index.html#lexemple-des-artistes-1",
     "title": "Teaching",
-    "section": "Démo — Limites à annoncer explicitement",
-    "text": "Démo — Limites à annoncer explicitement\n\n\nbiais de déclaration historique\n\namélioration des sources récentes\n\naugmentation de l’exposition humaine\n\n\n\n👉 Le résultat dépend du contrat."
+    "section": "L’exemple des artistes",
+    "text": "L’exemple des artistes\n\nL’IA produit des possibilités.\n\n\nL’humain fait des choix."
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#démo-message-clé",
-    "href": "assets/bigdata/CM/CM3/index.html#démo-message-clé",
+    "objectID": "assets/bigdata/CM/CM3/index.html#conclusion",
+    "href": "assets/bigdata/CM/CM3/index.html#conclusion",
     "title": "Teaching",
-    "section": "Démo — Message clé",
-    "text": "Démo — Message clé\nCette analyse ne dit pas\n\n“les requins attaquent plus”,\n\nelle dit\n\n“les attaques rapportées évoluent dans le temps\nsous ces hypothèses”."
+    "section": "Conclusion",
+    "text": "Conclusion"
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#démo-ce-que-montre-vraiment-cet-exemple",
-    "href": "assets/bigdata/CM/CM3/index.html#démo-ce-que-montre-vraiment-cet-exemple",
+    "objectID": "assets/bigdata/CM/CM3/index.html#pour-finir-la-forme-du-rapport",
+    "href": "assets/bigdata/CM/CM3/index.html#pour-finir-la-forme-du-rapport",
     "title": "Teaching",
-    "section": "Démo — Ce que montre vraiment cet exemple",
-    "text": "Démo — Ce que montre vraiment cet exemple\n\n\nun dataset réel est ambigu\n\nle contrat rend l’analyse possible\n\nl’EDA protège contre les erreurs grossières\n\nle résultat est conditionnel"
+    "section": "Pour finir : La forme du rapport",
+    "text": "Pour finir : La forme du rapport\n\nLa forme compte.\nPas pour faire joli, mais pour être compris.\n\n\n\nCe que j’attends\n\northographe et grammaire soignées\nmise en forme claire (titres, sections, figures)\nun document lisible et structuré\nun rendu équivalent à un document professionnel\n\n\nCe que j’évalue vraiment\n\nle raisonnement\nla capacité à expliquer ce que vous faites\npas du copier-coller (IA ou autre)"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#pour-finir-la-forme-du-rapport-1",
+    "href": "assets/bigdata/CM/CM3/index.html#pour-finir-la-forme-du-rapport-1",
+    "title": "Teaching",
+    "section": "Pour finir : La forme du rapport",
+    "text": "Pour finir : La forme du rapport\nVous pouvez :\n\nmettre de l’humour 🙂\nutiliser des emojis 👍\nadopter votre style\n\n\n👉 tant que le rapport est plaisant à lire"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#pour-finir-la-forme-du-rapport-2",
+    "href": "assets/bigdata/CM/CM3/index.html#pour-finir-la-forme-du-rapport-2",
+    "title": "Teaching",
+    "section": "Pour finir : La forme du rapport",
+    "text": "Pour finir : La forme du rapport\nContraintes techniques\n\nrendu sous forme de notebook (.ipynb) entièrement exécuté\nle code doit tourner sans hypothèses sur mes bibliothèques locales\n\n\nEn tête du document\n\n\nnom et prénom de l’ensemble des personnes du groupe\nNOM en MAJUSCULE\n\n\n\nCes règles ne sont pas pour moi.\nElles sont valables pour tout ce que vous produirez ensuite\n(rapports, stages, projets, entreprise)."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#la-notation",
+    "href": "assets/bigdata/CM/CM3/index.html#la-notation",
+    "title": "Teaching",
+    "section": "La notation",
+    "text": "La notation\n\n\n5 critères pour 5 dimensions\n20 % chacun\nmême poids ≠ même nature"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#notation-maîtrise-python-coding",
+    "href": "assets/bigdata/CM/CM3/index.html#notation-maîtrise-python-coding",
+    "title": "Teaching",
+    "section": "Notation — Maîtrise Python & coding",
+    "text": "Notation — Maîtrise Python & coding\n\n\ncode clair et lisible\nvariables bien nommées\nfonctions / modularité\npas de copier-coller brut\n\n\n\n\ncode qui “marche” mais incompréhensible\nduplication inutile\nabsence de commentaires\n\n\n\n\nLe code est lu avant d’être exécuté."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#notation-méthodes-big-data",
+    "href": "assets/bigdata/CM/CM3/index.html#notation-méthodes-big-data",
+    "title": "Teaching",
+    "section": "Notation — Méthodes Big Data",
+    "text": "Notation — Méthodes Big Data\n\n\nméthode adaptée à la question\njustification des choix\ncompréhension des limites\n\n\n\n\nméthode “parce que vue en cours”\nempilement d’outils sans logique\npas de recul critique\n\n\n\n\nUne bonne méthode répond à une question précise."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#notation-analyse-interprétation",
+    "href": "assets/bigdata/CM/CM3/index.html#notation-analyse-interprétation",
+    "title": "Teaching",
+    "section": "Notation — Analyse & interprétation",
+    "text": "Notation — Analyse & interprétation\n\n\ninterprétation claire des résultats\nlien avec la question initiale\ncapacité à expliquer avec des mots\n\n\n\n\ngraphiques sans commentaire\nchiffres sans sens\nconclusions absentes ou hors sujet\n\n\n\n\nUn résultat sans interprétation n’est pas une réponse."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#notation-qualité-des-visualisations",
+    "href": "assets/bigdata/CM/CM3/index.html#notation-qualité-des-visualisations",
+    "title": "Teaching",
+    "section": "Notation — Qualité des visualisations",
+    "text": "Notation — Qualité des visualisations\n\n\ngraphique adapté à la donnée\naxes lisibles et justifiés\nchoix de couleurs pertinent\n\n\n\n\nmauvais type de graphique\nsurcharge visuelle\ngraphes décoratifs mais trompeurs\n\n\n\n\nUn graphique doit répondre à une question."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#notation-rapport-rendu",
+    "href": "assets/bigdata/CM/CM3/index.html#notation-rapport-rendu",
+    "title": "Teaching",
+    "section": "Notation — Rapport rendu",
+    "text": "Notation — Rapport rendu\n\n\ndocument clair et structuré\nraisonnement explicité\nrendu professionnel\n\n\n\n\ntexte brut / non structuré\ncopier-coller (IA ou autre)\nrapport difficile à lire\n\n\n\n\nLa forme sert le fond."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#en-clair",
+    "href": "assets/bigdata/CM/CM3/index.html#en-clair",
+    "title": "Teaching",
+    "section": "En clair",
+    "text": "En clair\n\nCe que j’attends, c’est le cheminement\n\n\nQuestion → Données → Analyse → Informations → Connaissance"
   },
   {
     "objectID": "assets/syntheseimage/index.html",
