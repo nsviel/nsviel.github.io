@@ -427,6 +427,76 @@
     "text": "Mise en situation\nVous arrivez devant le sujet du projet 1 ou 2 et vous vous dites :\n\nOkay, mais je fais quoi ?\n\n\nEt comment ?\n\n\nEt je commence par quoi ?\n\n\nEt comment avoir une bonne note ?"
   },
   {
+    "objectID": "assets/bigdata/CM/CM3/index.html#réflexe-naturel",
+    "href": "assets/bigdata/CM/CM3/index.html#réflexe-naturel",
+    "title": "Teaching",
+    "section": "Réflexe naturel",
+    "text": "Réflexe naturel\n\nJe vais demander à une IA."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#définition-du-big-data",
+    "href": "assets/bigdata/CM/CM3/index.html#définition-du-big-data",
+    "title": "Teaching",
+    "section": "Définition du Big Data",
+    "text": "Définition du Big Data\n\nEnsemble de technologies et méthodes\n\nGestion de volumes massifs de données\n\nDonnées générées à grande vitesse"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#les-5v-du-big-data",
+    "href": "assets/bigdata/CM/CM3/index.html#les-5v-du-big-data",
+    "title": "Teaching",
+    "section": "Les 5V du Big Data",
+    "text": "Les 5V du Big Data\n\nVolume\n\nVélocité\n\nVariété\n\nVéracité\n\nValeur"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#exemples",
+    "href": "assets/bigdata/CM/CM3/index.html#exemples",
+    "title": "Teaching",
+    "section": "Exemples",
+    "text": "Exemples\n\nRéseaux sociaux\n\nCapteurs et IoT\n\nTransactions numériques\nStockage distribué\n\nCalcul parallèle\n\nCloud"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#big-data-et-cloud",
+    "href": "assets/bigdata/CM/CM3/index.html#big-data-et-cloud",
+    "title": "Teaching",
+    "section": "Big Data et Cloud",
+    "text": "Big Data et Cloud\n\nRessources à la demande\n\nÉlasticité\n\nRéduction des coûts"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#sécurité-et-confidentialité",
+    "href": "assets/bigdata/CM/CM3/index.html#sécurité-et-confidentialité",
+    "title": "Teaching",
+    "section": "Sécurité et confidentialité",
+    "text": "Sécurité et confidentialité\n\nProtection des données\n\nContrôle des accès\n\nRespect des réglementations"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#pause",
+    "href": "assets/bigdata/CM/CM3/index.html#pause",
+    "title": "Teaching",
+    "section": "Pause",
+    "text": "Pause\n\nLes 5 slides précédentes ont\nété généré par une IA."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#important",
+    "href": "assets/bigdata/CM/CM3/index.html#important",
+    "title": "Teaching",
+    "section": "Important",
+    "text": "Important\nCe n’est :\n\nni faux\nni inutile\nni ridicule\n\n\n\nl’IA sait lister\nl’IA sait définir\nl’IA sait décrire\n\n\n\n👉 ça ne suffit pas pour faire un projet."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#le-vrai-problème",
+    "href": "assets/bigdata/CM/CM3/index.html#le-vrai-problème",
+    "title": "Teaching",
+    "section": "Le vrai problème",
+    "text": "Le vrai problème\nCes slides :\n\ndécrivent\nlistent\ndéfinissent\n\n\nMais elles ne :\n\nposent aucune question\nne font aucun choix\nn’assument aucune hypothèse"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#donc",
+    "href": "assets/bigdata/CM/CM3/index.html#donc",
+    "title": "Teaching",
+    "section": "Donc",
+    "text": "Donc\n\nMaintenant, voyons\ncomment on fait pour de vrai.\n\n\nAvant tout, il faut savoir poser des problèmes. Et quoi qu’on dise, dans la vie scientifique, les problèmes ne se posent pas d’eux-mêmes. C’est précisément ce sens du problème qui donne la marque du véritable esprit scientifique. Pour un esprit scientifique, toute connaissance est une réponse à une question. S’il n’y a pas eu de question, il ne peut y avoir connaissance scientifique. Rien ne va de soi. Rien n'est donné. Tout est construit.\n— Gaston Bachelard\n— La formation de l’esprit scientifique"
+  },
+  {
     "objectID": "assets/bigdata/CM/CM3/index.html#bloc-1",
     "href": "assets/bigdata/CM/CM3/index.html#bloc-1",
     "title": "Teaching",
@@ -525,18 +595,25 @@
     "text": "Pourquoi faire une figure ?\n\nUne image vaut mille mots\n\n\nC’est l’une des meilleures structures pour extraire une information d’un flot de données.\nMais ce n’est pas une finalité et ne constitue pas une information en soi.\n\n\n\nElle permet un support et une synthèse, mais doit être précédée d’une analyse\n\n-&gt; La conclusion de l’analyse de la figure est une finalité"
   },
   {
+    "objectID": "assets/bigdata/CM/CM3/index.html#pourquoi-faire-une-figure-1",
+    "href": "assets/bigdata/CM/CM3/index.html#pourquoi-faire-une-figure-1",
+    "title": "Teaching",
+    "section": "Pourquoi faire une figure ?",
+    "text": "Pourquoi faire une figure ?\nUne figure n’est pas une information brute, c’est un encodage visuel d’une information.\n\nEt comme tout encodage,\n\n\nil peut être plus ou moins informatif,\n\n\nplus ou moins fidèle,\n\n\nplus ou moins trompeur."
+  },
+  {
     "objectID": "assets/bigdata/CM/CM3/index.html#le-problème",
     "href": "assets/bigdata/CM/CM3/index.html#le-problème",
     "title": "Teaching",
     "section": "Le problème",
-    "text": "Le problème\n\nBeaucoup s’arrêtent à créer la figure, puis mettre un truc évident en dessous.\n\n\n\n\nNop\n\n\nce n’est que la première étape\n\n\n\n\n\nVoyez ça comme une pyramide :"
+    "text": "Le problème\n\nBeaucoup s’arrêtent à créer la figure, puis mettent un truc évident en dessous.\n\n\n\n\nNop\n\n\nce n’est que la première étape\n\n\n\n\n\nVoyez ça comme une pyramide :"
   },
   {
     "objectID": "assets/bigdata/CM/CM3/index.html#quest-ce-quune-bonne-figure",
     "href": "assets/bigdata/CM/CM3/index.html#quest-ce-quune-bonne-figure",
     "title": "Teaching",
     "section": "Qu’est ce qu’une bonne figure ?",
-    "text": "Qu’est ce qu’une bonne figure ?\nL’information doit se voir du premier coup d’oeuil\n\n\néchelle adéquate\naxes lisibles et bien définis\nbon “cadrage des données”\ncolorscheme bien adapté"
+    "text": "Qu’est ce qu’une bonne figure ?\nL’information doit se voir du premier coup d’oeil\n\n\néchelle adéquate\naxes lisibles et bien définis\nbon “cadrage des données”\ncolorscheme bien adapté"
   },
   {
     "objectID": "assets/bigdata/CM/CM3/index.html#multidimensional-analysis-1d",
@@ -655,14 +732,21 @@
     "href": "assets/bigdata/CM/CM3/index.html#scikit-learn-quest-ce-que-cest",
     "title": "Teaching",
     "section": "Scikit-learn : qu’est-ce que c’est ?",
-    "text": "Scikit-learn : qu’est-ce que c’est ?\n\nUne boîte à outils pour explorer, tester\net comparer des approches d’analyse.\n\n\nScikit-learn fournit :\n\ndes algorithmes de classification\nde régression\nde clustering\nde réduction de dimension\ndes outils d’évaluation\n\n\n\nScikit-learn n’est pas :\n\nune boîte magique\nun remplaçant de la réflexion\nun outil qui choisit à votre place"
+    "text": "Scikit-learn : qu’est-ce que c’est ?\n\nUne boîte à outils pour explorer, tester\net comparer des approches d’analyse.\n\n\nScikit-learn fournit :\n\n\n\ndes algorithmes de classification\nde régression\nde clustering\nde réduction de dimension\ndes outils d’évaluation"
   },
   {
     "objectID": "assets/bigdata/CM/CM3/index.html#comment-sen-servir-intelligemment",
     "href": "assets/bigdata/CM/CM3/index.html#comment-sen-servir-intelligemment",
     "title": "Teaching",
     "section": "Comment s’en servir intelligemment",
-    "text": "Comment s’en servir intelligemment\n\nLes outils disponibles donnent des pistes de réflexion.\n\n\nSe poser les bonnes questions :\n\nEst-ce un problème de groupes ? → clustering\nEst-ce une relation ? → régression\nEst-ce une prédiction ? → classification\nEst-ce trop complexe ? → réduction de dimension\n\n\n\nAller voir :\n\nla documentation\nla liste des algorithmes\nles exemples fournis\n\n\n\n\nL’outil ne donne pas la réponse,\nil suggère quel type de question poser."
+    "text": "Comment s’en servir intelligemment\n\nLes outils disponibles donnent des pistes de réflexion.\n\n\nSe poser les bonnes questions :\n\n\nEst-ce un problème de groupes ? → clustering\nEst-ce une relation ? → régression\nEst-ce une prédiction ? → classification\nEst-ce trop complexe ? → réduction de dimension"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#section-2",
+    "href": "assets/bigdata/CM/CM3/index.html#section-2",
+    "title": "Teaching",
+    "section": "",
+    "text": "Allez voir :\n\nla documentation\nla liste des algorithmes\nles exemples fournis"
   },
   {
     "objectID": "assets/bigdata/CM/CM3/index.html#lia-comme-tuteur-et-non-comme-serviteur",
