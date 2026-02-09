@@ -434,60 +434,18 @@
     "text": "Réflexe naturel\n\nJe vais demander à une IA."
   },
   {
-    "objectID": "assets/bigdata/CM/CM3/index.html#définition-du-big-data",
-    "href": "assets/bigdata/CM/CM3/index.html#définition-du-big-data",
-    "title": "Teaching",
-    "section": "Définition du Big Data",
-    "text": "Définition du Big Data\n\nEnsemble de technologies et méthodes\n\nGestion de volumes massifs de données\n\nDonnées générées à grande vitesse"
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM3/index.html#les-5v-du-big-data",
-    "href": "assets/bigdata/CM/CM3/index.html#les-5v-du-big-data",
-    "title": "Teaching",
-    "section": "Les 5V du Big Data",
-    "text": "Les 5V du Big Data\n\nVolume\n\nVélocité\n\nVariété\n\nVéracité\n\nValeur"
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM3/index.html#exemples",
-    "href": "assets/bigdata/CM/CM3/index.html#exemples",
-    "title": "Teaching",
-    "section": "Exemples",
-    "text": "Exemples\n\nRéseaux sociaux\n\nCapteurs et IoT\n\nTransactions numériques\nStockage distribué\n\nCalcul parallèle\n\nCloud"
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM3/index.html#big-data-et-cloud",
-    "href": "assets/bigdata/CM/CM3/index.html#big-data-et-cloud",
-    "title": "Teaching",
-    "section": "Big Data et Cloud",
-    "text": "Big Data et Cloud\n\nRessources à la demande\n\nÉlasticité\n\nRéduction des coûts"
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM3/index.html#sécurité-et-confidentialité",
-    "href": "assets/bigdata/CM/CM3/index.html#sécurité-et-confidentialité",
-    "title": "Teaching",
-    "section": "Sécurité et confidentialité",
-    "text": "Sécurité et confidentialité\n\nProtection des données\n\nContrôle des accès\n\nRespect des réglementations"
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM3/index.html#pause",
-    "href": "assets/bigdata/CM/CM3/index.html#pause",
-    "title": "Teaching",
-    "section": "Pause",
-    "text": "Pause\n\nLes 5 slides précédentes ont\nété généré par une IA."
-  },
-  {
     "objectID": "assets/bigdata/CM/CM3/index.html#important",
     "href": "assets/bigdata/CM/CM3/index.html#important",
     "title": "Teaching",
     "section": "Important",
-    "text": "Important\nCe n’est :\n\nni faux\nni inutile\nni ridicule\n\n\n\nl’IA sait lister\nl’IA sait définir\nl’IA sait décrire\n\n\n\n👉 ça ne suffit pas pour faire un projet."
+    "text": "Important\nCela donnera un rendu :\n\nni faux\nni inutile\nni ridicule\n\n\n\nl’IA sait lister\nl’IA sait définir\nl’IA sait décrire\n\n\n\n👉 ça ne suffit pas pour faire un projet."
   },
   {
     "objectID": "assets/bigdata/CM/CM3/index.html#le-vrai-problème",
     "href": "assets/bigdata/CM/CM3/index.html#le-vrai-problème",
     "title": "Teaching",
     "section": "Le vrai problème",
-    "text": "Le vrai problème\nCes slides :\n\ndécrivent\nlistent\ndéfinissent\n\n\nMais elles ne :\n\nposent aucune question\nne font aucun choix\nn’assument aucune hypothèse"
+    "text": "Le vrai problème\n\nL’IA ne :\n\nposent aucune question\nne font aucun choix\nn’assument aucune hypothèse\nne peut lire une grosse base de données\nne va pas seul en profondeur"
   },
   {
     "objectID": "assets/bigdata/CM/CM3/index.html#donc",
@@ -663,6 +621,13 @@
     "title": "Teaching",
     "section": "Ou remettre à l’échelle",
     "text": "Ou remettre à l’échelle\n...\n1ax.hist(vals, bins=np.arange(vals.min(), vals.max() + 2), edgecolor=\"green\")\n...\n2plt.yscale(\"log)\nplt.show()\n\n1\n\nFaire en sorte que les bins soient unitaires\n\n2\n\nEchelle logarithmique pour des valeurs extremements différentes"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#pause",
+    "href": "assets/bigdata/CM/CM3/index.html#pause",
+    "title": "Teaching",
+    "section": "Pause",
+    "text": "Pause\n\n  \n\n  \n    \n      ▶\n      ↩\n\n      \n        \n        min\n        \n        s"
   },
   {
     "objectID": "assets/bigdata/CM/CM3/index.html#bloc-3",
