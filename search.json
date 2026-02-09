@@ -662,7 +662,7 @@
     "href": "assets/bigdata/CM/CM3/index.html#formuler-une-question-qui-a-du-sens",
     "title": "Teaching",
     "section": "Formuler une question qui a du sens",
-    "text": "Formuler une question qui a du sens\n\nUne bonne analyse commence toujours\npar une bonne question.\n\n\nUne bonne question est :\n\nprécise\ncontextualisée\nfalsifiable\nliée à une décision\n\n\n\nUne mauvaise question est :\n\nvague\norientée\ndescriptive sans objectif\nposée après les résultats"
+    "text": "Formuler une question qui a du sens\n\nUne bonne analyse commence toujours\npar une bonne question.\n\n\n\n\nUne bonne question est :\n\nprécise\ncontextualisée\nfalsifiable\nliée à une décision\n\n\n\nUne mauvaise question est :\n\nvague\norientée\ndescriptive sans objectif\nposée après les résultats"
   },
   {
     "objectID": "assets/bigdata/CM/CM3/index.html#question-mal-posée-biais-danalyse",
@@ -740,6 +740,62 @@
     "title": "Teaching",
     "section": "L’exemple des artistes",
     "text": "L’exemple des artistes\n\nL’IA produit des possibilités.\n\n\nL’humain fait des choix."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#bloc-4",
+    "href": "assets/bigdata/CM/CM3/index.html#bloc-4",
+    "title": "Teaching",
+    "section": "Bloc 4",
+    "text": "Bloc 4"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#pourquoi-parler-décart-type",
+    "href": "assets/bigdata/CM/CM3/index.html#pourquoi-parler-décart-type",
+    "title": "Teaching",
+    "section": "Pourquoi parler d’écart type ?",
+    "text": "Pourquoi parler d’écart type ?\n\n\nOn connaît souvent la moyenne.\nMais la moyenne seule ne dit pas si les valeurs sont regroupées ou dispersées.\nL’écart type mesure l’ampleur typique des écarts à la moyenne.\n\n\n👉 Petit écart type = valeurs serrées\n👉 Grand écart type = valeurs étalées"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#idée-intuitive",
+    "href": "assets/bigdata/CM/CM3/index.html#idée-intuitive",
+    "title": "Teaching",
+    "section": "Idée intuitive",
+    "text": "Idée intuitive\n\nSi la moyenne est le centre,\nl’écart type décrit le rayon du nuage autour du centre.\n\nOn peut le voir comme :\n\nla distance “habituelle” entre une valeur et la moyenne."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#définition-niveau-pratique",
+    "href": "assets/bigdata/CM/CM3/index.html#définition-niveau-pratique",
+    "title": "Teaching",
+    "section": "Définition (niveau pratique)",
+    "text": "Définition (niveau pratique)\n\n\nOn calcule les distances à la moyenne.\nOn évite les signes négatifs → on met au carré.\nOn fait la moyenne.\nOn prend la racine.\n\n\n\\[\n\\sigma = \\sqrt{\\frac{1}{n}\\sum (x_i-\\bar{x})^2}\n\\]\nPas besoin de retenir la formule pour l’utiliser 🙂"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#ce-que-ça-veut-dire-concrètement",
+    "href": "assets/bigdata/CM/CM3/index.html#ce-que-ça-veut-dire-concrètement",
+    "title": "Teaching",
+    "section": "Ce que ça veut dire concrètement",
+    "text": "Ce que ça veut dire concrètement\nSi :\n\n\nmoyenne = 100\n\nécart type = 10\n\n\n\n👉 la plupart des valeurs sont à environ 10 unités du centre.\n\nDonc souvent entre 90 et 110 (pas toujours, mais souvent)."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#quand-lécart-type-est-pertinent",
+    "href": "assets/bigdata/CM/CM3/index.html#quand-lécart-type-est-pertinent",
+    "title": "Teaching",
+    "section": "Quand l’écart type est pertinent ✅",
+    "text": "Quand l’écart type est pertinent ✅\nIl est très utile si :\n\n\ndonnées numériques\nforme à peu près équilibrée\npas de valeurs bizarres\n\n\nInutile si :\n\n\nvaleur unique / fixe\ncatégories (couleur, type, oui/non)\nclassements"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#exemple-notes-dexamen",
+    "href": "assets/bigdata/CM/CM3/index.html#exemple-notes-dexamen",
+    "title": "Teaching",
+    "section": "Exemple – notes d’examen",
+    "text": "Exemple – notes d’examen\n\n\n\n\nClasse A (/20) :\n10, 11, 9, 10, 10, 12, 8\n\n\nClasse B (/20) :\n2, 16, 10, 9, 13, 17, 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n👉 Même moyenne\n👉 Dispersion très différente\n👉 Écart type plus grand pour B"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM3/index.html#pour-résumer..",
+    "href": "assets/bigdata/CM/CM3/index.html#pour-résumer..",
+    "title": "Teaching",
+    "section": "Pour résumer..",
+    "text": "Pour résumer..\nL’écart type correspond à :\n👉 la taille typique des fluctuations\n👉 l’incertitude\n👉 le niveau de bruit\nIl intervient partout :\n\n\nstatistiques\nphysique\nfinance\nmachine learning"
   },
   {
     "objectID": "assets/bigdata/CM/CM3/index.html#conclusion",
