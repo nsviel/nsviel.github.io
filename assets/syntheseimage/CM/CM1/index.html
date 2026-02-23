@@ -110,10 +110,10 @@
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/chrono/chrono.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/simplemenu/simplemenu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-attribution/attribution.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-quiz/quiz.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/chrono/chrono.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet"><style type="text/css">
     .reveal div.sourceCode {
@@ -217,10 +217,8 @@
 
       // Ajustés pour limiter le fade perceptible
       var defaults = {
-        particleCount: 300,
+        particleCount: 200,
         spread: 100,
-        decay: 0.93,
-        ticks: 600,
         origin: { y: 0.7 }
 
       };
@@ -1596,11 +1594,11 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
   <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-leaderline/reveal-leader-line.js"></script>
+  <script src="index_files/libs/revealjs/plugin/chrono/chrono.js"></script>
   <script src="index_files/libs/revealjs/plugin/simplemenu/simplemenu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-leaderline/reveal-leader-line.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-attribution/attribution.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-quiz/quiz.js"></script>
-  <script src="index_files/libs/revealjs/plugin/chrono/chrono.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
   <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
@@ -1798,7 +1796,7 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, RevealLeaderline, Simplemenu, RevealAttribution, RevealQuiz, Chrono, RevealPointer, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, Chrono, Simplemenu, RevealLeaderline, RevealAttribution, RevealQuiz, RevealPointer, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -1819,6 +1817,59 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
         f.setAttribute("allow", cleaned.join("; "));
       });
     });
+    </script>
+
+    <script type="text/javascript" id="code-annotation-fragments">
+      function hideAllTippy() {
+        document.querySelectorAll('.code-annotation-anchor').forEach(anchor => {
+          const tippyInstance = anchor._tippy;
+          if (tippyInstance) {
+            tippyInstance.hide();
+          }
+        });
+      }
+
+      Reveal.on('fragmentshown', (event) => {
+        hideAllTippy();
+
+        const fragment = event.fragment;
+        const classesToCheck = ['has-line-highlights', 'visible', 'current-fragment'];
+        if (classesToCheck.some(cls => fragment.classList.contains(cls))) {
+          const codeAnnotationAnchors = fragment.querySelectorAll('.code-annotation-anchor');
+          let matchCount = 0;
+          for (const anchor of codeAnnotationAnchors) {
+            const nextElement = anchor.nextElementSibling;
+            if (
+              nextElement &&
+              nextElement.classList.contains('code-annotation-target') &&
+              nextElement.classList.contains('highlight-line')
+            ) {
+              matchCount++;
+              if (matchCount > 1) break;
+            }
+          }
+          if (matchCount === 1) {
+            for (const anchor of codeAnnotationAnchors) {
+              const nextElement = anchor.nextElementSibling;
+              if (
+                nextElement &&
+                nextElement.classList.contains('code-annotation-target') &&
+                nextElement.classList.contains('highlight-line')
+              ) {
+                const tippyInstance = anchor._tippy;
+                if (tippyInstance) {
+                  tippyInstance.show();
+                  break;
+                }
+              }
+            }
+          }
+        }
+      });
+
+      Reveal.on('fragmenthidden', () => {
+        hideAllTippy();
+      });
     </script>
 
     <script id="quarto-html-after-body" type="application/javascript">

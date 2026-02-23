@@ -4,7 +4,4 @@ contributes:
   filters:
     - engine.lua
 
-resources:
-  - engine.html
-  - engine.js
-  - engine.css
+

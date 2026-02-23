@@ -86,10 +86,8 @@ return {
 
     // Ajustés pour limiter le fade perceptible
     var defaults = {
-      particleCount: 300,
+      particleCount: 200,
       spread: 100,
-      decay: 0.93,
-      ticks: 600,
       origin: { y: 0.7 }
 
     };
