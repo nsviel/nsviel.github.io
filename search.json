@@ -1204,25 +1204,67 @@
     "text": "Cours\nNiveau\n\n\n\n\nTraitement Informatique des Données\nL1\n\n\nIntroduction au Big Data\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nM1\n\n\nReconstruction 3D\nM2"
   },
   {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#plan-du-cm1-1h30",
-    "href": "assets/syntheseimage/CM/CM1/index.html#plan-du-cm1-1h30",
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#synthèse-dimages-par-rendu-inverse",
+    "href": "assets/syntheseimage/CM/CM1/index.html#synthèse-dimages-par-rendu-inverse",
     "title": "Teaching",
-    "section": "Plan du CM1 (1h30)",
-    "text": "Plan du CM1 (1h30)\n\n\nLe pipeline de rendu (rappel) et ce que signifie “l’inverser”\nLe problème : passer de l’image à une explication (et pourquoi c’est difficile)\nPremière borne : synthèse 2D image→image\nCorrespondances & warping : la brique conceptuelle centrale du TP1\nLimites structurelles → pourquoi on aura besoin du 3D (CM2/TP2)\n\n\n\n👉 Objectif aujourd’hui : comprendre quoi on fait en 2D et pourquoi ça coince."
+    "section": "Synthèse d’Images par Rendu Inverse",
+    "text": "Synthèse d’Images par Rendu Inverse\n\nCM1: Une image vaut mille mots (ou inversement)"
   },
   {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-cours-nest-pas",
-    "href": "assets/syntheseimage/CM/CM1/index.html#ce-cours-nest-pas",
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#une-image-vaut-mille-mots",
+    "href": "assets/syntheseimage/CM/CM1/index.html#une-image-vaut-mille-mots",
     "title": "Teaching",
-    "section": "Ce cours n’est pas…",
-    "text": "Ce cours n’est pas…\n\n\nun cours de diffusion / génération text→image\nun cours de shading / matériaux / illumination\nun cours de perception / reconnaissance\n\n\n\nC’est un cours représentations + rendu : qu’est-ce qu’on représente pour pouvoir rendre ?"
+    "section": "Une image vaut mille mots",
+    "text": "Une image vaut mille mots\n(ou l’inverse)\n\nUne image montre.\n\n\nMais comprend-on ce qu’elle contient ?\n\n\nEst-ce qu’une image décrit le monde ?\n\n\nOu est-ce que nous projetons un monde dans l’image ?"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#voir-cest-inférer",
+    "href": "assets/syntheseimage/CM/CM1/index.html#voir-cest-inférer",
+    "title": "Teaching",
+    "section": "Voir, c’est inférer",
+    "text": "Voir, c’est inférer\nUne image est la projection d’un monde latent.\n\n\nlatent : caché, non observable directement"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#mise-en-situation",
+    "href": "assets/syntheseimage/CM/CM1/index.html#mise-en-situation",
+    "title": "Teaching",
+    "section": "Mise en situation",
+    "text": "Mise en situation\nVous êtes ingénieur Computer Graphics.\nVotre ami journaliste vous demande de lui faire (gratuitement) un petit pipeline pour présenter à son redacteur en chef des reportages plus immersifs.\n\n\nIl n’a que son appareil photo\n\n\n\n Que faites vous ?"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#objectif",
+    "href": "assets/syntheseimage/CM/CM1/index.html#objectif",
+    "title": "Teaching",
+    "section": "🎯 Objectif",
+    "text": "🎯 Objectif\nÀ partir de photos prises avec un appareil classique\n produire une scène interactive consultable dans un navigateur.\n\nDonc :\n\npas d’app spéciale lecteur\npartage par lien\nmarche sur mobile & desktop & multi-OS\nassez “WoW” pour convaincre un rédacteur en chef\n\n\n\n🧭 Pipeline minimal viable\n👉 Photogrammétrie  nettoyage  export web  intégration dans une page."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#exemple",
+    "href": "assets/syntheseimage/CM/CM1/index.html#exemple",
+    "title": "Teaching",
+    "section": "Exemple",
+    "text": "Exemple"
   },
   {
     "objectID": "assets/syntheseimage/CM/CM1/index.html#fil-directeur-2d-3d-continu",
     "href": "assets/syntheseimage/CM/CM1/index.html#fil-directeur-2d-3d-continu",
     "title": "Teaching",
     "section": "Fil directeur (2D → 3D → continu)",
-    "text": "Fil directeur (2D → 3D → continu)\n\n\n\n\n\n\n\nG\n\n\nA\n\nCM1/TP1\nSynthèse 2D\n(image → image)\n\n\n\nB\n\nCM2/TP2\nPhotogrammétrie\n(image → structure 3D)\n\n\n\nA-&gt;B\n\n\n\n\n\nC\n\nCM3–CM6/TP3\nSynthèse de vues\n(structure → image)\npoints/splats/GS/NeRF\n\n\n\nB-&gt;C"
+    "text": "Fil directeur (2D → 3D → continu)\n\n\n\n\n\n\n\nG\n\n\nA\n\nCM1/TP1\nSynthèse 2D\n(image → image)\n\n\n\nB\n\nCM2-CM4/TP2\nPhotogrammétrie\n(image → structure 3D)\n\n\n\nA-&gt;B\n\n\n\n\n\nC\n\nCM5–CM6/TP3\nSynthèse de vues\n(structure → image)\npoints/splats/GS/NeRF\n\n\n\nB-&gt;C"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#examen",
+    "href": "assets/syntheseimage/CM/CM1/index.html#examen",
+    "title": "Teaching",
+    "section": "Examen",
+    "text": "Examen\n\nLes TP introduisent les questions conceptuelles du cours. L’examen vérifie que vous avez compris ces questions, pas que vous avez refait les TP.\n\nCompétences acquisent :\n\n\nCompréhension conceptuelle du rendu inverse et des représentations\nNumérisation de petits objets\nCréation d’un portefolio"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#méthode-de-pensée-du-cours",
+    "href": "assets/syntheseimage/CM/CM1/index.html#méthode-de-pensée-du-cours",
+    "title": "Teaching",
+    "section": "Méthode de pensée du cours",
+    "text": "Méthode de pensée du cours\nOn va progresser par besoin de structure :\n\n\nEn 2D, on “triche” intelligemment : on manipule l’image.\nPuis on se heurte à des limites  on introduit la 3D (photogrammétrie).\nPuis on compare des représentations modernes pour le rendu.\n\n\n\n👉 Aujourd’hui : borne basse = image  image."
   },
   {
     "objectID": "assets/syntheseimage/CM/CM1/index.html#sortie-attendue-à-la-fin-du-cm1",
@@ -1232,25 +1274,88 @@
     "text": "Sortie attendue à la fin du CM1\nVous devez pouvoir répondre à :\n\n\nQu’est-ce que “rendu inverse” dans notre sens ?\nPourquoi l’inversion est mal posée ?\nQu’est-ce qu’on peut déjà faire en 2D (sans 3D) ?\nQuels artefacts sont structurels (donc inévitables en 2D) ?"
   },
   {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#rendu-direct-vs-rendu-inverse",
-    "href": "assets/syntheseimage/CM/CM1/index.html#rendu-direct-vs-rendu-inverse",
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#bloc-1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#bloc-1",
     "title": "Teaching",
-    "section": "Rendu direct vs rendu inverse",
-    "text": "Rendu direct vs rendu inverse"
+    "section": "BLOC 1",
+    "text": "BLOC 1"
   },
   {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#rappel-pipeline-de-rendu-version-minimale",
-    "href": "assets/syntheseimage/CM/CM1/index.html#rappel-pipeline-de-rendu-version-minimale",
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#quest-ce-que-le-rendu-inverse",
+    "href": "assets/syntheseimage/CM/CM1/index.html#quest-ce-que-le-rendu-inverse",
     "title": "Teaching",
-    "section": "Rappel : pipeline de rendu (version minimale)",
-    "text": "Rappel : pipeline de rendu (version minimale)\nOn part d’une scène (géométrie + apparence) + caméra → on obtient une image.\n\n\n\n\n\n\n\nG\n\n\nS\n\nScène\n(3D + apparence)\n\n\n\nR\n\nRendu\n(projection + intégration)\n\n\n\nS-&gt;R\n\n\n\n\n\nC\n\nCaméra\n(pose + intr.)\n\n\n\nC-&gt;R\n\n\n\n\n\nI\n\nImage\n(2D)\n\n\n\nR-&gt;I\n\n\n\n\n\n\n\n\n\n\n\n👉 Rendu direct : scene → image."
+    "section": "Qu’est ce que le rendu inverse ?",
+    "text": "Qu’est ce que le rendu inverse ?"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-quest-ce-que-le-rendu-normale",
+    "href": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-quest-ce-que-le-rendu-normale",
+    "title": "Teaching",
+    "section": "Tout d’abord, qu’est ce que le rendu normale ?",
+    "text": "Tout d’abord, qu’est ce que le rendu normale ?\nOn part d’une scène (géométrie + apparence) + caméra  on obtient une image.\n\n\n\n\n\n\n\nG\n\n\nS\n\nScène\n(3D + apparence)\n\n\n\nR\n\nRendu\n(projection + intégration)\n\n\n\nS-&gt;R\n\n\n\n\n\nC\n\nCaméra\n(pose + intr.)\n\n\n\nC-&gt;R\n\n\n\n\n\nI\n\nImage\n(2D)\n\n\n\nR-&gt;I\n\n\n\n\n\n\n\n\n\n\n\n👉 Rendu direct : représentation → image."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-quest-ce-que-le-rendu-normal",
+    "href": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-quest-ce-que-le-rendu-normal",
+    "title": "Teaching",
+    "section": "Tout d’abord, qu’est ce que le rendu normal ?",
+    "text": "Tout d’abord, qu’est ce que le rendu normal ?\n\\[\n\\color{#00e0ff}{I} = \\color{#ffb000}{R}\\!\\left(\\color{#00ff88}{\\theta}\\right)\n\\]\noù :\n\n\\(\\color{#00ff88}{\\theta}\\) = paramètre de la scène\n\\(\\color{#ffb000}{R}\\) = fonction de rendu\n\\(\\color{#00e0ff}{I}\\) = image"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#rendu-normal",
+    "href": "assets/syntheseimage/CM/CM1/index.html#rendu-normal",
+    "title": "Teaching",
+    "section": "Rendu normal :",
+    "text": "Rendu normal :\n\\[\n\\color{#00e0ff}{I} = \\color{#ffb000}{R}\\!\\left(\\color{#00ff88}{\\theta}\\right)\n\\]\n\nOkay mais c’est quoi le rendu inverse du coup ?\n\n\n\n\n\\[\n\\text{C'est}\\quad  \\color{#00e0ff}{I} = \\frac{1}{\\color{#ffb000}{R}\\!\\left(\\color{#00ff88}{\\theta}\\right)}  \\quad ?\n\\]\n\n\nNop\n\n\n\n\n\n\n\\[\n\\text{C'est}\\quad \\color{#ffb000}{R} = \\frac{\\color{#00e0ff}{I}}{\\color{#00ff88}{\\theta}} \\quad ?\n\\]\n\n\nNop"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#section",
+    "href": "assets/syntheseimage/CM/CM1/index.html#section",
+    "title": "Teaching",
+    "section": "",
+    "text": "Le rendu inverse consiste à construire\nune représentation interne\nd’une scène à partir d’observations,\nafin de pouvoir ensuite re-rendre (prédire)\nde nouvelles vues."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-partons-dun-fait",
+    "href": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-partons-dun-fait",
+    "title": "Teaching",
+    "section": "Tout d’abord, partons d’un fait",
+    "text": "Tout d’abord, partons d’un fait\nTout système réaliste de production d’image suppose une représentation du monde, obtenue par inférence (humaine ou algorithmique), puis un rendu.\n\ndirection: right\n\nstyle: {\n  fill: transparent\n}\n\nObservation: {\n  shape: rectangle\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nRepresentation: {\n  shape: rectangle\n  label: \"Représentation\\n(modèle)\"\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nSynthese: {\n  shape: rectangle\n  label: \"Synthèse\"\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nObservation -&gt; Representation: \"inférence\" {\n  style: {\n    stroke: \"#d33\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\n\nRepresentation -&gt; Synthese: \"rendu\" {\n  style: {\n    stroke: \"#2a7\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\n\n\nExemple de l'appareil photo :\nPaysage  projection sur capteur et mémoire interne  image jpeg\n\n\nExemple de la modélisation 3D :\nReprésentation mentale  modélisation sur Blender  rendu\n\n\n👉 L’humain aussi est une machine d’interprétation."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#section-1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#section-1",
+    "title": "Teaching",
+    "section": "",
+    "text": "Le rendu inverse n’est pas une invention moderne.\n\n\nLe cerveau le fait depuis toujours.\n\n\n\nLes méthodes numériques sont des tentatives pour reproduire ça."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#dans-ce-sens",
+    "href": "assets/syntheseimage/CM/CM1/index.html#dans-ce-sens",
+    "title": "Teaching",
+    "section": "Dans ce sens :",
+    "text": "Dans ce sens :\n\n\nle cerveau fait du rendu inverse\nl’artiste 3D fait du rendu inverse\nla photogrammétrie fait du rendu inverse\nNeRF fait du rendu inverse\n\n\n\nCette inférence produit une représentation à qualité variable.\n\n\n2D  inférence faible  rendu\n3D  inférence géométrique  rendu\nNeRF  inférence volumétrique  rendu\n\n\nCe sont des formes différentes du même geste fondamental :\n\ninférer une structure générative à partir d’observations."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#introduction-à-la-synthèse-dimages-réalistes",
+    "href": "assets/syntheseimage/CM/CM1/index.html#introduction-à-la-synthèse-dimages-réalistes",
+    "title": "Teaching",
+    "section": "Introduction à la synthèse d’images réalistes",
+    "text": "Introduction à la synthèse d’images réalistes\nMais pour synthétiser, il faut :\n\n\nchoisir une représentation\ncomprendre ce qu’est une image\ncomprendre ce qui la rend plausible\n\n\n\n\nDonc passer par l’inversion n’est pas un détour.\nC’est une fondation."
   },
   {
     "objectID": "assets/syntheseimage/CM/CM1/index.html#rendu-inverse-idée-générale",
     "href": "assets/syntheseimage/CM/CM1/index.html#rendu-inverse-idée-générale",
     "title": "Teaching",
     "section": "Rendu inverse : idée générale",
-    "text": "Rendu inverse : idée générale\nOn observe une image (ou plusieurs) et on cherche une représentation compatible.\n\n\n\n\n\n\n\nG\n\n\nI\n\nImages\n(observations)\n\n\n\nX\n\nReprésentation\n(inconnue)\n\n\n\nI-&gt;X\n\n\n\n\n\nI2\n\nRendu\n→ images (prévision)\n\n\n\nX-&gt;I2\n\n\n\n\n\n\n\n\n\n\n\n-&gt; On choisit une représentation “juste assez structurée” pour synthétiser de nouvelles vues."
+    "text": "Rendu inverse : idée générale\nOn observe une image (ou plusieurs) et on cherche une représentation compatible.\n\n On choisit une représentation “juste assez structurée” pour synthétiser de nouvelles vues.\n\n\n\n\n\n\n\n\nG\n\n\nI\n\nImages\n(observations)\n\n\n\nX\n\nReprésentation\n(inconnue)\n\n\n\nI-&gt;X\n\n\n\n\n\nI2\n\nRendu\n→ images (prévision)\n\n\n\nX-&gt;I2"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#rendu-inverse-idée-générale-1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#rendu-inverse-idée-générale-1",
+    "title": "Teaching",
+    "section": "Rendu inverse : idée générale",
+    "text": "Rendu inverse : idée générale\n\\[\n\\hat{\\theta}\n=\n\\arg\\min_{\\theta}\n\\; \\| \\color{#ffb000}{R}(\\color{#00ff88}{\\theta}) - \\color{#00e0ff}{I_{\\text{obs}}} \\|^2\n\\]\noù :\n\n\\(\\color{#00ff88}{\\theta}\\) = paramètre de la scène\n\\(\\color{#ffb000}{R}\\) = fonction de rendu\n\\(\\color{#00e0ff}{I_{\\text{obs}}}\\) = image observée\n\n\nOn cherche les paramètres de scène qui, une fois rendus, produisent une image la plus proche possible de ce que l’on observe.\n\n\n\nInverser \\(\\color{#ffb000}{R}\\) est impossible analytiquement  on passe par l’optimisation."
   },
   {
     "objectID": "assets/syntheseimage/CM/CM1/index.html#point-clé-on-ne-reconstruit-pas-la-vérité",
@@ -1264,119 +1369,315 @@
     "href": "assets/syntheseimage/CM/CM1/index.html#pourquoi-linversion-est-difficile",
     "title": "Teaching",
     "section": "Pourquoi l’inversion est difficile ?",
-    "text": "Pourquoi l’inversion est difficile ?\nParce que beaucoup d’informations sont “perdues” dans l’image :\n\nprofondeur (3D → 2D)\nocclusions (ce qui est caché)\nambiguïtés (textures répétées, surfaces planes…)\ndépendance au point de vue\n\n\nEn général : problème mal posé (pas de solution unique)."
+    "text": "Pourquoi l’inversion est difficile ?\nParce que beaucoup d’informations sont “perdues” dans l’image :\n\n\nprofondeur (3D  2D)\nocclusions (ce qui est caché)\nambiguïtés (textures répétées, surfaces planes…)\ndépendance au point de vue\n\n\n\nEn général : problème mal posé (pas de solution unique).\n\n\n\nPlusieurs \\(\\color{#00ff88}{\\theta}\\) donnent la même \\(\\color{#00e0ff}{I}\\)."
   },
   {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#méthode-de-pensée-du-cours",
-    "href": "assets/syntheseimage/CM/CM1/index.html#méthode-de-pensée-du-cours",
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#quentend-ton-par-réalisme",
+    "href": "assets/syntheseimage/CM/CM1/index.html#quentend-ton-par-réalisme",
     "title": "Teaching",
-    "section": "Méthode de pensée du cours",
-    "text": "Méthode de pensée du cours\nOn va progresser par besoin de structure :\n\nEn 2D, on “triche” intelligemment : on manipule l’image.\nPuis on se heurte à des limites → on introduit la 3D (photogrammétrie).\nPuis on compare des représentations modernes pour le rendu.\n\n\n👉 Aujourd’hui : borne basse = image→image."
+    "section": "Qu’entend t’on par réalisme ?",
+    "text": "Qu’entend t’on par réalisme ?\nLe réalisme n’est pas une technique.\n\n\nC’est un choix de représentation.\n\n\n\n\nLes shaders, le ray tracing, NeRF, Gaussian Splatting…\nne sont pas seulement des algorithmes.\n\n\n\nCe sont des manières différentes de représenter la scène et la lumière.\n\n\n\n\n👉 Le réalisme dépend moins de la technique que de la représentation du monde, et chaque méthode impose une ontologie implicite du monde."
   },
   {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#première-borne-synthèse-2d-imageimage",
-    "href": "assets/syntheseimage/CM/CM1/index.html#première-borne-synthèse-2d-imageimage",
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#par-exemple",
+    "href": "assets/syntheseimage/CM/CM1/index.html#par-exemple",
     "title": "Teaching",
-    "section": "Première borne : synthèse 2D image→image",
-    "text": "Première borne : synthèse 2D image→image"
+    "section": "Par exemple",
+    "text": "Par exemple\nRasterisation classique\n Représentation = surfaces polygonales + illumination locale.\n\nRay tracing\n Représentation = simulation explicite des interactions lumière–matière.\n\n\nNeRF\n Représentation = champ continu volumétrique appris.\n\n\n\nCe ne sont pas juste des “techniques”.\n\n\n\nCe sont des hypothèses sur :\n\n\n\nce qu’est une scène\nce qu’est la lumière\nce qu’est une image"
   },
   {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#problème-cm1-créer-une-nouvelle-image-sans-3d",
-    "href": "assets/syntheseimage/CM/CM1/index.html#problème-cm1-créer-une-nouvelle-image-sans-3d",
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#pour-résumer",
+    "href": "assets/syntheseimage/CM/CM1/index.html#pour-résumer",
     "title": "Teaching",
-    "section": "Problème CM1 : créer une nouvelle image sans 3D",
-    "text": "Problème CM1 : créer une nouvelle image sans 3D\nEntrée : images existantes (même scène / sujet proche)\nSortie : une nouvelle image (intermédiaire ou extrapolée)\n\nOn ne veut pas estimer explicitement la géométrie 3D."
+    "section": "Pour résumer",
+    "text": "Pour résumer\n\nLe rendu direct est mécanique.\n\n\nLe rendu inverse est interprétatif.\n\n\n Le rendu inverse peut être compris comme :\nToute tentative de reconstruire une structure du monde à partir d’images."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#respiration",
+    "href": "assets/syntheseimage/CM/CM1/index.html#respiration",
+    "title": "Teaching",
+    "section": "Respiration",
+    "text": "Respiration\n\n  \n\n  \n    \n      ▶\n      ↩\n\n      \n        \n        min\n        \n        s"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#bloc-2",
+    "href": "assets/syntheseimage/CM/CM1/index.html#bloc-2",
+    "title": "Teaching",
+    "section": "BLOC 2",
+    "text": "BLOC 2"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#on-inverse-limage-ou-nos-hypothèses",
+    "href": "assets/syntheseimage/CM/CM1/index.html#on-inverse-limage-ou-nos-hypothèses",
+    "title": "Teaching",
+    "section": "On inverse l’image… ou nos hypothèses ?",
+    "text": "On inverse l’image… ou nos hypothèses ?"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#prenons-deux-images-dune-même-scène",
+    "href": "assets/syntheseimage/CM/CM1/index.html#prenons-deux-images-dune-même-scène",
+    "title": "Teaching",
+    "section": "Prenons deux images d’une même scène",
+    "text": "Prenons deux images d’une même scène\n\n\n\n\n\n\nVue A\n\n\n\n\n\n\n\nVue B\n\n\n\n\n\n\n\nComment créer une nouvelle image à partir de là ?"
   },
   {
     "objectID": "assets/syntheseimage/CM/CM1/index.html#interpolation-naïve-blending",
     "href": "assets/syntheseimage/CM/CM1/index.html#interpolation-naïve-blending",
     "title": "Teaching",
     "section": "Interpolation naïve (blending)",
-    "text": "Interpolation naïve (blending)\nOn mélange pixel à pixel :\n\\[\nI_\\alpha = (1-\\alpha)I_1 + \\alpha I_2,\\quad \\alpha\\in[0,1]\n\\]\n\nArtefact typique : ghosting / double contours.\n\n\nPourquoi ? Parce qu’on mélange des pixels qui ne correspondent pas au même point de la scène."
+    "text": "Interpolation naïve (blending)\nOn mélange pixel à pixel : \\[\nI_\\alpha = (1-\\alpha)\\color{#00ff88}{I_1} + \\alpha \\color{#ffb000}{I_2},\\quad \\alpha\\in[0,1]\n\\]"
   },
   {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-quil-manque-au-blending-qui-correspond-à-quoi",
-    "href": "assets/syntheseimage/CM/CM1/index.html#ce-quil-manque-au-blending-qui-correspond-à-quoi",
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#interpolation-naïve-blending-1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#interpolation-naïve-blending-1",
     "title": "Teaching",
-    "section": "Ce qu’il manque au blending : “qui correspond à quoi”",
-    "text": "Ce qu’il manque au blending : “qui correspond à quoi”\nPour synthétiser proprement, il faut une notion de correspondances :\n\nce pixel dans (\\(I_1\\)) ↔︎ ce pixel dans (\\(I_2\\))\nautrement dit : une déformation (warping) entre images\n\n\n👉 Première grande idée du cours : correspondances 2D–2D."
+    "section": "Interpolation naïve (blending)",
+    "text": "Interpolation naïve (blending)\n\n\nArtefact typique : ghosting / double contours.\n\n\nPourquoi ? Parce qu’on mélange des pixels qui ne correspondent pas au même point de la scène."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-quil-manque-au-blending",
+    "href": "assets/syntheseimage/CM/CM1/index.html#ce-quil-manque-au-blending",
+    "title": "Teaching",
+    "section": "Ce qu’il manque au blending :",
+    "text": "Ce qu’il manque au blending :\n\n“qui correspond à quoi”\n\n\nPour synthétiser proprement, il faut une notion de correspondances :\n\n\nce pixel dans (\\(\\color{#00ff88}{I_1}\\))  ce pixel dans (\\(\\color{#ffb000}{I_2}\\))\nautrement dit : une déformation (warping) entre images\n\n\n👉 Première grande idée du cours : correspondances 2D–2D."
   },
   {
     "objectID": "assets/syntheseimage/CM/CM1/index.html#warping-concept-sans-formalisme-lourd",
     "href": "assets/syntheseimage/CM/CM1/index.html#warping-concept-sans-formalisme-lourd",
     "title": "Teaching",
     "section": "Warping : concept (sans formalisme lourd)",
-    "text": "Warping : concept (sans formalisme lourd)\nOn veut une fonction (\\(W\\)) qui déplace les pixels :\n\\[\nI_1 \\xrightarrow[]{W} I_{1\\rightarrow 2}\n\\]\nIntuition :\n\nsi (\\(W\\)) est bonne, les structures s’alignent,\nensuite le blending devient beaucoup plus cohérent."
+    "text": "Warping : concept (sans formalisme lourd)\nOn veut une fonction (\\(W\\)) qui déplace les pixels :\n\\[\nI_1 \\xrightarrow[]{W} I_{1\\rightarrow 2}\n\\]\nIntuition :\n\n\nsi (\\(W\\)) est bonne, les structures s’alignent,\nensuite le blending devient beaucoup plus cohérent."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#warping-on-essaye",
+    "href": "assets/syntheseimage/CM/CM1/index.html#warping-on-essaye",
+    "title": "Teaching",
+    "section": "Warping  On essaye",
+    "text": "Warping  On essaye\nOk et si on essayé de coller les images mais en cherchant au préalable des correspondances ?\n\nPour cela, SIFT est reconnu comme l’un des meilleurs rapport qualité / prix\n\n\n\n\n\n\n\n\nOk, on trouve 281 correspondances !!"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#ok-maintenant-il-faut-coller-les-deux-images",
+    "href": "assets/syntheseimage/CM/CM1/index.html#ok-maintenant-il-faut-coller-les-deux-images",
+    "title": "Teaching",
+    "section": "Ok, maintenant il faut coller les deux images…",
+    "text": "Ok, maintenant il faut coller les deux images…\n\nOn a 281 correspondances.\nMais elles sont ponctuelles.\n\n\n\nEntre ces points ?\n\n\nOn ne sait rien.\n\n\n\n👉 Il faut interpoler."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#triangulation",
+    "href": "assets/syntheseimage/CM/CM1/index.html#triangulation",
+    "title": "Teaching",
+    "section": "Triangulation",
+    "text": "Triangulation\nUne approche consiste à trianguler les points correspondants.\n On découpe l’image en triangles à partir des correspondances.\n\n\nDans chaque triangle :\n\n\n\non calcule l’affine entre triangle source et destination\non applique la transformation aux pixels\non remplit progressivement l’image cible\n\n\n\n\nLes correspondances définissent déjà une structure commune.\n👉 Mais pas de loi globale."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#triangulation-structure-locale",
+    "href": "assets/syntheseimage/CM/CM1/index.html#triangulation-structure-locale",
+    "title": "Teaching",
+    "section": "Triangulation  structure locale",
+    "text": "Triangulation  structure locale"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#warping-local",
+    "href": "assets/syntheseimage/CM/CM1/index.html#warping-local",
+    "title": "Teaching",
+    "section": "Warping local",
+    "text": "Warping local\nPuis, on aligne triangle par triangle.\n\nUne fois l’image reconstruite, on peut fusionner avec l’image de référence.\n\n\n\n\n\nTADAM !!!"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#le-problème",
+    "href": "assets/syntheseimage/CM/CM1/index.html#le-problème",
+    "title": "Teaching",
+    "section": "Le problème",
+    "text": "Le problème\n\nPas de cohérence géométrique globale.\n\n\n\nDes correspondances peuvent etre fausses\nDeux triangles voisins peuvent se déformer différemment.\nLes lignes droites peuvent devenir brisées.\nLes régions peu contraintes deviennent instables."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-quon-peut-retenir",
+    "href": "assets/syntheseimage/CM/CM1/index.html#ce-quon-peut-retenir",
+    "title": "Teaching",
+    "section": "Ce qu’on peut retenir",
+    "text": "Ce qu’on peut retenir\n\n\nBlending naïf  ghosting\nIl faut aligner avant de mélanger\nWarping local  (très) inconsistent"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#pause",
+    "href": "assets/syntheseimage/CM/CM1/index.html#pause",
+    "title": "Teaching",
+    "section": "Pause",
+    "text": "Pause\n\n  \n\n  \n    \n      ▶\n      ↩\n\n      \n        \n        min\n        \n        s"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#bloc-3",
+    "href": "assets/syntheseimage/CM/CM1/index.html#bloc-3",
+    "title": "Teaching",
+    "section": "BLOC 3",
+    "text": "BLOC 3"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#bon-bein-comment-on-fait-du-coup",
+    "href": "assets/syntheseimage/CM/CM1/index.html#bon-bein-comment-on-fait-du-coup",
+    "title": "Teaching",
+    "section": "Bon bein comment on fait du coup ?",
+    "text": "Bon bein comment on fait du coup ?"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#idée-clé",
+    "href": "assets/syntheseimage/CM/CM1/index.html#idée-clé",
+    "title": "Teaching",
+    "section": "Idée clé",
+    "text": "Idée clé\nSi une scène est plane, alors deux images prises sous des points de vue différents sont liées par une transformation projective.\n\nOn peut écrire :\n\\[\n\\color{#ffb000}{x'} \\sim \\color{#00e0ff}{H}\\color{#00ff88}{x}\n\\]\noù :\n\n\\(\\color{#00ff88}{x}\\) = point dans la première image\n\n\\(\\color{#ffb000}{x'}\\) = point correspondant dans la seconde image\n\n\\(\\color{#00e0ff}{H}\\) = matrice de transformation projective plane (3×3)\n\n\n\n\n👉 Ce qu’on appelle une homographie"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#interprétation",
+    "href": "assets/syntheseimage/CM/CM1/index.html#interprétation",
+    "title": "Teaching",
+    "section": "Interprétation",
+    "text": "Interprétation\nUne homographie permet :\n\n\nrotation\ntranslation\nchangement de perspective\nredressement de plan\n\n\n\nMais uniquement si les points appartiennent à un même plan."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#exemple-1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#exemple-1",
+    "title": "Teaching",
+    "section": "Exemple",
+    "text": "Exemple"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#intuition-géométrique",
+    "href": "assets/syntheseimage/CM/CM1/index.html#intuition-géométrique",
+    "title": "Teaching",
+    "section": "Intuition géométrique",
+    "text": "Intuition géométrique\n\ndirection: right\n\nstyle: {\n  fill: transparent\n}\n\nblock_1: {\n  shape: rectangle\n  label: \"Image 1\\n(point x)\"\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nblock_2: {\n  shape: rectangle\n  label: \"Plan 3D\\n(scène plane)\"\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nblock_3: {\n  shape: rectangle\n  label: \"Image 2\\n(point x')\"\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nblock_1 -&gt; block_2:{\n  style: {\n    stroke: \"#fff\"\n    stroke-width: 2\n  }\n}\n\nblock_2 -&gt; block_3: {\n  style: {\n    stroke: \"#fff\"\n    stroke-width: 2\n  }\n}\n\n\nSi tout est sur un plan :\n La transformation est entièrement décrite par \\(\\color{#00e0ff}{H}\\).\n\n\nCe que cela permet\n\n\n\nRedresser une façade\nFaire un panorama\nCorriger une perspective\nWarper une image vers un nouveau point de vue"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#comment-on-détermine-h",
+    "href": "assets/syntheseimage/CM/CM1/index.html#comment-on-détermine-h",
+    "title": "Teaching",
+    "section": "Comment on détermine H",
+    "text": "Comment on détermine H\nOn dispose de correspondances :\n\\[\n\\mathbf{x}_i \\leftrightarrow \\mathbf{x}'_i\n\\]\nOn cherche une matrice H telle que :\n\\[\n\\mathbf{x}'_i \\sim H \\mathbf{x}_i\n\\]\noù les points sont exprimés en coordonnées homogènes.\nEn pratique :\n\nIl faut au minimum 4 correspondances (8 équations indépendantes)\nOn résout un système linéaire (moindres carrés)\nOn utilise ensuite RANSAC pour éliminer les outliers\n\n👉 H est estimée directement à partir des données observées."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#une-fois-h-estimée",
+    "href": "assets/syntheseimage/CM/CM1/index.html#une-fois-h-estimée",
+    "title": "Teaching",
+    "section": "Une fois H estimée",
+    "text": "Une fois H estimée\nOn applique la transformation à tous les pixels :\n\\[\n\\mathbf{x}' \\sim H \\mathbf{x}\n\\]\nMais attention :\n\non travaille en coordonnées homogènes\non renormalise après multiplication\n\n\\[\n(x', y', w') \\rightarrow \\left(\\frac{x'}{w'}, \\frac{y'}{w'}\\right)\n\\]\nEn pratique (OpenCV) :\nwarped = cv2.warpPerspective(img, H, (width, height))\n👉 Tous les pixels suivent la même loi géométrique."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#en-pratique-correspondances",
+    "href": "assets/syntheseimage/CM/CM1/index.html#en-pratique-correspondances",
+    "title": "Teaching",
+    "section": "En pratique  Correspondances",
+    "text": "En pratique  Correspondances"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#en-pratique-correspondances-ransac",
+    "href": "assets/syntheseimage/CM/CM1/index.html#en-pratique-correspondances-ransac",
+    "title": "Teaching",
+    "section": "En pratique  Correspondances + RANSAC",
+    "text": "En pratique  Correspondances + RANSAC"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#en-pratique-blending",
+    "href": "assets/syntheseimage/CM/CM1/index.html#en-pratique-blending",
+    "title": "Teaching",
+    "section": "En pratique  blending",
+    "text": "En pratique  blending"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#en-pratique-résultat",
+    "href": "assets/syntheseimage/CM/CM1/index.html#en-pratique-résultat",
+    "title": "Teaching",
+    "section": "En pratique  résultat",
+    "text": "En pratique  résultat"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#en-pratique-résultat-1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#en-pratique-résultat-1",
+    "title": "Teaching",
+    "section": "En pratique  résultat",
+    "text": "En pratique  résultat"
   },
   {
     "objectID": "assets/syntheseimage/CM/CM1/index.html#synthèse-2d-guidée-le-cœur-du-tp1",
     "href": "assets/syntheseimage/CM/CM1/index.html#synthèse-2d-guidée-le-cœur-du-tp1",
     "title": "Teaching",
     "section": "Synthèse 2D “guidée” (le cœur du TP1)",
-    "text": "Synthèse 2D “guidée” (le cœur du TP1)\n\n\n\n\n\n\n\nG\n\n\nI1\n\nImage I1\n\n\n\nW\n\nCorrespondances\n+ warping\n\n\n\nI1-&gt;W\n\n\n\n\n\nI2\n\nImage I2\n\n\n\nI2-&gt;W\n\n\n\n\n\nB\n\nFusion\npondérée\n\n\n\nW-&gt;B\n\n\n\n\n\nO\n\nImage\nsynthétisée\n\n\n\nB-&gt;O\n\n\n\n\n\n\n\n\n\n\n\nPipeline minimal : correspondances → warping → fusion."
+    "text": "Synthèse 2D “guidée” (le cœur du TP1)\n\n\n\n\n\n\n\nG\n\n\nI1\n\nImage I1\n\n\n\nW\n\nCorrespondances\n+ warping\n\n\n\nI1-&gt;W\n\n\n\n\n\nI2\n\nImage I2\n\n\n\nI2-&gt;W\n\n\n\n\n\nB\n\nFusion\npondérée\n\n\n\nW-&gt;B\n\n\n\n\n\nO\n\nImage\nsynthétisée\n\n\n\nB-&gt;O\n\n\n\n\n\n\n\n\n\n\n\nPipeline minimal : correspondances  warping  fusion."
   },
   {
     "objectID": "assets/syntheseimage/CM/CM1/index.html#correspondances-ce-que-cest-ce-que-ça-fait",
     "href": "assets/syntheseimage/CM/CM1/index.html#correspondances-ce-que-cest-ce-que-ça-fait",
     "title": "Teaching",
     "section": "Correspondances : ce que c’est, ce que ça fait",
-    "text": "Correspondances : ce que c’est, ce que ça fait"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#définition-simple",
-    "href": "assets/syntheseimage/CM/CM1/index.html#définition-simple",
-    "title": "Teaching",
-    "section": "Définition simple",
-    "text": "Définition simple\nUne correspondance 2D–2D = une paire de points :\n\\[\n\\mathbf{x}_1 \\in I_1 \\quad \\leftrightarrow \\quad \\mathbf{x}_2 \\in I_2\n\\]\n\nInterprétation : “même point du monde” vu dans deux images."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#doù-viennent-les-correspondances",
-    "href": "assets/syntheseimage/CM/CM1/index.html#doù-viennent-les-correspondances",
-    "title": "Teaching",
-    "section": "D’où viennent les correspondances ?",
-    "text": "D’où viennent les correspondances ?\nDeux grandes familles (TP1) :\n\nmanuelles : points cliqués (robuste, mais peu dense)\nautomatiques : détecteurs + appariement (dense, mais erreurs possibles)\n\n\n👉 Ce cours est conceptuel : on s’intéresse à l’effet des correspondances."
+    "text": "Correspondances : ce que c’est, ce que ça fait\nDéfinition simple\nUne correspondance 2D–2D = une paire de points :\n\\[\n\\mathbf{x}_1 \\in \\color{#00ff88}{I_1} \\quad \\leftrightarrow \\quad \\mathbf{x}_2 \\in \\color{#ffb000}{I_2}\n\\]\n\nInterprétation : \"même point du monde\" vu dans deux images."
   },
   {
     "objectID": "assets/syntheseimage/CM/CM1/index.html#qualité-des-correspondances-qualité-du-rendu",
     "href": "assets/syntheseimage/CM/CM1/index.html#qualité-des-correspondances-qualité-du-rendu",
     "title": "Teaching",
     "section": "Qualité des correspondances = qualité du rendu",
-    "text": "Qualité des correspondances = qualité du rendu\n\n\nSi elles sont fausses → déformations absurdes.\nSi elles sont mal réparties → zones “flottantes” / non contraintes.\nSi elles couvrent bien l’image → warping plus stable.\n\n\n\nTP1 : vous verrez directement l’impact de la densité et de la distribution."
+    "text": "Qualité des correspondances = qualité du rendu\n\n\nSi elles sont fausses  déformations absurdes.\nSi elles sont mal réparties  zones “flottantes” / non contraintes.\nSi elles couvrent bien l’image  warping plus stable.\n\n\n\nTP1 : vous verrez directement l’impact de la densité et de la distribution."
   },
   {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#warping-global-vs-local",
-    "href": "assets/syntheseimage/CM/CM1/index.html#warping-global-vs-local",
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#correspondances-structure-implicite",
+    "href": "assets/syntheseimage/CM/CM1/index.html#correspondances-structure-implicite",
     "title": "Teaching",
-    "section": "Warping global vs local",
-    "text": "Warping global vs local\nOn peut approximer (W) de plusieurs façons :\n\nglobal (rigide) : affine / projectif → simple mais limité\nlocal (flexible) : morceaux / interpolations → mieux mais fragile\n\n\n👉 Plus c’est flexible, plus on peut “coller” à l’image… mais plus on peut se tromper."
+    "section": "Correspondances = structure implicite",
+    "text": "Correspondances = structure implicite\n\nEn établissant des correspondances,\nnous définissons implicitement une représentation commune entre les deux images.\n\n\n\nSans 3D explicite, les correspondances imposent déjà une structure.\n\n\n\n\nUne mauvaise correspondance\n= une fausse hypothèse sur le monde."
   },
   {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#interpolation-guidée-recette-mentale",
-    "href": "assets/syntheseimage/CM/CM1/index.html#interpolation-guidée-recette-mentale",
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#doù-viennent-les-correspondances",
+    "href": "assets/syntheseimage/CM/CM1/index.html#doù-viennent-les-correspondances",
     "title": "Teaching",
-    "section": "Interpolation guidée : recette mentale",
-    "text": "Interpolation guidée : recette mentale\n\nDéformer (\\(I_1\\)) vers la vue intermédiaire\nDéformer (\\(I_2\\)) vers la vue intermédiaire\nFusionner\n\n\\[\n\\tilde I_\\alpha = (1-\\alpha) \\, W_\\alpha(I_1) + \\alpha \\, W_{1-\\alpha}(I_2)\n\\]\n\nMême si la formule change, l’idée reste : aligner avant de mélanger."
+    "section": "D’où viennent les correspondances ?",
+    "text": "D’où viennent les correspondances ?\nDeux sources :\n\n👤 Humaines (cliquées)\n🤖 Automatiques (SIFT, etc.)\n\n\nLes correspondances automatiques contiennent des erreurs."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#on-utilise-généralement-un-filtre",
+    "href": "assets/syntheseimage/CM/CM1/index.html#on-utilise-généralement-un-filtre",
+    "title": "Teaching",
+    "section": "On utilise généralement un filtre",
+    "text": "On utilise généralement un filtre\n\nOn impose une cohérence géométrique minimale.\n\n\nRANSAC = éliminer les correspondances incohérentes avec un modèle global.\n\n\n\n\n\nCorrespondances = même point du monde"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-que-lhomographie-change",
+    "href": "assets/syntheseimage/CM/CM1/index.html#ce-que-lhomographie-change",
+    "title": "Teaching",
+    "section": "Ce que l’homographie change",
+    "text": "Ce que l’homographie change\n\n\nUne seule transformation pour toute l’image\nUne géométrie globale cohérente\nLes droites restent droites\n\n\n\n\n👉 On passe d’une structure locale fragmentée à une loi géométrique unique.\n\n\n\nMais…\n\n\nCette cohérence repose sur une condition forte.\n\n\nLa scène est plane ou le mouvement est une rotation pure.\n\n\nSinon :  la cohérence s’effondre."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#respiration-1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#respiration-1",
+    "title": "Teaching",
+    "section": "Respiration",
+    "text": "Respiration\n\nPlus le modèle est global,\n\n\nplus la contrainte géométrique est forte.\n\n\n\n  \n\n  \n    \n      ▶\n      ↩\n\n      \n        \n        min\n        \n        s"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#bloc-4",
+    "href": "assets/syntheseimage/CM/CM1/index.html#bloc-4",
+    "title": "Teaching",
+    "section": "BLOC 4",
+    "text": "BLOC 4"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#limites-2d-besoin-de-structure",
+    "href": "assets/syntheseimage/CM/CM1/index.html#limites-2d-besoin-de-structure",
+    "title": "Teaching",
+    "section": "Limites 2D  besoin de structure",
+    "text": "Limites 2D  besoin de structure"
   },
   {
     "objectID": "assets/syntheseimage/CM/CM1/index.html#extrapolation-2d-sortir-de-lintervalle",
     "href": "assets/syntheseimage/CM/CM1/index.html#extrapolation-2d-sortir-de-lintervalle",
     "title": "Teaching",
     "section": "Extrapolation 2D : “sortir de l’intervalle”",
-    "text": "Extrapolation 2D : “sortir de l’intervalle”\nInterpolation : on reste “entre” les vues.\nExtrapolation : on pousse au-delà.\n\nPourquoi c’est plus dur ?\n\non invente des zones jamais vues,\nles occlusions explosent,\nles erreurs de correspondances s’amplifient."
+    "text": "Extrapolation 2D : “sortir de l’intervalle”\nInterpolation : on reste “entre” les vues.\n\nExtrapolation : on pousse au-delà.\n\n\n\nPourquoi c’est plus dur ?\n\non invente des zones jamais vues,\nles occlusions explosent,\nles erreurs de correspondances s’amplifient."
   },
   {
     "objectID": "assets/syntheseimage/CM/CM1/index.html#occlusions-le-mur-conceptuel-de-la-2d",
     "href": "assets/syntheseimage/CM/CM1/index.html#occlusions-le-mur-conceptuel-de-la-2d",
     "title": "Teaching",
     "section": "Occlusions : le mur conceptuel de la 2D",
-    "text": "Occlusions : le mur conceptuel de la 2D\nEn 2D, on n’a pas explicitement :\n\nqui est devant quoi,\nquelles zones sont cachées puis révélées.\n\nConséquence :\n\ntrous, déchirures (disocclusions),\nduplications,\nincohérences locales.\n\n\n👉 Ces artefacts ne sont pas “des bugs” : ce sont des limites structurelles."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#limites-2d-besoin-de-structure",
-    "href": "assets/syntheseimage/CM/CM1/index.html#limites-2d-besoin-de-structure",
-    "title": "Teaching",
-    "section": "Limites 2D → besoin de structure",
-    "text": "Limites 2D → besoin de structure"
+    "text": "Occlusions : le mur conceptuel de la 2D\nEn 2D, une image ne contient pas explicitement :\n\n\nl’ordre en profondeur,\nla visibilité,\nce qui est devant ou derrière.\n\n\n\n\nLa 2D ne code pas la profondeur.\n\n\n\nConséquence :\n\n\n\ntrous, déchirures (disocclusions),\nduplications,\nincohérences locales.\n\n\n\n👉 Ces artefacts ne sont pas “des bugs” : ce sont des limites structurelles."
   },
   {
     "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-que-la-2d-sait-faire-très-bien",
@@ -1393,39 +1694,53 @@
     "text": "Ce que la 2D ne peut pas résoudre proprement\n\n\ngrandes variations de point de vue\nfortes occlusions / disocclusions\nobjets fins / transparences / réflexions complexes\nextrapolation stable"
   },
   {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#la-question-qui-force-le-passage-au-3d",
-    "href": "assets/syntheseimage/CM/CM1/index.html#la-question-qui-force-le-passage-au-3d",
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#message-clé",
+    "href": "assets/syntheseimage/CM/CM1/index.html#message-clé",
     "title": "Teaching",
-    "section": "La question qui force le passage au 3D",
-    "text": "La question qui force le passage au 3D\nSi on veut une synthèse de vues cohérente géométriquement, il manque :\n\n\nune notion de profondeur\nune notion de visibilité (z-buffer implicite)\nune notion de caméra (pose / projection)\n\n\n\n👉 CM2/TP2 : photogrammétrie = image → structure 3D (poses + points)."
+    "section": "Message clé",
+    "text": "Message clé\nLes homographies sont :\n\n✔ Une première forme d’inversion structurée\n✔ Un modèle minimal image  image\n✘ Insuffisant pour des scènes 3D générales\n\n\nSi on veut une synthèse de vues cohérente géométriquement, il manque :\n\n\n\nune notion de profondeur\nune notion de visibilité (z-buffer implicite)\nune notion de caméra (pose / projection)"
   },
   {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#transition-conceptuelle",
-    "href": "assets/syntheseimage/CM/CM1/index.html#transition-conceptuelle",
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#section-2",
+    "href": "assets/syntheseimage/CM/CM1/index.html#section-2",
     "title": "Teaching",
-    "section": "Transition conceptuelle",
-    "text": "Transition conceptuelle\n\n\n\n\n\n\n\nG\n\n\nA\n\n2D : correspondances\n→ warping\n\n\n\nB\n\nLimites : occlusions\n+ profondeur absente\n\n\n\nA-&gt;B\n\n\n\n\n\nC\n\n3D : correspondances\n→ poses + structure\n\n\n\nB-&gt;C"
+    "section": "",
+    "text": "Une image 2D ne contient pas explicitement la profondeur.\n\n\n\nMais la synthèse de nouvelles vues\n\n\nexige de savoir ce qui est devant quoi."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#conclusion",
+    "href": "assets/syntheseimage/CM/CM1/index.html#conclusion",
+    "title": "Teaching",
+    "section": "Conclusion",
+    "text": "Conclusion"
   },
   {
     "objectID": "assets/syntheseimage/CM/CM1/index.html#à-retenir-cm1",
     "href": "assets/syntheseimage/CM/CM1/index.html#à-retenir-cm1",
     "title": "Teaching",
     "section": "À retenir (CM1)",
-    "text": "À retenir (CM1)\n\n\nRendu inverse = trouver une représentation compatible avec les images pour pouvoir re-synthétiser.\nEn 2D, la brique centrale = correspondances 2D–2D.\nAligner avant de mélanger : warping → fusion.\nLes occlusions et la profondeur manquante imposent une limite structurelle."
+    "text": "À retenir (CM1)\n\n\nRendu inverse = trouver une représentation compatible avec les images pour pouvoir re-synthétiser.\nEn 2D, la brique centrale = correspondances 2D–2D.\nAligner avant de mélanger : warping  fusion.\nLes occlusions et la profondeur manquante imposent une limite structurelle."
   },
   {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#connexion-directe-avec-le-tp1",
-    "href": "assets/syntheseimage/CM/CM1/index.html#connexion-directe-avec-le-tp1",
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#prolongement-tp1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#prolongement-tp1",
     "title": "Teaching",
-    "section": "Connexion directe avec le TP1",
-    "text": "Connexion directe avec le TP1\nDans le TP1 vous allez :\n\ntester le blending naïf → observer ghosting\ncréer des correspondances → voir l’effet de leur qualité\nfaire du warping → puis une interpolation guidée\ntenter une extrapolation → constater les limites\n\n\n👉 Votre rapport = pas “ça marche / ça marche pas”, mais quels artefacts et pourquoi."
+    "section": "Prolongement : TP1",
+    "text": "Prolongement : TP1\nVous allez :\n\n\ntester le blending naïf  observer ghosting\ncréer des correspondances  voir l’effet de leur qualité\nfaire du warping  puis une interpolation guidée\ntenter une extrapolation  constater les limites\n\n\n\n👉 Le TP n’est pas là pour “faire marcher le code”.\nIl est là pour observer les limites du modèle."
   },
   {
     "objectID": "assets/syntheseimage/CM/CM1/index.html#préparer-cm2",
     "href": "assets/syntheseimage/CM/CM1/index.html#préparer-cm2",
     "title": "Teaching",
     "section": "Préparer CM2",
-    "text": "Préparer CM2\nQuestion de sortie :\n\nQu’est-ce qui manque à la 2D pour gérer proprement la visibilité et les nouvelles vues ?\n\n\nRéponse attendue :\nstructure 3D + caméras → photogrammétrie."
+    "text": "Préparer CM2\n\nQuestion de sortie :\n\nQu’est-ce qui manque à la 2D pour gérer proprement la visibilité et les nouvelles vues ?\n\n\n\nRéponse attendue :\nstructure 3D + caméras  photogrammétrie."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#cest-tout-pour-aujourdhui",
+    "href": "assets/syntheseimage/CM/CM1/index.html#cest-tout-pour-aujourdhui",
+    "title": "Teaching",
+    "section": "C’est tout pour aujourd’hui",
+    "text": "C’est tout pour aujourd’hui"
   },
   {
     "objectID": "assets/bigdata/CM/CM4/index.html#mise-en-perspective",
