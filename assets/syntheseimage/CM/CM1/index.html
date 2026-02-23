@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="index_files/libs/clipboard/clipboard.min.js"></script>
-<script src="index_files/libs/quarto-html/tabby.min.js"></script>
-<script src="index_files/libs/quarto-html/popper.min.js"></script>
-<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="index_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
-<script src="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
-<link href="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.css" rel="stylesheet">
-<script src="index_files/libs/quarto-contrib/roughnotation-flourish-bridge-1.0.0/flourish-bridge.js"></script>
-<link href="index_files/libs/quarto-contrib/quarto-gradio-1.0.0/quarto-gradio.css" rel="stylesheet">
-<script src="index_files/libs/quarto-contrib/lordicon-bundle-1.9.0/bundle.js"></script>
-<link href="index_files/libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
-<link href="index_files/libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../../../../img/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/quarto-contrib/lordicon-bundle-1.9.0/bundle.js"></script>
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="nsv">
   <meta name="dcterms.date" content="2026-02-23">
-  <title>CM1 SIRI</title>
+  <title>Teaching – CM1 SIRI</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -65,57 +61,51 @@
         -khtml-user-select: none; -moz-user-select: none;
         -ms-user-select: none; user-select: none;
         padding: 0 4px; width: 4em;
+        color: #aaaaaa;
       }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
     div.sourceCode
-      { color: #f8f8f2;  }
+      { color: #003b4f; background-color: #f1f3f5; }
     @media screen {
     pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
     }
-    code span { color: #f8f8f2; } /* Normal */
-    code span.al { color: #f07178; } /* Alert */
-    code span.an { color: #d4d0ab; } /* Annotation */
-    code span.at { color: #00e0e0; } /* Attribute */
-    code span.bn { color: #d4d0ab; } /* BaseN */
-    code span.bu { color: #abe338; } /* BuiltIn */
-    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #abe338; } /* Char */
-    code span.cn { color: #ffd700; } /* Constant */
-    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
-    code span.cv { color: #ffd700; } /* CommentVar */
-    code span.do { color: #f8f8f2; } /* Documentation */
-    code span.dt { color: #ffa07a; } /* DataType */
-    code span.dv { color: #d4d0ab; } /* DecVal */
-    code span.er { color: #f07178; text-decoration: underline; } /* Error */
-    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
-    code span.fl { color: #d4d0ab; } /* Float */
-    code span.fu { color: #ffa07a; } /* Function */
-    code span.im { color: #abe338; } /* Import */
-    code span.in { color: #d4d0ab; } /* Information */
-    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
-    code span.op { color: #ffa07a; } /* Operator */
-    code span.ot { color: #00e0e0; } /* Other */
-    code span.pp { color: #dcc6e0; } /* Preprocessor */
-    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
-    code span.sc { color: #abe338; } /* SpecialChar */
-    code span.ss { color: #abe338; } /* SpecialString */
-    code span.st { color: #abe338; } /* String */
-    code span.va { color: #00e0e0; } /* Variable */
-    code span.vs { color: #abe338; } /* VerbatimString */
-    code span.wa { color: #dcc6e0; } /* Warning */
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-7aab3d41f01bee277bd43f60bb1c4323.css">
-  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/chrono/chrono.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/simplemenu/simplemenu.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-attribution/attribution.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-quiz/quiz.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet"><style type="text/css">
+  <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link href="../../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -201,66 +191,14 @@
       margin-left: auto;
       margin-right: 0; 
     }
-  </style><script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script>
-  <!-- quarto-confetti-injected -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-  <script>
-  (function () {
-    if (window.__quarto_confetti_init__) return;
-    window.__quarto_confetti_init__ = true;
-
-    // Debug (décommente si besoin)
-    // console.log("[confetti] init ok");
-
-    window.confettiBurst = function (opts) {
-      if (typeof window.confetti !== "function") return;
-
-      // Ajustés pour limiter le fade perceptible
-      var defaults = {
-        particleCount: 200,
-        spread: 100,
-        origin: { y: 0.7 }
-
-      };
-
-      try {
-        window.confetti(Object.assign({}, defaults, (opts || {})));
-      } catch (e) {}
-    };
-
-    document.addEventListener("DOMContentLoaded", function () {
-      if (!window.Reveal) return;
-
-      function parseMaybeJSON(s) {
-        if (!s) return {};
-        var t = String(s).trim();
-        if (t === "") return {};
-        try { return JSON.parse(t); } catch (e) { return {}; }
-      }
-
-      Reveal.on("fragmentshown", function (event) {
-        var frag = event && event.fragment;
-        if (!frag) return;
-
-        // Option 3: class ".confetti"
-        if (!frag.classList || !frag.classList.contains("confetti")) return;
-
-        // Optional overrides
-        var optsText =
-          (frag.getAttribute && (frag.getAttribute("data-confetti") || frag.getAttribute("confetti"))) || "";
-
-        window.confettiBurst(parseMaybeJSON(optsText));
-      });
-    });
-  })();
-  </script>
+  </style>
 </head>
-<body class="quarto-dark">
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 
-<section id="synthèse-dimages-par-rendu-inverse" class="slide level2 title particle" data-state="hide-menubar" data-background-interactive="true" data-background-iframe="_extensions/local/particle/particle.html">
+<section id="synthèse-dimages-par-rendu-inverse" class="slide level2 title particle" data-state="hide-menubar">
 <h2>Synthèse d’Images par Rendu Inverse</h2>
 <div class="blue">
 <p><strong>CM1</strong>: Une image vaut mille mots (ou inversement)</p>
@@ -312,10 +250,10 @@
 <div class="fragment blue">
 <p>Donc :</p>
 <ul>
-<li class="fragment">pas d’app spéciale lecteur</li>
-<li class="fragment">partage par lien</li>
-<li class="fragment">marche sur mobile &amp; desktop &amp; multi-OS</li>
-<li class="fragment">assez “WoW” pour convaincre un rédacteur en chef</li>
+<li>pas d’app spéciale lecteur</li>
+<li>partage par lien</li>
+<li>marche sur mobile &amp; desktop &amp; multi-OS</li>
+<li>assez “WoW” pour convaincre un rédacteur en chef</li>
 </ul>
 </div>
 <div class="fragment">
@@ -323,7 +261,7 @@
 <p>👉 Photogrammétrie <span class="glyph arrow" style="font-size:1.2em;"></span> nettoyage <span class="glyph arrow" style="font-size:1.2em;"></span> export web <span class="glyph arrow" style="font-size:1.2em;"></span> intégration dans une page.</p>
 </div>
 </section>
-<section id="exemple" class="slide level2 engine" data-background-interactive="true" data-state="hide-menubar" data-background-iframe="_extensions/local/engine/engine.html">
+<section id="exemple" class="slide level2 engine">
 <h2>Exemple</h2>
 </section>
 <section id="fil-directeur-2d-3d-continu" class="slide level2">
@@ -389,9 +327,9 @@
 <p>Compétences acquisent :</p>
 <div class="green">
 <ul>
-<li class="fragment">Compréhension conceptuelle du rendu inverse et des représentations</li>
-<li class="fragment">Numérisation de petits objets</li>
-<li class="fragment">Création d’un portefolio</li>
+<li>Compréhension conceptuelle du rendu inverse et des représentations</li>
+<li>Numérisation de petits objets</li>
+<li>Création d’un portefolio</li>
 </ul>
 </div>
 </section>
@@ -400,9 +338,9 @@
 <p>On va progresser par <strong>besoin de structure</strong> :</p>
 <div class="blue">
 <ol type="1">
-<li class="fragment">En 2D, on “triche” intelligemment : on manipule l’image.</li>
-<li class="fragment">Puis on se heurte à des limites <span class="glyph arrow" style="font-size:1.2em;"></span> on introduit la 3D (photogrammétrie).</li>
-<li class="fragment">Puis on compare des représentations modernes pour le rendu.</li>
+<li>En 2D, on “triche” intelligemment : on manipule l’image.</li>
+<li>Puis on se heurte à des limites <span class="glyph arrow" style="font-size:1.2em;"></span> on introduit la 3D (photogrammétrie).</li>
+<li>Puis on compare des représentations modernes pour le rendu.</li>
 </ol>
 </div>
 <div class="fragment green">
@@ -414,10 +352,10 @@
 <p>Vous devez pouvoir répondre à :</p>
 <div class="blue">
 <ul>
-<li class="fragment">Qu’est-ce que “rendu inverse” dans <em>notre</em> sens ?</li>
-<li class="fragment">Pourquoi l’inversion est <strong>mal posée</strong> ?</li>
-<li class="fragment">Qu’est-ce qu’on peut déjà faire <strong>en 2D</strong> (sans 3D) ?</li>
-<li class="fragment">Quels artefacts sont <em>structurels</em> (donc inévitables en 2D) ?</li>
+<li>Qu’est-ce que “rendu inverse” dans <em>notre</em> sens ?</li>
+<li>Pourquoi l’inversion est <strong>mal posée</strong> ?</li>
+<li>Qu’est-ce qu’on peut déjà faire <strong>en 2D</strong> (sans 3D) ?</li>
+<li>Quels artefacts sont <em>structurels</em> (donc inévitables en 2D) ?</li>
 </ul>
 </div>
 <!-- /BLOC -->
@@ -504,9 +442,9 @@
 \]</span></p>
 <p>où :</p>
 <ul>
-<li class="fragment"><span class="math inline">\(\color{#00ff88}{\theta}\)</span> = paramètre de la scène</li>
-<li class="fragment"><span class="math inline">\(\color{#ffb000}{R}\)</span> = fonction de rendu</li>
-<li class="fragment"><span class="math inline">\(\color{#00e0ff}{I}\)</span> = image</li>
+<li><span class="math inline">\(\color{#00ff88}{\theta}\)</span> = paramètre de la scène</li>
+<li><span class="math inline">\(\color{#ffb000}{R}\)</span> = fonction de rendu</li>
+<li><span class="math inline">\(\color{#00e0ff}{I}\)</span> = image</li>
 </ul>
 </section>
 <section id="rendu-normal" class="slide level2">
@@ -556,7 +494,53 @@
 <h2>Tout d’abord, partons d’un fait</h2>
 <p><span class="green">Tout système réaliste de production d’image suppose une représentation du monde, obtenue par inférence (humaine ou algorithmique), puis un rendu.</span></p>
 <div class="vcenter">
-<img data-src="index_files/mediabag/3e075ce9e95fca7ade429eaf2ae39815fa808ba0.svg" style="width:80.0%">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" width="80%"><pre class="sourceCode numberSource d2 number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>direction: right</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a>style: {</span>
+<span id="cb1-4"><a></a>  fill: transparent</span>
+<span id="cb1-5"><a></a>}</span>
+<span id="cb1-6"><a></a></span>
+<span id="cb1-7"><a></a>Observation: {</span>
+<span id="cb1-8"><a></a>  shape: rectangle</span>
+<span id="cb1-9"><a></a>  style: {</span>
+<span id="cb1-10"><a></a>    fill: "#d5d5d5"</span>
+<span id="cb1-11"><a></a>    stroke: "#fff"</span>
+<span id="cb1-12"><a></a>  }</span>
+<span id="cb1-13"><a></a>}</span>
+<span id="cb1-14"><a></a></span>
+<span id="cb1-15"><a></a>Representation: {</span>
+<span id="cb1-16"><a></a>  shape: rectangle</span>
+<span id="cb1-17"><a></a>  label: "Représentation\n(modèle)"</span>
+<span id="cb1-18"><a></a>  style: {</span>
+<span id="cb1-19"><a></a>    fill: "#d5d5d5"</span>
+<span id="cb1-20"><a></a>    stroke: "#fff"</span>
+<span id="cb1-21"><a></a>  }</span>
+<span id="cb1-22"><a></a>}</span>
+<span id="cb1-23"><a></a></span>
+<span id="cb1-24"><a></a>Synthese: {</span>
+<span id="cb1-25"><a></a>  shape: rectangle</span>
+<span id="cb1-26"><a></a>  label: "Synthèse"</span>
+<span id="cb1-27"><a></a>  style: {</span>
+<span id="cb1-28"><a></a>    fill: "#d5d5d5"</span>
+<span id="cb1-29"><a></a>    stroke: "#fff"</span>
+<span id="cb1-30"><a></a>  }</span>
+<span id="cb1-31"><a></a>}</span>
+<span id="cb1-32"><a></a></span>
+<span id="cb1-33"><a></a>Observation -&gt; Representation: "inférence" {</span>
+<span id="cb1-34"><a></a>  style: {</span>
+<span id="cb1-35"><a></a>    stroke: "#d33"</span>
+<span id="cb1-36"><a></a>    font-color: "#fff"</span>
+<span id="cb1-37"><a></a>    stroke-width: 2</span>
+<span id="cb1-38"><a></a>  }</span>
+<span id="cb1-39"><a></a>}</span>
+<span id="cb1-40"><a></a></span>
+<span id="cb1-41"><a></a>Representation -&gt; Synthese: "rendu" {</span>
+<span id="cb1-42"><a></a>  style: {</span>
+<span id="cb1-43"><a></a>    stroke: "#2a7"</span>
+<span id="cb1-44"><a></a>    font-color: "#fff"</span>
+<span id="cb1-45"><a></a>    stroke-width: 2</span>
+<span id="cb1-46"><a></a>  }</span>
+<span id="cb1-47"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <p><span>Exemple de <code>l'appareil photo</code> :</span></p>
@@ -588,19 +572,19 @@
 <h2>Dans ce sens :</h2>
 <div class="green">
 <ul>
-<li class="fragment">le cerveau fait du rendu inverse</li>
-<li class="fragment">l’artiste 3D fait du rendu inverse</li>
-<li class="fragment">la photogrammétrie fait du rendu inverse</li>
-<li class="fragment">NeRF fait du rendu inverse</li>
+<li>le cerveau fait du rendu inverse</li>
+<li>l’artiste 3D fait du rendu inverse</li>
+<li>la photogrammétrie fait du rendu inverse</li>
+<li>NeRF fait du rendu inverse</li>
 </ul>
 </div>
 <div class="fragment">
 <p>Cette inférence produit une représentation à qualité variable.</p>
 </div>
 <ul>
-<li class="fragment">2D <span class="glyph arrow" style="font-size:1.2em;"></span> inférence faible <span class="glyph arrow" style="font-size:1.2em;"></span> rendu</li>
-<li class="fragment">3D <span class="glyph arrow" style="font-size:1.2em;"></span> inférence géométrique <span class="glyph arrow" style="font-size:1.2em;"></span> rendu</li>
-<li class="fragment">NeRF <span class="glyph arrow" style="font-size:1.2em;"></span> inférence volumétrique <span class="glyph arrow" style="font-size:1.2em;"></span> rendu</li>
+<li>2D <span class="glyph arrow" style="font-size:1.2em;"></span> inférence faible <span class="glyph arrow" style="font-size:1.2em;"></span> rendu</li>
+<li>3D <span class="glyph arrow" style="font-size:1.2em;"></span> inférence géométrique <span class="glyph arrow" style="font-size:1.2em;"></span> rendu</li>
+<li>NeRF <span class="glyph arrow" style="font-size:1.2em;"></span> inférence volumétrique <span class="glyph arrow" style="font-size:1.2em;"></span> rendu</li>
 </ul>
 <div class="fragment">
 <p><span class="blue">Ce sont des formes différentes du même geste fondamental :</span></p>
@@ -614,9 +598,9 @@
 <p>Mais pour synthétiser, il faut :</p>
 <div class="blue">
 <ul>
-<li class="fragment">choisir une représentation</li>
-<li class="fragment">comprendre ce qu’est une image</li>
-<li class="fragment">comprendre ce qui la rend plausible</li>
+<li>choisir une représentation</li>
+<li>comprendre ce qu’est une image</li>
+<li>comprendre ce qui la rend plausible</li>
 </ul>
 </div>
 <div class="fragment">
@@ -691,9 +675,9 @@
 \]</span></p>
 <p>où :</p>
 <ul>
-<li class="fragment"><span class="math inline">\(\color{#00ff88}{\theta}\)</span> = paramètre de la scène</li>
-<li class="fragment"><span class="math inline">\(\color{#ffb000}{R}\)</span> = fonction de rendu</li>
-<li class="fragment"><span class="math inline">\(\color{#00e0ff}{I_{\text{obs}}}\)</span> = image observée</li>
+<li><span class="math inline">\(\color{#00ff88}{\theta}\)</span> = paramètre de la scène</li>
+<li><span class="math inline">\(\color{#ffb000}{R}\)</span> = fonction de rendu</li>
+<li><span class="math inline">\(\color{#00e0ff}{I_{\text{obs}}}\)</span> = image observée</li>
 </ul>
 <div class="fragment green">
 <p>On cherche les paramètres de scène qui, une fois rendus, produisent une image la plus proche possible de ce que l’on observe.</p>
@@ -708,8 +692,8 @@
 <h2>Point clé : on ne reconstruit pas “la vérité”</h2>
 <div class="blue">
 <ul>
-<li class="fragment">Une image est compatible avec <strong>plusieurs</strong> scènes / explications.</li>
-<li class="fragment">On cherche une représentation <strong>utile au rendu</strong> (et pas une vérité physique).</li>
+<li>Une image est compatible avec <strong>plusieurs</strong> scènes / explications.</li>
+<li>On cherche une représentation <strong>utile au rendu</strong> (et pas une vérité physique).</li>
 </ul>
 </div>
 <div class="fragment">
@@ -721,10 +705,10 @@
 <p>Parce que beaucoup d’informations sont “perdues” dans l’image :</p>
 <div class="blue">
 <ul>
-<li class="fragment"><strong>profondeur</strong> (3D <span class="glyph arrow" style="font-size:1.2em;"></span> 2D)</li>
-<li class="fragment"><strong>occlusions</strong> (ce qui est caché)</li>
-<li class="fragment"><strong>ambiguïtés</strong> (textures répétées, surfaces planes…)</li>
-<li class="fragment">dépendance au <strong>point de vue</strong></li>
+<li><strong>profondeur</strong> (3D <span class="glyph arrow" style="font-size:1.2em;"></span> 2D)</li>
+<li><strong>occlusions</strong> (ce qui est caché)</li>
+<li><strong>ambiguïtés</strong> (textures répétées, surfaces planes…)</li>
+<li>dépendance au <strong>point de vue</strong></li>
 </ul>
 </div>
 <div class="fragment red">
@@ -781,9 +765,9 @@
 </div>
 <div class="green">
 <ul>
-<li class="fragment">ce qu’est une scène</li>
-<li class="fragment">ce qu’est la lumière</li>
-<li class="fragment">ce qu’est une image</li>
+<li>ce qu’est une scène</li>
+<li>ce qu’est la lumière</li>
+<li>ce qu’est une image</li>
 </ul>
 </div>
 </section>
@@ -884,8 +868,8 @@ I_\alpha = (1-\alpha)\color{#00ff88}{I_1} + \alpha \color{#ffb000}{I_2},\quad \a
 <p>Pour synthétiser proprement, il faut une notion de <strong>correspondances</strong> :</p>
 </div>
 <ul>
-<li class="fragment">ce pixel dans (<span class="math inline">\(\color{#00ff88}{I_1}\)</span>) <span class="glyph arrow_double" style="font-size:1.2em;"></span> ce pixel dans (<span class="math inline">\(\color{#ffb000}{I_2}\)</span>)</li>
-<li class="fragment">autrement dit : une <strong>déformation</strong> (warping) entre images</li>
+<li>ce pixel dans (<span class="math inline">\(\color{#00ff88}{I_1}\)</span>) <span class="glyph arrow_double" style="font-size:1.2em;"></span> ce pixel dans (<span class="math inline">\(\color{#ffb000}{I_2}\)</span>)</li>
+<li>autrement dit : une <strong>déformation</strong> (warping) entre images</li>
 </ul>
 <div class="green fragment">
 <p>👉 Première grande idée du cours : <strong>correspondances 2D–2D</strong>.</p>
@@ -900,8 +884,8 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 <p>Intuition :</p>
 <div class="green">
 <ul>
-<li class="fragment">si (<span class="math inline">\(W\)</span>) est bonne, les structures s’alignent,</li>
-<li class="fragment">ensuite le blending devient beaucoup plus cohérent.</li>
+<li>si (<span class="math inline">\(W\)</span>) est bonne, les structures s’alignent,</li>
+<li>ensuite le blending devient beaucoup plus cohérent.</li>
 </ul>
 </div>
 </section>
@@ -955,9 +939,9 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 </div>
 <div class="blue">
 <ul>
-<li class="fragment">on calcule l’affine entre triangle source et destination</li>
-<li class="fragment">on applique la transformation aux pixels</li>
-<li class="fragment">on remplit progressivement l’image cible</li>
+<li>on calcule l’affine entre triangle source et destination</li>
+<li>on applique la transformation aux pixels</li>
+<li>on remplit progressivement l’image cible</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1003,19 +987,19 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 </div>
 <p><br></p>
 <ul>
-<li class="fragment">Des correspondances peuvent etre fausses</li>
-<li class="fragment">Deux triangles voisins peuvent se déformer différemment.</li>
-<li class="fragment">Les lignes droites peuvent devenir brisées.</li>
-<li class="fragment">Les régions peu contraintes deviennent instables.</li>
+<li>Des correspondances peuvent etre fausses</li>
+<li>Deux triangles voisins peuvent se déformer différemment.</li>
+<li>Les lignes droites peuvent devenir brisées.</li>
+<li>Les régions peu contraintes deviennent instables.</li>
 </ul>
 </section>
 <section id="ce-quon-peut-retenir" class="slide level2">
 <h2>Ce qu’on peut retenir</h2>
 <div class="green">
 <ul>
-<li class="fragment">Blending naïf <span class="glyph arrow" style="font-size:1.2em;"></span> ghosting</li>
-<li class="fragment">Il faut aligner avant de mélanger</li>
-<li class="fragment">Warping local <span class="glyph arrow" style="font-size:1.2em;"></span> (<code>très</code>) inconsistent</li>
+<li>Blending naïf <span class="glyph arrow" style="font-size:1.2em;"></span> ghosting</li>
+<li>Il faut aligner avant de mélanger</li>
+<li>Warping local <span class="glyph arrow" style="font-size:1.2em;"></span> (<code>très</code>) inconsistent</li>
 </ul>
 </div>
 <div class="gear-spin">
@@ -1079,10 +1063,10 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 <p>Une homographie permet :</p>
 <div class="blue">
 <ul>
-<li class="fragment">rotation</li>
-<li class="fragment">translation</li>
-<li class="fragment">changement de perspective</li>
-<li class="fragment">redressement de plan</li>
+<li>rotation</li>
+<li>translation</li>
+<li>changement de perspective</li>
+<li>redressement de plan</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1105,7 +1089,52 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 <section id="intuition-géométrique" class="slide level2">
 <h2>Intuition géométrique</h2>
 <p><br></p>
-<img data-src="index_files/mediabag/11fe5f45062474ca676adce8e06d241f54c8ee6f.svg" style="width:80.0%">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" width="80%"><pre class="sourceCode numberSource d2 number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>direction: right</span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a>style: {</span>
+<span id="cb2-4"><a></a>  fill: transparent</span>
+<span id="cb2-5"><a></a>}</span>
+<span id="cb2-6"><a></a></span>
+<span id="cb2-7"><a></a>block_1: {</span>
+<span id="cb2-8"><a></a>  shape: rectangle</span>
+<span id="cb2-9"><a></a>  label: "Image 1\n(point x)"</span>
+<span id="cb2-10"><a></a>  style: {</span>
+<span id="cb2-11"><a></a>    fill: "#d5d5d5"</span>
+<span id="cb2-12"><a></a>    stroke: "#fff"</span>
+<span id="cb2-13"><a></a>  }</span>
+<span id="cb2-14"><a></a>}</span>
+<span id="cb2-15"><a></a></span>
+<span id="cb2-16"><a></a>block_2: {</span>
+<span id="cb2-17"><a></a>  shape: rectangle</span>
+<span id="cb2-18"><a></a>  label: "Plan 3D\n(scène plane)"</span>
+<span id="cb2-19"><a></a>  style: {</span>
+<span id="cb2-20"><a></a>    fill: "#d5d5d5"</span>
+<span id="cb2-21"><a></a>    stroke: "#fff"</span>
+<span id="cb2-22"><a></a>  }</span>
+<span id="cb2-23"><a></a>}</span>
+<span id="cb2-24"><a></a></span>
+<span id="cb2-25"><a></a>block_3: {</span>
+<span id="cb2-26"><a></a>  shape: rectangle</span>
+<span id="cb2-27"><a></a>  label: "Image 2\n(point x')"</span>
+<span id="cb2-28"><a></a>  style: {</span>
+<span id="cb2-29"><a></a>    fill: "#d5d5d5"</span>
+<span id="cb2-30"><a></a>    stroke: "#fff"</span>
+<span id="cb2-31"><a></a>  }</span>
+<span id="cb2-32"><a></a>}</span>
+<span id="cb2-33"><a></a></span>
+<span id="cb2-34"><a></a>block_1 -&gt; block_2:{</span>
+<span id="cb2-35"><a></a>  style: {</span>
+<span id="cb2-36"><a></a>    stroke: "#fff"</span>
+<span id="cb2-37"><a></a>    stroke-width: 2</span>
+<span id="cb2-38"><a></a>  }</span>
+<span id="cb2-39"><a></a>}</span>
+<span id="cb2-40"><a></a></span>
+<span id="cb2-41"><a></a>block_2 -&gt; block_3: {</span>
+<span id="cb2-42"><a></a>  style: {</span>
+<span id="cb2-43"><a></a>    stroke: "#fff"</span>
+<span id="cb2-44"><a></a>    stroke-width: 2</span>
+<span id="cb2-45"><a></a>  }</span>
+<span id="cb2-46"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><br></p>
 <div class="fragment">
 <p>Si tout est sur un plan :</p>
@@ -1116,10 +1145,10 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 </div>
 <div class="green">
 <ul>
-<li class="fragment">Redresser une façade</li>
-<li class="fragment">Faire un panorama</li>
-<li class="fragment">Corriger une perspective</li>
-<li class="fragment">Warper une image vers un nouveau point de vue</li>
+<li>Redresser une façade</li>
+<li>Faire un panorama</li>
+<li>Corriger une perspective</li>
+<li>Warper une image vers un nouveau point de vue</li>
 </ul>
 </div>
 </section>
@@ -1136,9 +1165,9 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 <p>où les points sont exprimés en coordonnées homogènes.</p>
 <p>En pratique :</p>
 <ul>
-<li class="fragment">Il faut au minimum 4 correspondances (8 équations indépendantes)</li>
-<li class="fragment">On résout un système linéaire (moindres carrés)</li>
-<li class="fragment">On utilise ensuite <strong>RANSAC</strong> pour éliminer les outliers</li>
+<li>Il faut au minimum 4 correspondances (8 équations indépendantes)</li>
+<li>On résout un système linéaire (moindres carrés)</li>
+<li>On utilise ensuite <strong>RANSAC</strong> pour éliminer les outliers</li>
 </ul>
 <p>👉 H est estimée directement à partir des données observées.</p>
 </section>
@@ -1150,14 +1179,14 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 \]</span></p>
 <p>Mais attention :</p>
 <ul>
-<li class="fragment">on travaille en coordonnées homogènes</li>
-<li class="fragment">on renormalise après multiplication</li>
+<li>on travaille en coordonnées homogènes</li>
+<li>on renormalise après multiplication</li>
 </ul>
 <p><span class="math display">\[
 (x', y', w') \rightarrow \left(\frac{x'}{w'}, \frac{y'}{w'}\right)
 \]</span></p>
 <p>En pratique (OpenCV) :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a>warped <span class="op">=</span> cv2.warpPerspective(img, H, (width, height))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>warped <span class="op">=</span> cv2.warpPerspective(img, H, (width, height))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>👉 Tous les pixels suivent la même loi géométrique.</p>
 </section>
 <section id="en-pratique-correspondances" class="slide level2">
@@ -1314,9 +1343,9 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 <h2>Qualité des correspondances = qualité du rendu</h2>
 <div class="blue">
 <ul>
-<li class="fragment">Si elles sont <strong>fausses</strong> <span class="glyph arrow" style="font-size:1.2em;"></span> déformations absurdes.</li>
-<li class="fragment">Si elles sont <strong>mal réparties</strong> <span class="glyph arrow" style="font-size:1.2em;"></span> zones “flottantes” / non contraintes.</li>
-<li class="fragment">Si elles couvrent bien l’image <span class="glyph arrow" style="font-size:1.2em;"></span> warping plus stable.</li>
+<li>Si elles sont <strong>fausses</strong> <span class="glyph arrow" style="font-size:1.2em;"></span> déformations absurdes.</li>
+<li>Si elles sont <strong>mal réparties</strong> <span class="glyph arrow" style="font-size:1.2em;"></span> zones “flottantes” / non contraintes.</li>
+<li>Si elles couvrent bien l’image <span class="glyph arrow" style="font-size:1.2em;"></span> warping plus stable.</li>
 </ul>
 </div>
 <div class="fragment green">
@@ -1344,8 +1373,8 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 <h2>D’où viennent les correspondances ?</h2>
 <p>Deux sources :</p>
 <ul>
-<li class="fragment">👤 Humaines (cliquées)</li>
-<li class="fragment">🤖 Automatiques (SIFT, etc.)</li>
+<li>👤 Humaines (cliquées)</li>
+<li>🤖 Automatiques (SIFT, etc.)</li>
 </ul>
 <blockquote>
 <p>Les correspondances automatiques contiennent des erreurs.</p>
@@ -1364,16 +1393,16 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 <p><img data-src="content/image/warping_inliers.png" style="width:100.0%"></p>
 </div>
 <ul>
-<li class="fragment">Correspondances <span class="glyph">=</span> même point du monde</li>
+<li>Correspondances <span class="glyph">=</span> même point du monde</li>
 </ul>
 </section>
 <section id="ce-que-lhomographie-change" class="slide level2">
 <h2>Ce que l’homographie change</h2>
 <div class="green">
 <ul>
-<li class="fragment">Une seule transformation pour toute l’image</li>
-<li class="fragment">Une géométrie globale cohérente</li>
-<li class="fragment">Les droites restent droites</li>
+<li>Une seule transformation pour toute l’image</li>
+<li>Une géométrie globale cohérente</li>
+<li>Les droites restent droites</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1441,9 +1470,9 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 <div class="fragment red">
 <p>Pourquoi c’est plus dur ?</p>
 <ul>
-<li class="fragment">on invente des zones jamais vues,</li>
-<li class="fragment">les occlusions explosent,</li>
-<li class="fragment">les erreurs de correspondances s’amplifient.</li>
+<li>on invente des zones jamais vues,</li>
+<li>les occlusions explosent,</li>
+<li>les erreurs de correspondances s’amplifient.</li>
 </ul>
 </div>
 </section>
@@ -1452,9 +1481,9 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 <p>En 2D, une image ne contient pas explicitement :</p>
 <div class="orange">
 <ul>
-<li class="fragment">l’ordre en profondeur,</li>
-<li class="fragment">la visibilité,</li>
-<li class="fragment">ce qui est devant ou derrière.</li>
+<li>l’ordre en profondeur,</li>
+<li>la visibilité,</li>
+<li>ce qui est devant ou derrière.</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1467,9 +1496,9 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 </div>
 <div class="red">
 <ul>
-<li class="fragment">trous, déchirures (disocclusions),</li>
-<li class="fragment">duplications,</li>
-<li class="fragment">incohérences locales.</li>
+<li>trous, déchirures (disocclusions),</li>
+<li>duplications,</li>
+<li>incohérences locales.</li>
 </ul>
 </div>
 <div class="fragment green">
@@ -1480,9 +1509,9 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 <h2>Ce que la 2D sait faire (très bien)</h2>
 <div class="green">
 <ul>
-<li class="fragment">interpolation douce entre vues proches</li>
-<li class="fragment">petites variations de point de vue</li>
-<li class="fragment">morphing contrôlé (si correspondances propres)</li>
+<li>interpolation douce entre vues proches</li>
+<li>petites variations de point de vue</li>
+<li>morphing contrôlé (si correspondances propres)</li>
 </ul>
 </div>
 </section>
@@ -1490,10 +1519,10 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 <h2>Ce que la 2D ne peut pas résoudre proprement</h2>
 <div class="red">
 <ul>
-<li class="fragment">grandes variations de point de vue</li>
-<li class="fragment">fortes occlusions / disocclusions</li>
-<li class="fragment">objets fins / transparences / réflexions complexes</li>
-<li class="fragment">extrapolation stable</li>
+<li>grandes variations de point de vue</li>
+<li>fortes occlusions / disocclusions</li>
+<li>objets fins / transparences / réflexions complexes</li>
+<li>extrapolation stable</li>
 </ul>
 </div>
 </section>
@@ -1501,18 +1530,18 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 <h2>Message clé</h2>
 <p>Les homographies sont :</p>
 <ul>
-<li class="fragment">✔ <span class="green">Une première forme d’inversion structurée</span></li>
-<li class="fragment">✔ <span class="green">Un modèle minimal image <span class="glyph arrow" style="font-size:1.2em;"></span> image</span></li>
-<li class="fragment">✘ <span class="red">Insuffisant pour des scènes 3D générales</span></li>
+<li>✔ <span class="green">Une première forme d’inversion structurée</span></li>
+<li>✔ <span class="green">Un modèle minimal image <span class="glyph arrow" style="font-size:1.2em;"></span> image</span></li>
+<li>✘ <span class="red">Insuffisant pour des scènes 3D générales</span></li>
 </ul>
 <div class="fragment">
 <p>Si on veut une synthèse de vues <strong>cohérente géométriquement</strong>, il manque :</p>
 </div>
 <div class="blue">
 <ul>
-<li class="fragment">une notion de <strong>profondeur</strong></li>
-<li class="fragment">une notion de <strong>visibilité</strong> (z-buffer implicite)</li>
-<li class="fragment">une notion de <strong>caméra</strong> (pose / projection)</li>
+<li>une notion de <strong>profondeur</strong></li>
+<li>une notion de <strong>visibilité</strong> (z-buffer implicite)</li>
+<li>une notion de <strong>caméra</strong> (pose / projection)</li>
 </ul>
 </div>
 </section>
@@ -1538,10 +1567,10 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 <h2>À retenir (CM1)</h2>
 <div class="green">
 <ol type="1">
-<li class="fragment"><strong>Rendu inverse</strong> <span class="glyph">=</span> trouver une représentation compatible avec les images pour pouvoir <strong>re-synthétiser</strong>.</li>
-<li class="fragment">En 2D, la brique centrale <span class="glyph">=</span> <strong>correspondances 2D–2D</strong>.</li>
-<li class="fragment"><strong>Aligner avant de mélanger</strong> : warping <span class="glyph arrow" style="font-size:1.2em;"></span> fusion.</li>
-<li class="fragment">Les <strong>occlusions</strong> et la <strong>profondeur</strong> manquante imposent une limite structurelle.</li>
+<li><strong>Rendu inverse</strong> <span class="glyph">=</span> trouver une représentation compatible avec les images pour pouvoir <strong>re-synthétiser</strong>.</li>
+<li>En 2D, la brique centrale <span class="glyph">=</span> <strong>correspondances 2D–2D</strong>.</li>
+<li><strong>Aligner avant de mélanger</strong> : warping <span class="glyph arrow" style="font-size:1.2em;"></span> fusion.</li>
+<li>Les <strong>occlusions</strong> et la <strong>profondeur</strong> manquante imposent une limite structurelle.</li>
 </ol>
 </div>
 </section>
@@ -1550,10 +1579,10 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 <p>Vous allez :</p>
 <div class="blue">
 <ul>
-<li class="fragment">tester le blending naïf <span class="glyph arrow" style="font-size:1.2em;"></span> observer ghosting</li>
-<li class="fragment">créer des correspondances <span class="glyph arrow" style="font-size:1.2em;"></span> voir l’effet de leur qualité</li>
-<li class="fragment">faire du warping <span class="glyph arrow" style="font-size:1.2em;"></span> puis une interpolation guidée</li>
-<li class="fragment">tenter une extrapolation <span class="glyph arrow" style="font-size:1.2em;"></span> constater les limites</li>
+<li>tester le blending naïf <span class="glyph arrow" style="font-size:1.2em;"></span> observer ghosting</li>
+<li>créer des correspondances <span class="glyph arrow" style="font-size:1.2em;"></span> voir l’effet de leur qualité</li>
+<li>faire du warping <span class="glyph arrow" style="font-size:1.2em;"></span> puis une interpolation guidée</li>
+<li>tenter une extrapolation <span class="glyph arrow" style="font-size:1.2em;"></span> constater les limites</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1575,8 +1604,9 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 </div>
 <!-- /BLOC -->
 </section>
-<section id="cest-tout-pour-aujourdhui" class="slide level2 title particle" data-state="hide-menubar" data-background-interactive="true" data-background-iframe="_extensions/local/particle/particle.html">
+<section id="cest-tout-pour-aujourdhui" class="slide level2 title particle" data-state="hide-menubar">
 <h2>C’est tout pour aujourd’hui</h2>
+
 
 </section>
     </div>
@@ -1587,26 +1617,19 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="../../../../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="index_files/libs/revealjs/plugin/chrono/chrono.js"></script>
-  <script src="index_files/libs/revealjs/plugin/simplemenu/simplemenu.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-leaderline/reveal-leader-line.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-attribution/attribution.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-quiz/quiz.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
-  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="../../../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../../../site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -1614,29 +1637,25 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': false,
+'controlsAuto': true,
 'previewLinksAuto': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
-'chalkboard': {"buttons":true},
-'simplemenu': {"menubarclass":"menubar","menuclass":"menu","activeclass":"active","activeelement":"li","flat":true,"barhtml":{"header":"","footer":"<div class='menubar'><ul class='menu'></ul></div>"},"scale":0.4},
-'quiz': {"checkKey":"c","resetKey":"q","shuffleKey":"t","allowNumberKeys":true,"disableOnCheck":false,"shuffleOptions":true,"defaultCorrect":"","defaultIncorrect":"","includeScore":false,"disableReset":false},
-'pointer': {"key":"p","color":"#12ff00","pointerSize":16,"alwaysVisible":false,"pointsize":20},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: true,
+        controls: false,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: true,
+        controlsTutorial: false,
 
         // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'bottom-right',
+        controlsLayout: 'edges',
 
         // Visibility rule for backwards navigation arrows; "faded", "hidden"
         // or "visible"
@@ -1646,14 +1665,14 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: 'c/t',
+        slideNumber: false,
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
-        hash: false,
+        hash: true,
 
         // Start with 1 for the hash rather than 0
         hashOneBasedIndex: false,
@@ -1662,7 +1681,7 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
         respondToHashChanges: true,
 
         // Push each slide change to the browser history
-        history: false,
+        history: true,
 
         // Enable keyboard shortcuts for navigation
         keyboard: true,
@@ -1714,7 +1733,7 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
         showNotes: false,
 
         // Global override for autoplaying embedded media (null/true/false)
-        autoPlayMedia: true,
+        autoPlayMedia: null,
 
         // Global override for preloading lazy-loaded iframes (null/true/false)
         preloadIframes: null,
@@ -1736,7 +1755,7 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
         defaultTiming: null,
 
         // Enable slide navigation via mouse wheel
-        mouseWheel: true,
+        mouseWheel: false,
 
         // The display mode that will be used to show slides
         display: 'block',
@@ -1796,7 +1815,7 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, Chrono, Simplemenu, RevealLeaderline, RevealAttribution, RevealQuiz, RevealPointer, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -1805,73 +1824,6 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
         ]
       });
     </script>
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll("iframe[allow]").forEach((f) => {
-        const cleaned = f
-          .getAttribute("allow")
-          .split(";")
-          .map(s => s.trim())
-          .filter(s => s && s !== "autoplay");
-
-        f.setAttribute("allow", cleaned.join("; "));
-      });
-    });
-    </script>
-
-    <script type="text/javascript" id="code-annotation-fragments">
-      function hideAllTippy() {
-        document.querySelectorAll('.code-annotation-anchor').forEach(anchor => {
-          const tippyInstance = anchor._tippy;
-          if (tippyInstance) {
-            tippyInstance.hide();
-          }
-        });
-      }
-
-      Reveal.on('fragmentshown', (event) => {
-        hideAllTippy();
-
-        const fragment = event.fragment;
-        const classesToCheck = ['has-line-highlights', 'visible', 'current-fragment'];
-        if (classesToCheck.some(cls => fragment.classList.contains(cls))) {
-          const codeAnnotationAnchors = fragment.querySelectorAll('.code-annotation-anchor');
-          let matchCount = 0;
-          for (const anchor of codeAnnotationAnchors) {
-            const nextElement = anchor.nextElementSibling;
-            if (
-              nextElement &&
-              nextElement.classList.contains('code-annotation-target') &&
-              nextElement.classList.contains('highlight-line')
-            ) {
-              matchCount++;
-              if (matchCount > 1) break;
-            }
-          }
-          if (matchCount === 1) {
-            for (const anchor of codeAnnotationAnchors) {
-              const nextElement = anchor.nextElementSibling;
-              if (
-                nextElement &&
-                nextElement.classList.contains('code-annotation-target') &&
-                nextElement.classList.contains('highlight-line')
-              ) {
-                const tippyInstance = anchor._tippy;
-                if (tippyInstance) {
-                  tippyInstance.show();
-                  break;
-                }
-              }
-            }
-          }
-        }
-      });
-
-      Reveal.on('fragmenthidden', () => {
-        hideAllTippy();
-      });
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
@@ -2001,160 +1953,6 @@ I_1 \xrightarrow[]{W} I_{1\rightarrow 2}
             }
           });
         }
-            let selectedAnnoteEl;
-            const selectorForAnnotation = ( cell, annotation) => {
-              let cellAttr = 'data-code-cell="' + cell + '"';
-              let lineAttr = 'data-code-annotation="' +  annotation + '"';
-              const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-              return selector;
-            }
-            const selectCodeLines = (annoteEl) => {
-              const doc = window.document;
-              const targetCell = annoteEl.getAttribute("data-target-cell");
-              const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-              const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-              const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-              const lineIds = lines.map((line) => {
-                return targetCell + "-" + line;
-              })
-              let top = null;
-              let height = null;
-              let parent = null;
-              if (lineIds.length > 0) {
-                  //compute the position of the single el (top and bottom and make a div)
-                  const el = window.document.getElementById(lineIds[0]);
-                  top = el.offsetTop;
-                  height = el.offsetHeight;
-                  parent = el.parentElement.parentElement;
-                if (lineIds.length > 1) {
-                  const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-                  const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-                  height = bottom - top;
-                }
-                if (top !== null && height !== null && parent !== null) {
-                  // cook up a div (if necessary) and position it 
-                  let div = window.document.getElementById("code-annotation-line-highlight");
-                  if (div === null) {
-                    div = window.document.createElement("div");
-                    div.setAttribute("id", "code-annotation-line-highlight");
-                    div.style.position = 'absolute';
-                    parent.appendChild(div);
-                  }
-                  div.style.top = top - 2 + "px";
-                  div.style.height = height + 4 + "px";
-                  div.style.left = 0;
-                  let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-                  if (gutterDiv === null) {
-                    gutterDiv = window.document.createElement("div");
-                    gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                    gutterDiv.style.position = 'absolute';
-                    const codeCell = window.document.getElementById(targetCell);
-                    const gutter = codeCell.querySelector('.code-annotation-gutter');
-                    gutter.appendChild(gutterDiv);
-                  }
-                  gutterDiv.style.top = top - 2 + "px";
-                  gutterDiv.style.height = height + 4 + "px";
-                }
-                selectedAnnoteEl = annoteEl;
-              }
-            };
-            const unselectCodeLines = () => {
-              const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-              elementsIds.forEach((elId) => {
-                const div = window.document.getElementById(elId);
-                if (div) {
-                  div.remove();
-                }
-              });
-              selectedAnnoteEl = undefined;
-            };
-              // Handle positioning of the toggle
-          window.addEventListener(
-            "resize",
-            throttle(() => {
-              elRect = undefined;
-              if (selectedAnnoteEl) {
-                selectCodeLines(selectedAnnoteEl);
-              }
-            }, 10)
-          );
-          function throttle(fn, ms) {
-          let throttle = false;
-          let timer;
-            return (...args) => {
-              if(!throttle) { // first call gets through
-                  fn.apply(this, args);
-                  throttle = true;
-              } else { // all the others get throttled
-                  if(timer) clearTimeout(timer); // cancel #2
-                  timer = setTimeout(() => {
-                    fn.apply(this, args);
-                    timer = throttle = false;
-                  }, ms);
-              }
-            };
-          }
-            const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
-            for (let i=0; i<annoteTargets.length; i++) {
-              const annoteTarget = annoteTargets[i];
-              const targetCell = annoteTarget.getAttribute("data-target-cell");
-              const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
-              const contentFn = () => {
-                const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-                if (content) {
-                  const tipContent = content.cloneNode(true);
-                  tipContent.classList.add("code-annotation-tip-content");
-                  return tipContent.outerHTML;
-                }
-              }
-              const config = {
-                allowHTML: true,
-                content: contentFn,
-                onShow: (instance) => {
-                  selectCodeLines(instance.reference);
-                  instance.reference.classList.add('code-annotation-active');
-                  window.tippy.hideAll();
-                },
-                onHide: (instance) => {
-                  unselectCodeLines();
-                  instance.reference.classList.remove('code-annotation-active');
-                },
-                maxWidth: 300,
-                delay: [50, 0],
-                duration: [200, 0],
-                offset: [5, 10],
-                arrow: true,
-                trigger: 'click',
-                appendTo: function(el) {
-                  return el.parentElement.parentElement.parentElement;
-                },
-                interactive: true,
-                interactiveBorder: 10,
-                theme: 'light-border',
-                placement: 'right',
-                positionFixed: true,
-                popperOptions: {
-                  modifiers: [
-                  {
-                    name: 'flip',
-                    options: {
-                      flipVariations: false, // true by default
-                      allowedAutoPlacements: ['right'],
-                      fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
-                    },
-                  },
-                  {
-                    name: 'preventOverflow',
-                    options: {
-                      mainAxis: false,
-                      altAxis: false
-                    }
-                  }
-                  ]        
-                }      
-              };
-              window.tippy(annoteTarget, config); 
-            }
         const findCites = (el) => {
           const parentEl = el.parentElement;
           if (parentEl) {
