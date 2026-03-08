@@ -34252,7 +34252,7 @@ void main() {
   }
   async function load_glb(url) {
     const dracoLoader = new DRACOLoader();
-    dracoLoader.setDecoderPath("/_extensions/local/engine/draco/");
+    dracoLoader.setDecoderPath("draco/");
     dracoLoader.preload();
     const loader = new GLTFLoader();
     loader.setDRACOLoader(dracoLoader);

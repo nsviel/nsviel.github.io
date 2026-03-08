@@ -135,7 +135,7 @@ async function load_glb(url) {
     // draco_decoder.js
     // draco_decoder.wasm
     // draco_wasm_wrapper.js
-    dracoLoader.setDecoderPath("/_extensions/local/engine/draco/");
+    dracoLoader.setDecoderPath("draco/");
     dracoLoader.preload();
 
     const loader = new GLTFLoader();
