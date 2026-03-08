@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<link href="../../../../img/favicon.svg" rel="icon" type="image/svg+xml">
-<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
-<link href="../../../../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet"><meta charset="utf-8">
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
+<script src="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
+<link href="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.css" rel="stylesheet">
+<script src="index_files/libs/quarto-contrib/roughnotation-flourish-bridge-1.0.0/flourish-bridge.js"></script>
+<link href="index_files/libs/quarto-contrib/quarto-gradio-1.0.0/quarto-gradio.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="nsv">
   <meta name="dcterms.date" content="2026-03-08">
-  <title>Teaching – CM4 - Big Data</title>
+  <title>CM4 - Big Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -32,79 +34,17 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
-  <link href="../../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-435a69ffe18aceff0a6543168f182b7c.css">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/chrono/chrono.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/simplemenu/simplemenu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-attribution/attribution.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-quiz/quiz.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet"><style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -190,11 +130,61 @@
       margin-left: auto;
       margin-right: 0; 
     }
-  </style>
-  <script type="module" src="../../../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
-  <link href="../../../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+  </style><script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script>
+  <!-- quarto-confetti-injected -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script>
+  (function () {
+    if (window.__quarto_confetti_init__) return;
+    window.__quarto_confetti_init__ = true;
+
+    // Debug (décommente si besoin)
+    // console.log("[confetti] init ok");
+
+    window.confettiBurst = function (opts) {
+      if (typeof window.confetti !== "function") return;
+
+      // Ajustés pour limiter le fade perceptible
+      var defaults = {
+        particleCount: 200,
+        spread: 100,
+        origin: { y: 0.7 }
+
+      };
+
+      try {
+        window.confetti(Object.assign({}, defaults, (opts || {})));
+      } catch (e) {}
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!window.Reveal) return;
+
+      function parseMaybeJSON(s) {
+        if (!s) return {};
+        var t = String(s).trim();
+        if (t === "") return {};
+        try { return JSON.parse(t); } catch (e) { return {}; }
+      }
+
+      Reveal.on("fragmentshown", function (event) {
+        var frag = event && event.fragment;
+        if (!frag) return;
+
+        // Option 3: class ".confetti"
+        if (!frag.classList || !frag.classList.contains("confetti")) return;
+
+        // Optional overrides
+        var optsText =
+          (frag.getAttribute && (frag.getAttribute("data-confetti") || frag.getAttribute("confetti"))) || "";
+
+        window.confettiBurst(parseMaybeJSON(optsText));
+      });
+    });
+  })();
+  </script>
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
@@ -215,9 +205,9 @@
 <p>Jusqu’ici, on a appris à :</p>
 <div class="blue">
 <ul>
-<li>poser une question claire</li>
-<li>construire un pipeline cohérent</li>
-<li>nettoyer et explorer de manière défendable</li>
+<li class="fragment">poser une question claire</li>
+<li class="fragment">construire un pipeline cohérent</li>
+<li class="fragment">nettoyer et explorer de manière défendable</li>
 </ul>
 </div>
 <div class="fragment">
@@ -245,9 +235,9 @@
 <p>Trois exigences :</p>
 <div class="blue">
 <ul>
-<li><strong>Transmissible</strong> : quelqu’un d’autre peut reprendre</li>
-<li><strong>Robuste</strong> : la conclusion résiste au changement</li>
-<li><strong>Utilisable</strong> : le message passe hors de l’équipe data</li>
+<li class="fragment"><strong>Transmissible</strong> : quelqu’un d’autre peut reprendre</li>
+<li class="fragment"><strong>Robuste</strong> : la conclusion résiste au changement</li>
+<li class="fragment"><strong>Utilisable</strong> : le message passe hors de l’équipe data</li>
 </ul>
 </div>
 <p><br></p>
@@ -265,10 +255,10 @@
 <h2>Programme du jour</h2>
 <div class="r-fit-text blue">
 <ul>
-<li>petit retour sur le projet 1</li>
-<li>que se passe t-il en contexte pro ?</li>
-<li>petite démo projet 2</li>
-<li>l’intérêt de tout cela aujourd’hui</li>
+<li class="fragment">petit retour sur le projet 1</li>
+<li class="fragment">que se passe t-il en contexte pro ?</li>
+<li class="fragment">petite démo projet 2</li>
+<li class="fragment">l’intérêt de tout cela aujourd’hui</li>
 </ul>
 </div>
 <!-- /BLOC -->
@@ -285,11 +275,11 @@
 <p><br></p>
 <div class="green">
 <ul>
-<li>Plein de styles différents</li>
-<li>De l’humour bien dosé</li>
-<li>Des angles d’analyses que je n’avais pas imaginés</li>
-<li>Personne en dessous de la moyenne</li>
-<li>Du LaTeX assez souvent</li>
+<li class="fragment">Plein de styles différents</li>
+<li class="fragment">De l’humour bien dosé</li>
+<li class="fragment">Des angles d’analyses que je n’avais pas imaginés</li>
+<li class="fragment">Personne en dessous de la moyenne</li>
+<li class="fragment">Du LaTeX assez souvent</li>
 </ul>
 </div>
 </section>
@@ -298,12 +288,12 @@
 <p><br></p>
 <div class="redlight">
 <ul>
-<li>abstract / préambule qui synthétise l’analyse</li>
-<li>un sommaire (table of contents) pour améliorer la structure et la lisibilité du document.</li>
-<li>ne pas faire de pavé / raconter chaque truc comme “j’ai ouvert la base de données csv”</li>
-<li>information utile / pertinente noyée dans le flow</li>
-<li>La figure apparaît <strong>avant</strong> son interprétation</li>
-<li>De très bonne idées (e.g.&nbsp;normaliser la fréquence des témoignages en fonction du nombre d’habitants) mais pas appliqués</li>
+<li class="fragment">abstract / préambule qui synthétise l’analyse</li>
+<li class="fragment">un sommaire (table of contents) pour améliorer la structure et la lisibilité du document.</li>
+<li class="fragment">ne pas faire de pavé / raconter chaque truc comme “j’ai ouvert la base de données csv”</li>
+<li class="fragment">information utile / pertinente noyée dans le flow</li>
+<li class="fragment">La figure apparaît <strong>avant</strong> son interprétation</li>
+<li class="fragment">De très bonne idées (e.g.&nbsp;normaliser la fréquence des témoignages en fonction du nombre d’habitants) mais pas appliqués</li>
 </ul>
 </div>
 </section>
@@ -316,7 +306,7 @@
 <p>Ce que c’est, à quoi ça sert</p>
 </div>
 </section>
-<section id="section-1" class="slide level2 image" data-path="content/image/abstrait.png">
+<section id="section-1" class="slide level2 image" data-background-image="content/image/abstrait.png">
 <h2></h2>
 <div class="titlebox topright fragment red">
 <p>Ah zut, non là c’est de l’abstrait</p>
@@ -351,12 +341,12 @@
 <h2>Structure idéale d’un rapport</h2>
 <div class="blue Large">
 <ol type="1">
-<li><p>Abstract</p></li>
-<li><p>Introduction / question</p></li>
-<li><p>Données</p></li>
-<li><p>Analyse</p></li>
-<li><p>Résultats</p></li>
-<li><p>Conclusion</p></li>
+<li class="fragment"><p>Abstract</p></li>
+<li class="fragment"><p>Introduction / question</p></li>
+<li class="fragment"><p>Données</p></li>
+<li class="fragment"><p>Analyse</p></li>
+<li class="fragment"><p>Résultats</p></li>
+<li class="fragment"><p>Conclusion</p></li>
 </ol>
 </div>
 </section>
@@ -372,13 +362,13 @@
 <p>(<code>W</code>hat <code>Y</code>ou <code>S</code>ee <code>I</code>s <code>W</code>hat <code>Y</code>ou <code>G</code>et)</p>
 </div>
 </section>
-<section id="section-2" class="slide level2 image" data-path="content/image/wysiwyg.png">
+<section id="section-2" class="slide level2 image" data-background-image="content/image/wysiwyg.png">
 <h2></h2>
 <div class="titlebox topright red">
 <p>WYSIWYG</p>
 </div>
 </section>
-<section id="section-3" class="slide level2 image" data-path="content/image/latex.png">
+<section id="section-3" class="slide level2 image" data-background-image="content/image/latex.png">
 <h2></h2>
 <div class="titlebox topright red">
 <p>Les méthodes codées</p>
@@ -388,9 +378,9 @@
 <h2>ET …</h2>
 <div class="blue">
 <ul>
-<li>Si vous avez aimé taper en Markdown</li>
-<li>Si vous aimez la simplicité et la puissance</li>
-<li>Si vous voulez pouvoir combiner LaTeX, Python et les techno web</li>
+<li class="fragment">Si vous avez aimé taper en Markdown</li>
+<li class="fragment">Si vous aimez la simplicité et la puissance</li>
+<li class="fragment">Si vous voulez pouvoir combiner LaTeX, Python et les techno web</li>
 </ul>
 </div>
 <div class="fragment confetti">
@@ -402,7 +392,7 @@
 </div>
 </div>
 </section>
-<section id="quarto" class="slide level2 image" data-path="content/image/quarto_slide.svg">
+<section id="quarto" class="slide level2 image" data-background-image="content/image/quarto_slide.svg">
 <h2>Quarto</h2>
 </section>
 <section id="exemple-de-texte-difficile-à-lire" class="slide level2">
@@ -441,42 +431,42 @@
 <p>au full bullet point</p>
 </div>
 <ul>
-<li>Le Big Data désigne l’ensemble des technologies, méthodes et infrastructures permettant de collecter, stocker et analyser des volumes très importants de données.</li>
-<li>Avec la généralisation d’Internet, des smartphones, des capteurs et des plateformes numériques, la quantité de données produites chaque jour a explosé. Ces données proviennent de sources très variées :
+<li class="fragment">Le Big Data désigne l’ensemble des technologies, méthodes et infrastructures permettant de collecter, stocker et analyser des volumes très importants de données.</li>
+<li class="fragment">Avec la généralisation d’Internet, des smartphones, des capteurs et des plateformes numériques, la quantité de données produites chaque jour a explosé. Ces données proviennent de sources très variées :
 <ul>
-<li>réseaux sociaux,</li>
-<li>transactions en ligne,</li>
-<li>systèmes industriels
+<li class="fragment">réseaux sociaux,</li>
+<li class="fragment">transactions en ligne,</li>
+<li class="fragment">systèmes industriels
 <ul>
-<li>images</li>
-<li>vidéos.</li>
+<li class="fragment">images</li>
+<li class="fragment">vidéos.</li>
 </ul></li>
 </ul></li>
-<li><span class="red">et au format scolaire !!</span></li>
+<li class="fragment"><span class="red">et au format scolaire !!</span></li>
 </ul>
 </section>
 <section id="trois-règles-pour-une-bonne-analyse" class="slide level2">
 <h2>Trois règles pour une bonne analyse</h2>
 <ol type="1">
-<li><p><strong>Une question claire</strong></p>
+<li class="fragment"><p><strong>Une question claire</strong></p>
 <div class="blue">
 <ul>
-<li>Que cherche-t-on à comprendre ?</li>
-<li>Quelle hypothèse veut-on tester ?</li>
+<li class="fragment">Que cherche-t-on à comprendre ?</li>
+<li class="fragment">Quelle hypothèse veut-on tester ?</li>
 </ul>
 </div></li>
-<li><p><strong>Une figure = une idée</strong></p>
+<li class="fragment"><p><strong>Une figure = une idée</strong></p>
 <div class="blue">
 <ul>
-<li>Chaque graphique doit répondre à une question.</li>
-<li>Graphique lisible, axes clairs, titre informatif</li>
+<li class="fragment">Chaque graphique doit répondre à une question.</li>
+<li class="fragment">Graphique lisible, axes clairs, titre informatif</li>
 </ul>
 </div></li>
-<li><p><strong>Interpréter et prendre du recul</strong></p>
+<li class="fragment"><p><strong>Interpréter et prendre du recul</strong></p>
 <div class="blue">
 <ul>
-<li>Une analyse ne s’arrête pas au graphique.</li>
-<li>Que signifie ce résultat ? Quelles sont les limites ?</li>
+<li class="fragment">Une analyse ne s’arrête pas au graphique.</li>
+<li class="fragment">Que signifie ce résultat ? Quelles sont les limites ?</li>
 </ul>
 </div></li>
 </ol>
@@ -526,9 +516,9 @@
 </div>
 <div class="red">
 <ul>
-<li>les données ont changé</li>
-<li>la question a évolué</li>
-<li>vous n’êtes plus là</li>
+<li class="fragment">les données ont changé</li>
+<li class="fragment">la question a évolué</li>
+<li class="fragment">vous n’êtes plus là</li>
 </ul>
 </div>
 <p><br></p>
@@ -552,9 +542,9 @@
 <p>Une analyse professionnelle doit :</p>
 <div class="blue">
 <ul>
-<li>survivre à son auteur</li>
-<li>être comprise par d’autres métiers</li>
-<li>être réutilisable dans un autre contexte</li>
+<li class="fragment">survivre à son auteur</li>
+<li class="fragment">être comprise par d’autres métiers</li>
+<li class="fragment">être réutilisable dans un autre contexte</li>
 </ul>
 </div>
 <p><br></p>
@@ -569,76 +559,7 @@
 <section id="analyse-et-décision" class="slide level2">
 <h2>Analyse et décision</h2>
 <p><br><br><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" width="100%"><pre class="sourceCode numberSource d2 number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>direction: right</span>
-<span id="cb2-2"><a></a></span>
-<span id="cb2-3"><a></a>style: {</span>
-<span id="cb2-4"><a></a>  fill: transparent</span>
-<span id="cb2-5"><a></a>}</span>
-<span id="cb2-6"><a></a></span>
-<span id="cb2-7"><a></a>bloc_1: {</span>
-<span id="cb2-8"><a></a>  shape: rectangle</span>
-<span id="cb2-9"><a></a>  label: "Données\n(incomplètes)"</span>
-<span id="cb2-10"><a></a>  width: 175</span>
-<span id="cb2-11"><a></a>  height: 100</span>
-<span id="cb2-12"><a></a>  style: {</span>
-<span id="cb2-13"><a></a>    fill: "#d5d5d5"</span>
-<span id="cb2-14"><a></a>    stroke: "#fff"</span>
-<span id="cb2-15"><a></a>  }</span>
-<span id="cb2-16"><a></a>}</span>
-<span id="cb2-17"><a></a>bloc_2: {</span>
-<span id="cb2-18"><a></a>  shape: rectangle</span>
-<span id="cb2-19"><a></a>  label: "Analyse\n(sous hypothèses)"</span>
-<span id="cb2-20"><a></a>  width: 175</span>
-<span id="cb2-21"><a></a>  height: 100</span>
-<span id="cb2-22"><a></a>  style: {</span>
-<span id="cb2-23"><a></a>    fill: "#d5d5d5"</span>
-<span id="cb2-24"><a></a>    stroke: "#fff"</span>
-<span id="cb2-25"><a></a>  }</span>
-<span id="cb2-26"><a></a>}</span>
-<span id="cb2-27"><a></a>bloc_3: {</span>
-<span id="cb2-28"><a></a>  shape: rectangle</span>
-<span id="cb2-29"><a></a>  label: "Recommandations\nconditionnelles"</span>
-<span id="cb2-30"><a></a>  width: 175</span>
-<span id="cb2-31"><a></a>  height: 100</span>
-<span id="cb2-32"><a></a>  style: {</span>
-<span id="cb2-33"><a></a>    fill: "#d5d5d5"</span>
-<span id="cb2-34"><a></a>    stroke: "#fff"</span>
-<span id="cb2-35"><a></a>  }</span>
-<span id="cb2-36"><a></a>}</span>
-<span id="cb2-37"><a></a>bloc_4: {</span>
-<span id="cb2-38"><a></a>  shape: rectangle</span>
-<span id="cb2-39"><a></a>  label: "Décisions humaines"</span>
-<span id="cb2-40"><a></a>  width: 175</span>
-<span id="cb2-41"><a></a>  height: 100</span>
-<span id="cb2-42"><a></a>  style: {</span>
-<span id="cb2-43"><a></a>    fill: "#d5d5d5"</span>
-<span id="cb2-44"><a></a>    stroke: "#fff"</span>
-<span id="cb2-45"><a></a>  }</span>
-<span id="cb2-46"><a></a>}</span>
-<span id="cb2-47"><a></a></span>
-<span id="cb2-48"><a></a></span>
-<span id="cb2-49"><a></a>bloc_1 -&gt; bloc_2: {</span>
-<span id="cb2-50"><a></a>  style: {</span>
-<span id="cb2-51"><a></a>    stroke: "#fff"</span>
-<span id="cb2-52"><a></a>    font-color: "#fff"</span>
-<span id="cb2-53"><a></a>    stroke-width: 2</span>
-<span id="cb2-54"><a></a>  }</span>
-<span id="cb2-55"><a></a>}</span>
-<span id="cb2-56"><a></a></span>
-<span id="cb2-57"><a></a>bloc_2 -&gt; bloc_3: {</span>
-<span id="cb2-58"><a></a>  style: {</span>
-<span id="cb2-59"><a></a>    stroke: "#fff"</span>
-<span id="cb2-60"><a></a>    font-color: "#fff"</span>
-<span id="cb2-61"><a></a>    stroke-width: 2</span>
-<span id="cb2-62"><a></a>  }</span>
-<span id="cb2-63"><a></a>}</span>
-<span id="cb2-64"><a></a>bloc_3 -&gt; bloc_4: {</span>
-<span id="cb2-65"><a></a>  style: {</span>
-<span id="cb2-66"><a></a>    stroke: "#fff"</span>
-<span id="cb2-67"><a></a>    font-color: "#fff"</span>
-<span id="cb2-68"><a></a>    stroke-width: 2</span>
-<span id="cb2-69"><a></a>  }</span>
-<span id="cb2-70"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<img data-src="index_files/mediabag/e52cc17ca68645a19b27c31fd080952978a93210.svg" style="width:100.0%">
 <p><br><br><br></p>
 <div class="fragment">
 <p>👉 L’analyse <strong>n’automatise pas</strong> la décision.</p>
@@ -649,9 +570,9 @@
 <p><br></p>
 <div class="red">
 <ul>
-<li>“On a un chiffre, donc on décide.”</li>
-<li>“Le modèle a dit X.”</li>
-<li>“Le graphique est clair.”</li>
+<li class="fragment">“On a un chiffre, donc on décide.”</li>
+<li class="fragment">“Le modèle a dit X.”</li>
+<li class="fragment">“Le graphique est clair.”</li>
 </ul>
 </div>
 <p><br></p>
@@ -665,9 +586,9 @@
 <p>Trois éléments oubliés :</p>
 <div class="blue">
 <ul>
-<li><strong>Contexte</strong> : pourquoi cette question maintenant ?</li>
-<li><strong>Hypothèses</strong> : ce qu’on suppose vrai</li>
-<li><strong>Limites</strong> : où ça peut casser</li>
+<li class="fragment"><strong>Contexte</strong> : pourquoi cette question maintenant ?</li>
+<li class="fragment"><strong>Hypothèses</strong> : ce qu’on suppose vrai</li>
+<li class="fragment"><strong>Limites</strong> : où ça peut casser</li>
 </ul>
 </div>
 <div class="fragment">
@@ -675,9 +596,9 @@
 </div>
 <div class="red">
 <ul>
-<li>trop de graphiques</li>
-<li>trop de chiffres</li>
-<li>trop de jargon</li>
+<li class="fragment">trop de graphiques</li>
+<li class="fragment">trop de chiffres</li>
+<li class="fragment">trop de jargon</li>
 </ul>
 </div>
 <div class="fragment">
@@ -690,10 +611,10 @@
 <p>Un autre doit pouvoir répondre à :</p>
 <div class="green">
 <ul>
-<li>Quelle était la question exacte ?</li>
-<li>Quelles données (version, période) ?</li>
-<li>Quelles règles clés / paramètres ?</li>
-<li>Quelle conclusion + dans quelles limites ?</li>
+<li class="fragment">Quelle était la question exacte ?</li>
+<li class="fragment">Quelles données (version, période) ?</li>
+<li class="fragment">Quelles règles clés / paramètres ?</li>
+<li class="fragment">Quelle conclusion + dans quelles limites ?</li>
 </ul>
 </div>
 </section>
@@ -702,8 +623,8 @@
 <p>La valeur d’une analyse ne dépend pas de :</p>
 <div class="red">
 <ul>
-<li>la sophistication du modèle</li>
-<li>le volume de code</li>
+<li class="fragment">la sophistication du modèle</li>
+<li class="fragment">le volume de code</li>
 </ul>
 </div>
 <div class="fragment green">
@@ -715,10 +636,10 @@
 <p>Une synthèse tient souvent sur une slide décision :</p>
 <div class="blue">
 <ul>
-<li>1 phrase de conclusion</li>
-<li>2–3 faits clés</li>
-<li>1 encadré “hypothèses &amp; limites”</li>
-<li>1 recommandation conditionnelle</li>
+<li class="fragment">1 phrase de conclusion</li>
+<li class="fragment">2–3 faits clés</li>
+<li class="fragment">1 encadré “hypothèses &amp; limites”</li>
+<li class="fragment">1 recommandation conditionnelle</li>
 </ul>
 </div>
 <div class="fragment">
@@ -733,9 +654,9 @@
 <div class="blue fragment">
 <p><strong>Faits :</strong></p>
 <ul>
-<li>hausse régulière sur 4 trimestres</li>
-<li>tendance stable sur plusieurs scénarios</li>
-<li>pas de rupture détectée dans les données</li>
+<li class="fragment">hausse régulière sur 4 trimestres</li>
+<li class="fragment">tendance stable sur plusieurs scénarios</li>
+<li class="fragment">pas de rupture détectée dans les données</li>
 </ul>
 </div>
 <div class="fragment red">
@@ -745,13 +666,13 @@
 <section id="une-analyse-suit-généralement" class="slide level2">
 <h2>Une analyse suit généralement</h2>
 <ul>
-<li>Question</li>
-<li>Données</li>
-<li>Nettoyage</li>
-<li>Exploration</li>
-<li>Analyse</li>
-<li>Interprétation</li>
-<li>Communication</li>
+<li class="fragment">Question</li>
+<li class="fragment">Données</li>
+<li class="fragment">Nettoyage</li>
+<li class="fragment">Exploration</li>
+<li class="fragment">Analyse</li>
+<li class="fragment">Interprétation</li>
+<li class="fragment">Communication</li>
 </ul>
 <div class="fragment green">
 <p>Une analyse de données est une <span class="green">enquête</span>.</p>
@@ -763,9 +684,9 @@
 <p>Une bonne question est :</p>
 <div class="blue">
 <ul>
-<li>claire</li>
-<li>mesurable</li>
-<li>testable</li>
+<li class="fragment">claire</li>
+<li class="fragment">mesurable</li>
+<li class="fragment">testable</li>
 </ul>
 </div>
 <p><br></p>
@@ -785,9 +706,9 @@
 <p>Avec le temps :</p>
 <div class="blue">
 <ul>
-<li>les données évoluent</li>
-<li>les règles métier changent</li>
-<li>les indicateurs dérivent</li>
+<li class="fragment">les données évoluent</li>
+<li class="fragment">les règles métier changent</li>
+<li class="fragment">les indicateurs dérivent</li>
 </ul>
 </div>
 <p><br></p>
@@ -823,9 +744,9 @@
 <p><br></p>
 <div class="green">
 <ul>
-<li>documenter les hypothèses</li>
-<li>isoler les paramètres</li>
-<li>comparer les scénarios</li>
+<li class="fragment">documenter les hypothèses</li>
+<li class="fragment">isoler les paramètres</li>
+<li class="fragment">comparer les scénarios</li>
 </ul>
 </div>
 <p><br></p>
@@ -839,9 +760,9 @@
 <p>Une bonne analyse :</p>
 <div class="green">
 <ul>
-<li>éclaire une décision</li>
-<li>explicite ses limites</li>
-<li>reste compréhensible par d’autres</li>
+<li class="fragment">éclaire une décision</li>
+<li class="fragment">explicite ses limites</li>
+<li class="fragment">reste compréhensible par d’autres</li>
 </ul>
 </div>
 <p><br></p>
@@ -901,10 +822,10 @@
 </div>
 <div class="yellow">
 <ul>
-<li>titre, plateforme, genre</li>
-<li>année de publication</li>
-<li>ventes locales et globales</li>
-<li>note, etc</li>
+<li class="fragment">titre, plateforme, genre</li>
+<li class="fragment">année de publication</li>
+<li class="fragment">ventes locales et globales</li>
+<li class="fragment">note, etc</li>
 </ul>
 </div>
 </div><div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -955,9 +876,9 @@
 <p>Le <code>coefficient de corrélation</code> est une mesure statistique qui indique <code>la force et le sens du lien entre deux variables</code>.</p>
 <div class="blue">
 <ul>
-<li><span class="math inline">\(=0\)</span> <span class="glyph arrow" style="font-size:1.2em;"></span> aucune corrélations</li>
-<li><span class="math inline">\(&gt;0\)</span> <span class="glyph arrow" style="font-size:1.2em;"></span> corrélation positive (les deux variables évoluent dans le même sens)</li>
-<li><span class="math inline">\(&lt;0\)</span> <span class="glyph arrow" style="font-size:1.2em;"></span> corrélation négative (les variables évoluent en sens opposé)</li>
+<li class="fragment"><span class="math inline">\(=0\)</span> <span class="glyph arrow" style="font-size:1.2em;"></span> aucune corrélations</li>
+<li class="fragment"><span class="math inline">\(&gt;0\)</span> <span class="glyph arrow" style="font-size:1.2em;"></span> corrélation positive (les deux variables évoluent dans le même sens)</li>
+<li class="fragment"><span class="math inline">\(&lt;0\)</span> <span class="glyph arrow" style="font-size:1.2em;"></span> corrélation négative (les variables évoluent en sens opposé)</li>
 </ul>
 </div>
 <div class="fragment">
@@ -970,8 +891,8 @@ r = -0.68
 <p>Cela indique une <strong>corrélation négative modérée à forte</strong> :</p>
 <div class="green">
 <ul>
-<li>lorsque les ventes de jeux <strong>augmentent</strong>,</li>
-<li>le taux d’homicide tend à <strong>diminuer</strong>.</li>
+<li class="fragment">lorsque les ventes de jeux <strong>augmentent</strong>,</li>
+<li class="fragment">le taux d’homicide tend à <strong>diminuer</strong>.</li>
 </ul>
 </div>
 </div>
@@ -982,12 +903,12 @@ r = -0.68
 <p>Plusieurs <strong><span class="red">limites importantes</span></strong> doivent être prises en compte dans cette analyse :</p>
 <div class="blue">
 <ul>
-<li>les datasets de jeux vidéo ne sont pas exhaustifs</li>
-<li>les ventes mondiales ne correspondent pas forcément aux ventes en France</li>
-<li>il n’y a aucune indication du niveau de violence des jeux</li>
-<li>la corrélation ne signifie pas causalité</li>
-<li>d’autres facteurs sociaux, économiques ou politiques peuvent influencer le taux d’homicide</li>
-<li>les deux variables évoluent avec le temps, ce qui peut produire une corrélation artificielle</li>
+<li class="fragment">les datasets de jeux vidéo ne sont pas exhaustifs</li>
+<li class="fragment">les ventes mondiales ne correspondent pas forcément aux ventes en France</li>
+<li class="fragment">il n’y a aucune indication du niveau de violence des jeux</li>
+<li class="fragment">la corrélation ne signifie pas causalité</li>
+<li class="fragment">d’autres facteurs sociaux, économiques ou politiques peuvent influencer le taux d’homicide</li>
+<li class="fragment">les deux variables évoluent avec le temps, ce qui peut produire une corrélation artificielle</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1002,9 +923,9 @@ r = -0.68
 <p>La position la plus courante aujourd’hui est :</p>
 <div class="green">
 <ul>
-<li>les jeux vidéo peuvent améliorer l’humeur</li>
-<li>certaines expériences montrent de légers effets sur l’agressivité</li>
-<li>mais il n’existe pas de preuve solide d’un lien avec la violence réelle ou la criminalité</li>
+<li class="fragment">les jeux vidéo peuvent améliorer l’humeur</li>
+<li class="fragment">certaines expériences montrent de légers effets sur l’agressivité</li>
+<li class="fragment">mais il n’existe pas de preuve solide d’un lien avec la violence réelle ou la criminalité</li>
 </ul>
 </div>
 <p><br></p>
@@ -1052,9 +973,9 @@ r = -0.68
 </div>
 <p><br></p>
 <ul>
-<li>Elle peut halluciner,</li>
-<li>Etre entrainée sur des données fausses ou biaisées</li>
-<li>Elle ne sait pas où elle va</li>
+<li class="fragment">Elle peut halluciner,</li>
+<li class="fragment">Etre entrainée sur des données fausses ou biaisées</li>
+<li class="fragment">Elle ne sait pas où elle va</li>
 </ul>
 <p><br></p>
 <div class="fragment">
@@ -1078,10 +999,10 @@ r = -0.68
 </div>
 <div class="blue">
 <ul>
-<li>poser la bonne question</li>
-<li>vérifier les sources</li>
-<li>interpréter les résultats</li>
-<li>décider quoi en faire</li>
+<li class="fragment">poser la bonne question</li>
+<li class="fragment">vérifier les sources</li>
+<li class="fragment">interpréter les résultats</li>
+<li class="fragment">décider quoi en faire</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1098,9 +1019,9 @@ r = -0.68
 </div>
 <div class="blue">
 <ul>
-<li>l’information est abondante</li>
-<li>les chiffres circulent partout</li>
-<li>les graphiques influencent l’opinion</li>
+<li class="fragment">l’information est abondante</li>
+<li class="fragment">les chiffres circulent partout</li>
+<li class="fragment">les graphiques influencent l’opinion</li>
 </ul>
 </div>
 <p><br></p>
@@ -1122,9 +1043,9 @@ r = -0.68
 </div>
 <div class="blue">
 <ul>
-<li>des chiffres isolés</li>
-<li>des corrélations trompeuses</li>
-<li>des graphiques hors contexte</li>
+<li class="fragment">des chiffres isolés</li>
+<li class="fragment">des corrélations trompeuses</li>
+<li class="fragment">des graphiques hors contexte</li>
 </ul>
 </div>
 <p><br></p>
@@ -1143,8 +1064,8 @@ r = -0.68
 <p>Dans une démocratie :</p>
 <div class="blue">
 <ul>
-<li>les citoyens prennent des décisions</li>
-<li>ces décisions reposent sur l’information</li>
+<li class="fragment">les citoyens prennent des décisions</li>
+<li class="fragment">ces décisions reposent sur l’information</li>
 </ul>
 </div>
 <p><br></p>
@@ -1163,9 +1084,9 @@ r = -0.68
 <p>Utiliser des sources publiques pour :</p>
 <div class="blue">
 <ul>
-<li>vérifier une information</li>
-<li>analyser un événement</li>
-<li>reconstruire des faits</li>
+<li class="fragment">vérifier une information</li>
+<li class="fragment">analyser un événement</li>
+<li class="fragment">reconstruire des faits</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1173,10 +1094,10 @@ r = -0.68
 </div>
 <div class="green">
 <ul>
-<li>images satellites</li>
-<li>vidéos</li>
-<li>réseaux sociaux</li>
-<li>données publiques</li>
+<li class="fragment">images satellites</li>
+<li class="fragment">vidéos</li>
+<li class="fragment">réseaux sociaux</li>
+<li class="fragment">données publiques</li>
 </ul>
 </div>
 </section>
@@ -1209,9 +1130,9 @@ r = -0.68
 <h2>Synthèse</h2>
 <div class="blue">
 <ul>
-<li>Une analyse est un <strong>artefact collectif</strong></li>
-<li>Elle doit être <strong>robuste au changement</strong></li>
-<li>Elle doit être <strong>compréhensible hors du notebook</strong></li>
+<li class="fragment">Une analyse est un <strong>artefact collectif</strong></li>
+<li class="fragment">Elle doit être <strong>robuste au changement</strong></li>
+<li class="fragment">Elle doit être <strong>compréhensible hors du notebook</strong></li>
 </ul>
 </div>
 </section>
@@ -1247,9 +1168,9 @@ r = -0.68
 <blockquote>
 <p>Ces temps sont indicatifs, l’important c’est</p>
 <ul>
-<li>de présenter la question</li>
-<li>expliquer rapidement l’analyse</li>
-<li>expliciter la conclusion</li>
+<li class="fragment">de présenter la question</li>
+<li class="fragment">expliquer rapidement l’analyse</li>
+<li class="fragment">expliciter la conclusion</li>
 </ul>
 </blockquote>
 </section>
@@ -1271,21 +1192,6 @@ r = -0.68
 <p><span class="gray_1">Rien dans la vie n’est à craindre, tout est à comprendre.</span></p>
 <p>— Marie Curie</p>
 
-
-<script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
-</script>
-<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
-<div id="exercise-loading-status" class="d-flex gap-2">
-
-</div>
-<div class="spinner-grow spinner-grow-sm">
-
-</div>
-</div>
-<script type="vfs-file">
-W10=
-</script>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
@@ -1295,19 +1201,25 @@ W10=
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../../../../site_libs/revealjs/dist/reveal.js"></script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="../../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/chrono/chrono.js"></script>
+  <script src="index_files/libs/revealjs/plugin/simplemenu/simplemenu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-leaderline/reveal-leader-line.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-attribution/attribution.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-quiz/quiz.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="../../../../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -1315,25 +1227,28 @@ W10=
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
+'simplemenu': {"menubarclass":"menubar","menuclass":"menu","activeclass":"active","activeelement":"li","flat":true,"barhtml":{"header":"","footer":"<div class='menubar'><ul class='menu'></ul></div>"},"scale":0.4},
+'quiz': {"checkKey":"c","resetKey":"q","shuffleKey":"t","allowNumberKeys":true,"disableOnCheck":false,"shuffleOptions":true,"defaultCorrect":"","defaultIncorrect":"","includeScore":false,"disableReset":false},
+'pointer': {"key":"p","color":"#12ff00","pointerSize":16,"alwaysVisible":false,"pointsize":20},
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: false,
+        controlsTutorial: true,
 
         // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'edges',
+        controlsLayout: 'bottom-right',
 
         // Visibility rule for backwards navigation arrows; "faded", "hidden"
         // or "visible"
@@ -1343,14 +1258,14 @@ W10=
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
-        hash: true,
+        hash: false,
 
         // Start with 1 for the hash rather than 0
         hashOneBasedIndex: false,
@@ -1359,7 +1274,7 @@ W10=
         respondToHashChanges: true,
 
         // Push each slide change to the browser history
-        history: true,
+        history: false,
 
         // Enable keyboard shortcuts for navigation
         keyboard: true,
@@ -1411,7 +1326,7 @@ W10=
         showNotes: false,
 
         // Global override for autoplaying embedded media (null/true/false)
-        autoPlayMedia: null,
+        autoPlayMedia: true,
 
         // Global override for preloading lazy-loaded iframes (null/true/false)
         preloadIframes: null,
@@ -1433,7 +1348,7 @@ W10=
         defaultTiming: null,
 
         // Enable slide navigation via mouse wheel
-        mouseWheel: false,
+        mouseWheel: true,
 
         // The display mode that will be used to show slides
         display: 'block',
@@ -1468,9 +1383,9 @@ W10=
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1920,
 
-        height: 700,
+        height: 1080,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
@@ -1493,7 +1408,7 @@ W10=
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Chrono, Simplemenu, RevealLeaderline, RevealAttribution, RevealQuiz, RevealPointer, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -1502,16 +1417,191 @@ W10=
         ]
       });
     </script>
-    <script type="ojs-module-contents">
-    eyJjb250ZW50cyI6W119
+    <script type="text/javascript" id="code-annotation-fragments">
+      function hideAllTippy() {
+        document.querySelectorAll('.code-annotation-anchor').forEach(anchor => {
+          const tippyInstance = anchor._tippy;
+          if (tippyInstance) {
+            tippyInstance.hide();
+          }
+        });
+      }
+
+      Reveal.on('fragmentshown', (event) => {
+        hideAllTippy();
+
+        const fragment = event.fragment;
+        const classesToCheck = ['has-line-highlights', 'visible', 'current-fragment'];
+        if (classesToCheck.some(cls => fragment.classList.contains(cls))) {
+          const codeAnnotationAnchors = fragment.querySelectorAll('.code-annotation-anchor');
+          let matchCount = 0;
+          for (const anchor of codeAnnotationAnchors) {
+            const nextElement = anchor.nextElementSibling;
+            if (
+              nextElement &&
+              nextElement.classList.contains('code-annotation-target') &&
+              nextElement.classList.contains('highlight-line')
+            ) {
+              matchCount++;
+              if (matchCount > 1) break;
+            }
+          }
+          if (matchCount === 1) {
+            for (const anchor of codeAnnotationAnchors) {
+              const nextElement = anchor.nextElementSibling;
+              if (
+                nextElement &&
+                nextElement.classList.contains('code-annotation-target') &&
+                nextElement.classList.contains('highlight-line')
+              ) {
+                const tippyInstance = anchor._tippy;
+                if (tippyInstance) {
+                  tippyInstance.show();
+                  break;
+                }
+              }
+            }
+          }
+        }
+      });
+
+      Reveal.on('fragmenthidden', () => {
+        hideAllTippy();
+      });
     </script>
-    <script type="module">
-    if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-    window._ojs.paths.runtimeToDoc = "../../assets/bigdata/CM/CM4";
-    window._ojs.paths.runtimeToRoot = "../..";
-    window._ojs.paths.docToRoot = "../../../..";
-    window._ojs.selfContained = false;
-    window._ojs.runtime.interpretFromScriptTags();
+
+    <script>
+
+    window.addEventListener("message", (ev) => {
+      const msg = ev.data;
+      if (!msg || msg.type !== "reveal-nav") return;
+      if (typeof Reveal === "undefined") return;
+
+      const k = msg.key;
+      const isSpace = msg.code === "Space" || k === " ";
+
+      if (k === "ArrowLeft" || k === "PageUp") Reveal.navigateLeft();
+      else if (k === "ArrowRight" || k === "PageDown" || isSpace) Reveal.navigateRight();
+      else if (k === "ArrowUp") Reveal.navigateUp();
+      else if (k === "ArrowDown") Reveal.navigateDown();
+    });
+
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("iframe[allow]").forEach((f) => {
+        const cleaned = f
+          .getAttribute("allow")
+          .split(";")
+          .map(s => s.trim())
+          .filter(s => s && s !== "autoplay");
+
+        f.setAttribute("allow", cleaned.join("; "));
+      });
+    });
+    </script>
+
+    <style>
+    #excalidraw-overlay{
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: none;
+      background: rgba(0,0,0,0.35);
+    }
+
+    #excalidraw-panel{
+      position: absolute;
+      inset: 0;
+      background: #1c1c1c;
+    }
+
+    #excalidraw-overlay iframe{
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: #1c1c1c;
+    }
+
+    /* bouton quitter */
+    #excalidraw-close{
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 100000;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.45);
+      color: #fff;
+      font-size: 26px;
+      line-height: 42px;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    #excalidraw-close:hover{
+      background: rgba(255,255,255,0.10);
+    }
+    </style>
+
+    <div id="excalidraw-overlay" aria-hidden="true">
+      <div id="excalidraw-panel">
+        <div id="excalidraw-close" title="Quitter (Esc)">✕</div>
+        <iframe id="excalidraw-iframe"></iframe>
+      </div>
+    </div>
+
+    <script>
+    (() => {
+      const overlay = document.getElementById("excalidraw-overlay");
+      const panel   = document.getElementById("excalidraw-panel");
+      const closeBt = document.getElementById("excalidraw-close");
+      const iframe  = document.getElementById("excalidraw-iframe");
+
+      function openBoard(){
+        if (overlay.style.display === "block") return;
+
+        iframe.src = window.location.origin + "/_extensions/external/excalidraw/excalidraw.html";
+        overlay.style.display = "block";
+        overlay.setAttribute("aria-hidden","false");
+      }
+
+      function closeBoard(){
+        overlay.style.display = "none";
+        overlay.setAttribute("aria-hidden","true");
+        iframe.src = "about:blank";
+
+        // IMPORTANT: si Reveal s'est mis en pause, on reprend
+        if (window.Reveal && typeof Reveal.isPaused === "function" && Reveal.isPaused()) {
+          Reveal.resume();
+        }
+
+        // Redonner le focus à la présentation
+        const r = document.querySelector(".reveal");
+        if (r) r.focus();
+      }
+
+      // B pour ouvrir
+      window.addEventListener("keydown", (e) => {
+        if ((e.key === "w" || e.key === "W") && !e.ctrlKey && !e.metaKey && !e.altKey) {
+          e.preventDefault();
+          openBoard();
+        }
+      }, true);
+
+      // ESC pour fermer (capture, marche même si focus dans l'iframe)
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeBoard();
+      }, true);
+
+      // bouton quitter
+      closeBt.addEventListener("click", closeBoard);
+    })();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -1642,6 +1732,160 @@ W10=
             }
           });
         }
+            let selectedAnnoteEl;
+            const selectorForAnnotation = ( cell, annotation) => {
+              let cellAttr = 'data-code-cell="' + cell + '"';
+              let lineAttr = 'data-code-annotation="' +  annotation + '"';
+              const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+              return selector;
+            }
+            const selectCodeLines = (annoteEl) => {
+              const doc = window.document;
+              const targetCell = annoteEl.getAttribute("data-target-cell");
+              const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+              const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+              const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+              const lineIds = lines.map((line) => {
+                return targetCell + "-" + line;
+              })
+              let top = null;
+              let height = null;
+              let parent = null;
+              if (lineIds.length > 0) {
+                  //compute the position of the single el (top and bottom and make a div)
+                  const el = window.document.getElementById(lineIds[0]);
+                  top = el.offsetTop;
+                  height = el.offsetHeight;
+                  parent = el.parentElement.parentElement;
+                if (lineIds.length > 1) {
+                  const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+                  const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+                  height = bottom - top;
+                }
+                if (top !== null && height !== null && parent !== null) {
+                  // cook up a div (if necessary) and position it 
+                  let div = window.document.getElementById("code-annotation-line-highlight");
+                  if (div === null) {
+                    div = window.document.createElement("div");
+                    div.setAttribute("id", "code-annotation-line-highlight");
+                    div.style.position = 'absolute';
+                    parent.appendChild(div);
+                  }
+                  div.style.top = top - 2 + "px";
+                  div.style.height = height + 4 + "px";
+                  div.style.left = 0;
+                  let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+                  if (gutterDiv === null) {
+                    gutterDiv = window.document.createElement("div");
+                    gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                    gutterDiv.style.position = 'absolute';
+                    const codeCell = window.document.getElementById(targetCell);
+                    const gutter = codeCell.querySelector('.code-annotation-gutter');
+                    gutter.appendChild(gutterDiv);
+                  }
+                  gutterDiv.style.top = top - 2 + "px";
+                  gutterDiv.style.height = height + 4 + "px";
+                }
+                selectedAnnoteEl = annoteEl;
+              }
+            };
+            const unselectCodeLines = () => {
+              const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+              elementsIds.forEach((elId) => {
+                const div = window.document.getElementById(elId);
+                if (div) {
+                  div.remove();
+                }
+              });
+              selectedAnnoteEl = undefined;
+            };
+              // Handle positioning of the toggle
+          window.addEventListener(
+            "resize",
+            throttle(() => {
+              elRect = undefined;
+              if (selectedAnnoteEl) {
+                selectCodeLines(selectedAnnoteEl);
+              }
+            }, 10)
+          );
+          function throttle(fn, ms) {
+          let throttle = false;
+          let timer;
+            return (...args) => {
+              if(!throttle) { // first call gets through
+                  fn.apply(this, args);
+                  throttle = true;
+              } else { // all the others get throttled
+                  if(timer) clearTimeout(timer); // cancel #2
+                  timer = setTimeout(() => {
+                    fn.apply(this, args);
+                    timer = throttle = false;
+                  }, ms);
+              }
+            };
+          }
+            const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+            for (let i=0; i<annoteTargets.length; i++) {
+              const annoteTarget = annoteTargets[i];
+              const targetCell = annoteTarget.getAttribute("data-target-cell");
+              const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+              const contentFn = () => {
+                const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+                if (content) {
+                  const tipContent = content.cloneNode(true);
+                  tipContent.classList.add("code-annotation-tip-content");
+                  return tipContent.outerHTML;
+                }
+              }
+              const config = {
+                allowHTML: true,
+                content: contentFn,
+                onShow: (instance) => {
+                  selectCodeLines(instance.reference);
+                  instance.reference.classList.add('code-annotation-active');
+                  window.tippy.hideAll();
+                },
+                onHide: (instance) => {
+                  unselectCodeLines();
+                  instance.reference.classList.remove('code-annotation-active');
+                },
+                maxWidth: 300,
+                delay: [50, 0],
+                duration: [200, 0],
+                offset: [5, 10],
+                arrow: true,
+                trigger: 'click',
+                appendTo: function(el) {
+                  return el.parentElement.parentElement.parentElement;
+                },
+                interactive: true,
+                interactiveBorder: 10,
+                theme: 'light-border',
+                placement: 'right',
+                positionFixed: true,
+                popperOptions: {
+                  modifiers: [
+                  {
+                    name: 'flip',
+                    options: {
+                      flipVariations: false, // true by default
+                      allowedAutoPlacements: ['right'],
+                      fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+                    },
+                  },
+                  {
+                    name: 'preventOverflow',
+                    options: {
+                      mainAxis: false,
+                      altAxis: false
+                    }
+                  }
+                  ]        
+                }      
+              };
+              window.tippy(annoteTarget, config); 
+            }
         const findCites = (el) => {
           const parentEl = el.parentElement;
           if (parentEl) {

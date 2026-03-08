@@ -1,0 +1,73 @@
+reveal .slides section { position: relative; }
+
+.chrono {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translateX(-50%);
+  z-index: 9999;
+
+  font-size: 2.2vw;
+  width: min(60vw, 1100px);
+  display: flex;
+  flex-direction: column;  /* empile verticalement */
+  align-items: center;     /* centre horizontalement */
+  gap: 2vh;
+  pointer-events: auto; 
+}
+.chrono canvas {
+  width: 150%;
+  height: auto;
+  background: #00000000;
+  border: none;
+}
+.chrono .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.chrono .parameter {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.chrono button {
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  font-size: 1.2em;
+  color: white;
+  width: 2em;  
+  height: 2em;
+  cursor: pointer;
+}
+.chrono button:hover {
+  background: white;
+  color: black;
+}
+.chrono input {
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+  padding: 0.4em 0.6em;
+  font-size: 1em;
+  outline: none;
+  margin: 0;
+}
+.chrono input[type="number"] {
+  -moz-appearance: textfield;
+  width: 2.5em;
+}
+.chrono input[type="number"]::-webkit-outer-spin-button,
+.chrono input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.chrono label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
