@@ -7,10 +7,14 @@
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../../../../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <title>Teaching – index</title>
+  <meta name="author" content="nsv">
+  <meta name="dcterms.date" content="2026-03-08">
+  <title>Teaching – CM4 - Big Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,9 +32,74 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
-  <link rel="stylesheet" href="style.css">
   <link href="../../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -122,744 +191,1102 @@
       margin-right: 0; 
     }
   </style>
+  <script type="module" src="../../../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+  <link href="../../../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 
-<section>
-<section id="de-lanalyse-qui-marche-à-lanalyse-qui-tient-dans-le-monde-réel" class="title-slide slide level1 title center" data-background-color="#2b4050">
-<h1>De l’analyse “qui marche” à l’analyse <strong>qui tient dans le monde réel</strong></h1>
+<section id="section" class="slide level2" data-background-image="content/image/astronaut.jpg" data-state="hide-menubar">
+<h2></h2>
+<div class="titlebox topright">
+<p>Introduction au Big Data</p>
+</div>
+</section>
+<section id="pourquoi-on-fait-tout-ça" class="slide level2 question">
+<h2>Pourquoi on fait tout ça ?</h2>
 <!-- BLOC: Intro 5min -->
 </section>
-<section id="mise-en-perspective" class="slide level2" data-background-color="#1c1c1c">
+<section id="mise-en-perspective" class="slide level2" data-name="Intro">
 <h2>Mise en perspective</h2>
+<p><br></p>
 <p>Jusqu’ici, on a appris à :</p>
 <div class="blue">
 <ul>
-<li class="fragment">poser une question claire</li>
-<li class="fragment">construire un pipeline cohérent</li>
-<li class="fragment">nettoyer et explorer de manière défendable</li>
+<li>poser une question claire</li>
+<li>construire un pipeline cohérent</li>
+<li>nettoyer et explorer de manière défendable</li>
 </ul>
 </div>
 <div class="fragment">
 <p>👉 En entreprise, <strong>ce n’est pas suffisant</strong>.</p>
 </div>
-<div class="r-fit-text">
+<p><br></p>
+<div class="r-fit-text fragment">
 <blockquote>
 <p><em>Une bonne analyse doit survivre au temps, aux collègues et aux décisions.</em></p>
 </blockquote>
 </div>
 </section>
-<section id="question-centrale" class="slide level2" data-background-color="#1c1c1c">
+<section id="question-centrale" class="slide level2">
 <h2>Question centrale</h2>
-<div class="green">
-<p><strong>Comment concevoir une analyse de données<br>
-qui reste valable, compréhensible et utile<br>
-au-delà du notebook et du stagiaire qui l’a produite ?</strong></p>
+<div class="green r-fit-text">
+<p>Comment concevoir une analyse de données</p>
+<p>qui reste valable, compréhensible et utile</p>
+<p>au-delà du notebook et de la personne</p>
+<p>qui l’a produite ?</p>
 </div>
 </section>
-<section id="fil-conducteur" class="slide level2" data-background-color="#1c1c1c">
-<h2>Fil conducteur</h2>
-<p>Trois exigences (pro) :</p>
+<section id="ce-qui-change-en-situation-pro" class="slide level2">
+<h2>Ce qui change en situation pro</h2>
+<p><br></p>
+<p>Trois exigences :</p>
 <div class="blue">
 <ul>
-<li class="fragment"><strong>Transmissible</strong> : quelqu’un d’autre peut reprendre</li>
-<li class="fragment"><strong>Robuste</strong> : la conclusion résiste au changement</li>
-<li class="fragment"><strong>Utilisable</strong> : le message passe hors de l’équipe data</li>
+<li><strong>Transmissible</strong> : quelqu’un d’autre peut reprendre</li>
+<li><strong>Robuste</strong> : la conclusion résiste au changement</li>
+<li><strong>Utilisable</strong> : le message passe hors de l’équipe data</li>
 </ul>
 </div>
+<p><br></p>
 <div class="fragment">
-<p>👉 Ce CM parle moins de code, et plus de <strong>durabilité</strong>.</p>
+<p>Dans un cours, on vise souvent : “<code>le bon résultat</code>”.</p>
 </div>
-</section>
-<section id="ce-qui-change-en-situation-pro" class="slide level2" data-background-color="#1c1c1c">
-<h2>Ce qui change en situation pro</h2>
-<p>Dans un cours, on vise souvent : “le bon résultat”.</p>
+<div class="fragment">
 <p>En entreprise, on vise plutôt :</p>
-<div class="green">
-<p><strong>un raisonnement stable + des décisions discutables + un livrable réutilisable</strong></p>
+</div>
+<div class="green fragment">
+<p>Un raisonnement stable <span class="glyph">+</span> des décisions discutables <span class="glyph">+</span> un livrable réutilisable</p>
 </div>
 </section>
-<section class="slide level2">
-
-<!-- BLOC: Bloc_1 20min -->
-</section></section>
-<section>
-<section id="bloc-1" class="title-slide slide level1 center" data-background-color="#ffffff">
-<h1>Bloc 1</h1>
-
+<section id="programme-du-jour" class="slide level2">
+<h2>Programme du jour</h2>
+<div class="r-fit-text blue">
+<ul>
+<li>petit retour sur le projet 1</li>
+<li>que se passe t-il en contexte pro ?</li>
+<li>petite démo projet 2</li>
+<li>l’intérêt de tout cela aujourd’hui</li>
+</ul>
+</div>
+<!-- /BLOC -->
+<!-- BLOC: Bloc_1 RETOUR PROJECT 1 -->
 </section>
-<section id="pourquoi-une-analyse-correcte-peut-échouer-en-situation-professionnelle" class="slide level2 center" data-background-color="#2b4050">
-<h2>Pourquoi une analyse “correcte” peut échouer en situation professionnelle ?</h2>
+<section id="bloc-1" class="slide level2 bloc" data-name="Bloc 1">
+<h2>Bloc 1</h2>
 </section>
-<section id="situation-réelle" class="slide level2" data-background-color="#1c1c1c">
+<section id="petit-retour-sur-les-projets" class="slide level2 question">
+<h2>Petit retour sur les projets</h2>
+</section>
+<section id="ce-qui-est-très-bien" class="slide level2">
+<h2>Ce qui est très bien</h2>
+<p><br></p>
+<div class="green">
+<ul>
+<li>Plein de styles différents</li>
+<li>De l’humour bien dosé</li>
+<li>Des angles d’analyses que je n’avais pas imaginés</li>
+<li>Personne en dessous de la moyenne</li>
+<li>Du LaTeX assez souvent</li>
+</ul>
+</div>
+</section>
+<section id="les-points-qui-ont-manqués" class="slide level2">
+<h2>Les points qui ont manqués</h2>
+<p><br></p>
+<div class="redlight">
+<ul>
+<li>abstract / préambule qui synthétise l’analyse</li>
+<li>un sommaire (table of contents) pour améliorer la structure et la lisibilité du document.</li>
+<li>ne pas faire de pavé / raconter chaque truc comme “j’ai ouvert la base de données csv”</li>
+<li>information utile / pertinente noyée dans le flow</li>
+<li>La figure apparaît <strong>avant</strong> son interprétation</li>
+<li>De très bonne idées (e.g.&nbsp;normaliser la fréquence des témoignages en fonction du nombre d’habitants) mais pas appliqués</li>
+</ul>
+</div>
+</section>
+<section id="parlons-un-peu-de" class="slide level2">
+<h2>Parlons un peu de</h2>
+<div class="r-fit-text green fragment">
+<p>L’abstract</p>
+</div>
+<div class="fragment">
+<p>Ce que c’est, à quoi ça sert</p>
+</div>
+</section>
+<section id="section-1" class="slide level2 image" data-path="content/image/abstrait.png">
+<h2></h2>
+<div class="titlebox topright fragment red">
+<p>Ah zut, non là c’est de l’abstrait</p>
+</div>
+</section>
+<section id="abstr---act" class="slide level2">
+<h2>Abstr - <span class="red">act</span></h2>
+<div class="fragment blue">
+<p>En réalité, les mots “abstract” (anglais) et “abstrait” (français) ont la même provenance latine</p>
+<p><code>abstrahere</code>, qui signifie “<code>tirer hors de</code>”, “<code>extraire</code>”.</p>
+</div>
+<p><br></p>
+<div class="fragment green LARGE">
+<p>Et, mine de rien, c’est un truc important</p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>Doit synthétiser la question initiale le raisonnement suivi et la conclusion de l’analyse.</p>
+<p>Il résume le parcours, le chemin parcouru.</p>
+</div>
+<div class="fragment red">
+<p>S’écrit à la fin quand tout est fini !</p>
+</div>
+<p><br></p>
+<div class="fragment">
+<blockquote>
+<p>Evite la découverte petit à petit de voter cheminement <span class="glyph arrow" style="font-size:1.2em;"></span> surcharge cognitive non nécessaire</p>
+</blockquote>
+</div>
+</section>
+<section id="structure-idéale-dun-rapport" class="slide level2">
+<h2>Structure idéale d’un rapport</h2>
+<div class="blue Large">
+<ol type="1">
+<li><p>Abstract</p></li>
+<li><p>Introduction / question</p></li>
+<li><p>Données</p></li>
+<li><p>Analyse</p></li>
+<li><p>Résultats</p></li>
+<li><p>Conclusion</p></li>
+</ol>
+</div>
+</section>
+<section id="parlons-un-peu-du-médium-de-construction-du-rapport" class="slide level2">
+<h2>Parlons un peu du médium de construction du rapport</h2>
+<div class="fragment blue">
+<p>D’abord le plus commun…</p>
+</div>
+<div class="r-fit-text fragment red">
+<p>WYSIWYG</p>
+</div>
+<div class="fragment">
+<p>(<code>W</code>hat <code>Y</code>ou <code>S</code>ee <code>I</code>s <code>W</code>hat <code>Y</code>ou <code>G</code>et)</p>
+</div>
+</section>
+<section id="section-2" class="slide level2 image" data-path="content/image/wysiwyg.png">
+<h2></h2>
+<div class="titlebox topright red">
+<p>WYSIWYG</p>
+</div>
+</section>
+<section id="section-3" class="slide level2 image" data-path="content/image/latex.png">
+<h2></h2>
+<div class="titlebox topright red">
+<p>Les méthodes codées</p>
+</div>
+</section>
+<section id="et" class="slide level2">
+<h2>ET …</h2>
+<div class="blue">
+<ul>
+<li>Si vous avez aimé taper en Markdown</li>
+<li>Si vous aimez la simplicité et la puissance</li>
+<li>Si vous voulez pouvoir combiner LaTeX, Python et les techno web</li>
+</ul>
+</div>
+<div class="fragment confetti">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="content/image/quarto.png" style="width:100.0%"></p>
+<figcaption>https://quarto.org - 2022</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="quarto" class="slide level2 image" data-path="content/image/quarto_slide.svg">
+<h2>Quarto</h2>
+</section>
+<section id="exemple-de-texte-difficile-à-lire" class="slide level2">
+<h2>Exemple de texte difficile à lire</h2>
+<p>Le Big Data désigne l’ensemble des technologies, méthodes et infrastructures permettant de collecter, stocker et analyser des volumes très importants de données. Avec la généralisation d’Internet, des smartphones, des capteurs et des plateformes numériques, la quantité de données produites chaque jour a explosé. Ces données proviennent de sources très variées : réseaux sociaux, transactions en ligne, objets connectés, systèmes industriels ou encore images et vidéos. Le Big Data se caractérise généralement par les “3 V” : volume, variété et vélocité. Le volume correspond à la quantité massive de données générées, souvent mesurée en téraoctets ou en pétaoctets. La variété renvoie à la diversité des formats de données, qui peuvent être structurées, semi-structurées ou non structurées. Enfin, la vélocité décrit la vitesse à laquelle ces données sont produites et doivent être traitées.</p>
+<p>Pour exploiter ces données, des architectures informatiques spécifiques ont été développées, reposant souvent sur des systèmes distribués capables de répartir les calculs sur de nombreux serveurs. Des outils comme Hadoop ou Spark permettent ainsi de traiter efficacement de très grands ensembles de données. L’analyse du Big Data ouvre de nombreuses perspectives dans des domaines variés : marketing, santé, transport, finance ou recherche scientifique.</p>
+</section>
+<section id="vous-avez-aimez-lire-ça" class="slide level2">
+<h2>Vous avez aimez lire ça ?</h2>
+<div class="r-fit-text blue fragment">
+<p>Moi non plus</p>
+</div>
+<div class="fragment">
+<p>(charge cognitif trop grande)</p>
+</div>
+</section>
+<section id="attention-aussi-aux" class="slide level2">
+<h2>Attention aussi aux</h2>
+<div class="fragment Huge red">
+<p>indentations</p>
+</div>
+<div class="fragment">
+<pre><code>      Le Big Data désigne l’ensemble des technologies, méthodes et infrastructures permettant de collecter, stocker et analyser des volumes très importants de données. 
+      Avec la généralisation d’Internet, des smartphones, des capteurs et des plateformes numériques, la quantité de données produites chaque jour a explosé. Ces données proviennent de sources très variées : réseaux sociaux, transactions en ligne, objets connectés, systèmes industriels ou encore images et vidéos. 
+      Le Big Data se caractérise généralement par les “3 V” : volume, variété et vélocité. Le volume correspond à la quantité massive de données générées, souvent mesurée en téraoctets ou en pétaoctets. 
+      La variété renvoie à la diversité des formats de données, qui peuvent être structurées, semi-structurées ou non structurées. Enfin, la vélocité décrit la vitesse à laquelle ces données sont produites et doivent être traitées.</code></pre>
+</div>
+<div class="fragment blue">
+<p>(et aux espaces entre les paragraphes !)</p>
+</div>
+</section>
+<section id="enfin" class="slide level2">
+<h2>Enfin</h2>
+<p>Faites attention</p>
+<div class="fragment red">
+<p>au full bullet point</p>
+</div>
+<ul>
+<li>Le Big Data désigne l’ensemble des technologies, méthodes et infrastructures permettant de collecter, stocker et analyser des volumes très importants de données.</li>
+<li>Avec la généralisation d’Internet, des smartphones, des capteurs et des plateformes numériques, la quantité de données produites chaque jour a explosé. Ces données proviennent de sources très variées :
+<ul>
+<li>réseaux sociaux,</li>
+<li>transactions en ligne,</li>
+<li>systèmes industriels
+<ul>
+<li>images</li>
+<li>vidéos.</li>
+</ul></li>
+</ul></li>
+<li><span class="red">et au format scolaire !!</span></li>
+</ul>
+</section>
+<section id="trois-règles-pour-une-bonne-analyse" class="slide level2">
+<h2>Trois règles pour une bonne analyse</h2>
+<ol type="1">
+<li><p><strong>Une question claire</strong></p>
+<div class="blue">
+<ul>
+<li>Que cherche-t-on à comprendre ?</li>
+<li>Quelle hypothèse veut-on tester ?</li>
+</ul>
+</div></li>
+<li><p><strong>Une figure = une idée</strong></p>
+<div class="blue">
+<ul>
+<li>Chaque graphique doit répondre à une question.</li>
+<li>Graphique lisible, axes clairs, titre informatif</li>
+</ul>
+</div></li>
+<li><p><strong>Interpréter et prendre du recul</strong></p>
+<div class="blue">
+<ul>
+<li>Une analyse ne s’arrête pas au graphique.</li>
+<li>Que signifie ce résultat ? Quelles sont les limites ?</li>
+</ul>
+</div></li>
+</ol>
+<div class="fragment">
+<blockquote>
+<p>Une analyse n’est pas une collection de graphiques,</p>
+<p>c’est un raisonnement appuyé par des données.</p>
+</blockquote>
+</div>
+</section>
+<section id="pause" class="slide level2">
+<h2>Pause</h2>
+<div class="chrono">
+  <canvas class="chrono_canvas" width="1000" height="600"></canvas>
+
+  <div class="row">
+    <div class="parameter">
+      <button class="chrono_play">▶</button>
+      <button class="chrono_reset">↩</button>
+
+      <label class="duration">
+        <input class="chrono_min" type="number" value="2">
+        <span>min</span>
+        <input class="chrono_sec" type="number" value="0">
+        <span>s</span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- /BLOC -->
+<!-- BLOC: Bloc_2 CONTEXT PRO -->
+</section>
+<section id="bloc-2" class="slide level2 bloc" data-name="Bloc 2">
+<h2>Bloc 2</h2>
+</section>
+<section id="pourquoi-une-analyse-correcte-peut-échouer-en-situation-professionnelle" class="slide level2 question">
+<h2>Pourquoi une analyse <code>correcte</code> peut échouer en situation professionnelle ?</h2>
+</section>
+<section id="situation-réelle" class="slide level2">
 <h2>Situation réelle</h2>
+<p><br></p>
 <p>Vous rendez votre analyse.</p>
+<p><br></p>
 <div class="fragment">
 <p>Six mois plus tard :</p>
 </div>
 <div class="red">
 <ul>
-<li class="fragment">les données ont changé</li>
-<li class="fragment">la question a évolué</li>
-<li class="fragment">vous n’êtes plus là</li>
+<li>les données ont changé</li>
+<li>la question a évolué</li>
+<li>vous n’êtes plus là</li>
 </ul>
 </div>
+<p><br></p>
 <div class="fragment">
-<p>👉 Personne n’ose toucher à votre notebook.</p>
+<p>👉 Personne n’ose toucher à votre notebook / code.</p>
 </div>
 </section>
-<section id="problème-fondamental" class="slide level2" data-background-color="#1c1c1c">
+<section id="problème-fondamental" class="slide level2">
 <h2>Problème fondamental</h2>
+<p><br></p>
 <p>Ce qui échoue n’est pas le code.</p>
-<div class="fragment red">
-<p>Ce qui échoue, c’est la <strong>transmission du raisonnement</strong>.</p>
+<p><br></p>
+<div class="fragment red r-fit-text">
+<p>Ce qui échoue, c’est</p>
+<p>la <strong>transmission du raisonnement</strong>.</p>
 </div>
 </section>
-<section id="intuition-clé" class="slide level2" data-background-color="#1c1c1c">
+<section id="intuition-clé" class="slide level2 vfill">
 <h2>Intuition clé</h2>
+<p><br></p>
 <p>Une analyse professionnelle doit :</p>
 <div class="blue">
 <ul>
-<li class="fragment">survivre à son auteur</li>
-<li class="fragment">être comprise par d’autres métiers</li>
-<li class="fragment">être réutilisable dans un autre contexte</li>
+<li>survivre à son auteur</li>
+<li>être comprise par d’autres métiers</li>
+<li>être réutilisable dans un autre contexte</li>
 </ul>
 </div>
+<p><br></p>
 <div class="fragment">
-<p>👉 L’analyse devient un <strong>objet collectif</strong>.</p>
+<blockquote>
+<p>L’analyse devient un <strong>objet collectif</strong>.</p>
+<p>Une analyse n’est pas un résultat, c’est un support de décision.</p>
+<p>Elle doit expliciter ce qu’on peut conclure… et ce qu’on <strong>ne peut pas</strong>.</p>
+</blockquote>
 </div>
 </section>
-<section id="concept-clé-analyse-comme-artefact-décisionnel" class="slide level2" data-background-color="#1c1c1c">
-<h2>Concept clé : analyse comme artefact décisionnel</h2>
-<div class="green">
-<p><strong>Une analyse n’est pas un résultat,<br>
-c’est un support de décision.</strong></p>
-</div>
-<div class="fragment">
-<p>👉 Elle doit expliciter ce qu’on peut conclure…<br>
-et ce qu’on <strong>ne peut pas</strong>.</p>
-</div>
-</section>
-<section id="analyse-et-décision" class="slide level2" data-background-color="#1c1c1c">
+<section id="analyse-et-décision" class="slide level2">
 <h2>Analyse et décision</h2>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<svg width="960" height="480" viewbox="0.00 0.00 609.52 66.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 62)">
-<title>G</title>
-<!-- D -->
-<g id="node1" class="node">
-<title>D</title>
-<path fill="#ffffff" stroke="#595959" d="M100.04,-58C100.04,-58 11.99,-58 11.99,-58 5.99,-58 -0.01,-52 -0.01,-46 -0.01,-46 -0.01,-12 -0.01,-12 -0.01,-6 5.99,0 11.99,0 11.99,0 100.04,0 100.04,0 106.04,0 112.04,-6 112.04,-12 112.04,-12 112.04,-46 112.04,-46 112.04,-52 106.04,-58 100.04,-58"></path>
-<text text-anchor="middle" x="56.01" y="-33.8" font-family="Helvetica,sans-Serif" font-size="16.00">Données</text>
-<text text-anchor="middle" x="56.01" y="-14.6" font-family="Helvetica,sans-Serif" font-size="16.00">(incomplètes)</text>
-</g>
-<!-- A -->
-<g id="node2" class="node">
-<title>A</title>
-<path fill="#ffffff" stroke="#595959" d="M282.61,-58C282.61,-58 160.16,-58 160.16,-58 154.16,-58 148.16,-52 148.16,-46 148.16,-46 148.16,-12 148.16,-12 148.16,-6 154.16,0 160.16,0 160.16,0 282.61,0 282.61,0 288.61,0 294.61,-6 294.61,-12 294.61,-12 294.61,-46 294.61,-46 294.61,-52 288.61,-58 282.61,-58"></path>
-<text text-anchor="middle" x="221.39" y="-33.8" font-family="Helvetica,sans-Serif" font-size="16.00">Analyse</text>
-<text text-anchor="middle" x="221.39" y="-14.6" font-family="Helvetica,sans-Serif" font-size="16.00">(sous hypothèses)</text>
-</g>
-<!-- D&#45;&gt;A -->
-<g id="edge1" class="edge">
-<title>D-&gt;A</title>
-<path fill="none" stroke="#dcdcdc" stroke-width="2" d="M112.32,-29C121.56,-29 131.3,-29 141,-29"></path>
-<polygon fill="#dcdcdc" stroke="#dcdcdc" stroke-width="2" points="141.04,-31.45 148.04,-29 141.04,-26.55 141.04,-31.45"></polygon>
-</g>
-<!-- R -->
-<g id="node3" class="node">
-<title>R</title>
-<path fill="#ffffff" stroke="#595959" d="M468.35,-58C468.35,-58 342.55,-58 342.55,-58 336.55,-58 330.55,-52 330.55,-46 330.55,-46 330.55,-12 330.55,-12 330.55,-6 336.55,0 342.55,0 342.55,0 468.35,0 468.35,0 474.35,0 480.35,-6 480.35,-12 480.35,-12 480.35,-46 480.35,-46 480.35,-52 474.35,-58 468.35,-58"></path>
-<text text-anchor="middle" x="405.45" y="-33.8" font-family="Helvetica,sans-Serif" font-size="16.00">Recommandations</text>
-<text text-anchor="middle" x="405.45" y="-14.6" font-family="Helvetica,sans-Serif" font-size="16.00">conditionnelles</text>
-</g>
-<!-- A&#45;&gt;R -->
-<g id="edge2" class="edge">
-<title>A-&gt;R</title>
-<path fill="none" stroke="#dcdcdc" stroke-width="2" d="M294.87,-29C304.27,-29 313.95,-29 323.48,-29"></path>
-<polygon fill="#dcdcdc" stroke="#dcdcdc" stroke-width="2" points="323.73,-31.45 330.73,-29 323.73,-26.55 323.73,-31.45"></polygon>
-</g>
-<!-- C -->
-<g id="node4" class="node">
-<title>C</title>
-<path fill="#ffffff" stroke="#595959" d="M589.71,-58C589.71,-58 527.96,-58 527.96,-58 521.96,-58 515.96,-52 515.96,-46 515.96,-46 515.96,-12 515.96,-12 515.96,-6 521.96,0 527.96,0 527.96,0 589.71,0 589.71,0 595.71,0 601.71,-6 601.71,-12 601.71,-12 601.71,-46 601.71,-46 601.71,-52 595.71,-58 589.71,-58"></path>
-<text text-anchor="middle" x="558.84" y="-33.8" font-family="Helvetica,sans-Serif" font-size="16.00">Décisions</text>
-<text text-anchor="middle" x="558.84" y="-14.6" font-family="Helvetica,sans-Serif" font-size="16.00">humaines</text>
-</g>
-<!-- R&#45;&gt;C -->
-<g id="edge3" class="edge">
-<title>R-&gt;C</title>
-<path fill="none" stroke="#dcdcdc" stroke-width="2" d="M480.37,-29C489.96,-29 499.6,-29 508.65,-29"></path>
-<polygon fill="#dcdcdc" stroke="#dcdcdc" stroke-width="2" points="508.77,-31.45 515.77,-29 508.77,-26.55 508.77,-31.45"></polygon>
-</g>
-</g>
-</svg>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<p><br><br><br></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" width="100%"><pre class="sourceCode numberSource d2 number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>direction: right</span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a>style: {</span>
+<span id="cb2-4"><a></a>  fill: transparent</span>
+<span id="cb2-5"><a></a>}</span>
+<span id="cb2-6"><a></a></span>
+<span id="cb2-7"><a></a>bloc_1: {</span>
+<span id="cb2-8"><a></a>  shape: rectangle</span>
+<span id="cb2-9"><a></a>  label: "Données\n(incomplètes)"</span>
+<span id="cb2-10"><a></a>  width: 175</span>
+<span id="cb2-11"><a></a>  height: 100</span>
+<span id="cb2-12"><a></a>  style: {</span>
+<span id="cb2-13"><a></a>    fill: "#d5d5d5"</span>
+<span id="cb2-14"><a></a>    stroke: "#fff"</span>
+<span id="cb2-15"><a></a>  }</span>
+<span id="cb2-16"><a></a>}</span>
+<span id="cb2-17"><a></a>bloc_2: {</span>
+<span id="cb2-18"><a></a>  shape: rectangle</span>
+<span id="cb2-19"><a></a>  label: "Analyse\n(sous hypothèses)"</span>
+<span id="cb2-20"><a></a>  width: 175</span>
+<span id="cb2-21"><a></a>  height: 100</span>
+<span id="cb2-22"><a></a>  style: {</span>
+<span id="cb2-23"><a></a>    fill: "#d5d5d5"</span>
+<span id="cb2-24"><a></a>    stroke: "#fff"</span>
+<span id="cb2-25"><a></a>  }</span>
+<span id="cb2-26"><a></a>}</span>
+<span id="cb2-27"><a></a>bloc_3: {</span>
+<span id="cb2-28"><a></a>  shape: rectangle</span>
+<span id="cb2-29"><a></a>  label: "Recommandations\nconditionnelles"</span>
+<span id="cb2-30"><a></a>  width: 175</span>
+<span id="cb2-31"><a></a>  height: 100</span>
+<span id="cb2-32"><a></a>  style: {</span>
+<span id="cb2-33"><a></a>    fill: "#d5d5d5"</span>
+<span id="cb2-34"><a></a>    stroke: "#fff"</span>
+<span id="cb2-35"><a></a>  }</span>
+<span id="cb2-36"><a></a>}</span>
+<span id="cb2-37"><a></a>bloc_4: {</span>
+<span id="cb2-38"><a></a>  shape: rectangle</span>
+<span id="cb2-39"><a></a>  label: "Décisions humaines"</span>
+<span id="cb2-40"><a></a>  width: 175</span>
+<span id="cb2-41"><a></a>  height: 100</span>
+<span id="cb2-42"><a></a>  style: {</span>
+<span id="cb2-43"><a></a>    fill: "#d5d5d5"</span>
+<span id="cb2-44"><a></a>    stroke: "#fff"</span>
+<span id="cb2-45"><a></a>  }</span>
+<span id="cb2-46"><a></a>}</span>
+<span id="cb2-47"><a></a></span>
+<span id="cb2-48"><a></a></span>
+<span id="cb2-49"><a></a>bloc_1 -&gt; bloc_2: {</span>
+<span id="cb2-50"><a></a>  style: {</span>
+<span id="cb2-51"><a></a>    stroke: "#fff"</span>
+<span id="cb2-52"><a></a>    font-color: "#fff"</span>
+<span id="cb2-53"><a></a>    stroke-width: 2</span>
+<span id="cb2-54"><a></a>  }</span>
+<span id="cb2-55"><a></a>}</span>
+<span id="cb2-56"><a></a></span>
+<span id="cb2-57"><a></a>bloc_2 -&gt; bloc_3: {</span>
+<span id="cb2-58"><a></a>  style: {</span>
+<span id="cb2-59"><a></a>    stroke: "#fff"</span>
+<span id="cb2-60"><a></a>    font-color: "#fff"</span>
+<span id="cb2-61"><a></a>    stroke-width: 2</span>
+<span id="cb2-62"><a></a>  }</span>
+<span id="cb2-63"><a></a>}</span>
+<span id="cb2-64"><a></a>bloc_3 -&gt; bloc_4: {</span>
+<span id="cb2-65"><a></a>  style: {</span>
+<span id="cb2-66"><a></a>    stroke: "#fff"</span>
+<span id="cb2-67"><a></a>    font-color: "#fff"</span>
+<span id="cb2-68"><a></a>    stroke-width: 2</span>
+<span id="cb2-69"><a></a>  }</span>
+<span id="cb2-70"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br><br><br></p>
 <div class="fragment">
 <p>👉 L’analyse <strong>n’automatise pas</strong> la décision.</p>
 </div>
 </section>
-<section id="antipattern-professionnel" class="slide level2" data-background-color="#1c1c1c">
+<section id="antipattern-professionnel" class="slide level2">
 <h2>Anti‑pattern professionnel</h2>
+<p><br></p>
 <div class="red">
 <ul>
-<li class="fragment">“On a un chiffre, donc on décide.”</li>
-<li class="fragment">“Le modèle a dit X.”</li>
-<li class="fragment">“Le graphique est clair.”</li>
+<li>“On a un chiffre, donc on décide.”</li>
+<li>“Le modèle a dit X.”</li>
+<li>“Le graphique est clair.”</li>
 </ul>
 </div>
+<p><br></p>
 <div class="fragment">
 <p>👉 Un chiffre sans hypothèses = <strong>un risque</strong>.</p>
 </div>
 </section>
-<section id="ce-qui-manque-souvent-dans-les-analyses-correctes" class="slide level2" data-background-color="#1c1c1c">
+<section id="ce-qui-manque-souvent-dans-les-analyses-correctes" class="slide level2">
 <h2>Ce qui manque souvent dans les analyses “correctes”</h2>
+<p><br></p>
 <p>Trois éléments oubliés :</p>
 <div class="blue">
 <ul>
-<li class="fragment"><strong>Contexte</strong> : pourquoi cette question maintenant ?</li>
-<li class="fragment"><strong>Hypothèses</strong> : ce qu’on suppose vrai</li>
-<li class="fragment"><strong>Limites</strong> : où ça peut casser</li>
+<li><strong>Contexte</strong> : pourquoi cette question maintenant ?</li>
+<li><strong>Hypothèses</strong> : ce qu’on suppose vrai</li>
+<li><strong>Limites</strong> : où ça peut casser</li>
 </ul>
 </div>
 <div class="fragment">
-<p>👉 Sans ça, l’analyse n’est pas transmissible.</p>
+<p>Sinon :</p>
 </div>
-</section>
-<section id="checklist-de-transmission-très-courte" class="slide level2" data-background-color="#1c1c1c">
-<h2>Check‑list de transmission (très courte)</h2>
-<p>À minima, un autre doit pouvoir répondre à :</p>
-<div class="green">
-<ul>
-<li class="fragment">Quelle était la question exacte ?</li>
-<li class="fragment">Quelles données (version, période) ?</li>
-<li class="fragment">Quelles règles clés / paramètres ?</li>
-<li class="fragment">Quelle conclusion + dans quelles limites ?</li>
-</ul>
-</div>
-</section>
-<section id="phrase-à-retenir" class="slide level2" data-background-color="#1c1c1c">
-<h2>Phrase à retenir</h2>
-<blockquote>
-<p><strong>Une bonne analyse éclaire une décision,<br>
-elle ne la remplace jamais.</strong></p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<!-- BLOC: Bloc_2 20min -->
-</section></section>
-<section>
-<section id="bloc-2" class="title-slide slide level1 center" data-background-color="#ffffff">
-<h1>Bloc 2</h1>
-
-</section>
-<section id="comment-rendre-une-analyse-robuste-au-changement" class="slide level2 center" data-background-color="#2b4050">
-<h2>Comment rendre une analyse robuste au changement ?</h2>
-</section>
-<section id="réalité-professionnelle" class="slide level2" data-background-color="#1c1c1c">
-<h2>Réalité professionnelle</h2>
-<p>Dans le temps :</p>
-<div class="blue">
-<ul>
-<li class="fragment">les données évoluent</li>
-<li class="fragment">les règles métier changent</li>
-<li class="fragment">les indicateurs dérivent</li>
-</ul>
-</div>
-<div class="fragment">
-<p>👉 Une analyse figée devient rapidement fausse.</p>
-</div>
-</section>
-<section id="intuition" class="slide level2" data-background-color="#1c1c1c">
-<h2>Intuition</h2>
-<p>On ne rend pas une analyse robuste en la rendant plus complexe.</p>
-<div class="fragment green">
-<p>On la rend robuste en rendant ses <strong>hypothèses visibles et modulables</strong>.</p>
-</div>
-</section>
-<section id="concept-clé-scénarios-et-invariants" class="slide level2" data-background-color="#1c1c1c">
-<h2>Concept clé : scénarios et invariants</h2>
-<p>Deux niveaux à distinguer :</p>
-<div class="blue">
-<ul>
-<li class="fragment"><strong>Invariants</strong> : ce qui doit toujours rester vrai</li>
-<li class="fragment"><strong>Scénarios</strong> : ce qui peut varier (seuils, règles, filtres)</li>
-</ul>
-</div>
-<div class="fragment">
-<p>👉 Une analyse sérieuse sépare les deux.</p>
-</div>
-</section>
-<section id="exemple-concret-invariants-vs-scénarios" class="slide level2" data-background-color="#1c1c1c">
-<h2>Exemple concret (invariants vs scénarios)</h2>
-<p>Imaginez un indicateur de “clients actifs”.</p>
-<div class="blue">
-<ul>
-<li class="fragment"><strong>Invariant</strong> : “actif” = au moins 1 action mesurable</li>
-<li class="fragment"><strong>Scénario</strong> : fenêtre temporelle (7j / 30j / 90j)</li>
-</ul>
-</div>
-<div class="fragment">
-<p>👉 Les disputes pro viennent souvent des <strong>scénarios</strong> déguisés en invariants.</p>
-</div>
-</section>
-<section id="analyse-paramétrée" class="slide level2" data-background-color="#1c1c1c">
-<h2>Analyse paramétrée</h2>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<svg width="960" height="480" viewbox="0.00 0.00 602.00 219.20" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 215.2)">
-<title>G</title>
-<!-- I -->
-<g id="node1" class="node">
-<title>I</title>
-<path fill="#ffffff" stroke="#595959" d="M276,-211.4C276,-211.4 12,-211.4 12,-211.4 6,-211.4 0,-205.4 0,-199.4 0,-199.4 0,-176.6 0,-176.6 0,-170.6 6,-164.6 12,-164.6 12,-164.6 276,-164.6 276,-164.6 282,-164.6 288,-170.6 288,-176.6 288,-176.6 288,-199.4 288,-199.4 288,-205.4 282,-211.4 276,-211.4"></path>
-<text text-anchor="middle" x="144" y="-192.8" font-family="Helvetica,sans-Serif" font-size="16.00">Invariants</text>
-<text text-anchor="middle" x="144" y="-173.6" font-family="Helvetica,sans-Serif" font-size="16.00">(définitions, unités, sens)</text>
-</g>
-<!-- P -->
-<g id="node3" class="node">
-<title>P</title>
-<path fill="#ffffff" stroke="#595959" d="M429,-129C429,-129 165,-129 165,-129 159,-129 153,-123 153,-117 153,-117 153,-94.2 153,-94.2 153,-88.2 159,-82.2 165,-82.2 165,-82.2 429,-82.2 429,-82.2 435,-82.2 441,-88.2 441,-94.2 441,-94.2 441,-117 441,-117 441,-123 435,-129 429,-129"></path>
-<text text-anchor="middle" x="297" y="-110.4" font-family="Helvetica,sans-Serif" font-size="16.00">Pipeline</text>
-<text text-anchor="middle" x="297" y="-91.2" font-family="Helvetica,sans-Serif" font-size="16.00">stable</text>
-</g>
-<!-- I&#45;&gt;P -->
-<g id="edge1" class="edge">
-<title>I-&gt;P</title>
-<path fill="none" stroke="#dcdcdc" stroke-width="2" d="M186.62,-164.6C205.77,-154.54 228.47,-142.61 248.28,-132.2"></path>
-<polygon fill="#dcdcdc" stroke="#dcdcdc" stroke-width="2" points="249.55,-134.3 254.61,-128.88 247.27,-129.96 249.55,-134.3"></polygon>
-</g>
-<!-- S -->
-<g id="node2" class="node">
-<title>S</title>
-<path fill="#ffffff" stroke="#595959" d="M582,-211.4C582,-211.4 318,-211.4 318,-211.4 312,-211.4 306,-205.4 306,-199.4 306,-199.4 306,-176.6 306,-176.6 306,-170.6 312,-164.6 318,-164.6 318,-164.6 582,-164.6 582,-164.6 588,-164.6 594,-170.6 594,-176.6 594,-176.6 594,-199.4 594,-199.4 594,-205.4 588,-211.4 582,-211.4"></path>
-<text text-anchor="middle" x="450" y="-192.8" font-family="Helvetica,sans-Serif" font-size="16.00">Scénarios</text>
-<text text-anchor="middle" x="450" y="-173.6" font-family="Helvetica,sans-Serif" font-size="16.00">(paramètres ajustables)</text>
-</g>
-<!-- S&#45;&gt;P -->
-<g id="edge2" class="edge">
-<title>S-&gt;P</title>
-<path fill="none" stroke="#dcdcdc" stroke-width="2" d="M407.38,-164.6C388.23,-154.54 365.53,-142.61 345.72,-132.2"></path>
-<polygon fill="#dcdcdc" stroke="#dcdcdc" stroke-width="2" points="346.73,-129.96 339.39,-128.88 344.45,-134.3 346.73,-129.96"></polygon>
-</g>
-<!-- O -->
-<g id="node4" class="node">
-<title>O</title>
-<path fill="#ffffff" stroke="#595959" d="M429,-46.6C429,-46.6 165,-46.6 165,-46.6 159,-46.6 153,-40.6 153,-34.6 153,-34.6 153,-11.8 153,-11.8 153,-5.8 159,0.2 165,0.2 165,0.2 429,0.2 429,0.2 435,0.2 441,-5.8 441,-11.8 441,-11.8 441,-34.6 441,-34.6 441,-40.6 435,-46.6 429,-46.6"></path>
-<text text-anchor="middle" x="297" y="-28" font-family="Helvetica,sans-Serif" font-size="16.00">Résultats</text>
-<text text-anchor="middle" x="297" y="-8.8" font-family="Helvetica,sans-Serif" font-size="16.00">comparables</text>
-</g>
-<!-- P&#45;&gt;O -->
-<g id="edge3" class="edge">
-<title>P-&gt;O</title>
-<path fill="none" stroke="#dcdcdc" stroke-width="2" d="M297,-82.2C297,-73.32 297,-62.98 297,-53.51"></path>
-<polygon fill="#dcdcdc" stroke="#dcdcdc" stroke-width="2" points="299.45,-53.48 297,-46.48 294.55,-53.48 299.45,-53.48"></polygon>
-</g>
-</g>
-</svg>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<div class="fragment">
-<p>👉 On change les paramètres, pas la logique.</p>
-</div>
-</section>
-<section id="robustesse-sensibilité-pas-certitude" class="slide level2" data-background-color="#1c1c1c">
-<h2>Robustesse = sensibilité (pas certitude)</h2>
-<p>Une analyse robuste ne “prouve” pas.</p>
-<div class="green">
-<p>Elle montre que la conclusion<br>
-tient <strong>dans une plage raisonnable de scénarios</strong>.</p>
-</div>
-</section>
-<section id="minitest-de-robustesse-à-faire-systématiquement" class="slide level2" data-background-color="#1c1c1c">
-<h2>Mini‑test de robustesse (à faire systématiquement)</h2>
-<div class="blue">
-<ul>
-<li class="fragment">changer 1 paramètre important</li>
-<li class="fragment">comparer la conclusion</li>
-<li class="fragment">si elle bascule, le dire</li>
-</ul>
-</div>
-<div class="fragment">
-<p>👉 Un résultat qui s’effondre au moindre réglage est fragile.</p>
-</div>
-</section>
-<section id="bonne-pratique-clé" class="slide level2" data-background-color="#1c1c1c">
-<h2>Bonne pratique clé</h2>
-<div class="green">
-<ul>
-<li class="fragment">documenter les hypothèses</li>
-<li class="fragment">isoler les paramètres</li>
-<li class="fragment">comparer plusieurs scénarios</li>
-</ul>
-</div>
-<div class="fragment">
-<p>👉 Une analyse devient un <strong>outil de discussion</strong>.</p>
-</div>
-</section>
-<section id="phrase-à-retenir-1" class="slide level2" data-background-color="#1c1c1c">
-<h2>Phrase à retenir</h2>
-<blockquote>
-<p><strong>Une analyse robuste n’est pas figée :<br>
-elle est paramétrée.</strong></p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<!-- BLOC: Bloc_3 20min -->
-</section></section>
-<section>
-<section id="bloc-3" class="title-slide slide level1 center" data-background-color="#ffffff">
-<h1>Bloc 3</h1>
-
-</section>
-<section id="comment-communiquer-une-analyse-à-des-nondata-scientists" class="slide level2 center" data-background-color="#2b4050">
-<h2>Comment communiquer une analyse à des non‑data scientists ?</h2>
-</section>
-<section id="problème-classique" class="slide level2" data-background-color="#1c1c1c">
-<h2>Problème classique</h2>
 <div class="red">
 <ul>
-<li class="fragment">trop de graphiques</li>
-<li class="fragment">trop de chiffres</li>
-<li class="fragment">trop de jargon</li>
+<li>trop de graphiques</li>
+<li>trop de chiffres</li>
+<li>trop de jargon</li>
 </ul>
 </div>
 <div class="fragment">
-<p>👉 Le message se perd.</p>
+<p>👉 le message se perd</p>
 </div>
 </section>
-<section id="intuition-1" class="slide level2" data-background-color="#1c1c1c">
+<section id="checklist-de-transmission-minimale" class="slide level2">
+<h2>Check‑list de transmission minimale</h2>
+<p><br></p>
+<p>Un autre doit pouvoir répondre à :</p>
+<div class="green">
+<ul>
+<li>Quelle était la question exacte ?</li>
+<li>Quelles données (version, période) ?</li>
+<li>Quelles règles clés / paramètres ?</li>
+<li>Quelle conclusion + dans quelles limites ?</li>
+</ul>
+</div>
+</section>
+<section id="intuition" class="slide level2">
 <h2>Intuition</h2>
 <p>La valeur d’une analyse ne dépend pas de :</p>
 <div class="red">
 <ul>
-<li class="fragment">la sophistication du modèle</li>
-<li class="fragment">le volume de code</li>
+<li>la sophistication du modèle</li>
+<li>le volume de code</li>
 </ul>
 </div>
 <div class="fragment green">
 <p>Elle dépend de la <strong>clarté du message transmis</strong>.</p>
 </div>
 </section>
-<section id="concept-clé-narration-analytique" class="slide level2" data-background-color="#1c1c1c">
-<h2>Concept clé : narration analytique</h2>
-<p>Communiquer une analyse, c’est raconter :</p>
-<div class="green">
-<ul>
-<li class="fragment">la question posée</li>
-<li class="fragment">les hypothèses retenues</li>
-<li class="fragment">les limites</li>
-<li class="fragment">les implications concrètes</li>
-</ul>
-</div>
-<div class="fragment">
-<p>👉 Pas le pipeline complet.</p>
-</div>
-</section>
-<section id="format-1-slide-décision-professionnel" class="slide level2" data-background-color="#1c1c1c">
-<h2>Format “1 slide décision” (professionnel)</h2>
-<p>Une bonne synthèse tient souvent sur :</p>
+<section id="format-professionnel" class="slide level2">
+<h2>Format professionnel</h2>
+<p>Une synthèse tient souvent sur une slide décision :</p>
 <div class="blue">
 <ul>
-<li class="fragment">1 phrase de conclusion</li>
-<li class="fragment">2–3 faits qui la soutiennent</li>
-<li class="fragment">1 encadré “hypothèses &amp; limites”</li>
-<li class="fragment">1 recommandation conditionnelle</li>
+<li>1 phrase de conclusion</li>
+<li>2–3 faits clés</li>
+<li>1 encadré “hypothèses &amp; limites”</li>
+<li>1 recommandation conditionnelle</li>
 </ul>
 </div>
 <div class="fragment">
 <p>👉 Tout le reste est en annexe.</p>
 </div>
 </section>
-<section id="ce-quil-faut-dire-explicitement" class="slide level2" data-background-color="#1c1c1c">
-<h2>Ce qu’il faut dire explicitement</h2>
-<p>Un non‑data veut surtout savoir :</p>
-<div class="blue">
-<ul>
-<li class="fragment"><em>À quel point on peut se fier à ce résultat ?</em></li>
-<li class="fragment"><em>Dans quelles conditions il ne tient plus ?</em></li>
-<li class="fragment"><em>Que fait‑on ensuite ?</em></li>
-</ul>
-</div>
-</section>
-<section id="analyse-comme-récit-structuré" class="slide level2" data-background-color="#1c1c1c">
-<h2>Analyse comme récit structuré</h2>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<svg width="960" height="480" viewbox="0.00 0.00 601.04 66.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 62)">
-<title>G</title>
-<!-- Q -->
-<g id="node1" class="node">
-<title>Q</title>
-<path fill="#ffffff" stroke="#595959" d="M68.06,-58C68.06,-58 11.98,-58 11.98,-58 5.98,-58 -0.02,-52 -0.02,-46 -0.02,-46 -0.02,-12 -0.02,-12 -0.02,-6 5.98,0 11.98,0 11.98,0 68.06,0 68.06,0 74.06,0 80.06,-6 80.06,-12 80.06,-12 80.06,-46 80.06,-46 80.06,-52 74.06,-58 68.06,-58"></path>
-<text text-anchor="middle" x="40.02" y="-24.2" font-family="Helvetica,sans-Serif" font-size="16.00">Question</text>
-</g>
-<!-- H -->
-<g id="node2" class="node">
-<title>H</title>
-<path fill="#ffffff" stroke="#595959" d="M204.77,-58C204.77,-58 127.8,-58 127.8,-58 121.8,-58 115.8,-52 115.8,-46 115.8,-46 115.8,-12 115.8,-12 115.8,-6 121.8,0 127.8,0 127.8,0 204.77,0 204.77,0 210.77,0 216.77,-6 216.77,-12 216.77,-12 216.77,-46 216.77,-46 216.77,-52 210.77,-58 204.77,-58"></path>
-<text text-anchor="middle" x="166.28" y="-24.2" font-family="Helvetica,sans-Serif" font-size="16.00">Hypothèses</text>
-</g>
-<!-- Q&#45;&gt;H -->
-<g id="edge1" class="edge">
-<title>Q-&gt;H</title>
-<path fill="none" stroke="#dcdcdc" stroke-width="2" d="M80.34,-29C89.29,-29 98.98,-29 108.49,-29"></path>
-<polygon fill="#dcdcdc" stroke="#dcdcdc" stroke-width="2" points="108.72,-31.45 115.72,-29 108.72,-26.55 108.72,-31.45"></polygon>
-</g>
-<!-- F -->
-<g id="node3" class="node">
-<title>F</title>
-<path fill="#ffffff" stroke="#595959" d="M342.06,-58C342.06,-58 264.34,-58 264.34,-58 258.34,-58 252.34,-52 252.34,-46 252.34,-46 252.34,-12 252.34,-12 252.34,-6 258.34,0 264.34,0 264.34,0 342.06,0 342.06,0 348.06,0 354.06,-6 354.06,-12 354.06,-12 354.06,-46 354.06,-46 354.06,-52 348.06,-58 342.06,-58"></path>
-<text text-anchor="middle" x="303.2" y="-24.2" font-family="Helvetica,sans-Serif" font-size="16.00">Faits établis</text>
-</g>
-<!-- H&#45;&gt;F -->
-<g id="edge2" class="edge">
-<title>H-&gt;F</title>
-<path fill="none" stroke="#dcdcdc" stroke-width="2" d="M216.76,-29C225.98,-29 235.7,-29 245.13,-29"></path>
-<polygon fill="#dcdcdc" stroke="#dcdcdc" stroke-width="2" points="245.28,-31.45 252.28,-29 245.28,-26.55 245.28,-31.45"></polygon>
-</g>
-<!-- L -->
-<g id="node4" class="node">
-<title>L</title>
-<path fill="#ffffff" stroke="#595959" d="M444.4,-58C444.4,-58 402.04,-58 402.04,-58 396.04,-58 390.04,-52 390.04,-46 390.04,-46 390.04,-12 390.04,-12 390.04,-6 396.04,0 402.04,0 402.04,0 444.4,0 444.4,0 450.4,0 456.4,-6 456.4,-12 456.4,-12 456.4,-46 456.4,-46 456.4,-52 450.4,-58 444.4,-58"></path>
-<text text-anchor="middle" x="423.22" y="-24.2" font-family="Helvetica,sans-Serif" font-size="16.00">Limites</text>
-</g>
-<!-- F&#45;&gt;L -->
-<g id="edge3" class="edge">
-<title>F-&gt;L</title>
-<path fill="none" stroke="#dcdcdc" stroke-width="2" d="M353.91,-29C363.46,-29 373.33,-29 382.51,-29"></path>
-<polygon fill="#dcdcdc" stroke="#dcdcdc" stroke-width="2" points="382.7,-31.45 389.7,-29 382.7,-26.55 382.7,-31.45"></polygon>
-</g>
-<!-- I -->
-<g id="node5" class="node">
-<title>I</title>
-<path fill="#ffffff" stroke="#595959" d="M581.28,-58C581.28,-58 504.32,-58 504.32,-58 498.32,-58 492.32,-52 492.32,-46 492.32,-46 492.32,-12 492.32,-12 492.32,-6 498.32,0 504.32,0 504.32,0 581.28,0 581.28,0 587.28,0 593.28,-6 593.28,-12 593.28,-12 593.28,-46 593.28,-46 593.28,-52 587.28,-58 581.28,-58"></path>
-<text text-anchor="middle" x="542.8" y="-24.2" font-family="Helvetica,sans-Serif" font-size="16.00">Implications</text>
-</g>
-<!-- L&#45;&gt;I -->
-<g id="edge4" class="edge">
-<title>L-&gt;I</title>
-<path fill="none" stroke="#dcdcdc" stroke-width="2" d="M456.66,-29C465.52,-29 475.39,-29 485.18,-29"></path>
-<polygon fill="#dcdcdc" stroke="#dcdcdc" stroke-width="2" points="485.28,-31.45 492.28,-29 485.28,-26.55 485.28,-31.45"></polygon>
-</g>
-</g>
-</svg>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<div class="fragment">
-<p>👉 Le code reste en annexe.</p>
-</div>
-</section>
-<section id="ce-quil-faut-éviter-vraiment" class="slide level2" data-background-color="#1c1c1c">
-<h2>Ce qu’il faut éviter (vraiment)</h2>
-<div class="red">
-<ul>
-<li class="fragment">raconter le notebook</li>
-<li class="fragment">“voici tous les graphes”</li>
-<li class="fragment">confondre précision et clarté</li>
-</ul>
-</div>
-<div class="fragment">
-<p>👉 Plus vous montrez, plus vous diluez.</p>
-</div>
-</section>
-<section id="phrase-à-retenir-2" class="slide level2" data-background-color="#1c1c1c">
-<h2>Phrase à retenir</h2>
-<blockquote>
-<p><strong>Une analyse qui ne peut pas être expliquée<br>
-simplement ne sera pas utilisée.</strong></p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<!-- BLOC: Demo 10min -->
-</section></section>
-<section>
-<section id="démo-livrable-pro-minimal" class="title-slide slide level1 center" data-background-color="#ffffff">
-<h1>Démo — Livrable pro minimal</h1>
-
-</section>
-<section id="démo-situation" class="slide level2" data-background-color="#1c1c1c">
-<h2>Démo — Situation</h2>
-<p>Votre responsable demande :</p>
-<div class="r-fit-text">
-<blockquote>
-<p>“J’ai 2 minutes. C’est quoi le message ?”</p>
-</blockquote>
-</div>
-<div class="fragment">
-<p>👉 Objectif : une synthèse <strong>décisionnelle</strong>.</p>
-</div>
-</section>
-<section id="démo-slide-décision-structure" class="slide level2" data-background-color="#1c1c1c">
-<h2>Démo — Slide décision (structure)</h2>
-<p>Une “slide décision” contient :</p>
-<div class="blue">
-<ul>
-<li class="fragment">Conclusion (1 phrase)</li>
-<li class="fragment">Faits (3 bullets max)</li>
-<li class="fragment">Hypothèses / limites (1 encadré)</li>
-<li class="fragment">Recommandation (conditionnelle)</li>
-</ul>
-</div>
-</section>
-<section id="démo-exemple-de-formulation" class="slide level2" data-background-color="#1c1c1c">
-<h2>Démo — Exemple de formulation</h2>
+<section id="exemple" class="slide level2">
+<h2>Exemple</h2>
 <div class="green">
 <p><strong>Conclusion :</strong> “L’indicateur X augmente sur 12 mois.”</p>
 </div>
 <div class="blue fragment">
 <p><strong>Faits :</strong></p>
 <ul>
-<li class="fragment">hausse régulière sur 4 trimestres</li>
-<li class="fragment">tendance stable sur plusieurs scénarios</li>
-<li class="fragment">pas de rupture détectée dans les données</li>
+<li>hausse régulière sur 4 trimestres</li>
+<li>tendance stable sur plusieurs scénarios</li>
+<li>pas de rupture détectée dans les données</li>
 </ul>
 </div>
 <div class="fragment red">
-<p><strong>Limites :</strong> “Résultat sensible à la définition de X (fenêtre 30j vs 90j).”</p>
+<p><strong>Limites :</strong> résultat sensible au paramètre Y.</p>
 </div>
 </section>
-<section id="démo-recommandation-conditionnelle" class="slide level2" data-background-color="#1c1c1c">
-<h2>Démo — Recommandation conditionnelle</h2>
-<p>Une recommandation pro ressemble à :</p>
-<div class="green">
-<p>“Si l’objectif est Y, alors on recommande A.<br>
-Si la contrainte Z s’impose, alors on recommande B.”</p>
-</div>
-<div class="fragment">
-<p>👉 L’analyse outille une décision : elle n’impose pas.</p>
+<section id="une-analyse-suit-généralement" class="slide level2">
+<h2>Une analyse suit généralement</h2>
+<ul>
+<li>Question</li>
+<li>Données</li>
+<li>Nettoyage</li>
+<li>Exploration</li>
+<li>Analyse</li>
+<li>Interprétation</li>
+<li>Communication</li>
+</ul>
+<div class="fragment green">
+<p>Une analyse de données est une <span class="green">enquête</span>.</p>
 </div>
 </section>
-<section id="exemple-mesurer-une-variabilité" class="slide level2" data-background-color="#1c1c1c">
-<h2>Exemple — Mesurer une variabilité</h2>
-<p>On observe une moyenne…<br>
-mais une moyenne seule peut être trompeuse.</p>
+<section id="la-question" class="slide level2">
+<h2>La question</h2>
+<p><br></p>
+<p>Une bonne question est :</p>
 <div class="blue">
 <ul>
-<li class="fragment">deux groupes peuvent avoir la même moyenne</li>
-<li class="fragment">mais des dispersions très différentes</li>
+<li>claire</li>
+<li>mesurable</li>
+<li>testable</li>
 </ul>
 </div>
+<p><br></p>
 <div class="fragment">
-<p>👉 L’écart-type sert à répondre à une question simple :</p>
+<p>Exemples :</p>
+</div>
+<div class="fragment red">
+<p>❌ “Les réseaux sociaux sont-ils mauvais ?”</p>
+</div>
+<div class="fragment green">
+<p>✔️ “Le temps passé sur Instagram est-il corrélé au sommeil chez les étudiants ?”</p>
 </div>
 </section>
-<section id="section" class="slide level2" data-background-color="#1c1c1c">
-<h2></h2>
-<div id="9d479d9c" class="cell" data-execution_count="1">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="index_files/figure-revealjs/cell-2-output-1.png" width="808" height="429"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="section-1" class="slide level2" data-background-color="#1c1c1c">
-<h2></h2>
-<div id="909daa03" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="index_files/figure-revealjs/cell-3-output-1.png" width="821" height="429"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="à-quoi-sert-lécart-type" class="slide level2" data-background-color="#1c1c1c">
-<h2>À quoi sert l’écart-type ?</h2>
-<div class="green">
-<p><strong>À mesurer à quel point les valeurs sont dispersées autour d’une moyenne.</strong></p>
-</div>
-<div class="fragment">
-<p>👉 Il ne “corrige” pas la moyenne, il en <strong>donne le contexte</strong>.</p>
-</div>
-</section>
-<section id="décision-permise-interdite" class="slide level2" data-background-color="#1c1c1c">
-<h2>Décision permise / interdite</h2>
+<section id="réalité-professionnelle" class="slide level2">
+<h2>Réalité professionnelle</h2>
+<p><br></p>
+<p>Avec le temps :</p>
 <div class="blue">
 <ul>
-<li class="fragment">écart-type faible → moyenne représentative</li>
-<li class="fragment">écart-type élevé → moyenne fragile</li>
+<li>les données évoluent</li>
+<li>les règles métier changent</li>
+<li>les indicateurs dérivent</li>
 </ul>
 </div>
+<p><br></p>
 <div class="fragment">
-<p>👉 La question n’est pas “comment le calculer”,<br>
-mais “peut-on raisonnablement résumer par une moyenne ?”</p>
+<p>👉 Une analyse figée devient fausse.</p>
 </div>
 </section>
-<section class="slide level2">
+<section id="robustesse" class="slide level2">
+<h2>Robustesse</h2>
+<p><br></p>
+<div class="r-fit-text">
+<p>Une analyse robuste ne “prouve” pas.</p>
+</div>
+<div class="green fragment Large">
+<p>Elle montre que la conclusion tient <strong>dans une plage raisonnable de scénarios</strong>.</p>
+</div>
+</section>
+<section id="test-simple" class="slide level2">
+<h2>Test simple</h2>
+<p><br><br></p>
+<p>Changer un paramètre important.</p>
+<p><br><br></p>
+<div class="fragment">
+<p>Si la conclusion bascule :</p>
+</div>
+<p><br><br></p>
+<div class="fragment red">
+<p>👉 le résultat est fragile.</p>
+</div>
+</section>
+<section id="bonne-pratique" class="slide level2">
+<h2>Bonne pratique</h2>
+<p><br></p>
+<div class="green">
+<ul>
+<li>documenter les hypothèses</li>
+<li>isoler les paramètres</li>
+<li>comparer les scénarios</li>
+</ul>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>👉 Une analyse devient un <strong>outil de discussion</strong>.</p>
+</div>
+</section>
+<section id="conclusion" class="slide level2">
+<h2>Conclusion</h2>
+<p><br></p>
+<p>Une bonne analyse :</p>
+<div class="green">
+<ul>
+<li>éclaire une décision</li>
+<li>explicite ses limites</li>
+<li>reste compréhensible par d’autres</li>
+</ul>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>👉 elle ne remplace jamais la décision humaine.</p>
+</div>
+</section>
+<section id="a-retenir" class="slide level2">
+<h2>A retenir</h2>
+<p><br><br></p>
+<div class="r-fit-text">
+<p>Une analyse robuste n’est pas figée</p>
+<p><span class="blue fragment">elle est paramétrée.</span></p>
+</div>
+</section>
+<section id="pause-1" class="slide level2">
+<h2>Pause</h2>
+<div class="chrono">
+  <canvas class="chrono_canvas" width="1000" height="600"></canvas>
 
+  <div class="row">
+    <div class="parameter">
+      <button class="chrono_play">▶</button>
+      <button class="chrono_reset">↩</button>
+
+      <label class="duration">
+        <input class="chrono_min" type="number" value="5">
+        <span>min</span>
+        <input class="chrono_sec" type="number" value="0">
+        <span>s</span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- /BLOC -->
+<!-- BLOC: Bloc_3 DEMO -->
+</section>
+<section id="bloc-3" class="slide level2 bloc" data-name="Bloc 3">
+<h2>Bloc 3</h2>
+</section>
+<section id="les-jeux-vidéo-rendent-ils-violents" class="slide level2 question">
+<h2>Les jeux vidéo rendent-ils violents ?</h2>
+</section>
+<section id="petite-démo-sur-une-question-dactualité" class="slide level2">
+<h2>Petite démo sur une question d’actualité</h2>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<h3 id="dataset-1"><span class="blue">Dataset 1</span></h3>
+<div class="green">
+<p>Ventes de jeux videos de 1990 à 2016</p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>Pour chaque jeu répertorié on a :</p>
+</div>
+<div class="yellow">
+<ul>
+<li>titre, plateforme, genre</li>
+<li>année de publication</li>
+<li>ventes locales et globales</li>
+<li>note, etc</li>
+</ul>
+</div>
+</div><div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<h3 id="dataset-2"><span class="blue">Dataset 2</span></h3>
+<div class="green">
+<p>Taux d’homicide en France de 1990 à 2021</p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>Pour chaque année on a :</p>
+</div>
+<div class="yellow fragment">
+<p>le taux d’homicide pour 100 000 habitants</p>
+<p>variant globalement entre 1 et 3</p>
+</div>
+</div></div>
+</div>
+</section>
+<section id="dataset-1-1" class="slide level2">
+<h2>Dataset 1</h2>
+
+<img data-src="content/image/murder_rate.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Taux d’homicide en France pour 100 000 habitants</p></section>
+<section id="dataset-2-1" class="slide level2">
+<h2>Dataset 2</h2>
+
+<img data-src="content/image/game_by_gender.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Fréquence de publication des jeux selon l’année et le genre</p></section>
+<section id="dataset-2-2" class="slide level2">
+<h2>Dataset 2</h2>
+
+<img data-src="content/image/game_genre_count.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Fréquence de publication des jeux</p></section>
+<section id="dataset-2-3" class="slide level2">
+<h2>Dataset 2</h2>
+
+<img data-src="content/image/game_gender_pondered.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Fréquence de publication des jeux pondérée par leur vente</p></section>
+<section id="dataset-2-4" class="slide level2">
+<h2>Dataset 2</h2>
+
+<img data-src="content/image/game_fitting.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Modélisation par ajustement polynomial de la ventes de jeux d’action</p></section>
+<section id="recherche-dune-corrélation" class="slide level2">
+<h2>Recherche d’une corrélation</h2>
+
+<img data-src="content/image/game_vs_murder.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Comparaison vente de jeux d’action vs taux d’homicide</p><div class="fragment diag_text HUGEE confetti">
+<p>-0.68</p>
+</div>
+</section>
+<section id="rappel" class="slide level2">
+<h2>Rappel</h2>
+<p>Le <code>coefficient de corrélation</code> est une mesure statistique qui indique <code>la force et le sens du lien entre deux variables</code>.</p>
+<div class="blue">
+<ul>
+<li><span class="math inline">\(=0\)</span> <span class="glyph arrow" style="font-size:1.2em;"></span> aucune corrélations</li>
+<li><span class="math inline">\(&gt;0\)</span> <span class="glyph arrow" style="font-size:1.2em;"></span> corrélation positive (les deux variables évoluent dans le même sens)</li>
+<li><span class="math inline">\(&lt;0\)</span> <span class="glyph arrow" style="font-size:1.2em;"></span> corrélation négative (les variables évoluent en sens opposé)</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Nous avons trouvé :</p>
+<p><span class="math display">\[
+r = -0.68
+\]</span></p>
+</div>
+<div class="fragment">
+<p>Cela indique une <strong>corrélation négative modérée à forte</strong> :</p>
+<div class="green">
+<ul>
+<li>lorsque les ventes de jeux <strong>augmentent</strong>,</li>
+<li>le taux d’homicide tend à <strong>diminuer</strong>.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="pour-finir" class="slide level2">
+<h2>Pour finir</h2>
+<p>Le résultat obtenu ne constitue pas une preuve <strong><span class="green">certaine</span></strong>.</p>
+<p>Plusieurs <strong><span class="red">limites importantes</span></strong> doivent être prises en compte dans cette analyse :</p>
+<div class="blue">
+<ul>
+<li>les datasets de jeux vidéo ne sont pas exhaustifs</li>
+<li>les ventes mondiales ne correspondent pas forcément aux ventes en France</li>
+<li>il n’y a aucune indication du niveau de violence des jeux</li>
+<li>la corrélation ne signifie pas causalité</li>
+<li>d’autres facteurs sociaux, économiques ou politiques peuvent influencer le taux d’homicide</li>
+<li>les deux variables évoluent avec le temps, ce qui peut produire une corrélation artificielle</li>
+</ul>
+</div>
+<div class="fragment">
+<blockquote>
+<p>Une corrélation observée, mais aucune causalité démontrée.</p>
+</blockquote>
+</div>
+</section>
+<section id="position-scientifique-actuelle-résumé" class="slide level2">
+<h2>Position scientifique actuelle (résumé)</h2>
+<p><br><br></p>
+<p>La position la plus courante aujourd’hui est :</p>
+<div class="green">
+<ul>
+<li>les jeux vidéo peuvent améliorer l’humeur</li>
+<li>certaines expériences montrent de légers effets sur l’agressivité</li>
+<li>mais il n’existe pas de preuve solide d’un lien avec la violence réelle ou la criminalité</li>
+</ul>
+</div>
+<p><br></p>
+<div class="blue fragment">
+<p>Certaines études observent aussi une corrélation négative entre jeux vidéo et criminalité, mais la recherche actuelle ne montre <code>aucun lien causal clair</code> entre jeux vidéo et violence réelle.</p>
+</div>
+</section>
+<section id="pause-2" class="slide level2">
+<h2>Pause</h2>
+<div class="chrono">
+  <canvas class="chrono_canvas" width="1000" height="600"></canvas>
+
+  <div class="row">
+    <div class="parameter">
+      <button class="chrono_play">▶</button>
+      <button class="chrono_reset">↩</button>
+
+      <label class="duration">
+        <input class="chrono_min" type="number" value="2">
+        <span>min</span>
+        <input class="chrono_sec" type="number" value="0">
+        <span>s</span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- /BLOC -->
+<!-- BLOC: Bloc_4 IMPORTANCE AUJOURDHUI -->
+</section>
+<section id="bloc-4" class="slide level2 bloc" data-name="Bloc 4">
+<h2>Bloc 4</h2>
+</section>
+<section id="ouais-mais-aujourdhui-il-y-a-lia-non" class="slide level2 question">
+<h2>Ouais mais… aujourd’hui il y a l’<code>IA</code>, non ?</h2>
+</section>
+<section id="lia-est-une-machine-de-synthèse" class="slide level2">
+<h2>L’IA est une machine de synthèse</h2>
+<div class="fragment green">
+<p>et par là, un formidable outil pour le data scientist</p>
+</div>
+<p><br></p>
+<div class="red fragment Large">
+<p>Mais</p>
+</div>
+<p><br></p>
+<ul>
+<li>Elle peut halluciner,</li>
+<li>Etre entrainée sur des données fausses ou biaisées</li>
+<li>Elle ne sait pas où elle va</li>
+</ul>
+<p><br></p>
+<div class="fragment">
+<blockquote>
+<p>L’humain, ingénieur ou juste citoyen, reste maître de l’information.</p>
+</blockquote>
+</div>
+</section>
+<section id="ce-qui-reste-humain" class="slide level2">
+<h2>Ce qui reste humain</h2>
+<div class="fragment green">
+<p>L’IA produit des réponses.</p>
+</div>
+<p><br></p>
+<div class="red fragment Large">
+<p>Mais</p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>Mais seul l’humain peut :</p>
+</div>
+<div class="blue">
+<ul>
+<li>poser la bonne question</li>
+<li>vérifier les sources</li>
+<li>interpréter les résultats</li>
+<li>décider quoi en faire</li>
+</ul>
+</div>
+<div class="fragment">
+<blockquote>
+<p>L’analyse reste une compétence humaine.</p>
+</blockquote>
+</div>
+</section>
+<section id="le-problème-aujourdhui-linformation" class="slide level2">
+<h2>Le problème aujourd’hui : l’information</h2>
+<p><br></p>
+<div class="fragment">
+<p>Nous vivons dans un monde où :</p>
+</div>
+<div class="blue">
+<ul>
+<li>l’information est abondante</li>
+<li>les chiffres circulent partout</li>
+<li>les graphiques influencent l’opinion</li>
+</ul>
+</div>
+<p><br></p>
+<div class="red fragment Large">
+<p>Mais</p>
+</div>
+<p><br></p>
+<div class="fragment">
+<blockquote>
+<p>beaucoup d’informations sont mal interprétées.</p>
+</blockquote>
+</div>
+</section>
+<section id="conspirationnisme" class="slide level2">
+<h2>Conspirationnisme</h2>
+<p><br></p>
+<div class="fragment">
+<p>Les théories complotistes utilisent souvent :</p>
+</div>
+<div class="blue">
+<ul>
+<li>des chiffres isolés</li>
+<li>des corrélations trompeuses</li>
+<li>des graphiques hors contexte</li>
+</ul>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>Sans esprit critique :</p>
+</div>
+<div class="fragment">
+<blockquote>
+<p>les données peuvent être manipulées.</p>
+</blockquote>
+</div>
+</section>
+<section id="démocratie-et-le-devoir-de-sinformer-et-de-vérifier-linformation" class="slide level2">
+<h2>Démocratie et le devoir de s’informer et de vérifier l’information</h2>
+<p><br></p>
+<p>Dans une démocratie :</p>
+<div class="blue">
+<ul>
+<li>les citoyens prennent des décisions</li>
+<li>ces décisions reposent sur l’information</li>
+</ul>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>Donc :</p>
+</div>
+<div class="fragment">
+<blockquote>
+<p>savoir lire et analyser des données est une compétence civique.</p>
+<p><span class="fragment green">L’analyse est aussi un outil citoyen.</span></p>
+</blockquote>
+</div>
+</section>
+<section id="osint-open-source-intelligence" class="slide level2">
+<h2>OSINT : Open Source Intelligence</h2>
+<p>Utiliser des sources publiques pour :</p>
+<div class="blue">
+<ul>
+<li>vérifier une information</li>
+<li>analyser un événement</li>
+<li>reconstruire des faits</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Exemples :</p>
+</div>
+<div class="green">
+<ul>
+<li>images satellites</li>
+<li>vidéos</li>
+<li>réseaux sociaux</li>
+<li>données publiques</li>
+</ul>
+</div>
+</section>
+<section id="osint-un-exemple" class="slide level2">
+<h2>OSINT : un exemple</h2>
+<p>NASA Fire Information for Resource Management System (FIRMS)</p>
+
+<img data-src="content/image/ukraine.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">NASA thermal anomalies Feb-Nov 2022</p></section>
+<section id="conclusion-du-cours" class="slide level2">
+<h2>Conclusion du cours</h2>
+<p><br></p>
+<div class="Large">
+<p>Comprendre les données n’est pas seulement une compétence technique.</p>
+</div>
+<p><br></p>
+<div class="fragment Large blue">
+<p>C’est une compétence intellectuelle…</p>
+</div>
+<p><br></p>
+<div class="fragment Large green">
+<p>et parfois civique.</p>
+</div>
+<!-- /BLOC -->
 <!-- BLOC: Conclusion 5min -->
-</section></section>
-<section>
-<section id="conclusion" class="title-slide slide level1 center" data-background-color="#ffffff">
-<h1>Conclusion</h1>
-
 </section>
-<section id="synthèse" class="slide level2" data-background-color="#1c1c1c">
+<section id="conclusion-1" class="slide level2 bloc" data-name="Conclusion">
+<h2>Conclusion</h2>
+</section>
+<section id="synthèse" class="slide level2">
 <h2>Synthèse</h2>
 <div class="blue">
 <ul>
-<li class="fragment">Une analyse est un <strong>artefact collectif</strong></li>
-<li class="fragment">Elle doit être <strong>robuste au changement</strong></li>
-<li class="fragment">Elle doit être <strong>compréhensible hors du notebook</strong></li>
+<li>Une analyse est un <strong>artefact collectif</strong></li>
+<li>Elle doit être <strong>robuste au changement</strong></li>
+<li>Elle doit être <strong>compréhensible hors du notebook</strong></li>
 </ul>
 </div>
 </section>
-<section id="règle-dor-prospective" class="slide level2" data-background-color="#1c1c1c">
-<h2>Règle d’or (prospective)</h2>
+<section id="rappel-1" class="slide level2">
+<h2>Rappel</h2>
+<p>Semaine prochaine, vous devrez faire une présentation pour le projet 2</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Nombre de pages</strong></th>
+<th><strong>Présentation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Monôme</td>
+<td>5</td>
+<td>5 minutes</td>
+</tr>
+<tr class="even">
+<td>Binôme</td>
+<td>7–8</td>
+<td>7 minutes</td>
+</tr>
+<tr class="odd">
+<td>Trinôme</td>
+<td>9–10</td>
+<td>10 minutes</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
-<p><strong>Une bonne analyse ne répond pas seulement à la question d’aujourd’hui :<br>
-elle prépare les questions de demain.</strong></p>
+<p>Ces temps sont indicatifs, l’important c’est</p>
+<ul>
+<li>de présenter la question</li>
+<li>expliquer rapidement l’analyse</li>
+<li>expliciter la conclusion</li>
+</ul>
 </blockquote>
 </section>
-<section id="et-après" class="slide level2" data-background-color="#1c1c1c">
-<h2>Et après ?</h2>
-<p>Dans la suite :</p>
-<div class="blue">
-<ul>
-<li class="fragment">transformer une analyse en livrable pro</li>
-<li class="fragment">séparer notebook / rapport / décision</li>
-<li class="fragment">simuler des revues critiques (“et si… ?”)</li>
-</ul>
+<section id="règle-dor" class="slide level2">
+<h2>Règle d’or</h2>
+<p><br></p>
+<div class="blue r-fit-text">
+<p>La science et l’analyse ne servent pas seulement</p>
+<p>à produire des réponses.</p>
 </div>
-<div class="fragment">
-<p>👉 Objectif : penser comme un <strong>data scientist professionnel</strong>, pas comme un exécutant.</p>
+<p><br></p>
+<div class="fragment Large">
+<p>Elle servent aussi à comprendre le monde.</p>
 </div>
+</section>
+<section id="section-4" class="slide level2 slide_black">
+<h2></h2>
+<p><span class="green large">Nothing in life is to be feared, it is only to be understood.</span></p>
+<p><span class="gray_1">Rien dans la vie n’est à craindre, tout est à comprendre.</span></p>
+<p>— Marie Curie</p>
 
 
-</section></section>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -888,7 +1315,7 @@ elle prépare les questions de demain.</strong></p>
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': false,
+'controlsAuto': true,
 'previewLinksAuto': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
@@ -899,11 +1326,11 @@ elle prépare les questions de demain.</strong></p>
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: true,
+        controls: false,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: true,
+        controlsTutorial: false,
 
         // Determines where controls appear, "edges" or "bottom-right"
         controlsLayout: 'edges',
@@ -916,14 +1343,14 @@ elle prépare les questions de demain.</strong></p>
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: 'c/t',
+        slideNumber: false,
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
-        hash: false,
+        hash: true,
 
         // Start with 1 for the hash rather than 0
         hashOneBasedIndex: false,
@@ -932,7 +1359,7 @@ elle prépare les questions de demain.</strong></p>
         respondToHashChanges: true,
 
         // Push each slide change to the browser history
-        history: false,
+        history: true,
 
         // Enable keyboard shortcuts for navigation
         keyboard: true,
@@ -984,7 +1411,7 @@ elle prépare les questions de demain.</strong></p>
         showNotes: false,
 
         // Global override for autoplaying embedded media (null/true/false)
-        autoPlayMedia: true,
+        autoPlayMedia: null,
 
         // Global override for preloading lazy-loaded iframes (null/true/false)
         preloadIframes: null,
@@ -1074,6 +1501,17 @@ elle prépare les questions de demain.</strong></p>
           RevealZoom
         ]
       });
+    </script>
+    <script type="ojs-module-contents">
+    eyJjb250ZW50cyI6W119
+    </script>
+    <script type="module">
+    if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+    window._ojs.paths.runtimeToDoc = "../../assets/bigdata/CM/CM4";
+    window._ojs.paths.runtimeToRoot = "../..";
+    window._ojs.paths.docToRoot = "../../../..";
+    window._ojs.selfContained = false;
+    window._ojs.runtime.interpretFromScriptTags();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {

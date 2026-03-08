@@ -875,221 +875,599 @@
     "text": "En clair\n\nCe que j’attends, c’est le cheminement\n\n\nQuestion → Données → Analyse → Informations → Connaissance"
   },
   {
-    "objectID": "assets/syntheseimage/index.html",
-    "href": "assets/syntheseimage/index.html",
-    "title": "Synthèse d’Images par Rendu Inverse",
+    "objectID": "assets/bigdata/CM/CM4/content/project/project.html",
+    "href": "assets/bigdata/CM/CM4/content/project/project.html",
+    "title": "Start",
+    "section": "",
+    "text": "Import libs and datasets\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom scipy.stats import lognorm\n\ndf_game = pd.read_csv(\"video_game.csv\")\ndf_murder = pd.read_csv(\"france_murder.csv\")"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/content/project/project.html#analyse-murder-rate",
+    "href": "assets/bigdata/CM/CM4/content/project/project.html#analyse-murder-rate",
+    "title": "Start",
+    "section": "## Analyse murder rate",
+    "text": "## Analyse murder rate\n\nprint(df_murder.head())\n\n   Unnamed: 0  Murder/Homicide Rate\n0        1990                  2.40\n1        1991                  2.39\n2        1992                  2.36\n3        1993                  2.66\n4        1994                  2.46\n\n\n\nm_year = df_murder[\"Unnamed: 0\"]\nm_murder = df_murder[\"Murder/Homicide Rate\"]\n\n\nimport matplotlib.pyplot as plt\n\nfig, ax = plt.subplots()\n\nax.plot(m_year, m_murder, color=\"black\")\nax.fill_between(m_year, m_murder, 1, alpha=0.3, color=\"white\")\n\n# axes blancs\nax.tick_params(colors=\"black\")\nax.xaxis.label.set_color(\"black\")\nax.yaxis.label.set_color(\"black\")\n\n# bordures blanches\nfor spine in ax.spines.values():\n    spine.set_color(\"white\")\n\nax.set_xlim(1990, 2021)\nax.set_ylim(1, 2.7)\n\nax.grid(alpha=0.25)\n\n# fond transparent\nfig.patch.set_alpha(0)\n\n#plt.savefig(\"../image/murder_rate.png\", dpi=300, transparent=True)\nplt.show()"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/content/project/project.html#analyse-video-games",
+    "href": "assets/bigdata/CM/CM4/content/project/project.html#analyse-video-games",
+    "title": "Start",
+    "section": "## Analyse Video games",
+    "text": "## Analyse Video games\n\nprint(df_game.head())\n\n                       Name Platform  Year_of_Release         Genre Publisher  \\\n0                Wii Sports      Wii           2006.0        Sports  Nintendo   \n1         Super Mario Bros.      NES           1985.0      Platform  Nintendo   \n2            Mario Kart Wii      Wii           2008.0        Racing  Nintendo   \n3         Wii Sports Resort      Wii           2009.0        Sports  Nintendo   \n4  Pokemon Red/Pokemon Blue       GB           1996.0  Role-Playing  Nintendo   \n\n   NA_Sales  EU_Sales  JP_Sales  Other_Sales  Global_Sales  Critic_Score  \\\n0     41.36     28.96      3.77         8.45         82.53          76.0   \n1     29.08      3.58      6.81         0.77         40.24           NaN   \n2     15.68     12.76      3.79         3.29         35.52          82.0   \n3     15.61     10.93      3.28         2.95         32.77          80.0   \n4     11.27      8.89     10.22         1.00         31.37           NaN   \n\n   Critic_Count User_Score  User_Count Developer Rating  \n0          51.0          8       322.0  Nintendo      E  \n1           NaN        NaN         NaN       NaN    NaN  \n2          73.0        8.3       709.0  Nintendo      E  \n3          73.0          8       192.0  Nintendo      E  \n4           NaN        NaN         NaN       NaN    NaN  \n\n\n\ndf_game = df_game.dropna(subset=[\"Year_of_Release\"])\n\nv_year = df_game[\"Year_of_Release\"].astype(int)\nv_genre = df_game[\"Genre\"]\n\nv_freq = pd.crosstab(v_year, v_genre)\n\n\nfig, ax = plt.subplots()\n\nv_freq.plot.bar(stacked=True, ax=ax)\n\nax.set_xlabel(\"Year\", color=\"white\")\nax.set_ylabel(\"Number of games\", color=\"white\")\nplt.xticks(rotation=0)\n# espacer les années\nax.set_xticks(range(0, len(v_freq.index), 5))\nax.set_xticklabels(v_freq.index[::5])\n\nax.tick_params(colors=\"white\")\n\nfor spine in ax.spines.values():\n    spine.set_color(\"white\")\n\nax.grid(alpha=0.25)\n\nfig.patch.set_alpha(0)\n\n#plt.savefig(\"../image/game_by_gender.png\", dpi=300, transparent=True)\nplt.show()\n\n\n\n\n\n\n\n\n\ngenres_wanted = [\"Action\", \"Fighting\", \"Shooter\"]\n\ndf_filtered = df_game[df_game[\"Genre\"].isin(genres_wanted)].copy()\ndf_filtered[\"Year_of_Release\"] = df_filtered[\"Year_of_Release\"].astype(\"Int64\")\n\nfreq = pd.crosstab(df_filtered[\"Year_of_Release\"], df_filtered[\"Genre\"])\nfreq = freq.loc[1990:2015]\n\n\nimport matplotlib.pyplot as plt\n\nfig, ax = plt.subplots()\n\nfreq.plot.bar(stacked=True, ax=ax)\n\nax.set_xlabel(\"Year\", color=\"white\")\nax.set_ylabel(\"Number of games\", color=\"white\")\n\n# espacer les années\nax.set_xticks(range(0, len(freq.index), 5))\nax.set_xticklabels(freq.index[::5], rotation=0)\n\n# couleur des ticks\nax.tick_params(colors=\"white\")\n\n# bordures\nfor spine in ax.spines.values():\n    spine.set_color(\"white\")\n\nax.grid(alpha=0.25)\n\n# fond transparent\nfig.patch.set_alpha(0)\nax.set_facecolor(\"none\")\n\nplt.savefig(\"../image/game_genre_count.png\", dpi=300, transparent=True)\n\nplt.show()\n\n\n\n\n\n\n\n\n\ngenres_wanted = [\"Action\", \"Fighting\", \"Shooter\"]\ndf_filtered = df_game[df_game[\"Genre\"].isin(genres_wanted)]\n\nyear = df_filtered[\"Year_of_Release\"].astype(int)\ngenre = df_filtered[\"Genre\"]\n\nfreq = pd.crosstab(year, genre)\nsales_by_genre = df_filtered.groupby([year, genre])[\"Global_Sales\"].sum().unstack(fill_value=0)\nsales_by_genre = sales_by_genre.loc[1990:2015]\n\n\nimport matplotlib.pyplot as plt\n\nfig, ax = plt.subplots()\n\nsales_by_genre.plot.bar(stacked=True, ax=ax)\n\nax.set_xlabel(\"Year\", color=\"white\")\nax.set_ylabel(\"Global sales\", color=\"white\")\n\n# espacer les années\nax.set_xticks(range(0, len(sales_by_genre.index), 5))\nax.set_xticklabels(sales_by_genre.index[::5], rotation=0)\n\n# ticks blancs\nax.tick_params(colors=\"white\")\n\n# bordures blanches\nfor spine in ax.spines.values():\n    spine.set_color(\"white\")\n\nax.grid(alpha=0.25)\n\n# fond transparent\nfig.patch.set_alpha(0)\n\nplt.savefig(\"../image/game_gender_pondered.png\", dpi=300, transparent=True)\nplt.show()\n\n\n\n\n\n\n\n\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# données\ny = sales_by_genre[genres_wanted].sum(axis=1)\nx = sales_by_genre.index.astype(int)\n\n# fit polynomial\ncoef = np.polyfit(x, y, deg=4)\npoly = np.poly1d(coef)\n\ny_fit = poly(x)\n\nfig, ax = plt.subplots()\n\nax.plot(x, y, \"o\", label=\"Data\", color=\"white\")\nax.plot(x, y_fit, label=\"Polynomial fit (deg 4)\", color=\"blue\")\n\nax.set_xlabel(\"Year\", color=\"white\")\nax.set_ylabel(\"Global Sales\", color=\"white\")\n\n# espacer les années\nax.set_xticks(x[::5])\nax.set_xticklabels(x[::5], rotation=0)\n\n# ticks blancs\nax.tick_params(colors=\"white\")\n\n# bordures blanches\nfor spine in ax.spines.values():\n    spine.set_color(\"white\")\n\nax.grid(alpha=0.25)\n\nax.legend()\n\n# fond transparent\nfig.patch.set_alpha(0)\n\nplt.savefig(\"../image/game_fitting.png\", dpi=300, transparent=True)\nplt.show()\n\n\ny_fit = pd.Series(poly(x), index=x)\nmurder_series = df_murder.set_index(\"Unnamed: 0\")[\"Murder/Homicide Rate\"]\nmurder_series.index = murder_series.index.astype(int)\n\ncommon_years = y_fit.index.intersection(murder_series.index)\n\nsales_aligned = y_fit.loc[common_years]\nmurder_aligned = murder_series.loc[common_years]\ncorr = sales_aligned.corr(murder_aligned)\nprint(corr)\n\n\nimport matplotlib.pyplot as plt\n\nfig, ax1 = plt.subplots()\n\n# ventes (fit)\nax1.plot(common_years, sales_aligned, color=\"blue\", linewidth=2, label=\"Game sales fit\")\nax1.set_xlabel(\"Year\", color=\"white\")\nax1.set_ylabel(\"Global Sales\", color=\"white\")\n\n# axe homicide\nax2 = ax1.twinx()\nax2.plot(common_years, murder_aligned, color=\"white\", linestyle=\"--\", linewidth=2, label=\"Murder rate\")\nax2.fill_between(common_years, murder_aligned, 1, alpha=0.3, color=\"white\")\nax2.set_ylabel(\"Murder/Homicide Rate\", color=\"white\")\n\n# ticks blancs\nax1.tick_params(colors=\"white\")\nax2.tick_params(colors=\"white\")\n\n# bordures blanches\nfor spine in ax1.spines.values():\n    spine.set_color(\"white\")\nfor spine in ax2.spines.values():\n    spine.set_color(\"white\")\n\n# espacer les années\nax1.set_xticks(common_years[::5])\n\n# grille\nax1.grid(alpha=0.25)\n\n# fond transparent\nfig.patch.set_alpha(0)\n\nplt.savefig(\"../image/game_vs_murder.png\", dpi=300, transparent=True)\nplt.show()"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#synthèse-dimages-par-rendu-inverse",
+    "href": "assets/syntheseimage/CM/CM1/index.html#synthèse-dimages-par-rendu-inverse",
+    "title": "Teaching",
+    "section": "Synthèse d’Images par Rendu Inverse",
+    "text": "Synthèse d’Images par Rendu Inverse\nCM1: Une image vaut mille mots (ou inversement)"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#une-image-vaut-mille-mots",
+    "href": "assets/syntheseimage/CM/CM1/index.html#une-image-vaut-mille-mots",
+    "title": "Teaching",
+    "section": "Une image vaut mille mots",
+    "text": "Une image vaut mille mots\n(ou l’inverse)\n\nUne image montre.\n\n\nMais comprend-on ce qu’elle contient ?\n\n\nEst-ce qu’une image décrit le monde ?\n\n\nOu est-ce que nous projetons un monde dans l’image ?"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#voir-cest-inférer",
+    "href": "assets/syntheseimage/CM/CM1/index.html#voir-cest-inférer",
+    "title": "Teaching",
+    "section": "Voir, c’est inférer",
+    "text": "Voir, c’est inférer\nUne image est la projection d’un monde latent.\n\n\nlatent : caché, non observable directement"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#mise-en-situation",
+    "href": "assets/syntheseimage/CM/CM1/index.html#mise-en-situation",
+    "title": "Teaching",
+    "section": "Mise en situation",
+    "text": "Mise en situation\n\nVous êtes ingénieur Computer Graphics.\n\n\nVotre ami journaliste vous demande de lui faire (gratuitement) un petit pipeline pour présenter à son redacteur en chef des reportages plus immersifs.\n\n\n\n\nIl n’a que son appareil photo\n\n\n\n\n Que faites vous ?"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#objectif",
+    "href": "assets/syntheseimage/CM/CM1/index.html#objectif",
+    "title": "Teaching",
+    "section": "🎯 Objectif",
+    "text": "🎯 Objectif\nÀ partir de photos prises avec un appareil classique\n\n produire une scène interactive consultable dans un navigateur.\n\n\nDonc :\n\n\npas d’app spéciale lecteur\npartage par lien\nmarche sur mobile & desktop & multi-OS\nassez “WoW” pour convaincre un rédacteur en chef\n\n\n\n\n🧭 Pipeline minimal viable\n\n👉 Photogrammétrie  nettoyage  export web  intégration Web"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#exemple",
+    "href": "assets/syntheseimage/CM/CM1/index.html#exemple",
+    "title": "Teaching",
+    "section": "Exemple",
+    "text": "Exemple"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#fil-directeur-2d-3d-continu",
+    "href": "assets/syntheseimage/CM/CM1/index.html#fil-directeur-2d-3d-continu",
+    "title": "Teaching",
+    "section": "Fil directeur (2D  3D  continu)",
+    "text": "Fil directeur (2D  3D  continu)\n\ndirection: right\n\nstyle: {\n  fill: transparent\n}\n\n\nbloc_1: {\n  shape: rectangle\n  label: \"CM1/TP1\\nSynthèse 2D\\n(image → image)\"\n  width: 175\n  height: 100\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\nbloc_2: {\n  shape: rectangle\n  label: \"CM2-CM3/TP2\\nPhotogrammétrie\\n(image → structure 3D)\"\n  width: 175\n  height: 100\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\nbloc_3: {\n  shape: rectangle\n  label: \"CM4-CM5/TP3\\nStructures continues\\n& comparaisons\"\n  width: 175\n  height: 100\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\nbloc_4: {\n  shape: rectangle\n  label: CM5\\nSynthèse d'images\\n(structure → image)\"\n  width: 175\n  height: 100\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\n\nbloc_1 -&gt; bloc_2: {\n  style: {\n    stroke: \"#fff\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\n\nbloc_2 -&gt; bloc_3: {\n  style: {\n    stroke: \"#fff\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\nbloc_3 -&gt; bloc_4: {\n  style: {\n    stroke: \"#fff\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\n\n\nEt on essayera de faire chacun notre propre numérisation !"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#examen",
+    "href": "assets/syntheseimage/CM/CM1/index.html#examen",
+    "title": "Teaching",
+    "section": "Examen",
+    "text": "Examen\n\n\nLes TP introduisent les questions conceptuelles du cours.\nL’examen vérifie que vous avez compris ces questions, pas que vous avez refait les TP.\n\n\n\nCompétences acquisent :\n\n\n\nCompréhension conceptuelle du rendu inverse et des représentations\nNumérisation de petits objets\nCréation d’un portefolio"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#méthode-de-pensée-du-cours",
+    "href": "assets/syntheseimage/CM/CM1/index.html#méthode-de-pensée-du-cours",
+    "title": "Teaching",
+    "section": "Méthode de pensée du cours",
+    "text": "Méthode de pensée du cours\n\nOn va progresser par besoin de structure :\n\n\nEn 2D, on “triche” intelligemment : on manipule l’image.\nPuis on se heurte à des limites  on introduit la 3D (photogrammétrie).\nPuis on compare des représentations modernes pour le rendu.\n\n\n\n\n👉 Aujourd’hui : borne basse = image  image."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#sortie-attendue-à-la-fin-du-cm1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#sortie-attendue-à-la-fin-du-cm1",
+    "title": "Teaching",
+    "section": "Sortie attendue à la fin du CM1",
+    "text": "Sortie attendue à la fin du CM1\n\nVous devez pouvoir répondre à :\n\n\nQu’est-ce que “rendu inverse” dans notre sens ?\nPourquoi l’inversion est mal posée ?\nQu’est-ce qu’on peut déjà faire en 2D (sans 3D) ?\nQuels artefacts sont structurels (donc inévitables en 2D) ?"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#bloc-1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#bloc-1",
+    "title": "Teaching",
+    "section": "BLOC 1",
+    "text": "BLOC 1"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#quest-ce-que-le-rendu-inverse",
+    "href": "assets/syntheseimage/CM/CM1/index.html#quest-ce-que-le-rendu-inverse",
+    "title": "Teaching",
+    "section": "Qu’est ce que le rendu inverse ?",
+    "text": "Qu’est ce que le rendu inverse ?"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-cest-quoi-le-rendu-normale",
+    "href": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-cest-quoi-le-rendu-normale",
+    "title": "Teaching",
+    "section": "Tout d’abord, c’est quoi le rendu normale ?",
+    "text": "Tout d’abord, c’est quoi le rendu normale ?\n\n\nLe rendu est le processus qui projette\n\nune représentation latente d’une scène\n\n\ndans un espace d’observation."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-cest-quoi-le-rendu-normale-1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-cest-quoi-le-rendu-normale-1",
+    "title": "Teaching",
+    "section": "Tout d’abord, c’est quoi le rendu normale ?",
+    "text": "Tout d’abord, c’est quoi le rendu normale ?\nOn part d’une scène (géométrie + apparence) + caméra  on obtient une image.\n\n\ndirection: right\n\nstyle: {\n  fill: transparent\n}\n\nbloc_1: {\n  shape: rectangle\n  label: \"Scène\\n(3D + apparence)\"\n  width: 175\n  height: 100\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\nbloc_2: {\n  shape: rectangle\n  label: \"Caméra\\n(pose + intr.)\"\n  width: 175\n  height: 100\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\nbloc_3: {\n  shape: rectangle\n  label: \"Rendu\\n(projection +\\n intégration)\"\n  width: 175\n  height: 100\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\nbloc_4: {\n  shape: rectangle\n  label: \"Image\\n(2D)\"\n  width: 175\n  height: 100\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\n\nbloc_1 -&gt; bloc_3: {\n  style: {\n    stroke: \"#fff\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\n\nbloc_2 -&gt; bloc_3: {\n  style: {\n    stroke: \"#fff\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\nbloc_3 -&gt; bloc_4: {\n  style: {\n    stroke: \"#fff\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\n\n\n\n👉 Rendu direct : représentation → image."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-quest-ce-que-le-rendu-normal",
+    "href": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-quest-ce-que-le-rendu-normal",
+    "title": "Teaching",
+    "section": "Tout d’abord, qu’est ce que le rendu normal ?",
+    "text": "Tout d’abord, qu’est ce que le rendu normal ?\n\n\\[\n\\color{#00e0ff}{I} = \\color{#ffb000}{R}\\!\\left(\\color{#00ff88}{\\theta}\\right)\n\\]\n\n\noù :\n\n\\(\\color{#00ff88}{\\theta}\\) = paramètre de la scène\n\\(\\color{#ffb000}{R}\\) = fonction de rendu\n\\(\\color{#00e0ff}{I}\\) = image"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#rendu-normal",
+    "href": "assets/syntheseimage/CM/CM1/index.html#rendu-normal",
+    "title": "Teaching",
+    "section": "Rendu normal :",
+    "text": "Rendu normal :\n\\[\n\\color{#00e0ff}{I} = \\color{#ffb000}{R}\\!\\left(\\color{#00ff88}{\\theta}\\right)\n\\]\n\nOkay mais c’est quoi le rendu inverse du coup ?\n\n\n\n\n\\[\n\\text{C'est}\\quad  \\color{#00e0ff}{I} = \\frac{1}{\\color{#ffb000}{R}\\!\\left(\\color{#00ff88}{\\theta}\\right)}  \\quad ?\n\\]\n\n\nNop\n\n\n\n\n\n\n\\[\n\\text{C'est}\\quad \\color{#ffb000}{R} = \\frac{\\color{#00e0ff}{I}}{\\color{#00ff88}{\\theta}} \\quad ?\n\\]\n\n\nNop"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#section",
+    "href": "assets/syntheseimage/CM/CM1/index.html#section",
+    "title": "Teaching",
+    "section": "",
+    "text": "Le rendu inverse consiste à construire\nune représentation interne\nd’une scène à partir d’observations,\nafin de pouvoir ensuite re-rendre (prédire)\nde nouvelles vues."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-partons-dun-fait",
+    "href": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-partons-dun-fait",
+    "title": "Teaching",
+    "section": "Tout d’abord, partons d’un fait",
+    "text": "Tout d’abord, partons d’un fait\nTout système réaliste de production d’image suppose une représentation du monde, obtenue par inférence (humaine ou algorithmique), puis un rendu.\n\n\ndirection: right\n\nstyle: {\n  fill: transparent\n}\n\nObservation: {\n  shape: rectangle\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nRepresentation: {\n  shape: rectangle\n  label: \"Représentation\\n(modèle)\"\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nSynthese: {\n  shape: rectangle\n  label: \"Synthèse\"\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nObservation -&gt; Representation: \"inférence\" {\n  style: {\n    stroke: \"#d33\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\n\nRepresentation -&gt; Synthese: \"rendu\" {\n  style: {\n    stroke: \"#2a7\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\n\n\n\nExemple de l'appareil photo :\nPaysage  projection sur capteur et mémoire interne  image jpeg\n\n\n\nExemple de la modélisation 3D :\nReprésentation mentale  modélisation sur Blender  rendu"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#section-1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#section-1",
+    "title": "Teaching",
+    "section": "",
+    "text": "Le rendu inverse n’est pas une invention moderne.\n\n\nLe cerveau le fait depuis toujours.\n\n\n\n👉 L’humain aussi est une machine d’interprétation.\n\n\n\n\nLes méthodes numériques sont des tentatives pour reproduire ça."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#dans-ce-sens",
+    "href": "assets/syntheseimage/CM/CM1/index.html#dans-ce-sens",
+    "title": "Teaching",
+    "section": "Dans ce sens :",
+    "text": "Dans ce sens :\n\n\nle cerveau fait du rendu inverse\nl’artiste 3D fait du rendu inverse\nla photogrammétrie fait du rendu inverse\nNeRF fait du rendu inverse\n\n\n\nCette inférence produit une représentation à qualité variable.\n\n\n2D  inférence faible  rendu\n3D  inférence géométrique  rendu\nNeRF  inférence volumétrique  rendu\n\n\nCe sont des formes différentes du même geste fondamental :\n\ninférer une structure générative à partir d’observations."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#en-une-image-comme-en-cent",
+    "href": "assets/syntheseimage/CM/CM1/index.html#en-une-image-comme-en-cent",
+    "title": "Teaching",
+    "section": "En une image comme en cent…",
+    "text": "En une image comme en cent…\n\n\n\nScene description \n\n\n\nImage \n\n\n\n\n\n\n\n\n\nEVERMOTION - Scene 08 AI33 for Blender 3d Models Scene"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#introduction-à-la-synthèse-dimages-réalistes",
+    "href": "assets/syntheseimage/CM/CM1/index.html#introduction-à-la-synthèse-dimages-réalistes",
+    "title": "Teaching",
+    "section": "Introduction à la synthèse d’images réalistes",
+    "text": "Introduction à la synthèse d’images réalistes\n\nMais pour synthétiser, il faut :\n\n\nchoisir une représentation\ncomprendre ce qu’est une image\ncomprendre ce qui la rend plausible\n\n\n\n\n\nDonc passer par l’inversion n’est pas un détour.\nC’est une fondation."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#rendu-inverse-idée-générale",
+    "href": "assets/syntheseimage/CM/CM1/index.html#rendu-inverse-idée-générale",
+    "title": "Teaching",
+    "section": "Rendu inverse : idée générale",
+    "text": "Rendu inverse : idée générale\n\nOn observe une image (ou plusieurs) et on cherche une représentation compatible.\n\n\n On choisit une représentation “juste assez structurée” pour synthétiser de nouvelles vues.\n\n\n\ndirection: right\n\nstyle: {\n  fill: transparent\n}\n\nbloc_1: {\n  shape: rectangle\n  label: \"Images\\n(observations)\"\n  width: 175\n  height: 100\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\nbloc_2: {\n  shape: rectangle\n  label: \"Représentation\\n(inconnu)\"\n  width: 175\n  height: 100\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\nbloc_3: {\n  shape: rectangle\n  label: \"Rendu\\n→ images (prévision)\"\n  width: 175\n  height: 100\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nbloc_1 -&gt; bloc_2: {\n  style: {\n    stroke: \"#fff\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\n\nbloc_2 -&gt; bloc_3: {\n  style: {\n    stroke: \"#fff\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#rendu-inverse-idée-générale-1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#rendu-inverse-idée-générale-1",
+    "title": "Teaching",
+    "section": "Rendu inverse : idée générale",
+    "text": "Rendu inverse : idée générale\n\\[\n\\hat{\\theta}\n=\n\\arg\\min_{\\theta}\n\\; \\| \\color{#ffb000}{R}(\\color{#00ff88}{\\theta}) - \\color{#00e0ff}{I_{\\text{obs}}} \\|^2\n\\]\n\noù :\n\n\n\\(\\color{#00ff88}{\\theta}\\) = paramètre de la scène\n\\(\\color{#ffb000}{R}\\) = fonction de rendu\n\\(\\color{#00e0ff}{I_{\\text{obs}}}\\) = image observée\n\n\nOn cherche les paramètres de scène qui, une fois rendus, produisent une image la plus proche possible de ce que l’on observe.\n\n\n\nInverser \\(\\color{#ffb000}{R}\\) est impossible analytiquement  on passe par l’optimisation."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#point-clé-on-ne-reconstruit-pas-la-vérité",
+    "href": "assets/syntheseimage/CM/CM1/index.html#point-clé-on-ne-reconstruit-pas-la-vérité",
+    "title": "Teaching",
+    "section": "Point clé : on ne reconstruit pas “la vérité”",
+    "text": "Point clé : on ne reconstruit pas “la vérité”\n\n\n\nUne image est compatible avec plusieurs scènes / explications.\nOn cherche une représentation utile au rendu (et pas une vérité physique).\n\n\n\n\n👉 On juge une inversion par sa capacité à re-rendre (prédire) correctement.\n\n\n\n(un peu comme le dessin académique finalement …)"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#pourquoi-linversion-est-difficile",
+    "href": "assets/syntheseimage/CM/CM1/index.html#pourquoi-linversion-est-difficile",
+    "title": "Teaching",
+    "section": "Pourquoi l’inversion est difficile ?",
+    "text": "Pourquoi l’inversion est difficile ?\n\nParce que beaucoup d’informations sont “perdues” dans l’image :\n\n\nprofondeur (3D  2D)\nocclusions (ce qui est caché)\nambiguïtés (textures répétées, surfaces planes…)\ndépendance au point de vue\n\n\n\n\nEn général : problème mal posé (pas de solution unique).\n\n\n\nPlusieurs \\(\\color{#00ff88}{\\theta}\\) donnent la même \\(\\color{#00e0ff}{I}\\)."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#quentend-ton-par-réalisme",
+    "href": "assets/syntheseimage/CM/CM1/index.html#quentend-ton-par-réalisme",
+    "title": "Teaching",
+    "section": "Qu’entend t’on par réalisme ?",
+    "text": "Qu’entend t’on par réalisme ?\nLe réalisme n’est pas une technique.\n\n\nC’est un choix de représentation.\n\n\n\n\nLes shaders, le ray tracing, NeRF, Gaussian Splatting…\nne sont pas seulement des algorithmes.\n\n\n\nCe sont des manières différentes de représenter la scène et la lumière.\n\n\n\n\n👉 Le réalisme dépend moins de la technique que de la représentation du monde, et chaque méthode impose une ontologie implicite du monde."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#par-exemple",
+    "href": "assets/syntheseimage/CM/CM1/index.html#par-exemple",
+    "title": "Teaching",
+    "section": "Par exemple",
+    "text": "Par exemple\nRasterisation classique\n Représentation = surfaces polygonales + illumination locale.\n\nRay tracing\n Représentation = simulation explicite des interactions lumière–matière.\n\n\nNeRF\n Représentation = champ continu volumétrique appris.\n\n\n\nCe ne sont pas juste des “techniques”.\n\n\n\nCe sont des hypothèses sur :\n\n\n\nce qu’est une scène\nce qu’est la lumière\nce qu’est une image"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#pour-résumer",
+    "href": "assets/syntheseimage/CM/CM1/index.html#pour-résumer",
+    "title": "Teaching",
+    "section": "Pour résumer",
+    "text": "Pour résumer\n\n\nLe rendu direct est mécanique.\n\n\nLe rendu inverse est interprétatif.\n\n\n\n Le rendu inverse peut être compris comme :\nToute tentative de reconstruire une structure du monde à partir d’images."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#respiration",
+    "href": "assets/syntheseimage/CM/CM1/index.html#respiration",
+    "title": "Teaching",
+    "section": "Respiration",
+    "text": "Respiration\n\n  \n\n  \n    \n      ▶\n      ↩\n\n      \n        \n        min\n        \n        s"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#bloc-2",
+    "href": "assets/syntheseimage/CM/CM1/index.html#bloc-2",
+    "title": "Teaching",
+    "section": "BLOC 2",
+    "text": "BLOC 2"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#on-inverse-limage-ou-nos-hypothèses",
+    "href": "assets/syntheseimage/CM/CM1/index.html#on-inverse-limage-ou-nos-hypothèses",
+    "title": "Teaching",
+    "section": "On inverse l’image… ou nos hypothèses ?",
+    "text": "On inverse l’image… ou nos hypothèses ?"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#prenons-deux-images-dune-même-scène",
+    "href": "assets/syntheseimage/CM/CM1/index.html#prenons-deux-images-dune-même-scène",
+    "title": "Teaching",
+    "section": "Prenons deux images d’une même scène",
+    "text": "Prenons deux images d’une même scène\n\n\n\n\n\n\nVue A\n\n\n\n\n\n\n\nVue B\n\n\n\n\n\n\n\nComment créer une nouvelle image à partir de là ?\n\n\n\n(Vous avez 2h)"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#interpolation-naïve-blending",
+    "href": "assets/syntheseimage/CM/CM1/index.html#interpolation-naïve-blending",
+    "title": "Teaching",
+    "section": "Interpolation naïve (blending)",
+    "text": "Interpolation naïve (blending)\nOn mélange pixel à pixel : \\[\nI_\\alpha = (1-\\alpha)\\color{#00ff88}{I_1} + \\alpha \\color{#ffb000}{I_2},\\quad \\alpha\\in[0,1]\n\\]"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#interpolation-naïve-blending-1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#interpolation-naïve-blending-1",
+    "title": "Teaching",
+    "section": "Interpolation naïve (blending)",
+    "text": "Interpolation naïve (blending)\n\n\nArtefact typique : ghosting / double contours.\n\n\nPourquoi ? Parce qu’on mélange des pixels qui ne correspondent pas au même point de la scène."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-quil-manque-au-blending",
+    "href": "assets/syntheseimage/CM/CM1/index.html#ce-quil-manque-au-blending",
+    "title": "Teaching",
+    "section": "Ce qu’il manque au blending :",
+    "text": "Ce qu’il manque au blending :\n\n“qui correspond à quoi”\n\n\n\nPour synthétiser proprement, il faut une notion de correspondances :\n\n\nce pixel dans (\\(\\color{#00ff88}{I_1}\\))  ce pixel dans (\\(\\color{#ffb000}{I_2}\\))\nautrement dit : une déformation (warping) entre images\n\n\n\n👉 Première grande idée du cours : correspondances 2D–2D."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#warping-concept-sans-formalisme-lourd",
+    "href": "assets/syntheseimage/CM/CM1/index.html#warping-concept-sans-formalisme-lourd",
+    "title": "Teaching",
+    "section": "Warping : concept (sans formalisme lourd)",
+    "text": "Warping : concept (sans formalisme lourd)\n\n\nOn veut une fonction (\\(W\\)) qui déplace les pixels :\n\\[\nI_1 \\xrightarrow[]{W} I_{1\\rightarrow 2}\n\\]\n\n\n\nIntuition :\n\n\n\nsi (\\(W\\)) est bonne, les structures s’alignent,\nensuite le blending devient beaucoup plus cohérent."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#warping-on-essaye",
+    "href": "assets/syntheseimage/CM/CM1/index.html#warping-on-essaye",
+    "title": "Teaching",
+    "section": "Warping  On essaye",
+    "text": "Warping  On essaye\n\n\nOk, d’abord on recherche des correspondances\n\n\nPour cela, SIFT est reconnu comme l’un des meilleurs rapport efficacité / computation\n\n\n\n\n281 correspondances !!"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#maintenant-il-faut-coller-les-deux-images",
+    "href": "assets/syntheseimage/CM/CM1/index.html#maintenant-il-faut-coller-les-deux-images",
+    "title": "Teaching",
+    "section": "Maintenant il faut coller les deux images…",
+    "text": "Maintenant il faut coller les deux images…\n\n\nOn a 281 correspondances.\nMais elles sont ponctuelles.\n\n\n\nEntre ces points ?\n\n\nOn ne sait rien.\n\n\n\n👉 Il faut interpoler."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#interpolation",
+    "href": "assets/syntheseimage/CM/CM1/index.html#interpolation",
+    "title": "Teaching",
+    "section": "Interpolation",
+    "text": "Interpolation\n\nUne approche consiste à trianguler les points correspondants.\n On découpe l’image en triangles à partir des correspondances.\n\n\nDans chaque triangle :\n\n\n\non calcule l’affine entre triangle source et destination\non applique la transformation aux pixels\non remplit progressivement l’image cible\n\n\n\n\nLes correspondances définissent déjà une structure commune.\n👉 Mais pas de loi globale."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#triangulation-structure-locale",
+    "href": "assets/syntheseimage/CM/CM1/index.html#triangulation-structure-locale",
+    "title": "Teaching",
+    "section": "Triangulation  structure locale",
+    "text": "Triangulation  structure locale"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#warping-local",
+    "href": "assets/syntheseimage/CM/CM1/index.html#warping-local",
+    "title": "Teaching",
+    "section": "Warping local",
+    "text": "Warping local\nPuis, on aligne triangle par triangle.\n\nUne fois l’image reconstruite, on peut fusionner avec l’image de référence.\n\n\nEt on obtient :"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#le-problème",
+    "href": "assets/syntheseimage/CM/CM1/index.html#le-problème",
+    "title": "Teaching",
+    "section": "Le problème",
+    "text": "Le problème\n\nPas de cohérence géométrique globale.\n\n\n\nDes correspondances peuvent etre fausses\nDeux triangles voisins peuvent se déformer différemment.\nLes lignes droites peuvent devenir brisées.\nLes régions peu contraintes deviennent instables."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-quon-peut-retenir",
+    "href": "assets/syntheseimage/CM/CM1/index.html#ce-quon-peut-retenir",
+    "title": "Teaching",
+    "section": "Ce qu’on peut retenir",
+    "text": "Ce qu’on peut retenir\n\n\n\nBlending naïf  ghosting\nIl faut aligner avant de mélanger\nWarping local  (très) inconsistent"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#pause",
+    "href": "assets/syntheseimage/CM/CM1/index.html#pause",
+    "title": "Teaching",
+    "section": "Pause",
+    "text": "Pause\n\n  \n\n  \n    \n      ▶\n      ↩\n\n      \n        \n        min\n        \n        s"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#bloc-3",
+    "href": "assets/syntheseimage/CM/CM1/index.html#bloc-3",
+    "title": "Teaching",
+    "section": "BLOC 3",
+    "text": "BLOC 3"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#bon-bein-comment-on-fait-du-coup",
+    "href": "assets/syntheseimage/CM/CM1/index.html#bon-bein-comment-on-fait-du-coup",
+    "title": "Teaching",
+    "section": "Bon bein comment on fait du coup ?",
+    "text": "Bon bein comment on fait du coup ?"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#idée-clé",
+    "href": "assets/syntheseimage/CM/CM1/index.html#idée-clé",
+    "title": "Teaching",
+    "section": "Idée clé",
+    "text": "Idée clé\n\nSi une scène est plane, alors deux images prises sous des points de vue différents sont liées par une transformation projective.\n\nOn peut écrire :\n\\[\n\\color{#ffb000}{x'} \\sim \\color{#00e0ff}{H}\\color{#00ff88}{x}\n\\]\noù :\n\n\\(\\color{#00ff88}{x}\\) = point dans la première image\n\n\\(\\color{#ffb000}{x'}\\) = point correspondant dans la seconde image\n\n\\(\\color{#00e0ff}{H}\\) = matrice de transformation projective plane (3×3)\n\n\n\n\n👉 Ce qu’on appelle une homographie"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#interprétation",
+    "href": "assets/syntheseimage/CM/CM1/index.html#interprétation",
+    "title": "Teaching",
+    "section": "Interprétation",
+    "text": "Interprétation\n\nUne homographie permet :\n\n\nrotation\ntranslation\nchangement de perspective\nredressement de plan\n\n\n\n\nMais uniquement si les points appartiennent à un même plan."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#exemple-1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#exemple-1",
+    "title": "Teaching",
+    "section": "Exemple",
+    "text": "Exemple"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#intuition-géométrique",
+    "href": "assets/syntheseimage/CM/CM1/index.html#intuition-géométrique",
+    "title": "Teaching",
+    "section": "Intuition géométrique",
+    "text": "Intuition géométrique\n\ndirection: right\n\nstyle: {\n  fill: transparent\n}\n\nblock_1: {\n  shape: rectangle\n  label: \"Image 1\\n(point x)\"\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nblock_2: {\n  shape: rectangle\n  label: \"Plan 3D\\n(scène plane)\"\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nblock_3: {\n  shape: rectangle\n  label: \"Image 2\\n(point x')\"\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nblock_1 -&gt; block_2:{\n  style: {\n    stroke: \"#fff\"\n    stroke-width: 2\n  }\n}\n\nblock_2 -&gt; block_3: {\n  style: {\n    stroke: \"#fff\"\n    stroke-width: 2\n  }\n}\n\n\nSi tout est sur un plan :\n La transformation est entièrement décrite par \\(\\color{#00e0ff}{H}\\).\n\n\nCe que cela permet\n\n\n\nRedresser une façade\nFaire un panorama\nCorriger une perspective\nWarper une image vers un nouveau point de vue"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#comment-on-détermine-h",
+    "href": "assets/syntheseimage/CM/CM1/index.html#comment-on-détermine-h",
+    "title": "Teaching",
+    "section": "Comment on détermine H",
+    "text": "Comment on détermine H\nOn dispose de correspondances :\n\\[\n\\color{#00ff88}{\\mathbf{x}_i} \\leftrightarrow \\color{#ffb000}{\\mathbf{x}'_i}\n\\]\n\nOn cherche une matrice \\(\\color{#00e0ff}{H}\\) telle que :\n\\[\n\\color{#ffb000}{\\mathbf{x}'_i} \\sim \\color{#00e0ff}{H} \\color{#00ff88}{\\mathbf{x}_i}\n\\]\noù les points sont exprimés en coordonnées homogènes.\n\n\nEn pratique :\n\n\n\nIl faut au minimum 4 correspondances (8 équations indépendantes)\nOn résout un système linéaire (moindres carrés)\nOn utilise ensuite RANSAC pour éliminer les outliers\n\n\n\n👉 \\(\\color{#00e0ff}{H}\\) est estimée directement à partir des données observées."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#une-fois-h-estimée",
+    "href": "assets/syntheseimage/CM/CM1/index.html#une-fois-h-estimée",
+    "title": "Teaching",
+    "section": "Une fois H estimée",
+    "text": "Une fois H estimée\nOn applique la transformation à tous les pixels :\n\\[\n\\color{#ffb000}{\\mathbf{x}'} \\sim \\color{#00e0ff}{H} \\color{#00ff88}{\\mathbf{x}}\n\\]\n\nMais attention :\n\n\n\non travaille en coordonnées homogènes\non renormalise après multiplication\n\n\n\n\\[\n(x', y', w') \\rightarrow \\left(\\frac{x'}{w'}, \\frac{y'}{w'}\\right)\n\\]\n\n\nEn pratique (OpenCV) :\nwarped = cv2.warpPerspective(img, H, (width, height))\n\n\n👉 Tous les pixels suivent la même loi géométrique."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#en-pratique-correspondances-ransac",
+    "href": "assets/syntheseimage/CM/CM1/index.html#en-pratique-correspondances-ransac",
+    "title": "Teaching",
+    "section": "En pratique  Correspondances + RANSAC",
+    "text": "En pratique  Correspondances + RANSAC"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#en-pratique-blending",
+    "href": "assets/syntheseimage/CM/CM1/index.html#en-pratique-blending",
+    "title": "Teaching",
+    "section": "En pratique  blending",
+    "text": "En pratique  blending"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#en-pratique-résultat",
+    "href": "assets/syntheseimage/CM/CM1/index.html#en-pratique-résultat",
+    "title": "Teaching",
+    "section": "En pratique  résultat",
+    "text": "En pratique  résultat"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#en-pratique-résultat-1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#en-pratique-résultat-1",
+    "title": "Teaching",
+    "section": "En pratique  résultat",
+    "text": "En pratique  résultat"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#synthèse-2d-guidée-le-cœur-du-tp1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#synthèse-2d-guidée-le-cœur-du-tp1",
+    "title": "Teaching",
+    "section": "Synthèse 2D “guidée” (le cœur du TP1)",
+    "text": "Synthèse 2D “guidée” (le cœur du TP1)\n\n\n\n\n\n\n\n\nG\n\n\nI1\n\nImage I1\n\n\n\nW\n\nCorrespondances\n+ warping\n\n\n\nI1-&gt;W\n\n\n\n\n\nI2\n\nImage I2\n\n\n\nI2-&gt;W\n\n\n\n\n\nB\n\nFusion\npondérée\n\n\n\nW-&gt;B\n\n\n\n\n\nO\n\nImage\nsynthétisée\n\n\n\nB-&gt;O\n\n\n\n\n\n\n\n\n\n\n\n\nPipeline minimal : correspondances  warping  fusion."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#correspondances-ce-que-cest-ce-que-ça-fait",
+    "href": "assets/syntheseimage/CM/CM1/index.html#correspondances-ce-que-cest-ce-que-ça-fait",
+    "title": "Teaching",
+    "section": "Correspondances : ce que c’est, ce que ça fait",
+    "text": "Correspondances : ce que c’est, ce que ça fait\nDéfinition simple\nUne correspondance 2D–2D = une paire de points :\n\\[\n\\mathbf{x}_1 \\in \\color{#00ff88}{I_1} \\quad \\leftrightarrow \\quad \\mathbf{x}_2 \\in \\color{#ffb000}{I_2}\n\\]\n\nInterprétation : \"même point du monde\" vu dans deux images."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#qualité-des-correspondances-qualité-du-rendu",
+    "href": "assets/syntheseimage/CM/CM1/index.html#qualité-des-correspondances-qualité-du-rendu",
+    "title": "Teaching",
+    "section": "Qualité des correspondances = qualité du rendu",
+    "text": "Qualité des correspondances = qualité du rendu\n\n\n\nSi elles sont fausses  déformations absurdes.\nSi elles sont mal réparties  zones “flottantes” / non contraintes.\nSi elles couvrent bien l’image  warping plus stable.\n\n\n\n\nTP1 : vous verrez directement l’impact de la densité et de la distribution."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#correspondances-structure-implicite",
+    "href": "assets/syntheseimage/CM/CM1/index.html#correspondances-structure-implicite",
+    "title": "Teaching",
+    "section": "Correspondances = structure implicite",
+    "text": "Correspondances = structure implicite\n\nEn établissant des correspondances,\nnous définissons implicitement une représentation commune entre les deux images.\n\n\n\nSans 3D explicite, les correspondances imposent déjà une structure.\n\n\n\n\nUne mauvaise correspondance\n= une fausse hypothèse sur le monde."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#doù-viennent-les-correspondances",
+    "href": "assets/syntheseimage/CM/CM1/index.html#doù-viennent-les-correspondances",
+    "title": "Teaching",
+    "section": "D’où viennent les correspondances ?",
+    "text": "D’où viennent les correspondances ?\nDeux sources :\n\n👤 Humaines (cliquées)\n🤖 Automatiques (SIFT, etc.)\n\n\n\nLes correspondances humaines ou automatiques contiennent des erreurs\nou des approximations"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#on-utilise-généralement-un-filtre",
+    "href": "assets/syntheseimage/CM/CM1/index.html#on-utilise-généralement-un-filtre",
+    "title": "Teaching",
+    "section": "On utilise généralement un filtre",
+    "text": "On utilise généralement un filtre\n\n\n\nOn impose une cohérence géométrique minimale.\n\n\n\n\nRANSAC = RANdom SAmple Consensus\n\n\nRANSAC = éliminer les correspondances incohérentes avec un modèle global."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-que-lhomographie-change",
+    "href": "assets/syntheseimage/CM/CM1/index.html#ce-que-lhomographie-change",
+    "title": "Teaching",
+    "section": "Ce que l’homographie change",
+    "text": "Ce que l’homographie change\n\n\nUne seule transformation pour toute l’image\nUne géométrie globale cohérente\nLes droites restent droites\n\n\n\n\n👉 On passe d’une structure locale fragmentée à une loi géométrique unique.\n\n\n\nMais…\n\n\nCette cohérence repose sur une condition forte.\n\n\nLa scène est plane ou le mouvement est une rotation pure.\n\n\nSinon :  la cohérence s’effondre."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#respiration-1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#respiration-1",
+    "title": "Teaching",
+    "section": "Respiration",
+    "text": "Respiration\n\nPlus le modèle est global,\n\n\nplus la contrainte géométrique est forte.\n\n\n\n  \n\n  \n    \n      ▶\n      ↩\n\n      \n        \n        min\n        \n        s"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#bloc-4",
+    "href": "assets/syntheseimage/CM/CM1/index.html#bloc-4",
+    "title": "Teaching",
+    "section": "BLOC 4",
+    "text": "BLOC 4"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#limites-2d-besoin-de-structure",
+    "href": "assets/syntheseimage/CM/CM1/index.html#limites-2d-besoin-de-structure",
+    "title": "Teaching",
+    "section": "Limites 2D  besoin de structure",
+    "text": "Limites 2D  besoin de structure"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#extrapolation-2d-sortir-de-lintervalle",
+    "href": "assets/syntheseimage/CM/CM1/index.html#extrapolation-2d-sortir-de-lintervalle",
+    "title": "Teaching",
+    "section": "Extrapolation 2D : “sortir de l’intervalle”",
+    "text": "Extrapolation 2D : “sortir de l’intervalle”\n\n\nInterpolation : on reste “entre” les vues.\n\n\nExtrapolation : on pousse au-delà.\n\n\n\nPourquoi c’est plus dur ?\n\n\n\non invente des zones jamais vues,\nles occlusions explosent,\nles erreurs de correspondances s’amplifient."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#occlusions-le-mur-conceptuel-de-la-2d",
+    "href": "assets/syntheseimage/CM/CM1/index.html#occlusions-le-mur-conceptuel-de-la-2d",
+    "title": "Teaching",
+    "section": "Occlusions : le mur conceptuel de la 2D",
+    "text": "Occlusions : le mur conceptuel de la 2D\nEn 2D, une image ne contient pas explicitement :\n\n\nl’ordre en profondeur,\nla visibilité,\nce qui est devant ou derrière.\n\n\n\n\nLa 2D ne code pas la profondeur.\n\n\n\nConséquence :\n\n\n\ntrous, déchirures (disocclusions),\nduplications,\nincohérences locales.\n\n\n\n👉 Ces artefacts ne sont pas “des bugs” : ce sont des limites structurelles."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-que-la-2d-sait-faire-très-bien",
+    "href": "assets/syntheseimage/CM/CM1/index.html#ce-que-la-2d-sait-faire-très-bien",
+    "title": "Teaching",
+    "section": "Ce que la 2D sait faire (très bien)",
+    "text": "Ce que la 2D sait faire (très bien)\n\n\n\ninterpolation douce entre vues proches\npetites variations de point de vue\nmorphing contrôlé (si correspondances propres)"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-que-la-2d-ne-peut-pas-résoudre-proprement",
+    "href": "assets/syntheseimage/CM/CM1/index.html#ce-que-la-2d-ne-peut-pas-résoudre-proprement",
+    "title": "Teaching",
+    "section": "Ce que la 2D ne peut pas résoudre proprement",
+    "text": "Ce que la 2D ne peut pas résoudre proprement\n\n\n\ngrandes variations de point de vue\nfortes occlusions / disocclusions\nobjets fins / transparences / réflexions complexes\nextrapolation stable"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#message-clé",
+    "href": "assets/syntheseimage/CM/CM1/index.html#message-clé",
+    "title": "Teaching",
+    "section": "Message clé",
+    "text": "Message clé\n\nLes homographies sont :\n\n✔ Une première forme d’inversion structurée\n✔ Un modèle minimal image  image\n✘ Insuffisant pour des scènes 3D générales\n\n\n\nSi on veut une synthèse de vues cohérente géométriquement, il manque :\n\n\n\nune notion de profondeur\nune notion de visibilité (z-buffer implicite)\nune notion de caméra (pose / projection)"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#section-2",
+    "href": "assets/syntheseimage/CM/CM1/index.html#section-2",
+    "title": "Teaching",
+    "section": "",
+    "text": "Une image 2D ne contient pas explicitement la profondeur.\n\n\n\nMais la synthèse de nouvelles vues\n\n\nexige de savoir ce qui est devant quoi."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#conclusion",
+    "href": "assets/syntheseimage/CM/CM1/index.html#conclusion",
+    "title": "Teaching",
+    "section": "Conclusion",
+    "text": "Conclusion"
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#à-retenir-cm1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#à-retenir-cm1",
+    "title": "Teaching",
+    "section": "À retenir (CM1)",
+    "text": "À retenir (CM1)\n\n\n\nRendu inverse = trouver une représentation compatible avec les images pour pouvoir re-synthétiser.\nEn 2D, la brique centrale = correspondances 2D–2D.\nAligner avant de mélanger : warping  fusion.\nLes occlusions et la profondeur manquante imposent une limite structurelle."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#prolongement-tp1",
+    "href": "assets/syntheseimage/CM/CM1/index.html#prolongement-tp1",
+    "title": "Teaching",
+    "section": "Prolongement : TP1",
+    "text": "Prolongement : TP1\n\nVous allez :\n\n\ntester le blending naïf  observer ghosting\ncréer des correspondances  voir l’effet de leur qualité\nfaire du warping  puis une interpolation guidée\ntenter une extrapolation  constater les limites\n\n\n\n\n👉 Le TP n’est pas là pour “faire marcher le code”.\nIl est là pour observer les limites du modèle."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#préparer-cm2",
+    "href": "assets/syntheseimage/CM/CM1/index.html#préparer-cm2",
+    "title": "Teaching",
+    "section": "Préparer CM2",
+    "text": "Préparer CM2\n\nQuestion de sortie :\n\nQu’est-ce qui manque à la 2D pour gérer proprement la visibilité et les nouvelles vues ?\n\n\n\nRéponse attendue :\nstructure 3D + caméras  photogrammétrie."
+  },
+  {
+    "objectID": "assets/syntheseimage/CM/CM1/index.html#cest-tout-pour-aujourdhui",
+    "href": "assets/syntheseimage/CM/CM1/index.html#cest-tout-pour-aujourdhui",
+    "title": "Teaching",
+    "section": "C’est tout pour aujourd’hui",
+    "text": "C’est tout pour aujourd’hui"
+  },
+  {
+    "objectID": "fr/index.html",
+    "href": "fr/index.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Cours\nNiveau\n\n\n\n\nTraitement Informatique des Données\nL1\n\n\nIntroduction au Big Data\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nM1\n\n\nReconstruction 3D\nM2"
+  },
+  {
+    "objectID": "fr/teaching/syntheseimage/index.html",
+    "href": "fr/teaching/syntheseimage/index.html",
+    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "",
     "text": "Cette partie du cours traite de la synthèse d’images réalistes par rendu inverse, en s’intéressant à la génération de nouvelles images à partir d’images existantes. Elle aborde d’abord des méthodes de synthèse 2D à partir d’images, telles que l’interpolation et l’extrapolation.\nLe cours introduit ensuite la photogrammétrie comme cadre permettant de produire des images réalistes à partir de reconstructions multi-vues. Il présente enfin différentes représentations pour la synthèse de vues, des nuages de points et splats aux représentations continues modernes, et en analyse les apports et les limites pour la production d’images réalistes.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\nCours 5 : HTML\nCours 6 : HTML\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nAtelier 1\nPDF\nZIP\n\n\nAtelier 2\nPDF\nZIP\n\n\nAtelier 3\nPDF\nZIP"
   },
   {
-    "objectID": "assets/syntheseimage/index.html#cours",
-    "href": "assets/syntheseimage/index.html#cours",
-    "title": "Synthèse d’Images par Rendu Inverse",
+    "objectID": "fr/teaching/syntheseimage/index.html#cours",
+    "href": "fr/teaching/syntheseimage/index.html#cours",
+    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "",
     "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\nCours 5 : HTML\nCours 6 : HTML"
   },
   {
-    "objectID": "assets/syntheseimage/index.html#ateliers",
-    "href": "assets/syntheseimage/index.html#ateliers",
-    "title": "Synthèse d’Images par Rendu Inverse",
+    "objectID": "fr/teaching/syntheseimage/index.html#ateliers",
+    "href": "fr/teaching/syntheseimage/index.html#ateliers",
+    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "",
     "text": "Sujet\nDonnées\n\n\n\n\nAtelier 1\nPDF\nZIP\n\n\nAtelier 2\nPDF\nZIP\n\n\nAtelier 3\nPDF\nZIP"
-  },
-  {
-    "objectID": "fr/cv/personal.html",
-    "href": "fr/cv/personal.html",
-    "title": "Nathan Sanchiz-Viel",
-    "section": "",
-    "text": "Welcome here !"
-  },
-  {
-    "objectID": "fr/teaching/bigdata/index.html",
-    "href": "fr/teaching/bigdata/index.html",
-    "title": "Introduction au Big Data",
-    "section": "",
-    "text": "Ce cours de Big Data introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets.\n\n\n\n\n\n\nPériode\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2\n\n\n\n\n\n\n\n\nCours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
-  },
-  {
-    "objectID": "fr/teaching/bigdata/index.html#planning-indicatif",
-    "href": "fr/teaching/bigdata/index.html#planning-indicatif",
-    "title": "Introduction au Big Data",
-    "section": "",
-    "text": "Période\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2"
-  },
-  {
-    "objectID": "fr/teaching/bigdata/index.html#cours-magistraux",
-    "href": "fr/teaching/bigdata/index.html#cours-magistraux",
-    "title": "Introduction au Big Data",
-    "section": "",
-    "text": "Cours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
-  },
-  {
-    "objectID": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
-    "href": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
-    "title": "Introduction au Big Data",
-    "section": "",
-    "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
-  },
-  {
-    "objectID": "fr/blog/article_2.html",
-    "href": "fr/blog/article_2.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Outil\nRôle\n\n\n\n\nQuarto\ninfrastructure centrale\n\n\nManim\nvisualisation rigoureuse\n\n\nJupyter\ncalcul reproductible\n\n\nTypst\npublication moderne\n\n\nPandoc\nconversion universelle\n\n\nGit\nmémoire et traçabilité\n\n\nIA\namplification cognitive"
-  },
-  {
-    "objectID": "en/cv/personal.html",
-    "href": "en/cv/personal.html",
-    "title": "Nathan Sanchiz-Viel",
-    "section": "",
-    "text": "Welcome here !"
-  },
-  {
-    "objectID": "en/teaching/bigdata/index.html",
-    "href": "en/teaching/bigdata/index.html",
-    "title": "Introduction to Big Data",
-    "section": "",
-    "text": "This Big Data course introduces the fundamentals of information retrieval from data. It covers key concepts such as the distinction between data, information, and knowledge, as well as the principle of abstraction in computer science. These concepts are illustrated through concrete applications and put into practice through projects inspired by real-world professional scenarios.\nThe course is primarily self-directed, and assessment is based exclusively on the completion of two projects.\n\n\n\n\n\n\nPeriod\nContent\n\n\n\n\nMonth 1\nLabs\n\n\nMonth 2\nProject 1\n\n\nMonth 3\nProject 2\n\n\n\n\n\n\n\n\nLecture 1 : PDF\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML\n\n\n\n\n\n\n\n\nSubject\nDataset\n\n\n\n\nLab 1\nPDF\nCSV\n\n\nLab 2\nPDF\n-\n\n\nProject 1\nPDF\nCSV\n\n\nProject 2\nPDF\nODS"
-  },
-  {
-    "objectID": "en/teaching/bigdata/index.html#indicative-planning",
-    "href": "en/teaching/bigdata/index.html#indicative-planning",
-    "title": "Introduction to Big Data",
-    "section": "",
-    "text": "Period\nContent\n\n\n\n\nMonth 1\nLabs\n\n\nMonth 2\nProject 1\n\n\nMonth 3\nProject 2"
-  },
-  {
-    "objectID": "en/teaching/bigdata/index.html#lectures",
-    "href": "en/teaching/bigdata/index.html#lectures",
-    "title": "Introduction to Big Data",
-    "section": "",
-    "text": "Lecture 1 : PDF\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML"
-  },
-  {
-    "objectID": "en/teaching/bigdata/index.html#labs-projects",
-    "href": "en/teaching/bigdata/index.html#labs-projects",
-    "title": "Introduction to Big Data",
-    "section": "",
-    "text": "Subject\nDataset\n\n\n\n\nLab 1\nPDF\nCSV\n\n\nLab 2\nPDF\n-\n\n\nProject 1\nPDF\nCSV\n\n\nProject 2\nPDF\nODS"
-  },
-  {
-    "objectID": "en/blog/article_2.html",
-    "href": "en/blog/article_2.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Outil\nRôle\n\n\n\n\nQuarto\ninfrastructure centrale\n\n\nManim\nvisualisation rigoureuse\n\n\nJupyter\ncalcul reproductible\n\n\nTypst\npublication moderne\n\n\nPandoc\nconversion universelle\n\n\nGit\nmémoire et traçabilité\n\n\nIA\namplification cognitive"
-  },
-  {
-    "objectID": "en/blog/article_1.html",
-    "href": "en/blog/article_1.html",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "",
-    "text": "J’ai passé des années à fabriquer mes cours avec LibreOffice Impress. J’y ai laissé du temps, de l’énergie et une partie de ma santé mentale. Puis j’ai découvert Quarto. Trois mois plus tard, je produis plus de cours, mieux structurés, bilingues, maintenables, compatibles IA… et je dors mieux. Cet article raconte comment et pourquoi.\nSpoiler : ce n’est pas juste un changement d’outil, c’est un changement de paradigme."
-  },
-  {
-    "objectID": "en/blog/article_1.html#tldr-pour-les-pressés",
-    "href": "en/blog/article_1.html#tldr-pour-les-pressés",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "",
-    "text": "J’ai passé des années à fabriquer mes cours avec LibreOffice Impress. J’y ai laissé du temps, de l’énergie et une partie de ma santé mentale. Puis j’ai découvert Quarto. Trois mois plus tard, je produis plus de cours, mieux structurés, bilingues, maintenables, compatibles IA… et je dors mieux. Cet article raconte comment et pourquoi.\nSpoiler : ce n’est pas juste un changement d’outil, c’est un changement de paradigme."
-  },
-  {
-    "objectID": "en/blog/article_1.html#le-problème-que-je-narrivais-plus-à-ignorer",
-    "href": "en/blog/article_1.html#le-problème-que-je-narrivais-plus-à-ignorer",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "2 1. Le problème que je n’arrivais plus à ignorer",
-    "text": "2 1. Le problème que je n’arrivais plus à ignorer\nPendant longtemps, je n’ai pas remis en question mon outil de présentation. LibreOffice Impress faisait « le job ». Enfin… plus ou moins.\nMais les symptômes étaient là :\n\nune modification mineure qui prend 20 minutes,\ndes slides dupliquées partout,\ndes versions légèrement différentes du même cours,\ndes fichiers impossibles à maintenir d’une année sur l’autre,\nune impression permanente de bricolage.\n\nEt surtout ce ratio absurde : 15 heures de préparation pour 2 heures de cours.\nÀ un moment, ce n’est plus de la pédagogie, c’est de l’artisanat sous perfusion café."
-  },
-  {
-    "objectID": "en/blog/article_1.html#trois-mois-à-observer-et-à-douter",
-    "href": "en/blog/article_1.html#trois-mois-à-observer-et-à-douter",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "3 2. Trois mois à observer (et à douter)",
-    "text": "3 2. Trois mois à observer (et à douter)\nJe n’ai pas sauté sur le premier outil venu. Pendant environ trois mois, j’ai :\n\nanalysé mes propres diapos (objectivement moches et fragiles),\nregardé celles de mes collègues (sans jugement… enfin presque),\nlisté les vrais problèmes (pas les symptômes),\ncherché comment me passer d’Impress, pas par snobisme, mais par nécessité.\n\nJe ne cherchais pas « un meilleur PowerPoint ». Je cherchais un système.\nEt puis, presque par hasard, je tombe sur Quarto."
-  },
-  {
-    "objectID": "en/blog/article_1.html#la-claque-découvrir-quarto",
-    "href": "en/blog/article_1.html#la-claque-découvrir-quarto",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "4 3. La claque : découvrir Quarto",
-    "text": "4 3. La claque : découvrir Quarto\nQuarto, à la base, ce n’est pas un outil de slides. C’est un système de publication texte-first, pensé pour la recherche, la documentation, les rapports.\nEt pourtant…\n\ndu Markdown lisible,\nun YAML déclaratif,\nReveal.js intégré proprement,\nexport HTML / PDF / slides,\ncompatibilité parfaite avec Git,\net surtout : du texte structuré.\n\nJe m’y mets « pour voir ».\nDeux jours plus tard :\n\n« Attends… donc là, je modifie une phrase, et elle est correcte partout ? »\n\nC’est le début de la fin pour Impress."
-  },
-  {
-    "objectID": "en/blog/article_1.html#le-vrai-changement-penser-en-chaîne-de-production",
-    "href": "en/blog/article_1.html#le-vrai-changement-penser-en-chaîne-de-production",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "5 4. Le vrai changement : penser en chaîne de production",
-    "text": "5 4. Le vrai changement : penser en chaîne de production\nAvec Quarto, j’ai arrêté de :\n\nfabriquer des slides,\narranger des blocs visuels,\nmicro-optimiser des mises en page.\n\nJ’ai commencé à :\n\nécrire des cours,\nstructurer mes idées,\nséparer fond et forme.\n\nUn fichier .qmd n’est pas une présentation. C’est une source unique de vérité.\nÀ partir de là, les slides ne sont qu’un rendu parmi d’autres.\nC’est exactement à ce moment-là que l’artisanat devient industriel."
-  },
-  {
-    "objectID": "en/blog/article_1.html#industrialiser-ne-veut-pas-dire-déshumaniser",
-    "href": "en/blog/article_1.html#industrialiser-ne-veut-pas-dire-déshumaniser",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "6 5. Industrialiser ne veut pas dire déshumaniser",
-    "text": "6 5. Industrialiser ne veut pas dire déshumaniser\nImportant : industrialiser ≠ standardiser le contenu.\nCe que j’ai standardisé :\n\nla structure des cours,\nles sections récurrentes (objectifs, notions, activités),\nles conventions d’écriture,\nles templates.\n\nRésultat :\n\nmoins de charge cognitive,\nplus de cohérence,\nplus de temps pour la pédagogie réelle.\n\nAujourd’hui, je suis passé à environ 10 heures de préparation pour 9 heures de cours.\nCe n’est pas de la magie. C’est de l’ingénierie."
-  },
-  {
-    "objectID": "en/blog/article_1.html#lia-le-stagiaire-parfait-mais-quil-faut-encadrer",
-    "href": "en/blog/article_1.html#lia-le-stagiaire-parfait-mais-quil-faut-encadrer",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "7 6. L’IA : le stagiaire parfait (mais qu’il faut encadrer)",
-    "text": "7 6. L’IA : le stagiaire parfait (mais qu’il faut encadrer)\nQuarto a un super-pouvoir inattendu : il est parfaitement lisible par l’IA.\nUn .qmd bien structuré, c’est le rêve d’un modèle de langage.\nJ’utilise l’IA pour :\n\ngénérer des exemples,\ncréer des exercices progressifs,\nproposer des quiz,\ntraduire en anglais,\nreformuler pour différents niveaux.\n\nMais jamais pour décider à ma place.\nL’IA est un assistant, pas un enseignant."
-  },
-  {
-    "objectID": "en/blog/article_1.html#bonus-inattendu-le-bilinguisme-sans-douleur",
-    "href": "en/blog/article_1.html#bonus-inattendu-le-bilinguisme-sans-douleur",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "8 7. Bonus inattendu : le bilinguisme sans douleur",
-    "text": "8 7. Bonus inattendu : le bilinguisme sans douleur\nAvec ce système, j’ai pu mettre en place un site pédagogique bilingue FR / EN.\nDeux versions, même structure, mêmes templates.\nAvant, traduire un cours était une punition. Aujourd’hui, c’est une opération contrôlée.\nEt non, je ne reviendrai jamais en arrière."
-  },
-  {
-    "objectID": "en/blog/article_1.html#pourquoi-je-pense-que-ce-modèle-va-se-généraliser",
-    "href": "en/blog/article_1.html#pourquoi-je-pense-que-ce-modèle-va-se-généraliser",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "9 8. Pourquoi je pense que ce modèle va se généraliser",
-    "text": "9 8. Pourquoi je pense que ce modèle va se généraliser\nParce qu’il coche toutes les cases :\n\nformats ouverts,\npérennité,\ncompatibilité IA,\nmaintenabilité,\nmutualisation possible.\n\nEt surtout : il redonne du temps et de l’énergie aux enseignants."
-  },
-  {
-    "objectID": "en/blog/article_1.html#conclusion-et-avertissement",
-    "href": "en/blog/article_1.html#conclusion-et-avertissement",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "10 9. Conclusion (et avertissement)",
-    "text": "10 9. Conclusion (et avertissement)\nQuarto n’est pas un gadget.\nC’est une infrastructure pédagogique.\nLe danger n’est pas de trop automatiser. Le danger, c’est de continuer à bricoler en pensant que c’est normal.\nSi tu prépares des cours, que tu es fatigué, et que tu as l’impression de refaire sans cesse la même chose :\n👉 le problème n’est peut-être pas toi."
-  },
-  {
-    "objectID": "en/blog/article_1.html#annexe-pourquoi-cet-article",
-    "href": "en/blog/article_1.html#annexe-pourquoi-cet-article",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "11 Annexe : pourquoi cet article",
-    "text": "11 Annexe : pourquoi cet article\nParce qu’il existe très peu de retours d’expérience honnêtes sur ces sujets. Parce que l’ingénierie pédagogique mérite mieux que des astuces bricolées. Et parce que oui : parfois, un outil change vraiment la donne."
-  },
-  {
-    "objectID": "en/teaching/syntheseimage/index.html",
-    "href": "en/teaching/syntheseimage/index.html",
-    "title": "Image Synthesis by Inverse Rendering (SIRI)",
-    "section": "",
-    "text": "This part of the course focuses on realistic image synthesis through inverse rendering, with an emphasis on generating new images from existing ones. It first introduces 2D image-based synthesis methods, such as interpolation and extrapolation.\nThe course then presents photogrammetry as a framework for producing realistic images from multi-view reconstructions. Finally, it introduces various representations for view synthesis, ranging from point clouds and splats to modern continuous representations, and analyzes their contributions and limitations for the production of realistic images.\n\n\n\nLecture 1 : HTML\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML\nLecture 5 : HTML\nLecture 6 : HTML\n\n\n\n\n\n\n\n\nSubject\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\n[PDF]("
-  },
-  {
-    "objectID": "en/teaching/syntheseimage/index.html#lectures",
-    "href": "en/teaching/syntheseimage/index.html#lectures",
-    "title": "Image Synthesis by Inverse Rendering (SIRI)",
-    "section": "",
-    "text": "Lecture 1 : HTML\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML\nLecture 5 : HTML\nLecture 6 : HTML"
-  },
-  {
-    "objectID": "en/teaching/syntheseimage/index.html#labs",
-    "href": "en/teaching/syntheseimage/index.html#labs",
-    "title": "Image Synthesis by Inverse Rendering (SIRI)",
-    "section": "",
-    "text": "Subject\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\n[PDF]("
-  },
-  {
-    "objectID": "en/index.html",
-    "href": "en/index.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Course\nLevel\n\n\n\n\nData Processing\nL1\n\n\nIntroduction to Big Data\nL3\n\n\nImage Synthesis by Inverse Rendering\nM1\n\n\n3D Reconstruction\nM2"
   },
   {
     "objectID": "fr/blog/article_1.html",
@@ -1176,851 +1554,711 @@
     "text": "11 Annexe : pourquoi cet article\nParce qu’il existe très peu de retours d’expérience honnêtes sur ces sujets. Parce que l’ingénierie pédagogique mérite mieux que des astuces bricolées. Et parce que oui : parfois, un outil change vraiment la donne."
   },
   {
-    "objectID": "fr/teaching/syntheseimage/index.html",
-    "href": "fr/teaching/syntheseimage/index.html",
-    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
+    "objectID": "en/index.html",
+    "href": "en/index.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Course\nLevel\n\n\n\n\nData Processing\nL1\n\n\nIntroduction to Big Data\nL3\n\n\nImage Synthesis by Inverse Rendering\nM1\n\n\n3D Reconstruction\nM2"
+  },
+  {
+    "objectID": "en/teaching/syntheseimage/index.html",
+    "href": "en/teaching/syntheseimage/index.html",
+    "title": "Image Synthesis by Inverse Rendering (SIRI)",
+    "section": "",
+    "text": "This part of the course focuses on realistic image synthesis through inverse rendering, with an emphasis on generating new images from existing ones. It first introduces 2D image-based synthesis methods, such as interpolation and extrapolation.\nThe course then presents photogrammetry as a framework for producing realistic images from multi-view reconstructions. Finally, it introduces various representations for view synthesis, ranging from point clouds and splats to modern continuous representations, and analyzes their contributions and limitations for the production of realistic images.\n\n\n\nLecture 1 : HTML\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML\nLecture 5 : HTML\nLecture 6 : HTML\n\n\n\n\n\n\n\n\nSubject\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\n[PDF]("
+  },
+  {
+    "objectID": "en/teaching/syntheseimage/index.html#lectures",
+    "href": "en/teaching/syntheseimage/index.html#lectures",
+    "title": "Image Synthesis by Inverse Rendering (SIRI)",
+    "section": "",
+    "text": "Lecture 1 : HTML\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML\nLecture 5 : HTML\nLecture 6 : HTML"
+  },
+  {
+    "objectID": "en/teaching/syntheseimage/index.html#labs",
+    "href": "en/teaching/syntheseimage/index.html#labs",
+    "title": "Image Synthesis by Inverse Rendering (SIRI)",
+    "section": "",
+    "text": "Subject\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\n[PDF]("
+  },
+  {
+    "objectID": "en/blog/article_1.html",
+    "href": "en/blog/article_1.html",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "",
+    "text": "J’ai passé des années à fabriquer mes cours avec LibreOffice Impress. J’y ai laissé du temps, de l’énergie et une partie de ma santé mentale. Puis j’ai découvert Quarto. Trois mois plus tard, je produis plus de cours, mieux structurés, bilingues, maintenables, compatibles IA… et je dors mieux. Cet article raconte comment et pourquoi.\nSpoiler : ce n’est pas juste un changement d’outil, c’est un changement de paradigme."
+  },
+  {
+    "objectID": "en/blog/article_1.html#tldr-pour-les-pressés",
+    "href": "en/blog/article_1.html#tldr-pour-les-pressés",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "",
+    "text": "J’ai passé des années à fabriquer mes cours avec LibreOffice Impress. J’y ai laissé du temps, de l’énergie et une partie de ma santé mentale. Puis j’ai découvert Quarto. Trois mois plus tard, je produis plus de cours, mieux structurés, bilingues, maintenables, compatibles IA… et je dors mieux. Cet article raconte comment et pourquoi.\nSpoiler : ce n’est pas juste un changement d’outil, c’est un changement de paradigme."
+  },
+  {
+    "objectID": "en/blog/article_1.html#le-problème-que-je-narrivais-plus-à-ignorer",
+    "href": "en/blog/article_1.html#le-problème-que-je-narrivais-plus-à-ignorer",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "2 1. Le problème que je n’arrivais plus à ignorer",
+    "text": "2 1. Le problème que je n’arrivais plus à ignorer\nPendant longtemps, je n’ai pas remis en question mon outil de présentation. LibreOffice Impress faisait « le job ». Enfin… plus ou moins.\nMais les symptômes étaient là :\n\nune modification mineure qui prend 20 minutes,\ndes slides dupliquées partout,\ndes versions légèrement différentes du même cours,\ndes fichiers impossibles à maintenir d’une année sur l’autre,\nune impression permanente de bricolage.\n\nEt surtout ce ratio absurde : 15 heures de préparation pour 2 heures de cours.\nÀ un moment, ce n’est plus de la pédagogie, c’est de l’artisanat sous perfusion café."
+  },
+  {
+    "objectID": "en/blog/article_1.html#trois-mois-à-observer-et-à-douter",
+    "href": "en/blog/article_1.html#trois-mois-à-observer-et-à-douter",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "3 2. Trois mois à observer (et à douter)",
+    "text": "3 2. Trois mois à observer (et à douter)\nJe n’ai pas sauté sur le premier outil venu. Pendant environ trois mois, j’ai :\n\nanalysé mes propres diapos (objectivement moches et fragiles),\nregardé celles de mes collègues (sans jugement… enfin presque),\nlisté les vrais problèmes (pas les symptômes),\ncherché comment me passer d’Impress, pas par snobisme, mais par nécessité.\n\nJe ne cherchais pas « un meilleur PowerPoint ». Je cherchais un système.\nEt puis, presque par hasard, je tombe sur Quarto."
+  },
+  {
+    "objectID": "en/blog/article_1.html#la-claque-découvrir-quarto",
+    "href": "en/blog/article_1.html#la-claque-découvrir-quarto",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "4 3. La claque : découvrir Quarto",
+    "text": "4 3. La claque : découvrir Quarto\nQuarto, à la base, ce n’est pas un outil de slides. C’est un système de publication texte-first, pensé pour la recherche, la documentation, les rapports.\nEt pourtant…\n\ndu Markdown lisible,\nun YAML déclaratif,\nReveal.js intégré proprement,\nexport HTML / PDF / slides,\ncompatibilité parfaite avec Git,\net surtout : du texte structuré.\n\nJe m’y mets « pour voir ».\nDeux jours plus tard :\n\n« Attends… donc là, je modifie une phrase, et elle est correcte partout ? »\n\nC’est le début de la fin pour Impress."
+  },
+  {
+    "objectID": "en/blog/article_1.html#le-vrai-changement-penser-en-chaîne-de-production",
+    "href": "en/blog/article_1.html#le-vrai-changement-penser-en-chaîne-de-production",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "5 4. Le vrai changement : penser en chaîne de production",
+    "text": "5 4. Le vrai changement : penser en chaîne de production\nAvec Quarto, j’ai arrêté de :\n\nfabriquer des slides,\narranger des blocs visuels,\nmicro-optimiser des mises en page.\n\nJ’ai commencé à :\n\nécrire des cours,\nstructurer mes idées,\nséparer fond et forme.\n\nUn fichier .qmd n’est pas une présentation. C’est une source unique de vérité.\nÀ partir de là, les slides ne sont qu’un rendu parmi d’autres.\nC’est exactement à ce moment-là que l’artisanat devient industriel."
+  },
+  {
+    "objectID": "en/blog/article_1.html#industrialiser-ne-veut-pas-dire-déshumaniser",
+    "href": "en/blog/article_1.html#industrialiser-ne-veut-pas-dire-déshumaniser",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "6 5. Industrialiser ne veut pas dire déshumaniser",
+    "text": "6 5. Industrialiser ne veut pas dire déshumaniser\nImportant : industrialiser ≠ standardiser le contenu.\nCe que j’ai standardisé :\n\nla structure des cours,\nles sections récurrentes (objectifs, notions, activités),\nles conventions d’écriture,\nles templates.\n\nRésultat :\n\nmoins de charge cognitive,\nplus de cohérence,\nplus de temps pour la pédagogie réelle.\n\nAujourd’hui, je suis passé à environ 10 heures de préparation pour 9 heures de cours.\nCe n’est pas de la magie. C’est de l’ingénierie."
+  },
+  {
+    "objectID": "en/blog/article_1.html#lia-le-stagiaire-parfait-mais-quil-faut-encadrer",
+    "href": "en/blog/article_1.html#lia-le-stagiaire-parfait-mais-quil-faut-encadrer",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "7 6. L’IA : le stagiaire parfait (mais qu’il faut encadrer)",
+    "text": "7 6. L’IA : le stagiaire parfait (mais qu’il faut encadrer)\nQuarto a un super-pouvoir inattendu : il est parfaitement lisible par l’IA.\nUn .qmd bien structuré, c’est le rêve d’un modèle de langage.\nJ’utilise l’IA pour :\n\ngénérer des exemples,\ncréer des exercices progressifs,\nproposer des quiz,\ntraduire en anglais,\nreformuler pour différents niveaux.\n\nMais jamais pour décider à ma place.\nL’IA est un assistant, pas un enseignant."
+  },
+  {
+    "objectID": "en/blog/article_1.html#bonus-inattendu-le-bilinguisme-sans-douleur",
+    "href": "en/blog/article_1.html#bonus-inattendu-le-bilinguisme-sans-douleur",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "8 7. Bonus inattendu : le bilinguisme sans douleur",
+    "text": "8 7. Bonus inattendu : le bilinguisme sans douleur\nAvec ce système, j’ai pu mettre en place un site pédagogique bilingue FR / EN.\nDeux versions, même structure, mêmes templates.\nAvant, traduire un cours était une punition. Aujourd’hui, c’est une opération contrôlée.\nEt non, je ne reviendrai jamais en arrière."
+  },
+  {
+    "objectID": "en/blog/article_1.html#pourquoi-je-pense-que-ce-modèle-va-se-généraliser",
+    "href": "en/blog/article_1.html#pourquoi-je-pense-que-ce-modèle-va-se-généraliser",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "9 8. Pourquoi je pense que ce modèle va se généraliser",
+    "text": "9 8. Pourquoi je pense que ce modèle va se généraliser\nParce qu’il coche toutes les cases :\n\nformats ouverts,\npérennité,\ncompatibilité IA,\nmaintenabilité,\nmutualisation possible.\n\nEt surtout : il redonne du temps et de l’énergie aux enseignants."
+  },
+  {
+    "objectID": "en/blog/article_1.html#conclusion-et-avertissement",
+    "href": "en/blog/article_1.html#conclusion-et-avertissement",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "10 9. Conclusion (et avertissement)",
+    "text": "10 9. Conclusion (et avertissement)\nQuarto n’est pas un gadget.\nC’est une infrastructure pédagogique.\nLe danger n’est pas de trop automatiser. Le danger, c’est de continuer à bricoler en pensant que c’est normal.\nSi tu prépares des cours, que tu es fatigué, et que tu as l’impression de refaire sans cesse la même chose :\n👉 le problème n’est peut-être pas toi."
+  },
+  {
+    "objectID": "en/blog/article_1.html#annexe-pourquoi-cet-article",
+    "href": "en/blog/article_1.html#annexe-pourquoi-cet-article",
+    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "section": "11 Annexe : pourquoi cet article",
+    "text": "11 Annexe : pourquoi cet article\nParce qu’il existe très peu de retours d’expérience honnêtes sur ces sujets. Parce que l’ingénierie pédagogique mérite mieux que des astuces bricolées. Et parce que oui : parfois, un outil change vraiment la donne."
+  },
+  {
+    "objectID": "en/blog/article_2.html",
+    "href": "en/blog/article_2.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Outil\nRôle\n\n\n\n\nQuarto\ninfrastructure centrale\n\n\nManim\nvisualisation rigoureuse\n\n\nJupyter\ncalcul reproductible\n\n\nTypst\npublication moderne\n\n\nPandoc\nconversion universelle\n\n\nGit\nmémoire et traçabilité\n\n\nIA\namplification cognitive"
+  },
+  {
+    "objectID": "en/teaching/bigdata/index.html",
+    "href": "en/teaching/bigdata/index.html",
+    "title": "Introduction to Big Data",
+    "section": "",
+    "text": "This Big Data course introduces the fundamentals of information retrieval from data. It covers key concepts such as the distinction between data, information, and knowledge, as well as the principle of abstraction in computer science. These concepts are illustrated through concrete applications and put into practice through projects inspired by real-world professional scenarios.\nThe course is primarily self-directed, and assessment is based exclusively on the completion of two projects.\n\n\n\n\n\n\nPeriod\nContent\n\n\n\n\nMonth 1\nLabs\n\n\nMonth 2\nProject 1\n\n\nMonth 3\nProject 2\n\n\n\n\n\n\n\n\nLecture 1 : PDF\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML\n\n\n\n\n\n\n\n\nSubject\nDataset\n\n\n\n\nLab 1\nPDF\nCSV\n\n\nLab 2\nPDF\n-\n\n\nProject 1\nPDF\nCSV\n\n\nProject 2\nPDF\nODS"
+  },
+  {
+    "objectID": "en/teaching/bigdata/index.html#indicative-planning",
+    "href": "en/teaching/bigdata/index.html#indicative-planning",
+    "title": "Introduction to Big Data",
+    "section": "",
+    "text": "Period\nContent\n\n\n\n\nMonth 1\nLabs\n\n\nMonth 2\nProject 1\n\n\nMonth 3\nProject 2"
+  },
+  {
+    "objectID": "en/teaching/bigdata/index.html#lectures",
+    "href": "en/teaching/bigdata/index.html#lectures",
+    "title": "Introduction to Big Data",
+    "section": "",
+    "text": "Lecture 1 : PDF\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML"
+  },
+  {
+    "objectID": "en/teaching/bigdata/index.html#labs-projects",
+    "href": "en/teaching/bigdata/index.html#labs-projects",
+    "title": "Introduction to Big Data",
+    "section": "",
+    "text": "Subject\nDataset\n\n\n\n\nLab 1\nPDF\nCSV\n\n\nLab 2\nPDF\n-\n\n\nProject 1\nPDF\nCSV\n\n\nProject 2\nPDF\nODS"
+  },
+  {
+    "objectID": "en/cv/personal.html",
+    "href": "en/cv/personal.html",
+    "title": "Nathan Sanchiz-Viel",
+    "section": "",
+    "text": "Welcome here !"
+  },
+  {
+    "objectID": "fr/blog/article_2.html",
+    "href": "fr/blog/article_2.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Outil\nRôle\n\n\n\n\nQuarto\ninfrastructure centrale\n\n\nManim\nvisualisation rigoureuse\n\n\nJupyter\ncalcul reproductible\n\n\nTypst\npublication moderne\n\n\nPandoc\nconversion universelle\n\n\nGit\nmémoire et traçabilité\n\n\nIA\namplification cognitive"
+  },
+  {
+    "objectID": "fr/teaching/bigdata/index.html",
+    "href": "fr/teaching/bigdata/index.html",
+    "title": "Introduction au Big Data",
+    "section": "",
+    "text": "Ce cours de Big Data introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets.\n\n\n\n\n\n\nPériode\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2\n\n\n\n\n\n\n\n\nCours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
+  },
+  {
+    "objectID": "fr/teaching/bigdata/index.html#planning-indicatif",
+    "href": "fr/teaching/bigdata/index.html#planning-indicatif",
+    "title": "Introduction au Big Data",
+    "section": "",
+    "text": "Période\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2"
+  },
+  {
+    "objectID": "fr/teaching/bigdata/index.html#cours-magistraux",
+    "href": "fr/teaching/bigdata/index.html#cours-magistraux",
+    "title": "Introduction au Big Data",
+    "section": "",
+    "text": "Cours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+  },
+  {
+    "objectID": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
+    "href": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
+    "title": "Introduction au Big Data",
+    "section": "",
+    "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
+  },
+  {
+    "objectID": "fr/cv/personal.html",
+    "href": "fr/cv/personal.html",
+    "title": "Nathan Sanchiz-Viel",
+    "section": "",
+    "text": "Welcome here !"
+  },
+  {
+    "objectID": "assets/syntheseimage/index.html",
+    "href": "assets/syntheseimage/index.html",
+    "title": "Synthèse d’Images par Rendu Inverse",
     "section": "",
     "text": "Cette partie du cours traite de la synthèse d’images réalistes par rendu inverse, en s’intéressant à la génération de nouvelles images à partir d’images existantes. Elle aborde d’abord des méthodes de synthèse 2D à partir d’images, telles que l’interpolation et l’extrapolation.\nLe cours introduit ensuite la photogrammétrie comme cadre permettant de produire des images réalistes à partir de reconstructions multi-vues. Il présente enfin différentes représentations pour la synthèse de vues, des nuages de points et splats aux représentations continues modernes, et en analyse les apports et les limites pour la production d’images réalistes.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\nCours 5 : HTML\nCours 6 : HTML\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nAtelier 1\nPDF\nZIP\n\n\nAtelier 2\nPDF\nZIP\n\n\nAtelier 3\nPDF\nZIP"
   },
   {
-    "objectID": "fr/teaching/syntheseimage/index.html#cours",
-    "href": "fr/teaching/syntheseimage/index.html#cours",
-    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
+    "objectID": "assets/syntheseimage/index.html#cours",
+    "href": "assets/syntheseimage/index.html#cours",
+    "title": "Synthèse d’Images par Rendu Inverse",
     "section": "",
     "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\nCours 5 : HTML\nCours 6 : HTML"
   },
   {
-    "objectID": "fr/teaching/syntheseimage/index.html#ateliers",
-    "href": "fr/teaching/syntheseimage/index.html#ateliers",
-    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
+    "objectID": "assets/syntheseimage/index.html#ateliers",
+    "href": "assets/syntheseimage/index.html#ateliers",
+    "title": "Synthèse d’Images par Rendu Inverse",
     "section": "",
     "text": "Sujet\nDonnées\n\n\n\n\nAtelier 1\nPDF\nZIP\n\n\nAtelier 2\nPDF\nZIP\n\n\nAtelier 3\nPDF\nZIP"
   },
   {
-    "objectID": "fr/index.html",
-    "href": "fr/index.html",
+    "objectID": "assets/bigdata/CM/CM4/index.html#section",
+    "href": "assets/bigdata/CM/CM4/index.html#section",
     "title": "Teaching",
     "section": "",
-    "text": "Cours\nNiveau\n\n\n\n\nTraitement Informatique des Données\nL1\n\n\nIntroduction au Big Data\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nM1\n\n\nReconstruction 3D\nM2"
+    "text": "Introduction au Big Data"
   },
   {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#synthèse-dimages-par-rendu-inverse",
-    "href": "assets/syntheseimage/CM/CM1/index.html#synthèse-dimages-par-rendu-inverse",
+    "objectID": "assets/bigdata/CM/CM4/index.html#pourquoi-on-fait-tout-ça",
+    "href": "assets/bigdata/CM/CM4/index.html#pourquoi-on-fait-tout-ça",
     "title": "Teaching",
-    "section": "Synthèse d’Images par Rendu Inverse",
-    "text": "Synthèse d’Images par Rendu Inverse\n\nCM1: Une image vaut mille mots (ou inversement)"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#une-image-vaut-mille-mots",
-    "href": "assets/syntheseimage/CM/CM1/index.html#une-image-vaut-mille-mots",
-    "title": "Teaching",
-    "section": "Une image vaut mille mots",
-    "text": "Une image vaut mille mots\n(ou l’inverse)\n\nUne image montre.\n\n\nMais comprend-on ce qu’elle contient ?\n\n\nEst-ce qu’une image décrit le monde ?\n\n\nOu est-ce que nous projetons un monde dans l’image ?"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#voir-cest-inférer",
-    "href": "assets/syntheseimage/CM/CM1/index.html#voir-cest-inférer",
-    "title": "Teaching",
-    "section": "Voir, c’est inférer",
-    "text": "Voir, c’est inférer\nUne image est la projection d’un monde latent.\n\n\nlatent : caché, non observable directement"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#mise-en-situation",
-    "href": "assets/syntheseimage/CM/CM1/index.html#mise-en-situation",
-    "title": "Teaching",
-    "section": "Mise en situation",
-    "text": "Mise en situation\nVous êtes ingénieur Computer Graphics.\nVotre ami journaliste vous demande de lui faire (gratuitement) un petit pipeline pour présenter à son redacteur en chef des reportages plus immersifs.\n\n\nIl n’a que son appareil photo\n\n\n\n Que faites vous ?"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#objectif",
-    "href": "assets/syntheseimage/CM/CM1/index.html#objectif",
-    "title": "Teaching",
-    "section": "🎯 Objectif",
-    "text": "🎯 Objectif\nÀ partir de photos prises avec un appareil classique\n produire une scène interactive consultable dans un navigateur.\n\nDonc :\n\npas d’app spéciale lecteur\npartage par lien\nmarche sur mobile & desktop & multi-OS\nassez “WoW” pour convaincre un rédacteur en chef\n\n\n\n🧭 Pipeline minimal viable\n👉 Photogrammétrie  nettoyage  export web  intégration dans une page."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#exemple",
-    "href": "assets/syntheseimage/CM/CM1/index.html#exemple",
-    "title": "Teaching",
-    "section": "Exemple",
-    "text": "Exemple"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#fil-directeur-2d-3d-continu",
-    "href": "assets/syntheseimage/CM/CM1/index.html#fil-directeur-2d-3d-continu",
-    "title": "Teaching",
-    "section": "Fil directeur (2D → 3D → continu)",
-    "text": "Fil directeur (2D → 3D → continu)\n\n\n\n\n\n\n\nG\n\n\nA\n\nCM1/TP1\nSynthèse 2D\n(image → image)\n\n\n\nB\n\nCM2-CM4/TP2\nPhotogrammétrie\n(image → structure 3D)\n\n\n\nA-&gt;B\n\n\n\n\n\nC\n\nCM5–CM6/TP3\nSynthèse de vues\n(structure → image)\npoints/splats/GS/NeRF\n\n\n\nB-&gt;C"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#examen",
-    "href": "assets/syntheseimage/CM/CM1/index.html#examen",
-    "title": "Teaching",
-    "section": "Examen",
-    "text": "Examen\n\nLes TP introduisent les questions conceptuelles du cours. L’examen vérifie que vous avez compris ces questions, pas que vous avez refait les TP.\n\nCompétences acquisent :\n\n\nCompréhension conceptuelle du rendu inverse et des représentations\nNumérisation de petits objets\nCréation d’un portefolio"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#méthode-de-pensée-du-cours",
-    "href": "assets/syntheseimage/CM/CM1/index.html#méthode-de-pensée-du-cours",
-    "title": "Teaching",
-    "section": "Méthode de pensée du cours",
-    "text": "Méthode de pensée du cours\nOn va progresser par besoin de structure :\n\n\nEn 2D, on “triche” intelligemment : on manipule l’image.\nPuis on se heurte à des limites  on introduit la 3D (photogrammétrie).\nPuis on compare des représentations modernes pour le rendu.\n\n\n\n👉 Aujourd’hui : borne basse = image  image."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#sortie-attendue-à-la-fin-du-cm1",
-    "href": "assets/syntheseimage/CM/CM1/index.html#sortie-attendue-à-la-fin-du-cm1",
-    "title": "Teaching",
-    "section": "Sortie attendue à la fin du CM1",
-    "text": "Sortie attendue à la fin du CM1\nVous devez pouvoir répondre à :\n\n\nQu’est-ce que “rendu inverse” dans notre sens ?\nPourquoi l’inversion est mal posée ?\nQu’est-ce qu’on peut déjà faire en 2D (sans 3D) ?\nQuels artefacts sont structurels (donc inévitables en 2D) ?"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#bloc-1",
-    "href": "assets/syntheseimage/CM/CM1/index.html#bloc-1",
-    "title": "Teaching",
-    "section": "BLOC 1",
-    "text": "BLOC 1"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#quest-ce-que-le-rendu-inverse",
-    "href": "assets/syntheseimage/CM/CM1/index.html#quest-ce-que-le-rendu-inverse",
-    "title": "Teaching",
-    "section": "Qu’est ce que le rendu inverse ?",
-    "text": "Qu’est ce que le rendu inverse ?"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-quest-ce-que-le-rendu-normale",
-    "href": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-quest-ce-que-le-rendu-normale",
-    "title": "Teaching",
-    "section": "Tout d’abord, qu’est ce que le rendu normale ?",
-    "text": "Tout d’abord, qu’est ce que le rendu normale ?\nOn part d’une scène (géométrie + apparence) + caméra  on obtient une image.\n\n\n\n\n\n\n\nG\n\n\nS\n\nScène\n(3D + apparence)\n\n\n\nR\n\nRendu\n(projection + intégration)\n\n\n\nS-&gt;R\n\n\n\n\n\nC\n\nCaméra\n(pose + intr.)\n\n\n\nC-&gt;R\n\n\n\n\n\nI\n\nImage\n(2D)\n\n\n\nR-&gt;I\n\n\n\n\n\n\n\n\n\n\n\n👉 Rendu direct : représentation → image."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-quest-ce-que-le-rendu-normal",
-    "href": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-quest-ce-que-le-rendu-normal",
-    "title": "Teaching",
-    "section": "Tout d’abord, qu’est ce que le rendu normal ?",
-    "text": "Tout d’abord, qu’est ce que le rendu normal ?\n\\[\n\\color{#00e0ff}{I} = \\color{#ffb000}{R}\\!\\left(\\color{#00ff88}{\\theta}\\right)\n\\]\noù :\n\n\\(\\color{#00ff88}{\\theta}\\) = paramètre de la scène\n\\(\\color{#ffb000}{R}\\) = fonction de rendu\n\\(\\color{#00e0ff}{I}\\) = image"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#rendu-normal",
-    "href": "assets/syntheseimage/CM/CM1/index.html#rendu-normal",
-    "title": "Teaching",
-    "section": "Rendu normal :",
-    "text": "Rendu normal :\n\\[\n\\color{#00e0ff}{I} = \\color{#ffb000}{R}\\!\\left(\\color{#00ff88}{\\theta}\\right)\n\\]\n\nOkay mais c’est quoi le rendu inverse du coup ?\n\n\n\n\n\\[\n\\text{C'est}\\quad  \\color{#00e0ff}{I} = \\frac{1}{\\color{#ffb000}{R}\\!\\left(\\color{#00ff88}{\\theta}\\right)}  \\quad ?\n\\]\n\n\nNop\n\n\n\n\n\n\n\\[\n\\text{C'est}\\quad \\color{#ffb000}{R} = \\frac{\\color{#00e0ff}{I}}{\\color{#00ff88}{\\theta}} \\quad ?\n\\]\n\n\nNop"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#section",
-    "href": "assets/syntheseimage/CM/CM1/index.html#section",
-    "title": "Teaching",
-    "section": "",
-    "text": "Le rendu inverse consiste à construire\nune représentation interne\nd’une scène à partir d’observations,\nafin de pouvoir ensuite re-rendre (prédire)\nde nouvelles vues."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-partons-dun-fait",
-    "href": "assets/syntheseimage/CM/CM1/index.html#tout-dabord-partons-dun-fait",
-    "title": "Teaching",
-    "section": "Tout d’abord, partons d’un fait",
-    "text": "Tout d’abord, partons d’un fait\nTout système réaliste de production d’image suppose une représentation du monde, obtenue par inférence (humaine ou algorithmique), puis un rendu.\n\ndirection: right\n\nstyle: {\n  fill: transparent\n}\n\nObservation: {\n  shape: rectangle\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nRepresentation: {\n  shape: rectangle\n  label: \"Représentation\\n(modèle)\"\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nSynthese: {\n  shape: rectangle\n  label: \"Synthèse\"\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nObservation -&gt; Representation: \"inférence\" {\n  style: {\n    stroke: \"#d33\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\n\nRepresentation -&gt; Synthese: \"rendu\" {\n  style: {\n    stroke: \"#2a7\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\n\n\nExemple de l'appareil photo :\nPaysage  projection sur capteur et mémoire interne  image jpeg\n\n\nExemple de la modélisation 3D :\nReprésentation mentale  modélisation sur Blender  rendu\n\n\n👉 L’humain aussi est une machine d’interprétation."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#section-1",
-    "href": "assets/syntheseimage/CM/CM1/index.html#section-1",
-    "title": "Teaching",
-    "section": "",
-    "text": "Le rendu inverse n’est pas une invention moderne.\n\n\nLe cerveau le fait depuis toujours.\n\n\n\nLes méthodes numériques sont des tentatives pour reproduire ça."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#dans-ce-sens",
-    "href": "assets/syntheseimage/CM/CM1/index.html#dans-ce-sens",
-    "title": "Teaching",
-    "section": "Dans ce sens :",
-    "text": "Dans ce sens :\n\n\nle cerveau fait du rendu inverse\nl’artiste 3D fait du rendu inverse\nla photogrammétrie fait du rendu inverse\nNeRF fait du rendu inverse\n\n\n\nCette inférence produit une représentation à qualité variable.\n\n\n2D  inférence faible  rendu\n3D  inférence géométrique  rendu\nNeRF  inférence volumétrique  rendu\n\n\nCe sont des formes différentes du même geste fondamental :\n\ninférer une structure générative à partir d’observations."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#introduction-à-la-synthèse-dimages-réalistes",
-    "href": "assets/syntheseimage/CM/CM1/index.html#introduction-à-la-synthèse-dimages-réalistes",
-    "title": "Teaching",
-    "section": "Introduction à la synthèse d’images réalistes",
-    "text": "Introduction à la synthèse d’images réalistes\nMais pour synthétiser, il faut :\n\n\nchoisir une représentation\ncomprendre ce qu’est une image\ncomprendre ce qui la rend plausible\n\n\n\n\nDonc passer par l’inversion n’est pas un détour.\nC’est une fondation."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#rendu-inverse-idée-générale",
-    "href": "assets/syntheseimage/CM/CM1/index.html#rendu-inverse-idée-générale",
-    "title": "Teaching",
-    "section": "Rendu inverse : idée générale",
-    "text": "Rendu inverse : idée générale\nOn observe une image (ou plusieurs) et on cherche une représentation compatible.\n\n On choisit une représentation “juste assez structurée” pour synthétiser de nouvelles vues.\n\n\n\n\n\n\n\n\nG\n\n\nI\n\nImages\n(observations)\n\n\n\nX\n\nReprésentation\n(inconnue)\n\n\n\nI-&gt;X\n\n\n\n\n\nI2\n\nRendu\n→ images (prévision)\n\n\n\nX-&gt;I2"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#rendu-inverse-idée-générale-1",
-    "href": "assets/syntheseimage/CM/CM1/index.html#rendu-inverse-idée-générale-1",
-    "title": "Teaching",
-    "section": "Rendu inverse : idée générale",
-    "text": "Rendu inverse : idée générale\n\\[\n\\hat{\\theta}\n=\n\\arg\\min_{\\theta}\n\\; \\| \\color{#ffb000}{R}(\\color{#00ff88}{\\theta}) - \\color{#00e0ff}{I_{\\text{obs}}} \\|^2\n\\]\noù :\n\n\\(\\color{#00ff88}{\\theta}\\) = paramètre de la scène\n\\(\\color{#ffb000}{R}\\) = fonction de rendu\n\\(\\color{#00e0ff}{I_{\\text{obs}}}\\) = image observée\n\n\nOn cherche les paramètres de scène qui, une fois rendus, produisent une image la plus proche possible de ce que l’on observe.\n\n\n\nInverser \\(\\color{#ffb000}{R}\\) est impossible analytiquement  on passe par l’optimisation."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#point-clé-on-ne-reconstruit-pas-la-vérité",
-    "href": "assets/syntheseimage/CM/CM1/index.html#point-clé-on-ne-reconstruit-pas-la-vérité",
-    "title": "Teaching",
-    "section": "Point clé : on ne reconstruit pas “la vérité”",
-    "text": "Point clé : on ne reconstruit pas “la vérité”\n\n\nUne image est compatible avec plusieurs scènes / explications.\nOn cherche une représentation utile au rendu (et pas une vérité physique).\n\n\n\n👉 On juge une inversion par sa capacité à re-rendre (prédire) correctement."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#pourquoi-linversion-est-difficile",
-    "href": "assets/syntheseimage/CM/CM1/index.html#pourquoi-linversion-est-difficile",
-    "title": "Teaching",
-    "section": "Pourquoi l’inversion est difficile ?",
-    "text": "Pourquoi l’inversion est difficile ?\nParce que beaucoup d’informations sont “perdues” dans l’image :\n\n\nprofondeur (3D  2D)\nocclusions (ce qui est caché)\nambiguïtés (textures répétées, surfaces planes…)\ndépendance au point de vue\n\n\n\nEn général : problème mal posé (pas de solution unique).\n\n\n\nPlusieurs \\(\\color{#00ff88}{\\theta}\\) donnent la même \\(\\color{#00e0ff}{I}\\)."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#quentend-ton-par-réalisme",
-    "href": "assets/syntheseimage/CM/CM1/index.html#quentend-ton-par-réalisme",
-    "title": "Teaching",
-    "section": "Qu’entend t’on par réalisme ?",
-    "text": "Qu’entend t’on par réalisme ?\nLe réalisme n’est pas une technique.\n\n\nC’est un choix de représentation.\n\n\n\n\nLes shaders, le ray tracing, NeRF, Gaussian Splatting…\nne sont pas seulement des algorithmes.\n\n\n\nCe sont des manières différentes de représenter la scène et la lumière.\n\n\n\n\n👉 Le réalisme dépend moins de la technique que de la représentation du monde, et chaque méthode impose une ontologie implicite du monde."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#par-exemple",
-    "href": "assets/syntheseimage/CM/CM1/index.html#par-exemple",
-    "title": "Teaching",
-    "section": "Par exemple",
-    "text": "Par exemple\nRasterisation classique\n Représentation = surfaces polygonales + illumination locale.\n\nRay tracing\n Représentation = simulation explicite des interactions lumière–matière.\n\n\nNeRF\n Représentation = champ continu volumétrique appris.\n\n\n\nCe ne sont pas juste des “techniques”.\n\n\n\nCe sont des hypothèses sur :\n\n\n\nce qu’est une scène\nce qu’est la lumière\nce qu’est une image"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#pour-résumer",
-    "href": "assets/syntheseimage/CM/CM1/index.html#pour-résumer",
-    "title": "Teaching",
-    "section": "Pour résumer",
-    "text": "Pour résumer\n\nLe rendu direct est mécanique.\n\n\nLe rendu inverse est interprétatif.\n\n\n Le rendu inverse peut être compris comme :\nToute tentative de reconstruire une structure du monde à partir d’images."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#respiration",
-    "href": "assets/syntheseimage/CM/CM1/index.html#respiration",
-    "title": "Teaching",
-    "section": "Respiration",
-    "text": "Respiration\n\n  \n\n  \n    \n      ▶\n      ↩\n\n      \n        \n        min\n        \n        s"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#bloc-2",
-    "href": "assets/syntheseimage/CM/CM1/index.html#bloc-2",
-    "title": "Teaching",
-    "section": "BLOC 2",
-    "text": "BLOC 2"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#on-inverse-limage-ou-nos-hypothèses",
-    "href": "assets/syntheseimage/CM/CM1/index.html#on-inverse-limage-ou-nos-hypothèses",
-    "title": "Teaching",
-    "section": "On inverse l’image… ou nos hypothèses ?",
-    "text": "On inverse l’image… ou nos hypothèses ?"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#prenons-deux-images-dune-même-scène",
-    "href": "assets/syntheseimage/CM/CM1/index.html#prenons-deux-images-dune-même-scène",
-    "title": "Teaching",
-    "section": "Prenons deux images d’une même scène",
-    "text": "Prenons deux images d’une même scène\n\n\n\n\n\n\nVue A\n\n\n\n\n\n\n\nVue B\n\n\n\n\n\n\n\nComment créer une nouvelle image à partir de là ?"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#interpolation-naïve-blending",
-    "href": "assets/syntheseimage/CM/CM1/index.html#interpolation-naïve-blending",
-    "title": "Teaching",
-    "section": "Interpolation naïve (blending)",
-    "text": "Interpolation naïve (blending)\nOn mélange pixel à pixel : \\[\nI_\\alpha = (1-\\alpha)\\color{#00ff88}{I_1} + \\alpha \\color{#ffb000}{I_2},\\quad \\alpha\\in[0,1]\n\\]"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#interpolation-naïve-blending-1",
-    "href": "assets/syntheseimage/CM/CM1/index.html#interpolation-naïve-blending-1",
-    "title": "Teaching",
-    "section": "Interpolation naïve (blending)",
-    "text": "Interpolation naïve (blending)\n\n\nArtefact typique : ghosting / double contours.\n\n\nPourquoi ? Parce qu’on mélange des pixels qui ne correspondent pas au même point de la scène."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-quil-manque-au-blending",
-    "href": "assets/syntheseimage/CM/CM1/index.html#ce-quil-manque-au-blending",
-    "title": "Teaching",
-    "section": "Ce qu’il manque au blending :",
-    "text": "Ce qu’il manque au blending :\n\n“qui correspond à quoi”\n\n\nPour synthétiser proprement, il faut une notion de correspondances :\n\n\nce pixel dans (\\(\\color{#00ff88}{I_1}\\))  ce pixel dans (\\(\\color{#ffb000}{I_2}\\))\nautrement dit : une déformation (warping) entre images\n\n\n👉 Première grande idée du cours : correspondances 2D–2D."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#warping-concept-sans-formalisme-lourd",
-    "href": "assets/syntheseimage/CM/CM1/index.html#warping-concept-sans-formalisme-lourd",
-    "title": "Teaching",
-    "section": "Warping : concept (sans formalisme lourd)",
-    "text": "Warping : concept (sans formalisme lourd)\nOn veut une fonction (\\(W\\)) qui déplace les pixels :\n\\[\nI_1 \\xrightarrow[]{W} I_{1\\rightarrow 2}\n\\]\nIntuition :\n\n\nsi (\\(W\\)) est bonne, les structures s’alignent,\nensuite le blending devient beaucoup plus cohérent."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#warping-on-essaye",
-    "href": "assets/syntheseimage/CM/CM1/index.html#warping-on-essaye",
-    "title": "Teaching",
-    "section": "Warping  On essaye",
-    "text": "Warping  On essaye\nOk et si on essayé de coller les images mais en cherchant au préalable des correspondances ?\n\nPour cela, SIFT est reconnu comme l’un des meilleurs rapport qualité / prix\n\n\n\n\n\n\n\n\nOk, on trouve 281 correspondances !!"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#ok-maintenant-il-faut-coller-les-deux-images",
-    "href": "assets/syntheseimage/CM/CM1/index.html#ok-maintenant-il-faut-coller-les-deux-images",
-    "title": "Teaching",
-    "section": "Ok, maintenant il faut coller les deux images…",
-    "text": "Ok, maintenant il faut coller les deux images…\n\nOn a 281 correspondances.\nMais elles sont ponctuelles.\n\n\n\nEntre ces points ?\n\n\nOn ne sait rien.\n\n\n\n👉 Il faut interpoler."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#triangulation",
-    "href": "assets/syntheseimage/CM/CM1/index.html#triangulation",
-    "title": "Teaching",
-    "section": "Triangulation",
-    "text": "Triangulation\nUne approche consiste à trianguler les points correspondants.\n On découpe l’image en triangles à partir des correspondances.\n\n\nDans chaque triangle :\n\n\n\non calcule l’affine entre triangle source et destination\non applique la transformation aux pixels\non remplit progressivement l’image cible\n\n\n\n\nLes correspondances définissent déjà une structure commune.\n👉 Mais pas de loi globale."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#triangulation-structure-locale",
-    "href": "assets/syntheseimage/CM/CM1/index.html#triangulation-structure-locale",
-    "title": "Teaching",
-    "section": "Triangulation  structure locale",
-    "text": "Triangulation  structure locale"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#warping-local",
-    "href": "assets/syntheseimage/CM/CM1/index.html#warping-local",
-    "title": "Teaching",
-    "section": "Warping local",
-    "text": "Warping local\nPuis, on aligne triangle par triangle.\n\nUne fois l’image reconstruite, on peut fusionner avec l’image de référence.\n\n\n\n\n\nTADAM !!!"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#le-problème",
-    "href": "assets/syntheseimage/CM/CM1/index.html#le-problème",
-    "title": "Teaching",
-    "section": "Le problème",
-    "text": "Le problème\n\nPas de cohérence géométrique globale.\n\n\n\nDes correspondances peuvent etre fausses\nDeux triangles voisins peuvent se déformer différemment.\nLes lignes droites peuvent devenir brisées.\nLes régions peu contraintes deviennent instables."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-quon-peut-retenir",
-    "href": "assets/syntheseimage/CM/CM1/index.html#ce-quon-peut-retenir",
-    "title": "Teaching",
-    "section": "Ce qu’on peut retenir",
-    "text": "Ce qu’on peut retenir\n\n\nBlending naïf  ghosting\nIl faut aligner avant de mélanger\nWarping local  (très) inconsistent"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#pause",
-    "href": "assets/syntheseimage/CM/CM1/index.html#pause",
-    "title": "Teaching",
-    "section": "Pause",
-    "text": "Pause\n\n  \n\n  \n    \n      ▶\n      ↩\n\n      \n        \n        min\n        \n        s"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#bloc-3",
-    "href": "assets/syntheseimage/CM/CM1/index.html#bloc-3",
-    "title": "Teaching",
-    "section": "BLOC 3",
-    "text": "BLOC 3"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#bon-bein-comment-on-fait-du-coup",
-    "href": "assets/syntheseimage/CM/CM1/index.html#bon-bein-comment-on-fait-du-coup",
-    "title": "Teaching",
-    "section": "Bon bein comment on fait du coup ?",
-    "text": "Bon bein comment on fait du coup ?"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#idée-clé",
-    "href": "assets/syntheseimage/CM/CM1/index.html#idée-clé",
-    "title": "Teaching",
-    "section": "Idée clé",
-    "text": "Idée clé\nSi une scène est plane, alors deux images prises sous des points de vue différents sont liées par une transformation projective.\n\nOn peut écrire :\n\\[\n\\color{#ffb000}{x'} \\sim \\color{#00e0ff}{H}\\color{#00ff88}{x}\n\\]\noù :\n\n\\(\\color{#00ff88}{x}\\) = point dans la première image\n\n\\(\\color{#ffb000}{x'}\\) = point correspondant dans la seconde image\n\n\\(\\color{#00e0ff}{H}\\) = matrice de transformation projective plane (3×3)\n\n\n\n\n👉 Ce qu’on appelle une homographie"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#interprétation",
-    "href": "assets/syntheseimage/CM/CM1/index.html#interprétation",
-    "title": "Teaching",
-    "section": "Interprétation",
-    "text": "Interprétation\nUne homographie permet :\n\n\nrotation\ntranslation\nchangement de perspective\nredressement de plan\n\n\n\nMais uniquement si les points appartiennent à un même plan."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#exemple-1",
-    "href": "assets/syntheseimage/CM/CM1/index.html#exemple-1",
-    "title": "Teaching",
-    "section": "Exemple",
-    "text": "Exemple"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#intuition-géométrique",
-    "href": "assets/syntheseimage/CM/CM1/index.html#intuition-géométrique",
-    "title": "Teaching",
-    "section": "Intuition géométrique",
-    "text": "Intuition géométrique\n\ndirection: right\n\nstyle: {\n  fill: transparent\n}\n\nblock_1: {\n  shape: rectangle\n  label: \"Image 1\\n(point x)\"\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nblock_2: {\n  shape: rectangle\n  label: \"Plan 3D\\n(scène plane)\"\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nblock_3: {\n  shape: rectangle\n  label: \"Image 2\\n(point x')\"\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\nblock_1 -&gt; block_2:{\n  style: {\n    stroke: \"#fff\"\n    stroke-width: 2\n  }\n}\n\nblock_2 -&gt; block_3: {\n  style: {\n    stroke: \"#fff\"\n    stroke-width: 2\n  }\n}\n\n\nSi tout est sur un plan :\n La transformation est entièrement décrite par \\(\\color{#00e0ff}{H}\\).\n\n\nCe que cela permet\n\n\n\nRedresser une façade\nFaire un panorama\nCorriger une perspective\nWarper une image vers un nouveau point de vue"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#comment-on-détermine-h",
-    "href": "assets/syntheseimage/CM/CM1/index.html#comment-on-détermine-h",
-    "title": "Teaching",
-    "section": "Comment on détermine H",
-    "text": "Comment on détermine H\nOn dispose de correspondances :\n\\[\n\\mathbf{x}_i \\leftrightarrow \\mathbf{x}'_i\n\\]\nOn cherche une matrice H telle que :\n\\[\n\\mathbf{x}'_i \\sim H \\mathbf{x}_i\n\\]\noù les points sont exprimés en coordonnées homogènes.\nEn pratique :\n\nIl faut au minimum 4 correspondances (8 équations indépendantes)\nOn résout un système linéaire (moindres carrés)\nOn utilise ensuite RANSAC pour éliminer les outliers\n\n👉 H est estimée directement à partir des données observées."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#une-fois-h-estimée",
-    "href": "assets/syntheseimage/CM/CM1/index.html#une-fois-h-estimée",
-    "title": "Teaching",
-    "section": "Une fois H estimée",
-    "text": "Une fois H estimée\nOn applique la transformation à tous les pixels :\n\\[\n\\mathbf{x}' \\sim H \\mathbf{x}\n\\]\nMais attention :\n\non travaille en coordonnées homogènes\non renormalise après multiplication\n\n\\[\n(x', y', w') \\rightarrow \\left(\\frac{x'}{w'}, \\frac{y'}{w'}\\right)\n\\]\nEn pratique (OpenCV) :\nwarped = cv2.warpPerspective(img, H, (width, height))\n👉 Tous les pixels suivent la même loi géométrique."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#en-pratique-correspondances",
-    "href": "assets/syntheseimage/CM/CM1/index.html#en-pratique-correspondances",
-    "title": "Teaching",
-    "section": "En pratique  Correspondances",
-    "text": "En pratique  Correspondances"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#en-pratique-correspondances-ransac",
-    "href": "assets/syntheseimage/CM/CM1/index.html#en-pratique-correspondances-ransac",
-    "title": "Teaching",
-    "section": "En pratique  Correspondances + RANSAC",
-    "text": "En pratique  Correspondances + RANSAC"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#en-pratique-blending",
-    "href": "assets/syntheseimage/CM/CM1/index.html#en-pratique-blending",
-    "title": "Teaching",
-    "section": "En pratique  blending",
-    "text": "En pratique  blending"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#en-pratique-résultat",
-    "href": "assets/syntheseimage/CM/CM1/index.html#en-pratique-résultat",
-    "title": "Teaching",
-    "section": "En pratique  résultat",
-    "text": "En pratique  résultat"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#en-pratique-résultat-1",
-    "href": "assets/syntheseimage/CM/CM1/index.html#en-pratique-résultat-1",
-    "title": "Teaching",
-    "section": "En pratique  résultat",
-    "text": "En pratique  résultat"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#synthèse-2d-guidée-le-cœur-du-tp1",
-    "href": "assets/syntheseimage/CM/CM1/index.html#synthèse-2d-guidée-le-cœur-du-tp1",
-    "title": "Teaching",
-    "section": "Synthèse 2D “guidée” (le cœur du TP1)",
-    "text": "Synthèse 2D “guidée” (le cœur du TP1)\n\n\n\n\n\n\n\nG\n\n\nI1\n\nImage I1\n\n\n\nW\n\nCorrespondances\n+ warping\n\n\n\nI1-&gt;W\n\n\n\n\n\nI2\n\nImage I2\n\n\n\nI2-&gt;W\n\n\n\n\n\nB\n\nFusion\npondérée\n\n\n\nW-&gt;B\n\n\n\n\n\nO\n\nImage\nsynthétisée\n\n\n\nB-&gt;O\n\n\n\n\n\n\n\n\n\n\n\nPipeline minimal : correspondances  warping  fusion."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#correspondances-ce-que-cest-ce-que-ça-fait",
-    "href": "assets/syntheseimage/CM/CM1/index.html#correspondances-ce-que-cest-ce-que-ça-fait",
-    "title": "Teaching",
-    "section": "Correspondances : ce que c’est, ce que ça fait",
-    "text": "Correspondances : ce que c’est, ce que ça fait\nDéfinition simple\nUne correspondance 2D–2D = une paire de points :\n\\[\n\\mathbf{x}_1 \\in \\color{#00ff88}{I_1} \\quad \\leftrightarrow \\quad \\mathbf{x}_2 \\in \\color{#ffb000}{I_2}\n\\]\n\nInterprétation : \"même point du monde\" vu dans deux images."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#qualité-des-correspondances-qualité-du-rendu",
-    "href": "assets/syntheseimage/CM/CM1/index.html#qualité-des-correspondances-qualité-du-rendu",
-    "title": "Teaching",
-    "section": "Qualité des correspondances = qualité du rendu",
-    "text": "Qualité des correspondances = qualité du rendu\n\n\nSi elles sont fausses  déformations absurdes.\nSi elles sont mal réparties  zones “flottantes” / non contraintes.\nSi elles couvrent bien l’image  warping plus stable.\n\n\n\nTP1 : vous verrez directement l’impact de la densité et de la distribution."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#correspondances-structure-implicite",
-    "href": "assets/syntheseimage/CM/CM1/index.html#correspondances-structure-implicite",
-    "title": "Teaching",
-    "section": "Correspondances = structure implicite",
-    "text": "Correspondances = structure implicite\n\nEn établissant des correspondances,\nnous définissons implicitement une représentation commune entre les deux images.\n\n\n\nSans 3D explicite, les correspondances imposent déjà une structure.\n\n\n\n\nUne mauvaise correspondance\n= une fausse hypothèse sur le monde."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#doù-viennent-les-correspondances",
-    "href": "assets/syntheseimage/CM/CM1/index.html#doù-viennent-les-correspondances",
-    "title": "Teaching",
-    "section": "D’où viennent les correspondances ?",
-    "text": "D’où viennent les correspondances ?\nDeux sources :\n\n👤 Humaines (cliquées)\n🤖 Automatiques (SIFT, etc.)\n\n\nLes correspondances automatiques contiennent des erreurs."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#on-utilise-généralement-un-filtre",
-    "href": "assets/syntheseimage/CM/CM1/index.html#on-utilise-généralement-un-filtre",
-    "title": "Teaching",
-    "section": "On utilise généralement un filtre",
-    "text": "On utilise généralement un filtre\n\nOn impose une cohérence géométrique minimale.\n\n\nRANSAC = éliminer les correspondances incohérentes avec un modèle global.\n\n\n\n\n\nCorrespondances = même point du monde"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-que-lhomographie-change",
-    "href": "assets/syntheseimage/CM/CM1/index.html#ce-que-lhomographie-change",
-    "title": "Teaching",
-    "section": "Ce que l’homographie change",
-    "text": "Ce que l’homographie change\n\n\nUne seule transformation pour toute l’image\nUne géométrie globale cohérente\nLes droites restent droites\n\n\n\n\n👉 On passe d’une structure locale fragmentée à une loi géométrique unique.\n\n\n\nMais…\n\n\nCette cohérence repose sur une condition forte.\n\n\nLa scène est plane ou le mouvement est une rotation pure.\n\n\nSinon :  la cohérence s’effondre."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#respiration-1",
-    "href": "assets/syntheseimage/CM/CM1/index.html#respiration-1",
-    "title": "Teaching",
-    "section": "Respiration",
-    "text": "Respiration\n\nPlus le modèle est global,\n\n\nplus la contrainte géométrique est forte.\n\n\n\n  \n\n  \n    \n      ▶\n      ↩\n\n      \n        \n        min\n        \n        s"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#bloc-4",
-    "href": "assets/syntheseimage/CM/CM1/index.html#bloc-4",
-    "title": "Teaching",
-    "section": "BLOC 4",
-    "text": "BLOC 4"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#limites-2d-besoin-de-structure",
-    "href": "assets/syntheseimage/CM/CM1/index.html#limites-2d-besoin-de-structure",
-    "title": "Teaching",
-    "section": "Limites 2D  besoin de structure",
-    "text": "Limites 2D  besoin de structure"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#extrapolation-2d-sortir-de-lintervalle",
-    "href": "assets/syntheseimage/CM/CM1/index.html#extrapolation-2d-sortir-de-lintervalle",
-    "title": "Teaching",
-    "section": "Extrapolation 2D : “sortir de l’intervalle”",
-    "text": "Extrapolation 2D : “sortir de l’intervalle”\nInterpolation : on reste “entre” les vues.\n\nExtrapolation : on pousse au-delà.\n\n\n\nPourquoi c’est plus dur ?\n\non invente des zones jamais vues,\nles occlusions explosent,\nles erreurs de correspondances s’amplifient."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#occlusions-le-mur-conceptuel-de-la-2d",
-    "href": "assets/syntheseimage/CM/CM1/index.html#occlusions-le-mur-conceptuel-de-la-2d",
-    "title": "Teaching",
-    "section": "Occlusions : le mur conceptuel de la 2D",
-    "text": "Occlusions : le mur conceptuel de la 2D\nEn 2D, une image ne contient pas explicitement :\n\n\nl’ordre en profondeur,\nla visibilité,\nce qui est devant ou derrière.\n\n\n\n\nLa 2D ne code pas la profondeur.\n\n\n\nConséquence :\n\n\n\ntrous, déchirures (disocclusions),\nduplications,\nincohérences locales.\n\n\n\n👉 Ces artefacts ne sont pas “des bugs” : ce sont des limites structurelles."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-que-la-2d-sait-faire-très-bien",
-    "href": "assets/syntheseimage/CM/CM1/index.html#ce-que-la-2d-sait-faire-très-bien",
-    "title": "Teaching",
-    "section": "Ce que la 2D sait faire (très bien)",
-    "text": "Ce que la 2D sait faire (très bien)\n\n\ninterpolation douce entre vues proches\npetites variations de point de vue\nmorphing contrôlé (si correspondances propres)"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#ce-que-la-2d-ne-peut-pas-résoudre-proprement",
-    "href": "assets/syntheseimage/CM/CM1/index.html#ce-que-la-2d-ne-peut-pas-résoudre-proprement",
-    "title": "Teaching",
-    "section": "Ce que la 2D ne peut pas résoudre proprement",
-    "text": "Ce que la 2D ne peut pas résoudre proprement\n\n\ngrandes variations de point de vue\nfortes occlusions / disocclusions\nobjets fins / transparences / réflexions complexes\nextrapolation stable"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#message-clé",
-    "href": "assets/syntheseimage/CM/CM1/index.html#message-clé",
-    "title": "Teaching",
-    "section": "Message clé",
-    "text": "Message clé\nLes homographies sont :\n\n✔ Une première forme d’inversion structurée\n✔ Un modèle minimal image  image\n✘ Insuffisant pour des scènes 3D générales\n\n\nSi on veut une synthèse de vues cohérente géométriquement, il manque :\n\n\n\nune notion de profondeur\nune notion de visibilité (z-buffer implicite)\nune notion de caméra (pose / projection)"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#section-2",
-    "href": "assets/syntheseimage/CM/CM1/index.html#section-2",
-    "title": "Teaching",
-    "section": "",
-    "text": "Une image 2D ne contient pas explicitement la profondeur.\n\n\n\nMais la synthèse de nouvelles vues\n\n\nexige de savoir ce qui est devant quoi."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#conclusion",
-    "href": "assets/syntheseimage/CM/CM1/index.html#conclusion",
-    "title": "Teaching",
-    "section": "Conclusion",
-    "text": "Conclusion"
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#à-retenir-cm1",
-    "href": "assets/syntheseimage/CM/CM1/index.html#à-retenir-cm1",
-    "title": "Teaching",
-    "section": "À retenir (CM1)",
-    "text": "À retenir (CM1)\n\n\nRendu inverse = trouver une représentation compatible avec les images pour pouvoir re-synthétiser.\nEn 2D, la brique centrale = correspondances 2D–2D.\nAligner avant de mélanger : warping  fusion.\nLes occlusions et la profondeur manquante imposent une limite structurelle."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#prolongement-tp1",
-    "href": "assets/syntheseimage/CM/CM1/index.html#prolongement-tp1",
-    "title": "Teaching",
-    "section": "Prolongement : TP1",
-    "text": "Prolongement : TP1\nVous allez :\n\n\ntester le blending naïf  observer ghosting\ncréer des correspondances  voir l’effet de leur qualité\nfaire du warping  puis une interpolation guidée\ntenter une extrapolation  constater les limites\n\n\n\n👉 Le TP n’est pas là pour “faire marcher le code”.\nIl est là pour observer les limites du modèle."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#préparer-cm2",
-    "href": "assets/syntheseimage/CM/CM1/index.html#préparer-cm2",
-    "title": "Teaching",
-    "section": "Préparer CM2",
-    "text": "Préparer CM2\n\nQuestion de sortie :\n\nQu’est-ce qui manque à la 2D pour gérer proprement la visibilité et les nouvelles vues ?\n\n\n\nRéponse attendue :\nstructure 3D + caméras  photogrammétrie."
-  },
-  {
-    "objectID": "assets/syntheseimage/CM/CM1/index.html#cest-tout-pour-aujourdhui",
-    "href": "assets/syntheseimage/CM/CM1/index.html#cest-tout-pour-aujourdhui",
-    "title": "Teaching",
-    "section": "C’est tout pour aujourd’hui",
-    "text": "C’est tout pour aujourd’hui"
+    "section": "Pourquoi on fait tout ça ?",
+    "text": "Pourquoi on fait tout ça ?"
   },
   {
     "objectID": "assets/bigdata/CM/CM4/index.html#mise-en-perspective",
     "href": "assets/bigdata/CM/CM4/index.html#mise-en-perspective",
     "title": "Teaching",
     "section": "Mise en perspective",
-    "text": "Mise en perspective\nJusqu’ici, on a appris à :\n\n\nposer une question claire\nconstruire un pipeline cohérent\nnettoyer et explorer de manière défendable\n\n\n\n👉 En entreprise, ce n’est pas suffisant.\n\n\n\nUne bonne analyse doit survivre au temps, aux collègues et aux décisions."
+    "text": "Mise en perspective\n\nJusqu’ici, on a appris à :\n\n\nposer une question claire\nconstruire un pipeline cohérent\nnettoyer et explorer de manière défendable\n\n\n\n👉 En entreprise, ce n’est pas suffisant.\n\n\n\n\nUne bonne analyse doit survivre au temps, aux collègues et aux décisions."
   },
   {
     "objectID": "assets/bigdata/CM/CM4/index.html#question-centrale",
     "href": "assets/bigdata/CM/CM4/index.html#question-centrale",
     "title": "Teaching",
     "section": "Question centrale",
-    "text": "Question centrale\n\nComment concevoir une analyse de données\nqui reste valable, compréhensible et utile\nau-delà du notebook et du stagiaire qui l’a produite ?"
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM4/index.html#fil-conducteur",
-    "href": "assets/bigdata/CM/CM4/index.html#fil-conducteur",
-    "title": "Teaching",
-    "section": "Fil conducteur",
-    "text": "Fil conducteur\nTrois exigences (pro) :\n\n\nTransmissible : quelqu’un d’autre peut reprendre\nRobuste : la conclusion résiste au changement\nUtilisable : le message passe hors de l’équipe data\n\n\n\n👉 Ce CM parle moins de code, et plus de durabilité."
+    "text": "Question centrale\n\nComment concevoir une analyse de données\nqui reste valable, compréhensible et utile\nau-delà du notebook et de la personne\nqui l’a produite ?"
   },
   {
     "objectID": "assets/bigdata/CM/CM4/index.html#ce-qui-change-en-situation-pro",
     "href": "assets/bigdata/CM/CM4/index.html#ce-qui-change-en-situation-pro",
     "title": "Teaching",
     "section": "Ce qui change en situation pro",
-    "text": "Ce qui change en situation pro\nDans un cours, on vise souvent : “le bon résultat”.\nEn entreprise, on vise plutôt :\n\nun raisonnement stable + des décisions discutables + un livrable réutilisable"
+    "text": "Ce qui change en situation pro\n\nTrois exigences :\n\n\nTransmissible : quelqu’un d’autre peut reprendre\nRobuste : la conclusion résiste au changement\nUtilisable : le message passe hors de l’équipe data\n\n\n\n\nDans un cours, on vise souvent : “le bon résultat”.\n\n\nEn entreprise, on vise plutôt :\n\n\nUn raisonnement stable + des décisions discutables + un livrable réutilisable"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#programme-du-jour",
+    "href": "assets/bigdata/CM/CM4/index.html#programme-du-jour",
+    "title": "Teaching",
+    "section": "Programme du jour",
+    "text": "Programme du jour\n\n\npetit retour sur le projet 1\nque se passe t-il en contexte pro ?\npetite démo projet 2\nl’intérêt de tout cela aujourd’hui"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#bloc-1",
+    "href": "assets/bigdata/CM/CM4/index.html#bloc-1",
+    "title": "Teaching",
+    "section": "Bloc 1",
+    "text": "Bloc 1"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#petit-retour-sur-les-projets",
+    "href": "assets/bigdata/CM/CM4/index.html#petit-retour-sur-les-projets",
+    "title": "Teaching",
+    "section": "Petit retour sur les projets",
+    "text": "Petit retour sur les projets"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#ce-qui-est-très-bien",
+    "href": "assets/bigdata/CM/CM4/index.html#ce-qui-est-très-bien",
+    "title": "Teaching",
+    "section": "Ce qui est très bien",
+    "text": "Ce qui est très bien\n\n\n\nPlein de styles différents\nDe l’humour bien dosé\nDes angles d’analyses que je n’avais pas imaginés\nPersonne en dessous de la moyenne\nDu LaTeX assez souvent"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#les-points-qui-ont-manqués",
+    "href": "assets/bigdata/CM/CM4/index.html#les-points-qui-ont-manqués",
+    "title": "Teaching",
+    "section": "Les points qui ont manqués",
+    "text": "Les points qui ont manqués\n\n\n\nabstract / préambule qui synthétise l’analyse\nun sommaire (table of contents) pour améliorer la structure et la lisibilité du document.\nne pas faire de pavé / raconter chaque truc comme “j’ai ouvert la base de données csv”\ninformation utile / pertinente noyée dans le flow\nLa figure apparaît avant son interprétation\nDe très bonne idées (e.g. normaliser la fréquence des témoignages en fonction du nombre d’habitants) mais pas appliqués"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#parlons-un-peu-de",
+    "href": "assets/bigdata/CM/CM4/index.html#parlons-un-peu-de",
+    "title": "Teaching",
+    "section": "Parlons un peu de",
+    "text": "Parlons un peu de\n\nL’abstract\n\n\nCe que c’est, à quoi ça sert"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#section-1",
+    "href": "assets/bigdata/CM/CM4/index.html#section-1",
+    "title": "Teaching",
+    "section": "",
+    "text": "Ah zut, non là c’est de l’abstrait"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#abstr---act",
+    "href": "assets/bigdata/CM/CM4/index.html#abstr---act",
+    "title": "Teaching",
+    "section": "Abstr - act",
+    "text": "Abstr - act\n\nEn réalité, les mots “abstract” (anglais) et “abstrait” (français) ont la même provenance latine\nabstrahere, qui signifie “tirer hors de”, “extraire”.\n\n\n\nEt, mine de rien, c’est un truc important\n\n\n\nDoit synthétiser la question initiale le raisonnement suivi et la conclusion de l’analyse.\nIl résume le parcours, le chemin parcouru.\n\n\nS’écrit à la fin quand tout est fini !\n\n\n\n\nEvite la découverte petit à petit de voter cheminement  surcharge cognitive non nécessaire"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#structure-idéale-dun-rapport",
+    "href": "assets/bigdata/CM/CM4/index.html#structure-idéale-dun-rapport",
+    "title": "Teaching",
+    "section": "Structure idéale d’un rapport",
+    "text": "Structure idéale d’un rapport\n\n\nAbstract\nIntroduction / question\nDonnées\nAnalyse\nRésultats\nConclusion"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#parlons-un-peu-du-médium-de-construction-du-rapport",
+    "href": "assets/bigdata/CM/CM4/index.html#parlons-un-peu-du-médium-de-construction-du-rapport",
+    "title": "Teaching",
+    "section": "Parlons un peu du médium de construction du rapport",
+    "text": "Parlons un peu du médium de construction du rapport\n\nD’abord le plus commun…\n\n\nWYSIWYG\n\n\n(What You See Is What You Get)"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#section-2",
+    "href": "assets/bigdata/CM/CM4/index.html#section-2",
+    "title": "Teaching",
+    "section": "",
+    "text": "WYSIWYG"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#section-3",
+    "href": "assets/bigdata/CM/CM4/index.html#section-3",
+    "title": "Teaching",
+    "section": "",
+    "text": "Les méthodes codées"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#et",
+    "href": "assets/bigdata/CM/CM4/index.html#et",
+    "title": "Teaching",
+    "section": "ET …",
+    "text": "ET …\n\n\nSi vous avez aimé taper en Markdown\nSi vous aimez la simplicité et la puissance\nSi vous voulez pouvoir combiner LaTeX, Python et les techno web\n\n\n\n\n\n\nhttps://quarto.org - 2022"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#quarto",
+    "href": "assets/bigdata/CM/CM4/index.html#quarto",
+    "title": "Teaching",
+    "section": "Quarto",
+    "text": "Quarto"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#exemple-de-texte-difficile-à-lire",
+    "href": "assets/bigdata/CM/CM4/index.html#exemple-de-texte-difficile-à-lire",
+    "title": "Teaching",
+    "section": "Exemple de texte difficile à lire",
+    "text": "Exemple de texte difficile à lire\nLe Big Data désigne l’ensemble des technologies, méthodes et infrastructures permettant de collecter, stocker et analyser des volumes très importants de données. Avec la généralisation d’Internet, des smartphones, des capteurs et des plateformes numériques, la quantité de données produites chaque jour a explosé. Ces données proviennent de sources très variées : réseaux sociaux, transactions en ligne, objets connectés, systèmes industriels ou encore images et vidéos. Le Big Data se caractérise généralement par les “3 V” : volume, variété et vélocité. Le volume correspond à la quantité massive de données générées, souvent mesurée en téraoctets ou en pétaoctets. La variété renvoie à la diversité des formats de données, qui peuvent être structurées, semi-structurées ou non structurées. Enfin, la vélocité décrit la vitesse à laquelle ces données sont produites et doivent être traitées.\nPour exploiter ces données, des architectures informatiques spécifiques ont été développées, reposant souvent sur des systèmes distribués capables de répartir les calculs sur de nombreux serveurs. Des outils comme Hadoop ou Spark permettent ainsi de traiter efficacement de très grands ensembles de données. L’analyse du Big Data ouvre de nombreuses perspectives dans des domaines variés : marketing, santé, transport, finance ou recherche scientifique."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#vous-avez-aimez-lire-ça",
+    "href": "assets/bigdata/CM/CM4/index.html#vous-avez-aimez-lire-ça",
+    "title": "Teaching",
+    "section": "Vous avez aimez lire ça ?",
+    "text": "Vous avez aimez lire ça ?\n\nMoi non plus\n\n\n(charge cognitif trop grande)"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#attention-aussi-aux",
+    "href": "assets/bigdata/CM/CM4/index.html#attention-aussi-aux",
+    "title": "Teaching",
+    "section": "Attention aussi aux",
+    "text": "Attention aussi aux\n\nindentations\n\n\n      Le Big Data désigne l’ensemble des technologies, méthodes et infrastructures permettant de collecter, stocker et analyser des volumes très importants de données. \n      Avec la généralisation d’Internet, des smartphones, des capteurs et des plateformes numériques, la quantité de données produites chaque jour a explosé. Ces données proviennent de sources très variées : réseaux sociaux, transactions en ligne, objets connectés, systèmes industriels ou encore images et vidéos. \n      Le Big Data se caractérise généralement par les “3 V” : volume, variété et vélocité. Le volume correspond à la quantité massive de données générées, souvent mesurée en téraoctets ou en pétaoctets. \n      La variété renvoie à la diversité des formats de données, qui peuvent être structurées, semi-structurées ou non structurées. Enfin, la vélocité décrit la vitesse à laquelle ces données sont produites et doivent être traitées.\n\n\n(et aux espaces entre les paragraphes !)"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#enfin",
+    "href": "assets/bigdata/CM/CM4/index.html#enfin",
+    "title": "Teaching",
+    "section": "Enfin",
+    "text": "Enfin\nFaites attention\n\nau full bullet point\n\n\nLe Big Data désigne l’ensemble des technologies, méthodes et infrastructures permettant de collecter, stocker et analyser des volumes très importants de données.\nAvec la généralisation d’Internet, des smartphones, des capteurs et des plateformes numériques, la quantité de données produites chaque jour a explosé. Ces données proviennent de sources très variées :\n\nréseaux sociaux,\ntransactions en ligne,\nsystèmes industriels\n\nimages\nvidéos.\n\n\net au format scolaire !!"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#trois-règles-pour-une-bonne-analyse",
+    "href": "assets/bigdata/CM/CM4/index.html#trois-règles-pour-une-bonne-analyse",
+    "title": "Teaching",
+    "section": "Trois règles pour une bonne analyse",
+    "text": "Trois règles pour une bonne analyse\n\nUne question claire\n\n\nQue cherche-t-on à comprendre ?\nQuelle hypothèse veut-on tester ?\n\n\nUne figure = une idée\n\n\nChaque graphique doit répondre à une question.\nGraphique lisible, axes clairs, titre informatif\n\n\nInterpréter et prendre du recul\n\n\nUne analyse ne s’arrête pas au graphique.\nQue signifie ce résultat ? Quelles sont les limites ?\n\n\n\n\n\nUne analyse n’est pas une collection de graphiques,\nc’est un raisonnement appuyé par des données."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#pause",
+    "href": "assets/bigdata/CM/CM4/index.html#pause",
+    "title": "Teaching",
+    "section": "Pause",
+    "text": "Pause\n\n  \n\n  \n    \n      ▶\n      ↩\n\n      \n        \n        min\n        \n        s"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#bloc-2",
+    "href": "assets/bigdata/CM/CM4/index.html#bloc-2",
+    "title": "Teaching",
+    "section": "Bloc 2",
+    "text": "Bloc 2"
   },
   {
     "objectID": "assets/bigdata/CM/CM4/index.html#pourquoi-une-analyse-correcte-peut-échouer-en-situation-professionnelle",
     "href": "assets/bigdata/CM/CM4/index.html#pourquoi-une-analyse-correcte-peut-échouer-en-situation-professionnelle",
     "title": "Teaching",
-    "section": "Pourquoi une analyse “correcte” peut échouer en situation professionnelle ?",
-    "text": "Pourquoi une analyse “correcte” peut échouer en situation professionnelle ?"
+    "section": "Pourquoi une analyse correcte peut échouer en situation professionnelle ?",
+    "text": "Pourquoi une analyse correcte peut échouer en situation professionnelle ?"
   },
   {
     "objectID": "assets/bigdata/CM/CM4/index.html#situation-réelle",
     "href": "assets/bigdata/CM/CM4/index.html#situation-réelle",
     "title": "Teaching",
     "section": "Situation réelle",
-    "text": "Situation réelle\nVous rendez votre analyse.\n\nSix mois plus tard :\n\n\n\nles données ont changé\nla question a évolué\nvous n’êtes plus là\n\n\n\n👉 Personne n’ose toucher à votre notebook."
+    "text": "Situation réelle\n\nVous rendez votre analyse.\n\n\nSix mois plus tard :\n\n\n\nles données ont changé\nla question a évolué\nvous n’êtes plus là\n\n\n\n\n👉 Personne n’ose toucher à votre notebook / code."
   },
   {
     "objectID": "assets/bigdata/CM/CM4/index.html#problème-fondamental",
     "href": "assets/bigdata/CM/CM4/index.html#problème-fondamental",
     "title": "Teaching",
     "section": "Problème fondamental",
-    "text": "Problème fondamental\nCe qui échoue n’est pas le code.\n\nCe qui échoue, c’est la transmission du raisonnement."
+    "text": "Problème fondamental\n\nCe qui échoue n’est pas le code.\n\n\nCe qui échoue, c’est\nla transmission du raisonnement."
   },
   {
     "objectID": "assets/bigdata/CM/CM4/index.html#intuition-clé",
     "href": "assets/bigdata/CM/CM4/index.html#intuition-clé",
     "title": "Teaching",
     "section": "Intuition clé",
-    "text": "Intuition clé\nUne analyse professionnelle doit :\n\n\nsurvivre à son auteur\nêtre comprise par d’autres métiers\nêtre réutilisable dans un autre contexte\n\n\n\n👉 L’analyse devient un objet collectif."
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM4/index.html#concept-clé-analyse-comme-artefact-décisionnel",
-    "href": "assets/bigdata/CM/CM4/index.html#concept-clé-analyse-comme-artefact-décisionnel",
-    "title": "Teaching",
-    "section": "Concept clé : analyse comme artefact décisionnel",
-    "text": "Concept clé : analyse comme artefact décisionnel\n\nUne analyse n’est pas un résultat,\nc’est un support de décision.\n\n\n👉 Elle doit expliciter ce qu’on peut conclure…\net ce qu’on ne peut pas."
+    "text": "Intuition clé\n\nUne analyse professionnelle doit :\n\n\nsurvivre à son auteur\nêtre comprise par d’autres métiers\nêtre réutilisable dans un autre contexte\n\n\n\n\n\nL’analyse devient un objet collectif.\nUne analyse n’est pas un résultat, c’est un support de décision.\nElle doit expliciter ce qu’on peut conclure… et ce qu’on ne peut pas."
   },
   {
     "objectID": "assets/bigdata/CM/CM4/index.html#analyse-et-décision",
     "href": "assets/bigdata/CM/CM4/index.html#analyse-et-décision",
     "title": "Teaching",
     "section": "Analyse et décision",
-    "text": "Analyse et décision\n\n\n\n\n\n\n\nG\n\n\nD\n\nDonnées\n(incomplètes)\n\n\n\nA\n\nAnalyse\n(sous hypothèses)\n\n\n\nD-&gt;A\n\n\n\n\n\nR\n\nRecommandations\nconditionnelles\n\n\n\nA-&gt;R\n\n\n\n\n\nC\n\nDécisions\nhumaines\n\n\n\nR-&gt;C\n\n\n\n\n\n\n\n\n\n\n\n👉 L’analyse n’automatise pas la décision."
+    "text": "Analyse et décision\n\ndirection: right\n\nstyle: {\n  fill: transparent\n}\n\nbloc_1: {\n  shape: rectangle\n  label: \"Données\\n(incomplètes)\"\n  width: 175\n  height: 100\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\nbloc_2: {\n  shape: rectangle\n  label: \"Analyse\\n(sous hypothèses)\"\n  width: 175\n  height: 100\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\nbloc_3: {\n  shape: rectangle\n  label: \"Recommandations\\nconditionnelles\"\n  width: 175\n  height: 100\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\nbloc_4: {\n  shape: rectangle\n  label: \"Décisions humaines\"\n  width: 175\n  height: 100\n  style: {\n    fill: \"#d5d5d5\"\n    stroke: \"#fff\"\n  }\n}\n\n\nbloc_1 -&gt; bloc_2: {\n  style: {\n    stroke: \"#fff\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\n\nbloc_2 -&gt; bloc_3: {\n  style: {\n    stroke: \"#fff\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\nbloc_3 -&gt; bloc_4: {\n  style: {\n    stroke: \"#fff\"\n    font-color: \"#fff\"\n    stroke-width: 2\n  }\n}\n\n\n👉 L’analyse n’automatise pas la décision."
   },
   {
     "objectID": "assets/bigdata/CM/CM4/index.html#antipattern-professionnel",
     "href": "assets/bigdata/CM/CM4/index.html#antipattern-professionnel",
     "title": "Teaching",
     "section": "Anti‑pattern professionnel",
-    "text": "Anti‑pattern professionnel\n\n\n“On a un chiffre, donc on décide.”\n“Le modèle a dit X.”\n“Le graphique est clair.”\n\n\n\n👉 Un chiffre sans hypothèses = un risque."
+    "text": "Anti‑pattern professionnel\n\n\n\n“On a un chiffre, donc on décide.”\n“Le modèle a dit X.”\n“Le graphique est clair.”\n\n\n\n\n👉 Un chiffre sans hypothèses = un risque."
   },
   {
     "objectID": "assets/bigdata/CM/CM4/index.html#ce-qui-manque-souvent-dans-les-analyses-correctes",
     "href": "assets/bigdata/CM/CM4/index.html#ce-qui-manque-souvent-dans-les-analyses-correctes",
     "title": "Teaching",
     "section": "Ce qui manque souvent dans les analyses “correctes”",
-    "text": "Ce qui manque souvent dans les analyses “correctes”\nTrois éléments oubliés :\n\n\nContexte : pourquoi cette question maintenant ?\nHypothèses : ce qu’on suppose vrai\nLimites : où ça peut casser\n\n\n\n👉 Sans ça, l’analyse n’est pas transmissible."
+    "text": "Ce qui manque souvent dans les analyses “correctes”\n\nTrois éléments oubliés :\n\n\nContexte : pourquoi cette question maintenant ?\nHypothèses : ce qu’on suppose vrai\nLimites : où ça peut casser\n\n\n\nSinon :\n\n\n\ntrop de graphiques\ntrop de chiffres\ntrop de jargon\n\n\n\n👉 le message se perd"
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#checklist-de-transmission-très-courte",
-    "href": "assets/bigdata/CM/CM4/index.html#checklist-de-transmission-très-courte",
+    "objectID": "assets/bigdata/CM/CM4/index.html#checklist-de-transmission-minimale",
+    "href": "assets/bigdata/CM/CM4/index.html#checklist-de-transmission-minimale",
     "title": "Teaching",
-    "section": "Check‑list de transmission (très courte)",
-    "text": "Check‑list de transmission (très courte)\nÀ minima, un autre doit pouvoir répondre à :\n\n\nQuelle était la question exacte ?\nQuelles données (version, période) ?\nQuelles règles clés / paramètres ?\nQuelle conclusion + dans quelles limites ?"
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM4/index.html#phrase-à-retenir",
-    "href": "assets/bigdata/CM/CM4/index.html#phrase-à-retenir",
-    "title": "Teaching",
-    "section": "Phrase à retenir",
-    "text": "Phrase à retenir\n\nUne bonne analyse éclaire une décision,\nelle ne la remplace jamais."
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM4/index.html#comment-rendre-une-analyse-robuste-au-changement",
-    "href": "assets/bigdata/CM/CM4/index.html#comment-rendre-une-analyse-robuste-au-changement",
-    "title": "Teaching",
-    "section": "Comment rendre une analyse robuste au changement ?",
-    "text": "Comment rendre une analyse robuste au changement ?"
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM4/index.html#réalité-professionnelle",
-    "href": "assets/bigdata/CM/CM4/index.html#réalité-professionnelle",
-    "title": "Teaching",
-    "section": "Réalité professionnelle",
-    "text": "Réalité professionnelle\nDans le temps :\n\n\nles données évoluent\nles règles métier changent\nles indicateurs dérivent\n\n\n\n👉 Une analyse figée devient rapidement fausse."
+    "section": "Check‑list de transmission minimale",
+    "text": "Check‑list de transmission minimale\n\nUn autre doit pouvoir répondre à :\n\n\nQuelle était la question exacte ?\nQuelles données (version, période) ?\nQuelles règles clés / paramètres ?\nQuelle conclusion + dans quelles limites ?"
   },
   {
     "objectID": "assets/bigdata/CM/CM4/index.html#intuition",
     "href": "assets/bigdata/CM/CM4/index.html#intuition",
     "title": "Teaching",
     "section": "Intuition",
-    "text": "Intuition\nOn ne rend pas une analyse robuste en la rendant plus complexe.\n\nOn la rend robuste en rendant ses hypothèses visibles et modulables."
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM4/index.html#concept-clé-scénarios-et-invariants",
-    "href": "assets/bigdata/CM/CM4/index.html#concept-clé-scénarios-et-invariants",
-    "title": "Teaching",
-    "section": "Concept clé : scénarios et invariants",
-    "text": "Concept clé : scénarios et invariants\nDeux niveaux à distinguer :\n\n\nInvariants : ce qui doit toujours rester vrai\nScénarios : ce qui peut varier (seuils, règles, filtres)\n\n\n\n👉 Une analyse sérieuse sépare les deux."
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM4/index.html#exemple-concret-invariants-vs-scénarios",
-    "href": "assets/bigdata/CM/CM4/index.html#exemple-concret-invariants-vs-scénarios",
-    "title": "Teaching",
-    "section": "Exemple concret (invariants vs scénarios)",
-    "text": "Exemple concret (invariants vs scénarios)\nImaginez un indicateur de “clients actifs”.\n\n\nInvariant : “actif” = au moins 1 action mesurable\nScénario : fenêtre temporelle (7j / 30j / 90j)\n\n\n\n👉 Les disputes pro viennent souvent des scénarios déguisés en invariants."
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM4/index.html#analyse-paramétrée",
-    "href": "assets/bigdata/CM/CM4/index.html#analyse-paramétrée",
-    "title": "Teaching",
-    "section": "Analyse paramétrée",
-    "text": "Analyse paramétrée\n\n\n\n\n\n\n\nG\n\n\nI\n\nInvariants\n(définitions, unités, sens)\n\n\n\nP\n\nPipeline\nstable\n\n\n\nI-&gt;P\n\n\n\n\n\nS\n\nScénarios\n(paramètres ajustables)\n\n\n\nS-&gt;P\n\n\n\n\n\nO\n\nRésultats\ncomparables\n\n\n\nP-&gt;O\n\n\n\n\n\n\n\n\n\n\n\n👉 On change les paramètres, pas la logique."
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM4/index.html#robustesse-sensibilité-pas-certitude",
-    "href": "assets/bigdata/CM/CM4/index.html#robustesse-sensibilité-pas-certitude",
-    "title": "Teaching",
-    "section": "Robustesse = sensibilité (pas certitude)",
-    "text": "Robustesse = sensibilité (pas certitude)\nUne analyse robuste ne “prouve” pas.\n\nElle montre que la conclusion\ntient dans une plage raisonnable de scénarios."
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM4/index.html#minitest-de-robustesse-à-faire-systématiquement",
-    "href": "assets/bigdata/CM/CM4/index.html#minitest-de-robustesse-à-faire-systématiquement",
-    "title": "Teaching",
-    "section": "Mini‑test de robustesse (à faire systématiquement)",
-    "text": "Mini‑test de robustesse (à faire systématiquement)\n\n\nchanger 1 paramètre important\ncomparer la conclusion\nsi elle bascule, le dire\n\n\n\n👉 Un résultat qui s’effondre au moindre réglage est fragile."
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM4/index.html#bonne-pratique-clé",
-    "href": "assets/bigdata/CM/CM4/index.html#bonne-pratique-clé",
-    "title": "Teaching",
-    "section": "Bonne pratique clé",
-    "text": "Bonne pratique clé\n\n\ndocumenter les hypothèses\nisoler les paramètres\ncomparer plusieurs scénarios\n\n\n\n👉 Une analyse devient un outil de discussion."
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM4/index.html#phrase-à-retenir-1",
-    "href": "assets/bigdata/CM/CM4/index.html#phrase-à-retenir-1",
-    "title": "Teaching",
-    "section": "Phrase à retenir",
-    "text": "Phrase à retenir\n\nUne analyse robuste n’est pas figée :\nelle est paramétrée."
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM4/index.html#comment-communiquer-une-analyse-à-des-nondata-scientists",
-    "href": "assets/bigdata/CM/CM4/index.html#comment-communiquer-une-analyse-à-des-nondata-scientists",
-    "title": "Teaching",
-    "section": "Comment communiquer une analyse à des non‑data scientists ?",
-    "text": "Comment communiquer une analyse à des non‑data scientists ?"
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM4/index.html#problème-classique",
-    "href": "assets/bigdata/CM/CM4/index.html#problème-classique",
-    "title": "Teaching",
-    "section": "Problème classique",
-    "text": "Problème classique\n\n\ntrop de graphiques\ntrop de chiffres\ntrop de jargon\n\n\n\n👉 Le message se perd."
-  },
-  {
-    "objectID": "assets/bigdata/CM/CM4/index.html#intuition-1",
-    "href": "assets/bigdata/CM/CM4/index.html#intuition-1",
-    "title": "Teaching",
-    "section": "Intuition",
     "text": "Intuition\nLa valeur d’une analyse ne dépend pas de :\n\n\nla sophistication du modèle\nle volume de code\n\n\n\nElle dépend de la clarté du message transmis."
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#concept-clé-narration-analytique",
-    "href": "assets/bigdata/CM/CM4/index.html#concept-clé-narration-analytique",
+    "objectID": "assets/bigdata/CM/CM4/index.html#format-professionnel",
+    "href": "assets/bigdata/CM/CM4/index.html#format-professionnel",
     "title": "Teaching",
-    "section": "Concept clé : narration analytique",
-    "text": "Concept clé : narration analytique\nCommuniquer une analyse, c’est raconter :\n\n\nla question posée\nles hypothèses retenues\nles limites\nles implications concrètes\n\n\n\n👉 Pas le pipeline complet."
+    "section": "Format professionnel",
+    "text": "Format professionnel\nUne synthèse tient souvent sur une slide décision :\n\n\n1 phrase de conclusion\n2–3 faits clés\n1 encadré “hypothèses & limites”\n1 recommandation conditionnelle\n\n\n\n👉 Tout le reste est en annexe."
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#format-1-slide-décision-professionnel",
-    "href": "assets/bigdata/CM/CM4/index.html#format-1-slide-décision-professionnel",
+    "objectID": "assets/bigdata/CM/CM4/index.html#exemple",
+    "href": "assets/bigdata/CM/CM4/index.html#exemple",
     "title": "Teaching",
-    "section": "Format “1 slide décision” (professionnel)",
-    "text": "Format “1 slide décision” (professionnel)\nUne bonne synthèse tient souvent sur :\n\n\n1 phrase de conclusion\n2–3 faits qui la soutiennent\n1 encadré “hypothèses & limites”\n1 recommandation conditionnelle\n\n\n\n👉 Tout le reste est en annexe."
+    "section": "Exemple",
+    "text": "Exemple\n\nConclusion : “L’indicateur X augmente sur 12 mois.”\n\n\nFaits :\n\nhausse régulière sur 4 trimestres\ntendance stable sur plusieurs scénarios\npas de rupture détectée dans les données\n\n\n\nLimites : résultat sensible au paramètre Y."
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#ce-quil-faut-dire-explicitement",
-    "href": "assets/bigdata/CM/CM4/index.html#ce-quil-faut-dire-explicitement",
+    "objectID": "assets/bigdata/CM/CM4/index.html#une-analyse-suit-généralement",
+    "href": "assets/bigdata/CM/CM4/index.html#une-analyse-suit-généralement",
     "title": "Teaching",
-    "section": "Ce qu’il faut dire explicitement",
-    "text": "Ce qu’il faut dire explicitement\nUn non‑data veut surtout savoir :\n\n\nÀ quel point on peut se fier à ce résultat ?\nDans quelles conditions il ne tient plus ?\nQue fait‑on ensuite ?"
+    "section": "Une analyse suit généralement",
+    "text": "Une analyse suit généralement\n\nQuestion\nDonnées\nNettoyage\nExploration\nAnalyse\nInterprétation\nCommunication\n\n\nUne analyse de données est une enquête."
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#analyse-comme-récit-structuré",
-    "href": "assets/bigdata/CM/CM4/index.html#analyse-comme-récit-structuré",
+    "objectID": "assets/bigdata/CM/CM4/index.html#la-question",
+    "href": "assets/bigdata/CM/CM4/index.html#la-question",
     "title": "Teaching",
-    "section": "Analyse comme récit structuré",
-    "text": "Analyse comme récit structuré\n\n\n\n\n\n\n\nG\n\n\nQ\n\nQuestion\n\n\n\nH\n\nHypothèses\n\n\n\nQ-&gt;H\n\n\n\n\n\nF\n\nFaits établis\n\n\n\nH-&gt;F\n\n\n\n\n\nL\n\nLimites\n\n\n\nF-&gt;L\n\n\n\n\n\nI\n\nImplications\n\n\n\nL-&gt;I\n\n\n\n\n\n\n\n\n\n\n\n👉 Le code reste en annexe."
+    "section": "La question",
+    "text": "La question\n\nUne bonne question est :\n\n\nclaire\nmesurable\ntestable\n\n\n\n\nExemples :\n\n\n❌ “Les réseaux sociaux sont-ils mauvais ?”\n\n\n✔️ “Le temps passé sur Instagram est-il corrélé au sommeil chez les étudiants ?”"
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#ce-quil-faut-éviter-vraiment",
-    "href": "assets/bigdata/CM/CM4/index.html#ce-quil-faut-éviter-vraiment",
+    "objectID": "assets/bigdata/CM/CM4/index.html#réalité-professionnelle",
+    "href": "assets/bigdata/CM/CM4/index.html#réalité-professionnelle",
     "title": "Teaching",
-    "section": "Ce qu’il faut éviter (vraiment)",
-    "text": "Ce qu’il faut éviter (vraiment)\n\n\nraconter le notebook\n“voici tous les graphes”\nconfondre précision et clarté\n\n\n\n👉 Plus vous montrez, plus vous diluez."
+    "section": "Réalité professionnelle",
+    "text": "Réalité professionnelle\n\nAvec le temps :\n\n\nles données évoluent\nles règles métier changent\nles indicateurs dérivent\n\n\n\n\n👉 Une analyse figée devient fausse."
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#phrase-à-retenir-2",
-    "href": "assets/bigdata/CM/CM4/index.html#phrase-à-retenir-2",
+    "objectID": "assets/bigdata/CM/CM4/index.html#robustesse",
+    "href": "assets/bigdata/CM/CM4/index.html#robustesse",
     "title": "Teaching",
-    "section": "Phrase à retenir",
-    "text": "Phrase à retenir\n\nUne analyse qui ne peut pas être expliquée\nsimplement ne sera pas utilisée."
+    "section": "Robustesse",
+    "text": "Robustesse\n\n\nUne analyse robuste ne “prouve” pas.\n\n\nElle montre que la conclusion tient dans une plage raisonnable de scénarios."
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#démo-situation",
-    "href": "assets/bigdata/CM/CM4/index.html#démo-situation",
+    "objectID": "assets/bigdata/CM/CM4/index.html#test-simple",
+    "href": "assets/bigdata/CM/CM4/index.html#test-simple",
     "title": "Teaching",
-    "section": "Démo — Situation",
-    "text": "Démo — Situation\nVotre responsable demande :\n\n\n“J’ai 2 minutes. C’est quoi le message ?”\n\n\n\n👉 Objectif : une synthèse décisionnelle."
+    "section": "Test simple",
+    "text": "Test simple\n\nChanger un paramètre important.\n\n\nSi la conclusion bascule :\n\n\n\n👉 le résultat est fragile."
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#démo-slide-décision-structure",
-    "href": "assets/bigdata/CM/CM4/index.html#démo-slide-décision-structure",
+    "objectID": "assets/bigdata/CM/CM4/index.html#bonne-pratique",
+    "href": "assets/bigdata/CM/CM4/index.html#bonne-pratique",
     "title": "Teaching",
-    "section": "Démo — Slide décision (structure)",
-    "text": "Démo — Slide décision (structure)\nUne “slide décision” contient :\n\n\nConclusion (1 phrase)\nFaits (3 bullets max)\nHypothèses / limites (1 encadré)\nRecommandation (conditionnelle)"
+    "section": "Bonne pratique",
+    "text": "Bonne pratique\n\n\n\ndocumenter les hypothèses\nisoler les paramètres\ncomparer les scénarios\n\n\n\n\n👉 Une analyse devient un outil de discussion."
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#démo-exemple-de-formulation",
-    "href": "assets/bigdata/CM/CM4/index.html#démo-exemple-de-formulation",
+    "objectID": "assets/bigdata/CM/CM4/index.html#conclusion",
+    "href": "assets/bigdata/CM/CM4/index.html#conclusion",
     "title": "Teaching",
-    "section": "Démo — Exemple de formulation",
-    "text": "Démo — Exemple de formulation\n\nConclusion : “L’indicateur X augmente sur 12 mois.”\n\n\nFaits :\n\nhausse régulière sur 4 trimestres\ntendance stable sur plusieurs scénarios\npas de rupture détectée dans les données\n\n\n\nLimites : “Résultat sensible à la définition de X (fenêtre 30j vs 90j).”"
+    "section": "Conclusion",
+    "text": "Conclusion\n\nUne bonne analyse :\n\n\néclaire une décision\nexplicite ses limites\nreste compréhensible par d’autres\n\n\n\n\n👉 elle ne remplace jamais la décision humaine."
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#démo-recommandation-conditionnelle",
-    "href": "assets/bigdata/CM/CM4/index.html#démo-recommandation-conditionnelle",
+    "objectID": "assets/bigdata/CM/CM4/index.html#a-retenir",
+    "href": "assets/bigdata/CM/CM4/index.html#a-retenir",
     "title": "Teaching",
-    "section": "Démo — Recommandation conditionnelle",
-    "text": "Démo — Recommandation conditionnelle\nUne recommandation pro ressemble à :\n\n“Si l’objectif est Y, alors on recommande A.\nSi la contrainte Z s’impose, alors on recommande B.”\n\n\n👉 L’analyse outille une décision : elle n’impose pas."
+    "section": "A retenir",
+    "text": "A retenir\n\n\nUne analyse robuste n’est pas figée\nelle est paramétrée."
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#exemple-mesurer-une-variabilité",
-    "href": "assets/bigdata/CM/CM4/index.html#exemple-mesurer-une-variabilité",
+    "objectID": "assets/bigdata/CM/CM4/index.html#pause-1",
+    "href": "assets/bigdata/CM/CM4/index.html#pause-1",
     "title": "Teaching",
-    "section": "Exemple — Mesurer une variabilité",
-    "text": "Exemple — Mesurer une variabilité\nOn observe une moyenne…\nmais une moyenne seule peut être trompeuse.\n\n\ndeux groupes peuvent avoir la même moyenne\nmais des dispersions très différentes\n\n\n\n👉 L’écart-type sert à répondre à une question simple :"
+    "section": "Pause",
+    "text": "Pause\n\n  \n\n  \n    \n      ▶\n      ↩\n\n      \n        \n        min\n        \n        s"
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#à-quoi-sert-lécart-type",
-    "href": "assets/bigdata/CM/CM4/index.html#à-quoi-sert-lécart-type",
+    "objectID": "assets/bigdata/CM/CM4/index.html#bloc-3",
+    "href": "assets/bigdata/CM/CM4/index.html#bloc-3",
     "title": "Teaching",
-    "section": "À quoi sert l’écart-type ?",
-    "text": "À quoi sert l’écart-type ?\n\nÀ mesurer à quel point les valeurs sont dispersées autour d’une moyenne.\n\n\n👉 Il ne “corrige” pas la moyenne, il en donne le contexte."
+    "section": "Bloc 3",
+    "text": "Bloc 3"
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#décision-permise-interdite",
-    "href": "assets/bigdata/CM/CM4/index.html#décision-permise-interdite",
+    "objectID": "assets/bigdata/CM/CM4/index.html#les-jeux-vidéo-rendent-ils-violents",
+    "href": "assets/bigdata/CM/CM4/index.html#les-jeux-vidéo-rendent-ils-violents",
     "title": "Teaching",
-    "section": "Décision permise / interdite",
-    "text": "Décision permise / interdite\n\n\nécart-type faible → moyenne représentative\nécart-type élevé → moyenne fragile\n\n\n\n👉 La question n’est pas “comment le calculer”,\nmais “peut-on raisonnablement résumer par une moyenne ?”"
+    "section": "Les jeux vidéo rendent-ils violents ?",
+    "text": "Les jeux vidéo rendent-ils violents ?"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#petite-démo-sur-une-question-dactualité",
+    "href": "assets/bigdata/CM/CM4/index.html#petite-démo-sur-une-question-dactualité",
+    "title": "Teaching",
+    "section": "Petite démo sur une question d’actualité",
+    "text": "Petite démo sur une question d’actualité\n\n\n\nDataset 1\n\nVentes de jeux videos de 1990 à 2016\n\n\n\nPour chaque jeu répertorié on a :\n\n\n\ntitre, plateforme, genre\nannée de publication\nventes locales et globales\nnote, etc\n\n\n\nDataset 2\n\nTaux d’homicide en France de 1990 à 2021\n\n\n\nPour chaque année on a :\n\n\nle taux d’homicide pour 100 000 habitants\nvariant globalement entre 1 et 3"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#dataset-1-1",
+    "href": "assets/bigdata/CM/CM4/index.html#dataset-1-1",
+    "title": "Teaching",
+    "section": "Dataset 1",
+    "text": "Dataset 1\n\nTaux d’homicide en France pour 100 000 habitants"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#dataset-2-1",
+    "href": "assets/bigdata/CM/CM4/index.html#dataset-2-1",
+    "title": "Teaching",
+    "section": "Dataset 2",
+    "text": "Dataset 2\n\nFréquence de publication des jeux selon l’année et le genre"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#dataset-2-2",
+    "href": "assets/bigdata/CM/CM4/index.html#dataset-2-2",
+    "title": "Teaching",
+    "section": "Dataset 2",
+    "text": "Dataset 2\n\nFréquence de publication des jeux"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#dataset-2-3",
+    "href": "assets/bigdata/CM/CM4/index.html#dataset-2-3",
+    "title": "Teaching",
+    "section": "Dataset 2",
+    "text": "Dataset 2\n\nFréquence de publication des jeux pondérée par leur vente"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#dataset-2-4",
+    "href": "assets/bigdata/CM/CM4/index.html#dataset-2-4",
+    "title": "Teaching",
+    "section": "Dataset 2",
+    "text": "Dataset 2\n\nModélisation par ajustement polynomial de la ventes de jeux d’action"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#recherche-dune-corrélation",
+    "href": "assets/bigdata/CM/CM4/index.html#recherche-dune-corrélation",
+    "title": "Teaching",
+    "section": "Recherche d’une corrélation",
+    "text": "Recherche d’une corrélation\n\nComparaison vente de jeux d’action vs taux d’homicide\n-0.68"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#rappel",
+    "href": "assets/bigdata/CM/CM4/index.html#rappel",
+    "title": "Teaching",
+    "section": "Rappel",
+    "text": "Rappel\nLe coefficient de corrélation est une mesure statistique qui indique la force et le sens du lien entre deux variables.\n\n\n\\(=0\\)  aucune corrélations\n\\(&gt;0\\)  corrélation positive (les deux variables évoluent dans le même sens)\n\\(&lt;0\\)  corrélation négative (les variables évoluent en sens opposé)\n\n\n\nNous avons trouvé :\n\\[\nr = -0.68\n\\]\n\n\nCela indique une corrélation négative modérée à forte :\n\n\nlorsque les ventes de jeux augmentent,\nle taux d’homicide tend à diminuer."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#pour-finir",
+    "href": "assets/bigdata/CM/CM4/index.html#pour-finir",
+    "title": "Teaching",
+    "section": "Pour finir",
+    "text": "Pour finir\nLe résultat obtenu ne constitue pas une preuve certaine.\nPlusieurs limites importantes doivent être prises en compte dans cette analyse :\n\n\nles datasets de jeux vidéo ne sont pas exhaustifs\nles ventes mondiales ne correspondent pas forcément aux ventes en France\nil n’y a aucune indication du niveau de violence des jeux\nla corrélation ne signifie pas causalité\nd’autres facteurs sociaux, économiques ou politiques peuvent influencer le taux d’homicide\nles deux variables évoluent avec le temps, ce qui peut produire une corrélation artificielle\n\n\n\n\nUne corrélation observée, mais aucune causalité démontrée."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#position-scientifique-actuelle-résumé",
+    "href": "assets/bigdata/CM/CM4/index.html#position-scientifique-actuelle-résumé",
+    "title": "Teaching",
+    "section": "Position scientifique actuelle (résumé)",
+    "text": "Position scientifique actuelle (résumé)\n\nLa position la plus courante aujourd’hui est :\n\n\nles jeux vidéo peuvent améliorer l’humeur\ncertaines expériences montrent de légers effets sur l’agressivité\nmais il n’existe pas de preuve solide d’un lien avec la violence réelle ou la criminalité\n\n\n\n\nCertaines études observent aussi une corrélation négative entre jeux vidéo et criminalité, mais la recherche actuelle ne montre aucun lien causal clair entre jeux vidéo et violence réelle."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#pause-2",
+    "href": "assets/bigdata/CM/CM4/index.html#pause-2",
+    "title": "Teaching",
+    "section": "Pause",
+    "text": "Pause\n\n  \n\n  \n    \n      ▶\n      ↩\n\n      \n        \n        min\n        \n        s"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#bloc-4",
+    "href": "assets/bigdata/CM/CM4/index.html#bloc-4",
+    "title": "Teaching",
+    "section": "Bloc 4",
+    "text": "Bloc 4"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#ouais-mais-aujourdhui-il-y-a-lia-non",
+    "href": "assets/bigdata/CM/CM4/index.html#ouais-mais-aujourdhui-il-y-a-lia-non",
+    "title": "Teaching",
+    "section": "Ouais mais… aujourd’hui il y a l’IA, non ?",
+    "text": "Ouais mais… aujourd’hui il y a l’IA, non ?"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#lia-est-une-machine-de-synthèse",
+    "href": "assets/bigdata/CM/CM4/index.html#lia-est-une-machine-de-synthèse",
+    "title": "Teaching",
+    "section": "L’IA est une machine de synthèse",
+    "text": "L’IA est une machine de synthèse\n\net par là, un formidable outil pour le data scientist\n\n\n\nMais\n\n\n\nElle peut halluciner,\nEtre entrainée sur des données fausses ou biaisées\nElle ne sait pas où elle va\n\n\n\n\nL’humain, ingénieur ou juste citoyen, reste maître de l’information."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#ce-qui-reste-humain",
+    "href": "assets/bigdata/CM/CM4/index.html#ce-qui-reste-humain",
+    "title": "Teaching",
+    "section": "Ce qui reste humain",
+    "text": "Ce qui reste humain\n\nL’IA produit des réponses.\n\n\n\nMais\n\n\n\nMais seul l’humain peut :\n\n\n\nposer la bonne question\nvérifier les sources\ninterpréter les résultats\ndécider quoi en faire\n\n\n\n\nL’analyse reste une compétence humaine."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#le-problème-aujourdhui-linformation",
+    "href": "assets/bigdata/CM/CM4/index.html#le-problème-aujourdhui-linformation",
+    "title": "Teaching",
+    "section": "Le problème aujourd’hui : l’information",
+    "text": "Le problème aujourd’hui : l’information\n\n\nNous vivons dans un monde où :\n\n\n\nl’information est abondante\nles chiffres circulent partout\nles graphiques influencent l’opinion\n\n\n\n\nMais\n\n\n\n\nbeaucoup d’informations sont mal interprétées."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#conspirationnisme",
+    "href": "assets/bigdata/CM/CM4/index.html#conspirationnisme",
+    "title": "Teaching",
+    "section": "Conspirationnisme",
+    "text": "Conspirationnisme\n\n\nLes théories complotistes utilisent souvent :\n\n\n\ndes chiffres isolés\ndes corrélations trompeuses\ndes graphiques hors contexte\n\n\n\n\nSans esprit critique :\n\n\n\nles données peuvent être manipulées."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#démocratie-et-le-devoir-de-sinformer-et-de-vérifier-linformation",
+    "href": "assets/bigdata/CM/CM4/index.html#démocratie-et-le-devoir-de-sinformer-et-de-vérifier-linformation",
+    "title": "Teaching",
+    "section": "Démocratie et le devoir de s’informer et de vérifier l’information",
+    "text": "Démocratie et le devoir de s’informer et de vérifier l’information\n\nDans une démocratie :\n\n\nles citoyens prennent des décisions\nces décisions reposent sur l’information\n\n\n\n\nDonc :\n\n\n\nsavoir lire et analyser des données est une compétence civique.\nL’analyse est aussi un outil citoyen."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#osint-open-source-intelligence",
+    "href": "assets/bigdata/CM/CM4/index.html#osint-open-source-intelligence",
+    "title": "Teaching",
+    "section": "OSINT : Open Source Intelligence",
+    "text": "OSINT : Open Source Intelligence\nUtiliser des sources publiques pour :\n\n\nvérifier une information\nanalyser un événement\nreconstruire des faits\n\n\n\nExemples :\n\n\n\nimages satellites\nvidéos\nréseaux sociaux\ndonnées publiques"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#osint-un-exemple",
+    "href": "assets/bigdata/CM/CM4/index.html#osint-un-exemple",
+    "title": "Teaching",
+    "section": "OSINT : un exemple",
+    "text": "OSINT : un exemple\nNASA Fire Information for Resource Management System (FIRMS)\n\nNASA thermal anomalies Feb-Nov 2022"
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#conclusion-du-cours",
+    "href": "assets/bigdata/CM/CM4/index.html#conclusion-du-cours",
+    "title": "Teaching",
+    "section": "Conclusion du cours",
+    "text": "Conclusion du cours\n\n\nComprendre les données n’est pas seulement une compétence technique.\n\n\n\nC’est une compétence intellectuelle…\n\n\n\net parfois civique."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#conclusion-1",
+    "href": "assets/bigdata/CM/CM4/index.html#conclusion-1",
+    "title": "Teaching",
+    "section": "Conclusion",
+    "text": "Conclusion"
   },
   {
     "objectID": "assets/bigdata/CM/CM4/index.html#synthèse",
@@ -2030,18 +2268,25 @@
     "text": "Synthèse\n\n\nUne analyse est un artefact collectif\nElle doit être robuste au changement\nElle doit être compréhensible hors du notebook"
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#règle-dor-prospective",
-    "href": "assets/bigdata/CM/CM4/index.html#règle-dor-prospective",
+    "objectID": "assets/bigdata/CM/CM4/index.html#rappel-1",
+    "href": "assets/bigdata/CM/CM4/index.html#rappel-1",
     "title": "Teaching",
-    "section": "Règle d’or (prospective)",
-    "text": "Règle d’or (prospective)\n\nUne bonne analyse ne répond pas seulement à la question d’aujourd’hui :\nelle prépare les questions de demain."
+    "section": "Rappel",
+    "text": "Rappel\nSemaine prochaine, vous devrez faire une présentation pour le projet 2\n\n\n\n\nNombre de pages\nPrésentation\n\n\n\n\nMonôme\n5\n5 minutes\n\n\nBinôme\n7–8\n7 minutes\n\n\nTrinôme\n9–10\n10 minutes\n\n\n\n\nCes temps sont indicatifs, l’important c’est\n\nde présenter la question\nexpliquer rapidement l’analyse\nexpliciter la conclusion"
   },
   {
-    "objectID": "assets/bigdata/CM/CM4/index.html#et-après",
-    "href": "assets/bigdata/CM/CM4/index.html#et-après",
+    "objectID": "assets/bigdata/CM/CM4/index.html#règle-dor",
+    "href": "assets/bigdata/CM/CM4/index.html#règle-dor",
     "title": "Teaching",
-    "section": "Et après ?",
-    "text": "Et après ?\nDans la suite :\n\n\ntransformer une analyse en livrable pro\nséparer notebook / rapport / décision\nsimuler des revues critiques (“et si… ?”)\n\n\n\n👉 Objectif : penser comme un data scientist professionnel, pas comme un exécutant."
+    "section": "Règle d’or",
+    "text": "Règle d’or\n\n\nLa science et l’analyse ne servent pas seulement\nà produire des réponses.\n\n\n\nElle servent aussi à comprendre le monde."
+  },
+  {
+    "objectID": "assets/bigdata/CM/CM4/index.html#section-4",
+    "href": "assets/bigdata/CM/CM4/index.html#section-4",
+    "title": "Teaching",
+    "section": "",
+    "text": "Nothing in life is to be feared, it is only to be understood.\nRien dans la vie n’est à craindre, tout est à comprendre.\n— Marie Curie"
   },
   {
     "objectID": "assets/bigdata/CM/CM2/notebook/notebook.html",
