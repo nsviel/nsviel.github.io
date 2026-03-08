@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<link href="../../../../img/favicon.svg" rel="icon" type="image/svg+xml">
-<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
+<script src="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
+<link href="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.css" rel="stylesheet">
+<script src="index_files/libs/quarto-contrib/roughnotation-flourish-bridge-1.0.0/flourish-bridge.js"></script>
+<link href="index_files/libs/quarto-contrib/quarto-gradio-1.0.0/quarto-gradio.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <title>Teaching – CM2 - Big Data</title>
+  <meta name="author" content="nsv">
+  <meta name="dcterms.date" content="2026-03-08">
+  <title>CM2 - Big Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,12 +35,16 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/theme/quarto-323c7c68024ecce3eb00ac243c3b5e50.css">
-  <link href="../../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-435a69ffe18aceff0a6543168f182b7c.css">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/chrono/chrono.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/simplemenu/simplemenu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-attribution/attribution.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-quiz/quiz.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet"><style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -120,22 +130,72 @@
       margin-left: auto;
       margin-right: 0; 
     }
-  </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script>
+  </style><script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script>
+  <!-- quarto-confetti-injected -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script>
+  (function () {
+    if (window.__quarto_confetti_init__) return;
+    window.__quarto_confetti_init__ = true;
+
+    // Debug (décommente si besoin)
+    // console.log("[confetti] init ok");
+
+    window.confettiBurst = function (opts) {
+      if (typeof window.confetti !== "function") return;
+
+      // Ajustés pour limiter le fade perceptible
+      var defaults = {
+        particleCount: 200,
+        spread: 100,
+        origin: { y: 0.7 }
+
+      };
+
+      try {
+        window.confetti(Object.assign({}, defaults, (opts || {})));
+      } catch (e) {}
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!window.Reveal) return;
+
+      function parseMaybeJSON(s) {
+        if (!s) return {};
+        var t = String(s).trim();
+        if (t === "") return {};
+        try { return JSON.parse(t); } catch (e) { return {}; }
+      }
+
+      Reveal.on("fragmentshown", function (event) {
+        var frag = event && event.fragment;
+        if (!frag) return;
+
+        // Option 3: class ".confetti"
+        if (!frag.classList || !frag.classList.contains("confetti")) return;
+
+        // Optional overrides
+        var optsText =
+          (frag.getAttribute && (frag.getAttribute("data-confetti") || frag.getAttribute("confetti"))) || "";
+
+        window.confettiBurst(parseMaybeJSON(optsText));
+      });
+    });
+  })();
+  </script>
 </head>
 <body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 
-<section>
-<section id="section" class="title-slide slide level1 center" data-background-image="image/astronaut.jpg">
-<h1></h1>
-<div class="absolute" style="font-size:1em; padding: 0.25em 0.5em; background-color: rgba(0, 0, 0, .75); backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); border-radius: 2px;top: 75%; left: 55%; ">
+<section id="section" class="slide level2" data-background-image="content/image/astronaut.jpg" data-state="hide-menubar">
+<h2></h2>
+<div class="titlebox topright">
 <p>Introduction au Big Data</p>
 </div>
 </section>
-<section id="comment-analyser-des-données-réelles-sans-se-perdre-dans-le-code-ni-les-outils" class="slide level2 question">
+<section id="comment-analyser-des-données-réelles-sans-se-perdre-dans-le-code-ni-les-outils" class="slide level2 question" data-state="hide-menubar">
 <h2>Comment analyser des données réelles sans se perdre dans le code ni les outils ?</h2>
 <aside class="notes">
 <p><strong>Idée clé</strong> : Analyser des données réelles, ce n’est pas appliquer une recette magique, c’est comprendre une situation.</p>
@@ -152,7 +212,7 @@
       }</style></aside>
 <!-- BLOC: Intro 5min -->
 </section>
-<section id="mise-en-situation" class="slide level2">
+<section id="mise-en-situation" class="slide level2" data-name="Intro">
 <h2>Mise en situation</h2>
 <p>Vous êtes stagiaire data dans une grande entreprise.</p>
 <div class="blue fragment">
@@ -183,11 +243,9 @@
           display:block!important;
       }</style></aside>
 <!-- BLOC: Bloc_1 15min -->
-</section></section>
-<section>
-<section id="bloc-1" class="title-slide slide level1 block center">
-<h1>Bloc 1</h1>
-
+</section>
+<section id="bloc-1" class="slide level2 block" data-name="Bloc 1">
+<h2>Bloc 1</h2>
 </section>
 <section id="quest-ce-que-faire-une-analyse-de-données" class="slide level2 question">
 <h2>Qu’est-ce que <em>faire une analyse de données</em> ?</h2>
@@ -496,11 +554,9 @@ il faut un environnement adapté.</p>
 c’est enchaîner des transformations de manière cohérente</p>
 </blockquote>
 <!-- BLOC: Bloc_2 15min --->
-</section></section>
-<section>
-<section id="bloc-2" class="title-slide slide level1 block center">
-<h1>Bloc 2</h1>
-
+</section>
+<section id="bloc-2" class="slide level2 block" data-name="Bloc 2">
+<h2>Bloc 2</h2>
 </section>
 <section id="pourquoi-en-data-science-on-ne-commence-presque-jamais-par-écrire-un-programme-complet" class="slide level2 question">
 <h2>Pourquoi, en data science, on ne commence presque jamais par écrire un programme complet ?</h2>
@@ -522,7 +578,7 @@ c’est enchaîner des transformations de manière cohérente</p>
 <section id="notebook-lenvironnement-de-travail-en-data" class="slide level2">
 <h2>Notebook : l’environnement de travail en data</h2>
 
-<img data-src="image/jupyter.webp" class="r-stretch"></section>
+<img data-src="content/image/jupyter.webp" class="r-stretch"></section>
 <section id="quest-ce-quun-notebook" class="slide level2">
 <h2>Qu’est-ce qu’un notebook ?</h2>
 <p>Un <strong>notebook</strong> est un document interactif qui permet de :</p>
@@ -559,23 +615,23 @@ c’est enchaîner des transformations de manière cohérente</p>
 <section id="architecture" class="slide level2" data-background-color="#cac9c9">
 <h2>Architecture</h2>
 
-<img data-src="image/jupyter_ide_3.svg" class="r-stretch"></section>
+<img data-src="content/image/jupyter_ide_3.svg" class="r-stretch"></section>
 <section id="ide-integrated-development-environment" class="slide level2" data-background-color="#cac9c9">
 <h2>IDE (Integrated Development Environment)</h2>
 
-<img data-src="image/ide.svg" class="r-stretch"></section>
+<img data-src="content/image/ide.svg" class="r-stretch"></section>
 <section id="integrated-development-environment" class="slide level2" data-background-color="#cac9c9">
 <h2>Integrated Development Environment</h2>
 
-<img data-src="image/vscode.svg" class="r-stretch"></section>
+<img data-src="content/image/vscode.svg" class="r-stretch"></section>
 <section id="integrated-development-environment-1" class="slide level2" data-background-color="#cac9c9">
 <h2>Integrated Development Environment</h2>
 
-<img data-src="image/jupyter.svg" class="r-stretch"></section>
+<img data-src="content/image/jupyter.svg" class="r-stretch"></section>
 <section id="integrated-development-environment-2" class="slide level2" data-background-color="#cac9c9">
 <h2>Integrated Development Environment</h2>
 
-<img data-src="image/jupyter_lab.svg" class="r-stretch"></section>
+<img data-src="content/image/jupyter_lab.svg" class="r-stretch"></section>
 <section id="jupyter-ide" class="slide level2">
 <h2>Jupyter IDE</h2>
 <div class="r-fit-text">
@@ -585,11 +641,11 @@ c’est enchaîner des transformations de manière cohérente</p>
 <section id="jupyter-notebook" class="slide level2" data-background-color="#cac9c9">
 <h2>Jupyter Notebook</h2>
 
-<img data-src="image/jupyter_ide_2.svg" class="r-stretch"></section>
+<img data-src="content/image/jupyter_ide_2.svg" class="r-stretch"></section>
 <section id="jupyter-lab" class="slide level2" data-background-color="#cac9c9">
 <h2>Jupyter Lab</h2>
 
-<img data-src="image/jupyter_ide_1.svg" class="r-stretch"></section>
+<img data-src="content/image/jupyter_ide_1.svg" class="r-stretch"></section>
 <section id="analyse-réelle-dans-un-notebook" class="slide level2">
 <h2>Analyse réelle dans un notebook</h2>
 <div class="green">
@@ -618,53 +674,20 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p>Le notebook est un format de raisonnement interactif</p>
 </blockquote>
 </section>
-<section id="section-1" class="slide level2" data-background-video="image/notebook.mkv" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<section id="section-1" class="slide level2" data-background-video="content/image/notebook.mkv" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
 <h2></h2>
 </section>
 <section id="un-notebook-cest-loutil-pour-raccourcir-la-boucle-essai-résultat-ajustement." class="slide level2 center">
 <h2>Un notebook, c’est l’outil pour raccourcir la boucle essai → résultat → ajustement.</h2>
 <!-- BLOC: Pause 5min -->
-</section></section>
-<section id="pause" class="title-slide slide level1 center">
-<h1>Pause</h1>
-<div id="timer" style="font-size:2em; text-align:center;">
-<p>05:00</p>
-</div>
-<button id="start-timer">
-▶ Start
-</button>
-<script>
-let interval = null;
-let time = 5 * 60;
-
-const el = document.getElementById("timer");
-const btn = document.getElementById("start-timer");
-
-function update() {
-  const m = String(Math.floor(time / 60)).padStart(2, "0");
-  const s = String(time % 60).padStart(2, "0");
-  el.textContent = `${m}:${s}`;
-}
-
-btn.addEventListener("click", () => {
-  if (interval) return; // évite double start
-
-  update();
-  interval = setInterval(() => {
-    if (time > 0) {
-      time--;
-      update();
-    }
-  }, 1000);
-});
-</script>
-<!-- BLOC: Bloc_2bis (15–18 slides) -->
 </section>
-
-<section>
-<section id="bloc-2bis" class="title-slide slide level1 block center">
-<h1>Bloc 2bis</h1>
-
+<section id="pause" class="slide level2 block">
+<h2>Pause</h2>
+<p>5min</p>
+<!-- BLOC: bloc 3 (15–18 slides) -->
+</section>
+<section id="bloc-3" class="slide level2 block" data-name="Bloc 3">
+<h2>Bloc 3</h2>
 </section>
 <section id="avec-quoi-travaille-t-on-concrètement" class="slide level2 question">
 <h2>Avec quoi travaille-t-on concrètement ?</h2>
@@ -912,7 +935,7 @@ btn.addEventListener("click", () => {
 </tbody>
 </table>
 <div class="center">
-<p><span class="data">donnés</span> <span class="leaderline" start=".data" data-end=".data_o"></span> <span class="leaderline" start=".data" data-end=".data_a"></span></p>
+<p><span class="data">donnés</span> <span class="leaderline" start=".data" data-end=".data_o"></span> <span class="leaderline" start=".data" data-end=".data_o"></span></p>
 </div>
 </section>
 <section id="dataframe-fichier" class="slide level2">
@@ -936,9 +959,9 @@ btn.addEventListener("click", () => {
 <section id="exemple-mental" class="slide level2">
 <h2>Exemple mental</h2>
 <p>Imagine un fichier :</p>
-<pre><code>
-ventes.csv
-</code></pre>
+<blockquote>
+<p>ventes.csv</p>
+</blockquote>
 <p>Quand on le charge :</p>
 <div class="fragment blue">
 <p>Le fichier devient un <strong>DataFrame</strong> nommé par exemple : <code>df_ventes</code></p>
@@ -1123,12 +1146,10 @@ ventes.csv
 <p><strong>Le DataFrame est l’objet central<br>
 de toute analyse de données en Python.</strong></p>
 </blockquote>
-<!-- BLOC: Bloc_3 15–20min -->
-</section></section>
-<section>
-<section id="bloc-3" class="title-slide slide level1 block center">
-<h1>Bloc 3</h1>
-
+<!-- BLOC: Bloc 4 15–20min -->
+</section>
+<section id="bloc-4" class="slide level2 block" data-name="Bloc 4">
+<h2>Bloc 4</h2>
 </section>
 <section id="pourquoi-structurer-une-analyse-en-pipeline" class="slide level2 question">
 <h2>Pourquoi structurer une analyse en pipeline ?</h2>
@@ -1155,11 +1176,9 @@ ce n’est pas le pipeline qui compte d’abord,<br>
 mais la question qu’il sert.</strong></p>
 </blockquote>
 <!-- BLOC: Conclusion-->
-</section></section>
-<section>
-<section id="conclusion" class="title-slide slide level1 block center">
-<h1>Conclusion</h1>
-
+</section>
+<section id="conclusion" class="slide level2 block" data-name="Conclusion">
+<h2>Conclusion</h2>
 </section>
 <section id="ce-quil-faut-retenir" class="slide level2">
 <h2>Ce qu’il faut retenir</h2>
@@ -1219,8 +1238,7 @@ le plus important n’est pas l’outil,<br>
 mais la question que l’on cherche à résoudre.</strong></p>
 </div>
 
-
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -1229,20 +1247,25 @@ mais la question que l’on cherche à résoudre.</strong></p>
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../../../../site_libs/revealjs/dist/reveal.js"></script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="../../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/reveal-leaderline/reveal-leader-line.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/chrono/chrono.js"></script>
+  <script src="index_files/libs/revealjs/plugin/simplemenu/simplemenu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-leaderline/reveal-leader-line.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-attribution/attribution.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-quiz/quiz.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="../../../../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -1257,7 +1280,10 @@ mais la question que l’on cherche à résoudre.</strong></p>
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
+'simplemenu': {"menubarclass":"menubar","menuclass":"menu","activeclass":"active","activeelement":"li","flat":true,"barhtml":{"header":"","footer":"<div class='menubar'><ul class='menu'></ul></div>"},"scale":0.4},
+'quiz': {"checkKey":"c","resetKey":"q","shuffleKey":"t","allowNumberKeys":true,"disableOnCheck":false,"shuffleOptions":true,"defaultCorrect":"","defaultIncorrect":"","includeScore":false,"disableReset":false},
+'pointer': {"key":"p","color":"#12ff00","pointerSize":16,"alwaysVisible":false,"pointsize":20},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1268,7 +1294,7 @@ mais la question que l’on cherche à résoudre.</strong></p>
         controlsTutorial: true,
 
         // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'edges',
+        controlsLayout: 'bottom-right',
 
         // Visibility rule for backwards navigation arrows; "faded", "hidden"
         // or "visible"
@@ -1368,7 +1394,7 @@ mais la question que l’on cherche à résoudre.</strong></p>
         defaultTiming: null,
 
         // Enable slide navigation via mouse wheel
-        mouseWheel: false,
+        mouseWheel: true,
 
         // The display mode that will be used to show slides
         display: 'block',
@@ -1403,9 +1429,9 @@ mais la question que l’on cherche à résoudre.</strong></p>
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1920,
 
-        height: 700,
+        height: 1080,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
@@ -1428,7 +1454,7 @@ mais la question que l’on cherche à résoudre.</strong></p>
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealLeaderline, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Chrono, Simplemenu, RevealLeaderline, RevealAttribution, RevealQuiz, RevealPointer, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -1436,6 +1462,192 @@ mais la question que l’on cherche à résoudre.</strong></p>
           RevealZoom
         ]
       });
+    </script>
+    <script type="text/javascript" id="code-annotation-fragments">
+      function hideAllTippy() {
+        document.querySelectorAll('.code-annotation-anchor').forEach(anchor => {
+          const tippyInstance = anchor._tippy;
+          if (tippyInstance) {
+            tippyInstance.hide();
+          }
+        });
+      }
+
+      Reveal.on('fragmentshown', (event) => {
+        hideAllTippy();
+
+        const fragment = event.fragment;
+        const classesToCheck = ['has-line-highlights', 'visible', 'current-fragment'];
+        if (classesToCheck.some(cls => fragment.classList.contains(cls))) {
+          const codeAnnotationAnchors = fragment.querySelectorAll('.code-annotation-anchor');
+          let matchCount = 0;
+          for (const anchor of codeAnnotationAnchors) {
+            const nextElement = anchor.nextElementSibling;
+            if (
+              nextElement &&
+              nextElement.classList.contains('code-annotation-target') &&
+              nextElement.classList.contains('highlight-line')
+            ) {
+              matchCount++;
+              if (matchCount > 1) break;
+            }
+          }
+          if (matchCount === 1) {
+            for (const anchor of codeAnnotationAnchors) {
+              const nextElement = anchor.nextElementSibling;
+              if (
+                nextElement &&
+                nextElement.classList.contains('code-annotation-target') &&
+                nextElement.classList.contains('highlight-line')
+              ) {
+                const tippyInstance = anchor._tippy;
+                if (tippyInstance) {
+                  tippyInstance.show();
+                  break;
+                }
+              }
+            }
+          }
+        }
+      });
+
+      Reveal.on('fragmenthidden', () => {
+        hideAllTippy();
+      });
+    </script>
+
+    <script>
+
+    window.addEventListener("message", (ev) => {
+      const msg = ev.data;
+      if (!msg || msg.type !== "reveal-nav") return;
+      if (typeof Reveal === "undefined") return;
+
+      const k = msg.key;
+      const isSpace = msg.code === "Space" || k === " ";
+
+      if (k === "ArrowLeft" || k === "PageUp") Reveal.navigateLeft();
+      else if (k === "ArrowRight" || k === "PageDown" || isSpace) Reveal.navigateRight();
+      else if (k === "ArrowUp") Reveal.navigateUp();
+      else if (k === "ArrowDown") Reveal.navigateDown();
+    });
+
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("iframe[allow]").forEach((f) => {
+        const cleaned = f
+          .getAttribute("allow")
+          .split(";")
+          .map(s => s.trim())
+          .filter(s => s && s !== "autoplay");
+
+        f.setAttribute("allow", cleaned.join("; "));
+      });
+    });
+    </script>
+
+    <style>
+    #excalidraw-overlay{
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: none;
+      background: rgba(0,0,0,0.35);
+    }
+
+    #excalidraw-panel{
+      position: absolute;
+      inset: 0;
+      background: #1c1c1c;
+    }
+
+    #excalidraw-overlay iframe{
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: #1c1c1c;
+    }
+
+    /* bouton quitter */
+    #excalidraw-close{
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 100000;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.45);
+      color: #fff;
+      font-size: 26px;
+      line-height: 42px;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    #excalidraw-close:hover{
+      background: rgba(255,255,255,0.10);
+    }
+    </style>
+
+    <div id="excalidraw-overlay" aria-hidden="true">
+      <div id="excalidraw-panel">
+        <div id="excalidraw-close" title="Quitter (Esc)">✕</div>
+        <iframe id="excalidraw-iframe"></iframe>
+      </div>
+    </div>
+
+    <script>
+    (() => {
+      const overlay = document.getElementById("excalidraw-overlay");
+      const panel   = document.getElementById("excalidraw-panel");
+      const closeBt = document.getElementById("excalidraw-close");
+      const iframe  = document.getElementById("excalidraw-iframe");
+
+      function openBoard(){
+        if (overlay.style.display === "block") return;
+
+        iframe.src = window.location.origin + "/_extensions/external/excalidraw/excalidraw.html";
+        overlay.style.display = "block";
+        overlay.setAttribute("aria-hidden","false");
+      }
+
+      function closeBoard(){
+        overlay.style.display = "none";
+        overlay.setAttribute("aria-hidden","true");
+        iframe.src = "about:blank";
+
+        // IMPORTANT: si Reveal s'est mis en pause, on reprend
+        if (window.Reveal && typeof Reveal.isPaused === "function" && Reveal.isPaused()) {
+          Reveal.resume();
+        }
+
+        // Redonner le focus à la présentation
+        const r = document.querySelector(".reveal");
+        if (r) r.focus();
+      }
+
+      // B pour ouvrir
+      window.addEventListener("keydown", (e) => {
+        if ((e.key === "w" || e.key === "W") && !e.ctrlKey && !e.metaKey && !e.altKey) {
+          e.preventDefault();
+          openBoard();
+        }
+      }, true);
+
+      // ESC pour fermer (capture, marche même si focus dans l'iframe)
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeBoard();
+      }, true);
+
+      // bouton quitter
+      closeBt.addEventListener("click", closeBoard);
+    })();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -1566,6 +1778,160 @@ mais la question que l’on cherche à résoudre.</strong></p>
             }
           });
         }
+            let selectedAnnoteEl;
+            const selectorForAnnotation = ( cell, annotation) => {
+              let cellAttr = 'data-code-cell="' + cell + '"';
+              let lineAttr = 'data-code-annotation="' +  annotation + '"';
+              const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+              return selector;
+            }
+            const selectCodeLines = (annoteEl) => {
+              const doc = window.document;
+              const targetCell = annoteEl.getAttribute("data-target-cell");
+              const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+              const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+              const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+              const lineIds = lines.map((line) => {
+                return targetCell + "-" + line;
+              })
+              let top = null;
+              let height = null;
+              let parent = null;
+              if (lineIds.length > 0) {
+                  //compute the position of the single el (top and bottom and make a div)
+                  const el = window.document.getElementById(lineIds[0]);
+                  top = el.offsetTop;
+                  height = el.offsetHeight;
+                  parent = el.parentElement.parentElement;
+                if (lineIds.length > 1) {
+                  const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+                  const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+                  height = bottom - top;
+                }
+                if (top !== null && height !== null && parent !== null) {
+                  // cook up a div (if necessary) and position it 
+                  let div = window.document.getElementById("code-annotation-line-highlight");
+                  if (div === null) {
+                    div = window.document.createElement("div");
+                    div.setAttribute("id", "code-annotation-line-highlight");
+                    div.style.position = 'absolute';
+                    parent.appendChild(div);
+                  }
+                  div.style.top = top - 2 + "px";
+                  div.style.height = height + 4 + "px";
+                  div.style.left = 0;
+                  let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+                  if (gutterDiv === null) {
+                    gutterDiv = window.document.createElement("div");
+                    gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                    gutterDiv.style.position = 'absolute';
+                    const codeCell = window.document.getElementById(targetCell);
+                    const gutter = codeCell.querySelector('.code-annotation-gutter');
+                    gutter.appendChild(gutterDiv);
+                  }
+                  gutterDiv.style.top = top - 2 + "px";
+                  gutterDiv.style.height = height + 4 + "px";
+                }
+                selectedAnnoteEl = annoteEl;
+              }
+            };
+            const unselectCodeLines = () => {
+              const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+              elementsIds.forEach((elId) => {
+                const div = window.document.getElementById(elId);
+                if (div) {
+                  div.remove();
+                }
+              });
+              selectedAnnoteEl = undefined;
+            };
+              // Handle positioning of the toggle
+          window.addEventListener(
+            "resize",
+            throttle(() => {
+              elRect = undefined;
+              if (selectedAnnoteEl) {
+                selectCodeLines(selectedAnnoteEl);
+              }
+            }, 10)
+          );
+          function throttle(fn, ms) {
+          let throttle = false;
+          let timer;
+            return (...args) => {
+              if(!throttle) { // first call gets through
+                  fn.apply(this, args);
+                  throttle = true;
+              } else { // all the others get throttled
+                  if(timer) clearTimeout(timer); // cancel #2
+                  timer = setTimeout(() => {
+                    fn.apply(this, args);
+                    timer = throttle = false;
+                  }, ms);
+              }
+            };
+          }
+            const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+            for (let i=0; i<annoteTargets.length; i++) {
+              const annoteTarget = annoteTargets[i];
+              const targetCell = annoteTarget.getAttribute("data-target-cell");
+              const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+              const contentFn = () => {
+                const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+                if (content) {
+                  const tipContent = content.cloneNode(true);
+                  tipContent.classList.add("code-annotation-tip-content");
+                  return tipContent.outerHTML;
+                }
+              }
+              const config = {
+                allowHTML: true,
+                content: contentFn,
+                onShow: (instance) => {
+                  selectCodeLines(instance.reference);
+                  instance.reference.classList.add('code-annotation-active');
+                  window.tippy.hideAll();
+                },
+                onHide: (instance) => {
+                  unselectCodeLines();
+                  instance.reference.classList.remove('code-annotation-active');
+                },
+                maxWidth: 300,
+                delay: [50, 0],
+                duration: [200, 0],
+                offset: [5, 10],
+                arrow: true,
+                trigger: 'click',
+                appendTo: function(el) {
+                  return el.parentElement.parentElement.parentElement;
+                },
+                interactive: true,
+                interactiveBorder: 10,
+                theme: 'light-border',
+                placement: 'right',
+                positionFixed: true,
+                popperOptions: {
+                  modifiers: [
+                  {
+                    name: 'flip',
+                    options: {
+                      flipVariations: false, // true by default
+                      allowedAutoPlacements: ['right'],
+                      fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+                    },
+                  },
+                  {
+                    name: 'preventOverflow',
+                    options: {
+                      mainAxis: false,
+                      altAxis: false
+                    }
+                  }
+                  ]        
+                }      
+              };
+              window.tippy(annoteTarget, config); 
+            }
         const findCites = (el) => {
           const parentEl = el.parentElement;
           if (parentEl) {
