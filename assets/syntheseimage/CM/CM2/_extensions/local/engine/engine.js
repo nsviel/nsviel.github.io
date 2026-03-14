@@ -36066,6 +36066,7 @@ void main() {
   }
 
   // main.js
+  console.log("[engine] loaded");
   engine();
 })();
 /*! Bundled license information:
