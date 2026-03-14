@@ -32,7 +32,7 @@
     "href": "fr/teaching/syntheseimage/index.html",
     "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "",
-    "text": "Cette partie du cours traite de la synthèse d’images réalistes par rendu inverse, en s’intéressant à la génération de nouvelles images à partir d’images existantes. Elle commence par présenter des méthodes de synthèse 2D, comme l’interpolation et l’extrapolation entre vues, puis en montre les limites lorsque l’on souhaite modifier davantage le point de vue.\nLe cours introduit ensuite la photogrammétrie, qui permet de reconstruire la structure 3D d’une scène à partir de plusieurs images afin de produire de nouvelles vues de manière cohérente. Il aborde enfin différentes représentations de scènes pour la synthèse de vues, depuis les nuages de points et les splats jusqu’aux représentations continues plus récentes, en discutant leurs apports et leurs limites pour la production d’images réalistes.\nTrois ateliers accompagnent le cours afin de mettre ces concepts en pratique. Les étudiants y apprendront à créer un site portfolio, à y intégrer un moteur WebGL et à réaliser la numérisation d’un petit objet par photogrammétrie. À l’issue du cours, chacun disposera ainsi d’un objet numérisé, visualisable dans son propre moteur et intégré à son propre site.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\n\n\n\n\n\nAtelier 1 : PDF\nAtelier 2 : PDF\nAtelier 3 : PDF\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF\nZIP"
+    "text": "Cette partie du cours traite de la synthèse d’images réalistes par rendu inverse, en s’intéressant à la génération de nouvelles images à partir d’images existantes. Elle commence par présenter des méthodes de synthèse 2D, comme l’interpolation et l’extrapolation entre vues, puis en montre les limites lorsque l’on souhaite modifier davantage le point de vue.\nLe cours introduit ensuite la photogrammétrie, qui permet de reconstruire la structure 3D d’une scène à partir de plusieurs images afin de produire de nouvelles vues de manière cohérente. Il aborde enfin différentes représentations de scènes pour la synthèse de vues, depuis les nuages de points et les splats jusqu’aux représentations continues plus récentes, en discutant leurs apports et leurs limites pour la production d’images réalistes.\nTrois ateliers accompagnent le cours afin de mettre ces concepts en pratique. Les étudiants y apprendront à créer un site portfolio, à y intégrer un moteur WebGL et à réaliser la numérisation d’un petit objet par photogrammétrie. À l’issue du cours, chacun disposera ainsi d’un objet numérisé, visualisable dans son propre moteur et intégré à son propre site.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\n\n\n\n\n\nAtelier 1 : PDF\nAtelier 2 : PDF\nAtelier 3 : PDF\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
   },
   {
     "objectID": "fr/teaching/syntheseimage/index.html#cours",
@@ -53,7 +53,7 @@
     "href": "fr/teaching/syntheseimage/index.html#tp",
     "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "",
-    "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF\nZIP"
+    "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
   },
   {
     "objectID": "fr/blog/article_1.html",
