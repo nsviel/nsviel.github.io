@@ -7,8 +7,6 @@
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="index_files/libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
-<link href="index_files/libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script src="index_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
 <script src="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
 <link href="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.css" rel="stylesheet">
@@ -17,7 +15,7 @@
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="nsv">
-  <meta name="dcterms.date" content="2026-03-08">
+  <meta name="dcterms.date" content="2026-03-14">
   <title>CM2 - Synthèse d’images</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -37,7 +35,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-435a69ffe18aceff0a6543168f182b7c.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-07a608328a5e52b3ff0f23dfe4c49131.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -132,8 +130,7 @@
       margin-left: auto;
       margin-right: 0; 
     }
-  </style><script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script><script type="module" src="index_files/libs/quarto-ojs/quarto-ojs-runtime.js"></script>
-  <link href="index_files/libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+  </style><script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script>
   <!-- quarto-confetti-injected -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   <script>
@@ -212,8 +209,8 @@
 <li class="fragment">Pourquoi la 2D bloque : <span class="white">visibilité, profondeur, extrapolation</span></li>
 <li class="fragment">Modèle de caméra : <span class="white">projeter 3D <span class="glyph arrow" style="font-size:1.2em;"></span> 2D (le minimum utile)</span></li>
 <li class="fragment">Correspondances 2D–2D : <span class="white">géométrie épipolaire (contrainte)</span></li>
-<li class="fragment">De la contrainte à la reconstruction : <span class="white">poses <span class="glyph">+</span> points (SfM)</span></li>
-<li class="fragment">Validation : <span class="white">reprojection, erreurs, ambiguïtés</span></li>
+<li class="fragment">De la contrainte à la reconstruction : <span class="white">poses <span class="glyph">+</span> points</span></li>
+<li class="fragment">Triangulation à deux vues : <span class="white">reprojection, erreurs, ambiguïtés</span></li>
 <li class="fragment">Transition : <span class="white">pourquoi “structure” ne suffit pas pour rendre réaliste (vers TP3)</span></li>
 </ol>
 </div>
@@ -412,10 +409,10 @@
 </div>
 </div>
 </section>
-<section id="section-2" class="slide level2 video" data-background-video="content/video/Stenope.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<section id="section-2" class="slide level2 video" data-background-video="content/video/camera/Stenope.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
 <h2></h2>
 </section>
-<section id="section-3" class="slide level2 video" data-background-video="content/video/Convention.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<section id="section-3" class="slide level2 video" data-background-video="content/video/camera/Convention.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
 <h2></h2>
 </section>
 <section id="projection-perspective-idée" class="slide level2">
@@ -503,14 +500,14 @@ K =
 </ul>
 </div>
 </section>
-<section id="focal" class="slide level2 video" data-background-video="content/video/Focal.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<section id="focal" class="slide level2 video" data-background-video="content/video/camera/Focal.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
 <h2>Focal</h2>
 <p><br><br><br><br><br><br><br><br><br><br><br></p>
 <p><span class="math display">\[
 f_x = \frac{f} {\Delta_x}, \quad f_y = \frac{f}{\Delta_y}
 \]</span></p>
 </section>
-<section id="centre-optique" class="slide level2 video" data-background-video="content/video/Principal_point.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<section id="centre-optique" class="slide level2 video" data-background-video="content/video/camera/Principal_point.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
 <h2>Centre optique</h2>
 </section>
 <section id="section-4" class="slide level2 vcenter">
@@ -560,7 +557,7 @@ f_x = \frac{f} {\Delta_x}, \quad f_y = \frac{f}{\Delta_y}
 <p><span class="green">On va essayer de comprendre pourquoi</span></p>
 </div>
 </section>
-<section id="section-6" class="slide level2 video" data-background-video="content/video/Pose.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<section id="section-6" class="slide level2 video" data-background-video="content/video/camera/Pose.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
 <h2></h2>
 </section>
 <section id="cest-moi-qui-bouge-ou-cest-le-monde" class="slide level2">
@@ -584,19 +581,19 @@ f_x = \frac{f} {\Delta_x}, \quad f_y = \frac{f}{\Delta_y}
 </blockquote>
 </div>
 </section>
-<section id="section-7" class="slide level2 video" data-background-video="content/video/PoseWorld.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<section id="section-7" class="slide level2 video" data-background-video="content/video/camera/PoseWorld.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
 <h2></h2>
 <p><br><br><br><br><br><br><br><br><br><br><br></p>
 <p><span class="math inline">\(\color{#00e0ff}{R}_{wc} = R_{\text{cam}}^{\top}\)</span></p>
 <p><span class="math inline">\(\color{#ffb000}{t} = -RC\)</span></p>
 </section>
-<section id="section-8" class="slide level2 video" data-background-video="content/video/Extrinsic.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<section id="section-8" class="slide level2 video" data-background-video="content/video/camera/Extrinsic.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
 <h2></h2>
 </section>
-<section id="fov" class="slide level2 video" data-background-video="content/video/FOV.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<section id="fov" class="slide level2 video" data-background-video="content/video/camera/FOV.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
 <h2>FOV</h2>
 </section>
-<section id="section-9" class="slide level2 video" data-background-video="content/video/Distortion.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<section id="section-9" class="slide level2 video" data-background-video="content/video/camera/Distortion.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
 <h2></h2>
 </section>
 <section id="pourquoi-les-poses-sont-centrales-tp2" class="slide level2">
@@ -690,13 +687,13 @@ f_x = \frac{f} {\Delta_x}, \quad f_y = \frac{f}{\Delta_y}
 </section>
 <section id="dabord-il-nous-faut-définir-des-points-dintérêt" class="slide level2 slide_black">
 <h2>D’abord il nous faut définir des points d’intérêt</h2>
-<p><video data-src="content/video/Keypoint.mp4" style="width:100.0%" controls=""><a href="content/video/Keypoint.mp4">Video</a></video></p>
+<p><video data-src="content/video/camera/Keypoint.mp4" style="width:100.0%" controls=""><a href="content/video/camera/Keypoint.mp4">Video</a></video></p>
 </section>
 <section id="puis-faire-des-correspondances" class="slide level2 slide_black">
 <h2>Puis faire des correspondances</h2>
-<p><video data-src="content/video/Correspondence.mp4" style="width:100.0%" controls=""><a href="content/video/Correspondence.mp4">Video</a></video></p>
+<p><video data-src="content/video/camera/Correspondence.mp4" style="width:100.0%" controls=""><a href="content/video/camera/Correspondence.mp4">Video</a></video></p>
 </section>
-<section id="puis-on-triangule" class="slide level2 video" data-background-video="content/video/Point3D.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<section id="puis-on-triangule" class="slide level2 video" data-background-video="content/video/camera/Point3D.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
 <h2>Puis on triangule</h2>
 </section>
 <section id="cool-pas-compliqué-finalement" class="slide level2 good">
@@ -708,7 +705,7 @@ f_x = \frac{f} {\Delta_x}, \quad f_y = \frac{f}{\Delta_y}
 <section id="en-pratique-on-connait-pas-les-poses-des-caméras" class="slide level2 warning">
 <h2>En pratique on connait pas les poses des caméras 😔</h2>
 </section>
-<section id="comment-on-fait-ça-du-coup" class="slide level2 video" data-background-video="content/video/Triangulation.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<section id="comment-on-fait-ça-du-coup" class="slide level2 video" data-background-video="content/video/camera/Triangulation.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
 <h2>Comment on fait ça du coup ?</h2>
 </section>
 <section id="bein-faudrait-trouver-une-matrice" class="slide level2">
@@ -749,6 +746,17 @@ E = K'^T F K
 <p>c’est quoi <span class="math inline">\(F\)</span> ?</p>
 </div>
 </section>
+<section id="section-10" class="slide level2">
+<h2></h2>
+<div class="r-fit-text">
+<p>La matrice Fondamentale</p>
+</div>
+<div class="fragment">
+<blockquote>
+<p>La matrice qui relie les points correspondants entre deux images d’une même scène.</p>
+</blockquote>
+</div>
+</section>
 <section id="et-cest-là-que-ça-devient-compliqué" class="slide level2 warning">
 <h2>Et c’est là que ça devient compliqué</h2>
 </section>
@@ -783,110 +791,143 @@ E = K'^T F K
 <p>👉 On passe en géométrie de compas</p>
 </div>
 </section>
-<section id="construction" class="slide level2 video" data-background-video="content/video/Epipolaire.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
-<h2>Construction</h2>
+<section id="projection" class="slide level2 video" data-background-video="content/video/epipolar/Projection.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<h2>Projection</h2>
 </section>
-<section id="on-reprend-les-correspondances-2d2d" class="slide level2">
-<h2>On reprend les correspondances 2D–2D</h2>
-<p>On repart de : <span class="math display">\[
-\mathbf{x}_1 \leftrightarrow \mathbf{x}_2
+<section id="section-11" class="slide level2 video" data-background-video="content/video/epipolar/Plan.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<h2></h2>
+</section>
+<section id="après-ça" class="slide level2">
+<h2>Après ça</h2>
+
+<img data-src="content/image/epipolar.png" style="width:100.0%" class="r-stretch"><p><span class="math display">\[
+x' \in l'
 \]</span></p>
 <div class="fragment">
-<p>Si deux caméras voient le même point :</p>
-</div>
-<ul>
-<li class="fragment">le point 3D est sur deux rayons</li>
-<li class="fragment">sa projection dans l’autre image doit tomber sur une <strong>droite épipolaire</strong></li>
-</ul>
-<div class="fragment blue">
-<p>👉 Une correspondance valide ne peut pas être n’importe où : elle doit respecter une géométrie entre les deux vues.</p>
+<blockquote>
+<p>Le point correspondant doit être sur la ligne épipolaire</p>
+</blockquote>
 </div>
 </section>
-<section id="le-plan-épipolaire" class="slide level2">
-<h2>Le plan épipolaire</h2>
-<div class="fragment">
-<p>Un point 3D <span class="math inline">\(X\)</span> et les deux centres de caméras <span class="math inline">\(C_1\)</span> et <span class="math inline">\(C_2\)</span> définissent un <strong>plan unique</strong>.</p>
-</div>
-<div class="fragment green">
-<p>C’est le <strong>plan épipolaire</strong>.</p>
-</div>
-<div class="fragment">
-<p>Ce plan coupe les deux plans image selon deux <strong>droites épipolaires</strong>.</p>
-</div>
+<section id="après-ça-1" class="slide level2">
+<h2>Après ça</h2>
+
+<img data-src="content/image/epipolar.png" style="width:100.0%" class="r-stretch"><p><span class="math display">\[
+l' = Fx
+\]</span></p>
 </section>
-<section id="les-lignes-épipolaires" class="slide level2">
-<h2>Les lignes épipolaires</h2>
-<div class="fragment">
-<p>Le plan épipolaire coupe les plans image.</p>
-</div>
-<div class="fragment">
-<p>L’intersection est une <strong>droite</strong>.</p>
-</div>
-<div class="fragment green">
-<p>Cette droite est la <strong>ligne épipolaire</strong>.</p>
-</div>
-<div class="fragment">
-<p>Donc si un point apparaît dans une image, son correspondant dans l’autre image doit se trouver <strong>sur cette ligne</strong>.</p>
-</div>
-</section>
-<section id="la-contrainte-épipolaire" class="slide level2">
-<h2>La contrainte épipolaire</h2>
-<div class="fragment">
-<p>Un point <span class="math inline">\(x\)</span> dans la première image définit une <strong>ligne épipolaire</strong> dans la seconde.</p>
-</div>
-<div class="fragment">
-<p>Le point correspondant <span class="math inline">\(x'\)</span> doit se trouver sur cette ligne.</p>
-</div>
-<div class="fragment green Huge">
-<p>La recherche devient 1D au lieu de 2D.</p>
-</div>
-</section>
-<section id="contrainte-épipolaire" class="slide level2">
-<h2>Contrainte épipolaire</h2>
-<div class="fragment">
-<p>Cette relation s’écrit :</p>
-<p><span class="math display">\[
+<section id="après-ça-2" class="slide level2">
+<h2>Après ça</h2>
+
+<img data-src="content/image/epipolar.png" style="width:100.0%" class="r-stretch"><p><span class="math display">\[
 x'^T F x = 0
 \]</span></p>
-</div>
-<div class="fragment">
-<p><span class="math inline">\(F\)</span> est la <strong>matrice fondamentale</strong>.</p>
-</div>
-<div class="fragment">
-<p>Elle encode toute la géométrie entre les deux caméras.</p>
-</div>
 </section>
-<section id="matrice-fondamentale-rôle-sans-détails" class="slide level2">
-<h2>Matrice fondamentale : rôle (sans détails)</h2>
-<p>La <strong>matrice fondamentale</strong> (<span class="math inline">\(F\)</span>) encode la contrainte entre deux vues :</p>
+<section id="la-géométrie-épipolaire-nous-donne" class="slide level2">
+<h2>La géométrie épipolaire nous donne :</h2>
 <p><span class="math display">\[
-\mathbf{x}_2^\top F \mathbf{x}_1 = 0
+\color{yellow}{l'} = F \color{red}{x}
 \]</span></p>
-<p>Interprétation :</p>
+<div class="fragment">
+<p>Avec :</p>
 <ul>
-<li class="fragment">si un appariement viole beaucoup cette relation → probablement faux</li>
-<li class="fragment">(<span class="math inline">\(F\)</span>) dépend seulement des deux caméras (et de leurs intrinsics)</li>
+<li><span class="math inline">\(\color{red}{x}\)</span> : point dans image 1</li>
+<li><span class="math inline">\(F\)</span> : matrice fondamentale</li>
+<li><span class="math inline">\(\color{yellow}{l'}\)</span> : droite épipolaire dans image 2</li>
 </ul>
-<div class="fragment green">
-<p>👉 C’est l’outil conceptuel qui transforme des points appariés en “géométrie”.</p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p><span class="blue">Ce qui nous donne une contrainte épipolaire :</span></p>
+<p><span class="math display">\[
+\color{yellow}{x'}^T F \color{red}{x} = 0
+\]</span></p>
 </div>
 </section>
-<section id="ransac-pourquoi-on-en-a-besoin" class="slide level2">
-<h2>RANSAC : pourquoi on en a besoin</h2>
-<p>Les correspondances automatiques contiennent des erreurs.</p>
-<p>Idée :</p>
+<section id="après-ça-comment-estimer-f" class="slide level2">
+<h2>Après ça : comment estimer <span class="math inline">\(F\)</span></h2>
+<div class="blue">
 <ul>
-<li class="fragment">échantillonner</li>
-<li class="fragment">estimer un modèle (ex. (<span class="math inline">\(F\)</span>))</li>
-<li class="fragment">garder les “inliers” cohérents</li>
+<li class="fragment">On prend plusieurs correspondances <span class="math inline">\(\color{red}{x_i}\)</span><span class="glyph arrow_double" style="font-size:1.2em;"></span><span class="math inline">\(\color{yellow}{x_i'}\)</span></li>
+<li class="fragment">chaque correspondance donne une équation</li>
+<li class="fragment">chaque correspondance donne une contrainte linéaire</li>
+<li class="fragment">on estime <span class="math inline">\(F\)</span></li>
 </ul>
-<div class="fragment blue">
-<p>👉 En pratique, c’est ce qui rend la photogrammétrie robuste.</p>
+</div>
+<div class="fragment">
+<p>Donc la suite est :</p>
+<p><span class="math display">\[
+\color{yellow}{x_i'}^T F \color{red}{x_i} = 0
+\]</span></p>
+<p>pour plusieurs points.</p>
+</div>
+<div class="fragment">
+<p>Puis :</p>
+</div>
+<ul>
+<li class="fragment">algorithme des 8 points</li>
+<li class="fragment">SVD</li>
+</ul>
+</section>
+<section id="chaque-correspondance-donne-une-équation" class="slide level2">
+<h2>Chaque correspondance donne une équation</h2>
+<p><span class="math display">\[
+\color{yellow}{x_i'}^T F \color{red}{x_i} = 0
+\]</span></p>
+<p><br></p>
+<div class="fragment">
+<p>On empile les équations pour plusieurs correspondances.</p>
+<p><span class="math display">\[
+Af=0
+\]</span></p>
+<p>avec</p>
+<p><span class="math inline">\(f\)</span> = les 9 coefficients de <span class="math inline">\(F\)</span></p>
 </div>
 </section>
-<section id="pipeline" class="slide level2">
-<h2>Pipeline</h2>
-<p>images ↓ détection de keypoints ↓ matching (brut) ↓ estimation de F avec RANSAC ← contrainte épipolaire ↓ filtrage des correspondances ← contrainte épipolaire ↓ triangulation</p>
+<section id="svd" class="slide level2">
+<h2>SVD</h2>
+<p><span class="math display">\[
+A=UΣV^T
+\]</span></p>
+<div class="fragment">
+<p>La solution est le vecteur singulier associé à la plus petite valeur singulière.</p>
+</div>
+<div class="fragment">
+<p>On récupère ainsi :</p>
+</div>
+<p><span class="math display">\[
+F
+\]</span></p>
+</section>
+<section id="et-ensuite" class="slide level2">
+<h2>Et ensuite ?</h2>
+<div class="fragment">
+<p>On peut calculer :</p>
+<p><span class="math display">\[
+E = K′^T F K
+\]</span></p>
+</div>
+<div class="fragment">
+<p>puis récupérer :</p>
+</div>
+<div class="blue">
+<ul>
+<li class="fragment">rotation</li>
+<li class="fragment">translation</li>
+</ul>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>Et enfin</p>
+<p><span class="green">Triangulation des points 3D</span></p>
+</div>
+</section>
+<section id="pour-conclure" class="slide level2">
+<h2>Pour conclure</h2>
+<p><br><br><br></p>
+<div class="fragment r-fit-text green">
+<p>2 images <span class="glyph arrow" style="font-size:1.2em;"></span> correspondances <span class="glyph arrow" style="font-size:1.2em;"></span> géométrie <span class="glyph arrow" style="font-size:1.2em;"></span> 3D</p>
+</div>
 </section>
 <section id="respiration-1" class="slide level2">
 <h2><span class="green">Respiration</span></h2>
@@ -909,295 +950,141 @@ x'^T F x = 0
 </div>
 
 <!-- /BLOC -->
-<!-- BLOC: bloc 4 SFM -->
-</section>
-<section id="bloc-4" class="slide level2 bloc" data-name="Bloc 4">
-<h2>BLOC 4</h2>
-</section>
-<section id="de-deux-vues-à-plusieurs-sfm-structure-from-motion" class="slide level2 question">
-<h2>De deux vues à plusieurs : SfM (Structure-from-Motion)</h2>
-</section>
-<section id="triangulation-intuition" class="slide level2">
-<h2>Triangulation : intuition</h2>
-<p>Si on connaît deux caméras et une correspondance :</p>
-<ul>
-<li class="fragment">chaque pixel définit un rayon</li>
-<li class="fragment">l’intersection (approx.) donne un point 3D</li>
-</ul>
-<div class="fragment blue">
-<p>👉 “Point 3D” = compromis qui explique au mieux plusieurs observations 2D.</p>
-</div>
-</section>
-<section id="reconstruction-multi-vues-pipeline-sfm" class="slide level2">
-<h2>Reconstruction multi-vues : pipeline SfM</h2>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<svg width="960" height="480" viewbox="0.00 0.00 1052.00 80.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 76)">
-<title>G</title>
-<!-- A -->
-<g id="node1" class="node">
-<title>A</title>
-<path fill="none" stroke="#ffffff" d="M132,-72C132,-72 12,-72 12,-72 6,-72 0,-66 0,-60 0,-60 0,-12 0,-12 0,-6 6,0 12,0 12,0 132,0 132,0 138,0 144,-6 144,-12 144,-12 144,-60 144,-60 144,-66 138,-72 132,-72"></path>
-<text text-anchor="middle" x="72" y="-31.2" font-family="Helvetica,sans-Serif" font-size="16.00" fill="#ffffff">Images</text>
-</g>
-<!-- B -->
-<g id="node2" class="node">
-<title>B</title>
-<path fill="none" stroke="#ffffff" d="M312,-72C312,-72 192,-72 192,-72 186,-72 180,-66 180,-60 180,-60 180,-12 180,-12 180,-6 186,0 192,0 192,0 312,0 312,0 318,0 324,-6 324,-12 324,-12 324,-60 324,-60 324,-66 318,-72 312,-72"></path>
-<text text-anchor="middle" x="252" y="-40.8" font-family="Helvetica,sans-Serif" font-size="16.00" fill="#ffffff">Features</text>
-<text text-anchor="middle" x="252" y="-21.6" font-family="Helvetica,sans-Serif" font-size="16.00" fill="#ffffff">+ appariement</text>
-</g>
-<!-- A&#45;&gt;B -->
-<g id="edge1" class="edge">
-<title>A-&gt;B</title>
-<path fill="none" stroke="#dcdcdc" stroke-width="5" d="M144.12,-36C152.61,-36 161.33,-36 169.94,-36"></path>
-<polygon fill="#dcdcdc" stroke="#dcdcdc" stroke-width="5" points="170,-40.38 180,-36 170,-31.63 170,-40.38"></polygon>
-</g>
-<!-- C -->
-<g id="node3" class="node">
-<title>C</title>
-<path fill="none" stroke="#ffffff" d="M492,-72C492,-72 372,-72 372,-72 366,-72 360,-66 360,-60 360,-60 360,-12 360,-12 360,-6 366,0 372,0 372,0 492,0 492,0 498,0 504,-6 504,-12 504,-12 504,-60 504,-60 504,-66 498,-72 492,-72"></path>
-<text text-anchor="middle" x="432" y="-40.8" font-family="Helvetica,sans-Serif" font-size="16.00" fill="#ffffff">Estimer poses</text>
-<text text-anchor="middle" x="432" y="-21.6" font-family="Helvetica,sans-Serif" font-size="16.00" fill="#ffffff">(relatives)</text>
-</g>
-<!-- B&#45;&gt;C -->
-<g id="edge2" class="edge">
-<title>B-&gt;C</title>
-<path fill="none" stroke="#dcdcdc" stroke-width="5" d="M324.12,-36C332.61,-36 341.33,-36 349.94,-36"></path>
-<polygon fill="#dcdcdc" stroke="#dcdcdc" stroke-width="5" points="350,-40.38 360,-36 350,-31.63 350,-40.38"></polygon>
-</g>
-<!-- D -->
-<g id="node4" class="node">
-<title>D</title>
-<path fill="none" stroke="#ffffff" d="M672,-72C672,-72 552,-72 552,-72 546,-72 540,-66 540,-60 540,-60 540,-12 540,-12 540,-6 546,0 552,0 552,0 672,0 672,0 678,0 684,-6 684,-12 684,-12 684,-60 684,-60 684,-66 678,-72 672,-72"></path>
-<text text-anchor="middle" x="612" y="-40.8" font-family="Helvetica,sans-Serif" font-size="16.00" fill="#ffffff">Trianguler</text>
-<text text-anchor="middle" x="612" y="-21.6" font-family="Helvetica,sans-Serif" font-size="16.00" fill="#ffffff">points 3D</text>
-</g>
-<!-- C&#45;&gt;D -->
-<g id="edge3" class="edge">
-<title>C-&gt;D</title>
-<path fill="none" stroke="#dcdcdc" stroke-width="5" d="M504.12,-36C512.61,-36 521.33,-36 529.94,-36"></path>
-<polygon fill="#dcdcdc" stroke="#dcdcdc" stroke-width="5" points="530,-40.38 540,-36 530,-31.63 530,-40.38"></polygon>
-</g>
-<!-- E -->
-<g id="node5" class="node">
-<title>E</title>
-<path fill="none" stroke="#ffffff" d="M852,-72C852,-72 732,-72 732,-72 726,-72 720,-66 720,-60 720,-60 720,-12 720,-12 720,-6 726,0 732,0 732,0 852,0 852,0 858,0 864,-6 864,-12 864,-12 864,-60 864,-60 864,-66 858,-72 852,-72"></path>
-<text text-anchor="middle" x="792" y="-40.8" font-family="Helvetica,sans-Serif" font-size="16.00" fill="#ffffff">Bundle</text>
-<text text-anchor="middle" x="792" y="-21.6" font-family="Helvetica,sans-Serif" font-size="16.00" fill="#ffffff">Adjustment</text>
-</g>
-<!-- D&#45;&gt;E -->
-<g id="edge4" class="edge">
-<title>D-&gt;E</title>
-<path fill="none" stroke="#dcdcdc" stroke-width="5" d="M684.12,-36C692.61,-36 701.33,-36 709.94,-36"></path>
-<polygon fill="#dcdcdc" stroke="#dcdcdc" stroke-width="5" points="710,-40.38 720,-36 710,-31.63 710,-40.38"></polygon>
-</g>
-<!-- F -->
-<g id="node6" class="node">
-<title>F</title>
-<path fill="none" stroke="#ffffff" d="M1032,-72C1032,-72 912,-72 912,-72 906,-72 900,-66 900,-60 900,-60 900,-12 900,-12 900,-6 906,0 912,0 912,0 1032,0 1032,0 1038,0 1044,-6 1044,-12 1044,-12 1044,-60 1044,-60 1044,-66 1038,-72 1032,-72"></path>
-<text text-anchor="middle" x="972" y="-31.2" font-family="Helvetica,sans-Serif" font-size="16.00" fill="#ffffff">Structure + Poses</text>
-</g>
-<!-- E&#45;&gt;F -->
-<g id="edge5" class="edge">
-<title>E-&gt;F</title>
-<path fill="none" stroke="#dcdcdc" stroke-width="5" d="M864.12,-36C872.61,-36 881.33,-36 889.94,-36"></path>
-<polygon fill="#dcdcdc" stroke="#dcdcdc" stroke-width="5" points="890,-40.38 900,-36 890,-31.63 890,-40.38"></polygon>
-</g>
-</g>
-</svg>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="bundle-adjustment-ce-que-ça-fait" class="slide level2">
-<h2>Bundle Adjustment : ce que ça fait</h2>
-<p>On ajuste simultanément :</p>
-<ul>
-<li class="fragment">les <strong>poses</strong> des caméras</li>
-<li class="fragment">les <strong>points 3D</strong></li>
-</ul>
-<p>pour minimiser l’erreur de <strong>reprojection</strong>.</p>
-<div class="fragment green">
-<p>👉 Photogrammétrie = optimisation : trouver la structure qui “rend” au mieux les images observées.</p>
-</div>
-</section>
-<section id="ce-qui-est-reconstruit-et-ce-qui-ne-lest-pas" class="slide level2">
-<h2>Ce qui est reconstruit… et ce qui ne l’est pas</h2>
-<p>Reconstruit :</p>
-<div class="green">
-<ul>
-<li class="fragment">une <strong>structure</strong> (souvent un nuage de points)</li>
-<li class="fragment">des <strong>poses caméra</strong></li>
-<li class="fragment">parfois des intrinsics (auto-calibration)</li>
-</ul>
-</div>
-<p>Pas reconstruit (dans ce cours) :</p>
-<div class="red">
-<ul>
-<li class="fragment">matériaux / illumination / BRDF</li>
-<li class="fragment">“vérité” géométrique parfaite partout</li>
-<li class="fragment">zones jamais observées</li>
-</ul>
-</div>
-</section>
-<section id="ambiguïtés-fondamentales" class="slide level2">
-<h2>Ambiguïtés fondamentales</h2>
-<p>Même avec une bonne reprojection, il reste :</p>
-<ul>
-<li class="fragment"><strong>échelle</strong> (sans référence métrique)</li>
-<li class="fragment"><strong>symétries / répétitions</strong> (texture ambiguë)</li>
-<li class="fragment"><strong>zones peu observées</strong> (faible recouvrement)</li>
-</ul>
-<div class="fragment red">
-<p>👉 Une reconstruction photogrammétrique est une <em>solution compatible</em>, pas une vérité unique.</p>
-</div>
-</section>
-<section id="validation-et-lecture-critique-des-résultats" class="slide level2 quetion">
-<h2>Validation et lecture critique des résultats</h2>
-</section>
-<section id="reprojection-test-central-tp2" class="slide level2">
-<h2>Reprojection : test central (TP2)</h2>
-<p>On projette les points 3D dans une image et on compare aux observations.</p>
-<p>Si ça colle :</p>
-<ul>
-<li class="fragment">le modèle explique bien les images</li>
-</ul>
-<p>Mais attention :</p>
-<ul>
-<li class="fragment">plusieurs modèles peuvent “coller”</li>
-</ul>
-<div class="fragment blue">
-<p>👉 C’est un test de compatibilité, pas une preuve d’unicité.</p>
-</div>
-</section>
-<section id="erreurs-visibles-typiques" class="slide level2">
-<h2>Erreurs visibles typiques</h2>
-<ul>
-<li class="fragment">dérive de trajectoire caméra</li>
-<li class="fragment">nuage “courbé” sur des scènes difficiles</li>
-<li class="fragment">points bruités / flottants</li>
-<li class="fragment">trous (zones sans texture, reflets, transparences)</li>
-</ul>
-<div class="fragment">
-<p>👉 Vous devez apprendre à “lire” un nuage de points comme un diagnostic.</p>
-</div>
-</section>
-<section id="ce-que-guide-la-réussite-en-pratique" class="slide level2">
-<h2>Ce que guide la réussite en pratique</h2>
-<p>Hypothèses qui aident :</p>
-<div class="green">
-<ul>
-<li class="fragment">scène <strong>rigide</strong></li>
-<li class="fragment"><strong>recouvrement</strong> entre images</li>
-<li class="fragment"><strong>texture</strong> suffisante</li>
-<li class="fragment">variations de point de vue raisonnables</li>
-</ul>
-</div>
-<p>Hypothèses qui cassent :</p>
-<div class="red">
-<ul>
-<li class="fragment">objets mobiles</li>
-<li class="fragment">surfaces uniformes</li>
-<li class="fragment">reflets / transparence</li>
-<li class="fragment">faible recouvrement</li>
-</ul>
-</div>
-<!-- /BLOC -->
 <!-- BLOC: Conclusion -->
 </section>
 <section id="conclusion" class="slide level2 bloc" data-name="Conclusion">
 <h2>Conclusion</h2>
 </section>
 <section id="pourquoi-la-structure-ne-suffit-pas-à-rendre-réaliste" class="slide level2 question">
-<h2>Pourquoi la structure ne suffit pas à rendre “réaliste” ?</h2>
+<h2>Pourquoi la structure ne suffit pas à rendre <code>réaliste</code> ?</h2>
+<div class="r-fit-text orange">
+<p>Pour l’instant nous avons seulement</p>
+<p>des <code>points 3D triangulés</code></p>
+</div>
 </section>
-<section id="structure-rendu-réaliste" class="slide level2">
-<h2>Structure ≠ rendu réaliste</h2>
-<p>Même avec poses + points :</p>
+<section id="si-on-applique-tout-cela" class="slide level2">
+<h2>Si on applique tout cela…</h2>
+<p><br></p>
+<div class="fragment">
+<p>À partir de plusieurs images on peut estimer :</p>
+</div>
+<div class="blue">
 <ul>
-<li class="fragment">trous (échantillonnage)</li>
-<li class="fragment">aliasing / bruit</li>
-<li class="fragment">manque de continuité (surfaces)</li>
-<li class="fragment">dépendance au point de vue</li>
+<li class="fragment">les poses des caméras</li>
+<li class="fragment">des points 3D triangulés</li>
 </ul>
-<div class="fragment green">
-<p>👉 CM3/TP3 : la question devient “quelle représentation pour rendre mieux ?”</p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>Ce que l’on obtient c’est :</p>
+</div>
+<div class="fragment r-fit-text green">
+<p>Une reconstruction éparse</p>
+</div>
+</section>
+<section id="section-12" class="slide level2 image" data-background-image="content/image/recon_sparse.png">
+<h2></h2>
+
+<img data-src="content/image/recon_sparse.png" style="width:100.0%" class="r-stretch"><div class="fragment titlebox bottomleft small">
+<p>Chaque point correspond à une correspondance triangulée.</p>
+</div>
+</section>
+<section id="pour-obtenir" class="slide level2 engine" data-background-interactive="true" data-state="hide-menubar" data-background-iframe="_extensions/local/engine/engine.html?path=content/data/truck.glb">
+<h2>Pour obtenir</h2>
+<div class="fragment titlebox topright">
+<p>Il nous reste quelques étapes supplémentaires</p>
+</div>
+</section>
+<section id="autrement-dit" class="slide level2">
+<h2>Autrement dit</h2>
+<p><br><br><br></p>
+<div class="fragment">
+<p>Nous avons reconstruit :</p>
+</div>
+<div class="green">
+<ul>
+<li class="fragment">la <strong>structure</strong></li>
+<li class="fragment">la <strong>pose des caméras</strong></li>
+</ul>
+</div>
+<p><br><br><br></p>
+<div class="fragment orange">
+<p>mais pas encore une <strong>surface</strong>.</p>
+</div>
+</section>
+<section id="mais-un-problème-reste" class="slide level2">
+<h2>Mais un problème reste</h2>
+<p><br></p>
+<div class="fragment red">
+<p>Cette reconstruction est très… <strong>vide</strong>.</p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>On n’a que :</p>
+</div>
+<div class="orange">
+<ul>
+<li class="fragment">quelques points</li>
+<li class="fragment">pas de surface</li>
+<li class="fragment">pas de continuité</li>
+</ul>
 </div>
 </section>
 <section id="ouverture-représentations-pour-synthèse-de-vues" class="slide level2">
 <h2>Ouverture : représentations pour synthèse de vues</h2>
-<p>À partir des mêmes données (poses + images) :</p>
+<p>À partir des mêmes données (poses + images)</p>
+<p><br></p>
+<div class="fragment">
+<p>Ce que nous pouvons facilement obtenir <code>(CM3)</code> :</p>
+</div>
+<div class="blue">
 <ul>
 <li class="fragment">nuage de points (baseline)</li>
-<li class="fragment">splats / surfels (continuité écran)</li>
+<li class="fragment">mesh</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Ce que nous pouvons obtenir avec des méthodes plus récentes <code>(CM4)</code> :</p>
+</div>
+<div class="blue">
+<ul>
+<li class="fragment">splats / surfels</li>
 <li class="fragment">gaussiennes (Gaussian Splatting)</li>
 <li class="fragment">champs continus (NeRF)</li>
 </ul>
-<div class="fragment blue">
-<p>👉 Même entrée, rendu très différent : la représentation est le cœur du réalisme.</p>
 </div>
 </section>
 <section id="à-retenir-cm2" class="slide level2">
 <h2>À retenir (CM2)</h2>
+<p><br><br></p>
 <div class="green">
 <ol type="1">
-<li class="fragment">Photogrammétrie = <strong>rendu inverse 3D minimal</strong> : images → (poses + structure).</li>
-<li class="fragment">Les correspondances deviennent une <strong>contrainte géométrique</strong> (épipolaire).</li>
-<li class="fragment">SfM = appariement → poses → triangulation → optimisation (BA).</li>
-<li class="fragment">Reprojection valide la compatibilité, pas l’unicité.</li>
-<li class="fragment">La structure seule ne suffit pas : il faut de meilleures <strong>représentations de rendu</strong> (TP3).</li>
+<li class="fragment">Une image seule ne suffit pas : il faut <strong>plusieurs vues</strong> pour contraindre la géométrie.</li>
+<li class="fragment">Une caméra est un <strong>modèle de projection</strong> : <span class="math inline">\(\mathbf{x} \sim K[R|t]\mathbf{X}\)</span>.</li>
+<li class="fragment">Les correspondances entre images deviennent une <strong>contrainte géométrique</strong> (géométrie épipolaire).</li>
+<li class="fragment">Avec les poses caméra, on peut <strong>trianguler des points 3D</strong> à partir de plusieurs vues.</li>
+<li class="fragment">Le résultat est une <strong>reconstruction éparse</strong> : caméras + nuage de points.</li>
 </ol>
-</div>
-</section>
-<section id="connexion-directe-avec-le-tp2" class="slide level2">
-<h2>Connexion directe avec le TP2</h2>
-<p>Dans le TP2, votre rapport doit répondre à :</p>
-<ul>
-<li class="fragment">Quelles hypothèses de scène sont respectées / violées ?</li>
-<li class="fragment">Qu’est-ce qui est bien reconstruit ? Qu’est-ce qui ne l’est pas ?</li>
-<li class="fragment">Où la reprojection marche / échoue visuellement ?</li>
-<li class="fragment">Quelles ambiguïtés restent (échelle, zones non observées, répétitions) ?</li>
-</ul>
-<div class="fragment blue">
-<p>👉 Objectif : relier les artefacts à des causes <em>géométriques</em> et <em>d’observation</em>.</p>
 </div>
 </section>
 <section id="préparer-cm3" class="slide level2">
 <h2>Préparer CM3</h2>
+<p><br><br></p>
 <p>Question de sortie :</p>
 <blockquote>
-<p>Avec poses + structure, pourquoi le rendu reste-t-il “pauvre” ?</p>
+<p>Comment passer de cette <strong>structure éparse</strong></p>
+<p>à un <strong>modèle 3D complet</strong> ?</p>
 </blockquote>
+<p><br><br></p>
 <div class="fragment">
 <p>Réponse attendue :</p>
-<p><span class="green">la représentation (points) est trop discrète → besoin de surfaces / splats / champs continus.</span></p>
+<p><span class="green">la représentation (points) est trop discrète <span class="glyph arrow" style="font-size:1.2em;"></span> besoin de surfaces / splats / champs continus.</span></p>
 </div>
 <!-- /BLOC -->
 </section>
 <section id="cest-tout-pour-aujourdhui" class="slide level2 title particle" data-state="hide-menubar" data-background-interactive="true" data-background-iframe="_extensions/local/particle/particle.html">
 <h2>C’est tout pour aujourd’hui</h2>
 
-<script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
-</script>
-<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
-<div id="exercise-loading-status" class="d-flex gap-2">
-
-</div>
-<div class="spinner-grow spinner-grow-sm">
-
-</div>
-</div>
-<script type="vfs-file">
-WyJjb250ZW50Ly9pbWFnZS9pbWFnZXNfbGluZS5zdmciLCJjb250ZW50Ly9pbWFnZS9vZWlsLnN2ZyIsImNvbnRlbnQvL2ltYWdlL29laWwucG5nIiwiY29udGVudC8vaW1hZ2Uvb2VpbF9wcm9ibGVtLmpwZyIsImNvbnRlbnQvL2ltYWdlL3NjaGVtYS5zdmciLCJjb250ZW50Ly9pbWFnZS9zYXVyb24uc3ZnIiwiY29udGVudC8vaW1hZ2Uvw6lwaXBvbGFpcmUuc3ZnIiwiY29udGVudC8vaW1hZ2UvaW1hZ2VzX3NxdWFyZS5zdmciLCJjb250ZW50Ly92aWRlby9Qb3NlLm1wNCIsImNvbnRlbnQvL3ZpZGVvL0VwaXBvbGFpcmUubXA0IiwiY29udGVudC8vdmlkZW8vVHJpYW5ndWxhdGlvbi5tcDQiLCJjb250ZW50Ly92aWRlby9Db3JyZXNwb25kZW5jZS5tcDQiLCJjb250ZW50Ly92aWRlby9Qb3NlV29ybGQubXA0IiwiY29udGVudC8vdmlkZW8vUG9pbnQzRC5tcDQiLCJjb250ZW50Ly92aWRlby9TdGVub3BlLm1wNCIsImNvbnRlbnQvL3ZpZGVvL0Rpc3RvcnRpb24ubXA0IiwiY29udGVudC8vdmlkZW8vUHJpbmNpcGFsX3BvaW50Lm1wNCIsImNvbnRlbnQvL3ZpZGVvL0tleXBvaW50Lm1wNCIsImNvbnRlbnQvL3ZpZGVvL0V4dHJpbnNpYy5tcDQiLCJjb250ZW50Ly92aWRlby9Gb2NhbC5tcDQiLCJjb250ZW50Ly92aWRlby9Db252ZW50aW9uLm1wNCIsImNvbnRlbnQvL3ZpZGVvL0ZPVi5tcDQiLCJjb250ZW50Ly9yZWZlcmVuY2UuYmliIiwiY29udGVudC8vZGF0YS90cnVjay5nbGIiLCJfZXh0ZW5zaW9ucy9sb2NhbC9lbmdpbmUvL2VuZ2luZS5sdWEiLCJfZXh0ZW5zaW9ucy9sb2NhbC9lbmdpbmUvL2VuZ2luZS5jc3MiLCJfZXh0ZW5zaW9ucy9sb2NhbC9lbmdpbmUvL2VuZ2luZS5qcyIsIl9leHRlbnNpb25zL2xvY2FsL2VuZ2luZS8vX2V4dGVuc2lvbi55bWwiLCJfZXh0ZW5zaW9ucy9sb2NhbC9lbmdpbmUvL2pzL21haW4uanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9lbmdpbmUvL2pzL3NyYy9wcm9jZXNzaW5nLmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvZW5naW5lLy9qcy9zcmMvc2NlbmUuanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9lbmdpbmUvL2pzL3NyYy9saWdodC5qcyIsIl9leHRlbnNpb25zL2xvY2FsL2VuZ2luZS8vanMvc3JjL2dseXBoLmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvZW5naW5lLy9qcy9zcmMvZWRsLmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvZW5naW5lLy9qcy9zcmMvY29yZS5qcyIsIl9leHRlbnNpb25zL2xvY2FsL2VuZ2luZS8vanMvc3JjL2V2ZW50LmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvZW5naW5lLy9qcy9zcmMvcHJpbWl0aXZlLmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvZW5naW5lLy9qcy9zcmMvdGhyZWVqcy5qcyIsIl9leHRlbnNpb25zL2xvY2FsL2VuZ2luZS8vanMvc3JjL2NvbnRyb2wuanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9lbmdpbmUvL2pzL3NyYy9sb2FkZXIuanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9lbmdpbmUvL2pzL3NyYy9sb29wLmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvZW5naW5lLy9qcy9zcmMvY2FtZXJhLmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvZW5naW5lLy9qcy9idWlsZC5zaCIsIl9leHRlbnNpb25zL2xvY2FsL2VuZ2luZS8vZW5naW5lLmh0bWwiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vcGFydGljbGUubHVhIiwiX2V4dGVuc2lvbnMvbG9jYWwvcGFydGljbGUvL3BhcnRpY2xlLmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvcGFydGljbGUvL3BhcnRpY2xlLmNzcyIsIl9leHRlbnNpb25zL2xvY2FsL3BhcnRpY2xlLy9zcmMvbWFpbi5qcyIsIl9leHRlbnNpb25zL2xvY2FsL3BhcnRpY2xlLy9zcmMvb2svY29yZS5qcyIsIl9leHRlbnNpb25zL2xvY2FsL3BhcnRpY2xlLy9zcmMvb2svc3RydWN0LmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvcGFydGljbGUvL3NyYy9vay9zaGFkZXIvZnJhZ21lbnRfcG9pbnRzLmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvcGFydGljbGUvL3NyYy9vay9zaGFkZXIvdmVydGV4X3BvaW50cy5qcyIsIl9leHRlbnNpb25zL2xvY2FsL3BhcnRpY2xlLy9zcmMvb2svc2hhZGVyL2ZyYWdtZW50X2xpbmVzLmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvcGFydGljbGUvL3NyYy9vay9zaGFkZXIvdmVydGV4X2xpbmVzLmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvcGFydGljbGUvL3NyYy9vbGQvdXRpbHMvdXRpbGl0eS5qcyIsIl9leHRlbnNpb25zL2xvY2FsL3BhcnRpY2xlLy9zcmMvb2xkL3V0aWxzL2dsLW1hdHJpeC1taW4uanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vc3JjL29sZC91dGlscy9kYXQuZ3VpLm1pbi5qcyIsIl9leHRlbnNpb25zL2xvY2FsL3BhcnRpY2xlLy9zcmMvb2xkL3V0aWxzL3N0cnVjdC5qcyIsIl9leHRlbnNpb25zL2xvY2FsL3BhcnRpY2xlLy9zcmMvb2xkL2d1aS9ndWkuanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vc3JjL29sZC9jb3JlLmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvcGFydGljbGUvL3NyYy9vbGQvY29uZmlnL2NvbmZpZ193aGl0ZU9uQmxhY2suanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vc3JjL29sZC9jb25maWcvY29uZmlnX3NpdGVfZGVsdGF0dXJ0bGUuanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vc3JjL29sZC9jb25maWcvY29uZmlnX2JsYWNrT25XaGl0ZS5qcyIsIl9leHRlbnNpb25zL2xvY2FsL3BhcnRpY2xlLy9zcmMvb2xkL2NvbmZpZy9jb25maWdfc2l0ZV9uc3YuanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vc3JjL29sZC9zY2VuZS9pbml0LmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvcGFydGljbGUvL3NyYy9vbGQvc2NlbmUvcG9pbnQuanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vc3JjL29sZC9zY2VuZS9kcmF3LmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvcGFydGljbGUvL3NyYy9vbGQvc2NlbmUvbW91c2UuanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vc3JjL29sZC9zY2VuZS9saW5lLmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvcGFydGljbGUvL3NyYy9vbGQvZW5naW5lL2J1ZmZlci5qcyIsIl9leHRlbnNpb25zL2xvY2FsL3BhcnRpY2xlLy9zcmMvb2xkL2VuZ2luZS9tb3VzZS5qcyIsIl9leHRlbnNpb25zL2xvY2FsL3BhcnRpY2xlLy9zcmMvb2xkL2VuZ2luZS9sb29wLmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvcGFydGljbGUvL3NyYy9vbGQvZW5naW5lL3dlYmdsLmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvcGFydGljbGUvL3NyYy9vbGQvZW5naW5lL2NhbWVyYS5qcyIsIl9leHRlbnNpb25zL2xvY2FsL3BhcnRpY2xlLy9zcmMvb2xkL3NoYWRlci9wYXJhbWV0ZXIuanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vc3JjL29sZC9zaGFkZXIvdmVydGV4LmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvcGFydGljbGUvL3NyYy9vbGQvc2hhZGVyL3Byb2dyYW0uanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vc3JjL29sZC9zaGFkZXIvZnJhZ21lbnQuanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vc3JjL2J1aWxkLnNoIiwiX2V4dGVuc2lvbnMvbG9jYWwvcGFydGljbGUvL3NyYy9zdHJ1Y3QuanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vc3JjL3NoYWRlci9mcmFnbWVudF9wb2ludHMuanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vc3JjL3NoYWRlci92ZXJ0ZXhfcG9pbnRzLmpzIiwiX2V4dGVuc2lvbnMvbG9jYWwvcGFydGljbGUvL3NyYy9zaGFkZXIvZnJhZ21lbnRfbGluZXMuanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vc3JjL3NoYWRlci92ZXJ0ZXhfbGluZXMuanMiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vX2V4dGVuc2lvbi55bWwiLCJfZXh0ZW5zaW9ucy9sb2NhbC9wYXJ0aWNsZS8vcGFydGljbGUuaHRtbCIsIl9leHRlbnNpb25zL2xvY2FsL2NvbmZldHRpLy9jb25mZXR0aS5sdWEiLCJfZXh0ZW5zaW9ucy9sb2NhbC9jb25mZXR0aS8vX2V4dGVuc2lvbi55bWwiLCJfZXh0ZW5zaW9ucy9leHRlcm5hbC9leGNhbGlkcmF3Ly9leGNhbGlkcmF3Lmh0bWwiLCJfZXh0ZW5zaW9ucy9leHRlcm5hbC9leGNhbGlkcmF3Ly9saWIvYXdlc29tZS1pY29ucy5leGNhbGlkcmF3bGliIiwiX2V4dGVuc2lvbnMvZXh0ZXJuYWwvZXhjYWxpZHJhdy8vbGliL3N0aWNrLWZpZ3VyZXMuZXhjYWxpZHJhd2xpYiIsIl9leHRlbnNpb25zL2V4dGVybmFsL2V4Y2FsaWRyYXcvL2xpYi9tYXRoLXRlYWNoZXItbGlicmFyeS5leGNhbGlkcmF3bGliIiwiX2V4dGVuc2lvbnMvZXh0ZXJuYWwvZXhjYWxpZHJhdy8vZXhjYWxpZHJhdy5sdWEiLCJfZXh0ZW5zaW9ucy9leHRlcm5hbC9leGNhbGlkcmF3Ly9fZXh0ZW5zaW9uLnltbCIsIl9leHRlbnNpb25zL2V4dGVybmFsL2V4Y2FsaWRyYXcvL292ZXJsYXkuaHRtbCJd
-</script>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
@@ -1608,17 +1495,6 @@ WyJjb250ZW50Ly9pbWFnZS9pbWFnZXNfbGluZS5zdmciLCJjb250ZW50Ly9pbWFnZS9vZWlsLnN2ZyIs
       // bouton quitter
       closeBt.addEventListener("click", closeBoard);
     })();
-    </script>
-    <script type="ojs-module-contents">
-    eyJjb250ZW50cyI6W119
-    </script>
-    <script type="module">
-    if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-    window._ojs.paths.runtimeToDoc = "../../..";
-    window._ojs.paths.runtimeToRoot = "../../..";
-    window._ojs.paths.docToRoot = "";
-    window._ojs.selfContained = false;
-    window._ojs.runtime.interpretFromScriptTags();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
