@@ -4,6 +4,7 @@ import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import { PLYLoader } from "three/addons/loaders/PLYLoader.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
+import { MeshoptDecoder } from "three/addons/libs/meshopt_decoder.module.js";
 
 
 // Main
@@ -128,18 +129,15 @@ async function load_ply(url) {
     return object;
 }
 
+
 async function load_glb(url) {
     const dracoLoader = new DRACOLoader();
-
-    // chemin vers les fichiers Draco :
-    // draco_decoder.js
-    // draco_decoder.wasm
-    // draco_wasm_wrapper.js
     dracoLoader.setDecoderPath("draco/");
     dracoLoader.preload();
 
     const loader = new GLTFLoader();
     loader.setDRACOLoader(dracoLoader);
+    loader.setMeshoptDecoder(MeshoptDecoder);
 
     const gltf = await loader.loadAsync(url);
     const object = gltf.scene;
@@ -156,6 +154,5 @@ async function load_glb(url) {
     });
 
     dracoLoader.dispose();
-
     return object;
 }
