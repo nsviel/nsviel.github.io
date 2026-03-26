@@ -32,14 +32,14 @@
     "href": "fr/teaching/syntheseimage/index.html",
     "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "",
-    "text": "Cette partie du cours traite de la synthèse d’images réalistes par rendu inverse, en s’intéressant à la génération de nouvelles images à partir d’images existantes. Elle commence par présenter des méthodes de synthèse 2D, comme l’interpolation et l’extrapolation entre vues, puis en montre les limites lorsque l’on souhaite modifier davantage le point de vue.\nLe cours introduit ensuite la photogrammétrie, qui permet de reconstruire la structure 3D d’une scène à partir de plusieurs images afin de produire de nouvelles vues de manière cohérente. Il aborde enfin différentes représentations de scènes pour la synthèse de vues, depuis les nuages de points et les splats jusqu’aux représentations continues plus récentes, en discutant leurs apports et leurs limites pour la production d’images réalistes.\nTrois ateliers accompagnent le cours afin de mettre ces concepts en pratique. Les étudiants y apprendront à créer un site portfolio, à y intégrer un moteur WebGL et à réaliser la numérisation d’un petit objet par photogrammétrie. À l’issue du cours, chacun disposera ainsi d’un objet numérisé, visualisable dans son propre moteur et intégré à son propre site.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\n\n\n\n\n\nAtelier 1 : PDF\nAtelier 2 : PDF\nAtelier 3 : PDF\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
+    "text": "Cette partie du cours traite de la synthèse d’images réalistes par rendu inverse, en s’intéressant à la génération de nouvelles images à partir d’images existantes. Elle commence par présenter des méthodes de synthèse 2D, comme l’interpolation et l’extrapolation entre vues, puis en montre les limites lorsque l’on souhaite modifier davantage le point de vue.\nLe cours introduit ensuite la photogrammétrie, qui permet de reconstruire la structure 3D d’une scène à partir de plusieurs images afin de produire de nouvelles vues de manière cohérente. Il aborde enfin différentes représentations de scènes pour la synthèse de vues, depuis les nuages de points et les splats jusqu’aux représentations continues plus récentes, en discutant leurs apports et leurs limites pour la production d’images réalistes.\nTrois ateliers accompagnent le cours afin de mettre ces concepts en pratique. Les étudiants y apprendront à créer un site portfolio, à y intégrer un moteur WebGL et à réaliser la numérisation d’un petit objet par photogrammétrie. À l’issue du cours, chacun disposera ainsi d’un objet numérisé, visualisable dans son propre moteur et intégré à son propre site.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\n\n\n\n\n\nAtelier 1 : PDF\nAtelier 2 : PDF\nAtelier 3 : PDF\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
   },
   {
     "objectID": "fr/teaching/syntheseimage/index.html#cours",
     "href": "fr/teaching/syntheseimage/index.html#cours",
     "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "",
-    "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+    "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML"
   },
   {
     "objectID": "fr/teaching/syntheseimage/index.html#atelier",
@@ -149,23 +149,30 @@
   {
     "objectID": "en/teaching/syntheseimage/index.html",
     "href": "en/teaching/syntheseimage/index.html",
-    "title": "Image Synthesis by Inverse Rendering (SIRI)",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
     "section": "",
-    "text": "This part of the course focuses on realistic image synthesis through inverse rendering, with an emphasis on generating new images from existing ones. It first introduces 2D image-based synthesis methods, such as interpolation and extrapolation.\nThe course then presents photogrammetry as a framework for producing realistic images from multi-view reconstructions. Finally, it introduces various representations for view synthesis, ranging from point clouds and splats to modern continuous representations, and analyzes their contributions and limitations for the production of realistic images.\n\n\n\nLecture 1 : HTML\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML\nLecture 5 : HTML\nLecture 6 : HTML\n\n\n\n\n\n\n\n\nSubject\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\n[PDF]("
+    "text": "This part of the course focuses on realistic image synthesis through inverse rendering, exploring how to generate new images from existing ones. It begins by introducing 2D synthesis methods, such as interpolation and extrapolation between views, and highlights their limitations when larger viewpoint changes are required.\nThe course then introduces photogrammetry, which enables the reconstruction of a scene’s 3D structure from multiple images in order to produce consistent novel views. It also covers different scene representations for view synthesis, ranging from point clouds and splats to more recent continuous representations, discussing their respective strengths and limitations for producing realistic images.\nThree hands-on workshops complement the course to help students apply these concepts in practice. Students will learn how to create a portfolio website, integrate a WebGL engine, and digitize a small object using photogrammetry. By the end of the course, each student will have produced a digitized object that can be visualized within their own engine and embedded into their personal website.\n\n\n\nLecture 1: HTML\nLecture 2: HTML\nLecture 3: HTML\n\n\n\n\n\nWorkshop 1: PDF\nWorkshop 2: PDF\nWorkshop 3: PDF\n\n\n\n\n\n\n\n\nTopic\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\nPDF"
   },
   {
     "objectID": "en/teaching/syntheseimage/index.html#lectures",
     "href": "en/teaching/syntheseimage/index.html#lectures",
-    "title": "Image Synthesis by Inverse Rendering (SIRI)",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
     "section": "",
-    "text": "Lecture 1 : HTML\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML\nLecture 5 : HTML\nLecture 6 : HTML"
+    "text": "Lecture 1: HTML\nLecture 2: HTML\nLecture 3: HTML"
   },
   {
-    "objectID": "en/teaching/syntheseimage/index.html#labs",
-    "href": "en/teaching/syntheseimage/index.html#labs",
-    "title": "Image Synthesis by Inverse Rendering (SIRI)",
+    "objectID": "en/teaching/syntheseimage/index.html#workshops",
+    "href": "en/teaching/syntheseimage/index.html#workshops",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
     "section": "",
-    "text": "Subject\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\n[PDF]("
+    "text": "Workshop 1: PDF\nWorkshop 2: PDF\nWorkshop 3: PDF"
+  },
+  {
+    "objectID": "en/teaching/syntheseimage/index.html#practical-sessions",
+    "href": "en/teaching/syntheseimage/index.html#practical-sessions",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
+    "section": "",
+    "text": "Topic\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\nPDF"
   },
   {
     "objectID": "en/blog/article_1.html",
