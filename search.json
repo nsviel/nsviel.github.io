@@ -25,7 +25,42 @@
     "href": "fr/index.html",
     "title": "Teaching",
     "section": "",
-    "text": "Cours\nNiveau\n\n\n\n\nTraitement Informatique des Données\nL1\n\n\nIntroduction au Big Data\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nM1\n\n\nReconstruction 3D\nM2"
+    "text": "Cours\nNiveau\n\n\n\n\nTraitement Informatique des Données\nL1\n\n\nIntroduction au Big Data\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nM1\n\n\nGeneral-purpose computing on graphics processing units (GPGPU)\nM1\n\n\nReconstruction 3D\nM2"
+  },
+  {
+    "objectID": "fr/teaching/bigdata/index.html",
+    "href": "fr/teaching/bigdata/index.html",
+    "title": "Introduction au Big Data",
+    "section": "",
+    "text": "Ce cours de Big Data introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets.\n\n\n\n\n\n\nPériode\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2\n\n\n\n\n\n\n\n\nCours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
+  },
+  {
+    "objectID": "fr/teaching/bigdata/index.html#planning-indicatif",
+    "href": "fr/teaching/bigdata/index.html#planning-indicatif",
+    "title": "Introduction au Big Data",
+    "section": "",
+    "text": "Période\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2"
+  },
+  {
+    "objectID": "fr/teaching/bigdata/index.html#cours-magistraux",
+    "href": "fr/teaching/bigdata/index.html#cours-magistraux",
+    "title": "Introduction au Big Data",
+    "section": "",
+    "text": "Cours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+  },
+  {
+    "objectID": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
+    "href": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
+    "title": "Introduction au Big Data",
+    "section": "",
+    "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
+  },
+  {
+    "objectID": "fr/teaching/gpgpu/index.html",
+    "href": "fr/teaching/gpgpu/index.html",
+    "title": "General-Purpose computing on Graphics Processing Units (GPGPU)",
+    "section": "",
+    "text": "General-Purpose computing on Graphics Processing Units (GPGPU)"
   },
   {
     "objectID": "fr/teaching/syntheseimage/index.html",
@@ -147,6 +182,41 @@
     "text": "Course\nLevel\n\n\n\n\nData Processing\nL1\n\n\nIntroduction to Big Data\nL3\n\n\nImage Synthesis by Inverse Rendering\nM1\n\n\n3D Reconstruction\nM2"
   },
   {
+    "objectID": "en/teaching/bigdata/index.html",
+    "href": "en/teaching/bigdata/index.html",
+    "title": "Introduction to Big Data",
+    "section": "",
+    "text": "This Big Data course introduces the fundamentals of information retrieval from data. It covers key concepts such as the distinction between data, information, and knowledge, as well as the principle of abstraction in computer science. These concepts are illustrated through concrete applications and put into practice through projects inspired by real-world professional scenarios.\nThe course is primarily self-directed, and assessment is based exclusively on the completion of two projects.\n\n\n\n\n\n\nPeriod\nContent\n\n\n\n\nMonth 1\nLabs\n\n\nMonth 2\nProject 1\n\n\nMonth 3\nProject 2\n\n\n\n\n\n\n\n\nLecture 1 : PDF\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML\n\n\n\n\n\n\n\n\nSubject\nDataset\n\n\n\n\nLab 1\nPDF\nCSV\n\n\nLab 2\nPDF\n-\n\n\nProject 1\nPDF\nCSV\n\n\nProject 2\nPDF\nODS"
+  },
+  {
+    "objectID": "en/teaching/bigdata/index.html#indicative-planning",
+    "href": "en/teaching/bigdata/index.html#indicative-planning",
+    "title": "Introduction to Big Data",
+    "section": "",
+    "text": "Period\nContent\n\n\n\n\nMonth 1\nLabs\n\n\nMonth 2\nProject 1\n\n\nMonth 3\nProject 2"
+  },
+  {
+    "objectID": "en/teaching/bigdata/index.html#lectures",
+    "href": "en/teaching/bigdata/index.html#lectures",
+    "title": "Introduction to Big Data",
+    "section": "",
+    "text": "Lecture 1 : PDF\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML"
+  },
+  {
+    "objectID": "en/teaching/bigdata/index.html#labs-projects",
+    "href": "en/teaching/bigdata/index.html#labs-projects",
+    "title": "Introduction to Big Data",
+    "section": "",
+    "text": "Subject\nDataset\n\n\n\n\nLab 1\nPDF\nCSV\n\n\nLab 2\nPDF\n-\n\n\nProject 1\nPDF\nCSV\n\n\nProject 2\nPDF\nODS"
+  },
+  {
+    "objectID": "en/teaching/gpgpu/index.html",
+    "href": "en/teaching/gpgpu/index.html",
+    "title": "General-Purpose computing on Graphics Processing Units (GPGPU)",
+    "section": "",
+    "text": "General-Purpose computing on Graphics Processing Units (GPGPU)"
+  },
+  {
     "objectID": "en/teaching/syntheseimage/index.html",
     "href": "en/teaching/syntheseimage/index.html",
     "title": "Inverse Rendering for Image Synthesis (IRIS)",
@@ -266,32 +336,25 @@
     "text": "Outil\nRôle\n\n\n\n\nQuarto\ninfrastructure centrale\n\n\nManim\nvisualisation rigoureuse\n\n\nJupyter\ncalcul reproductible\n\n\nTypst\npublication moderne\n\n\nPandoc\nconversion universelle\n\n\nGit\nmémoire et traçabilité\n\n\nIA\namplification cognitive"
   },
   {
-    "objectID": "en/teaching/bigdata/index.html",
-    "href": "en/teaching/bigdata/index.html",
-    "title": "Introduction to Big Data",
+    "objectID": "en/teaching/reconstruction/index.html",
+    "href": "en/teaching/reconstruction/index.html",
+    "title": "3D Reconstruction",
     "section": "",
-    "text": "This Big Data course introduces the fundamentals of information retrieval from data. It covers key concepts such as the distinction between data, information, and knowledge, as well as the principle of abstraction in computer science. These concepts are illustrated through concrete applications and put into practice through projects inspired by real-world professional scenarios.\nThe course is primarily self-directed, and assessment is based exclusively on the completion of two projects.\n\n\n\n\n\n\nPeriod\nContent\n\n\n\n\nMonth 1\nLabs\n\n\nMonth 2\nProject 1\n\n\nMonth 3\nProject 2\n\n\n\n\n\n\n\n\nLecture 1 : PDF\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML\n\n\n\n\n\n\n\n\nSubject\nDataset\n\n\n\n\nLab 1\nPDF\nCSV\n\n\nLab 2\nPDF\n-\n\n\nProject 1\nPDF\nCSV\n\n\nProject 2\nPDF\nODS"
+    "text": "3D Reconstruction"
   },
   {
-    "objectID": "en/teaching/bigdata/index.html#indicative-planning",
-    "href": "en/teaching/bigdata/index.html#indicative-planning",
-    "title": "Introduction to Big Data",
+    "objectID": "en/teaching/deeplearning/index.html",
+    "href": "en/teaching/deeplearning/index.html",
+    "title": "Deep Learning",
     "section": "",
-    "text": "Period\nContent\n\n\n\n\nMonth 1\nLabs\n\n\nMonth 2\nProject 1\n\n\nMonth 3\nProject 2"
+    "text": "Deep Learning"
   },
   {
-    "objectID": "en/teaching/bigdata/index.html#lectures",
-    "href": "en/teaching/bigdata/index.html#lectures",
-    "title": "Introduction to Big Data",
+    "objectID": "en/teaching/tid/index.html",
+    "href": "en/teaching/tid/index.html",
+    "title": "Introduction to Data Processing",
     "section": "",
-    "text": "Lecture 1 : PDF\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML"
-  },
-  {
-    "objectID": "en/teaching/bigdata/index.html#labs-projects",
-    "href": "en/teaching/bigdata/index.html#labs-projects",
-    "title": "Introduction to Big Data",
-    "section": "",
-    "text": "Subject\nDataset\n\n\n\n\nLab 1\nPDF\nCSV\n\n\nLab 2\nPDF\n-\n\n\nProject 1\nPDF\nCSV\n\n\nProject 2\nPDF\nODS"
+    "text": "Introduction to Data Processing"
   },
   {
     "objectID": "en/cv/personal.html",
@@ -308,32 +371,39 @@
     "text": "Outil\nRôle\n\n\n\n\nQuarto\ninfrastructure centrale\n\n\nManim\nvisualisation rigoureuse\n\n\nJupyter\ncalcul reproductible\n\n\nTypst\npublication moderne\n\n\nPandoc\nconversion universelle\n\n\nGit\nmémoire et traçabilité\n\n\nIA\namplification cognitive"
   },
   {
-    "objectID": "fr/teaching/bigdata/index.html",
-    "href": "fr/teaching/bigdata/index.html",
-    "title": "Introduction au Big Data",
+    "objectID": "fr/teaching/reconstruction/index.html",
+    "href": "fr/teaching/reconstruction/index.html",
+    "title": "Reconstruction 3D",
     "section": "",
-    "text": "Ce cours de Big Data introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets.\n\n\n\n\n\n\nPériode\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2\n\n\n\n\n\n\n\n\nCours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
+    "text": "Reconstruction 3D"
   },
   {
-    "objectID": "fr/teaching/bigdata/index.html#planning-indicatif",
-    "href": "fr/teaching/bigdata/index.html#planning-indicatif",
-    "title": "Introduction au Big Data",
+    "objectID": "fr/teaching/deeplearning/index.html",
+    "href": "fr/teaching/deeplearning/index.html",
+    "title": "Deep Learning",
     "section": "",
-    "text": "Période\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2"
+    "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
   },
   {
-    "objectID": "fr/teaching/bigdata/index.html#cours-magistraux",
-    "href": "fr/teaching/bigdata/index.html#cours-magistraux",
-    "title": "Introduction au Big Data",
+    "objectID": "fr/teaching/deeplearning/index.html#cours",
+    "href": "fr/teaching/deeplearning/index.html#cours",
+    "title": "Deep Learning",
     "section": "",
-    "text": "Cours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+    "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML"
   },
   {
-    "objectID": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
-    "href": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
-    "title": "Introduction au Big Data",
+    "objectID": "fr/teaching/deeplearning/index.html#tp",
+    "href": "fr/teaching/deeplearning/index.html#tp",
+    "title": "Deep Learning",
     "section": "",
-    "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
+    "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
+  },
+  {
+    "objectID": "fr/teaching/tid/index.html",
+    "href": "fr/teaching/tid/index.html",
+    "title": "Traitement Informatique des Données (TID)",
+    "section": "",
+    "text": "Traitement Informatique des Données (TID)"
   },
   {
     "objectID": "fr/cv/personal.html",
