@@ -1,31 +1,10 @@
 [
   {
-    "objectID": "assets/syntheseimage/index.html",
-    "href": "assets/syntheseimage/index.html",
-    "title": "Synthèse d’Images par Rendu Inverse",
+    "objectID": "fr/personnal/personal.html",
+    "href": "fr/personnal/personal.html",
+    "title": "Nathan Sanchiz-Viel",
     "section": "",
-    "text": "Cette partie du cours traite de la synthèse d’images réalistes par rendu inverse, en s’intéressant à la génération de nouvelles images à partir d’images existantes. Elle aborde d’abord des méthodes de synthèse 2D à partir d’images, telles que l’interpolation et l’extrapolation.\nLe cours introduit ensuite la photogrammétrie comme cadre permettant de produire des images réalistes à partir de reconstructions multi-vues. Il présente enfin différentes représentations pour la synthèse de vues, des nuages de points et splats aux représentations continues modernes, et en analyse les apports et les limites pour la production d’images réalistes.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\nCours 5 : HTML\nCours 6 : HTML\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nAtelier 1\nPDF\nZIP\n\n\nAtelier 2\nPDF\nZIP\n\n\nAtelier 3\nPDF\nZIP"
-  },
-  {
-    "objectID": "assets/syntheseimage/index.html#cours",
-    "href": "assets/syntheseimage/index.html#cours",
-    "title": "Synthèse d’Images par Rendu Inverse",
-    "section": "",
-    "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\nCours 5 : HTML\nCours 6 : HTML"
-  },
-  {
-    "objectID": "assets/syntheseimage/index.html#ateliers",
-    "href": "assets/syntheseimage/index.html#ateliers",
-    "title": "Synthèse d’Images par Rendu Inverse",
-    "section": "",
-    "text": "Sujet\nDonnées\n\n\n\n\nAtelier 1\nPDF\nZIP\n\n\nAtelier 2\nPDF\nZIP\n\n\nAtelier 3\nPDF\nZIP"
-  },
-  {
-    "objectID": "fr/index.html",
-    "href": "fr/index.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Cours\nNiveau\n\n\n\n\nTraitement Informatique des Données\nL1\n\n\nIntroduction au Big Data\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nM1\n\n\nGeneral-purpose computing on graphics processing units (GPGPU)\nM1\n\n\nReconstruction 3D\nM2"
+    "text": "Welcome here !"
   },
   {
     "objectID": "fr/teaching/bigdata/index.html",
@@ -91,95 +70,11 @@
     "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
   },
   {
-    "objectID": "fr/blog/article_1.html",
-    "href": "fr/blog/article_1.html",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
+    "objectID": "en/personnal/personal.html",
+    "href": "en/personnal/personal.html",
+    "title": "Nathan Sanchiz-Viel",
     "section": "",
-    "text": "J’ai passé des années à fabriquer mes cours avec LibreOffice Impress. J’y ai laissé du temps, de l’énergie et une partie de ma santé mentale. Puis j’ai découvert Quarto. Trois mois plus tard, je produis plus de cours, mieux structurés, bilingues, maintenables, compatibles IA… et je dors mieux. Cet article raconte comment et pourquoi.\nSpoiler : ce n’est pas juste un changement d’outil, c’est un changement de paradigme."
-  },
-  {
-    "objectID": "fr/blog/article_1.html#tldr-pour-les-pressés",
-    "href": "fr/blog/article_1.html#tldr-pour-les-pressés",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "",
-    "text": "J’ai passé des années à fabriquer mes cours avec LibreOffice Impress. J’y ai laissé du temps, de l’énergie et une partie de ma santé mentale. Puis j’ai découvert Quarto. Trois mois plus tard, je produis plus de cours, mieux structurés, bilingues, maintenables, compatibles IA… et je dors mieux. Cet article raconte comment et pourquoi.\nSpoiler : ce n’est pas juste un changement d’outil, c’est un changement de paradigme."
-  },
-  {
-    "objectID": "fr/blog/article_1.html#le-problème-que-je-narrivais-plus-à-ignorer",
-    "href": "fr/blog/article_1.html#le-problème-que-je-narrivais-plus-à-ignorer",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "2 1. Le problème que je n’arrivais plus à ignorer",
-    "text": "2 1. Le problème que je n’arrivais plus à ignorer\nPendant longtemps, je n’ai pas remis en question mon outil de présentation. LibreOffice Impress faisait « le job ». Enfin… plus ou moins.\nMais les symptômes étaient là :\n\nune modification mineure qui prend 20 minutes,\ndes slides dupliquées partout,\ndes versions légèrement différentes du même cours,\ndes fichiers impossibles à maintenir d’une année sur l’autre,\nune impression permanente de bricolage.\n\nEt surtout ce ratio absurde : 15 heures de préparation pour 2 heures de cours.\nÀ un moment, ce n’est plus de la pédagogie, c’est de l’artisanat sous perfusion café."
-  },
-  {
-    "objectID": "fr/blog/article_1.html#trois-mois-à-observer-et-à-douter",
-    "href": "fr/blog/article_1.html#trois-mois-à-observer-et-à-douter",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "3 2. Trois mois à observer (et à douter)",
-    "text": "3 2. Trois mois à observer (et à douter)\nJe n’ai pas sauté sur le premier outil venu. Pendant environ trois mois, j’ai :\n\nanalysé mes propres diapos (objectivement moches et fragiles),\nregardé celles de mes collègues (sans jugement… enfin presque),\nlisté les vrais problèmes (pas les symptômes),\ncherché comment me passer d’Impress, pas par snobisme, mais par nécessité.\n\nJe ne cherchais pas « un meilleur PowerPoint ». Je cherchais un système.\nEt puis, presque par hasard, je tombe sur Quarto."
-  },
-  {
-    "objectID": "fr/blog/article_1.html#la-claque-découvrir-quarto",
-    "href": "fr/blog/article_1.html#la-claque-découvrir-quarto",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "4 3. La claque : découvrir Quarto",
-    "text": "4 3. La claque : découvrir Quarto\nQuarto, à la base, ce n’est pas un outil de slides. C’est un système de publication texte-first, pensé pour la recherche, la documentation, les rapports.\nEt pourtant…\n\ndu Markdown lisible,\nun YAML déclaratif,\nReveal.js intégré proprement,\nexport HTML / PDF / slides,\ncompatibilité parfaite avec Git,\net surtout : du texte structuré.\n\nJe m’y mets « pour voir ».\nDeux jours plus tard :\n\n« Attends… donc là, je modifie une phrase, et elle est correcte partout ? »\n\nC’est le début de la fin pour Impress."
-  },
-  {
-    "objectID": "fr/blog/article_1.html#le-vrai-changement-penser-en-chaîne-de-production",
-    "href": "fr/blog/article_1.html#le-vrai-changement-penser-en-chaîne-de-production",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "5 4. Le vrai changement : penser en chaîne de production",
-    "text": "5 4. Le vrai changement : penser en chaîne de production\nAvec Quarto, j’ai arrêté de :\n\nfabriquer des slides,\narranger des blocs visuels,\nmicro-optimiser des mises en page.\n\nJ’ai commencé à :\n\nécrire des cours,\nstructurer mes idées,\nséparer fond et forme.\n\nUn fichier .qmd n’est pas une présentation. C’est une source unique de vérité.\nÀ partir de là, les slides ne sont qu’un rendu parmi d’autres.\nC’est exactement à ce moment-là que l’artisanat devient industriel."
-  },
-  {
-    "objectID": "fr/blog/article_1.html#industrialiser-ne-veut-pas-dire-déshumaniser",
-    "href": "fr/blog/article_1.html#industrialiser-ne-veut-pas-dire-déshumaniser",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "6 5. Industrialiser ne veut pas dire déshumaniser",
-    "text": "6 5. Industrialiser ne veut pas dire déshumaniser\nImportant : industrialiser ≠ standardiser le contenu.\nCe que j’ai standardisé :\n\nla structure des cours,\nles sections récurrentes (objectifs, notions, activités),\nles conventions d’écriture,\nles templates.\n\nRésultat :\n\nmoins de charge cognitive,\nplus de cohérence,\nplus de temps pour la pédagogie réelle.\n\nAujourd’hui, je suis passé à environ 10 heures de préparation pour 9 heures de cours.\nCe n’est pas de la magie. C’est de l’ingénierie."
-  },
-  {
-    "objectID": "fr/blog/article_1.html#lia-le-stagiaire-parfait-mais-quil-faut-encadrer",
-    "href": "fr/blog/article_1.html#lia-le-stagiaire-parfait-mais-quil-faut-encadrer",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "7 6. L’IA : le stagiaire parfait (mais qu’il faut encadrer)",
-    "text": "7 6. L’IA : le stagiaire parfait (mais qu’il faut encadrer)\nQuarto a un super-pouvoir inattendu : il est parfaitement lisible par l’IA.\nUn .qmd bien structuré, c’est le rêve d’un modèle de langage.\nJ’utilise l’IA pour :\n\ngénérer des exemples,\ncréer des exercices progressifs,\nproposer des quiz,\ntraduire en anglais,\nreformuler pour différents niveaux.\n\nMais jamais pour décider à ma place.\nL’IA est un assistant, pas un enseignant."
-  },
-  {
-    "objectID": "fr/blog/article_1.html#bonus-inattendu-le-bilinguisme-sans-douleur",
-    "href": "fr/blog/article_1.html#bonus-inattendu-le-bilinguisme-sans-douleur",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "8 7. Bonus inattendu : le bilinguisme sans douleur",
-    "text": "8 7. Bonus inattendu : le bilinguisme sans douleur\nAvec ce système, j’ai pu mettre en place un site pédagogique bilingue FR / EN.\nDeux versions, même structure, mêmes templates.\nAvant, traduire un cours était une punition. Aujourd’hui, c’est une opération contrôlée.\nEt non, je ne reviendrai jamais en arrière."
-  },
-  {
-    "objectID": "fr/blog/article_1.html#pourquoi-je-pense-que-ce-modèle-va-se-généraliser",
-    "href": "fr/blog/article_1.html#pourquoi-je-pense-que-ce-modèle-va-se-généraliser",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "9 8. Pourquoi je pense que ce modèle va se généraliser",
-    "text": "9 8. Pourquoi je pense que ce modèle va se généraliser\nParce qu’il coche toutes les cases :\n\nformats ouverts,\npérennité,\ncompatibilité IA,\nmaintenabilité,\nmutualisation possible.\n\nEt surtout : il redonne du temps et de l’énergie aux enseignants."
-  },
-  {
-    "objectID": "fr/blog/article_1.html#conclusion-et-avertissement",
-    "href": "fr/blog/article_1.html#conclusion-et-avertissement",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "10 9. Conclusion (et avertissement)",
-    "text": "10 9. Conclusion (et avertissement)\nQuarto n’est pas un gadget.\nC’est une infrastructure pédagogique.\nLe danger n’est pas de trop automatiser. Le danger, c’est de continuer à bricoler en pensant que c’est normal.\nSi tu prépares des cours, que tu es fatigué, et que tu as l’impression de refaire sans cesse la même chose :\n👉 le problème n’est peut-être pas toi."
-  },
-  {
-    "objectID": "fr/blog/article_1.html#annexe-pourquoi-cet-article",
-    "href": "fr/blog/article_1.html#annexe-pourquoi-cet-article",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "11 Annexe : pourquoi cet article",
-    "text": "11 Annexe : pourquoi cet article\nParce qu’il existe très peu de retours d’expérience honnêtes sur ces sujets. Parce que l’ingénierie pédagogique mérite mieux que des astuces bricolées. Et parce que oui : parfois, un outil change vraiment la donne."
-  },
-  {
-    "objectID": "en/index.html",
-    "href": "en/index.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Course\nLevel\n\n\n\n\nData Processing\nL1\n\n\nIntroduction to Big Data\nL3\n\n\nImage Synthesis by Inverse Rendering\nM1\n\n\n3D Reconstruction\nM2"
+    "text": "Welcome here !"
   },
   {
     "objectID": "en/teaching/bigdata/index.html",
@@ -245,97 +140,6 @@
     "text": "Topic\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\nPDF"
   },
   {
-    "objectID": "en/blog/article_1.html",
-    "href": "en/blog/article_1.html",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "",
-    "text": "J’ai passé des années à fabriquer mes cours avec LibreOffice Impress. J’y ai laissé du temps, de l’énergie et une partie de ma santé mentale. Puis j’ai découvert Quarto. Trois mois plus tard, je produis plus de cours, mieux structurés, bilingues, maintenables, compatibles IA… et je dors mieux. Cet article raconte comment et pourquoi.\nSpoiler : ce n’est pas juste un changement d’outil, c’est un changement de paradigme."
-  },
-  {
-    "objectID": "en/blog/article_1.html#tldr-pour-les-pressés",
-    "href": "en/blog/article_1.html#tldr-pour-les-pressés",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "",
-    "text": "J’ai passé des années à fabriquer mes cours avec LibreOffice Impress. J’y ai laissé du temps, de l’énergie et une partie de ma santé mentale. Puis j’ai découvert Quarto. Trois mois plus tard, je produis plus de cours, mieux structurés, bilingues, maintenables, compatibles IA… et je dors mieux. Cet article raconte comment et pourquoi.\nSpoiler : ce n’est pas juste un changement d’outil, c’est un changement de paradigme."
-  },
-  {
-    "objectID": "en/blog/article_1.html#le-problème-que-je-narrivais-plus-à-ignorer",
-    "href": "en/blog/article_1.html#le-problème-que-je-narrivais-plus-à-ignorer",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "2 1. Le problème que je n’arrivais plus à ignorer",
-    "text": "2 1. Le problème que je n’arrivais plus à ignorer\nPendant longtemps, je n’ai pas remis en question mon outil de présentation. LibreOffice Impress faisait « le job ». Enfin… plus ou moins.\nMais les symptômes étaient là :\n\nune modification mineure qui prend 20 minutes,\ndes slides dupliquées partout,\ndes versions légèrement différentes du même cours,\ndes fichiers impossibles à maintenir d’une année sur l’autre,\nune impression permanente de bricolage.\n\nEt surtout ce ratio absurde : 15 heures de préparation pour 2 heures de cours.\nÀ un moment, ce n’est plus de la pédagogie, c’est de l’artisanat sous perfusion café."
-  },
-  {
-    "objectID": "en/blog/article_1.html#trois-mois-à-observer-et-à-douter",
-    "href": "en/blog/article_1.html#trois-mois-à-observer-et-à-douter",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "3 2. Trois mois à observer (et à douter)",
-    "text": "3 2. Trois mois à observer (et à douter)\nJe n’ai pas sauté sur le premier outil venu. Pendant environ trois mois, j’ai :\n\nanalysé mes propres diapos (objectivement moches et fragiles),\nregardé celles de mes collègues (sans jugement… enfin presque),\nlisté les vrais problèmes (pas les symptômes),\ncherché comment me passer d’Impress, pas par snobisme, mais par nécessité.\n\nJe ne cherchais pas « un meilleur PowerPoint ». Je cherchais un système.\nEt puis, presque par hasard, je tombe sur Quarto."
-  },
-  {
-    "objectID": "en/blog/article_1.html#la-claque-découvrir-quarto",
-    "href": "en/blog/article_1.html#la-claque-découvrir-quarto",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "4 3. La claque : découvrir Quarto",
-    "text": "4 3. La claque : découvrir Quarto\nQuarto, à la base, ce n’est pas un outil de slides. C’est un système de publication texte-first, pensé pour la recherche, la documentation, les rapports.\nEt pourtant…\n\ndu Markdown lisible,\nun YAML déclaratif,\nReveal.js intégré proprement,\nexport HTML / PDF / slides,\ncompatibilité parfaite avec Git,\net surtout : du texte structuré.\n\nJe m’y mets « pour voir ».\nDeux jours plus tard :\n\n« Attends… donc là, je modifie une phrase, et elle est correcte partout ? »\n\nC’est le début de la fin pour Impress."
-  },
-  {
-    "objectID": "en/blog/article_1.html#le-vrai-changement-penser-en-chaîne-de-production",
-    "href": "en/blog/article_1.html#le-vrai-changement-penser-en-chaîne-de-production",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "5 4. Le vrai changement : penser en chaîne de production",
-    "text": "5 4. Le vrai changement : penser en chaîne de production\nAvec Quarto, j’ai arrêté de :\n\nfabriquer des slides,\narranger des blocs visuels,\nmicro-optimiser des mises en page.\n\nJ’ai commencé à :\n\nécrire des cours,\nstructurer mes idées,\nséparer fond et forme.\n\nUn fichier .qmd n’est pas une présentation. C’est une source unique de vérité.\nÀ partir de là, les slides ne sont qu’un rendu parmi d’autres.\nC’est exactement à ce moment-là que l’artisanat devient industriel."
-  },
-  {
-    "objectID": "en/blog/article_1.html#industrialiser-ne-veut-pas-dire-déshumaniser",
-    "href": "en/blog/article_1.html#industrialiser-ne-veut-pas-dire-déshumaniser",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "6 5. Industrialiser ne veut pas dire déshumaniser",
-    "text": "6 5. Industrialiser ne veut pas dire déshumaniser\nImportant : industrialiser ≠ standardiser le contenu.\nCe que j’ai standardisé :\n\nla structure des cours,\nles sections récurrentes (objectifs, notions, activités),\nles conventions d’écriture,\nles templates.\n\nRésultat :\n\nmoins de charge cognitive,\nplus de cohérence,\nplus de temps pour la pédagogie réelle.\n\nAujourd’hui, je suis passé à environ 10 heures de préparation pour 9 heures de cours.\nCe n’est pas de la magie. C’est de l’ingénierie."
-  },
-  {
-    "objectID": "en/blog/article_1.html#lia-le-stagiaire-parfait-mais-quil-faut-encadrer",
-    "href": "en/blog/article_1.html#lia-le-stagiaire-parfait-mais-quil-faut-encadrer",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "7 6. L’IA : le stagiaire parfait (mais qu’il faut encadrer)",
-    "text": "7 6. L’IA : le stagiaire parfait (mais qu’il faut encadrer)\nQuarto a un super-pouvoir inattendu : il est parfaitement lisible par l’IA.\nUn .qmd bien structuré, c’est le rêve d’un modèle de langage.\nJ’utilise l’IA pour :\n\ngénérer des exemples,\ncréer des exercices progressifs,\nproposer des quiz,\ntraduire en anglais,\nreformuler pour différents niveaux.\n\nMais jamais pour décider à ma place.\nL’IA est un assistant, pas un enseignant."
-  },
-  {
-    "objectID": "en/blog/article_1.html#bonus-inattendu-le-bilinguisme-sans-douleur",
-    "href": "en/blog/article_1.html#bonus-inattendu-le-bilinguisme-sans-douleur",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "8 7. Bonus inattendu : le bilinguisme sans douleur",
-    "text": "8 7. Bonus inattendu : le bilinguisme sans douleur\nAvec ce système, j’ai pu mettre en place un site pédagogique bilingue FR / EN.\nDeux versions, même structure, mêmes templates.\nAvant, traduire un cours était une punition. Aujourd’hui, c’est une opération contrôlée.\nEt non, je ne reviendrai jamais en arrière."
-  },
-  {
-    "objectID": "en/blog/article_1.html#pourquoi-je-pense-que-ce-modèle-va-se-généraliser",
-    "href": "en/blog/article_1.html#pourquoi-je-pense-que-ce-modèle-va-se-généraliser",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "9 8. Pourquoi je pense que ce modèle va se généraliser",
-    "text": "9 8. Pourquoi je pense que ce modèle va se généraliser\nParce qu’il coche toutes les cases :\n\nformats ouverts,\npérennité,\ncompatibilité IA,\nmaintenabilité,\nmutualisation possible.\n\nEt surtout : il redonne du temps et de l’énergie aux enseignants."
-  },
-  {
-    "objectID": "en/blog/article_1.html#conclusion-et-avertissement",
-    "href": "en/blog/article_1.html#conclusion-et-avertissement",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "10 9. Conclusion (et avertissement)",
-    "text": "10 9. Conclusion (et avertissement)\nQuarto n’est pas un gadget.\nC’est une infrastructure pédagogique.\nLe danger n’est pas de trop automatiser. Le danger, c’est de continuer à bricoler en pensant que c’est normal.\nSi tu prépares des cours, que tu es fatigué, et que tu as l’impression de refaire sans cesse la même chose :\n👉 le problème n’est peut-être pas toi."
-  },
-  {
-    "objectID": "en/blog/article_1.html#annexe-pourquoi-cet-article",
-    "href": "en/blog/article_1.html#annexe-pourquoi-cet-article",
-    "title": "De LibreOffice Impress à Quarto : comment je suis passé de l’artisanat pédagogique à une usine textuelle (et pourquoi je ne reviendrai jamais en arrière)",
-    "section": "11 Annexe : pourquoi cet article",
-    "text": "11 Annexe : pourquoi cet article\nParce qu’il existe très peu de retours d’expérience honnêtes sur ces sujets. Parce que l’ingénierie pédagogique mérite mieux que des astuces bricolées. Et parce que oui : parfois, un outil change vraiment la donne."
-  },
-  {
-    "objectID": "en/blog/article_2.html",
-    "href": "en/blog/article_2.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Outil\nRôle\n\n\n\n\nQuarto\ninfrastructure centrale\n\n\nManim\nvisualisation rigoureuse\n\n\nJupyter\ncalcul reproductible\n\n\nTypst\npublication moderne\n\n\nPandoc\nconversion universelle\n\n\nGit\nmémoire et traçabilité\n\n\nIA\namplification cognitive"
-  },
-  {
     "objectID": "en/teaching/reconstruction/index.html",
     "href": "en/teaching/reconstruction/index.html",
     "title": "3D Reconstruction",
@@ -357,18 +161,11 @@
     "text": "Introduction to Data Processing"
   },
   {
-    "objectID": "en/cv/personal.html",
-    "href": "en/cv/personal.html",
-    "title": "Nathan Sanchiz-Viel",
-    "section": "",
-    "text": "Welcome here !"
-  },
-  {
-    "objectID": "fr/blog/article_2.html",
-    "href": "fr/blog/article_2.html",
+    "objectID": "en/index.html",
+    "href": "en/index.html",
     "title": "Teaching",
     "section": "",
-    "text": "Outil\nRôle\n\n\n\n\nQuarto\ninfrastructure centrale\n\n\nManim\nvisualisation rigoureuse\n\n\nJupyter\ncalcul reproductible\n\n\nTypst\npublication moderne\n\n\nPandoc\nconversion universelle\n\n\nGit\nmémoire et traçabilité\n\n\nIA\namplification cognitive"
+    "text": "Course\nLevel\n\n\n\n\nComputer-Based Data Processing\nL1\n\n\nIntroduction to Big Data\nL3\n\n\nInverse Rendering for Image Synthesis\nM1\n\n\nGeneral-Purpose Computing on Graphics Processing Units (GPGPU)\nM1\n\n\n3D Reconstruction\nM2\n\n\nDeep Learning\nM2"
   },
   {
     "objectID": "fr/teaching/reconstruction/index.html",
@@ -403,41 +200,20 @@
     "href": "fr/teaching/tid/index.html",
     "title": "Traitement Informatique des Données (TID)",
     "section": "",
-    "text": "Traitement Informatique des Données (TID)"
+    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableau, puis comment en extraire ou produire de l’information à l’aide de formules.\nL’objectif est de comprendre les principes fondamentaux (donnée, tableau, cellule, formule) afin de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettront de mettre en application ces notions, et un projet consistera à analyser un jeu de données complet afin de produire des résultats et une interprétation.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
   },
   {
-    "objectID": "fr/cv/personal.html",
-    "href": "fr/cv/personal.html",
-    "title": "Nathan Sanchiz-Viel",
+    "objectID": "fr/teaching/tid/index.html#cours",
+    "href": "fr/teaching/tid/index.html#cours",
+    "title": "Traitement Informatique des Données (TID)",
     "section": "",
-    "text": "Welcome here !"
+    "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
   },
   {
-    "objectID": "assets/bigdata/index.html",
-    "href": "assets/bigdata/index.html",
-    "title": "Big Data",
+    "objectID": "fr/index.html",
+    "href": "fr/index.html",
+    "title": "Teaching",
     "section": "",
-    "text": "Ce cours de Big Data introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets.\n\n\n\n\n\n\nPériode\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2\n\n\n\n\n\n\n\n\nCours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
-  },
-  {
-    "objectID": "assets/bigdata/index.html#planning-indicatif",
-    "href": "assets/bigdata/index.html#planning-indicatif",
-    "title": "Big Data",
-    "section": "",
-    "text": "Période\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2"
-  },
-  {
-    "objectID": "assets/bigdata/index.html#cours-magistraux",
-    "href": "assets/bigdata/index.html#cours-magistraux",
-    "title": "Big Data",
-    "section": "",
-    "text": "Cours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
-  },
-  {
-    "objectID": "assets/bigdata/index.html#travaux-pratiques-et-projets",
-    "href": "assets/bigdata/index.html#travaux-pratiques-et-projets",
-    "title": "Big Data",
-    "section": "",
-    "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
+    "text": "Cours\nNiveau\n\n\n\n\nTraitement Informatique des Données\nL1\n\n\nIntroduction au Big Data\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nM1\n\n\nGeneral-purpose computing on graphics processing units (GPGPU)\nM1\n\n\nReconstruction 3D\nM2\n\n\nDeep Learning\nM2"
   }
 ]
