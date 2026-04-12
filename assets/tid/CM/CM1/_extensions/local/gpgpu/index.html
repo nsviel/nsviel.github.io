@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPGPU</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <script id="fragShader" type="x-shader/x-fragment">#version 300 es
+/*********
+* Original shader by Matthias Hurrle (@atzedent)
+* Adapted from CodePen:
+* https://codepen.io/atzedent/pen/yyajWpJ
+* MIT License
+*/
+precision highp float;
+
+out vec4 O;
+
+uniform float time;
+uniform vec2 resolution;
+
+#define FC gl_FragCoord.xy
+#define R resolution
+#define T time
+#define S smoothstep
+#define SE(v,a,k) S(a+k/MN,a-k/MN,v)
+#define MN min(R.x,R.y)
+#define MX max(R.x,R.y)
+#define hue(a) (.5+.5*sin(3.14*(a)+vec3(1,2,3)))
+#define reveal(p) SE(MN/MX*abs(p.y),sqrt(S(1.,.0,1./T)),1.)
+
+float rnd(vec2 p) {
+  p = fract(p * vec2(12.9898, 78.233));
+  p += dot(p, p + 34.56);
+  return fract(p.x * p.y);
+}
+
+float noise(vec2 p) {
+  vec2 i = floor(p), u = S(i, i + 1., p), k = vec2(1, 0);
+  float a = rnd(i);
+  float b = rnd(i + k);
+  float c = rnd(i + k.yx);
+  float d = rnd(i + k.xx);
+  return mix(mix(a, b, u.x), mix(c, d, u.x), u.y);
+}
+
+float fbm(vec2 p) {
+  float t = 0.0, a = 1.0;
+  for (int i = 0; i < 5; i++) {
+    t += a * noise(p);
+    p *= 2.0;
+    a *= 0.5;
+  }
+  return t;
+}
+
+void main() {
+  vec2 uv = (FC - 0.5 * R) / MN;
+  vec2 st = uv;
+  vec3 col = vec3(0.0);
+
+  uv += vec2(3.3, 3.0);
+  uv.x += tanh(rnd(round(st * 5.0 - 0.5)));
+
+  float t = 100.0;
+  float k = fbm(
+    t * 0.05 - uv * 2.0
+    + fbm(
+      t * 0.1 - uv * 4.0
+      + fbm(
+        uv * 8.0
+        + fbm(vec2(0.0, T * 0.12) - uv * 16.0 - t)
+      )
+    )
+  );
+
+  col += hue(k) + pow(S(1.0, 0.4, k) + 0.8 * S(0.7, 1.0, k), 4.0) / max(k, 0.001);
+  col *= hue(sqrt(k));
+  col.b = clamp(0.2 * (col.g / max(col.r, 0.001)), 0.0, 1.0);
+
+  col = tanh(col);
+  col = sqrt(col);
+  col = sqrt(col);
+
+  float scanline = sin(T * 0.35 - uv.y * 800.0) * 0.01;
+
+  uv = FC / R * 2.0 - 1.0;
+  uv *= 0.95;
+  uv *= uv * uv * uv * uv;
+
+  float vignette = pow(dot(uv, uv), 0.8);
+  col = mix(col, vec3(0.0), vignette);
+  col += scanline;
+  col = mix(vec3(0.0), col, min(time * 0.15, 1.0));
+  col *= reveal(st);
+
+  float g = dot(col, vec3(0.299, 0.587, 0.114));
+  g = pow(g, 1.1);
+
+  O = vec4(vec3(g), 1.0);
+}
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
