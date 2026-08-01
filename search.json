@@ -1,10 +1,31 @@
 [
   {
-    "objectID": "fr/personnal/personal.html",
-    "href": "fr/personnal/personal.html",
+    "objectID": "fr/a-propos/index.html",
+    "href": "fr/a-propos/index.html",
     "title": "Nathan Sanchiz-Viel",
     "section": "",
     "text": "Welcome here !"
+  },
+  {
+    "objectID": "fr/teaching/tid/index.html",
+    "href": "fr/teaching/tid/index.html",
+    "title": "Traitement Informatique des Données (TID)",
+    "section": "",
+    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableau, puis comment en extraire ou produire de l’information à l’aide de formules.\nL’objectif est de comprendre les principes fondamentaux (donnée, tableau, cellule, formule) afin de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettront de mettre en application ces notions, et un projet consistera à analyser un jeu de données complet afin de produire des résultats et une interprétation.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+  },
+  {
+    "objectID": "fr/teaching/tid/index.html#cours",
+    "href": "fr/teaching/tid/index.html#cours",
+    "title": "Traitement Informatique des Données (TID)",
+    "section": "",
+    "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+  },
+  {
+    "objectID": "fr/teaching/gpgpu/index.html",
+    "href": "fr/teaching/gpgpu/index.html",
+    "title": "General-Purpose computing on Graphics Processing Units (GPGPU)",
+    "section": "",
+    "text": "General-Purpose computing on Graphics Processing Units (GPGPU)"
   },
   {
     "objectID": "fr/teaching/bigdata/index.html",
@@ -35,46 +56,151 @@
     "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
   },
   {
-    "objectID": "fr/teaching/gpgpu/index.html",
-    "href": "fr/teaching/gpgpu/index.html",
-    "title": "General-Purpose computing on Graphics Processing Units (GPGPU)",
+    "objectID": "en/teaching/reconstruction/index.html",
+    "href": "en/teaching/reconstruction/index.html",
+    "title": "3D Reconstruction",
     "section": "",
-    "text": "General-Purpose computing on Graphics Processing Units (GPGPU)"
+    "text": "3D Reconstruction"
   },
   {
-    "objectID": "fr/teaching/syntheseimage/index.html",
-    "href": "fr/teaching/syntheseimage/index.html",
-    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
+    "objectID": "en/teaching/syntheseimage/index.html",
+    "href": "en/teaching/syntheseimage/index.html",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
     "section": "",
-    "text": "Cette partie du cours traite de la synthèse d’images réalistes par rendu inverse, en s’intéressant à la génération de nouvelles images à partir d’images existantes. Elle commence par présenter des méthodes de synthèse 2D, comme l’interpolation et l’extrapolation entre vues, puis en montre les limites lorsque l’on souhaite modifier davantage le point de vue.\nLe cours introduit ensuite la photogrammétrie, qui permet de reconstruire la structure 3D d’une scène à partir de plusieurs images afin de produire de nouvelles vues de manière cohérente. Il aborde enfin différentes représentations de scènes pour la synthèse de vues, depuis les nuages de points et les splats jusqu’aux représentations continues plus récentes, en discutant leurs apports et leurs limites pour la production d’images réalistes.\nTrois ateliers accompagnent le cours afin de mettre ces concepts en pratique. Les étudiants y apprendront à créer un site portfolio, à y intégrer un moteur WebGL et à réaliser la numérisation d’un petit objet par photogrammétrie. À l’issue du cours, chacun disposera ainsi d’un objet numérisé, visualisable dans son propre moteur et intégré à son propre site.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\n\n\n\n\n\nAtelier 1 : PDF\nAtelier 2 : PDF\nAtelier 3 : PDF\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
+    "text": "This part of the course focuses on realistic image synthesis through inverse rendering, exploring how to generate new images from existing ones. It begins by introducing 2D synthesis methods, such as interpolation and extrapolation between views, and highlights their limitations when larger viewpoint changes are required.\nThe course then introduces photogrammetry, which enables the reconstruction of a scene’s 3D structure from multiple images in order to produce consistent novel views. It also covers different scene representations for view synthesis, ranging from point clouds and splats to more recent continuous representations, discussing their respective strengths and limitations for producing realistic images.\nThree hands-on workshops complement the course to help students apply these concepts in practice. Students will learn how to create a portfolio website, integrate a WebGL engine, and digitize a small object using photogrammetry. By the end of the course, each student will have produced a digitized object that can be visualized within their own engine and embedded into their personal website.\n\n\n\nLecture 1: HTML\nLecture 2: HTML\nLecture 3: HTML\n\n\n\n\n\nWorkshop 1: PDF\nWorkshop 2: PDF\nWorkshop 3: PDF\n\n\n\n\n\n\n\n\nTopic\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\nPDF"
   },
   {
-    "objectID": "fr/teaching/syntheseimage/index.html#cours",
-    "href": "fr/teaching/syntheseimage/index.html#cours",
-    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
+    "objectID": "en/teaching/syntheseimage/index.html#lectures",
+    "href": "en/teaching/syntheseimage/index.html#lectures",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
     "section": "",
-    "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML"
+    "text": "Lecture 1: HTML\nLecture 2: HTML\nLecture 3: HTML"
   },
   {
-    "objectID": "fr/teaching/syntheseimage/index.html#atelier",
-    "href": "fr/teaching/syntheseimage/index.html#atelier",
-    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
+    "objectID": "en/teaching/syntheseimage/index.html#workshops",
+    "href": "en/teaching/syntheseimage/index.html#workshops",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
     "section": "",
-    "text": "Atelier 1 : PDF\nAtelier 2 : PDF\nAtelier 3 : PDF"
+    "text": "Workshop 1: PDF\nWorkshop 2: PDF\nWorkshop 3: PDF"
   },
   {
-    "objectID": "fr/teaching/syntheseimage/index.html#tp",
-    "href": "fr/teaching/syntheseimage/index.html#tp",
-    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
+    "objectID": "en/teaching/syntheseimage/index.html#practical-sessions",
+    "href": "en/teaching/syntheseimage/index.html#practical-sessions",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
     "section": "",
-    "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
+    "text": "Topic\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\nPDF"
   },
   {
-    "objectID": "en/personnal/personal.html",
-    "href": "en/personnal/personal.html",
+    "objectID": "en/teaching/deeplearning/index.html",
+    "href": "en/teaching/deeplearning/index.html",
+    "title": "Deep Learning",
+    "section": "",
+    "text": "Deep Learning"
+  },
+  {
+    "objectID": "en/about/index.html",
+    "href": "en/about/index.html",
     "title": "Nathan Sanchiz-Viel",
     "section": "",
     "text": "Welcome here !"
+  },
+  {
+    "objectID": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html",
+    "href": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "",
+    "text": "Comment analyser des données réelles sans se perdre dans le code ni les outils ?\nOn va suivre un mini-pipeline : 1. Charger des données 2. Regarder (inspection rapide) 3. Nettoyer (valeurs manquantes / types) 4. Transformer (features simples) 5. Analyser (statistiques + visualisation)\n\nObjectif : voir le processus “en vrai”."
+  },
+  {
+    "objectID": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#question-de-départ",
+    "href": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#question-de-départ",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "",
+    "text": "Comment analyser des données réelles sans se perdre dans le code ni les outils ?\nOn va suivre un mini-pipeline : 1. Charger des données 2. Regarder (inspection rapide) 3. Nettoyer (valeurs manquantes / types) 4. Transformer (features simples) 5. Analyser (statistiques + visualisation)\n\nObjectif : voir le processus “en vrai”."
+  },
+  {
+    "objectID": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#imports",
+    "href": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#imports",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "0) Imports",
+    "text": "0) Imports\n\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\npd.set_option('display.max_columns', 50)\npd.set_option('display.width', 120)\nnp.random.seed(42)"
+  },
+  {
+    "objectID": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#charger-un-premier-jeu-de-données",
+    "href": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#charger-un-premier-jeu-de-données",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "1) Charger un premier jeu de données",
+    "text": "1) Charger un premier jeu de données\nOn utilise un dataset local fourni par scikit-learn (pas besoin d’Internet).\n\nfrom sklearn.datasets import load_iris\n\niris = load_iris(as_frame=True)\ndf = iris.frame.copy()\ndf.rename(columns={\"target\": \"species\"}, inplace=True)\ndf[\"species\"] = df[\"species\"].map(dict(enumerate(iris.target_names)))\n\ndf.head()\n\n\n\n\n\n\n\n\nsepal length (cm)\nsepal width (cm)\npetal length (cm)\npetal width (cm)\nspecies\n\n\n\n\n0\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n1\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n2\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n3\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n4\n5.0\n3.6\n1.4\n0.2\nsetosa"
+  },
+  {
+    "objectID": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#regarder-les-données-inspection",
+    "href": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#regarder-les-données-inspection",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "2) Regarder les données (inspection)",
+    "text": "2) Regarder les données (inspection)\nOn veut répondre à des questions simples : - Quelles colonnes ? - Quelles valeurs manquantes ? - Quels ordres de grandeur ?\n\ndf.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 150 entries, 0 to 149\nData columns (total 5 columns):\n #   Column             Non-Null Count  Dtype  \n---  ------             --------------  -----  \n 0   sepal length (cm)  150 non-null    float64\n 1   sepal width (cm)   150 non-null    float64\n 2   petal length (cm)  150 non-null    float64\n 3   petal width (cm)   150 non-null    float64\n 4   species            150 non-null    object \ndtypes: float64(4), object(1)\nmemory usage: 6.0+ KB\n\n\n\ndf.describe(include='all')\n\n\n\n\n\n\n\n\nsepal length (cm)\nsepal width (cm)\npetal length (cm)\npetal width (cm)\nspecies\n\n\n\n\ncount\n150.000000\n150.000000\n150.000000\n150.000000\n150\n\n\nunique\nNaN\nNaN\nNaN\nNaN\n3\n\n\ntop\nNaN\nNaN\nNaN\nNaN\nsetosa\n\n\nfreq\nNaN\nNaN\nNaN\nNaN\n50\n\n\nmean\n5.843333\n3.057333\n3.758000\n1.199333\nNaN\n\n\nstd\n0.828066\n0.435866\n1.765298\n0.762238\nNaN\n\n\nmin\n4.300000\n2.000000\n1.000000\n0.100000\nNaN\n\n\n25%\n5.100000\n2.800000\n1.600000\n0.300000\nNaN\n\n\n50%\n5.800000\n3.000000\n4.350000\n1.300000\nNaN\n\n\n75%\n6.400000\n3.300000\n5.100000\n1.800000\nNaN\n\n\nmax\n7.900000\n4.400000\n6.900000\n2.500000\nNaN"
+  },
+  {
+    "objectID": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#simuler-un-problème-réaliste-valeurs-manquantes",
+    "href": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#simuler-un-problème-réaliste-valeurs-manquantes",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "3) (Simuler) un problème réaliste : valeurs manquantes",
+    "text": "3) (Simuler) un problème réaliste : valeurs manquantes\nPour illustrer le nettoyage, on introduit volontairement quelques NaN.\n\ndf_dirty = df.copy()\n\n# Introduire ~5% de valeurs manquantes dans deux colonnes\nmask1 = np.random.rand(len(df_dirty)) &lt; 0.05\nmask2 = np.random.rand(len(df_dirty)) &lt; 0.05\n\ndf_dirty.loc[mask1, \"sepal length (cm)\"] = np.nan\ndf_dirty.loc[mask2, \"petal width (cm)\"] = np.nan\n\ndf_dirty.isna().mean().sort_values(ascending=False)\n\nsepal length (cm)    0.06\npetal width (cm)     0.06\nsepal width (cm)     0.00\npetal length (cm)    0.00\nspecies              0.00\ndtype: float64"
+  },
+  {
+    "objectID": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#nettoyage",
+    "href": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#nettoyage",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "4) Nettoyage",
+    "text": "4) Nettoyage\nIci, stratégie simple : imputation par médiane (sur les colonnes numériques).\n\ndf_clean = df_dirty.copy()\n\nnum_cols = df_clean.select_dtypes(include=[\"number\"]).columns\nfor c in num_cols:\n    df_clean[c] = df_clean[c].fillna(df_clean[c].median())\n\ndf_clean.isna().sum()\n\nsepal length (cm)    0\nsepal width (cm)     0\npetal length (cm)    0\npetal width (cm)     0\nspecies              0\ndtype: int64"
+  },
+  {
+    "objectID": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#transformation-feature-engineering-léger",
+    "href": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#transformation-feature-engineering-léger",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "5) Transformation (feature engineering léger)",
+    "text": "5) Transformation (feature engineering léger)\nOn crée 2 variables simples : - ratio pétale/sepale - surface approx. pétale (longueur × largeur)\nL’idée : transformations cohérentes au service d’une question.\n\ndf_feat = df_clean.copy()\n\ndf_feat[\"petal_area\"] = df_feat[\"petal length (cm)\"] * df_feat[\"petal width (cm)\"]\ndf_feat[\"petal_to_sepal_ratio\"] = df_feat[\"petal length (cm)\"] / df_feat[\"sepal length (cm)\"]\n\ndf_feat.head()\n\n\n\n\n\n\n\n\nsepal length (cm)\nsepal width (cm)\npetal length (cm)\npetal width (cm)\nspecies\npetal_area\npetal_to_sepal_ratio\n\n\n\n\n0\n5.1\n3.5\n1.4\n0.2\nsetosa\n0.28\n0.274510\n\n\n1\n4.9\n3.0\n1.4\n0.2\nsetosa\n0.28\n0.285714\n\n\n2\n4.7\n3.2\n1.3\n0.2\nsetosa\n0.26\n0.276596\n\n\n3\n4.6\n3.1\n1.5\n0.2\nsetosa\n0.30\n0.326087\n\n\n4\n5.0\n3.6\n1.4\n0.2\nsetosa\n0.28\n0.280000"
+  },
+  {
+    "objectID": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#analyse",
+    "href": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#analyse",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "6) Analyse",
+    "text": "6) Analyse\nExemple de question (simple) : &gt; Quelles variables distinguent le mieux les espèces ?\nOn commence par une analyse descriptive : moyennes par espèce.\n\nsummary = df_feat.groupby(\"species\").mean(numeric_only=True)\nsummary\n\n\n\n\n\n\n\n\nsepal length (cm)\nsepal width (cm)\npetal length (cm)\npetal width (cm)\npetal_area\npetal_to_sepal_ratio\n\n\nspecies\n\n\n\n\n\n\n\n\n\n\nsetosa\n5.064\n3.428\n1.462\n0.284\n0.4266\n0.289655\n\n\nversicolor\n5.924\n2.770\n4.260\n1.326\n5.7204\n0.719572\n\n\nvirginica\n6.548\n2.974\n5.552\n1.964\n10.9490\n0.849610\n\n\n\n\n\n\n\n\nVisualisation rapide\nUn graphique simple pour rendre visible une séparation.\n\nplt.figure()\nfor sp, g in df_feat.groupby(\"species\"):\n    plt.scatter(g[\"petal length (cm)\"], g[\"petal width (cm)\"], label=sp, alpha=0.8)\nplt.xlabel(\"petal length (cm)\")\nplt.ylabel(\"petal width (cm)\")\nplt.legend()\nplt.title(\"Iris: séparation par espèces (pétales)\")\nplt.show()"
+  },
+  {
+    "objectID": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#récap-pipeline-ce-quon-a-fait",
+    "href": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#récap-pipeline-ce-quon-a-fait",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "7) Récap pipeline (ce qu’on a fait)",
+    "text": "7) Récap pipeline (ce qu’on a fait)\n\nDonnées : iris\nNettoyage : NaN → médiane\nTransformation : petal_area, petal_to_sepal_ratio\nAnalyse : stats par groupe + scatter plot\n\n\nPhrase à retenir\n\nLe plus important n’est pas l’outil, mais la question que le pipeline sert."
+  },
+  {
+    "objectID": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#option-exercice-minute",
+    "href": "content/courses/bigdata/fr/CM/CM2/content/notebook/notebook.html#option-exercice-minute",
+    "title": "Mini-pipeline d’analyse (intro)",
+    "section": "(Option) Exercice minute",
+    "text": "(Option) Exercice minute\n\nPropose une nouvelle question sur ces données.\nDis quelles transformations seraient nécessaires.\nQuelle visualisation ferait sens ?"
+  },
+  {
+    "objectID": "content/courses/bigdata/fr/CM/CM4/content/project/project.html",
+    "href": "content/courses/bigdata/fr/CM/CM4/content/project/project.html",
+    "title": "Start",
+    "section": "",
+    "text": "Import libs and datasets\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom scipy.stats import lognorm\n\ndf_game = pd.read_csv(\"video_game.csv\")\ndf_murder = pd.read_csv(\"france_murder.csv\")"
+  },
+  {
+    "objectID": "content/courses/bigdata/fr/CM/CM4/content/project/project.html#analyse-murder-rate",
+    "href": "content/courses/bigdata/fr/CM/CM4/content/project/project.html#analyse-murder-rate",
+    "title": "Start",
+    "section": "## Analyse murder rate",
+    "text": "## Analyse murder rate\n\nprint(df_murder.head())\n\n   Unnamed: 0  Murder/Homicide Rate\n0        1990                  2.40\n1        1991                  2.39\n2        1992                  2.36\n3        1993                  2.66\n4        1994                  2.46\n\n\n\nm_year = df_murder[\"Unnamed: 0\"]\nm_murder = df_murder[\"Murder/Homicide Rate\"]\n\n\nimport matplotlib.pyplot as plt\n\nfig, ax = plt.subplots()\n\nax.plot(m_year, m_murder, color=\"black\")\nax.fill_between(m_year, m_murder, 1, alpha=0.3, color=\"white\")\n\n# axes blancs\nax.tick_params(colors=\"black\")\nax.xaxis.label.set_color(\"black\")\nax.yaxis.label.set_color(\"black\")\n\n# bordures blanches\nfor spine in ax.spines.values():\n    spine.set_color(\"white\")\n\nax.set_xlim(1990, 2021)\nax.set_ylim(1, 2.7)\n\nax.grid(alpha=0.25)\n\n# fond transparent\nfig.patch.set_alpha(0)\n\n#plt.savefig(\"../image/murder_rate.png\", dpi=300, transparent=True)\nplt.show()"
+  },
+  {
+    "objectID": "content/courses/bigdata/fr/CM/CM4/content/project/project.html#analyse-video-games",
+    "href": "content/courses/bigdata/fr/CM/CM4/content/project/project.html#analyse-video-games",
+    "title": "Start",
+    "section": "## Analyse Video games",
+    "text": "## Analyse Video games\n\nprint(df_game.head())\n\n                       Name Platform  Year_of_Release         Genre Publisher  \\\n0                Wii Sports      Wii           2006.0        Sports  Nintendo   \n1         Super Mario Bros.      NES           1985.0      Platform  Nintendo   \n2            Mario Kart Wii      Wii           2008.0        Racing  Nintendo   \n3         Wii Sports Resort      Wii           2009.0        Sports  Nintendo   \n4  Pokemon Red/Pokemon Blue       GB           1996.0  Role-Playing  Nintendo   \n\n   NA_Sales  EU_Sales  JP_Sales  Other_Sales  Global_Sales  Critic_Score  \\\n0     41.36     28.96      3.77         8.45         82.53          76.0   \n1     29.08      3.58      6.81         0.77         40.24           NaN   \n2     15.68     12.76      3.79         3.29         35.52          82.0   \n3     15.61     10.93      3.28         2.95         32.77          80.0   \n4     11.27      8.89     10.22         1.00         31.37           NaN   \n\n   Critic_Count User_Score  User_Count Developer Rating  \n0          51.0          8       322.0  Nintendo      E  \n1           NaN        NaN         NaN       NaN    NaN  \n2          73.0        8.3       709.0  Nintendo      E  \n3          73.0          8       192.0  Nintendo      E  \n4           NaN        NaN         NaN       NaN    NaN  \n\n\n\ndf_game = df_game.dropna(subset=[\"Year_of_Release\"])\n\nv_year = df_game[\"Year_of_Release\"].astype(int)\nv_genre = df_game[\"Genre\"]\n\nv_freq = pd.crosstab(v_year, v_genre)\n\n\nfig, ax = plt.subplots()\n\nv_freq.plot.bar(stacked=True, ax=ax)\n\nax.set_xlabel(\"Year\", color=\"white\")\nax.set_ylabel(\"Number of games\", color=\"white\")\nplt.xticks(rotation=0)\n# espacer les années\nax.set_xticks(range(0, len(v_freq.index), 5))\nax.set_xticklabels(v_freq.index[::5])\n\nax.tick_params(colors=\"white\")\n\nfor spine in ax.spines.values():\n    spine.set_color(\"white\")\n\nax.grid(alpha=0.25)\n\nfig.patch.set_alpha(0)\n\n#plt.savefig(\"../image/game_by_gender.png\", dpi=300, transparent=True)\nplt.show()\n\n\n\n\n\n\n\n\n\ngenres_wanted = [\"Action\", \"Fighting\", \"Shooter\"]\n\ndf_filtered = df_game[df_game[\"Genre\"].isin(genres_wanted)].copy()\ndf_filtered[\"Year_of_Release\"] = df_filtered[\"Year_of_Release\"].astype(\"Int64\")\n\nfreq = pd.crosstab(df_filtered[\"Year_of_Release\"], df_filtered[\"Genre\"])\nfreq = freq.loc[1990:2015]\n\n\nimport matplotlib.pyplot as plt\n\nfig, ax = plt.subplots()\n\nfreq.plot.bar(stacked=True, ax=ax)\n\nax.set_xlabel(\"Year\", color=\"white\")\nax.set_ylabel(\"Number of games\", color=\"white\")\n\n# espacer les années\nax.set_xticks(range(0, len(freq.index), 5))\nax.set_xticklabels(freq.index[::5], rotation=0)\n\n# couleur des ticks\nax.tick_params(colors=\"white\")\n\n# bordures\nfor spine in ax.spines.values():\n    spine.set_color(\"white\")\n\nax.grid(alpha=0.25)\n\n# fond transparent\nfig.patch.set_alpha(0)\nax.set_facecolor(\"none\")\n\nplt.savefig(\"../image/game_genre_count.png\", dpi=300, transparent=True)\n\nplt.show()\n\n\n\n\n\n\n\n\n\ngenres_wanted = [\"Action\", \"Fighting\", \"Shooter\"]\ndf_filtered = df_game[df_game[\"Genre\"].isin(genres_wanted)]\n\nyear = df_filtered[\"Year_of_Release\"].astype(int)\ngenre = df_filtered[\"Genre\"]\n\nfreq = pd.crosstab(year, genre)\nsales_by_genre = df_filtered.groupby([year, genre])[\"Global_Sales\"].sum().unstack(fill_value=0)\nsales_by_genre = sales_by_genre.loc[1990:2015]\n\n\nimport matplotlib.pyplot as plt\n\nfig, ax = plt.subplots()\n\nsales_by_genre.plot.bar(stacked=True, ax=ax)\n\nax.set_xlabel(\"Year\", color=\"white\")\nax.set_ylabel(\"Global sales\", color=\"white\")\n\n# espacer les années\nax.set_xticks(range(0, len(sales_by_genre.index), 5))\nax.set_xticklabels(sales_by_genre.index[::5], rotation=0)\n\n# ticks blancs\nax.tick_params(colors=\"white\")\n\n# bordures blanches\nfor spine in ax.spines.values():\n    spine.set_color(\"white\")\n\nax.grid(alpha=0.25)\n\n# fond transparent\nfig.patch.set_alpha(0)\n\nplt.savefig(\"../image/game_gender_pondered.png\", dpi=300, transparent=True)\nplt.show()\n\n\n\n\n\n\n\n\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# données\ny = sales_by_genre[genres_wanted].sum(axis=1)\nx = sales_by_genre.index.astype(int)\n\n# fit polynomial\ncoef = np.polyfit(x, y, deg=4)\npoly = np.poly1d(coef)\n\ny_fit = poly(x)\n\nfig, ax = plt.subplots()\n\nax.plot(x, y, \"o\", label=\"Data\", color=\"white\")\nax.plot(x, y_fit, label=\"Polynomial fit (deg 4)\", color=\"blue\")\n\nax.set_xlabel(\"Year\", color=\"white\")\nax.set_ylabel(\"Global Sales\", color=\"white\")\n\n# espacer les années\nax.set_xticks(x[::5])\nax.set_xticklabels(x[::5], rotation=0)\n\n# ticks blancs\nax.tick_params(colors=\"white\")\n\n# bordures blanches\nfor spine in ax.spines.values():\n    spine.set_color(\"white\")\n\nax.grid(alpha=0.25)\n\nax.legend()\n\n# fond transparent\nfig.patch.set_alpha(0)\n\nplt.savefig(\"../image/game_fitting.png\", dpi=300, transparent=True)\nplt.show()\n\n\ny_fit = pd.Series(poly(x), index=x)\nmurder_series = df_murder.set_index(\"Unnamed: 0\")[\"Murder/Homicide Rate\"]\nmurder_series.index = murder_series.index.astype(int)\n\ncommon_years = y_fit.index.intersection(murder_series.index)\n\nsales_aligned = y_fit.loc[common_years]\nmurder_aligned = murder_series.loc[common_years]\ncorr = sales_aligned.corr(murder_aligned)\nprint(corr)\n\n\nimport matplotlib.pyplot as plt\n\nfig, ax1 = plt.subplots()\n\n# ventes (fit)\nax1.plot(common_years, sales_aligned, color=\"blue\", linewidth=2, label=\"Game sales fit\")\nax1.set_xlabel(\"Year\", color=\"white\")\nax1.set_ylabel(\"Global Sales\", color=\"white\")\n\n# axe homicide\nax2 = ax1.twinx()\nax2.plot(common_years, murder_aligned, color=\"white\", linestyle=\"--\", linewidth=2, label=\"Murder rate\")\nax2.fill_between(common_years, murder_aligned, 1, alpha=0.3, color=\"white\")\nax2.set_ylabel(\"Murder/Homicide Rate\", color=\"white\")\n\n# ticks blancs\nax1.tick_params(colors=\"white\")\nax2.tick_params(colors=\"white\")\n\n# bordures blanches\nfor spine in ax1.spines.values():\n    spine.set_color(\"white\")\nfor spine in ax2.spines.values():\n    spine.set_color(\"white\")\n\n# espacer les années\nax1.set_xticks(common_years[::5])\n\n# grille\nax1.grid(alpha=0.25)\n\n# fond transparent\nfig.patch.set_alpha(0)\n\nplt.savefig(\"../image/game_vs_murder.png\", dpi=300, transparent=True)\nplt.show()"
   },
   {
     "objectID": "en/teaching/bigdata/index.html",
@@ -112,53 +238,18 @@
     "text": "General-Purpose computing on Graphics Processing Units (GPGPU)"
   },
   {
-    "objectID": "en/teaching/syntheseimage/index.html",
-    "href": "en/teaching/syntheseimage/index.html",
-    "title": "Inverse Rendering for Image Synthesis (IRIS)",
-    "section": "",
-    "text": "This part of the course focuses on realistic image synthesis through inverse rendering, exploring how to generate new images from existing ones. It begins by introducing 2D synthesis methods, such as interpolation and extrapolation between views, and highlights their limitations when larger viewpoint changes are required.\nThe course then introduces photogrammetry, which enables the reconstruction of a scene’s 3D structure from multiple images in order to produce consistent novel views. It also covers different scene representations for view synthesis, ranging from point clouds and splats to more recent continuous representations, discussing their respective strengths and limitations for producing realistic images.\nThree hands-on workshops complement the course to help students apply these concepts in practice. Students will learn how to create a portfolio website, integrate a WebGL engine, and digitize a small object using photogrammetry. By the end of the course, each student will have produced a digitized object that can be visualized within their own engine and embedded into their personal website.\n\n\n\nLecture 1: HTML\nLecture 2: HTML\nLecture 3: HTML\n\n\n\n\n\nWorkshop 1: PDF\nWorkshop 2: PDF\nWorkshop 3: PDF\n\n\n\n\n\n\n\n\nTopic\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\nPDF"
-  },
-  {
-    "objectID": "en/teaching/syntheseimage/index.html#lectures",
-    "href": "en/teaching/syntheseimage/index.html#lectures",
-    "title": "Inverse Rendering for Image Synthesis (IRIS)",
-    "section": "",
-    "text": "Lecture 1: HTML\nLecture 2: HTML\nLecture 3: HTML"
-  },
-  {
-    "objectID": "en/teaching/syntheseimage/index.html#workshops",
-    "href": "en/teaching/syntheseimage/index.html#workshops",
-    "title": "Inverse Rendering for Image Synthesis (IRIS)",
-    "section": "",
-    "text": "Workshop 1: PDF\nWorkshop 2: PDF\nWorkshop 3: PDF"
-  },
-  {
-    "objectID": "en/teaching/syntheseimage/index.html#practical-sessions",
-    "href": "en/teaching/syntheseimage/index.html#practical-sessions",
-    "title": "Inverse Rendering for Image Synthesis (IRIS)",
-    "section": "",
-    "text": "Topic\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\nPDF"
-  },
-  {
-    "objectID": "en/teaching/reconstruction/index.html",
-    "href": "en/teaching/reconstruction/index.html",
-    "title": "3D Reconstruction",
-    "section": "",
-    "text": "3D Reconstruction"
-  },
-  {
-    "objectID": "en/teaching/deeplearning/index.html",
-    "href": "en/teaching/deeplearning/index.html",
-    "title": "Deep Learning",
-    "section": "",
-    "text": "Deep Learning"
-  },
-  {
     "objectID": "en/teaching/tid/index.html",
     "href": "en/teaching/tid/index.html",
     "title": "Introduction to Data Processing",
     "section": "",
-    "text": "Introduction to Data Processing"
+    "text": "This course introduces data processing using spreadsheet tools. It explains how to structure observations into tables, and how to extract or produce information using formulas.\nThe objective is to understand fundamental concepts (data, table, cell, formula) in order to develop a clear and transferable approach, applicable to tools such as LibreOffice Calc, Microsoft Excel, or Google Sheets. Practical sessions will allow students to apply these concepts, and a project will involve analyzing a complete dataset to produce results and an interpretation.\n\n\n\nCourse 1 : HTML\nCourse 2 : HTML\nCourse 3 : HTML\nCourse 4 : HTML"
+  },
+  {
+    "objectID": "en/teaching/tid/index.html#courses",
+    "href": "en/teaching/tid/index.html#courses",
+    "title": "Introduction to Data Processing",
+    "section": "",
+    "text": "Course 1 : HTML\nCourse 2 : HTML\nCourse 3 : HTML\nCourse 4 : HTML"
   },
   {
     "objectID": "en/index.html",
@@ -166,13 +257,6 @@
     "title": "Teaching",
     "section": "",
     "text": "Course\nLevel\n\n\n\n\nComputer-Based Data Processing\nL1\n\n\nIntroduction to Big Data\nL3\n\n\nInverse Rendering for Image Synthesis\nM1\n\n\nGeneral-Purpose Computing on Graphics Processing Units (GPGPU)\nM1\n\n\n3D Reconstruction\nM2\n\n\nDeep Learning\nM2"
-  },
-  {
-    "objectID": "fr/teaching/reconstruction/index.html",
-    "href": "fr/teaching/reconstruction/index.html",
-    "title": "Reconstruction 3D",
-    "section": "",
-    "text": "Reconstruction 3D"
   },
   {
     "objectID": "fr/teaching/deeplearning/index.html",
@@ -196,18 +280,39 @@
     "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
   },
   {
-    "objectID": "fr/teaching/tid/index.html",
-    "href": "fr/teaching/tid/index.html",
-    "title": "Traitement Informatique des Données (TID)",
+    "objectID": "fr/teaching/syntheseimage/index.html",
+    "href": "fr/teaching/syntheseimage/index.html",
+    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "",
-    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableau, puis comment en extraire ou produire de l’information à l’aide de formules.\nL’objectif est de comprendre les principes fondamentaux (donnée, tableau, cellule, formule) afin de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettront de mettre en application ces notions, et un projet consistera à analyser un jeu de données complet afin de produire des résultats et une interprétation.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+    "text": "Cette partie du cours traite de la synthèse d’images réalistes par rendu inverse, en s’intéressant à la génération de nouvelles images à partir d’images existantes. Elle commence par présenter des méthodes de synthèse 2D, comme l’interpolation et l’extrapolation entre vues, puis en montre les limites lorsque l’on souhaite modifier davantage le point de vue.\nLe cours introduit ensuite la photogrammétrie, qui permet de reconstruire la structure 3D d’une scène à partir de plusieurs images afin de produire de nouvelles vues de manière cohérente. Il aborde enfin différentes représentations de scènes pour la synthèse de vues, depuis les nuages de points et les splats jusqu’aux représentations continues plus récentes, en discutant leurs apports et leurs limites pour la production d’images réalistes.\nTrois ateliers accompagnent le cours afin de mettre ces concepts en pratique. Les étudiants y apprendront à créer un site portfolio, à y intégrer un moteur WebGL et à réaliser la numérisation d’un petit objet par photogrammétrie. À l’issue du cours, chacun disposera ainsi d’un objet numérisé, visualisable dans son propre moteur et intégré à son propre site.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\n\n\n\n\n\nAtelier 1 : PDF\nAtelier 2 : PDF\nAtelier 3 : PDF\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
   },
   {
-    "objectID": "fr/teaching/tid/index.html#cours",
-    "href": "fr/teaching/tid/index.html#cours",
-    "title": "Traitement Informatique des Données (TID)",
+    "objectID": "fr/teaching/syntheseimage/index.html#cours",
+    "href": "fr/teaching/syntheseimage/index.html#cours",
+    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "",
-    "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+    "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML"
+  },
+  {
+    "objectID": "fr/teaching/syntheseimage/index.html#atelier",
+    "href": "fr/teaching/syntheseimage/index.html#atelier",
+    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
+    "section": "",
+    "text": "Atelier 1 : PDF\nAtelier 2 : PDF\nAtelier 3 : PDF"
+  },
+  {
+    "objectID": "fr/teaching/syntheseimage/index.html#tp",
+    "href": "fr/teaching/syntheseimage/index.html#tp",
+    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
+    "section": "",
+    "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
+  },
+  {
+    "objectID": "fr/teaching/reconstruction/index.html",
+    "href": "fr/teaching/reconstruction/index.html",
+    "title": "Reconstruction 3D",
+    "section": "",
+    "text": "Reconstruction 3D"
   },
   {
     "objectID": "fr/index.html",
