@@ -39,7 +39,7 @@
     "href": "en/teaching/reconstruction/index.html#course-content",
     "title": "3D Reconstruction",
     "section": "Course content",
-    "text": "Course content\n\n\n\nPart\nContent\n\n\n\n\n1\nImage formation and camera models\n\n\n2\nCamera calibration and parameters\n\n\n3\nInterest point detection and matching\n\n\n4\nEpipolar geometry and motion estimation\n\n\n5\nTriangulation and sparse reconstruction\n\n\n6\nDense reconstruction, point clouds, and meshes"
+    "text": "Course content\n\n\n\nLecture\nContent\n\n\n\n\nCM1\nRegistration\n\n\nCM2\nSurface reconstruction\n\n\nCM3\nSegmentation / Understanding\n\n\nCM4\nLearning-based reconstruction"
   },
   {
     "objectID": "en/teaching/reconstruction/index.html#course-materials",
@@ -109,7 +109,7 @@
     "href": "fr/teaching/reconstruction/index.html#contenu-du-cours",
     "title": "Reconstruction 3D",
     "section": "Contenu du cours",
-    "text": "Contenu du cours\n\n\n\nPartie\nContenu\n\n\n\n\n1\nFormation des images et modèles de caméra\n\n\n2\nCalibration et paramètres de caméra\n\n\n3\nDétection et mise en correspondance de points d’intérêt\n\n\n4\nGéométrie épipolaire et estimation du mouvement\n\n\n5\nTriangulation et reconstruction clairsemée\n\n\n6\nReconstruction dense, nuages de points et maillages"
+    "text": "Contenu du cours\n\n\n\nCours\nContenu\n\n\n\n\nCM1\nRegistration\n\n\nCM2\nSurface reconstruction\n\n\nCM3\nSegmentation / Understanding\n\n\nCM4\nLearning-based reconstruction"
   },
   {
     "objectID": "fr/teaching/reconstruction/index.html#supports-de-cours",
@@ -154,11 +154,11 @@
     "text": "Cours\nNiveau\n\n\n\n\nTraitement Informatique des Données\nL1\n\n\nIntroduction au Big Data\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nM1\n\n\nGeneral-purpose computing on graphics processing units (GPGPU)\nM1\n\n\nReconstruction 3D\nM2\n\n\nDeep Learning\nM2"
   },
   {
-    "objectID": "fr/a-propos/index.html",
-    "href": "fr/a-propos/index.html",
-    "title": "Nathan Sanchiz-Viel",
+    "objectID": "fr/contact/index.html",
+    "href": "fr/contact/index.html",
+    "title": "Contact",
     "section": "",
-    "text": "Welcome here !"
+    "text": "Nathan Sanchiz-Viel\nUniversité de Limoges\nnathan.sanchiz-viel@unilim.fr"
   },
   {
     "objectID": "fr/teaching/bigdata/index.html",
@@ -245,11 +245,11 @@
     "text": "Travaux pratiques\n\n\n\nActivité\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF\n—"
   },
   {
-    "objectID": "en/about/index.html",
-    "href": "en/about/index.html",
-    "title": "Nathan Sanchiz-Viel",
+    "objectID": "en/contact/index.html",
+    "href": "en/contact/index.html",
+    "title": "Contact",
     "section": "",
-    "text": "Welcome here !"
+    "text": "Nathan Sanchiz-Viel\nUniversité de Limoges\nnathan.sanchiz-viel@unilim.fr"
   },
   {
     "objectID": "en/teaching/bigdata/index.html",

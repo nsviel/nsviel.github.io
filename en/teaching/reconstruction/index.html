@@ -38,7 +38,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -302,49 +301,41 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<h2 data-anchor-id="overview">Overview</h2>
 <p>This course introduces the main methods used to reconstruct the three-dimensional geometry of an object or scene from multiple images. It covers the different stages of a reconstruction pipeline, from camera modeling and image matching to the production of point clouds and meshes.</p>
 <p>The objective is to understand the geometric principles behind these methods, as well as their limitations when dealing with calibration errors, occlusions, lighting variations, or surfaces that are difficult to observe.</p>
 </section>
 <section id="course-content" class="level2">
-<h2 class="anchored" data-anchor-id="course-content">Course content</h2>
+<h2 data-anchor-id="course-content">Course content</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Part</th>
+<th>Lecture</th>
 <th>Content</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
-<td>Image formation and camera models</td>
+<td>CM1</td>
+<td>Registration</td>
 </tr>
 <tr class="even">
-<td>2</td>
-<td>Camera calibration and parameters</td>
+<td>CM2</td>
+<td>Surface reconstruction</td>
 </tr>
 <tr class="odd">
-<td>3</td>
-<td>Interest point detection and matching</td>
+<td>CM3</td>
+<td>Segmentation / Understanding</td>
 </tr>
 <tr class="even">
-<td>4</td>
-<td>Epipolar geometry and motion estimation</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>Triangulation and sparse reconstruction</td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>Dense reconstruction, point clouds, and meshes</td>
+<td>CM4</td>
+<td>Learning-based reconstruction</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="course-materials" class="level2">
-<h2 class="anchored" data-anchor-id="course-materials">Course materials</h2>
+<h2 data-anchor-id="course-materials">Course materials</h2>
 <ul>
 <li><strong>Lecture 1</strong>: <a href="../../../content/courses/reconstruction/fr/CM/CM1/index.html" class="external" target="_blank">HTML</a></li>
 <li><strong>Lecture 2</strong>: <a href="../../../content/courses/reconstruction/fr/CM/CM2/index.html" class="external" target="_blank">HTML</a></li>
@@ -369,13 +360,6 @@ ul.task-list li input[type="checkbox"] {
       window.document.body.appendChild(a);
     }
     setColorSchemeToggle(hasAlternateSentinel())
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -774,7 +758,7 @@ ul.task-list li input[type="checkbox"] {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p><span class="footer-fr">© 2026 — Contenus sous licence CC BY-NC-SA 4.0</span><span class="footer-en">© 2026 — Content licensed under CC BY-NC-SA 4.0</span></p>
+<p><span class="footer-fr"><a href="../../../fr/contact/">Contact</a><br>© 2026 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank" rel="license noopener">CC BY-NC-SA 4.0</a></span><span class="footer-en"><a href="../../../en/contact/">Contact</a><br>© 2026 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="license noopener">CC BY-NC-SA 4.0</a></span></p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
