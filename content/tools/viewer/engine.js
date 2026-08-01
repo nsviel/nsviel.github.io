@@ -34788,7 +34788,20 @@ void main() {
     const dropZone = document.getElementById("drop-zone");
     const status = document.getElementById("status");
     const filename = document.getElementById("filename");
+    const loading2 = document.getElementById("loading");
+    const loadingText = document.getElementById("loading-text");
     let entity = null;
+    function showLoading(message = "Chargement du mod\xE8le\u2026") {
+      loadingText.textContent = message;
+      loading2.classList.remove("hidden", "error");
+    }
+    function hideLoading() {
+      requestAnimationFrame(() => loading2.classList.add("hidden"));
+    }
+    function showLoadingError() {
+      loadingText.textContent = "Impossible de charger ce mod\xE8le.";
+      loading2.classList.add("error");
+    }
     function setStatus(message, error2 = false) {
       status.hidden = !message;
       status.textContent = message;
@@ -34807,6 +34820,7 @@ void main() {
       scene.remove(object);
     }
     async function display(url, name) {
+      showLoading();
       setStatus("Chargement du mod\xE8le\u2026");
       try {
         const next = await load_glb(url);
@@ -34817,9 +34831,11 @@ void main() {
         filename.textContent = name;
         welcome.classList.add("hidden");
         setStatus("");
+        hideLoading();
       } catch (error2) {
         console.error(error2);
         setStatus("Impossible d\u2019ouvrir ce fichier GLB.", true);
+        showLoadingError();
       }
     }
     openButtons.forEach((button) => button.addEventListener("click", () => input.click()));
@@ -34856,7 +34872,11 @@ void main() {
       URL.revokeObjectURL(url);
     });
     const initialPath = path_from_query();
-    if (initialPath) display(initialPath, decodeURIComponent(initialPath.split("/").pop().split("?")[0]));
+    if (initialPath) {
+      display(initialPath, decodeURIComponent(initialPath.split("/").pop().split("?")[0]));
+    } else {
+      hideLoading();
+    }
   }
 
   // source/content/tools/viewer/js/main.js

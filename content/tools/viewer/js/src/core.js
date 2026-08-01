@@ -27,7 +27,24 @@ export async function engine() {
     const dropZone = document.getElementById("drop-zone");
     const status = document.getElementById("status");
     const filename = document.getElementById("filename");
+    const loading = document.getElementById("loading");
+    const loadingText = document.getElementById("loading-text");
     let entity = null;
+
+    function showLoading(message = "Chargement du modèle…") {
+        loadingText.textContent = message;
+        loading.classList.remove("hidden", "error");
+    }
+
+    function hideLoading() {
+        // Attendre une frame garantit que le modèle a été rendu avant le fondu.
+        requestAnimationFrame(() => loading.classList.add("hidden"));
+    }
+
+    function showLoadingError() {
+        loadingText.textContent = "Impossible de charger ce modèle.";
+        loading.classList.add("error");
+    }
 
     function setStatus(message, error = false) {
         status.hidden = !message;
@@ -49,6 +66,7 @@ export async function engine() {
     }
 
     async function display(url, name) {
+        showLoading();
         setStatus("Chargement du modèle…");
         try {
             const next = await load_glb(url);
@@ -59,9 +77,11 @@ export async function engine() {
             filename.textContent = name;
             welcome.classList.add("hidden");
             setStatus("");
+            hideLoading();
         } catch (error) {
             console.error(error);
             setStatus("Impossible d’ouvrir ce fichier GLB.", true);
+            showLoadingError();
         }
     }
 
@@ -91,5 +111,9 @@ export async function engine() {
     });
 
     const initialPath = path_from_query();
-    if (initialPath) display(initialPath, decodeURIComponent(initialPath.split("/").pop().split("?")[0]));
+    if (initialPath) {
+        display(initialPath, decodeURIComponent(initialPath.split("/").pop().split("?")[0]));
+    } else {
+        hideLoading();
+    }
 }

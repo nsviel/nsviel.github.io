@@ -10,6 +10,10 @@
 <body>
   <main id="viewer">
     <canvas id="webgl" aria-label="Scène 3D"></canvas>
+    <div id="loading" class="loading" role="status" aria-live="polite">
+      <span class="loading-spinner" aria-hidden="true"></span>
+      <span id="loading-text">Chargement du modèle…</span>
+    </div>
     <header class="toolbar">
       <div class="brand"><i></i><span><b>GLB Viewer</b><small id="filename">Aucun modèle</small></span></div>
       <button id="open-button" type="button">Ouvrir un GLB</button>
