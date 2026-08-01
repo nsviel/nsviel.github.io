@@ -1,3 +1,4 @@
+import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 
@@ -15,7 +16,14 @@ export async function load_glb(url) {
             child.receiveShadow = true;
             if (child.geometry && !child.geometry.attributes.normal) child.geometry.computeVertexNormals();
         });
-        return gltf.scene;
+        // glTF est toujours Y-up. Le viewer et Blender travaillent ici en Z-up :
+        // (x, y, z) glTF devient (x, -z, y) dans la scène du viewer.
+        const zUpScene = new THREE.Group();
+        zUpScene.rotation.x = Math.PI / 2;
+        zUpScene.add(gltf.scene);
+        zUpScene.updateMatrixWorld(true);
+
+        return zUpScene;
     } finally {
         draco.dispose();
     }

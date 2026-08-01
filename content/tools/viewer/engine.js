@@ -1,5 +1,5 @@
 (() => {
-  // source/content/tools/glb-viewer/node_modules/three/build/three.core.js
+  // source/content/tools/viewer/node_modules/three/build/three.core.js
   var REVISION = "183";
   var MOUSE = { LEFT: 0, MIDDLE: 1, RIGHT: 2, ROTATE: 0, DOLLY: 1, PAN: 2 };
   var TOUCH = { ROTATE: 0, PAN: 1, DOLLY_PAN: 2, DOLLY_ROTATE: 3 };
@@ -18632,7 +18632,7 @@
     }
   }
 
-  // source/content/tools/glb-viewer/node_modules/three/build/three.module.js
+  // source/content/tools/viewer/node_modules/three/build/three.module.js
   function WebGLAnimation() {
     let context = null;
     let isAnimating = false;
@@ -29918,7 +29918,7 @@ void main() {
     }
   };
 
-  // source/content/tools/glb-viewer/js/src/threejs.js
+  // source/content/tools/viewer/js/src/threejs.js
   function create_canvas(id) {
     const canvas = document.getElementById(id);
     return canvas;
@@ -29937,7 +29937,7 @@ void main() {
     return scene;
   }
 
-  // source/content/tools/glb-viewer/node_modules/three/examples/jsm/utils/BufferGeometryUtils.js
+  // source/content/tools/viewer/node_modules/three/examples/jsm/utils/BufferGeometryUtils.js
   function toTrianglesDrawMode(geometry, drawMode) {
     if (drawMode === TrianglesDrawMode) {
       console.warn("THREE.BufferGeometryUtils.toTrianglesDrawMode(): Geometry already defined as triangles.");
@@ -29993,7 +29993,7 @@ void main() {
     }
   }
 
-  // source/content/tools/glb-viewer/node_modules/three/examples/jsm/utils/SkeletonUtils.js
+  // source/content/tools/viewer/node_modules/three/examples/jsm/utils/SkeletonUtils.js
   function clone(source) {
     const sourceLookup = /* @__PURE__ */ new Map();
     const cloneLookup = /* @__PURE__ */ new Map();
@@ -30023,7 +30023,7 @@ void main() {
     }
   }
 
-  // source/content/tools/glb-viewer/node_modules/three/examples/jsm/loaders/GLTFLoader.js
+  // source/content/tools/viewer/node_modules/three/examples/jsm/loaders/GLTFLoader.js
   var GLTFLoader = class extends Loader {
     /**
      * Constructs a new glTF loader.
@@ -32552,7 +32552,7 @@ void main() {
     });
   }
 
-  // source/content/tools/glb-viewer/node_modules/three/examples/jsm/loaders/DRACOLoader.js
+  // source/content/tools/viewer/node_modules/three/examples/jsm/loaders/DRACOLoader.js
   var _taskCache = /* @__PURE__ */ new WeakMap();
   var DRACOLoader = class extends Loader {
     /**
@@ -32954,7 +32954,7 @@ void main() {
     }
   }
 
-  // source/content/tools/glb-viewer/js/src/loader.js
+  // source/content/tools/viewer/js/src/loader.js
   async function load_glb(url) {
     const draco = new DRACOLoader();
     draco.setDecoderPath("./draco/");
@@ -32968,7 +32968,11 @@ void main() {
         child.receiveShadow = true;
         if (child.geometry && !child.geometry.attributes.normal) child.geometry.computeVertexNormals();
       });
-      return gltf.scene;
+      const zUpScene = new Group();
+      zUpScene.rotation.x = Math.PI / 2;
+      zUpScene.add(gltf.scene);
+      zUpScene.updateMatrixWorld(true);
+      return zUpScene;
     } finally {
       draco.dispose();
     }
@@ -32978,7 +32982,7 @@ void main() {
     return path ? new URL(path, window.location.href).toString() : null;
   }
 
-  // source/content/tools/glb-viewer/js/src/glyph.js
+  // source/content/tools/viewer/js/src/glyph.js
   function add_glyph(scene) {
     const grid = add_grid(scene);
     const axes = add_axes(scene);
@@ -33029,7 +33033,7 @@ void main() {
     return axes;
   }
 
-  // source/content/tools/glb-viewer/js/src/processing.js
+  // source/content/tools/viewer/js/src/processing.js
   function place_and_frame(camera, controls, entity) {
     const box = new Box3().setFromObject(entity);
     if (box.isEmpty()) return;
@@ -33053,7 +33057,7 @@ void main() {
     controls.update();
   }
 
-  // source/content/tools/glb-viewer/js/src/light.js
+  // source/content/tools/viewer/js/src/light.js
   function add_light(scene) {
     const light = new DirectionalLight(16777215, 1.5);
     light.position.set(5, 5, 10);
@@ -33071,7 +33075,7 @@ void main() {
     scene.add(new AmbientLight(16777215, 1));
   }
 
-  // source/content/tools/glb-viewer/node_modules/three/examples/jsm/controls/OrbitControls.js
+  // source/content/tools/viewer/node_modules/three/examples/jsm/controls/OrbitControls.js
   var _changeEvent = { type: "change" };
   var _startEvent = { type: "start" };
   var _endEvent = { type: "end" };
@@ -33981,7 +33985,7 @@ void main() {
     }
   }
 
-  // source/content/tools/glb-viewer/js/src/camera.js
+  // source/content/tools/viewer/js/src/camera.js
   function add_camera(renderer) {
     const camera = new PerspectiveCamera(60, 2, 0.1, 200);
     camera.position.set(3, 2, 4);
@@ -33990,7 +33994,7 @@ void main() {
     return camera;
   }
 
-  // source/content/tools/glb-viewer/js/src/control.js
+  // source/content/tools/viewer/js/src/control.js
   function add_control(scene, renderer, camera) {
     const controls = create_control(renderer, camera);
     add_target(scene, controls);
@@ -34038,7 +34042,7 @@ void main() {
     updateCross();
   }
 
-  // source/content/tools/glb-viewer/js/src/event.js
+  // source/content/tools/viewer/js/src/event.js
   function add_event2(renderer, camera) {
     event_resize(renderer, camera);
     event_keyboard();
@@ -34057,7 +34061,7 @@ void main() {
   function event_keyboard() {
   }
 
-  // source/content/tools/glb-viewer/js/src/loop.js
+  // source/content/tools/viewer/js/src/loop.js
   function run_loop(composer, camera, scene, mesh, controls) {
     let raf = 0;
     function animate(t) {
@@ -34077,7 +34081,7 @@ void main() {
     composer.render();
   }
 
-  // source/content/tools/glb-viewer/node_modules/three/examples/jsm/shaders/CopyShader.js
+  // source/content/tools/viewer/node_modules/three/examples/jsm/shaders/CopyShader.js
   var CopyShader = {
     name: "CopyShader",
     uniforms: {
@@ -34117,7 +34121,7 @@ void main() {
     )
   };
 
-  // source/content/tools/glb-viewer/node_modules/three/examples/jsm/postprocessing/Pass.js
+  // source/content/tools/viewer/node_modules/three/examples/jsm/postprocessing/Pass.js
   var Pass = class {
     /**
      * Constructs a new pass.
@@ -34208,7 +34212,7 @@ void main() {
     }
   };
 
-  // source/content/tools/glb-viewer/node_modules/three/examples/jsm/postprocessing/ShaderPass.js
+  // source/content/tools/viewer/node_modules/three/examples/jsm/postprocessing/ShaderPass.js
   var ShaderPass = class extends Pass {
     /**
      * Constructs a new shader pass.
@@ -34273,7 +34277,7 @@ void main() {
     }
   };
 
-  // source/content/tools/glb-viewer/node_modules/three/examples/jsm/postprocessing/MaskPass.js
+  // source/content/tools/viewer/node_modules/three/examples/jsm/postprocessing/MaskPass.js
   var MaskPass = class extends Pass {
     /**
      * Constructs a new mask pass.
@@ -34361,7 +34365,7 @@ void main() {
     }
   };
 
-  // source/content/tools/glb-viewer/node_modules/three/examples/jsm/postprocessing/EffectComposer.js
+  // source/content/tools/viewer/node_modules/three/examples/jsm/postprocessing/EffectComposer.js
   var EffectComposer = class {
     /**
      * Constructs a new effect composer.
@@ -34546,7 +34550,7 @@ void main() {
     }
   };
 
-  // source/content/tools/glb-viewer/node_modules/three/examples/jsm/postprocessing/RenderPass.js
+  // source/content/tools/viewer/node_modules/three/examples/jsm/postprocessing/RenderPass.js
   var RenderPass = class extends Pass {
     /**
      * Constructs a new render pass.
@@ -34619,7 +34623,7 @@ void main() {
     }
   };
 
-  // source/content/tools/glb-viewer/js/src/edl.js
+  // source/content/tools/viewer/js/src/edl.js
   function create_composer_with_edl(renderer, scene, camera) {
     const params = new URLSearchParams(window.location.search);
     const edlParam = params.get("edl");
@@ -34760,7 +34764,7 @@ void main() {
     )
   };
 
-  // source/content/tools/glb-viewer/js/src/core.js
+  // source/content/tools/viewer/js/src/core.js
   async function engine() {
     const renderer = create_renderer(create_canvas("webgl"));
     const scene = create_scene();
@@ -34848,7 +34852,7 @@ void main() {
     if (initialPath) display(initialPath, decodeURIComponent(initialPath.split("/").pop().split("?")[0]));
   }
 
-  // source/content/tools/glb-viewer/js/main.js
+  // source/content/tools/viewer/js/main.js
   console.log("[engine] loaded");
   engine();
 })();
