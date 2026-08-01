@@ -33066,7 +33066,7 @@ void main() {
 
   // source/content/tools/viewer/js/src/light.js
   function add_light(scene) {
-    const light = new DirectionalLight(16777215, 1.5);
+    const light = new DirectionalLight(16777215, 1.8);
     light.position.set(5, 5, 10);
     light.target.position.set(0, 0, 0);
     light.castShadow = true;
@@ -33079,7 +33079,7 @@ void main() {
     light.shadow.camera.right = 2;
     light.shadow.bias = -1e-4;
     scene.add(light);
-    scene.add(new AmbientLight(16777215, 1));
+    scene.add(new AmbientLight(16777215, 1.2));
   }
 
   // source/content/tools/viewer/node_modules/three/examples/jsm/controls/OrbitControls.js
