@@ -11,91 +11,147 @@
     "href": "fr/teaching/tid/index.html",
     "title": "Traitement Informatique des Données (TID)",
     "section": "",
-    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableau, puis comment en extraire ou produire de l’information à l’aide de formules.\nL’objectif est de comprendre les principes fondamentaux (donnée, tableau, cellule, formule) afin de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettront de mettre en application ces notions, et un projet consistera à analyser un jeu de données complet afin de produire des résultats et une interprétation.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableau, puis comment en extraire ou produire de l’information à l’aide de formules.\nL’objectif est de comprendre les principes fondamentaux — donnée, tableau, cellule et formule — afin de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettent de mettre en application ces notions, et un projet consiste à analyser un jeu de données complet afin de produire des résultats et une interprétation."
   },
   {
-    "objectID": "fr/teaching/tid/index.html#cours",
-    "href": "fr/teaching/tid/index.html#cours",
+    "objectID": "fr/teaching/tid/index.html#présentation",
+    "href": "fr/teaching/tid/index.html#présentation",
     "title": "Traitement Informatique des Données (TID)",
     "section": "",
-    "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableau, puis comment en extraire ou produire de l’information à l’aide de formules.\nL’objectif est de comprendre les principes fondamentaux — donnée, tableau, cellule et formule — afin de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettent de mettre en application ces notions, et un projet consiste à analyser un jeu de données complet afin de produire des résultats et une interprétation."
+  },
+  {
+    "objectID": "fr/teaching/tid/index.html#supports-de-cours",
+    "href": "fr/teaching/tid/index.html#supports-de-cours",
+    "title": "Traitement Informatique des Données (TID)",
+    "section": "Supports de cours",
+    "text": "Supports de cours\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
   },
   {
     "objectID": "fr/teaching/gpgpu/index.html",
     "href": "fr/teaching/gpgpu/index.html",
-    "title": "General-Purpose computing on Graphics Processing Units (GPGPU)",
+    "title": "Calcul généraliste sur processeur graphique (GPGPU)",
     "section": "",
-    "text": "General-Purpose computing on Graphics Processing Units (GPGPU)"
+    "text": "Cette page accueillera les supports de l’enseignement consacré au calcul généraliste sur processeur graphique.\n\n\n\n\n\n\nNote\n\n\n\nLes supports de cours seront prochainement disponibles."
+  },
+  {
+    "objectID": "fr/teaching/gpgpu/index.html#présentation",
+    "href": "fr/teaching/gpgpu/index.html#présentation",
+    "title": "Calcul généraliste sur processeur graphique (GPGPU)",
+    "section": "",
+    "text": "Cette page accueillera les supports de l’enseignement consacré au calcul généraliste sur processeur graphique.\n\n\n\n\n\n\nNote\n\n\n\nLes supports de cours seront prochainement disponibles."
   },
   {
     "objectID": "fr/teaching/bigdata/index.html",
     "href": "fr/teaching/bigdata/index.html",
     "title": "Introduction au Big Data",
     "section": "",
-    "text": "Ce cours de Big Data introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets.\n\n\n\n\n\n\nPériode\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2\n\n\n\n\n\n\n\n\nCours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
+    "text": "Ce cours introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets."
   },
   {
-    "objectID": "fr/teaching/bigdata/index.html#planning-indicatif",
-    "href": "fr/teaching/bigdata/index.html#planning-indicatif",
+    "objectID": "fr/teaching/bigdata/index.html#présentation",
+    "href": "fr/teaching/bigdata/index.html#présentation",
     "title": "Introduction au Big Data",
     "section": "",
-    "text": "Période\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2"
+    "text": "Ce cours introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets."
   },
   {
-    "objectID": "fr/teaching/bigdata/index.html#cours-magistraux",
-    "href": "fr/teaching/bigdata/index.html#cours-magistraux",
+    "objectID": "fr/teaching/bigdata/index.html#organisation",
+    "href": "fr/teaching/bigdata/index.html#organisation",
     "title": "Introduction au Big Data",
-    "section": "",
-    "text": "Cours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+    "section": "Organisation",
+    "text": "Organisation\n\n\n\n\nPériode\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2"
+  },
+  {
+    "objectID": "fr/teaching/bigdata/index.html#supports-de-cours",
+    "href": "fr/teaching/bigdata/index.html#supports-de-cours",
+    "title": "Introduction au Big Data",
+    "section": "Supports de cours",
+    "text": "Supports de cours\n\nCours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
   },
   {
     "objectID": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
     "href": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
     "title": "Introduction au Big Data",
-    "section": "",
-    "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n-\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
+    "section": "Travaux pratiques et projets",
+    "text": "Travaux pratiques et projets\n\n\n\nActivité\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n—\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
   },
   {
     "objectID": "en/teaching/reconstruction/index.html",
     "href": "en/teaching/reconstruction/index.html",
     "title": "3D Reconstruction",
     "section": "",
-    "text": "3D Reconstruction"
+    "text": "This course introduces the main methods used to reconstruct the three-dimensional geometry of an object or scene from multiple images. It covers the different stages of a reconstruction pipeline, from camera modeling and image matching to the production of point clouds and meshes.\nThe objective is to understand the geometric principles behind these methods, as well as their limitations when dealing with calibration errors, occlusions, lighting variations, or surfaces that are difficult to observe."
+  },
+  {
+    "objectID": "en/teaching/reconstruction/index.html#overview",
+    "href": "en/teaching/reconstruction/index.html#overview",
+    "title": "3D Reconstruction",
+    "section": "",
+    "text": "This course introduces the main methods used to reconstruct the three-dimensional geometry of an object or scene from multiple images. It covers the different stages of a reconstruction pipeline, from camera modeling and image matching to the production of point clouds and meshes.\nThe objective is to understand the geometric principles behind these methods, as well as their limitations when dealing with calibration errors, occlusions, lighting variations, or surfaces that are difficult to observe."
+  },
+  {
+    "objectID": "en/teaching/reconstruction/index.html#course-content",
+    "href": "en/teaching/reconstruction/index.html#course-content",
+    "title": "3D Reconstruction",
+    "section": "Course content",
+    "text": "Course content\n\n\n\nPart\nContent\n\n\n\n\n1\nImage formation and camera models\n\n\n2\nCamera calibration and parameters\n\n\n3\nInterest point detection and matching\n\n\n4\nEpipolar geometry and motion estimation\n\n\n5\nTriangulation and sparse reconstruction\n\n\n6\nDense reconstruction, point clouds, and meshes\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe course materials are currently available in French only."
+  },
+  {
+    "objectID": "en/teaching/reconstruction/index.html#course-materials",
+    "href": "en/teaching/reconstruction/index.html#course-materials",
+    "title": "3D Reconstruction",
+    "section": "Course materials",
+    "text": "Course materials\n\nLecture 1: HTML\nLecture 2: HTML"
   },
   {
     "objectID": "en/teaching/syntheseimage/index.html",
     "href": "en/teaching/syntheseimage/index.html",
     "title": "Inverse Rendering for Image Synthesis (IRIS)",
     "section": "",
-    "text": "This part of the course focuses on realistic image synthesis through inverse rendering, exploring how to generate new images from existing ones. It begins by introducing 2D synthesis methods, such as interpolation and extrapolation between views, and highlights their limitations when larger viewpoint changes are required.\nThe course then introduces photogrammetry, which enables the reconstruction of a scene’s 3D structure from multiple images in order to produce consistent novel views. It also covers different scene representations for view synthesis, ranging from point clouds and splats to more recent continuous representations, discussing their respective strengths and limitations for producing realistic images.\nThree hands-on workshops complement the course to help students apply these concepts in practice. Students will learn how to create a portfolio website, integrate a WebGL engine, and digitize a small object using photogrammetry. By the end of the course, each student will have produced a digitized object that can be visualized within their own engine and embedded into their personal website.\n\n\n\nLecture 1: HTML\nLecture 2: HTML\nLecture 3: HTML\n\n\n\n\n\nWorkshop 1: PDF\nWorkshop 2: PDF\nWorkshop 3: PDF\n\n\n\n\n\n\n\n\nTopic\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\nPDF"
+    "text": "This course focuses on realistic image synthesis through inverse rendering, exploring how to generate new images from existing ones. It begins by introducing 2D synthesis methods, such as interpolation and extrapolation between views, and highlights their limitations when larger viewpoint changes are required.\nThe course then introduces photogrammetry, which enables the reconstruction of a scene’s 3D structure from multiple images in order to produce consistent novel views. It also covers different scene representations for view synthesis, ranging from point clouds and splats to more recent continuous representations.\nThree hands-on workshops complement the course. Students learn how to create a portfolio website, integrate a WebGL engine, and digitize a small object using photogrammetry.\n\n\n\n\n\n\nNote\n\n\n\nThe course materials are currently available in French only."
   },
   {
-    "objectID": "en/teaching/syntheseimage/index.html#lectures",
-    "href": "en/teaching/syntheseimage/index.html#lectures",
+    "objectID": "en/teaching/syntheseimage/index.html#overview",
+    "href": "en/teaching/syntheseimage/index.html#overview",
     "title": "Inverse Rendering for Image Synthesis (IRIS)",
     "section": "",
-    "text": "Lecture 1: HTML\nLecture 2: HTML\nLecture 3: HTML"
+    "text": "This course focuses on realistic image synthesis through inverse rendering, exploring how to generate new images from existing ones. It begins by introducing 2D synthesis methods, such as interpolation and extrapolation between views, and highlights their limitations when larger viewpoint changes are required.\nThe course then introduces photogrammetry, which enables the reconstruction of a scene’s 3D structure from multiple images in order to produce consistent novel views. It also covers different scene representations for view synthesis, ranging from point clouds and splats to more recent continuous representations.\nThree hands-on workshops complement the course. Students learn how to create a portfolio website, integrate a WebGL engine, and digitize a small object using photogrammetry.\n\n\n\n\n\n\nNote\n\n\n\nThe course materials are currently available in French only."
+  },
+  {
+    "objectID": "en/teaching/syntheseimage/index.html#course-materials",
+    "href": "en/teaching/syntheseimage/index.html#course-materials",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
+    "section": "Course materials",
+    "text": "Course materials\n\nLecture 1: HTML\nLecture 2: HTML\nLecture 3: HTML"
   },
   {
     "objectID": "en/teaching/syntheseimage/index.html#workshops",
     "href": "en/teaching/syntheseimage/index.html#workshops",
     "title": "Inverse Rendering for Image Synthesis (IRIS)",
-    "section": "",
-    "text": "Workshop 1: PDF\nWorkshop 2: PDF\nWorkshop 3: PDF"
+    "section": "Workshops",
+    "text": "Workshops\n\nWorkshop 1: PDF\nWorkshop 2: PDF\nWorkshop 3: PDF"
   },
   {
     "objectID": "en/teaching/syntheseimage/index.html#practical-sessions",
     "href": "en/teaching/syntheseimage/index.html#practical-sessions",
     "title": "Inverse Rendering for Image Synthesis (IRIS)",
-    "section": "",
-    "text": "Topic\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\nPDF"
+    "section": "Practical sessions",
+    "text": "Practical sessions\n\n\n\nActivity\nTopic\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\nPDF\n—"
   },
   {
     "objectID": "en/teaching/deeplearning/index.html",
     "href": "en/teaching/deeplearning/index.html",
     "title": "Deep Learning",
     "section": "",
-    "text": "Deep Learning"
+    "text": "This page will provide the course materials and practical sessions for the Deep Learning course.\n\n\n\n\n\n\nNote\n\n\n\nThe English course materials are currently being prepared."
+  },
+  {
+    "objectID": "en/teaching/deeplearning/index.html#overview",
+    "href": "en/teaching/deeplearning/index.html#overview",
+    "title": "Deep Learning",
+    "section": "",
+    "text": "This page will provide the course materials and practical sessions for the Deep Learning course.\n\n\n\n\n\n\nNote\n\n\n\nThe English course materials are currently being prepared."
   },
   {
     "objectID": "en/about/index.html",
@@ -207,49 +263,70 @@
     "href": "en/teaching/bigdata/index.html",
     "title": "Introduction to Big Data",
     "section": "",
-    "text": "This Big Data course introduces the fundamentals of information retrieval from data. It covers key concepts such as the distinction between data, information, and knowledge, as well as the principle of abstraction in computer science. These concepts are illustrated through concrete applications and put into practice through projects inspired by real-world professional scenarios.\nThe course is primarily self-directed, and assessment is based exclusively on the completion of two projects.\n\n\n\n\n\n\nPeriod\nContent\n\n\n\n\nMonth 1\nLabs\n\n\nMonth 2\nProject 1\n\n\nMonth 3\nProject 2\n\n\n\n\n\n\n\n\nLecture 1 : PDF\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML\n\n\n\n\n\n\n\n\nSubject\nDataset\n\n\n\n\nLab 1\nPDF\nCSV\n\n\nLab 2\nPDF\n-\n\n\nProject 1\nPDF\nCSV\n\n\nProject 2\nPDF\nODS"
+    "text": "This course introduces the fundamentals of information retrieval from data. It covers key concepts such as the distinction between data, information, and knowledge, as well as the principle of abstraction in computer science. These concepts are illustrated through concrete applications and put into practice through projects inspired by real-world professional scenarios.\nThe course is primarily self-directed, and assessment is based exclusively on the completion of two projects.\n\n\n\n\n\n\nNote\n\n\n\nThe course materials are currently available in French only."
   },
   {
-    "objectID": "en/teaching/bigdata/index.html#indicative-planning",
-    "href": "en/teaching/bigdata/index.html#indicative-planning",
+    "objectID": "en/teaching/bigdata/index.html#overview",
+    "href": "en/teaching/bigdata/index.html#overview",
     "title": "Introduction to Big Data",
     "section": "",
-    "text": "Period\nContent\n\n\n\n\nMonth 1\nLabs\n\n\nMonth 2\nProject 1\n\n\nMonth 3\nProject 2"
+    "text": "This course introduces the fundamentals of information retrieval from data. It covers key concepts such as the distinction between data, information, and knowledge, as well as the principle of abstraction in computer science. These concepts are illustrated through concrete applications and put into practice through projects inspired by real-world professional scenarios.\nThe course is primarily self-directed, and assessment is based exclusively on the completion of two projects.\n\n\n\n\n\n\nNote\n\n\n\nThe course materials are currently available in French only."
   },
   {
-    "objectID": "en/teaching/bigdata/index.html#lectures",
-    "href": "en/teaching/bigdata/index.html#lectures",
+    "objectID": "en/teaching/bigdata/index.html#organization",
+    "href": "en/teaching/bigdata/index.html#organization",
     "title": "Introduction to Big Data",
-    "section": "",
-    "text": "Lecture 1 : PDF\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML"
+    "section": "Organization",
+    "text": "Organization\n\n\n\n\nPeriod\nContent\n\n\n\n\nMonth 1\nLabs\n\n\nMonth 2\nProject 1\n\n\nMonth 3\nProject 2"
   },
   {
-    "objectID": "en/teaching/bigdata/index.html#labs-projects",
-    "href": "en/teaching/bigdata/index.html#labs-projects",
+    "objectID": "en/teaching/bigdata/index.html#course-materials",
+    "href": "en/teaching/bigdata/index.html#course-materials",
     "title": "Introduction to Big Data",
-    "section": "",
-    "text": "Subject\nDataset\n\n\n\n\nLab 1\nPDF\nCSV\n\n\nLab 2\nPDF\n-\n\n\nProject 1\nPDF\nCSV\n\n\nProject 2\nPDF\nODS"
+    "section": "Course materials",
+    "text": "Course materials\n\nLecture 1: PDF\nLecture 2: HTML\nLecture 3: HTML\nLecture 4: HTML"
+  },
+  {
+    "objectID": "en/teaching/bigdata/index.html#labs-and-projects",
+    "href": "en/teaching/bigdata/index.html#labs-and-projects",
+    "title": "Introduction to Big Data",
+    "section": "Labs and projects",
+    "text": "Labs and projects\n\n\n\nActivity\nSubject\nDataset\n\n\n\n\nLab 1\nPDF\nCSV\n\n\nLab 2\nPDF\n—\n\n\nProject 1\nPDF\nCSV\n\n\nProject 2\nPDF\nODS"
   },
   {
     "objectID": "en/teaching/gpgpu/index.html",
     "href": "en/teaching/gpgpu/index.html",
-    "title": "General-Purpose computing on Graphics Processing Units (GPGPU)",
+    "title": "General-Purpose Computing on Graphics Processing Units (GPGPU)",
     "section": "",
-    "text": "General-Purpose computing on Graphics Processing Units (GPGPU)"
+    "text": "This page will provide the materials for the course on general-purpose computing using graphics processing units.\n\n\n\n\n\n\nNote\n\n\n\nThe course materials will be available soon."
+  },
+  {
+    "objectID": "en/teaching/gpgpu/index.html#overview",
+    "href": "en/teaching/gpgpu/index.html#overview",
+    "title": "General-Purpose Computing on Graphics Processing Units (GPGPU)",
+    "section": "",
+    "text": "This page will provide the materials for the course on general-purpose computing using graphics processing units.\n\n\n\n\n\n\nNote\n\n\n\nThe course materials will be available soon."
   },
   {
     "objectID": "en/teaching/tid/index.html",
     "href": "en/teaching/tid/index.html",
     "title": "Introduction to Data Processing",
     "section": "",
-    "text": "This course introduces data processing using spreadsheet tools. It explains how to structure observations into tables, and how to extract or produce information using formulas.\nThe objective is to understand fundamental concepts (data, table, cell, formula) in order to develop a clear and transferable approach, applicable to tools such as LibreOffice Calc, Microsoft Excel, or Google Sheets. Practical sessions will allow students to apply these concepts, and a project will involve analyzing a complete dataset to produce results and an interpretation.\n\n\n\nCourse 1 : HTML\nCourse 2 : HTML\nCourse 3 : HTML\nCourse 4 : HTML"
+    "text": "This course introduces data processing using spreadsheet tools. It explains how to structure observations into tables and how to extract or produce information using formulas.\nThe objective is to understand fundamental concepts — data, table, cell, and formula — in order to develop a clear and transferable approach, applicable to tools such as LibreOffice Calc, Microsoft Excel, or Google Sheets. Practical sessions allow students to apply these concepts, and a project involves analyzing a complete dataset to produce results and an interpretation.\n\n\n\n\n\n\nNote\n\n\n\nThe course materials are currently available in French only."
   },
   {
-    "objectID": "en/teaching/tid/index.html#courses",
-    "href": "en/teaching/tid/index.html#courses",
+    "objectID": "en/teaching/tid/index.html#overview",
+    "href": "en/teaching/tid/index.html#overview",
     "title": "Introduction to Data Processing",
     "section": "",
-    "text": "Course 1 : HTML\nCourse 2 : HTML\nCourse 3 : HTML\nCourse 4 : HTML"
+    "text": "This course introduces data processing using spreadsheet tools. It explains how to structure observations into tables and how to extract or produce information using formulas.\nThe objective is to understand fundamental concepts — data, table, cell, and formula — in order to develop a clear and transferable approach, applicable to tools such as LibreOffice Calc, Microsoft Excel, or Google Sheets. Practical sessions allow students to apply these concepts, and a project involves analyzing a complete dataset to produce results and an interpretation.\n\n\n\n\n\n\nNote\n\n\n\nThe course materials are currently available in French only."
+  },
+  {
+    "objectID": "en/teaching/tid/index.html#course-materials",
+    "href": "en/teaching/tid/index.html#course-materials",
+    "title": "Introduction to Data Processing",
+    "section": "Course materials",
+    "text": "Course materials\n\nLecture 1: HTML\nLecture 2: HTML\nLecture 3: HTML\nLecture 4: HTML"
   },
   {
     "objectID": "en/index.html",
@@ -263,56 +340,91 @@
     "href": "fr/teaching/deeplearning/index.html",
     "title": "Deep Learning",
     "section": "",
-    "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
+    "text": "Cette page rassemble les supports de cours et les travaux pratiques de l’enseignement de Deep Learning."
   },
   {
-    "objectID": "fr/teaching/deeplearning/index.html#cours",
-    "href": "fr/teaching/deeplearning/index.html#cours",
+    "objectID": "fr/teaching/deeplearning/index.html#présentation",
+    "href": "fr/teaching/deeplearning/index.html#présentation",
     "title": "Deep Learning",
     "section": "",
-    "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML"
+    "text": "Cette page rassemble les supports de cours et les travaux pratiques de l’enseignement de Deep Learning."
   },
   {
-    "objectID": "fr/teaching/deeplearning/index.html#tp",
-    "href": "fr/teaching/deeplearning/index.html#tp",
+    "objectID": "fr/teaching/deeplearning/index.html#supports-de-cours",
+    "href": "fr/teaching/deeplearning/index.html#supports-de-cours",
     "title": "Deep Learning",
-    "section": "",
-    "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
+    "section": "Supports de cours",
+    "text": "Supports de cours\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML"
+  },
+  {
+    "objectID": "fr/teaching/deeplearning/index.html#travaux-pratiques",
+    "href": "fr/teaching/deeplearning/index.html#travaux-pratiques",
+    "title": "Deep Learning",
+    "section": "Travaux pratiques",
+    "text": "Travaux pratiques\n\n\n\nActivité\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF\n—"
   },
   {
     "objectID": "fr/teaching/syntheseimage/index.html",
     "href": "fr/teaching/syntheseimage/index.html",
     "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "",
-    "text": "Cette partie du cours traite de la synthèse d’images réalistes par rendu inverse, en s’intéressant à la génération de nouvelles images à partir d’images existantes. Elle commence par présenter des méthodes de synthèse 2D, comme l’interpolation et l’extrapolation entre vues, puis en montre les limites lorsque l’on souhaite modifier davantage le point de vue.\nLe cours introduit ensuite la photogrammétrie, qui permet de reconstruire la structure 3D d’une scène à partir de plusieurs images afin de produire de nouvelles vues de manière cohérente. Il aborde enfin différentes représentations de scènes pour la synthèse de vues, depuis les nuages de points et les splats jusqu’aux représentations continues plus récentes, en discutant leurs apports et leurs limites pour la production d’images réalistes.\nTrois ateliers accompagnent le cours afin de mettre ces concepts en pratique. Les étudiants y apprendront à créer un site portfolio, à y intégrer un moteur WebGL et à réaliser la numérisation d’un petit objet par photogrammétrie. À l’issue du cours, chacun disposera ainsi d’un objet numérisé, visualisable dans son propre moteur et intégré à son propre site.\n\n\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\n\n\n\n\n\nAtelier 1 : PDF\nAtelier 2 : PDF\nAtelier 3 : PDF\n\n\n\n\n\n\n\n\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
+    "text": "Cette partie du cours traite de la synthèse d’images réalistes par rendu inverse, en s’intéressant à la génération de nouvelles images à partir d’images existantes. Elle commence par présenter des méthodes de synthèse 2D, comme l’interpolation et l’extrapolation entre vues, puis en montre les limites lorsque l’on souhaite modifier davantage le point de vue.\nLe cours introduit ensuite la photogrammétrie, qui permet de reconstruire la structure 3D d’une scène à partir de plusieurs images afin de produire de nouvelles vues de manière cohérente. Il aborde enfin différentes représentations de scènes pour la synthèse de vues, depuis les nuages de points et les splats jusqu’aux représentations continues plus récentes.\nTrois ateliers accompagnent le cours. Les étudiants y apprennent à créer un site portfolio, à y intégrer un moteur WebGL et à réaliser la numérisation d’un petit objet par photogrammétrie."
   },
   {
-    "objectID": "fr/teaching/syntheseimage/index.html#cours",
-    "href": "fr/teaching/syntheseimage/index.html#cours",
+    "objectID": "fr/teaching/syntheseimage/index.html#présentation",
+    "href": "fr/teaching/syntheseimage/index.html#présentation",
     "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "",
-    "text": "Cours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML"
+    "text": "Cette partie du cours traite de la synthèse d’images réalistes par rendu inverse, en s’intéressant à la génération de nouvelles images à partir d’images existantes. Elle commence par présenter des méthodes de synthèse 2D, comme l’interpolation et l’extrapolation entre vues, puis en montre les limites lorsque l’on souhaite modifier davantage le point de vue.\nLe cours introduit ensuite la photogrammétrie, qui permet de reconstruire la structure 3D d’une scène à partir de plusieurs images afin de produire de nouvelles vues de manière cohérente. Il aborde enfin différentes représentations de scènes pour la synthèse de vues, depuis les nuages de points et les splats jusqu’aux représentations continues plus récentes.\nTrois ateliers accompagnent le cours. Les étudiants y apprennent à créer un site portfolio, à y intégrer un moteur WebGL et à réaliser la numérisation d’un petit objet par photogrammétrie."
   },
   {
-    "objectID": "fr/teaching/syntheseimage/index.html#atelier",
-    "href": "fr/teaching/syntheseimage/index.html#atelier",
+    "objectID": "fr/teaching/syntheseimage/index.html#supports-de-cours",
+    "href": "fr/teaching/syntheseimage/index.html#supports-de-cours",
     "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
-    "section": "",
-    "text": "Atelier 1 : PDF\nAtelier 2 : PDF\nAtelier 3 : PDF"
+    "section": "Supports de cours",
+    "text": "Supports de cours\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML"
   },
   {
-    "objectID": "fr/teaching/syntheseimage/index.html#tp",
-    "href": "fr/teaching/syntheseimage/index.html#tp",
+    "objectID": "fr/teaching/syntheseimage/index.html#ateliers",
+    "href": "fr/teaching/syntheseimage/index.html#ateliers",
     "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
-    "section": "",
-    "text": "Sujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF"
+    "section": "Ateliers",
+    "text": "Ateliers\n\nAtelier 1 : PDF\nAtelier 2 : PDF\nAtelier 3 : PDF"
+  },
+  {
+    "objectID": "fr/teaching/syntheseimage/index.html#travaux-pratiques",
+    "href": "fr/teaching/syntheseimage/index.html#travaux-pratiques",
+    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
+    "section": "Travaux pratiques",
+    "text": "Travaux pratiques\n\n\n\nActivité\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF\n—"
   },
   {
     "objectID": "fr/teaching/reconstruction/index.html",
     "href": "fr/teaching/reconstruction/index.html",
     "title": "Reconstruction 3D",
     "section": "",
-    "text": "Reconstruction 3D"
+    "text": "Ce cours présente les principales méthodes permettant de reconstruire la géométrie tridimensionnelle d’un objet ou d’une scène à partir de plusieurs images. Il aborde les différentes étapes d’une chaîne de reconstruction, depuis la modélisation des caméras et la mise en correspondance des images jusqu’à la production de nuages de points et de maillages.\nL’objectif est de comprendre les principes géométriques sur lesquels reposent ces méthodes, mais aussi leurs limites face aux erreurs de calibration, aux occultations, aux variations d’éclairage ou aux surfaces difficiles à observer."
+  },
+  {
+    "objectID": "fr/teaching/reconstruction/index.html#présentation",
+    "href": "fr/teaching/reconstruction/index.html#présentation",
+    "title": "Reconstruction 3D",
+    "section": "",
+    "text": "Ce cours présente les principales méthodes permettant de reconstruire la géométrie tridimensionnelle d’un objet ou d’une scène à partir de plusieurs images. Il aborde les différentes étapes d’une chaîne de reconstruction, depuis la modélisation des caméras et la mise en correspondance des images jusqu’à la production de nuages de points et de maillages.\nL’objectif est de comprendre les principes géométriques sur lesquels reposent ces méthodes, mais aussi leurs limites face aux erreurs de calibration, aux occultations, aux variations d’éclairage ou aux surfaces difficiles à observer."
+  },
+  {
+    "objectID": "fr/teaching/reconstruction/index.html#contenu-du-cours",
+    "href": "fr/teaching/reconstruction/index.html#contenu-du-cours",
+    "title": "Reconstruction 3D",
+    "section": "Contenu du cours",
+    "text": "Contenu du cours\n\n\n\nPartie\nContenu\n\n\n\n\n1\nFormation des images et modèles de caméra\n\n\n2\nCalibration et paramètres de caméra\n\n\n3\nDétection et mise en correspondance de points d’intérêt\n\n\n4\nGéométrie épipolaire et estimation du mouvement\n\n\n5\nTriangulation et reconstruction clairsemée\n\n\n6\nReconstruction dense, nuages de points et maillages"
+  },
+  {
+    "objectID": "fr/teaching/reconstruction/index.html#supports-de-cours",
+    "href": "fr/teaching/reconstruction/index.html#supports-de-cours",
+    "title": "Reconstruction 3D",
+    "section": "Supports de cours",
+    "text": "Supports de cours\n\nCours 1 : HTML\nCours 2 : HTML"
   },
   {
     "objectID": "fr/index.html",
