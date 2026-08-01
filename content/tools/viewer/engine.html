@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>GLB Viewer</title>
+  <link rel="stylesheet" href="./engine.css" />
+</head>
+<body>
+  <main id="viewer">
+    <canvas id="webgl" aria-label="Scène 3D"></canvas>
+    <header class="toolbar">
+      <div class="brand"><i></i><span><b>GLB Viewer</b><small id="filename">Aucun modèle</small></span></div>
+      <button id="open-button" type="button">Ouvrir un GLB</button>
+      <input id="file-input" type="file" accept=".glb,model/gltf-binary" hidden />
+    </header>
+    <section id="welcome" class="welcome">
+      <div class="cube">3D</div>
+      <h1>Ouvrez un modèle 3D</h1>
+      <p>Sélectionnez ou glissez-déposez un fichier <code>.glb</code>.</p>
+      <button id="welcome-button" type="button">Choisir un fichier</button>
+    </section>
+    <div id="drop-zone" class="drop-zone"><strong>Déposez le fichier GLB</strong></div>
+    <div id="status" class="status" role="status" aria-live="polite" hidden></div>
+    <div class="help">Rotation · clic gauche&nbsp;&nbsp; Zoom · molette&nbsp;&nbsp; Déplacement · clic droit</div>
+  </main>
+  <script src="./engine.js"></script>
+</body>
+</html>
