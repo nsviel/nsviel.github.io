@@ -26,7 +26,9 @@ export function create_scene(){
 
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x111111);
-    scene.fog = new THREE.Fog( 0x111111, 10, 1000 );
+    // La grille disparaît progressivement avant que ses lignes sub-pixel
+    // ne créent du moiré à l'horizon.
+    scene.fog = new THREE.Fog(0x111111, 20, 65);
 
 
     //---------------

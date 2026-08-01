@@ -29933,7 +29933,7 @@ void main() {
   function create_scene() {
     const scene = new Scene();
     scene.background = new Color(1118481);
-    scene.fog = new Fog(1118481, 10, 1e3);
+    scene.fog = new Fog(1118481, 20, 65);
     return scene;
   }
 
@@ -32988,25 +32988,25 @@ void main() {
     const axes = add_axes(scene);
   }
   function add_grid(scene) {
-    const size = 1e3;
-    const divisions = 1e3;
-    const opacity = 1;
+    const size = 100;
+    const divisions = 100;
     const planeGeo = new PlaneGeometry(size, size);
     const planeMat = new MeshStandardMaterial({
       color: 5197647,
       side: DoubleSide,
       polygonOffset: true,
-      polygonOffsetFactor: 1,
-      polygonOffsetUnits: 1
+      polygonOffsetFactor: 2,
+      polygonOffsetUnits: 2
     });
     const plane = new Mesh(planeGeo, planeMat);
+    plane.position.z = -0.025;
     plane.receiveShadow = true;
     scene.add(plane);
-    const grid = new GridHelper(size, divisions, 16777215);
+    const grid = new GridHelper(size, divisions, 9410206, 6844021);
     grid.rotation.x = Math.PI / 2;
-    grid.material.transparent = true;
-    grid.material.opacity = opacity;
-    grid.material.depthWrite = false;
+    grid.material.transparent = false;
+    grid.material.depthWrite = true;
+    grid.material.fog = true;
     scene.add(grid);
     return { plane, grid };
   }
@@ -33037,10 +33037,17 @@ void main() {
   function place_and_frame(camera, controls, entity) {
     const box = new Box3().setFromObject(entity);
     if (box.isEmpty()) return;
+    const initialSize = box.getSize(new Vector3());
+    if (initialSize.z > Number.EPSILON) {
+      entity.scale.multiplyScalar(5 / initialSize.z);
+      entity.updateMatrixWorld(true);
+      box.setFromObject(entity);
+    }
     const center = box.getCenter(new Vector3());
     entity.position.x -= center.x;
     entity.position.y -= center.y;
     entity.position.z -= box.min.z;
+    entity.updateMatrixWorld(true);
     box.setFromObject(entity);
     box.getCenter(center);
     const size = box.getSize(new Vector3());

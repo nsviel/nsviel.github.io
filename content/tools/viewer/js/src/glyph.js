@@ -15,9 +15,10 @@ export function add_glyph(scene) {
 function add_grid(scene) {
     //---------------
 
-    const size = 1000;
-    const divisions = 1000;
-    const opacity = 1;
+    // Une maille par unité suffit à l'échelle normalisée des modèles.
+    // Une grille trop dense au loin produit du moiré pendant les mouvements.
+    const size = 100;
+    const divisions = 100;
 
     // 1️⃣ Plan plein
     const planeGeo = new THREE.PlaneGeometry(size, size);
@@ -25,20 +26,22 @@ function add_grid(scene) {
         color: 0x4f4f4f,
         side: THREE.DoubleSide,
         polygonOffset: true,
-        polygonOffsetFactor: 1,
-        polygonOffsetUnits: 1
+        polygonOffsetFactor: 2,
+        polygonOffsetUnits: 2
     });
 
     const plane = new THREE.Mesh(planeGeo, planeMat);
+    // Le support et les lignes ne sont plus coplanaires : aucun z-fighting.
+    plane.position.z = -0.025;
     plane.receiveShadow = true;
     scene.add(plane);
 
     // 2️⃣ Grille
-    const grid = new THREE.GridHelper(size, divisions, 0xffffff);
+    const grid = new THREE.GridHelper(size, divisions, 0x8f969e, 0x686e75);
     grid.rotation.x = Math.PI / 2;
-    grid.material.transparent = true;
-    grid.material.opacity = opacity;
-    grid.material.depthWrite = false;
+    grid.material.transparent = false;
+    grid.material.depthWrite = true;
+    grid.material.fog = true;
     scene.add(grid);
 
     //---------------

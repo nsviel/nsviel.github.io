@@ -4,10 +4,20 @@ export function place_and_frame(camera, controls, entity) {
     const box = new THREE.Box3().setFromObject(entity);
     if (box.isEmpty()) return;
 
+    // Tous les modèles occupent la même hauteur dans le viewer, quelle que
+    // soit l'unité utilisée à l'export (mètres, centimètres, etc.).
+    const initialSize = box.getSize(new THREE.Vector3());
+    if (initialSize.z > Number.EPSILON) {
+        entity.scale.multiplyScalar(5 / initialSize.z);
+        entity.updateMatrixWorld(true);
+        box.setFromObject(entity);
+    }
+
     const center = box.getCenter(new THREE.Vector3());
     entity.position.x -= center.x;
     entity.position.y -= center.y;
     entity.position.z -= box.min.z;
+    entity.updateMatrixWorld(true);
 
     box.setFromObject(entity);
     box.getCenter(center);
