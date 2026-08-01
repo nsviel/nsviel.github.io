@@ -15,8 +15,8 @@
   <meta name="generator" content="quarto-1.9.38">
 
   <meta name="author" content="nsv">
-  <meta name="dcterms.date" content="2026-07-30">
-  <title>TID - CM1</title>
+  <meta name="dcterms.date" content="2026-08-01">
+  <title>R3D - CM1</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -38,7 +38,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-f20926ca42ddee0d7d9520ea39e413dd.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-f41c6d1be099dfdaf426ae133e5a1045.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -434,8 +434,8 @@ T=(R,\mathbf{t})
 <section id="correspondance" class="slide level2 center">
 <h2>Correspondance</h2>
 <p><br></p>
-
-<img data-src="content/image/manual.svg" style="width:80.0%" class="r-stretch"><p>Chaque point du scan A</p>
+<p><img data-src="content/image/manual.svg" style="width:80.0%"></p>
+<p>Chaque point du scan A</p>
 <p>correspond à un point du scan B.</p>
 </section>
 <section id="avec-suffisamment-de-correspondances" class="slide level2 center">
@@ -592,7 +592,7 @@ T=(R,\mathbf{t})
 <p>les scans deviennent</p>
 <p>un peu mieux alignés.</p>
 </section>
-<section id="section-31" class="slide level2" data-background-iframe="content/iframe/icp_torus/index.html" data-background-interactive="true">
+<section id="section-31" class="slide level2" data-background-iframe="content/iframe/icp_torus/index.html" data-background-iframe-sandbox="allow-scripts">
 <h2></h2>
 </section>
 <section id="section-32" class="slide level2 center">
@@ -634,7 +634,7 @@ E(R,t)=\sum_{i=1}^{N}\left\|R\,p_i+t-q_i\right\|^2
 \]</span></p>
 </div>
 </section>
-<section id="exemple-doptimisation" class="slide level2 hcenter" data-background-iframe="content/iframe/gradient_simple/index.html">
+<section id="exemple-doptimisation" class="slide level2 hcenter" data-iframe-interactive="false" data-background-iframe="content/iframe/gradient_simple/index.html" data-background-iframe-sandbox="allow-scripts">
 <h2>Exemple d’optimisation</h2>
 <div class="fragment">
 <p><span class="math display">\[
@@ -651,7 +651,7 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 \]</span></p>
 </div>
 </section>
-<section id="section-35" class="slide level2 center" data-background-iframe="content/iframe/minimization/index.html">
+<section id="section-35" class="slide level2 center" data-iframe-interactive="false" data-background-iframe="content/iframe/minimization/index.html" data-background-iframe-sandbox="allow-scripts">
 <h2></h2>
 <div class="large">
 <p>On mesure la qualité</p>
@@ -690,7 +690,10 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 <section id="mais-personne-nest-parfait" class="slide level2 error center">
 <h2><span class="LARGE">Mais personne n’est parfait</span></h2>
 </section>
-<section id="section-39" class="slide level2" data-background-iframe="content/iframe/icp_bunny/index.html" data-background-interactive="true">
+<section id="section-39" class="slide level2" data-background-iframe="https://www.youtube.com/embed/VAbKGMgg3j8?autoplay=1&amp;mute=0&amp;controls=1&amp;rel=0&amp;cc_load_policy=0" data-background-iframe-sandbox="allow-scripts">
+<h2></h2>
+</section>
+<section id="section-40" class="slide level2" data-background-iframe="content/iframe/icp_bunny/index.html" data-background-iframe-sandbox="allow-scripts">
 <h2></h2>
 <!-- /BLOC -->
 <!-- BLOC 4 Les limites d'ICP -->
@@ -698,7 +701,7 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 <section id="bloc-4" class="slide level2 bloc" data-name="Bloc 4">
 <h2>Bloc 4</h2>
 </section>
-<section id="section-40" class="slide level2 center">
+<section id="section-41" class="slide level2 center">
 <h2></h2>
 <p><br></p>
 <div class="Large">
@@ -709,7 +712,7 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 <p><br><br></p>
 <p><span class="fragment Large">… à condition que tout se passe bien.</span></p>
 </section>
-<section id="section-41" class="slide level2" data-background-iframe="content/iframe/icp_bunny_good/index.html" data-background-interactive="true">
+<section id="section-42" class="slide level2" data-background-iframe="content/iframe/icp_bunny_good/index.html" data-background-iframe-sandbox="allow-scripts">
 <h2></h2>
 <p><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <div class="titlebox topright green">
@@ -718,14 +721,14 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 <p>Bonne initialisation</p>
 </div>
 </section>
-<section id="section-42" class="slide level2" data-background-iframe="content/iframe/icp_bunny/index.html" data-background-interactive="true">
+<section id="section-43" class="slide level2" data-background-iframe="content/iframe/icp_bunny/index.html" data-background-iframe-sandbox="allow-scripts">
 <h2></h2>
 <p><br><br><br><br><br><br><br><br><br><br></p>
 <div class="titlebox red">
 <p>Mauvaise initialisation</p>
 </div>
 </section>
-<section id="section-43" class="slide level2" data-background-iframe="content/iframe/gradient/index.html">
+<section id="section-44" class="slide level2" data-iframe-interactive="false" data-background-iframe="content/iframe/gradient/index.html" data-background-iframe-sandbox="allow-scripts">
 <h2></h2>
 <p><br><br><br><br><br><br><br><br><br><br></p>
 <div class="titlebox topright">
@@ -733,14 +736,14 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 <p>vers la mauvaise solution.</p>
 </div>
 </section>
-<section id="section-44" class="slide level2" data-background-iframe="content/iframe/gradient_good/index.html">
+<section id="section-45" class="slide level2" data-iframe-interactive="false" data-background-iframe="content/iframe/gradient_good/index.html" data-background-iframe-sandbox="allow-scripts">
 <h2></h2>
 <p><br><br><br><br><br><br><br><br><br><br></p>
 <div class="titlebox topright">
 <p>Alors que idéalement</p>
 </div>
 </section>
-<section id="section-45" class="slide level2 center">
+<section id="section-46" class="slide level2 center">
 <h2></h2>
 <p><br></p>
 <div class="Large blue">
@@ -748,7 +751,7 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 <p>plus <code>robuste</code> ?</p>
 </div>
 </section>
-<section id="section-46" class="slide level2 center">
+<section id="section-47" class="slide level2 center">
 <h2></h2>
 <p>Quelques améliorations célèbres</p>
 <p><br></p>
@@ -761,7 +764,7 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 </ul>
 </div>
 </section>
-<section id="section-47" class="slide level2 center">
+<section id="section-48" class="slide level2 center">
 <h2></h2>
 <p><br></p>
 <p><span class="Large orange">Ou bien…</span></p>
@@ -771,7 +774,7 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 <p>comme point de départ.</p>
 </div>
 </section>
-<section id="section-48" class="slide level2 center">
+<section id="section-49" class="slide level2 center">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:80%;">
@@ -792,7 +795,7 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 <p><span class="orange large bold">Recalage fin</span></p>
 </div></div>
 </section>
-<section id="section-49" class="slide level2 center">
+<section id="section-50" class="slide level2 center">
 <h2></h2>
 <p>Avec ICP,</p>
 <p>chaque point cherche son plus proche voisin.</p>
@@ -805,15 +808,15 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 </section>
 <section id="exemple" class="slide level2">
 <h2>Exemple</h2>
-
-<img data-src="content/image/sift.svg" style="width:80.0%" class="r-stretch"></section>
-<section id="section-50" class="slide level2 center">
+<p><img data-src="content/image/sift.svg" style="width:80.0%"></p>
+</section>
+<section id="section-51" class="slide level2 center">
 <h2></h2>
 <p>Les points détectés</p>
 <p>sont appelés</p>
 <p><span class="green">Keypoints</span></p>
 </section>
-<section id="section-51" class="slide level2 center">
+<section id="section-52" class="slide level2 center">
 <h2></h2>
 <p>Chaque keypoint</p>
 <p>est décrit</p>
@@ -823,7 +826,7 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 <p>le reconnaître</p>
 <p>dans un autre scan.</p>
 </section>
-<section id="section-52" class="slide level2 center">
+<section id="section-53" class="slide level2 center">
 <h2></h2>
 <p>Les keypoints</p>
 <p>correspondent souvent</p>
@@ -836,7 +839,7 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 <li class="fragment">une forte variation locale</li>
 </ul>
 </section>
-<section id="section-53" class="slide level2 center">
+<section id="section-54" class="slide level2 center">
 <h2></h2>
 <p><span class="large blue">Pipeline moderne</span></p>
 <p>Acquisition</p>
@@ -853,12 +856,12 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 <!-- /BLOC -->
 <!-- BLOC conclusion -->
 </section>
-<section id="section-54" class="slide level2 bloc" data-name="Conclusion">
+<section id="section-55" class="slide level2 bloc" data-name="Conclusion">
 <h2></h2>
 <p><br><br><br><br><br><br><br><br></p>
 <p><span class="big_title scramble">Ce qu’il faut retenir</span></p>
 </section>
-<section id="section-55" class="slide level2 center">
+<section id="section-56" class="slide level2 center">
 <h2></h2>
 <div class="blue large">
 <p>La reconstruction 3D</p>
@@ -872,7 +875,7 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 <p>dans le même repère.</p>
 </div>
 </section>
-<section id="section-56" class="slide level2 center">
+<section id="section-57" class="slide level2 center">
 <h2></h2>
 <div class="blue">
 <p>Le recalage est</p>
@@ -887,7 +890,7 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 <p>les observations.</p>
 </div>
 </section>
-<section id="section-57" class="slide level2 center">
+<section id="section-58" class="slide level2 center">
 <h2></h2>
 <div class="large">
 <p><span class="big_title">ICP</span> est simple.</p>
@@ -899,7 +902,7 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 <p>de la reconstruction 3D.</p>
 </div>
 </section>
-<section id="section-58" class="slide level2 center">
+<section id="section-59" class="slide level2 center">
 <h2></h2>
 <div class="Large">
 <p>Mais une fois les scans</p>
@@ -911,7 +914,7 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 </div>
 </div>
 </section>
-<section id="section-59" class="slide level2 center">
+<section id="section-60" class="slide level2 center">
 <h2></h2>
 <p><br></p>
 <div class="large">
@@ -922,7 +925,7 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
 <p><br><br></p>
 <p><span class="fragment green Large bold">Réponse au prochain cours.</span></p>
 </section>
-<section id="section-60" class="slide level2 construction hcenter" data-state="hide-menubar" data-background-iframe-sandbox="allow-scripts" data-background-iframe="_extensions/local/construction/index.html">
+<section id="section-61" class="slide level2 construction hcenter" data-state="hide-menubar" data-background-iframe-sandbox="allow-scripts" data-background-iframe="_extensions/local/construction/index.html">
 <h2></h2>
 <p><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <p><span class="bold Large scramble">C’est tout pour aujourd’hui</span></p>
@@ -1152,6 +1155,36 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
         ]
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const root = document.querySelector(".reveal .slides");
+        if (!root || typeof twemoji === "undefined") return;
+
+        const excluded = new Set(["CODE", "PRE", "SCRIPT", "STYLE", "TEXTAREA"]);
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+          const node = walker.currentNode;
+          if (!excluded.has(node.parentElement?.tagName)) textNodes.push(node);
+        }
+
+        for (const node of textNodes) {
+          const html = twemoji.parse(node.data, {
+            base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/",
+            folder: "svg",
+            ext: ".svg",
+            className: "twemoji"
+          });
+
+          if (html === node.data) continue;
+          const template = document.createElement("template");
+          template.innerHTML = html;
+          node.replaceWith(template.content);
+        }
+      });
+    </script>
     <script type="text/javascript" id="code-annotation-fragments">
       function hideAllTippy() {
         document.querySelectorAll('.code-annotation-anchor').forEach(anchor => {
@@ -1237,200 +1270,6 @@ x_{k+1} = x_k - \eta \, \nabla f(x_k)
     });
     </script>
 
-    <style>
-    .scramble {
-      display: inline-block;
-      white-space: pre;
-      font-variant-ligatures: none;
-    }
-
-    .scramble__swap {
-      color: #a1bad6;
-      transition: color 420ms ease;
-    }
-
-    .scramble__swap.scramble__fadeout {
-      color: inherit;
-    }
-    </style>
-
-    <script>
-    (function () {
-      const SWAP_DURATION_MS = 1100;
-      const FADE_DURATION_MS = 420;
-      const MIN_DELAY_MS = 350;
-      const MAX_DELAY_MS = 900;
-
-      let timer = null;
-      let active = null;
-      let lastElement = null;
-
-      function randomInt(max) {
-        return Math.floor(Math.random() * max);
-      }
-
-      function randomDelay() {
-        return MIN_DELAY_MS + Math.floor(Math.random() * (MAX_DELAY_MS - MIN_DELAY_MS + 1));
-      }
-
-      function getPresentSlide() {
-        return document.querySelector('.reveal .slides section.present');
-      }
-
-      function isActuallyVisible(el) {
-        if (!el || !el.isConnected) return false;
-        const style = window.getComputedStyle(el);
-        if (style.display === 'none' || style.visibility === 'hidden') return false;
-        if (el.closest('.fragment') && !el.closest('.fragment').classList.contains('visible')) return false;
-        return true;
-      }
-
-      function getEligibleElements() {
-        const all = Array.from(document.querySelectorAll('.scramble')).filter(isActuallyVisible);
-        all.forEach((el) => {
-          if (!el.dataset.scrambleOriginal) {
-            el.dataset.scrambleOriginal = el.textContent || '';
-          }
-        });
-
-        const slide = getPresentSlide();
-        const scoped = slide ? all.filter((el) => slide.contains(el)) : all;
-        const pool = scoped.length > 0 ? scoped : all;
-
-        if (pool.length <= 1) return pool;
-
-        const withoutLast = pool.filter((el) => el !== lastElement);
-        return withoutLast.length > 0 ? withoutLast : pool;
-      }
-
-      function pickPair(chars) {
-        const candidates = [];
-        for (let i = 0; i < chars.length - 1; i += 1) {
-          if (chars[i].trim() === '' || chars[i + 1].trim() === '') continue;
-          if (chars[i] === chars[i + 1]) continue;
-          candidates.push(i);
-        }
-        if (candidates.length === 0) return null;
-        return candidates[randomInt(candidates.length)];
-      }
-
-      function escapeHtml(value) {
-        return value
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;')
-          .replace(/'/g, '&#39;');
-      }
-
-      function restore(el) {
-        if (!el) return;
-        el.textContent = el.dataset.scrambleOriginal || el.textContent || '';
-        if (active === el) active = null;
-      }
-
-      function scrambleOne(el) {
-        const original = el.dataset.scrambleOriginal || el.textContent || '';
-        const chars = Array.from(original);
-        if (chars.length < 2) return false;
-
-        const idx = pickPair(chars);
-        if (idx === null) return false;
-
-        const swapped = chars.slice();
-        const tmp = swapped[idx];
-        swapped[idx] = swapped[idx + 1];
-        swapped[idx + 1] = tmp;
-
-        active = el;
-        lastElement = el;
-
-        const before = escapeHtml(swapped.slice(0, idx).join(''));
-        const highlighted = escapeHtml(swapped.slice(idx, idx + 2).join(''));
-        const after = escapeHtml(swapped.slice(idx + 2).join(''));
-        el.innerHTML = before + '<span class="scramble__swap">' + highlighted + '</span>' + after;
-
-        window.setTimeout(function () {
-          const restoreBefore = escapeHtml(chars.slice(0, idx).join(''));
-          const restoreHighlighted = escapeHtml(chars.slice(idx, idx + 2).join(''));
-          const restoreAfter = escapeHtml(chars.slice(idx + 2).join(''));
-
-          el.innerHTML = restoreBefore + '<span class="scramble__swap scramble__fadeout">' + restoreHighlighted + '</span>' + restoreAfter;
-
-          window.setTimeout(function () {
-            restore(el);
-            schedule();
-          }, FADE_DURATION_MS);
-        }, SWAP_DURATION_MS);
-
-        return true;
-      }
-
-      function tick() {
-        timer = null;
-
-        if (active) {
-          schedule(200);
-          return;
-        }
-
-        const eligible = getEligibleElements();
-        if (eligible.length === 0) {
-          schedule(700);
-          return;
-        }
-
-        const target = eligible[randomInt(eligible.length)];
-        if (!scrambleOne(target)) {
-          schedule(700);
-        }
-      }
-
-      function schedule(delay) {
-        if (timer) window.clearTimeout(timer);
-        timer = window.setTimeout(tick, delay || randomDelay());
-      }
-
-      function initScramble() {
-        document.querySelectorAll('.scramble').forEach((el) => {
-          if (!el.dataset.scrambleOriginal) {
-            el.dataset.scrambleOriginal = el.textContent || '';
-          }
-          restore(el);
-        });
-
-        schedule(120);
-      }
-
-      document.addEventListener('DOMContentLoaded', initScramble);
-      window.addEventListener('load', initScramble);
-      document.addEventListener('visibilitychange', function () {
-        if (document.hidden) {
-          if (timer) {
-            window.clearTimeout(timer);
-            timer = null;
-          }
-          restore(active);
-        } else {
-          initScramble();
-        }
-      });
-
-      if (window.Reveal && typeof window.Reveal.on === 'function') {
-        window.Reveal.on('slidechanged', initScramble);
-        window.Reveal.on('fragmentshown', initScramble);
-        window.Reveal.on('fragmenthidden', initScramble);
-      } else {
-        document.addEventListener('DOMContentLoaded', function () {
-          if (window.Reveal && typeof window.Reveal.on === 'function') {
-            window.Reveal.on('slidechanged', initScramble);
-            window.Reveal.on('fragmentshown', initScramble);
-            window.Reveal.on('fragmenthidden', initScramble);
-          }
-        });
-      }
-    })();
-    </script>
     <style>
     #excalidraw-overlay{
       position: fixed;

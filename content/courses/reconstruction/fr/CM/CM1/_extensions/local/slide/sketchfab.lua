@@ -24,13 +24,15 @@ local function extract_sketchfab_id(path)
 end
 
 function Header(el)
-  if not el.classes:includes("sketchfab") then
+  local source = el.attributes["sketchfab"]
+  local model = el.attributes["model"]
+  local path = el.attributes["path"]
+
+  if not source and not model and not path and not el.classes:includes("sketchfab") then
     return el
   end
 
-  local model = el.attributes["model"]
-  local path = el.attributes["path"]
-  local id = model or extract_sketchfab_id(path)
+  local id = extract_sketchfab_id(source) or model or extract_sketchfab_id(path)
 
   if not id then
     return el
@@ -42,6 +44,7 @@ function Header(el)
   el.attributes["data-background-iframe"] = wrapper
   el.attributes["data-background-interactive"] = "true"
   el.attributes["data-background-iframe-sandbox"] = "allow-scripts"
+  el.attributes["sketchfab"] = nil
   el.attributes["model"] = nil
   el.attributes["path"] = nil
 

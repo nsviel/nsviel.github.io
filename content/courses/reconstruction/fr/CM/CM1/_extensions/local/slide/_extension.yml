@@ -7,4 +7,5 @@ contributes:
     - website.lua
     - html.lua
     - iframe.lua
+    - iscene.lua
     - sketchfab.lua
