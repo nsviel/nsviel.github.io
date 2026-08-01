@@ -1,0 +1,6 @@
+title: "GPGPU"
+version: "0.1.0"
+contributes:
+  filters:
+    - filter.lua
+
