@@ -65,7 +65,7 @@
   {
     "objectID": "en/index.html",
     "href": "en/index.html",
-    "title": "Teaching",
+    "title": "TEACHING",
     "section": "",
     "text": "Course\nLevel\n\n\n\n\nComputer-Based Data Processing\nL1\n\n\nIntroduction to Big Data\nL3\n\n\nInverse Rendering for Image Synthesis\nM1\n\n\nGeneral-Purpose Computing on Graphics Processing Units (GPGPU)\nM1\n\n\n3D Reconstruction\nM2\n\n\nDeep Learning\nM2"
   },
@@ -149,7 +149,7 @@
   {
     "objectID": "fr/index.html",
     "href": "fr/index.html",
-    "title": "Teaching",
+    "title": "TEACHING",
     "section": "",
     "text": "Cours\nNiveau\n\n\n\n\nTraitement Informatique des Données\nL1\n\n\nIntroduction au Big Data\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nM1\n\n\nGeneral-purpose computing on graphics processing units (GPGPU)\nM1\n\n\nReconstruction 3D\nM2\n\n\nDeep Learning\nM2"
   },
