@@ -1,14 +1,7 @@
 (() => {
   const localizePage = () => {
     const path = window.location.pathname;
-    const isEnglish = path === "/en" || path.startsWith("/en/");
 
-    const footer = document.getElementById("localized-footer");
-    if (footer) {
-      footer.textContent = isEnglish
-        ? "© 2026 — Content licensed under CC BY-NC-SA 4.0"
-        : "© 2026 — Contenus sous licence CC BY-NC-SA 4.0";
-    }
 
     const localizedPaths = {
       fr: {
