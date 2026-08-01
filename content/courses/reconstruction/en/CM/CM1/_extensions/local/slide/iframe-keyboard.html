@@ -1,0 +1,143 @@
+<script>
+(function () {
+  function getFocusTarget() {
+    return document.querySelector('.reveal') || document.body;
+  }
+
+  function refocusPresentation() {
+    const target = getFocusTarget();
+
+    if (target && !target.hasAttribute('tabindex')) {
+      target.setAttribute('tabindex', '-1');
+    }
+
+    if (document.activeElement && typeof document.activeElement.blur === 'function') {
+      try {
+        document.activeElement.blur();
+      } catch (e) {
+        // ignore
+      }
+    }
+
+    if (target && typeof target.focus === 'function') {
+      try {
+        target.focus({ preventScroll: true });
+      } catch (e) {
+        target.focus();
+      }
+    }
+  }
+
+  function stopKeyboard(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    if (typeof event.stopImmediatePropagation === 'function') {
+      event.stopImmediatePropagation();
+    }
+    refocusPresentation();
+    return false;
+  }
+
+  function installNoKeyboardBehavior(iframe) {
+    if (!iframe || iframe.dataset.noKeyboardInstalled === 'true') {
+      return;
+    }
+
+    iframe.dataset.noKeyboardInstalled = 'true';
+    iframe.setAttribute('tabindex', '-1');
+
+    const bounceFocus = function () {
+      window.setTimeout(refocusPresentation, 0);
+    };
+
+    iframe.addEventListener('focus', bounceFocus, true);
+    iframe.addEventListener('keydown', stopKeyboard, true);
+    iframe.addEventListener('keypress', stopKeyboard, true);
+    iframe.addEventListener('keyup', stopKeyboard, true);
+
+    function installInsideIframe() {
+      try {
+        const doc = iframe.contentDocument;
+        const win = iframe.contentWindow;
+
+        if (!doc || !win || doc.__noKeyboardInstalled) {
+          return;
+        }
+
+        doc.__noKeyboardInstalled = true;
+
+        doc.addEventListener('focusin', bounceFocus, true);
+        doc.addEventListener('pointerdown', bounceFocus, true);
+        doc.addEventListener('mousedown', bounceFocus, true);
+        doc.addEventListener('keydown', stopKeyboard, true);
+        doc.addEventListener('keypress', stopKeyboard, true);
+        doc.addEventListener('keyup', stopKeyboard, true);
+        win.addEventListener('focus', bounceFocus, true);
+        win.addEventListener('keydown', stopKeyboard, true);
+        win.addEventListener('keypress', stopKeyboard, true);
+        win.addEventListener('keyup', stopKeyboard, true);
+
+        if (doc.body) {
+          doc.body.setAttribute('tabindex', '-1');
+        }
+      } catch (e) {
+        // Cross-origin iframe: best effort only.
+      }
+    }
+
+    iframe.addEventListener('load', installInsideIframe);
+    installInsideIframe();
+    bounceFocus();
+  }
+
+  function syncCurrentBackgroundIframe() {
+    const slide = (window.Reveal && typeof window.Reveal.getCurrentSlide === 'function')
+      ? window.Reveal.getCurrentSlide()
+      : document.querySelector('.slides section.present');
+
+    if (!slide) {
+      return;
+    }
+
+    const isInteractive = slide.hasAttribute('data-background-interactive');
+    const keyboardEnabled = slide.getAttribute('data-iframe-keyboard') === 'true';
+
+    if (!isInteractive || keyboardEnabled) {
+      return;
+    }
+
+    const background = document.querySelector('.backgrounds .slide-background.present');
+    if (!background) {
+      return;
+    }
+
+    const iframe = background.querySelector('iframe');
+    if (!iframe) {
+      return;
+    }
+
+    installNoKeyboardBehavior(iframe);
+  }
+
+  function init() {
+    syncCurrentBackgroundIframe();
+
+    document.addEventListener('slidechanged', syncCurrentBackgroundIframe);
+    document.addEventListener('ready', syncCurrentBackgroundIframe);
+    document.addEventListener('keydown', function () {
+      syncCurrentBackgroundIframe();
+    }, true);
+
+    if (window.Reveal && typeof window.Reveal.on === 'function') {
+      window.Reveal.on('ready', syncCurrentBackgroundIframe);
+      window.Reveal.on('slidechanged', syncCurrentBackgroundIframe);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>

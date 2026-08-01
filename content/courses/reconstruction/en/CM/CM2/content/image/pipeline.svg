@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="22.526325mm"
+   height="64.908867mm"
+   viewBox="0 0 22.526325 64.908867"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="pipeline.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.3922928"
+     inkscape:cx="-19.646425"
+     inkscape:cy="78.16769"
+     inkscape:window-width="2560"
+     inkscape:window-height="1408"
+     inkscape:window-x="1440"
+     inkscape:window-y="937"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-59.161739,-29.703937)">
+    <rect
+       style="fill:#c9c9c9;fill-opacity:1;stroke:#ffffff;stroke-width:0.160348"
+       id="rect254-7-9"
+       width="22.365976"
+       height="12.428972"
+       x="59.241913"
+       y="29.784111" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:2.11667px;line-height:1.25;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999"
+       x="64.560669"
+       y="36.796581"
+       id="text972"><tspan
+         sodipodi:role="line"
+         id="tspan970"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
+         x="64.560669"
+         y="36.796581">Point Cloud</tspan></text>
+    <rect
+       style="fill:#c9c9c9;fill-opacity:1;stroke:#ffffff;stroke-width:0.160348"
+       id="rect254-7"
+       width="22.365976"
+       height="12.428972"
+       x="59.241913"
+       y="46.822334" />
+    <rect
+       style="fill:#c9c9c9;fill-opacity:1;stroke:#ffffff;stroke-width:0.160348"
+       id="rect254-7-3"
+       width="22.365976"
+       height="12.428972"
+       x="59.241913"
+       y="64.640396" />
+    <rect
+       style="fill:#c9c9c9;fill-opacity:1;stroke:#ffffff;stroke-width:0.160348"
+       id="rect254-7-3-6"
+       width="22.365976"
+       height="12.428972"
+       x="59.241913"
+       y="82.103661" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:2.11667px;line-height:1.25;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Bold';text-align:center;text-anchor:middle;white-space:pre;inline-size:21.8675;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999"
+       x="71.928207"
+       y="54.204979"
+       id="text972-5"
+       transform="translate(-1.5747997,-3.0160095)"><tspan
+         x="71.928207"
+         y="54.204979"
+         id="tspan2999"><tspan
+           style="stroke-width:0.5"
+           id="tspan2997">Estimation d'une</tspan><tspan
+           y="54.204979"
+           id="tspan3001"> </tspan></tspan><tspan
+         x="71.928207"
+         y="56.850814"
+         id="tspan3005"><tspan
+           style="stroke-width:0.5"
+           id="tspan3003">représentation</tspan><tspan
+           y="56.850814"
+           id="tspan3007"> </tspan></tspan><tspan
+         x="71.928207"
+         y="59.49665"
+         id="tspan3011"><tspan
+           style="stroke-width:0.5"
+           id="tspan3009">continue</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:2.11667px;line-height:1.25;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Bold';text-align:center;text-anchor:middle;white-space:pre;inline-size:14.6989;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999"
+       x="70.26239"
+       y="54.204979"
+       id="text972-5-6"
+       transform="translate(0.09121535,16.565703)"><tspan
+         x="70.26239"
+         y="54.204979"
+         id="tspan3013">Extraction de<tspan
+   y="54.204979"
+   id="tspan3015"> </tspan></tspan><tspan
+         x="70.26239"
+         y="56.850814"
+         id="tspan3017">la surface</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:2.11667px;line-height:1.25;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Bold';white-space:pre;inline-size:25.831;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999"
+       x="63.609699"
+       y="54.204979"
+       id="text972-5-6-9"
+       transform="translate(3.5310085,34.881519)"><tspan
+         x="63.609699"
+         y="54.204979"
+         id="tspan3019">Mesh</tspan></text>
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.499999"
+       d="m 71.378478,44.657616 v -1.789364 h -1.832546 v 1.787854 h -0.755211 l 1.606243,1.606243 1.662118,-1.662121 z"
+       id="path2758" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.499999"
+       d="m 71.378478,61.899973 v -1.789364 h -1.832546 v 1.787854 h -0.755211 l 1.606243,1.606243 1.662118,-1.662121 z"
+       id="path2758-1" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.499999"
+       d="m 71.378478,79.678829 v -1.789364 h -1.832546 v 1.787854 h -0.755211 l 1.606243,1.606243 1.662118,-1.662121 z"
+       id="path2758-2" />
+  </g>
+</svg>
