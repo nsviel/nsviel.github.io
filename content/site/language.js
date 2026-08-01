@@ -17,6 +17,12 @@
       return `/${language}/`;
     };
 
+    const navbarBrand = document.querySelector(".navbar-brand");
+    if (navbarBrand) {
+      const isEnglish = path === "/en" || path.startsWith("/en/");
+      navbarBrand.href = isEnglish ? "/en/" : "/fr/";
+    }
+
     document.querySelectorAll(".navbar a").forEach((link) => {
       const label = link.textContent.trim();
 
