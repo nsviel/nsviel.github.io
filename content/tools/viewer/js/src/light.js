@@ -17,8 +17,10 @@ export function add_light(scene){
     light.shadow.bias = -0.0001;
     scene.add(light);
 
-    scene.add(new THREE.AmbientLight(0xffffff, 1.2));
+    const ambient = new THREE.AmbientLight(0xffffff, 1.2);
+    scene.add(ambient);
 
     //---------------
+    return { directional: light, ambient };
 }
 

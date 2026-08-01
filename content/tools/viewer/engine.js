@@ -33079,7 +33079,9 @@ void main() {
     light.shadow.camera.right = 2;
     light.shadow.bias = -1e-4;
     scene.add(light);
-    scene.add(new AmbientLight(16777215, 1.2));
+    const ambient = new AmbientLight(16777215, 1.2);
+    scene.add(ambient);
+    return { directional: light, ambient };
   }
 
   // source/content/tools/viewer/node_modules/three/examples/jsm/controls/OrbitControls.js
@@ -34778,7 +34780,7 @@ void main() {
     const camera = add_camera(renderer);
     const controls = add_control(scene, renderer, camera);
     add_glyph(scene);
-    add_light(scene);
+    const { ambient } = add_light(scene);
     add_event2(renderer, camera);
     const composer = create_composer_with_edl(renderer, scene, camera);
     run_loop(composer, camera, scene, null, controls);
@@ -34790,6 +34792,10 @@ void main() {
     const filename = document.getElementById("filename");
     const loading2 = document.getElementById("loading");
     const loadingText = document.getElementById("loading-text");
+    const ambientControl = document.getElementById("ambient-light");
+    ambientControl.addEventListener("input", () => {
+      ambient.intensity = Number(ambientControl.value);
+    });
     let entity = null;
     function showLoading(message = "Chargement du mod\xE8le\u2026") {
       loadingText.textContent = message;

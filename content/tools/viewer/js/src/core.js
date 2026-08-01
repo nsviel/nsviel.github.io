@@ -15,7 +15,7 @@ export async function engine() {
     const camera = add_camera(renderer);
     const controls = add_control(scene, renderer, camera);
     add_glyph(scene);
-    add_light(scene);
+    const { ambient } = add_light(scene);
     add_event(renderer, camera);
 
     const composer = create_composer_with_edl(renderer, scene, camera);
@@ -29,6 +29,10 @@ export async function engine() {
     const filename = document.getElementById("filename");
     const loading = document.getElementById("loading");
     const loadingText = document.getElementById("loading-text");
+    const ambientControl = document.getElementById("ambient-light");
+    ambientControl.addEventListener("input", () => {
+        ambient.intensity = Number(ambientControl.value);
+    });
     let entity = null;
 
     function showLoading(message = "Chargement du modèle…") {

@@ -67,6 +67,44 @@ canvas {
   to { transform: rotate(360deg); }
 }
 
+.ambient-control {
+  position: fixed;
+  z-index: 10;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 128px;
+  padding: 7px 10px;
+  border: 1px solid #ffffff14;
+  border-radius: 20px;
+  background: #11141799;
+  color: #d8dde2;
+  opacity: 0.38;
+  backdrop-filter: blur(8px);
+  transition: opacity 160ms ease, background 160ms ease;
+}
+
+.ambient-control:hover,
+.ambient-control:focus-within {
+  background: #111417d9;
+  opacity: 1;
+}
+
+.ambient-control span {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.ambient-control input {
+  width: 90px;
+  height: 12px;
+  margin: 0;
+  accent-color: #aeb6be;
+  cursor: pointer;
+}
+
 /* Le script conserve ces éléments pour l'ouverture locale et les erreurs,
    mais le viewer publié reste entièrement dépourvu d'interface superposée. */
 .toolbar,
