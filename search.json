@@ -116,7 +116,7 @@
     "href": "fr/teaching/reconstruction/index.html#supports-de-cours",
     "title": "Reconstruction 3D",
     "section": "Supports de cours",
-    "text": "Supports de cours\n\nCours 1 : HTML\nCours 2 : HTML"
+    "text": "Supports de cours\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
   },
   {
     "objectID": "fr/teaching/deeplearning/index.html",
@@ -137,14 +137,14 @@
     "href": "fr/teaching/deeplearning/index.html#supports-de-cours",
     "title": "Deep Learning",
     "section": "Supports de cours",
-    "text": "Supports de cours\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML"
+    "text": "Supports de cours\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
   },
   {
-    "objectID": "fr/teaching/deeplearning/index.html#travaux-pratiques",
-    "href": "fr/teaching/deeplearning/index.html#travaux-pratiques",
+    "objectID": "fr/teaching/deeplearning/index.html#projet",
+    "href": "fr/teaching/deeplearning/index.html#projet",
     "title": "Deep Learning",
-    "section": "Travaux pratiques",
-    "text": "Travaux pratiques\n\n\n\nActivité\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF\n—"
+    "section": "Projet",
+    "text": "Projet\n\nSujet : PDF\nJalons : PDF"
   },
   {
     "objectID": "fr/index.html",
