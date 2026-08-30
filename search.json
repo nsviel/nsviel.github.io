@@ -123,14 +123,14 @@
     "href": "fr/teaching/deeplearning/index.html",
     "title": "Deep Learning",
     "section": "",
-    "text": "Cette page rassemble les supports de cours et les travaux pratiques de l’enseignement de Deep Learning."
+    "text": "Ce cours présente les principaux concepts du Deep Learning, qui permet à une machine d’apprendre des représentations à partir de données. Il aborde le fonctionnement des réseaux de neurones, leur entraînement par descente de gradient et rétropropagation, ainsi que les architectures adaptées aux vecteurs, aux images et aux séquences.\nL’objectif est de comprendre comment concevoir, entraîner et évaluer un modèle, puis d’utiliser ces principes pour développer des agents autonomes par imitation ou par renforcement. Ces notions sont mises en pratique dans un projet consistant à créer un monde interactif, à y entraîner un agent et à analyser ses comportements et ses limites."
   },
   {
     "objectID": "fr/teaching/deeplearning/index.html#présentation",
     "href": "fr/teaching/deeplearning/index.html#présentation",
     "title": "Deep Learning",
     "section": "",
-    "text": "Cette page rassemble les supports de cours et les travaux pratiques de l’enseignement de Deep Learning."
+    "text": "Ce cours présente les principaux concepts du Deep Learning, qui permet à une machine d’apprendre des représentations à partir de données. Il aborde le fonctionnement des réseaux de neurones, leur entraînement par descente de gradient et rétropropagation, ainsi que les architectures adaptées aux vecteurs, aux images et aux séquences.\nL’objectif est de comprendre comment concevoir, entraîner et évaluer un modèle, puis d’utiliser ces principes pour développer des agents autonomes par imitation ou par renforcement. Ces notions sont mises en pratique dans un projet consistant à créer un monde interactif, à y entraîner un agent et à analyser ses comportements et ses limites."
   },
   {
     "objectID": "fr/teaching/deeplearning/index.html#supports-de-cours",
