@@ -123,28 +123,28 @@
     "href": "fr/teaching/deeplearning/index.html",
     "title": "Deep Learning",
     "section": "",
-    "text": "Ce cours présente les principaux concepts du Deep Learning, qui permet à une machine d’apprendre des représentations à partir de données. Il aborde le fonctionnement des réseaux de neurones, leur entraînement par descente de gradient et rétropropagation, ainsi que les architectures adaptées aux vecteurs, aux images et aux séquences.\nL’objectif est de comprendre comment concevoir, entraîner et évaluer un modèle, puis d’utiliser ces principes pour développer des agents autonomes par imitation ou par renforcement. Ces notions sont mises en pratique dans un projet consistant à créer un monde interactif, à y entraîner un agent et à analyser ses comportements et ses limites."
+    "text": "This course introduces the main concepts of Deep Learning, which enables machines to learn representations from data. It covers the fundamentals of neural networks, their training through gradient descent and backpropagation, as well as architectures adapted to vectors, images, and sequences.\nThe objective is to understand how to design, train, and evaluate a model, and then apply these principles to different learning problems, such as prediction, classification, generation, or the control of autonomous agents. These concepts are put into practice through an open-ended project in which students design an interactive or dynamic system integrating a Deep Learning model, and experimentally evaluate its performance and limitations."
   },
   {
-    "objectID": "fr/teaching/deeplearning/index.html#présentation",
-    "href": "fr/teaching/deeplearning/index.html#présentation",
+    "objectID": "fr/teaching/deeplearning/index.html#overview",
+    "href": "fr/teaching/deeplearning/index.html#overview",
     "title": "Deep Learning",
     "section": "",
-    "text": "Ce cours présente les principaux concepts du Deep Learning, qui permet à une machine d’apprendre des représentations à partir de données. Il aborde le fonctionnement des réseaux de neurones, leur entraînement par descente de gradient et rétropropagation, ainsi que les architectures adaptées aux vecteurs, aux images et aux séquences.\nL’objectif est de comprendre comment concevoir, entraîner et évaluer un modèle, puis d’utiliser ces principes pour développer des agents autonomes par imitation ou par renforcement. Ces notions sont mises en pratique dans un projet consistant à créer un monde interactif, à y entraîner un agent et à analyser ses comportements et ses limites."
+    "text": "This course introduces the main concepts of Deep Learning, which enables machines to learn representations from data. It covers the fundamentals of neural networks, their training through gradient descent and backpropagation, as well as architectures adapted to vectors, images, and sequences.\nThe objective is to understand how to design, train, and evaluate a model, and then apply these principles to different learning problems, such as prediction, classification, generation, or the control of autonomous agents. These concepts are put into practice through an open-ended project in which students design an interactive or dynamic system integrating a Deep Learning model, and experimentally evaluate its performance and limitations."
   },
   {
-    "objectID": "fr/teaching/deeplearning/index.html#supports-de-cours",
-    "href": "fr/teaching/deeplearning/index.html#supports-de-cours",
+    "objectID": "fr/teaching/deeplearning/index.html#course-materials",
+    "href": "fr/teaching/deeplearning/index.html#course-materials",
     "title": "Deep Learning",
-    "section": "Supports de cours",
-    "text": "Supports de cours\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+    "section": "Course Materials",
+    "text": "Course Materials\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
   },
   {
-    "objectID": "fr/teaching/deeplearning/index.html#projet",
-    "href": "fr/teaching/deeplearning/index.html#projet",
+    "objectID": "fr/teaching/deeplearning/index.html#project",
+    "href": "fr/teaching/deeplearning/index.html#project",
     "title": "Deep Learning",
-    "section": "Projet",
-    "text": "Projet\n\nSujet : PDF\nJalons : PDF"
+    "section": "Project",
+    "text": "Project\n\nSujet : PDF\nJalons : PDF"
   },
   {
     "objectID": "fr/index.html",
