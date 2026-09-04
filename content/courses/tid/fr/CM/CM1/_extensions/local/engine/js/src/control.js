@@ -7,7 +7,7 @@ export function add_control(scene, renderer, camera){
     //---------------
 
     const controls = create_control(renderer, camera);
-    add_target(scene, controls);
+    controls.targetHelper = add_target(scene, controls);
     add_event(controls, camera);
     
     //---------------
@@ -20,6 +20,7 @@ function create_control(renderer, camera){
 
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
+    controls.dampingFactor = 0.12;
     controls.target.set(0, 0, 0);
     //controls.maxPolarAngle = Math.PI / 2 - 0.01;
 
@@ -82,4 +83,5 @@ function add_target(scene, controls) {
     updateCross();
 
     //---------------
+    return cross;
 }
