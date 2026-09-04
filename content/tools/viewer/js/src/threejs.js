@@ -26,11 +26,27 @@ export function create_scene(){
 
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x111111);
-    // La grille disparaît progressivement avant que ses lignes sub-pixel
-    // ne créent du moiré à l'horizon.
-    scene.fog = new THREE.Fog(0x111111, 20, 65);
+    scene.fog = new THREE.Fog(0x111111);
 
 
     //---------------
     return scene;
+}
+export function bind_fog_to_zoom(scene, camera, controls) {
+    // Des ratios constants conservent la même densité apparente quand la
+    // caméra s'éloigne, tout en effaçant la grille avant son moiré lointain.
+    const nearRatio = 0.9;
+    const farRatio = 4;
+
+    function update_fog() {
+        const distance = Math.max(
+            camera.position.distanceTo(controls.target),
+            camera.near
+        );
+        scene.fog.near = distance * nearRatio;
+        scene.fog.far = distance * farRatio;
+    }
+
+    controls.addEventListener("change", update_fog);
+    update_fog();
 }

@@ -14,6 +14,7 @@ export async function engine() {
     const scene = three.create_scene();
     const camera = add_camera(renderer);
     const controls = add_control(scene, renderer, camera);
+    three.bind_fog_to_zoom(scene, camera, controls);
     add_glyph(scene);
     const { ambient } = add_light(scene);
     const update_keyboard = add_event(renderer, camera, controls);

@@ -29933,8 +29933,22 @@ void main() {
   function create_scene() {
     const scene = new Scene();
     scene.background = new Color(1118481);
-    scene.fog = new Fog(1118481, 20, 65);
+    scene.fog = new Fog(1118481);
     return scene;
+  }
+  function bind_fog_to_zoom(scene, camera, controls) {
+    const nearRatio = 0.9;
+    const farRatio = 4;
+    function update_fog() {
+      const distance = Math.max(
+        camera.position.distanceTo(controls.target),
+        camera.near
+      );
+      scene.fog.near = distance * nearRatio;
+      scene.fog.far = distance * farRatio;
+    }
+    controls.addEventListener("change", update_fog);
+    update_fog();
   }
 
   // source/content/tools/viewer/node_modules/three/examples/jsm/utils/BufferGeometryUtils.js
@@ -34848,6 +34862,7 @@ void main() {
     const scene = create_scene();
     const camera = add_camera(renderer);
     const controls = add_control(scene, renderer, camera);
+    bind_fog_to_zoom(scene, camera, controls);
     add_glyph(scene);
     const { ambient } = add_light(scene);
     const update_keyboard = add_event2(renderer, camera, controls);
