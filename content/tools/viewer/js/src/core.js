@@ -16,10 +16,10 @@ export async function engine() {
     const controls = add_control(scene, renderer, camera);
     add_glyph(scene);
     const { ambient } = add_light(scene);
-    add_event(renderer, camera);
+    const update_keyboard = add_event(renderer, camera, controls);
 
     const composer = create_composer_with_edl(renderer, scene, camera);
-    run_loop(composer, camera, scene, null, controls);
+    run_loop(composer, camera, scene, null, controls, update_keyboard);
 
     const input = document.getElementById("file-input");
     const openButtons = [document.getElementById("open-button"), document.getElementById("welcome-button")];

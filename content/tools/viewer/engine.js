@@ -32988,8 +32988,8 @@ void main() {
     const axes = add_axes(scene);
   }
   function add_grid(scene) {
-    const size = 100;
-    const divisions = 100;
+    const size = 1e3;
+    const divisions = 1e3;
     const planeGeo = new PlaneGeometry(size, size);
     const planeMat = new MeshStandardMaterial({
       color: 5197647,
@@ -34004,6 +34004,7 @@ void main() {
   }
 
   // source/content/tools/viewer/js/src/control.js
+  var MIN_CAMERA_HEIGHT = 0.05;
   function add_control(scene, renderer, camera) {
     const controls = create_control(renderer, camera);
     add_target(scene, controls);
@@ -34017,14 +34018,27 @@ void main() {
     return controls;
   }
   function add_event(controls, camera) {
-    controls.addEventListener("change", () => {
-      if (controls.target.z < 0) {
-        controls.target.z = 0;
+    function update_ground_limit() {
+      const correction = Math.max(
+        -controls.target.z,
+        MIN_CAMERA_HEIGHT - camera.position.z,
+        0
+      );
+      if (correction > 0) {
+        controls.target.z += correction;
+        camera.position.z += correction;
       }
-      if (camera.position.z < 0) {
-        camera.position.z = 0;
-      }
-    });
+      const distance = Math.max(
+        camera.position.distanceTo(controls.target),
+        Number.EPSILON
+      );
+      const minimumVerticalOffset = (MIN_CAMERA_HEIGHT - controls.target.z) / distance;
+      controls.maxPolarAngle = Math.acos(
+        MathUtils.clamp(minimumVerticalOffset, -1, 1)
+      );
+    }
+    controls.addEventListener("change", update_ground_limit);
+    update_ground_limit();
   }
   function add_target(scene, controls) {
     const size = 0.1;
@@ -34052,9 +34066,9 @@ void main() {
   }
 
   // source/content/tools/viewer/js/src/event.js
-  function add_event2(renderer, camera) {
+  function add_event2(renderer, camera, controls) {
     event_resize(renderer, camera);
-    event_keyboard();
+    return event_keyboard(camera, controls);
   }
   function event_resize(renderer, camera) {
     function resize() {
@@ -34067,25 +34081,80 @@ void main() {
     window.addEventListener("resize", resize);
     resize();
   }
-  function event_keyboard() {
+  function event_keyboard(camera, controls) {
+    const movementKeys = /* @__PURE__ */ new Set([
+      "arrowleft", "arrowright", "arrowup", "arrowdown",
+      "q", "d", "z", "s", "a", "e"
+    ]);
+    const pressedKeys = /* @__PURE__ */ new Set();
+    const forward = new Vector3();
+    const right = new Vector3();
+    const movement = new Vector3();
+    function isFormControl(target) {
+      return target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target instanceof HTMLSelectElement || target?.isContentEditable;
+    }
+    window.addEventListener("keydown", (event) => {
+      const key = event.key.toLowerCase();
+      if (!movementKeys.has(key) || isFormControl(event.target)) return;
+      event.preventDefault();
+      pressedKeys.add(key);
+    });
+    window.addEventListener("keyup", (event) => {
+      const key = event.key.toLowerCase();
+      if (!movementKeys.has(key)) return;
+      pressedKeys.delete(key);
+    });
+    window.addEventListener("blur", () => pressedKeys.clear());
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) pressedKeys.clear();
+    });
+    return function update_keyboard(deltaTime) {
+      const forwardAxis = Number(pressedKeys.has("z") || pressedKeys.has("arrowup")) - Number(pressedKeys.has("s") || pressedKeys.has("arrowdown"));
+      const rightAxis = Number(pressedKeys.has("d") || pressedKeys.has("arrowright")) - Number(pressedKeys.has("q") || pressedKeys.has("arrowleft"));
+      const verticalAxis = Number(pressedKeys.has("e")) - Number(pressedKeys.has("a"));
+      if (forwardAxis === 0 && rightAxis === 0 && verticalAxis === 0) return;
+      forward.subVectors(controls.target, camera.position);
+      forward.z = 0;
+      if (forward.lengthSq() < Number.EPSILON) forward.set(0, 1, 0);
+      forward.normalize();
+      right.crossVectors(forward, camera.up).normalize();
+      movement.set(0, 0, verticalAxis).addScaledVector(forward, forwardAxis).addScaledVector(right, rightAxis).normalize();
+      const distance = camera.position.distanceTo(controls.target);
+      movement.multiplyScalar(Math.max(distance * 0.35, 0.5) * deltaTime);
+      movement.z = Math.max(
+        movement.z,
+        -controls.target.z,
+        MIN_CAMERA_HEIGHT - camera.position.z
+      );
+      controls.target.add(movement);
+      camera.position.add(movement);
+    };
   }
 
   // source/content/tools/viewer/js/src/loop.js
-  function run_loop(composer, camera, scene, mesh, controls) {
+  function run_loop(composer, camera, scene, mesh, controls, update_keyboard) {
     let raf = 0;
+    let previousTime = 0;
     function animate(t) {
-      update(composer, camera, scene, mesh, controls, t);
+      const deltaTime = previousTime ? Math.min((t - previousTime) / 1e3, 0.1) : 0;
+      previousTime = t;
+      update(composer, camera, scene, mesh, controls, deltaTime, update_keyboard);
       raf = requestAnimationFrame(animate);
     }
     raf = requestAnimationFrame(animate);
     document.addEventListener("visibilitychange", () => {
-      if (document.hidden) cancelAnimationFrame(raf);
-      else raf = requestAnimationFrame(animate);
+      if (document.hidden) {
+        cancelAnimationFrame(raf);
+        previousTime = 0;
+      } else {
+        raf = requestAnimationFrame(animate);
+      }
     });
   }
-  function update(composer, camera, scene, mesh, controls, t) {
+  function update(composer, camera, scene, mesh, controls, deltaTime, update_keyboard) {
     if (mesh) {
     }
+    update_keyboard(deltaTime);
     controls.update();
     composer.render();
   }
@@ -34781,9 +34850,9 @@ void main() {
     const controls = add_control(scene, renderer, camera);
     add_glyph(scene);
     const { ambient } = add_light(scene);
-    add_event2(renderer, camera);
+    const update_keyboard = add_event2(renderer, camera, controls);
     const composer = create_composer_with_edl(renderer, scene, camera);
-    run_loop(composer, camera, scene, null, controls);
+    run_loop(composer, camera, scene, null, controls, update_keyboard);
     const input = document.getElementById("file-input");
     const openButtons = [document.getElementById("open-button"), document.getElementById("welcome-button")];
     const welcome = document.getElementById("welcome");

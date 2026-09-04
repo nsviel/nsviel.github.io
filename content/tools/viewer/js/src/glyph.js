@@ -17,8 +17,8 @@ function add_grid(scene) {
 
     // Une maille par unité suffit à l'échelle normalisée des modèles.
     // Une grille trop dense au loin produit du moiré pendant les mouvements.
-    const size = 100;
-    const divisions = 100;
+    const size = 1000;
+    const divisions = 1000;
 
     // 1️⃣ Plan plein
     const planeGeo = new THREE.PlaneGeometry(size, size);

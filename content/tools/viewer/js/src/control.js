@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
+export const MIN_CAMERA_HEIGHT = 0.05;
 
 // Main
 export function add_control(scene, renderer, camera){
@@ -29,17 +30,31 @@ function create_control(renderer, camera){
 function add_event(controls, camera){
     //---------------
 
-    controls.addEventListener("change", () => {
-        // Clamp absolu du target
-        if (controls.target.z < 0) {
-            controls.target.z = 0;
+    function update_ground_limit() {
+        const correction = Math.max(
+            -controls.target.z,
+            MIN_CAMERA_HEIGHT - camera.position.z,
+            0
+        );
+
+        // Déplacer caméra et pivot ensemble préserve la géométrie de l'orbite.
+        if (correction > 0) {
+            controls.target.z += correction;
+            camera.position.z += correction;
         }
 
-        // Clamp absolu de la caméra
-        if (camera.position.z < 0) {
-            camera.position.z = 0;
-        }
-    });
+        const distance = Math.max(
+            camera.position.distanceTo(controls.target),
+            Number.EPSILON
+        );
+        const minimumVerticalOffset = (MIN_CAMERA_HEIGHT - controls.target.z) / distance;
+        controls.maxPolarAngle = Math.acos(
+            THREE.MathUtils.clamp(minimumVerticalOffset, -1, 1)
+        );
+    }
+
+    controls.addEventListener("change", update_ground_limit);
+    update_ground_limit();
 
     //---------------
 }
