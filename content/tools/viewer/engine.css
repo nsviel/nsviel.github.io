@@ -67,49 +67,200 @@ canvas {
   to { transform: rotate(360deg); }
 }
 
-.ambient-control {
+.lighting-controls {
   position: fixed;
   z-index: 10;
   right: 16px;
   bottom: 16px;
-  display: flex;
-  align-items: center;
+  display: grid;
   gap: 8px;
-  width: 128px;
-  padding: 7px 10px;
+  width: 230px;
+  padding: 10px 12px;
   border: 1px solid #ffffff14;
-  border-radius: 20px;
+  border-radius: 12px;
   background: #11141799;
   color: #d8dde2;
-  opacity: 0.38;
+  font: 500 11px/1.2 Inter, ui-sans-serif, system-ui, sans-serif;
+  opacity: 0.45;
   backdrop-filter: blur(8px);
   transition: opacity 160ms ease, background 160ms ease;
 }
 
-.ambient-control:hover,
-.ambient-control:focus-within {
+.lighting-controls:hover,
+.lighting-controls:focus-within {
   background: #111417d9;
   opacity: 1;
 }
 
-.ambient-control span {
-  font-size: 12px;
-  line-height: 1;
+.lighting-controls label {
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  align-items: center;
+  gap: 8px;
 }
 
-.ambient-control input {
-  width: 90px;
+.lighting-controls input {
+  width: 100%;
   height: 12px;
   margin: 0;
   accent-color: #aeb6be;
   cursor: pointer;
 }
 
-/* Le script conserve ces éléments pour l'ouverture locale et les erreurs,
-   mais le viewer publié reste entièrement dépourvu d'interface superposée. */
-.toolbar,
-.welcome,
-.drop-zone,
+.toolbar {
+  position: fixed;
+  z-index: 10;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: #eef2f5;
+  font: 500 14px/1.3 Inter, ui-sans-serif, system-ui, sans-serif;
+  pointer-events: none;
+}
+
+.toolbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid #ffffff14;
+  border-radius: 10px;
+  background: #111417b3;
+  backdrop-filter: blur(8px);
+}
+
+.toolbar .brand i {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: #75d99d;
+}
+
+.toolbar .brand span {
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar .brand small {
+  max-width: 40vw;
+  overflow: hidden;
+  color: #9da7b0;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toolbar button,
+.welcome button {
+  padding: 9px 14px;
+  border: 1px solid #ffffff24;
+  border-radius: 8px;
+  background: #eef2f5;
+  color: #171a1d;
+  font: 600 13px/1.2 Inter, ui-sans-serif, system-ui, sans-serif;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.toolbar button:hover,
+.welcome button:hover {
+  background: #fff;
+}
+
+.welcome {
+  position: fixed;
+  z-index: 5;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  background: radial-gradient(circle at center, #1b222780 0%, #10121480 68%);
+  color: #eef2f5;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  text-align: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 200ms ease, visibility 200ms ease;
+}
+
+.welcome.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+.welcome h1 {
+  margin: 12px 0 0;
+  font-size: clamp(24px, 4vw, 42px);
+}
+
+.welcome p {
+  max-width: 34rem;
+  margin: 0 0 8px;
+  color: #aeb7bf;
+  font-size: clamp(14px, 2vw, 17px);
+}
+
+.drop-zone {
+  position: fixed;
+  z-index: 30;
+  inset: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #75d99d;
+  border-radius: 18px;
+  background: #101214e6;
+  color: #eef2f5;
+  font: 600 clamp(18px, 3vw, 30px)/1.3 Inter, ui-sans-serif, system-ui, sans-serif;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 120ms ease, visibility 120ms ease;
+}
+
+.drop-zone.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
 .status {
-  display: none !important;
+  position: fixed;
+  z-index: 25;
+  left: 50%;
+  bottom: 24px;
+  max-width: calc(100% - 32px);
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #171a1de6;
+  color: #eef2f5;
+  font: 500 13px/1.4 Inter, ui-sans-serif, system-ui, sans-serif;
+  transform: translateX(-50%);
+}
+
+.status[hidden] {
+  display: none;
+}
+
+.status.error {
+  color: #ffb5b5;
+}
+
+@media (max-width: 560px) {
+  .toolbar .brand {
+    display: none;
+  }
+
+  .toolbar {
+    justify-content: flex-end;
+  }
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1" />
@@ -9,28 +9,37 @@
 </head>
 <body>
   <main id="viewer">
-    <canvas id="webgl" aria-label="Scène 3D"></canvas>
+    <canvas id="webgl" aria-label="3D scene"></canvas>
     <div id="loading" class="loading" role="status" aria-live="polite">
       <span class="loading-spinner" aria-hidden="true"></span>
-      <span id="loading-text">Chargement du modèle…</span>
+      <span id="loading-text">Loading model…</span>
     </div>
     <header class="toolbar">
-      <div class="brand"><i></i><span><b>GLB Viewer</b><small id="filename">Aucun modèle</small></span></div>
-      <button id="open-button" type="button">Ouvrir un GLB</button>
+      <div class="brand"><i></i><span><b>GLB Viewer</b><small id="filename">No model</small></span></div>
+      <button id="open-button" type="button">Open a GLB</button>
       <input id="file-input" type="file" accept=".glb,model/gltf-binary" hidden />
     </header>
     <section id="welcome" class="welcome">
-      <div class="cube">3D</div>
-      <h1>Ouvrez un modèle 3D</h1>
-      <p>Sélectionnez ou glissez-déposez un fichier <code>.glb</code>.</p>
-      <button id="welcome-button" type="button">Choisir un fichier</button>
+      <h1>A GLB file is required</h1>
+      <p>Drag and drop it anywhere in this window to open it directly.</p>
+      <button id="welcome-button" type="button">Choose a GLB file</button>
     </section>
-    <div id="drop-zone" class="drop-zone"><strong>Déposez le fichier GLB</strong></div>
+    <div id="drop-zone" class="drop-zone"><strong>Drop the GLB file to open it</strong></div>
     <div id="status" class="status" role="status" aria-live="polite" hidden></div>
-    <label class="ambient-control" title="Luminosité ambiante">
-      <span aria-hidden="true">☀</span>
-      <input id="ambient-light" type="range" min="0" max="3" step="0.05" value="1.2" aria-label="Luminosité ambiante" />
-    </label>
+    <div class="lighting-controls" aria-label="Lighting controls">
+      <label title="Ambient to directional light balance">
+        <span>Balance</span>
+        <input id="light-balance" type="range" min="0" max="1" step="0.01" value="0.25" aria-label="Ambient to directional light balance" />
+      </label>
+      <label title="Directional light angle">
+        <span>Direction</span>
+        <input id="light-azimuth" type="range" min="0" max="360" step="1" value="315" aria-label="Directional light angle in degrees" />
+      </label>
+      <label title="Total light brightness">
+        <span>Brightness</span>
+        <input id="light-brightness" type="range" min="0.5" max="12" step="0.05" value="3" aria-label="Total light brightness" />
+      </label>
+    </div>
 
   </main>
   <script src="./engine.js"></script>

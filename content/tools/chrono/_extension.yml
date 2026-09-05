@@ -1,0 +1,13 @@
+title: Chrono
+author: nsv
+version: "1.0.0"
+
+contributes:
+  shortcodes:
+    - chrono.lua
+  revealjs-plugins:
+    - name: Chrono
+      script:
+        - chrono.js
+      stylesheet:
+        - chrono.css

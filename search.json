@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "tool/index.html",
+    "href": "tool/index.html",
+    "title": "TEACHING",
+    "section": "",
+    "text": "Chronomètre\n\n\n Viewer 3D"
+  },
+  {
     "objectID": "en/teaching/tid/index.html",
     "href": "en/teaching/tid/index.html",
     "title": "Introduction to Data Processing",
@@ -355,5 +362,12 @@
     "title": "Inverse Rendering for Image Synthesis (IRIS)",
     "section": "Practical sessions",
     "text": "Practical sessions\n\n\n\nActivity\nTopic\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\nPDF\n—"
+  },
+  {
+    "objectID": "tool/chrono/index.html#chronomètre",
+    "href": "tool/chrono/index.html#chronomètre",
+    "title": "TEACHING",
+    "section": "Chronomètre",
+    "text": "Chronomètre\n\n  \n\n  \n    \n      ▶\n      ↩\n\n      \n        \n        min\n        \n        s"
   }
 ]

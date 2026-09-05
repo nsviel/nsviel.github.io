@@ -33080,8 +33080,8 @@ void main() {
 
   // source/content/tools/viewer/js/src/light.js
   function add_light(scene) {
-    const light = new DirectionalLight(16777215, 1.8);
-    light.position.set(5, 5, 10);
+    const light = new DirectionalLight(16777215, 1.2);
+    light.position.set(5, -5, 10);
     light.target.position.set(0, 0, 0);
     light.castShadow = true;
     light.shadow.mapSize.set(2048, 2048);
@@ -33093,7 +33093,8 @@ void main() {
     light.shadow.camera.right = 2;
     light.shadow.bias = -1e-4;
     scene.add(light);
-    const ambient = new AmbientLight(16777215, 1.2);
+    scene.add(light.target);
+    const ambient = new AmbientLight(16777215, 1.8);
     scene.add(ambient);
     return { directional: light, ambient };
   }
@@ -34864,7 +34865,7 @@ void main() {
     const controls = add_control(scene, renderer, camera);
     bind_fog_to_zoom(scene, camera, controls);
     add_glyph(scene);
-    const { ambient } = add_light(scene);
+    const { directional, ambient } = add_light(scene);
     const update_keyboard = add_event2(renderer, camera, controls);
     const composer = create_composer_with_edl(renderer, scene, camera);
     run_loop(composer, camera, scene, null, controls, update_keyboard);
@@ -34876,12 +34877,37 @@ void main() {
     const filename = document.getElementById("filename");
     const loading2 = document.getElementById("loading");
     const loadingText = document.getElementById("loading-text");
-    const ambientControl = document.getElementById("ambient-light");
-    ambientControl.addEventListener("input", () => {
-      ambient.intensity = Number(ambientControl.value);
-    });
+    const lightBalanceControl = document.getElementById("light-balance");
+    const lightAzimuthControl = document.getElementById("light-azimuth");
+    const lightBrightnessControl = document.getElementById("light-brightness");
+    const lightHorizontalDistance = Math.hypot(5, 5);
+    const lightHeight = directional.position.z;
+    const updateLightBalance = () => {
+      const balance = Number(lightBalanceControl.value);
+      const totalIntensity = Number(lightBrightnessControl.value);
+      const minimumDirectionalShare = 0.2;
+      const variableShare = 0.8;
+      ambient.intensity = (1 - balance) * variableShare * totalIntensity;
+      directional.intensity = (minimumDirectionalShare + balance * variableShare) * totalIntensity;
+    };
+    const updateDirectionalPosition = () => {
+      const angle = Number(lightAzimuthControl.value) * Math.PI / 180;
+      const target = controls.target;
+      directional.target.position.copy(target);
+      directional.position.set(
+        target.x + Math.cos(angle) * lightHorizontalDistance,
+        target.y + Math.sin(angle) * lightHorizontalDistance,
+        lightHeight
+      );
+    };
+    lightBalanceControl.addEventListener("input", updateLightBalance);
+    lightBrightnessControl.addEventListener("input", updateLightBalance);
+    lightAzimuthControl.addEventListener("input", updateDirectionalPosition);
+    controls.addEventListener("change", updateDirectionalPosition);
+    updateLightBalance();
+    updateDirectionalPosition();
     let entity = null;
-    function showLoading(message = "Chargement du mod\xE8le\u2026") {
+    function showLoading(message = "Loading model\u2026") {
       loadingText.textContent = message;
       loading2.classList.remove("hidden", "error");
     }
@@ -34889,7 +34915,7 @@ void main() {
       requestAnimationFrame(() => loading2.classList.add("hidden"));
     }
     function showLoadingError() {
-      loadingText.textContent = "Impossible de charger ce mod\xE8le.";
+      loadingText.textContent = "Unable to load this model.";
       loading2.classList.add("error");
     }
     function setStatus(message, error2 = false) {
@@ -34911,20 +34937,21 @@ void main() {
     }
     async function display(url, name) {
       showLoading();
-      setStatus("Chargement du mod\xE8le\u2026");
+      setStatus("Loading model\u2026");
       try {
         const next = await load_glb(url);
         dispose(entity);
         entity = next;
         scene.add(entity);
         place_and_frame(camera, controls, entity);
+        updateDirectionalPosition();
         filename.textContent = name;
         welcome.classList.add("hidden");
         setStatus("");
         hideLoading();
       } catch (error2) {
         console.error(error2);
-        setStatus("Impossible d\u2019ouvrir ce fichier GLB.", true);
+        setStatus("Unable to open this GLB file.", true);
         showLoadingError();
       }
     }
@@ -34956,7 +34983,7 @@ void main() {
       dragDepth = 0;
       dropZone.classList.remove("visible");
       const file = [...event.dataTransfer.files].find((item) => item.name.toLowerCase().endsWith(".glb"));
-      if (!file) return setStatus("Veuillez d\xE9poser un fichier .glb.", true);
+      if (!file) return setStatus("Please drop a .glb file.", true);
       const url = URL.createObjectURL(file);
       await display(url, file.name);
       URL.revokeObjectURL(url);

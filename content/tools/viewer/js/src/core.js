@@ -16,7 +16,7 @@ export async function engine() {
     const controls = add_control(scene, renderer, camera);
     three.bind_fog_to_zoom(scene, camera, controls);
     add_glyph(scene);
-    const { ambient } = add_light(scene);
+    const { directional, ambient } = add_light(scene);
     const update_keyboard = add_event(renderer, camera, controls);
 
     const composer = create_composer_with_edl(renderer, scene, camera);
@@ -30,13 +30,41 @@ export async function engine() {
     const filename = document.getElementById("filename");
     const loading = document.getElementById("loading");
     const loadingText = document.getElementById("loading-text");
-    const ambientControl = document.getElementById("ambient-light");
-    ambientControl.addEventListener("input", () => {
-        ambient.intensity = Number(ambientControl.value);
-    });
+    const lightBalanceControl = document.getElementById("light-balance");
+    const lightAzimuthControl = document.getElementById("light-azimuth");
+    const lightBrightnessControl = document.getElementById("light-brightness");
+    const lightHorizontalDistance = Math.hypot(5, 5);
+    const lightHeight = directional.position.z;
+
+    const updateLightBalance = () => {
+        const balance = Number(lightBalanceControl.value);
+        const totalIntensity = Number(lightBrightnessControl.value);
+        const minimumDirectionalShare = 0.2;
+        const variableShare = 0.8;
+        ambient.intensity = (1 - balance) * variableShare * totalIntensity;
+        directional.intensity = (minimumDirectionalShare + balance * variableShare) * totalIntensity;
+    };
+
+    const updateDirectionalPosition = () => {
+        const angle = Number(lightAzimuthControl.value) * Math.PI / 180;
+        const target = controls.target;
+        directional.target.position.copy(target);
+        directional.position.set(
+            target.x + Math.cos(angle) * lightHorizontalDistance,
+            target.y + Math.sin(angle) * lightHorizontalDistance,
+            lightHeight
+        );
+    };
+
+    lightBalanceControl.addEventListener("input", updateLightBalance);
+    lightBrightnessControl.addEventListener("input", updateLightBalance);
+    lightAzimuthControl.addEventListener("input", updateDirectionalPosition);
+    controls.addEventListener("change", updateDirectionalPosition);
+    updateLightBalance();
+    updateDirectionalPosition();
     let entity = null;
 
-    function showLoading(message = "Chargement du modèle…") {
+    function showLoading(message = "Loading model…") {
         loadingText.textContent = message;
         loading.classList.remove("hidden", "error");
     }
@@ -47,7 +75,7 @@ export async function engine() {
     }
 
     function showLoadingError() {
-        loadingText.textContent = "Impossible de charger ce modèle.";
+        loadingText.textContent = "Unable to load this model.";
         loading.classList.add("error");
     }
 
@@ -72,20 +100,21 @@ export async function engine() {
 
     async function display(url, name) {
         showLoading();
-        setStatus("Chargement du modèle…");
+        setStatus("Loading model…");
         try {
             const next = await load_glb(url);
             dispose(entity);
             entity = next;
             scene.add(entity);
             place_and_frame(camera, controls, entity);
+            updateDirectionalPosition();
             filename.textContent = name;
             welcome.classList.add("hidden");
             setStatus("");
             hideLoading();
         } catch (error) {
             console.error(error);
-            setStatus("Impossible d’ouvrir ce fichier GLB.", true);
+            setStatus("Unable to open this GLB file.", true);
             showLoadingError();
         }
     }
@@ -109,7 +138,7 @@ export async function engine() {
         dragDepth = 0;
         dropZone.classList.remove("visible");
         const file = [...event.dataTransfer.files].find((item) => item.name.toLowerCase().endsWith(".glb"));
-        if (!file) return setStatus("Veuillez déposer un fichier .glb.", true);
+        if (!file) return setStatus("Please drop a .glb file.", true);
         const url = URL.createObjectURL(file);
         await display(url, file.name);
         URL.revokeObjectURL(url);
