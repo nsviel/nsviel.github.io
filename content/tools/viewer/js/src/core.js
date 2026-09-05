@@ -30,6 +30,8 @@ export async function engine() {
     const filename = document.getElementById("filename");
     const loading = document.getElementById("loading");
     const loadingText = document.getElementById("loading-text");
+    const initialPath = path_from_query();
+    document.body.classList.toggle("tool-viewer", !initialPath);
     const lightBalanceControl = document.getElementById("light-balance");
     const lightAzimuthControl = document.getElementById("light-azimuth");
     const lightBrightnessControl = document.getElementById("light-brightness");
@@ -56,6 +58,43 @@ export async function engine() {
         );
     };
 
+    let azimuthDrag = null;
+    const wrapAngle = (angle) => ((angle % 360) + 360) % 360;
+
+    lightAzimuthControl.addEventListener("pointerdown", (event) => {
+        if (event.button !== 0) return;
+        event.preventDefault();
+        const bounds = lightAzimuthControl.getBoundingClientRect();
+        const ratio = Math.max(0, Math.min(1, (event.clientX - bounds.left) / bounds.width));
+        lightAzimuthControl.value = String(ratio * 360);
+        updateDirectionalPosition();
+        azimuthDrag = {
+            pointerId: event.pointerId,
+            lastX: event.clientX,
+            width: bounds.width
+        };
+        lightAzimuthControl.setPointerCapture(event.pointerId);
+    });
+
+    lightAzimuthControl.addEventListener("pointermove", (event) => {
+        if (!azimuthDrag || event.pointerId !== azimuthDrag.pointerId) return;
+        event.preventDefault();
+        const deltaAngle = (event.clientX - azimuthDrag.lastX) / azimuthDrag.width * 360;
+        lightAzimuthControl.value = String(wrapAngle(Number(lightAzimuthControl.value) + deltaAngle));
+        azimuthDrag.lastX = event.clientX;
+        updateDirectionalPosition();
+    });
+
+    const stopAzimuthDrag = (event) => {
+        if (!azimuthDrag || event.pointerId !== azimuthDrag.pointerId) return;
+        if (lightAzimuthControl.hasPointerCapture(event.pointerId)) {
+            lightAzimuthControl.releasePointerCapture(event.pointerId);
+        }
+        azimuthDrag = null;
+    };
+
+    lightAzimuthControl.addEventListener("pointerup", stopAzimuthDrag);
+    lightAzimuthControl.addEventListener("pointercancel", stopAzimuthDrag);
     lightBalanceControl.addEventListener("input", updateLightBalance);
     lightBrightnessControl.addEventListener("input", updateLightBalance);
     lightAzimuthControl.addEventListener("input", updateDirectionalPosition);
@@ -144,7 +183,6 @@ export async function engine() {
         URL.revokeObjectURL(url);
     });
 
-    const initialPath = path_from_query();
     if (initialPath) {
         display(initialPath, decodeURIComponent(initialPath.split("/").pop().split("?")[0]));
     } else {
