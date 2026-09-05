@@ -32971,7 +32971,10 @@ void main() {
   // source/content/tools/viewer/js/src/loader.js
   async function load_glb(url) {
     const draco = new DRACOLoader();
-    draco.setDecoderPath("./draco/");
+    const decoderPath = new URL("./draco/", window.location.href).href;
+    draco.setDecoderPath(decoderPath);
+    draco.setDecoderConfig({ type: "wasm" });
+    draco.preload();
     const loader = new GLTFLoader();
     loader.setDRACOLoader(draco);
     try {

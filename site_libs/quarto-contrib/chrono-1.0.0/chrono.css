@@ -1,0 +1,86 @@
+.chrono {
+  box-sizing: border-box;
+  width: min(100%, 1000px);
+  margin: 2rem auto;
+  padding: clamp(1rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--bs-body-color);
+  background: transparent;
+}
+
+.chrono canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: transparent;
+  border: none;
+}
+
+.chrono .row,
+.chrono .parameter,
+.chrono label {
+  display: flex;
+  align-items: center;
+}
+
+.chrono .row {
+  justify-content: center;
+}
+
+.chrono .parameter {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.chrono label {
+  gap: 0.5rem;
+}
+
+.chrono button {
+  width: 2em;
+  height: 2em;
+  padding: 0;
+  border: none;
+  color: inherit;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.chrono button:hover,
+.chrono button:focus-visible {
+  color: var(--bs-body-bg);
+  background: var(--bs-body-color);
+}
+
+.chrono input {
+  width: 3em;
+  margin: 0;
+  padding: 0.4em;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.25rem;
+  outline: none;
+  color: inherit;
+  background: transparent;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.chrono input:focus-visible {
+  border-color: var(--bs-body-color);
+}
+
+.chrono input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.chrono input[type="number"]::-webkit-outer-spin-button,
+.chrono input[type="number"]::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
