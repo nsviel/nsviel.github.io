@@ -37,15 +37,42 @@ function add_grid(scene) {
     scene.add(plane);
 
     // 2️⃣ Grille
-    const grid = new THREE.GridHelper(size, divisions, 0x8f969e, 0x686e75);
+    const grid = new THREE.GridHelper(size, divisions, 0x686e75, 0x686e75);
     grid.rotation.x = Math.PI / 2;
     grid.material.transparent = false;
     grid.material.depthWrite = true;
     grid.material.fog = true;
     scene.add(grid);
 
+    function createGridAxis(color, start, end) {
+        const geometry = new THREE.BufferGeometry().setFromPoints([start, end]);
+        const material = new THREE.LineBasicMaterial({
+            color,
+            transparent: true,
+            opacity: 0.95,
+            fog: true
+        });
+        const line = new THREE.Line(geometry, material);
+        line.position.z = 0.01;
+        line.renderOrder = 1;
+        scene.add(line);
+        return line;
+    }
+
+    const halfSize = size / 2;
+    const xAxis = createGridAxis(
+        0xc96f75,
+        new THREE.Vector3(-halfSize, 0, 0),
+        new THREE.Vector3(halfSize, 0, 0)
+    );
+    const yAxis = createGridAxis(
+        0x70b981,
+        new THREE.Vector3(0, -halfSize, 0),
+        new THREE.Vector3(0, halfSize, 0)
+    );
+
     //---------------
-    return { plane, grid };
+    return { plane, grid, xAxis, yAxis };
 }
 function add_axes(scene) {
     //---------------

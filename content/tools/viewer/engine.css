@@ -72,7 +72,7 @@ canvas {
   z-index: 10;
   right: 16px;
   bottom: 16px;
-  display: grid;
+  display: none;
   gap: 8px;
   width: 230px;
   padding: 10px 12px;
@@ -126,7 +126,11 @@ canvas {
   pointer-events: none;
 }
 
-body.tool-viewer .toolbar {
+body.model-loaded .lighting-controls {
+  display: grid;
+}
+
+body.tool-viewer.model-loaded .toolbar {
   display: flex;
 }
 
@@ -206,7 +210,7 @@ body.tool-viewer .toolbar {
 
 
 .welcome h1 {
-  margin: 12px 0 0;
+  margin: 12px 0 8px;
   font-size: clamp(24px, 4vw, 42px);
 }
 
@@ -220,7 +224,7 @@ body.tool-viewer .toolbar {
 .sample-models {
   display: grid;
   gap: 8px;
-  margin-top: 8px;
+  margin-top: 16px;
   color: #aeb7bf;
   font-size: 13px;
 }

@@ -150,6 +150,7 @@ export async function engine() {
             updateDirectionalPosition();
             filename.textContent = name;
             welcome.classList.add("hidden");
+            document.body.classList.add("model-loaded");
             setStatus("");
             hideLoading();
         } catch (error) {

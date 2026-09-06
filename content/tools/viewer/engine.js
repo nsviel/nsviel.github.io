@@ -33019,13 +33019,38 @@ void main() {
     plane.position.z = -0.025;
     plane.receiveShadow = true;
     scene.add(plane);
-    const grid = new GridHelper(size, divisions, 9410206, 6844021);
+    const grid = new GridHelper(size, divisions, 6844021, 6844021);
     grid.rotation.x = Math.PI / 2;
     grid.material.transparent = false;
     grid.material.depthWrite = true;
     grid.material.fog = true;
     scene.add(grid);
-    return { plane, grid };
+    function createGridAxis(color, start, end) {
+      const geometry = new BufferGeometry().setFromPoints([start, end]);
+      const material = new LineBasicMaterial({
+        color,
+        transparent: true,
+        opacity: 0.95,
+        fog: true
+      });
+      const line = new Line(geometry, material);
+      line.position.z = 0.01;
+      line.renderOrder = 1;
+      scene.add(line);
+      return line;
+    }
+    const halfSize = size / 2;
+    const xAxis = createGridAxis(
+      13201269,
+      new Vector3(-halfSize, 0, 0),
+      new Vector3(halfSize, 0, 0)
+    );
+    const yAxis = createGridAxis(
+      7387521,
+      new Vector3(0, -halfSize, 0),
+      new Vector3(0, halfSize, 0)
+    );
+    return { plane, grid, xAxis, yAxis };
   }
   function add_axes(scene) {
     let length = 1;
@@ -34874,6 +34899,7 @@ void main() {
     run_loop(composer, camera, scene, null, controls, update_keyboard);
     const input = document.getElementById("file-input");
     const openButtons = [document.getElementById("open-button"), document.getElementById("welcome-button")];
+    const sampleButtons = document.querySelectorAll("[data-model-url]");
     const welcome = document.getElementById("welcome");
     const dropZone = document.getElementById("drop-zone");
     const status = document.getElementById("status");
@@ -34985,6 +35011,7 @@ void main() {
         updateDirectionalPosition();
         filename.textContent = name;
         welcome.classList.add("hidden");
+        document.body.classList.add("model-loaded");
         setStatus("");
         hideLoading();
       } catch (error2) {
@@ -34994,6 +35021,10 @@ void main() {
       }
     }
     openButtons.forEach((button) => button.addEventListener("click", () => input.click()));
+    sampleButtons.forEach((button) => button.addEventListener("click", () => {
+      const url = new URL(button.dataset.modelUrl, window.location.href).toString();
+      display(url, button.dataset.modelName);
+    }));
     input.addEventListener("change", async () => {
       const file = input.files[0];
       if (!file) return;
