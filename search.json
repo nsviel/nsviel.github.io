@@ -88,7 +88,7 @@
     "href": "en/index.html",
     "title": "TEACHING",
     "section": "",
-    "text": "Course\nLevel\n\n\n\n\nComputer-Based Data Processing\nL1\n\n\nIntroduction to Big Data\nL3\n\n\nInverse Rendering for Image Synthesis\nM1\n\n\nGeneral-Purpose Computing on Graphics Processing Units (GPGPU)\nM1\n\n\n3D Reconstruction\nM2\n\n\nDeep Learning\nM2"
+    "text": "Course\nAcronym\nLevel\n\n\n\n\nComputer-Based Data Processing\nTID\nL1\n\n\nIntroduction to Big Data\nIBD\nL3\n\n\nInverse Rendering for Image Synthesis\nSIRI\nM1\n\n\nGeneral-Purpose Computing on Graphics Processing Units\nGPGPU\nM1\n\n\n3D Reconstruction\nR3D\nM2\n\n\nDeep Learning\nDL\nM2"
   },
   {
     "objectID": "fr/teaching/tid/index.html",
@@ -172,7 +172,7 @@
     "href": "fr/index.html",
     "title": "TEACHING",
     "section": "",
-    "text": "Cours\nNiveau\n\n\n\n\nTraitement Informatique des Données\nL1\n\n\nIntroduction au Big Data\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nM1\n\n\nGeneral-purpose computing on graphics processing units (GPGPU)\nM1\n\n\nReconstruction 3D\nM2\n\n\nDeep Learning\nM2"
+    "text": "Cours\nAcronyme\nNiveau\n\n\n\n\nTraitement Informatique des Données\nTID\nL1\n\n\nIntroduction au Big Data\nIBD\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nSIRI\nM1\n\n\nGeneral-Purpose computing on Graphics Processing Units\nGPGPU\nM1\n\n\nReconstruction 3D\nR3D\nM2\n\n\nDeep Learning\nDL\nM2"
   },
   {
     "objectID": "fr/contact/index.html",
