@@ -20,9 +20,16 @@
       <input id="file-input" type="file" accept=".glb,model/gltf-binary" hidden />
     </header>
     <section id="welcome" class="welcome">
-      <h1>A GLB file is required</h1>
-      <p>Drag and drop it anywhere in this window to open it directly.</p>
+      <h1>Open a GLB model</h1>
+      <p>Drag and drop your own file anywhere in this window, or choose one below.</p>
       <button id="welcome-button" type="button">Choose a GLB file</button>
+      <div class="sample-models">
+        <span>Or explore an example</span>
+        <div class="sample-model-buttons">
+          <button class="sample-model-button" type="button" data-model-url="/content/data/astronaut.glb" data-model-name="astronaut.glb">Astronaut</button>
+          <button class="sample-model-button" type="button" data-model-url="/content/data/lego.glb" data-model-name="lego.glb">Lego</button>
+        </div>
+      </div>
     </section>
     <div id="drop-zone" class="drop-zone"><strong>Drop the GLB file to open it</strong></div>
     <div id="status" class="status" role="status" aria-live="polite" hidden></div>

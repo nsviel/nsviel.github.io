@@ -24,6 +24,7 @@ export async function engine() {
 
     const input = document.getElementById("file-input");
     const openButtons = [document.getElementById("open-button"), document.getElementById("welcome-button")];
+    const sampleButtons = document.querySelectorAll("[data-model-url]");
     const welcome = document.getElementById("welcome");
     const dropZone = document.getElementById("drop-zone");
     const status = document.getElementById("status");
@@ -159,6 +160,10 @@ export async function engine() {
     }
 
     openButtons.forEach((button) => button.addEventListener("click", () => input.click()));
+    sampleButtons.forEach((button) => button.addEventListener("click", () => {
+        const url = new URL(button.dataset.modelUrl, window.location.href).toString();
+        display(url, button.dataset.modelName);
+    }));
     input.addEventListener("change", async () => {
         const file = input.files[0];
         if (!file) return;

@@ -217,6 +217,30 @@ body.tool-viewer .toolbar {
   font-size: clamp(14px, 2vw, 17px);
 }
 
+.sample-models {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+  color: #aeb7bf;
+  font-size: 13px;
+}
+
+.sample-model-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.welcome .sample-model-button {
+  background: #171c20;
+  color: #eef2f5;
+}
+
+.welcome .sample-model-button:hover {
+  background: #242b31;
+}
+
 .drop-zone {
   position: fixed;
   z-index: 30;
