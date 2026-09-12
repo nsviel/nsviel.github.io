@@ -35001,7 +35001,7 @@ void main() {
     }
     async function display(url, name) {
       showLoading();
-      setStatus("Loading model\u2026");
+      setStatus("");
       try {
         const next = await load_glb(url);
         dispose(entity);

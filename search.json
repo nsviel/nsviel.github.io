@@ -9,23 +9,30 @@
   {
     "objectID": "en/teaching/tid/index.html",
     "href": "en/teaching/tid/index.html",
-    "title": "Introduction to Data Processing",
+    "title": "Computer Data Processing (TID)",
     "section": "",
-    "text": "This course introduces data processing using spreadsheet tools. It explains how to structure observations into tables and how to extract or produce information using formulas.\nThe objective is to understand fundamental concepts — data, table, cell, and formula — in order to develop a clear and transferable approach, applicable to tools such as LibreOffice Calc, Microsoft Excel, or Google Sheets. Practical sessions allow students to apply these concepts, and a project involves analyzing a complete dataset to produce results and an interpretation."
+    "text": "This course introduces computer-based data processing using spreadsheets. It explains how to structure observations in tables, then how to transform, summarize, connect, and analyze data to extract meaningful information.\nThe aim is to understand the fundamental principles of data processing and develop a clear, transferable approach that can be applied using tools such as LibreOffice Calc, Excel, or Google Sheets. Practical sessions provide opportunities to apply these concepts progressively, leading up to a final project focused on independently analyzing a dataset."
   },
   {
     "objectID": "en/teaching/tid/index.html#overview",
     "href": "en/teaching/tid/index.html#overview",
-    "title": "Introduction to Data Processing",
+    "title": "Computer Data Processing (TID)",
     "section": "",
-    "text": "This course introduces data processing using spreadsheet tools. It explains how to structure observations into tables and how to extract or produce information using formulas.\nThe objective is to understand fundamental concepts — data, table, cell, and formula — in order to develop a clear and transferable approach, applicable to tools such as LibreOffice Calc, Microsoft Excel, or Google Sheets. Practical sessions allow students to apply these concepts, and a project involves analyzing a complete dataset to produce results and an interpretation."
+    "text": "This course introduces computer-based data processing using spreadsheets. It explains how to structure observations in tables, then how to transform, summarize, connect, and analyze data to extract meaningful information.\nThe aim is to understand the fundamental principles of data processing and develop a clear, transferable approach that can be applied using tools such as LibreOffice Calc, Excel, or Google Sheets. Practical sessions provide opportunities to apply these concepts progressively, leading up to a final project focused on independently analyzing a dataset."
   },
   {
     "objectID": "en/teaching/tid/index.html#course-materials",
     "href": "en/teaching/tid/index.html#course-materials",
-    "title": "Introduction to Data Processing",
+    "title": "Computer Data Processing (TID)",
     "section": "Course materials",
     "text": "Course materials\n\nLecture 1: HTML\nLecture 2: HTML\nLecture 3: HTML\nLecture 4: HTML"
+  },
+  {
+    "objectID": "en/teaching/tid/index.html#practical-sessions",
+    "href": "en/teaching/tid/index.html#practical-sessions",
+    "title": "Computer Data Processing (TID)",
+    "section": "Practical sessions",
+    "text": "Practical sessions\n\n\n\nAssignment\nTopic\nData\n\n\n\n\nPractical 1\nTransforming\nSpace Missions\n\n\nPractical 2\nSummarizing and exploring\nNew Year’s Resolutions\n\n\nPractical 3\nModeling and optimizing\nBeverage Production\n\n\nPractical 4\nLinking and querying\n2022 World Cup"
   },
   {
     "objectID": "en/teaching/reconstruction/index.html",
@@ -95,14 +102,14 @@
     "href": "fr/teaching/tid/index.html",
     "title": "Traitement Informatique des Données (TID)",
     "section": "",
-    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableau, puis comment en extraire ou produire de l’information à l’aide de formules.\nL’objectif est de comprendre les principes fondamentaux — donnée, tableau, cellule et formule — afin de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettent de mettre en application ces notions, et un projet consiste à analyser un jeu de données complet afin de produire des résultats et une interprétation."
+    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableaux, puis comment transformer, résumer, relier et analyser ces données afin d’en extraire de l’information.\nL’objectif est de comprendre les principes fondamentaux du traitement de données et de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettent de mettre progressivement ces notions en application, avant un projet final consacré à l’analyse autonome d’un jeu de données."
   },
   {
     "objectID": "fr/teaching/tid/index.html#présentation",
     "href": "fr/teaching/tid/index.html#présentation",
     "title": "Traitement Informatique des Données (TID)",
     "section": "",
-    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableau, puis comment en extraire ou produire de l’information à l’aide de formules.\nL’objectif est de comprendre les principes fondamentaux — donnée, tableau, cellule et formule — afin de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettent de mettre en application ces notions, et un projet consiste à analyser un jeu de données complet afin de produire des résultats et une interprétation."
+    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableaux, puis comment transformer, résumer, relier et analyser ces données afin d’en extraire de l’information.\nL’objectif est de comprendre les principes fondamentaux du traitement de données et de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettent de mettre progressivement ces notions en application, avant un projet final consacré à l’analyse autonome d’un jeu de données."
   },
   {
     "objectID": "fr/teaching/tid/index.html#supports-de-cours",
@@ -110,6 +117,13 @@
     "title": "Traitement Informatique des Données (TID)",
     "section": "Supports de cours",
     "text": "Supports de cours\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+  },
+  {
+    "objectID": "fr/teaching/tid/index.html#travaux-pratiques",
+    "href": "fr/teaching/tid/index.html#travaux-pratiques",
+    "title": "Traitement Informatique des Données (TID)",
+    "section": "Travaux pratiques",
+    "text": "Travaux pratiques\n\n\n\nSujet\nThème\nDonnées\n\n\n\n\nTP 1\nTransformer\nSpace Missions\n\n\nTP 2\nRésumer et explorer\nNew Year’s Resolutions\n\n\nTP 3\nModéliser et optimiser\nProduction de boissons\n\n\nTP 4\nRelier et interroger\nWorld Cup 2022"
   },
   {
     "objectID": "fr/teaching/reconstruction/index.html",

@@ -140,7 +140,7 @@ export async function engine() {
 
     async function display(url, name) {
         showLoading();
-        setStatus("Loading model…");
+        setStatus("");
         try {
             const next = await load_glb(url);
             dispose(entity);

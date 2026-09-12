@@ -1,0 +1,5 @@
+Produit,Prix_vente_euros,Cout_unitaire_euros,Temps_machine_min,Matiere_premiere_L,Demande_max
+Cola,2.2,0.8,4,0.6,500
+Orange,2.5,1.0,5,0.6,300
+Citron,2.3,0.9,4,0.6,400
+Root Beer,2.8,1.1,6,0.6,200
