@@ -32,7 +32,7 @@
     "href": "en/teaching/tid/index.html#practical-sessions",
     "title": "Computer Data Processing (TID)",
     "section": "Practical sessions",
-    "text": "Practical sessions\n\n\n\nAssignment\nTopic\nData\n\n\n\n\nPractical 1\nTransforming\nSpace Missions\n\n\nPractical 2\nSummarizing and exploring\nNew Year’s Resolutions\n\n\nPractical 3\nModeling and optimizing\nBeverage Production\n\n\nPractical 4\nLinking and querying\n2022 World Cup"
+    "text": "Practical sessions\n\n\n\nAssignment\nTopic\nData\n\n\n\n\nPractical 1\nTransforming\nSpace Missions\n\n\nPractical 2\nSummarizing and exploring\nNew Year’s Resolutions\n\n\nPractical 3\nModeling and optimizing\nBeverage Production\n\n\nPractical 4\nLinking and querying\n2022 World Cup\n\n\nProject\nDo something with a spreadshee\n-"
   },
   {
     "objectID": "en/teaching/reconstruction/index.html",
@@ -102,14 +102,14 @@
     "href": "fr/teaching/tid/index.html",
     "title": "Traitement Informatique des Données (TID)",
     "section": "",
-    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableaux, puis comment transformer, résumer, relier et analyser ces données afin d’en extraire de l’information.\nL’objectif est de comprendre les principes fondamentaux du traitement de données et de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettent de mettre progressivement ces notions en application, avant un projet final consacré à l’analyse autonome d’un jeu de données."
+    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableaux, puis comment transformer, résumer, relier et analyser ces données afin d’en extraire de l’information.\nL’objectif est de comprendre les principes fondamentaux du traitement de données et de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettent de mettre progressivement ces notions en application, avant un projet final libre permettant d’imaginer et de réaliser sa propre application du tableur."
   },
   {
     "objectID": "fr/teaching/tid/index.html#présentation",
     "href": "fr/teaching/tid/index.html#présentation",
     "title": "Traitement Informatique des Données (TID)",
     "section": "",
-    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableaux, puis comment transformer, résumer, relier et analyser ces données afin d’en extraire de l’information.\nL’objectif est de comprendre les principes fondamentaux du traitement de données et de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettent de mettre progressivement ces notions en application, avant un projet final consacré à l’analyse autonome d’un jeu de données."
+    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableaux, puis comment transformer, résumer, relier et analyser ces données afin d’en extraire de l’information.\nL’objectif est de comprendre les principes fondamentaux du traitement de données et de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettent de mettre progressivement ces notions en application, avant un projet final libre permettant d’imaginer et de réaliser sa propre application du tableur."
   },
   {
     "objectID": "fr/teaching/tid/index.html#supports-de-cours",
@@ -123,7 +123,7 @@
     "href": "fr/teaching/tid/index.html#travaux-pratiques",
     "title": "Traitement Informatique des Données (TID)",
     "section": "Travaux pratiques",
-    "text": "Travaux pratiques\n\n\n\nSujet\nThème\nDonnées\n\n\n\n\nTP 1\nTransformer\nSpace Missions\n\n\nTP 2\nRésumer et explorer\nNew Year’s Resolutions\n\n\nTP 3\nModéliser et optimiser\nProduction de boissons\n\n\nTP 4\nRelier et interroger\nWorld Cup 2022"
+    "text": "Travaux pratiques\n\n\n\nSujet\nThème\nDonnées\n\n\n\n\nTP 1\nTransformer\nSpace Missions\n\n\nTP 2\nRésumer et explorer\nNew Year’s Resolutions\n\n\nTP 3\nModéliser et optimiser\nProduction de boissons\n\n\nTP 4\nRelier et interroger\nWorld Cup 2022\n\n\nProjet\nFaites quelque chose avec un tableur\n-"
   },
   {
     "objectID": "fr/teaching/reconstruction/index.html",
