@@ -25,14 +25,14 @@
     "href": "en/teaching/tid/index.html#course-materials",
     "title": "Computer Data Processing (TID)",
     "section": "Course materials",
-    "text": "Course materials\n\nLecture 1: HTML\nLecture 2: HTML\nLecture 3: HTML\nLecture 4: HTML"
+    "text": "Course materials\n\nLecture 1\nLecture 2\nLecture 3\nLecture 4"
   },
   {
     "objectID": "en/teaching/tid/index.html#practical-sessions",
     "href": "en/teaching/tid/index.html#practical-sessions",
     "title": "Computer Data Processing (TID)",
     "section": "Practical sessions",
-    "text": "Practical sessions\n\n\n\nAssignment\nTopic\nData\n\n\n\n\nPractical 1\nTransforming\nSpace Missions\n\n\nPractical 2\nSummarizing and exploring\nNew Year’s Resolutions\n\n\nPractical 3\nModeling and optimizing\nBeverage Production\n\n\nPractical 4\nLinking and querying\n2022 World Cup\n\n\nProject\nDo something with a spreadshee\n-"
+    "text": "Practical sessions\n\n\n\nAssignment\nTopic\nData\n\n\n\n\nPractical 1\nTransforming\nSpace Missions\n\n\nPractical 2\nSummarizing and exploring\nNew Year’s Resolutions\n\n\nPractical 3\nModeling and optimizing\nBeverage Production\n\n\nPractical 4\nLinking and querying\n2022 World Cup\n\n\nProject\nDo something with a spreadsheet\n-"
   },
   {
     "objectID": "en/teaching/reconstruction/index.html",
@@ -60,7 +60,7 @@
     "href": "en/teaching/reconstruction/index.html#course-materials",
     "title": "3D Reconstruction",
     "section": "Course materials",
-    "text": "Course materials\n\nLecture 1: HTML\nLecture 2: HTML"
+    "text": "Course materials\n\nLecture 1\nLecture 2"
   },
   {
     "objectID": "en/teaching/deeplearning/index.html",
@@ -81,14 +81,14 @@
     "href": "en/teaching/deeplearning/index.html#course-materials",
     "title": "Deep Learning",
     "section": "Course Materials",
-    "text": "Course Materials\n\nLecture 1 : HTML\nLecture 2 : HTML\nLecture 3 : HTML\nLecture 4 : HTML"
+    "text": "Course Materials\n\nLecture 1\nLecture 2\nLecture 3\nLecture 4"
   },
   {
     "objectID": "en/teaching/deeplearning/index.html#project",
     "href": "en/teaching/deeplearning/index.html#project",
     "title": "Deep Learning",
     "section": "Project",
-    "text": "Project\n\nSubjet : PDF\nMilestones : PDF"
+    "text": "Project\n\nSubject\nMilestones"
   },
   {
     "objectID": "en/index.html",
@@ -116,7 +116,7 @@
     "href": "fr/teaching/tid/index.html#supports-de-cours",
     "title": "Traitement Informatique des Données (TID)",
     "section": "Supports de cours",
-    "text": "Supports de cours\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+    "text": "Supports de cours\n\nCours 1\nCours 2\nCours 3\nCours 4"
   },
   {
     "objectID": "fr/teaching/tid/index.html#travaux-pratiques",
@@ -151,7 +151,7 @@
     "href": "fr/teaching/reconstruction/index.html#supports-de-cours",
     "title": "Reconstruction 3D",
     "section": "Supports de cours",
-    "text": "Supports de cours\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+    "text": "Supports de cours\n\nCours 1\nCours 2\nCours 3\nCours 4"
   },
   {
     "objectID": "fr/teaching/reconstruction/index.html#ateliers",
@@ -179,14 +179,14 @@
     "href": "fr/teaching/deeplearning/index.html#supports-de-cours",
     "title": "Deep Learning",
     "section": "Supports de cours",
-    "text": "Supports de cours\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+    "text": "Supports de cours\n\nCours 1\nCours 2\nCours 3\nCours 4"
   },
   {
     "objectID": "fr/teaching/deeplearning/index.html#projet",
     "href": "fr/teaching/deeplearning/index.html#projet",
     "title": "Deep Learning",
     "section": "Projet",
-    "text": "Projet\n\nSujet : PDF\nJalons : PDF"
+    "text": "Projet\n\nSujet\nJalons"
   },
   {
     "objectID": "fr/index.html",
@@ -228,14 +228,14 @@
     "href": "fr/teaching/bigdata/index.html#supports-de-cours",
     "title": "Introduction au Big Data",
     "section": "Supports de cours",
-    "text": "Supports de cours\n\nCours 1 : PDF\nCours 2 : HTML\nCours 3 : HTML\nCours 4 : HTML"
+    "text": "Supports de cours\n\nCours 1\nCours 2\nCours 3\nCours 4"
   },
   {
     "objectID": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
     "href": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
     "title": "Introduction au Big Data",
     "section": "Travaux pratiques et projets",
-    "text": "Travaux pratiques et projets\n\n\n\nActivité\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nCSV\n\n\nTP 2\nPDF\n—\n\n\nProjet 1\nPDF\nCSV\n\n\nProjet 2\nPDF\nODS"
+    "text": "Travaux pratiques et projets\n\n\n\nActivité\nSujet\nDonnées\n\n\n\n\nTP 1\nSujet\nData\n\n\nTP 2\nSujet\n—\n\n\nProjet 1\nSujet\nData\n\n\nProjet 2\nSujet\nData"
   },
   {
     "objectID": "fr/teaching/gpgpu/index.html",
@@ -270,21 +270,21 @@
     "href": "fr/teaching/syntheseimage/index.html#supports-de-cours",
     "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "Supports de cours",
-    "text": "Supports de cours\n\nCours 1 : HTML\nCours 2 : HTML\nCours 3 : HTML"
+    "text": "Supports de cours\n\nCours 1\nCours 2\nCours 3"
   },
   {
     "objectID": "fr/teaching/syntheseimage/index.html#ateliers",
     "href": "fr/teaching/syntheseimage/index.html#ateliers",
     "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "Ateliers",
-    "text": "Ateliers\n\nAtelier 1 : PDF\nAtelier 2 : PDF\nAtelier 3 : PDF"
+    "text": "Ateliers\n\nAtelier 1\nAtelier 2\nAtelier 3"
   },
   {
     "objectID": "fr/teaching/syntheseimage/index.html#travaux-pratiques",
     "href": "fr/teaching/syntheseimage/index.html#travaux-pratiques",
     "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "Travaux pratiques",
-    "text": "Travaux pratiques\n\n\n\nActivité\nSujet\nDonnées\n\n\n\n\nTP 1\nPDF\nZIP\n\n\nTP 2\nPDF\nZIP\n\n\nTP 3\nPDF\n—"
+    "text": "Travaux pratiques\n\n\n\nActivité\nSujet\nDonnées\n\n\n\n\nTP 1\nSujet\nDonnées\n\n\nTP 2\nSujet\nDonnées\n\n\nTP 3\nSujet\n—"
   },
   {
     "objectID": "fr/teaching/syntheseimage/index.html#projets-réalisés",
@@ -326,14 +326,14 @@
     "href": "en/teaching/bigdata/index.html#course-materials",
     "title": "Introduction to Big Data",
     "section": "Course materials",
-    "text": "Course materials\n\nLecture 1: PDF\nLecture 2: HTML\nLecture 3: HTML\nLecture 4: HTML"
+    "text": "Course materials\n\nLecture 1\nLecture 2\nLecture 3\nLecture 4"
   },
   {
     "objectID": "en/teaching/bigdata/index.html#labs-and-projects",
     "href": "en/teaching/bigdata/index.html#labs-and-projects",
     "title": "Introduction to Big Data",
     "section": "Labs and projects",
-    "text": "Labs and projects\n\n\n\nActivity\nSubject\nDataset\n\n\n\n\nLab 1\nPDF\nCSV\n\n\nLab 2\nPDF\n—\n\n\nProject 1\nPDF\nCSV\n\n\nProject 2\nPDF\nODS"
+    "text": "Labs and projects\n\n\n\nActivity\nSubject\nDataset\n\n\n\n\nLab 1\nSubject\nCSV\n\n\nLab 2\nSubject\n—\n\n\nProject 1\nSubject\nCSV\n\n\nProject 2\nSubject\nODS"
   },
   {
     "objectID": "en/teaching/gpgpu/index.html",
@@ -368,21 +368,21 @@
     "href": "en/teaching/syntheseimage/index.html#course-materials",
     "title": "Inverse Rendering for Image Synthesis (IRIS)",
     "section": "Course materials",
-    "text": "Course materials\n\nLecture 1: HTML\nLecture 2: HTML\nLecture 3: HTML"
+    "text": "Course materials\n\nLecture 1\nLecture 2\nLecture 3"
   },
   {
     "objectID": "en/teaching/syntheseimage/index.html#workshops",
     "href": "en/teaching/syntheseimage/index.html#workshops",
     "title": "Inverse Rendering for Image Synthesis (IRIS)",
     "section": "Workshops",
-    "text": "Workshops\n\nWorkshop 1: PDF\nWorkshop 2: PDF\nWorkshop 3: PDF"
+    "text": "Workshops\n\nWorkshop 1\nWorkshop 2\nWorkshop 3"
   },
   {
     "objectID": "en/teaching/syntheseimage/index.html#practical-sessions",
     "href": "en/teaching/syntheseimage/index.html#practical-sessions",
     "title": "Inverse Rendering for Image Synthesis (IRIS)",
     "section": "Practical sessions",
-    "text": "Practical sessions\n\n\n\nActivity\nTopic\nData\n\n\n\n\nLab 1\nPDF\nZIP\n\n\nLab 2\nPDF\nZIP\n\n\nLab 3\nPDF\n—"
+    "text": "Practical sessions\n\n\n\nActivity\nTopic\nData\n\n\n\n\nLab 1\nTopic\nData\n\n\nLab 2\nTopic\nData\n\n\nLab 3\nTopic\n—"
   },
   {
     "objectID": "tool/chrono/index.html",
