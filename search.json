@@ -4,7 +4,7 @@
     "href": "tool/pdf/index.html",
     "title": "TEACHING",
     "section": "",
-    "text": "&lt;\n    \n    \n      \n        \n      \n      \n        \n        PDF\n      \n      \n        \n        Données"
+    "text": "&lt;\n    \n    \n      \n        \n      \n      \n        \n        PDF\n      \n      \n        \n        Données\n      \n    \n  \n  \n    \n    Ouvrir un PDF\n    Glissez-déposez un fichier ici ou cliquez pour le sélectionner.\n  \n  \n  \n  \n    \n    Déposez le PDF ici"
   },
   {
     "objectID": "tool/chrono/index.html",
@@ -396,6 +396,6 @@
     "href": "tool/index.html",
     "title": "TEACHING",
     "section": "",
-    "text": "Chronomètre\n\n\n Viewer 3D"
+    "text": "Chronomètre\n\n\n Viewer 3D\n\n\n Lecteur PDF"
   }
 ]

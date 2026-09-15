@@ -16,6 +16,12 @@
       invalid: "L’adresse du document PDF n’est pas valide.",
       forbidden: "Seuls les documents PDF hébergés sur ce site peuvent être affichés.",
       frameTitle: "Lecteur PDF",
+      open: "Ouvrir un PDF",
+      choose: "Glissez-déposez un fichier ici ou cliquez pour le sélectionner.",
+      drop: "Déposez le PDF ici",
+      pdfOnly: "Veuillez sélectionner un fichier PDF.",
+      invalidFile: "Ce fichier n’est pas un document PDF valide.",
+      readError: "Impossible de lire ce fichier PDF.",
     },
     en: {
       back: "Back to course",
@@ -28,9 +34,21 @@
       invalid: "The PDF document address is invalid.",
       forbidden: "Only PDF documents hosted on this site can be displayed.",
       frameTitle: "PDF reader",
+      open: "Open a PDF",
+      choose: "Drag and drop a file here or click to select it.",
+      drop: "Drop the PDF here",
+      pdfOnly: "Please select a PDF file.",
+      invalidFile: "This file is not a valid PDF document.",
+      readError: "Unable to read this PDF file.",
     },
   }[language];
+  const reader = document.querySelector(".pdf-reader");
   const frame = document.querySelector("#pdf-reader-frame");
+  const welcome = document.querySelector("#pdf-reader-welcome");
+  const welcomeTitle = document.querySelector("#pdf-reader-welcome-title");
+  const welcomeHint = document.querySelector("#pdf-reader-welcome-hint");
+  const fileInput = document.querySelector("#pdf-reader-input");
+  const dropLabel = document.querySelector("#pdf-reader-drop-label");
   const error = document.querySelector("#pdf-reader-error");
   const back = document.querySelector("#pdf-back");
   const themeButton = document.querySelector("#pdf-theme");
@@ -40,6 +58,10 @@
   const downloadDataLabel = document.querySelector("#pdf-data-label");
 
   document.documentElement.lang = language;
+  reader.setAttribute("aria-label", messages.frameTitle);
+  welcomeTitle.textContent = messages.open;
+  welcomeHint.textContent = messages.choose;
+  dropLabel.textContent = messages.drop;
   back.setAttribute("aria-label", messages.back);
   back.title = messages.back;
   download.setAttribute("aria-label", messages.download);
@@ -50,6 +72,7 @@
 
   const showError = (message) => {
     frame.hidden = true;
+    welcome.hidden = true;
     error.textContent = message;
     error.hidden = false;
     themeButton.hidden = true;
@@ -57,33 +80,38 @@
     downloadData.hidden = true;
   };
 
-  if (!file) {
-    showError(messages.missing);
-    return;
-  }
+  const showLocalError = (message) => {
+    error.textContent = message;
+    error.hidden = false;
+  };
 
   let pdfUrl;
 
-  try {
-    pdfUrl = new URL(file, window.location.origin);
-  } catch {
-    showError(messages.invalid);
-    return;
-  }
+  if (file) {
+    try {
+      pdfUrl = new URL(file, window.location.origin);
+    } catch {
+      showError(messages.invalid);
+      return;
+    }
 
-  if (
-    pdfUrl.origin !== window.location.origin ||
-    !pdfUrl.pathname.toLowerCase().endsWith(".pdf")
-  ) {
-    showError(messages.forbidden);
-    return;
+    if (
+      pdfUrl.origin !== window.location.origin ||
+      !pdfUrl.pathname.toLowerCase().endsWith(".pdf")
+    ) {
+      showError(messages.forbidden);
+      return;
+    }
   }
 
   const viewerUrl = new URL(
     "/content/tools/pdfjs/web/viewer.html",
     window.location.origin,
   );
-  viewerUrl.searchParams.set("file", `${pdfUrl.pathname}${pdfUrl.search}`);
+  viewerUrl.searchParams.set(
+    "file",
+    pdfUrl ? `${pdfUrl.pathname}${pdfUrl.search}` : "",
+  );
   viewerUrl.hash = "pagemode=none";
 
   let pdfTheme = "light";
@@ -154,7 +182,6 @@
 
     applyPdfTheme();
   });
-  frame.addEventListener("load", applyPdfTheme);
   applyPdfTheme();
 
   let backUrl;
@@ -169,7 +196,7 @@
   }
 
   if (!backUrl) {
-    const coursePath = pdfUrl.pathname.match(
+    const coursePath = pdfUrl?.pathname.match(
       /^\/content\/courses\/([^/]+)\/(fr|en)\//,
     );
     backUrl = coursePath
@@ -178,14 +205,23 @@
   }
   back.href = backUrl;
 
-  const title = requestedTitle || pdfUrl.pathname.split("/").pop() || "Document PDF";
-  document.title = `${title} – TEACHING`;
-  frame.title = `${messages.frameTitle}: ${title}`;
-  const viewerPath = `${viewerUrl.pathname}${viewerUrl.search}${viewerUrl.hash}`;
-  frame.src = viewerPath;
-  download.href = `${pdfUrl.pathname}${pdfUrl.search}`;
+  const setTitle = (title) => {
+    document.title = `${title} – TEACHING`;
+    frame.title = `${messages.frameTitle}: ${title}`;
+  };
 
-  if (data) {
+  if (pdfUrl) {
+    const title = requestedTitle || pdfUrl.pathname.split("/").pop() || "Document PDF";
+    setTitle(title);
+    welcome.hidden = true;
+    download.href = `${pdfUrl.pathname}${pdfUrl.search}`;
+  } else {
+    setTitle(messages.open);
+    frame.hidden = true;
+    download.hidden = true;
+  }
+
+  if (pdfUrl && data) {
     try {
       const dataUrl = new URL(data, window.location.origin);
       const isDownloadableData = /\.(csv|ods|xlsx)$/i.test(dataUrl.pathname);
@@ -198,4 +234,150 @@
       downloadData.hidden = true;
     }
   }
+
+  let localDownloadUrl;
+  let localLoadId = 0;
+
+  const getPdfApplication = async () => {
+    if (!frame.contentWindow?.PDFViewerApplication) {
+      if (frame.contentDocument?.readyState === "complete") {
+        throw new Error("PDF.js failed to initialize.");
+      }
+      await new Promise((resolve) => frame.addEventListener("load", resolve, { once: true }));
+    }
+
+    const application = frame.contentWindow?.PDFViewerApplication;
+    if (!application) {
+      throw new Error("PDF.js failed to initialize.");
+    }
+    await application.initializedPromise;
+    return application;
+  };
+
+  const loadLocalFile = async (localFile) => {
+    const loadId = ++localLoadId;
+    error.hidden = true;
+
+    if (
+      !localFile ||
+      (localFile.type !== "application/pdf" && !localFile.name.toLowerCase().endsWith(".pdf"))
+    ) {
+      showLocalError(messages.pdfOnly);
+      return;
+    }
+
+    let buffer;
+    try {
+      buffer = await localFile.arrayBuffer();
+    } catch {
+      if (loadId === localLoadId) {
+        showLocalError(messages.readError);
+      }
+      return;
+    }
+
+    if (loadId !== localLoadId) {
+      return;
+    }
+
+    const header = new TextDecoder("latin1").decode(
+      new Uint8Array(buffer, 0, Math.min(buffer.byteLength, 1024)),
+    );
+    if (!header.includes("%PDF-")) {
+      showLocalError(messages.invalidFile);
+      return;
+    }
+
+    let application;
+    try {
+      application = await getPdfApplication();
+      if (loadId !== localLoadId) {
+        return;
+      }
+      await application.open({
+        data: new Uint8Array(buffer),
+        filename: localFile.name,
+      });
+    } catch {
+      if (loadId === localLoadId) {
+        showLocalError(messages.readError);
+        if (!application?.pdfDocument) {
+          frame.hidden = true;
+          welcome.hidden = false;
+          download.hidden = true;
+        }
+      }
+      return;
+    }
+
+    if (loadId !== localLoadId) {
+      return;
+    }
+
+    if (localDownloadUrl) {
+      URL.revokeObjectURL(localDownloadUrl);
+    }
+    localDownloadUrl = URL.createObjectURL(localFile);
+    download.href = localDownloadUrl;
+    download.download = localFile.name;
+    download.hidden = false;
+    downloadData.hidden = true;
+    welcome.hidden = true;
+    frame.hidden = false;
+    setTitle(localFile.name);
+    applyPdfTheme();
+  };
+
+  const hasDraggedFiles = (event) =>
+    Array.from(event.dataTransfer?.types || []).includes("Files");
+
+  const handleDrag = (event) => {
+    if (!hasDraggedFiles(event)) {
+      return;
+    }
+    event.preventDefault();
+    event.stopPropagation();
+    event.dataTransfer.dropEffect = "copy";
+    reader.classList.add("is-dragging");
+  };
+
+  const handleDragLeave = (event) => {
+    if (event.relatedTarget === null) {
+      reader.classList.remove("is-dragging");
+    }
+  };
+
+  const handleDrop = (event) => {
+    if (!hasDraggedFiles(event)) {
+      return;
+    }
+    event.preventDefault();
+    event.stopPropagation();
+    reader.classList.remove("is-dragging");
+    loadLocalFile(event.dataTransfer.files[0]);
+  };
+
+  const attachDropTarget = (target, trackDragLeave = true) => {
+    target.addEventListener("dragenter", handleDrag, true);
+    target.addEventListener("dragover", handleDrag, true);
+    if (trackDragLeave) {
+      target.addEventListener("dragleave", handleDragLeave, true);
+    }
+    target.addEventListener("drop", handleDrop, true);
+  };
+
+  welcome.addEventListener("click", () => fileInput.click());
+  fileInput.addEventListener("change", () => {
+    loadLocalFile(fileInput.files[0]);
+    fileInput.value = "";
+  });
+  attachDropTarget(reader);
+  window.addEventListener("dragend", () => reader.classList.remove("is-dragging"));
+  frame.addEventListener("load", () => {
+    applyPdfTheme();
+    attachDropTarget(frame.contentDocument, false);
+  });
+
+  const viewerPath = `${viewerUrl.pathname}${viewerUrl.search}${viewerUrl.hash}`;
+  frame.src = viewerPath;
 })();
