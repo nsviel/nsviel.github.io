@@ -30,4 +30,30 @@
       link.removeAttribute("aria-current");
     }
   });
+
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("a.pdf-viewer");
+
+    if (!link) {
+      return;
+    }
+
+    event.preventDefault();
+
+    const params = new URLSearchParams({
+      file: link.getAttribute("href"),
+      title: link.textContent.trim(),
+    });
+    const dataFile = link.dataset.file;
+
+    if (dataFile) {
+      params.set("data", dataFile);
+    }
+
+    if (currentLanguage === "en") {
+      params.set("lang", "en");
+    }
+
+    window.location.href = `/tool/pdf/?${params}`;
+  });
 })();

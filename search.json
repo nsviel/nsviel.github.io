@@ -1,255 +1,108 @@
 [
   {
-    "objectID": "tool/index.html",
-    "href": "tool/index.html",
+    "objectID": "tool/pdf/index.html",
+    "href": "tool/pdf/index.html",
     "title": "TEACHING",
     "section": "",
-    "text": "Chronomètre\n\n\n Viewer 3D"
+    "text": "&lt;\n    \n    \n      \n        \n      \n      \n        \n        PDF\n      \n      \n        \n        Données"
   },
   {
-    "objectID": "en/teaching/tid/index.html",
-    "href": "en/teaching/tid/index.html",
-    "title": "Computer Data Processing (TID)",
+    "objectID": "tool/chrono/index.html",
+    "href": "tool/chrono/index.html",
+    "title": "TEACHING",
     "section": "",
-    "text": "This course introduces computer-based data processing using spreadsheets. It explains how to structure observations in tables, then how to transform, summarize, connect, and analyze data to extract meaningful information.\nThe aim is to understand the fundamental principles of data processing and develop a clear, transferable approach that can be applied using tools such as LibreOffice Calc, Excel, or Google Sheets. Practical sessions provide opportunities to apply these concepts progressively, leading up to a final project focused on independently analyzing a dataset."
+    "text": "▶\n      ↩\n\n      \n        \n        min\n        \n        s"
   },
   {
-    "objectID": "en/teaching/tid/index.html#overview",
-    "href": "en/teaching/tid/index.html#overview",
-    "title": "Computer Data Processing (TID)",
+    "objectID": "en/teaching/syntheseimage/index.html",
+    "href": "en/teaching/syntheseimage/index.html",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
     "section": "",
-    "text": "This course introduces computer-based data processing using spreadsheets. It explains how to structure observations in tables, then how to transform, summarize, connect, and analyze data to extract meaningful information.\nThe aim is to understand the fundamental principles of data processing and develop a clear, transferable approach that can be applied using tools such as LibreOffice Calc, Excel, or Google Sheets. Practical sessions provide opportunities to apply these concepts progressively, leading up to a final project focused on independently analyzing a dataset."
+    "text": "This course focuses on realistic image synthesis through inverse rendering, exploring how to generate new images from existing ones. It begins by introducing 2D synthesis methods, such as interpolation and extrapolation between views, and highlights their limitations when larger viewpoint changes are required.\nThe course then introduces photogrammetry, which enables the reconstruction of a scene’s 3D structure from multiple images in order to produce consistent novel views. It also covers different scene representations for view synthesis, ranging from point clouds and splats to more recent continuous representations.\nThree hands-on workshops complement the course. Students learn how to create a portfolio website, integrate a WebGL engine, and digitize a small object using photogrammetry."
   },
   {
-    "objectID": "en/teaching/tid/index.html#course-materials",
-    "href": "en/teaching/tid/index.html#course-materials",
-    "title": "Computer Data Processing (TID)",
+    "objectID": "en/teaching/syntheseimage/index.html#overview",
+    "href": "en/teaching/syntheseimage/index.html#overview",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
+    "section": "",
+    "text": "This course focuses on realistic image synthesis through inverse rendering, exploring how to generate new images from existing ones. It begins by introducing 2D synthesis methods, such as interpolation and extrapolation between views, and highlights their limitations when larger viewpoint changes are required.\nThe course then introduces photogrammetry, which enables the reconstruction of a scene’s 3D structure from multiple images in order to produce consistent novel views. It also covers different scene representations for view synthesis, ranging from point clouds and splats to more recent continuous representations.\nThree hands-on workshops complement the course. Students learn how to create a portfolio website, integrate a WebGL engine, and digitize a small object using photogrammetry."
+  },
+  {
+    "objectID": "en/teaching/syntheseimage/index.html#course-materials",
+    "href": "en/teaching/syntheseimage/index.html#course-materials",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
+    "section": "Course materials",
+    "text": "Course materials\n\nLecture 1\nLecture 2\nLecture 3"
+  },
+  {
+    "objectID": "en/teaching/syntheseimage/index.html#workshops",
+    "href": "en/teaching/syntheseimage/index.html#workshops",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
+    "section": "Workshops",
+    "text": "Workshops\n\nWorkshop 1\nWorkshop 2\nWorkshop 3"
+  },
+  {
+    "objectID": "en/teaching/syntheseimage/index.html#practical-sessions",
+    "href": "en/teaching/syntheseimage/index.html#practical-sessions",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
+    "section": "Practical sessions",
+    "text": "Practical sessions\n\n\n\nActivity\nTopic\nData\n\n\n\n\nLab 1\nTopic\nData\n\n\nLab 2\nTopic\nData\n\n\nLab 3\nTopic\n—"
+  },
+  {
+    "objectID": "en/teaching/gpgpu/index.html",
+    "href": "en/teaching/gpgpu/index.html",
+    "title": "General-Purpose Computing on Graphics Processing Units (GPGPU)",
+    "section": "",
+    "text": "This page will provide the materials for the course on general-purpose computing using graphics processing units.\n\n\n\n\n\n\nNote\n\n\n\nThe course materials will be available soon."
+  },
+  {
+    "objectID": "en/teaching/gpgpu/index.html#overview",
+    "href": "en/teaching/gpgpu/index.html#overview",
+    "title": "General-Purpose Computing on Graphics Processing Units (GPGPU)",
+    "section": "",
+    "text": "This page will provide the materials for the course on general-purpose computing using graphics processing units.\n\n\n\n\n\n\nNote\n\n\n\nThe course materials will be available soon."
+  },
+  {
+    "objectID": "en/teaching/bigdata/index.html",
+    "href": "en/teaching/bigdata/index.html",
+    "title": "Introduction to Big Data",
+    "section": "",
+    "text": "This course introduces the fundamentals of information retrieval from data. It covers key concepts such as the distinction between data, information, and knowledge, as well as the principle of abstraction in computer science. These concepts are illustrated through concrete applications and put into practice through projects inspired by real-world professional scenarios.\nThe course is primarily self-directed, and assessment is based exclusively on the completion of two projects."
+  },
+  {
+    "objectID": "en/teaching/bigdata/index.html#overview",
+    "href": "en/teaching/bigdata/index.html#overview",
+    "title": "Introduction to Big Data",
+    "section": "",
+    "text": "This course introduces the fundamentals of information retrieval from data. It covers key concepts such as the distinction between data, information, and knowledge, as well as the principle of abstraction in computer science. These concepts are illustrated through concrete applications and put into practice through projects inspired by real-world professional scenarios.\nThe course is primarily self-directed, and assessment is based exclusively on the completion of two projects."
+  },
+  {
+    "objectID": "en/teaching/bigdata/index.html#organization",
+    "href": "en/teaching/bigdata/index.html#organization",
+    "title": "Introduction to Big Data",
+    "section": "Organization",
+    "text": "Organization\n\n\n\n\nPeriod\nContent\n\n\n\n\nMonth 1\nLabs\n\n\nMonth 2\nProject 1\n\n\nMonth 3\nProject 2"
+  },
+  {
+    "objectID": "en/teaching/bigdata/index.html#course-materials",
+    "href": "en/teaching/bigdata/index.html#course-materials",
+    "title": "Introduction to Big Data",
     "section": "Course materials",
     "text": "Course materials\n\nLecture 1\nLecture 2\nLecture 3\nLecture 4"
   },
   {
-    "objectID": "en/teaching/tid/index.html#practical-sessions",
-    "href": "en/teaching/tid/index.html#practical-sessions",
-    "title": "Computer Data Processing (TID)",
-    "section": "Practical sessions",
-    "text": "Practical sessions\n\n\n\nAssignment\nTopic\nData\n\n\n\n\nPractical 1\nTransforming\nSpace Missions\n\n\nPractical 2\nSummarizing and exploring\nNew Year’s Resolutions\n\n\nPractical 3\nModeling and optimizing\nBeverage Production\n\n\nPractical 4\nLinking and querying\n2022 World Cup\n\n\nProject\nDo something with a spreadsheet\n-"
+    "objectID": "en/teaching/bigdata/index.html#labs-and-projects",
+    "href": "en/teaching/bigdata/index.html#labs-and-projects",
+    "title": "Introduction to Big Data",
+    "section": "Labs and projects",
+    "text": "Labs and projects\n\n\n\nActivity\nSubject\nDataset\n\n\n\n\nLab 1\nSubject\nCSV\n\n\nLab 2\nSubject\n—\n\n\nProject 1\nSubject\nCSV\n\n\nProject 2\nSubject\nODS"
   },
   {
-    "objectID": "en/teaching/reconstruction/index.html",
-    "href": "en/teaching/reconstruction/index.html",
-    "title": "3D Reconstruction",
-    "section": "",
-    "text": "This course introduces the main methods used to reconstruct the three-dimensional geometry of an object or scene from multiple images. It covers the different stages of a reconstruction pipeline, from camera modeling and image matching to the production of point clouds and meshes.\nThe objective is to understand the geometric principles behind these methods, as well as their limitations when dealing with calibration errors, occlusions, lighting variations, or surfaces that are difficult to observe."
-  },
-  {
-    "objectID": "en/teaching/reconstruction/index.html#overview",
-    "href": "en/teaching/reconstruction/index.html#overview",
-    "title": "3D Reconstruction",
-    "section": "",
-    "text": "This course introduces the main methods used to reconstruct the three-dimensional geometry of an object or scene from multiple images. It covers the different stages of a reconstruction pipeline, from camera modeling and image matching to the production of point clouds and meshes.\nThe objective is to understand the geometric principles behind these methods, as well as their limitations when dealing with calibration errors, occlusions, lighting variations, or surfaces that are difficult to observe."
-  },
-  {
-    "objectID": "en/teaching/reconstruction/index.html#course-content",
-    "href": "en/teaching/reconstruction/index.html#course-content",
-    "title": "3D Reconstruction",
-    "section": "Course content",
-    "text": "Course content\n\n\n\nLecture\nContent\n\n\n\n\nCM1\nRegistration\n\n\nCM2\nSurface reconstruction\n\n\nCM3\nSegmentation / Understanding\n\n\nCM4\nLearning-based reconstruction"
-  },
-  {
-    "objectID": "en/teaching/reconstruction/index.html#course-materials",
-    "href": "en/teaching/reconstruction/index.html#course-materials",
-    "title": "3D Reconstruction",
-    "section": "Course materials",
-    "text": "Course materials\n\nLecture 1\nLecture 2"
-  },
-  {
-    "objectID": "en/teaching/deeplearning/index.html",
-    "href": "en/teaching/deeplearning/index.html",
-    "title": "Deep Learning",
-    "section": "",
-    "text": "This course introduces the main concepts of Deep Learning, which enables machines to learn representations from data. It covers the fundamentals of neural networks, their training through gradient descent and backpropagation, as well as architectures adapted to vectors, images, and sequences.\nThe objective is to understand how to design, train, and evaluate a model, and then apply these principles to different learning problems, such as prediction, classification, generation, or the control of autonomous agents. These concepts are put into practice through an open-ended project in which students design an interactive or dynamic system integrating a Deep Learning model, and experimentally evaluate its performance and limitations."
-  },
-  {
-    "objectID": "en/teaching/deeplearning/index.html#overview",
-    "href": "en/teaching/deeplearning/index.html#overview",
-    "title": "Deep Learning",
-    "section": "",
-    "text": "This course introduces the main concepts of Deep Learning, which enables machines to learn representations from data. It covers the fundamentals of neural networks, their training through gradient descent and backpropagation, as well as architectures adapted to vectors, images, and sequences.\nThe objective is to understand how to design, train, and evaluate a model, and then apply these principles to different learning problems, such as prediction, classification, generation, or the control of autonomous agents. These concepts are put into practice through an open-ended project in which students design an interactive or dynamic system integrating a Deep Learning model, and experimentally evaluate its performance and limitations."
-  },
-  {
-    "objectID": "en/teaching/deeplearning/index.html#course-materials",
-    "href": "en/teaching/deeplearning/index.html#course-materials",
-    "title": "Deep Learning",
-    "section": "Course Materials",
-    "text": "Course Materials\n\nLecture 1\nLecture 2\nLecture 3\nLecture 4"
-  },
-  {
-    "objectID": "en/teaching/deeplearning/index.html#project",
-    "href": "en/teaching/deeplearning/index.html#project",
-    "title": "Deep Learning",
-    "section": "Project",
-    "text": "Project\n\nSubject\nMilestones"
-  },
-  {
-    "objectID": "en/index.html",
-    "href": "en/index.html",
-    "title": "TEACHING",
-    "section": "",
-    "text": "Course\nAcronym\nLevel\n\n\n\n\nComputer-Based Data Processing\nTID\nL1\n\n\nIntroduction to Big Data\nIBD\nL3\n\n\nInverse Rendering for Image Synthesis\nSIRI\nM1\n\n\nGeneral-Purpose Computing on Graphics Processing Units\nGPGPU\nM1\n\n\n3D Reconstruction\nR3D\nM2\n\n\nDeep Learning\nDL\nM2"
-  },
-  {
-    "objectID": "fr/teaching/tid/index.html",
-    "href": "fr/teaching/tid/index.html",
-    "title": "Traitement Informatique des Données (TID)",
-    "section": "",
-    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableaux, puis comment transformer, résumer, relier et analyser ces données afin d’en extraire de l’information.\nL’objectif est de comprendre les principes fondamentaux du traitement de données et de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettent de mettre progressivement ces notions en application, avant un projet final libre permettant d’imaginer et de réaliser sa propre application du tableur."
-  },
-  {
-    "objectID": "fr/teaching/tid/index.html#présentation",
-    "href": "fr/teaching/tid/index.html#présentation",
-    "title": "Traitement Informatique des Données (TID)",
-    "section": "",
-    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableaux, puis comment transformer, résumer, relier et analyser ces données afin d’en extraire de l’information.\nL’objectif est de comprendre les principes fondamentaux du traitement de données et de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettent de mettre progressivement ces notions en application, avant un projet final libre permettant d’imaginer et de réaliser sa propre application du tableur."
-  },
-  {
-    "objectID": "fr/teaching/tid/index.html#supports-de-cours",
-    "href": "fr/teaching/tid/index.html#supports-de-cours",
-    "title": "Traitement Informatique des Données (TID)",
-    "section": "Supports de cours",
-    "text": "Supports de cours\n\nCours 1\nCours 2\nCours 3\nCours 4"
-  },
-  {
-    "objectID": "fr/teaching/tid/index.html#travaux-pratiques",
-    "href": "fr/teaching/tid/index.html#travaux-pratiques",
-    "title": "Traitement Informatique des Données (TID)",
-    "section": "Travaux pratiques",
-    "text": "Travaux pratiques\n\n\n\nSujet\nThème\nDonnées\n\n\n\n\nTP 1\nTransformer\nSpace Missions\n\n\nTP 2\nRésumer et explorer\nNew Year’s Resolutions\n\n\nTP 3\nModéliser et optimiser\nProduction de boissons\n\n\nTP 4\nRelier et interroger\nWorld Cup 2022\n\n\nProjet\nFaites quelque chose avec un tableur\n-"
-  },
-  {
-    "objectID": "fr/teaching/reconstruction/index.html",
-    "href": "fr/teaching/reconstruction/index.html",
-    "title": "Reconstruction 3D",
-    "section": "",
-    "text": "Ce cours présente les principales méthodes permettant de reconstruire la géométrie tridimensionnelle d’un objet ou d’une scène à partir de plusieurs images. Il aborde les différentes étapes d’une chaîne de reconstruction, depuis la modélisation des caméras et la mise en correspondance des images jusqu’à la production de nuages de points et de maillages.\nL’objectif est de comprendre les principes géométriques sur lesquels reposent ces méthodes, mais aussi leurs limites face aux erreurs de calibration, aux occultations, aux variations d’éclairage ou aux surfaces difficiles à observer."
-  },
-  {
-    "objectID": "fr/teaching/reconstruction/index.html#présentation",
-    "href": "fr/teaching/reconstruction/index.html#présentation",
-    "title": "Reconstruction 3D",
-    "section": "",
-    "text": "Ce cours présente les principales méthodes permettant de reconstruire la géométrie tridimensionnelle d’un objet ou d’une scène à partir de plusieurs images. Il aborde les différentes étapes d’une chaîne de reconstruction, depuis la modélisation des caméras et la mise en correspondance des images jusqu’à la production de nuages de points et de maillages.\nL’objectif est de comprendre les principes géométriques sur lesquels reposent ces méthodes, mais aussi leurs limites face aux erreurs de calibration, aux occultations, aux variations d’éclairage ou aux surfaces difficiles à observer."
-  },
-  {
-    "objectID": "fr/teaching/reconstruction/index.html#contenu-du-cours",
-    "href": "fr/teaching/reconstruction/index.html#contenu-du-cours",
-    "title": "Reconstruction 3D",
-    "section": "Contenu du cours",
-    "text": "Contenu du cours\n\n\n\nCours\nContenu\n\n\n\n\nCM1\nRegistration\n\n\nCM2\nSurface reconstruction\n\n\nCM3\nSegmentation / Understanding\n\n\nCM4\nLearning-based reconstruction"
-  },
-  {
-    "objectID": "fr/teaching/reconstruction/index.html#supports-de-cours",
-    "href": "fr/teaching/reconstruction/index.html#supports-de-cours",
-    "title": "Reconstruction 3D",
-    "section": "Supports de cours",
-    "text": "Supports de cours\n\nCours 1\nCours 2\nCours 3\nCours 4"
-  },
-  {
-    "objectID": "fr/teaching/reconstruction/index.html#ateliers",
-    "href": "fr/teaching/reconstruction/index.html#ateliers",
-    "title": "Reconstruction 3D",
-    "section": "Ateliers",
-    "text": "Ateliers\n\n\n\nSujet\nThème\n\n\n\n\nTP 1\nGaussian Splatting"
-  },
-  {
-    "objectID": "fr/teaching/deeplearning/index.html",
-    "href": "fr/teaching/deeplearning/index.html",
-    "title": "Deep Learning",
-    "section": "",
-    "text": "Ce cours présente les principaux concepts du Deep Learning, qui permet à une machine d’apprendre des représentations à partir de données. Il aborde le fonctionnement des réseaux de neurones, leur entraînement par descente de gradient et rétropropagation, ainsi que les architectures adaptées aux vecteurs, aux images et aux séquences.\nL’objectif est de comprendre comment concevoir, entraîner et évaluer un modèle, puis d’utiliser ces principes pour résoudre différents problèmes d’apprentissage, tels que la prédiction, la classification, la génération ou le contrôle d’agents autonomes. Ces notions sont mises en pratique dans un projet libre consistant à concevoir un système interactif ou dynamique intégrant un modèle de Deep Learning, puis à évaluer expérimentalement ses performances et ses limites."
-  },
-  {
-    "objectID": "fr/teaching/deeplearning/index.html#présentation",
-    "href": "fr/teaching/deeplearning/index.html#présentation",
-    "title": "Deep Learning",
-    "section": "",
-    "text": "Ce cours présente les principaux concepts du Deep Learning, qui permet à une machine d’apprendre des représentations à partir de données. Il aborde le fonctionnement des réseaux de neurones, leur entraînement par descente de gradient et rétropropagation, ainsi que les architectures adaptées aux vecteurs, aux images et aux séquences.\nL’objectif est de comprendre comment concevoir, entraîner et évaluer un modèle, puis d’utiliser ces principes pour résoudre différents problèmes d’apprentissage, tels que la prédiction, la classification, la génération ou le contrôle d’agents autonomes. Ces notions sont mises en pratique dans un projet libre consistant à concevoir un système interactif ou dynamique intégrant un modèle de Deep Learning, puis à évaluer expérimentalement ses performances et ses limites."
-  },
-  {
-    "objectID": "fr/teaching/deeplearning/index.html#supports-de-cours",
-    "href": "fr/teaching/deeplearning/index.html#supports-de-cours",
-    "title": "Deep Learning",
-    "section": "Supports de cours",
-    "text": "Supports de cours\n\nCours 1\nCours 2\nCours 3\nCours 4"
-  },
-  {
-    "objectID": "fr/teaching/deeplearning/index.html#projet",
-    "href": "fr/teaching/deeplearning/index.html#projet",
-    "title": "Deep Learning",
-    "section": "Projet",
-    "text": "Projet\n\nSujet\nJalons"
-  },
-  {
-    "objectID": "fr/index.html",
-    "href": "fr/index.html",
-    "title": "TEACHING",
-    "section": "",
-    "text": "Cours\nAcronyme\nNiveau\n\n\n\n\nTraitement Informatique des Données\nTID\nL1\n\n\nIntroduction au Big Data\nIBD\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nSIRI\nM1\n\n\nGeneral-Purpose computing on Graphics Processing Units\nGPGPU\nM1\n\n\nReconstruction 3D\nR3D\nM2\n\n\nDeep Learning\nDL\nM2"
-  },
-  {
-    "objectID": "fr/contact/index.html",
-    "href": "fr/contact/index.html",
+    "objectID": "en/contact/index.html",
+    "href": "en/contact/index.html",
     "title": "Contact",
     "section": "",
     "text": "Nathan Sanchiz-Viel\nUniversité de Limoges\nnathan.sanchiz-viel@unilim.fr"
-  },
-  {
-    "objectID": "fr/teaching/bigdata/index.html",
-    "href": "fr/teaching/bigdata/index.html",
-    "title": "Introduction au Big Data",
-    "section": "",
-    "text": "Ce cours introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets."
-  },
-  {
-    "objectID": "fr/teaching/bigdata/index.html#présentation",
-    "href": "fr/teaching/bigdata/index.html#présentation",
-    "title": "Introduction au Big Data",
-    "section": "",
-    "text": "Ce cours introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets."
-  },
-  {
-    "objectID": "fr/teaching/bigdata/index.html#organisation",
-    "href": "fr/teaching/bigdata/index.html#organisation",
-    "title": "Introduction au Big Data",
-    "section": "Organisation",
-    "text": "Organisation\n\n\n\n\nPériode\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2"
-  },
-  {
-    "objectID": "fr/teaching/bigdata/index.html#supports-de-cours",
-    "href": "fr/teaching/bigdata/index.html#supports-de-cours",
-    "title": "Introduction au Big Data",
-    "section": "Supports de cours",
-    "text": "Supports de cours\n\nCours 1\nCours 2\nCours 3\nCours 4"
-  },
-  {
-    "objectID": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
-    "href": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
-    "title": "Introduction au Big Data",
-    "section": "Travaux pratiques et projets",
-    "text": "Travaux pratiques et projets\n\n\n\nActivité\nSujet\nDonnées\n\n\n\n\nTP 1\nSujet\nData\n\n\nTP 2\nSujet\n—\n\n\nProjet 1\nSujet\nData\n\n\nProjet 2\nSujet\nData"
-  },
-  {
-    "objectID": "fr/teaching/gpgpu/index.html",
-    "href": "fr/teaching/gpgpu/index.html",
-    "title": "Calcul généraliste sur processeur graphique (GPGPU)",
-    "section": "",
-    "text": "Cette page accueillera les supports de l’enseignement consacré au calcul généraliste sur processeur graphique.\n\n\n\n\n\n\nNote\n\n\n\nLes supports de cours seront prochainement disponibles."
-  },
-  {
-    "objectID": "fr/teaching/gpgpu/index.html#présentation",
-    "href": "fr/teaching/gpgpu/index.html#présentation",
-    "title": "Calcul généraliste sur processeur graphique (GPGPU)",
-    "section": "",
-    "text": "Cette page accueillera les supports de l’enseignement consacré au calcul généraliste sur processeur graphique.\n\n\n\n\n\n\nNote\n\n\n\nLes supports de cours seront prochainement disponibles."
   },
   {
     "objectID": "fr/teaching/syntheseimage/index.html",
@@ -294,101 +147,255 @@
     "text": "Projets réalisés\n\n\n\nAnnée\nProjet 1\nProjet 2\nProjet 3\nProjet 4\n\n\n\n\n2025 - 2026\nTHREEJS\nTHREEJS\nTHREEJS\nTHREEJS"
   },
   {
-    "objectID": "en/contact/index.html",
-    "href": "en/contact/index.html",
+    "objectID": "fr/teaching/gpgpu/index.html",
+    "href": "fr/teaching/gpgpu/index.html",
+    "title": "Calcul généraliste sur processeur graphique (GPGPU)",
+    "section": "",
+    "text": "Cette page accueillera les supports de l’enseignement consacré au calcul généraliste sur processeur graphique.\n\n\n\n\n\n\nNote\n\n\n\nLes supports de cours seront prochainement disponibles."
+  },
+  {
+    "objectID": "fr/teaching/gpgpu/index.html#présentation",
+    "href": "fr/teaching/gpgpu/index.html#présentation",
+    "title": "Calcul généraliste sur processeur graphique (GPGPU)",
+    "section": "",
+    "text": "Cette page accueillera les supports de l’enseignement consacré au calcul généraliste sur processeur graphique.\n\n\n\n\n\n\nNote\n\n\n\nLes supports de cours seront prochainement disponibles."
+  },
+  {
+    "objectID": "fr/teaching/bigdata/index.html",
+    "href": "fr/teaching/bigdata/index.html",
+    "title": "Introduction au Big Data",
+    "section": "",
+    "text": "Ce cours introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets."
+  },
+  {
+    "objectID": "fr/teaching/bigdata/index.html#présentation",
+    "href": "fr/teaching/bigdata/index.html#présentation",
+    "title": "Introduction au Big Data",
+    "section": "",
+    "text": "Ce cours introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets."
+  },
+  {
+    "objectID": "fr/teaching/bigdata/index.html#organisation",
+    "href": "fr/teaching/bigdata/index.html#organisation",
+    "title": "Introduction au Big Data",
+    "section": "Organisation",
+    "text": "Organisation\n\n\n\n\nPériode\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2"
+  },
+  {
+    "objectID": "fr/teaching/bigdata/index.html#supports-de-cours",
+    "href": "fr/teaching/bigdata/index.html#supports-de-cours",
+    "title": "Introduction au Big Data",
+    "section": "Supports de cours",
+    "text": "Supports de cours\n\nCours 1\nCours 2\nCours 3\nCours 4"
+  },
+  {
+    "objectID": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
+    "href": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
+    "title": "Introduction au Big Data",
+    "section": "Travaux pratiques et projets",
+    "text": "Travaux pratiques et projets\n\n\n\nActivité\nSujet\nDonnées\n\n\n\n\nTP 1\nSujet\nData\n\n\nTP 2\nSujet\n—\n\n\nProjet 1\nSujet\nData\n\n\nProjet 2\nSujet\nData"
+  },
+  {
+    "objectID": "fr/contact/index.html",
+    "href": "fr/contact/index.html",
     "title": "Contact",
     "section": "",
     "text": "Nathan Sanchiz-Viel\nUniversité de Limoges\nnathan.sanchiz-viel@unilim.fr"
   },
   {
-    "objectID": "en/teaching/bigdata/index.html",
-    "href": "en/teaching/bigdata/index.html",
-    "title": "Introduction to Big Data",
+    "objectID": "fr/index.html",
+    "href": "fr/index.html",
+    "title": "TEACHING",
     "section": "",
-    "text": "This course introduces the fundamentals of information retrieval from data. It covers key concepts such as the distinction between data, information, and knowledge, as well as the principle of abstraction in computer science. These concepts are illustrated through concrete applications and put into practice through projects inspired by real-world professional scenarios.\nThe course is primarily self-directed, and assessment is based exclusively on the completion of two projects."
+    "text": "Cours\nAcronyme\nNiveau\n\n\n\n\nTraitement Informatique des Données\nTID\nL1\n\n\nIntroduction au Big Data\nIBD\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nSIRI\nM1\n\n\nGeneral-Purpose computing on Graphics Processing Units\nGPGPU\nM1\n\n\nReconstruction 3D\nR3D\nM2\n\n\nDeep Learning\nDL\nM2"
   },
   {
-    "objectID": "en/teaching/bigdata/index.html#overview",
-    "href": "en/teaching/bigdata/index.html#overview",
-    "title": "Introduction to Big Data",
+    "objectID": "fr/teaching/deeplearning/index.html",
+    "href": "fr/teaching/deeplearning/index.html",
+    "title": "Deep Learning",
     "section": "",
-    "text": "This course introduces the fundamentals of information retrieval from data. It covers key concepts such as the distinction between data, information, and knowledge, as well as the principle of abstraction in computer science. These concepts are illustrated through concrete applications and put into practice through projects inspired by real-world professional scenarios.\nThe course is primarily self-directed, and assessment is based exclusively on the completion of two projects."
+    "text": "Ce cours présente les principaux concepts du Deep Learning, qui permet à une machine d’apprendre des représentations à partir de données. Il aborde le fonctionnement des réseaux de neurones, leur entraînement par descente de gradient et rétropropagation, ainsi que les architectures adaptées aux vecteurs, aux images et aux séquences.\nL’objectif est de comprendre comment concevoir, entraîner et évaluer un modèle, puis d’utiliser ces principes pour résoudre différents problèmes d’apprentissage, tels que la prédiction, la classification, la génération ou le contrôle d’agents autonomes. Ces notions sont mises en pratique dans un projet libre consistant à concevoir un système interactif ou dynamique intégrant un modèle de Deep Learning, puis à évaluer expérimentalement ses performances et ses limites."
   },
   {
-    "objectID": "en/teaching/bigdata/index.html#organization",
-    "href": "en/teaching/bigdata/index.html#organization",
-    "title": "Introduction to Big Data",
-    "section": "Organization",
-    "text": "Organization\n\n\n\n\nPeriod\nContent\n\n\n\n\nMonth 1\nLabs\n\n\nMonth 2\nProject 1\n\n\nMonth 3\nProject 2"
+    "objectID": "fr/teaching/deeplearning/index.html#présentation",
+    "href": "fr/teaching/deeplearning/index.html#présentation",
+    "title": "Deep Learning",
+    "section": "",
+    "text": "Ce cours présente les principaux concepts du Deep Learning, qui permet à une machine d’apprendre des représentations à partir de données. Il aborde le fonctionnement des réseaux de neurones, leur entraînement par descente de gradient et rétropropagation, ainsi que les architectures adaptées aux vecteurs, aux images et aux séquences.\nL’objectif est de comprendre comment concevoir, entraîner et évaluer un modèle, puis d’utiliser ces principes pour résoudre différents problèmes d’apprentissage, tels que la prédiction, la classification, la génération ou le contrôle d’agents autonomes. Ces notions sont mises en pratique dans un projet libre consistant à concevoir un système interactif ou dynamique intégrant un modèle de Deep Learning, puis à évaluer expérimentalement ses performances et ses limites."
   },
   {
-    "objectID": "en/teaching/bigdata/index.html#course-materials",
-    "href": "en/teaching/bigdata/index.html#course-materials",
-    "title": "Introduction to Big Data",
+    "objectID": "fr/teaching/deeplearning/index.html#supports-de-cours",
+    "href": "fr/teaching/deeplearning/index.html#supports-de-cours",
+    "title": "Deep Learning",
+    "section": "Supports de cours",
+    "text": "Supports de cours\n\nCours 1\nCours 2\nCours 3\nCours 4"
+  },
+  {
+    "objectID": "fr/teaching/deeplearning/index.html#projet",
+    "href": "fr/teaching/deeplearning/index.html#projet",
+    "title": "Deep Learning",
+    "section": "Projet",
+    "text": "Projet\n\nSujet\nJalons"
+  },
+  {
+    "objectID": "fr/teaching/reconstruction/index.html",
+    "href": "fr/teaching/reconstruction/index.html",
+    "title": "Reconstruction 3D",
+    "section": "",
+    "text": "Ce cours présente les principales méthodes permettant de reconstruire la géométrie tridimensionnelle d’un objet ou d’une scène à partir de plusieurs images. Il aborde les différentes étapes d’une chaîne de reconstruction, depuis la modélisation des caméras et la mise en correspondance des images jusqu’à la production de nuages de points et de maillages.\nL’objectif est de comprendre les principes géométriques sur lesquels reposent ces méthodes, mais aussi leurs limites face aux erreurs de calibration, aux occultations, aux variations d’éclairage ou aux surfaces difficiles à observer."
+  },
+  {
+    "objectID": "fr/teaching/reconstruction/index.html#présentation",
+    "href": "fr/teaching/reconstruction/index.html#présentation",
+    "title": "Reconstruction 3D",
+    "section": "",
+    "text": "Ce cours présente les principales méthodes permettant de reconstruire la géométrie tridimensionnelle d’un objet ou d’une scène à partir de plusieurs images. Il aborde les différentes étapes d’une chaîne de reconstruction, depuis la modélisation des caméras et la mise en correspondance des images jusqu’à la production de nuages de points et de maillages.\nL’objectif est de comprendre les principes géométriques sur lesquels reposent ces méthodes, mais aussi leurs limites face aux erreurs de calibration, aux occultations, aux variations d’éclairage ou aux surfaces difficiles à observer."
+  },
+  {
+    "objectID": "fr/teaching/reconstruction/index.html#contenu-du-cours",
+    "href": "fr/teaching/reconstruction/index.html#contenu-du-cours",
+    "title": "Reconstruction 3D",
+    "section": "Contenu du cours",
+    "text": "Contenu du cours\n\n\n\nCours\nContenu\n\n\n\n\nCM1\nRegistration\n\n\nCM2\nSurface reconstruction\n\n\nCM3\nSegmentation / Understanding\n\n\nCM4\nLearning-based reconstruction"
+  },
+  {
+    "objectID": "fr/teaching/reconstruction/index.html#supports-de-cours",
+    "href": "fr/teaching/reconstruction/index.html#supports-de-cours",
+    "title": "Reconstruction 3D",
+    "section": "Supports de cours",
+    "text": "Supports de cours\n\nCours 1\nCours 2\nCours 3\nCours 4"
+  },
+  {
+    "objectID": "fr/teaching/reconstruction/index.html#ateliers",
+    "href": "fr/teaching/reconstruction/index.html#ateliers",
+    "title": "Reconstruction 3D",
+    "section": "Ateliers",
+    "text": "Ateliers\n\n\n\nSujet\nThème\n\n\n\n\nTP 1\nGaussian Splatting"
+  },
+  {
+    "objectID": "fr/teaching/tid/index.html",
+    "href": "fr/teaching/tid/index.html",
+    "title": "Traitement Informatique des Données (TID)",
+    "section": "",
+    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableaux, puis comment transformer, résumer, relier et analyser ces données afin d’en extraire de l’information.\nL’objectif est de comprendre les principes fondamentaux du traitement de données et de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettent de mettre progressivement ces notions en application, avant un projet final libre permettant d’imaginer et de réaliser sa propre application du tableur."
+  },
+  {
+    "objectID": "fr/teaching/tid/index.html#présentation",
+    "href": "fr/teaching/tid/index.html#présentation",
+    "title": "Traitement Informatique des Données (TID)",
+    "section": "",
+    "text": "Ce cours introduit le traitement informatique des données à l’aide de tableurs. Il présente comment structurer des observations sous forme de tableaux, puis comment transformer, résumer, relier et analyser ces données afin d’en extraire de l’information.\nL’objectif est de comprendre les principes fondamentaux du traitement de données et de développer une approche claire et transférable, utilisable dans des outils comme LibreOffice Calc, Excel ou Google Sheets. Des travaux pratiques permettent de mettre progressivement ces notions en application, avant un projet final libre permettant d’imaginer et de réaliser sa propre application du tableur."
+  },
+  {
+    "objectID": "fr/teaching/tid/index.html#supports-de-cours",
+    "href": "fr/teaching/tid/index.html#supports-de-cours",
+    "title": "Traitement Informatique des Données (TID)",
+    "section": "Supports de cours",
+    "text": "Supports de cours\n\nCours 1\nCours 2\nCours 3\nCours 4"
+  },
+  {
+    "objectID": "fr/teaching/tid/index.html#travaux-pratiques",
+    "href": "fr/teaching/tid/index.html#travaux-pratiques",
+    "title": "Traitement Informatique des Données (TID)",
+    "section": "Travaux pratiques",
+    "text": "Travaux pratiques\n\n\n\nSujet\nThème\nDonnées\n\n\n\n\nTP 1\nTransformer\nSpace Missions\n\n\nTP 2\nRésumer et explorer\nNew Year’s Resolutions\n\n\nTP 3\nModéliser et optimiser\nProduction de boissons\n\n\nTP 4\nRelier et interroger\nWorld Cup 2022\n\n\nProjet\nFaites quelque chose avec un tableur\n-"
+  },
+  {
+    "objectID": "en/index.html",
+    "href": "en/index.html",
+    "title": "TEACHING",
+    "section": "",
+    "text": "Course\nAcronym\nLevel\n\n\n\n\nComputer-Based Data Processing\nTID\nL1\n\n\nIntroduction to Big Data\nIBD\nL3\n\n\nInverse Rendering for Image Synthesis\nSIRI\nM1\n\n\nGeneral-Purpose Computing on Graphics Processing Units\nGPGPU\nM1\n\n\n3D Reconstruction\nR3D\nM2\n\n\nDeep Learning\nDL\nM2"
+  },
+  {
+    "objectID": "en/teaching/deeplearning/index.html",
+    "href": "en/teaching/deeplearning/index.html",
+    "title": "Deep Learning",
+    "section": "",
+    "text": "This course introduces the main concepts of Deep Learning, which enables machines to learn representations from data. It covers the fundamentals of neural networks, their training through gradient descent and backpropagation, as well as architectures adapted to vectors, images, and sequences.\nThe objective is to understand how to design, train, and evaluate a model, and then apply these principles to different learning problems, such as prediction, classification, generation, or the control of autonomous agents. These concepts are put into practice through an open-ended project in which students design an interactive or dynamic system integrating a Deep Learning model, and experimentally evaluate its performance and limitations."
+  },
+  {
+    "objectID": "en/teaching/deeplearning/index.html#overview",
+    "href": "en/teaching/deeplearning/index.html#overview",
+    "title": "Deep Learning",
+    "section": "",
+    "text": "This course introduces the main concepts of Deep Learning, which enables machines to learn representations from data. It covers the fundamentals of neural networks, their training through gradient descent and backpropagation, as well as architectures adapted to vectors, images, and sequences.\nThe objective is to understand how to design, train, and evaluate a model, and then apply these principles to different learning problems, such as prediction, classification, generation, or the control of autonomous agents. These concepts are put into practice through an open-ended project in which students design an interactive or dynamic system integrating a Deep Learning model, and experimentally evaluate its performance and limitations."
+  },
+  {
+    "objectID": "en/teaching/deeplearning/index.html#course-materials",
+    "href": "en/teaching/deeplearning/index.html#course-materials",
+    "title": "Deep Learning",
+    "section": "Course Materials",
+    "text": "Course Materials\n\nLecture 1\nLecture 2\nLecture 3\nLecture 4"
+  },
+  {
+    "objectID": "en/teaching/deeplearning/index.html#project",
+    "href": "en/teaching/deeplearning/index.html#project",
+    "title": "Deep Learning",
+    "section": "Project",
+    "text": "Project\n\nSubject\nMilestones"
+  },
+  {
+    "objectID": "en/teaching/reconstruction/index.html",
+    "href": "en/teaching/reconstruction/index.html",
+    "title": "3D Reconstruction",
+    "section": "",
+    "text": "This course introduces the main methods used to reconstruct the three-dimensional geometry of an object or scene from multiple images. It covers the different stages of a reconstruction pipeline, from camera modeling and image matching to the production of point clouds and meshes.\nThe objective is to understand the geometric principles behind these methods, as well as their limitations when dealing with calibration errors, occlusions, lighting variations, or surfaces that are difficult to observe."
+  },
+  {
+    "objectID": "en/teaching/reconstruction/index.html#overview",
+    "href": "en/teaching/reconstruction/index.html#overview",
+    "title": "3D Reconstruction",
+    "section": "",
+    "text": "This course introduces the main methods used to reconstruct the three-dimensional geometry of an object or scene from multiple images. It covers the different stages of a reconstruction pipeline, from camera modeling and image matching to the production of point clouds and meshes.\nThe objective is to understand the geometric principles behind these methods, as well as their limitations when dealing with calibration errors, occlusions, lighting variations, or surfaces that are difficult to observe."
+  },
+  {
+    "objectID": "en/teaching/reconstruction/index.html#course-content",
+    "href": "en/teaching/reconstruction/index.html#course-content",
+    "title": "3D Reconstruction",
+    "section": "Course content",
+    "text": "Course content\n\n\n\nLecture\nContent\n\n\n\n\nCM1\nRegistration\n\n\nCM2\nSurface reconstruction\n\n\nCM3\nSegmentation / Understanding\n\n\nCM4\nLearning-based reconstruction"
+  },
+  {
+    "objectID": "en/teaching/reconstruction/index.html#course-materials",
+    "href": "en/teaching/reconstruction/index.html#course-materials",
+    "title": "3D Reconstruction",
+    "section": "Course materials",
+    "text": "Course materials\n\nLecture 1\nLecture 2"
+  },
+  {
+    "objectID": "en/teaching/tid/index.html",
+    "href": "en/teaching/tid/index.html",
+    "title": "Computer Data Processing (TID)",
+    "section": "",
+    "text": "This course introduces computer-based data processing using spreadsheets. It explains how to structure observations in tables, then how to transform, summarize, connect, and analyze data to extract meaningful information.\nThe aim is to understand the fundamental principles of data processing and develop a clear, transferable approach that can be applied using tools such as LibreOffice Calc, Excel, or Google Sheets. Practical sessions provide opportunities to apply these concepts progressively, leading up to a final project focused on independently analyzing a dataset."
+  },
+  {
+    "objectID": "en/teaching/tid/index.html#overview",
+    "href": "en/teaching/tid/index.html#overview",
+    "title": "Computer Data Processing (TID)",
+    "section": "",
+    "text": "This course introduces computer-based data processing using spreadsheets. It explains how to structure observations in tables, then how to transform, summarize, connect, and analyze data to extract meaningful information.\nThe aim is to understand the fundamental principles of data processing and develop a clear, transferable approach that can be applied using tools such as LibreOffice Calc, Excel, or Google Sheets. Practical sessions provide opportunities to apply these concepts progressively, leading up to a final project focused on independently analyzing a dataset."
+  },
+  {
+    "objectID": "en/teaching/tid/index.html#course-materials",
+    "href": "en/teaching/tid/index.html#course-materials",
+    "title": "Computer Data Processing (TID)",
     "section": "Course materials",
     "text": "Course materials\n\nLecture 1\nLecture 2\nLecture 3\nLecture 4"
   },
   {
-    "objectID": "en/teaching/bigdata/index.html#labs-and-projects",
-    "href": "en/teaching/bigdata/index.html#labs-and-projects",
-    "title": "Introduction to Big Data",
-    "section": "Labs and projects",
-    "text": "Labs and projects\n\n\n\nActivity\nSubject\nDataset\n\n\n\n\nLab 1\nSubject\nCSV\n\n\nLab 2\nSubject\n—\n\n\nProject 1\nSubject\nCSV\n\n\nProject 2\nSubject\nODS"
-  },
-  {
-    "objectID": "en/teaching/gpgpu/index.html",
-    "href": "en/teaching/gpgpu/index.html",
-    "title": "General-Purpose Computing on Graphics Processing Units (GPGPU)",
-    "section": "",
-    "text": "This page will provide the materials for the course on general-purpose computing using graphics processing units.\n\n\n\n\n\n\nNote\n\n\n\nThe course materials will be available soon."
-  },
-  {
-    "objectID": "en/teaching/gpgpu/index.html#overview",
-    "href": "en/teaching/gpgpu/index.html#overview",
-    "title": "General-Purpose Computing on Graphics Processing Units (GPGPU)",
-    "section": "",
-    "text": "This page will provide the materials for the course on general-purpose computing using graphics processing units.\n\n\n\n\n\n\nNote\n\n\n\nThe course materials will be available soon."
-  },
-  {
-    "objectID": "en/teaching/syntheseimage/index.html",
-    "href": "en/teaching/syntheseimage/index.html",
-    "title": "Inverse Rendering for Image Synthesis (IRIS)",
-    "section": "",
-    "text": "This course focuses on realistic image synthesis through inverse rendering, exploring how to generate new images from existing ones. It begins by introducing 2D synthesis methods, such as interpolation and extrapolation between views, and highlights their limitations when larger viewpoint changes are required.\nThe course then introduces photogrammetry, which enables the reconstruction of a scene’s 3D structure from multiple images in order to produce consistent novel views. It also covers different scene representations for view synthesis, ranging from point clouds and splats to more recent continuous representations.\nThree hands-on workshops complement the course. Students learn how to create a portfolio website, integrate a WebGL engine, and digitize a small object using photogrammetry."
-  },
-  {
-    "objectID": "en/teaching/syntheseimage/index.html#overview",
-    "href": "en/teaching/syntheseimage/index.html#overview",
-    "title": "Inverse Rendering for Image Synthesis (IRIS)",
-    "section": "",
-    "text": "This course focuses on realistic image synthesis through inverse rendering, exploring how to generate new images from existing ones. It begins by introducing 2D synthesis methods, such as interpolation and extrapolation between views, and highlights their limitations when larger viewpoint changes are required.\nThe course then introduces photogrammetry, which enables the reconstruction of a scene’s 3D structure from multiple images in order to produce consistent novel views. It also covers different scene representations for view synthesis, ranging from point clouds and splats to more recent continuous representations.\nThree hands-on workshops complement the course. Students learn how to create a portfolio website, integrate a WebGL engine, and digitize a small object using photogrammetry."
-  },
-  {
-    "objectID": "en/teaching/syntheseimage/index.html#course-materials",
-    "href": "en/teaching/syntheseimage/index.html#course-materials",
-    "title": "Inverse Rendering for Image Synthesis (IRIS)",
-    "section": "Course materials",
-    "text": "Course materials\n\nLecture 1\nLecture 2\nLecture 3"
-  },
-  {
-    "objectID": "en/teaching/syntheseimage/index.html#workshops",
-    "href": "en/teaching/syntheseimage/index.html#workshops",
-    "title": "Inverse Rendering for Image Synthesis (IRIS)",
-    "section": "Workshops",
-    "text": "Workshops\n\nWorkshop 1\nWorkshop 2\nWorkshop 3"
-  },
-  {
-    "objectID": "en/teaching/syntheseimage/index.html#practical-sessions",
-    "href": "en/teaching/syntheseimage/index.html#practical-sessions",
-    "title": "Inverse Rendering for Image Synthesis (IRIS)",
+    "objectID": "en/teaching/tid/index.html#practical-sessions",
+    "href": "en/teaching/tid/index.html#practical-sessions",
+    "title": "Computer Data Processing (TID)",
     "section": "Practical sessions",
-    "text": "Practical sessions\n\n\n\nActivity\nTopic\nData\n\n\n\n\nLab 1\nTopic\nData\n\n\nLab 2\nTopic\nData\n\n\nLab 3\nTopic\n—"
+    "text": "Practical sessions\n\n\n\nAssignment\nTopic\nData\n\n\n\n\nPractical 1\nTransforming\nSpace Missions\n\n\nPractical 2\nSummarizing and exploring\nNew Year’s Resolutions\n\n\nPractical 3\nModeling and optimizing\nBeverage Production\n\n\nPractical 4\nLinking and querying\n2022 World Cup\n\n\nProject\nDo something with a spreadsheet\n-"
   },
   {
-    "objectID": "tool/chrono/index.html",
-    "href": "tool/chrono/index.html",
+    "objectID": "tool/index.html",
+    "href": "tool/index.html",
     "title": "TEACHING",
     "section": "",
-    "text": "▶\n      ↩\n\n      \n        \n        min\n        \n        s"
+    "text": "Chronomètre\n\n\n Viewer 3D"
   }
 ]
