@@ -134,6 +134,11 @@
         annotationEditorMode: isCourseViewer ? -1 : 0,
         // 1 selects the hand tool, 0 the text selection tool.
         cursorToolOnLoad: isCourseViewer ? 1 : 0,
+        // pdf.js remembers the layout of each document once it has been
+        // changed, and the course viewer no longer offers the menu to change it
+        // back, so it always reads as a single continuous column of pages.
+        scrollModeOnLoad: isCourseViewer ? 0 : -1,
+        spreadModeOnLoad: isCourseViewer ? 0 : -1,
       }),
     );
   } catch {
