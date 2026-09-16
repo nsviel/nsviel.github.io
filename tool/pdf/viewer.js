@@ -112,7 +112,94 @@
     "file",
     pdfUrl ? `${pdfUrl.pathname}${pdfUrl.search}` : "",
   );
-  viewerUrl.hash = "pagemode=none";
+  viewerUrl.hash = "pagemode=none&zoom=page-width";
+
+  // Two profiles: the standalone tool keeps the whole pdf.js interface, while a
+  // course document opened with ?file= gets a read-only one.
+  const isCourseViewer = Boolean(pdfUrl);
+
+  // pdf.js reads its preferences from this key before initializing, and never
+  // writes it back itself, so both profiles simply rewrite it on every load.
+  try {
+    const storedPreferences = JSON.parse(
+      window.localStorage.getItem("pdfjs.preferences"),
+    );
+
+    window.localStorage.setItem(
+      "pdfjs.preferences",
+      JSON.stringify({
+        ...(storedPreferences instanceof Object ? storedPreferences : null),
+        // -1 disables the annotation editor: pdf.js then hides the highlight,
+        // text, drawing, image and signature tools on its own.
+        annotationEditorMode: isCourseViewer ? -1 : 0,
+        // 1 selects the hand tool, 0 the text selection tool.
+        cursorToolOnLoad: isCourseViewer ? 1 : 0,
+      }),
+    );
+  } catch {
+    // pdf.js keeps the preferences of the previously opened document.
+  }
+
+  // pdf.js only draws the cursor tool icons inside the menu they come from.
+  const cursorToolIcons = `
+    #cursorSelectTool::before {
+      -webkit-mask-image: var(--secondaryToolbarButton-selectTool-icon);
+      mask-image: var(--secondaryToolbarButton-selectTool-icon);
+    }
+
+    #cursorHandTool::before {
+      -webkit-mask-image: var(--secondaryToolbarButton-handTool-icon);
+      mask-image: var(--secondaryToolbarButton-handTool-icon);
+    }
+  `;
+
+  // The right of the pdf.js toolbar holds the annotation tools, the print and
+  // save buttons and the extra tools menu, none of which the course viewer
+  // needs. It only keeps the search, then the text selection and hand tools,
+  // both moved out of the extra tools menu.
+  const buildCourseToolbar = () => {
+    const frameDocument = frame.contentDocument;
+    const toolbarRight = frameDocument?.getElementById("toolbarViewerRight");
+    const findButton = frameDocument?.getElementById("viewFindButton");
+    const findBar = frameDocument?.getElementById("findbar");
+    const cursorTools = frameDocument?.getElementById("cursorToolButtons");
+
+    if (
+      !isCourseViewer ||
+      !toolbarRight ||
+      !findButton ||
+      !findBar ||
+      !cursorTools ||
+      toolbarRight.contains(findButton)
+    ) {
+      return;
+    }
+
+    // The separators have no identifier, hence hiding every child rather than
+    // the controls themselves, before moving in the ones worth keeping.
+    for (const control of toolbarRight.children) {
+      control.style.setProperty("display", "none", "important");
+    }
+
+    // The search panel drops down from its button, which now sits on the right
+    // edge of the toolbar.
+    findBar.classList.replace("doorHanger", "doorHangerRight");
+    cursorTools.classList.add("toolbarHorizontalGroup");
+
+    // Menu entries are labelled, toolbar buttons are icon only.
+    for (const cursorTool of cursorTools.children) {
+      cursorTool.classList.remove("labeled");
+    }
+
+    const iconStyleSheet = new frame.contentWindow.CSSStyleSheet();
+    iconStyleSheet.replaceSync(cursorToolIcons);
+    frameDocument.adoptedStyleSheets = [
+      ...frameDocument.adoptedStyleSheets,
+      iconStyleSheet,
+    ];
+
+    toolbarRight.append(findButton.parentElement, cursorTools);
+  };
 
   let pdfTheme = "light";
 
@@ -184,26 +271,45 @@
   });
   applyPdfTheme();
 
-  let backUrl;
+  // Reloading the reader, or reaching it from a bookmark, leaves it without a
+  // usable referrer, so the page each document was opened from is remembered
+  // for the tab session.
+  const backStorageKey = `pdf-reader-back:${window.location.search}`;
+
+  const rememberBackUrl = (url) => {
+    try {
+      if (url) {
+        window.sessionStorage.setItem(backStorageKey, url);
+      }
+
+      return url || window.sessionStorage.getItem(backStorageKey);
+    } catch {
+      return url;
+    }
+  };
+
+  let referrerUrl;
 
   try {
-    const referrerUrl = new URL(document.referrer);
-    if (referrerUrl.origin === window.location.origin) {
-      backUrl = `${referrerUrl.pathname}${referrerUrl.search}${referrerUrl.hash}`;
-    }
+    referrerUrl = new URL(document.referrer);
   } catch {
-    backUrl = undefined;
+    referrerUrl = undefined;
   }
 
-  if (!backUrl) {
-    const coursePath = pdfUrl?.pathname.match(
-      /^\/content\/courses\/([^/]+)\/(fr|en)\//,
-    );
-    backUrl = coursePath
-      ? `/${coursePath[2]}/teaching/${coursePath[1]}/`
-      : `/${language}/`;
-  }
-  back.href = backUrl;
+  // A reader that links back to itself would be a dead end.
+  const referrerBackUrl =
+    referrerUrl?.origin === window.location.origin &&
+    referrerUrl.pathname !== window.location.pathname
+      ? `${referrerUrl.pathname}${referrerUrl.search}${referrerUrl.hash}`
+      : undefined;
+
+  const coursePath = pdfUrl?.pathname.match(
+    /^\/content\/courses\/([^/]+)\/(fr|en)\//,
+  );
+
+  back.href =
+    rememberBackUrl(referrerBackUrl) ||
+    (coursePath ? `/${coursePath[2]}/teaching/${coursePath[1]}/` : "/tool/");
 
   const setTitle = (title) => {
     document.title = `${title} – TEACHING`;
@@ -251,6 +357,8 @@
       throw new Error("PDF.js failed to initialize.");
     }
     await application.initializedPromise;
+    // Locally opened documents ignore the viewer hash, so force the zoom here too.
+    frame.contentWindow?.PDFViewerApplicationOptions?.set("defaultZoomValue", "page-width");
     return application;
   };
 
@@ -374,6 +482,7 @@
   attachDropTarget(reader);
   window.addEventListener("dragend", () => reader.classList.remove("is-dragging"));
   frame.addEventListener("load", () => {
+    buildCourseToolbar();
     applyPdfTheme();
     attachDropTarget(frame.contentDocument, false);
   });
