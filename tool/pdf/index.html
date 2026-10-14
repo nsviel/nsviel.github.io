@@ -257,6 +257,7 @@ ul.task-list li input[type="checkbox"] {
       <span aria-hidden="true">&lt;</span>
     </a>
     <div class="pdf-reader-actions">
+      <a id="pdf-language" class="btn btn-secondary btn-sm pdf-reader-action" href="#" hidden=""></a>
       <button id="pdf-theme" class="btn btn-secondary btn-sm pdf-reader-action" type="button" aria-label="Mode sombre" title="Mode sombre" aria-pressed="false">
         <i class="bi bi-moon-stars" aria-hidden="true"></i>
       </button>
@@ -284,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
   <iframe id="pdf-reader-frame" class="pdf-reader-frame" title="Lecteur PDF"></iframe>
 </div>
 
-<script src="../../tool/pdf/viewer.js?v=6"></script>
+<script src="../../tool/pdf/viewer.js?v=7"></script>
 <style>
 html,
 body {
@@ -339,6 +340,10 @@ main.content {
   justify-content: center;
   gap: 0.35rem;
   width: 6.5rem;
+}
+
+.pdf-reader-action[hidden] {
+  display: none;
 }
 
 .pdf-reader-back {

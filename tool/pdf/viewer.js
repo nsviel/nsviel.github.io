@@ -7,6 +7,7 @@
   const messages = {
     fr: {
       back: "Retour au cours",
+      switchLanguage: "English",
       download: "Télécharger le PDF",
       downloadData: "Télécharger les données",
       data: "Données",
@@ -25,6 +26,7 @@
     },
     en: {
       back: "Back to course",
+      switchLanguage: "Français",
       download: "Download PDF",
       downloadData: "Download data",
       data: "Data",
@@ -51,6 +53,7 @@
   const dropLabel = document.querySelector("#pdf-reader-drop-label");
   const error = document.querySelector("#pdf-reader-error");
   const back = document.querySelector("#pdf-back");
+  const languageSwitch = document.querySelector("#pdf-language");
   const themeButton = document.querySelector("#pdf-theme");
   const themeIcon = themeButton.querySelector("i");
   const download = document.querySelector("#pdf-download");
@@ -312,8 +315,22 @@
     /^\/content\/courses\/([^/]+)\/(fr|en)\//,
   );
 
+  let explicitBackUrl;
+  const requestedBackUrl = params.get("back");
+  if (requestedBackUrl) {
+    try {
+      const candidateBackUrl = new URL(requestedBackUrl, window.location.origin);
+      if (candidateBackUrl.origin === window.location.origin) {
+        explicitBackUrl = `${candidateBackUrl.pathname}${candidateBackUrl.search}${candidateBackUrl.hash}`;
+      }
+    } catch {
+      explicitBackUrl = undefined;
+    }
+  }
+
   back.href =
     rememberBackUrl(referrerBackUrl) ||
+    explicitBackUrl ||
     (coursePath ? `/${coursePath[2]}/teaching/${coursePath[1]}/` : "/tool/");
 
   const setTitle = (title) => {
@@ -330,6 +347,69 @@
     setTitle(messages.open);
     frame.hidden = true;
     download.hidden = true;
+  }
+
+  // Course PDFs identify their language either in a directory (/fr/ or /en/)
+  // or in the filename (_fr.pdf or _en.pdf). Offer a switch only when the
+  // corresponding file is actually present on the site.
+  const getLanguageVariant = (url) => {
+    const directoryMatch = url.pathname.match(/^(.*\/)(fr|en)(\/.*)$/);
+    if (directoryMatch) {
+      const targetLanguage = directoryMatch[2] === "fr" ? "en" : "fr";
+      return {
+        language: targetLanguage,
+        url: new URL(
+          `${directoryMatch[1]}${targetLanguage}${directoryMatch[3]}${url.search}`,
+          window.location.origin,
+        ),
+      };
+    }
+
+    const filenameMatch = url.pathname.match(/^(.*)_(fr|en)(\.pdf)$/i);
+    if (filenameMatch) {
+      const targetLanguage = filenameMatch[2].toLowerCase() === "fr" ? "en" : "fr";
+      let targetPath = `${filenameMatch[1]}_${targetLanguage}${filenameMatch[3]}`;
+
+      // The project PDFs use translated basenames as well as language suffixes.
+      if (url.pathname.endsWith("/projet_fr.pdf")) {
+        targetPath = url.pathname.replace(/projet_fr\.pdf$/, "project_en.pdf");
+      } else if (url.pathname.endsWith("/project_en.pdf")) {
+        targetPath = url.pathname.replace(/project_en\.pdf$/, "projet_fr.pdf");
+      }
+
+      return {
+        language: targetLanguage,
+        url: new URL(`${targetPath}${url.search}`, window.location.origin),
+      };
+    }
+
+    return undefined;
+  };
+
+  if (pdfUrl) {
+    const variant = getLanguageVariant(pdfUrl);
+    if (variant) {
+      fetch(variant.url, { method: "HEAD" })
+        .then((response) => {
+          if (response.ok) {
+            const switchParams = new URLSearchParams(window.location.search);
+            switchParams.set("file", `${variant.url.pathname}${variant.url.search}`);
+            switchParams.set("lang", variant.language);
+            switchParams.set("back", back.href);
+            languageSwitch.href = `${window.location.pathname}?${switchParams}`;
+            languageSwitch.textContent = messages.switchLanguage;
+            languageSwitch.setAttribute(
+              "aria-label",
+              variant.language === "en" ? "English version" : "Version française",
+            );
+            languageSwitch.title = languageSwitch.getAttribute("aria-label");
+            languageSwitch.hidden = false;
+          }
+        })
+        .catch(() => {
+          // Keep the language switch hidden when the alternate file is unavailable.
+        });
+    }
   }
 
   if (pdfUrl && data) {

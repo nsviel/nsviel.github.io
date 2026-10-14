@@ -4,7 +4,7 @@
     "href": "tool/pdf/index.html",
     "title": "TEACHING",
     "section": "",
-    "text": "&lt;\n    \n    \n      \n        \n      \n      \n        \n        PDF\n      \n      \n        \n        Données\n      \n    \n  \n  \n    \n    Ouvrir un PDF\n    Glissez-déposez un fichier ici ou cliquez pour le sélectionner.\n  \n  \n  \n  \n    \n    Déposez le PDF ici"
+    "text": "&lt;\n    \n    \n      \n      \n        \n      \n      \n        \n        PDF\n      \n      \n        \n        Données\n      \n    \n  \n  \n    \n    Ouvrir un PDF\n    Glissez-déposez un fichier ici ou cliquez pour le sélectionner.\n  \n  \n  \n  \n    \n    Déposez le PDF ici"
   },
   {
     "objectID": "tool/chrono/index.html",
@@ -95,7 +95,7 @@
     "href": "en/teaching/bigdata/index.html#labs-and-projects",
     "title": "Introduction to Big Data",
     "section": "Labs and projects",
-    "text": "Labs and projects\n\n\n\nActivity\nSubject\nDataset\n\n\n\n\nLab 1\nSubject\nCSV\n\n\nLab 2\nSubject\n—\n\n\nProject 1\nSubject\nCSV\n\n\nProject 2\nSubject\nODS"
+    "text": "Labs and projects\n\n\n\nActivity\nSubject\nDataset\n\n\n\n\nLab 1\nSubject\nCSV\n\n\nLab 2\nSubject\n—\n\n\nProject\nSubject\n-"
   },
   {
     "objectID": "en/contact/index.html",
@@ -193,7 +193,7 @@
     "href": "fr/teaching/bigdata/index.html#travaux-pratiques-et-projets",
     "title": "Introduction au Big Data",
     "section": "Travaux pratiques et projets",
-    "text": "Travaux pratiques et projets\n\n\n\nActivité\nSujet\nDonnées\n\n\n\n\nTP 1\nSujet\nData\n\n\nTP 2\nSujet\n—\n\n\nProjet 1\nSujet\nData\n\n\nProjet 2\nSujet\nData"
+    "text": "Travaux pratiques et projets\n\n\n\nActivité\nSujet\nDonnées\n\n\n\n\nTP 1\nSujet\nData\n\n\nTP 2\nSujet\n—\n\n\nProjet\nSujet\n-"
   },
   {
     "objectID": "fr/contact/index.html",
