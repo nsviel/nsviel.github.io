@@ -43,8 +43,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bf5d8e251a50fec0c7bfbe9ad31c1126.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-3d317f38931940c409f7c1180722ee3d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-f5447493369a398c8950744c152f4eef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ed1a13852f6a2ef2a170f5f34f37ae43.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,6 +72,25 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+(() => {
+  const themes = ["light", "dark", "warm"];
+  let theme = "dark";
+
+  try {
+    const savedTheme = localStorage.getItem("site-theme");
+    if (themes.includes(savedTheme)) {
+      theme = savedTheme;
+    } else if (localStorage.getItem("quarto-color-scheme") === "default") {
+      theme = "light";
+    }
+  } catch {
+    // Use the site's dark default when browser storage is unavailable.
+  }
+
+  document.documentElement.dataset.siteTheme = theme;
+})();
+</script>
 
 
 </head>

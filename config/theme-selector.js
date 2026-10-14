@@ -1,6 +1,6 @@
 (() => {
   const storageKey = "site-theme";
-  const themes = ["light", "warm", "dark"];
+  const themes = ["light", "dark", "warm"];
   const themeClasses = themes.map((theme) => `site-theme-${theme}`);
 
   const installMenu = () => {
@@ -32,6 +32,10 @@
     const menuButton = wrapper.querySelector(".site-menu-toggle");
     const panel = wrapper.querySelector(".site-menu-panel");
     const menuLinks = wrapper.querySelector(".site-menu-links");
+    const languageLinks = document.createElement("div");
+    languageLinks.className = "site-menu-languages";
+    languageLinks.setAttribute("role", "group");
+    languageLinks.setAttribute("aria-label", "Language");
 
     navList.querySelectorAll("a").forEach((link) => {
       const navItem = link.closest("li");
@@ -40,6 +44,12 @@
         link.classList.add("site-menu-tool-link");
         navItem?.remove();
         navbar.append(link);
+        return;
+      }
+
+      if (link.classList.contains("language-link")) {
+        languageLinks.append(link);
+        navItem?.remove();
         return;
       }
 
@@ -60,7 +70,14 @@
 
       document.body.classList.remove(...themeClasses);
       document.body.classList.add(`site-theme-${theme}`);
+      document.documentElement.dataset.siteTheme = theme;
       localStorage.setItem(storageKey, theme);
+
+      wrapper.querySelectorAll("[data-theme]").forEach((button) => {
+        const isCurrentTheme = button.dataset.theme === theme;
+        button.classList.toggle("is-current-theme", isCurrentTheme);
+        button.setAttribute("aria-pressed", String(isCurrentTheme));
+      });
 
       if ((theme !== "light") !== document.body.classList.contains("quarto-dark")) {
         themeToggle.click();
@@ -71,7 +88,7 @@
     const initialTheme = themes.includes(storedTheme)
       ? storedTheme
       : document.body.classList.contains("quarto-dark")
-        ? "warm"
+        ? "dark"
         : "light";
 
     menuButton.addEventListener("click", () => {
@@ -91,6 +108,7 @@
     });
 
     applyTheme(initialTheme);
+    navbar.append(languageLinks);
     navbar.append(wrapper);
   };
 
