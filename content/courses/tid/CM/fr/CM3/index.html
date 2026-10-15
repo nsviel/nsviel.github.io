@@ -6,16 +6,16 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
 <script src="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
 <link href="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.css" rel="stylesheet">
 <script src="index_files/libs/quarto-contrib/roughnotation-flourish-bridge-1.0.0/flourish-bridge.js"></script>
 <link href="index_files/libs/quarto-contrib/quarto-gradio-1.0.0/quarto-gradio.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="nsv">
-  <meta name="dcterms.date" content="2026-07-20">
+  <meta name="dcterms.date" content="2026-10-15">
   <title>TID - CM3</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -38,7 +38,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-bc55ea3ce6723e795a7ca654f3e10cd2.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-a3e14bbc330ee6b225af0d6b41facaf6.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -47,6 +47,7 @@
   <link href="index_files/libs/revealjs/plugin/reveal-attribution/attribution.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-quiz/quiz.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/terminal/terminal.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet"><style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -133,7 +134,9 @@
       margin-left: auto;
       margin-right: 0; 
     }
-  </style><script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script>
+  </style><script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script><link rel="stylesheet" href="_extensions/local/text/text.css">
+  <script defer="" src="_extensions/local/text/text.js"></script>
+  <script defer="" src="_extensions/local/text/spawn.js"></script><link rel="stylesheet" href="_extensions/local/effect/style.css">
   <!-- quarto-confetti-injected -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   <script>
@@ -202,7 +205,7 @@
 <p><span class="big_title">Traitement Informatique</span></p>
 </div>
 <div class="r-fit-text">
-<p><span class="big_title">des donnees</span></p>
+<p><span class="big_title">des données</span></p>
 </div>
 </div><div class="column quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
 
@@ -216,25 +219,24 @@
 <p><br></p>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><span class="fragment">la dernière fois :</span></p>
+<div class="column fragment quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p>La dernière fois :</p>
 <div class="blue">
 <ul>
-<li class="fragment">écrire des formules</li>
-<li class="fragment">référencer des données</li>
-<li class="fragment">utiliser des fonctions</li>
+<li>écrire des formules</li>
+<li>référencer des données</li>
+<li>utiliser des fonctions</li>
 </ul>
 </div>
-</div><div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><span class="fragment">aujourd’hui :</span></p>
-<p><span class="fragment orange large">on commence à faire de la vraie analyse</span></p>
+</div><div class="column fragment quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p>Aujourd’hui :</p>
+<p><span class="orange large">on commence à faire de la vraie analyse</span></p>
 </div></div>
 </div>
 </section>
-<section id="section-2" class="slide level2 hcenter">
+<section id="section-2" class="slide level2" data-background-image="content/image/pyramide.svg" data-background-size="cover">
 <h2></h2>
-
-<img data-src="content/image/pyramide.svg" class="r-stretch"></section>
+</section>
 <section id="attention" class="slide level2 warning Large">
 <h2>Attention</h2>
 <div class="fragment large big_title">
@@ -359,10 +361,10 @@
 <p>On va essayer de répondre à</p>
 <div class="green large">
 <ul>
-<li class="fragment">Qui est admis ? <span class="glyph"> </span> <span class="blue">(level 1)</span></li>
-<li class="fragment">Combien d’étudiants sont admis ? <span class="glyph"> </span> <span class="blue">(level 2)</span></li>
-<li class="fragment">Quelle est la moyenne des admis ? <span class="glyph"> </span> <span class="blue">(level 3)</span></li>
-<li class="fragment">Quel groupe obtient les meilleurs résultats ? <span class="glyph"> </span> <span class="blue">(level 4)</span></li>
+<li>Qui est admis ? <span class="glyph"> </span> <span class="blue">(level 1)</span></li>
+<li>Combien d’étudiants sont admis ? <span class="glyph"> </span> <span class="blue">(level 2)</span></li>
+<li>Quelle est la note de Bob ? <span class="glyph"> </span> <span class="blue">(level 3)</span></li>
+<li>Quel groupe obtient les meilleurs résultats ? <span class="glyph"> </span> <span class="blue">(level 4)</span></li>
 </ul>
 </div>
 </section>
@@ -372,26 +374,22 @@
 <ul>
 <li>Qui est admis ? <span class="glyph"> </span> <span class="blue">(level 1)</span></li>
 <li>Combien d’étudiants sont admis ? <span class="glyph"> </span> <span class="blue">(level 2)</span></li>
-<li>Quelle est la moyenne des admis ? <span class="glyph"> </span> <span class="blue">(level 3)</span></li>
+<li>Quelle est la note de Bob ? <span class="glyph"> </span> <span class="blue">(level 3)</span></li>
 <li>Quel groupe obtient les meilleurs résultats ? <span class="glyph"> </span> <span class="blue">(level 4)</span></li>
 </ul>
 </div>
 <p><br></p>
 <div class="columns">
-<div class="column" style="width:45%;">
-<div class="fragment">
+<div class="column fragment" style="width:45%;">
 <p>=AVERAGE(C2:C11)</p>
-</div>
-<div class="fragment Large">
+<div class="Large">
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="glyph arrow_down" style="font-size:1.2em;"></span></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12,1</p>
 </div>
-</div><div class="column" style="width:55%;">
-<div class="fragment">
+</div><div class="column fragment" style="width:55%;">
 <p>Mais…</p>
-</div>
-<div class="fragment red Large">
-<p>Ca ne répond à aucune question …</p>
+<div class="red Large">
+<p>Ça ne répond à aucune question…</p>
 </div>
 </div></div>
 </section>
@@ -400,15 +398,15 @@
 <p><br></p>
 <div class="fragment">
 <p>Il faut être capable de :</p>
-</div>
 <p><br></p>
 <div class="blue large">
 <ul>
-<li class="fragment">prendre des décisions</li>
-<li class="fragment">compter selon un critère</li>
-<li class="fragment">retrouver une information</li>
-<li class="fragment">résumer un grand tableau</li>
+<li>prendre des décisions</li>
+<li>compter selon un critère</li>
+<li>retrouver une information</li>
+<li>résumer un grand tableau</li>
 </ul>
+</div>
 </div>
 </section>
 <section id="section-5" class="slide level2 conclusion">
@@ -423,7 +421,7 @@
 <section id="mais-dabord" class="slide level2 question Large">
 <h2>Mais d’abord</h2>
 <div class="fragment large big_title">
-<p>Un petit quizz</p>
+<p>Un petit quiz</p>
 </div>
 </section>
 <section id="que-produit-cette-formule" class="slide level2 quiz">
@@ -458,17 +456,19 @@
 <section id="on-va-étudier-3-fonctions-importantes" class="slide level2">
 <h2>On va étudier 3 fonctions importantes</h2>
 <p><br></p>
-<p><span class="blue">IF</span></p>
+<div class="Large">
+<p><span class="blue">IF</span> <span class="fragment"><span class="glyph arrow" style="font-size:1.2em;"></span> Facile :)</span></p>
 <p><br></p>
-<p><span class="blue">COUNTIF</span></p>
+<p><span class="blue">COUNTIF</span> <span class="fragment"><span class="glyph arrow" style="font-size:1.2em;"></span> compter des if ? 🤔</span></p>
 <p><br></p>
-<p><span class="blue">VLOOKUP</span></p>
+<p><span class="blue">VLOOKUP</span> <span class="fragment"><span class="glyph arrow" style="font-size:1.2em;"></span> wtf ?</span></p>
+</div>
 </section>
-<section id="section-6" class="slide level2 slide_black" data-background-color="#000000">
+<section id="section-6" class="slide level2 slide_black center" data-background-color="#000000">
 <h2></h2>
-<p><span class="greenneon big_title r-fit-text">Level 1</span></p>
-<div class="fragment">
-<p>Qui est admis ?</p>
+<p><span class="greenneon big_title r-fit-text">Prendre une décision</span></p>
+<div class="fragment LARGE">
+<p>La fonction IF (easy peasy 😋)</p>
 </div>
 </section>
 <section id="comment-faire-si-toutes-les-lignes-ne-doivent-pas-produire-le-même-résultat" class="slide level2 question">
@@ -499,12 +499,12 @@
 </tr>
 </tbody>
 </table>
-<p><br></p>
+<p><br><br></p>
 <div class="fragment">
 <p>On voudrait afficher :</p>
+<div class="Large">
+<p><span class="green">Admis</span> (≥ 10) <strong>ou</strong> <span class="red">Ajourné</span> (&lt; 10)</p>
 </div>
-<div class="fragment green Large">
-<p>Admis <strong>ou</strong> Ajourné</p>
 </div>
 </section>
 <section id="une-formule-classique" class="slide level2 hcenter">
@@ -518,39 +518,78 @@
 <p><br></p>
 <div class="fragment">
 <p>Mais…</p>
+<div class="red large">
+<p>tout le monde obtient le même calcul.</p>
 </div>
-<div class="fragment red large">
-<p>tout le monde obtient le même calcul…</p>
 </div>
 </section>
 <section id="il-faut-prendre-une-décision" class="slide level2">
 <h2>Il faut prendre une décision</h2>
 <p><br><br></p>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="column" style="width:30%;">
 <div class="Huge green">
-<p>SI</p>
+<p><span id="if-fn">IF</span></p>
 </div>
 </div><div class="column" style="width:60%;">
 <div class="fragment">
 <p><span class="green">Si</span> une condition est vraie</p>
-<p><span class="glyph arrow_down" style="font-size:1.2em;"></span></p>
-<p>faire une chose</p>
+<p><span id="if-action-true"><span class="glyph arrow_down" style="font-size:1.2em;"></span></span></p>
+<p>faire une chose <span class="leaderline" start="#if-fn" data-end="#if-action-true" data-path="fluid" color="green" size="3" data-end-plug="arrow1" data-start-socket="right" data-end-socket="left" data-label-position="middle" data-caption-label="VRAI" data-label-style="color: #fff; fontSize: 34px; fontWeight: bold; outlineColor: #111; outlineSize: 0.35"></span></p>
+</div>
+<div class="fragment">
 <p><br></p>
 <p><span class="green">Sinon</span></p>
-<p><span class="glyph arrow_down" style="font-size:1.2em;"></span></p>
-<p>faire autre chose</p>
+<p><span id="if-action-false"><span class="glyph arrow_down" style="font-size:1.2em;"></span></span></p>
+<p>faire autre chose <span class="leaderline" start="#if-fn" data-end="#if-action-false" data-path="fluid" color="red" size="3" data-end-plug="arrow1" data-start-socket="right" data-end-socket="left" data-label-position="middle" data-caption-label="FAUX" data-label-style="color: #fff; fontSize: 34px; fontWeight: bold; outlineColor: #111; outlineSize: 0.35"></span></p>
 </div>
 </div></div>
 </section>
+<section id="parfois-il-faut-prendre-de-multiples-décisions" class="slide level2">
+<h2>Parfois il faut prendre de multiples décisions</h2>
+<p><br><br></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="Huge green">
+<p><span id="if-fn">IF</span></p>
+</div>
+</div><div class="column" style="width:30%;">
+<p><span id="if-action-true">faire une chose</span></p>
+<p><span class="leaderline" start="#if-fn" data-end="#if-action-true" data-path="fluid" color="green" size="3" data-end-plug="arrow1" data-start-socket="right" data-end-socket="left" data-label-position="middle" data-caption-label="VRAI" data-label-style="color: #fff; fontSize: 34px; fontWeight: bold; outlineColor: #111; outlineSize: 0.35"></span></p>
+<p><br><br><br><br></p>
+<p><span id="if-action-false" class="green">IF</span></p>
+<p><span class="leaderline" start="#if-fn" data-end="#if-action-false" data-path="fluid" color="red" size="3" data-end-plug="arrow1" data-start-socket="right" data-end-socket="left" data-label-position="middle" data-caption-label="FAUX" data-label-style="color: #fff; fontSize: 34px; fontWeight: bold; outlineColor: #111; outlineSize: 0.35"></span></p>
+</div><div class="column" style="width:40%;">
+<div class="fragment">
+<p><br><br><br></p>
+<p><span id="ifif-action-true">faire encore autre chose</span></p>
+<p><span class="leaderline" start="#if-action-false" data-end="#ifif-action-true" data-path="fluid" color="green" size="3" data-end-plug="arrow1" data-start-socket="right" data-end-socket="left" data-label-position="middle" data-caption-label="VRAI" data-label-style="color: #fff; fontSize: 34px; fontWeight: bold; outlineColor: #111; outlineSize: 0.35"></span></p>
+</div>
+<p><br><br><br><br></p>
+<div class="fragment">
+<p><span id="ifif-action-false">Bon ben, faire le dernier truc prévu</span></p>
+<p><span class="leaderline" start="#if-action-false" data-end="#ifif-action-false" data-path="fluid" color="red" size="3" data-end-plug="arrow1" data-start-socket="right" data-end-socket="left" data-label-position="middle" data-caption-label="FAUX" data-label-style="color: #fff; fontSize: 34px; fontWeight: bold; outlineColor: #111; outlineSize: 0.35"></span></p>
+</div>
+</div></div>
+<div class="fragment LARGE">
+<p>Les <span class="green">IF</span> imbriqués</p>
+</div>
+</section>
 <section id="section-7" class="slide level2 conclusion hcenter">
 <h2></h2>
-<p><br><br></p>
 <p>La fonction</p>
 <p><span class="big_title LARGE">IF</span></p>
+<p><br></p>
+<div class="Large fragment">
+<p>=<strong>IF</strong>(<span class="blue">condition</span> <strong>;</strong> <span class="green">valeur_si_vrai</span> <strong>;</strong> <span class="red">valeur_si_faux</span>)</p>
+</div>
 <p><br><br></p>
-<div class="Large blue fragment">
-<p>=<strong>IF</strong>(condition <strong>;</strong> valeur_si_vrai <strong>;</strong> valeur_si_faux)</p>
+<div class="fragment Large">
+<p>Et on peut l’imbriquer à l’infini</p>
+</div>
+<p><br></p>
+<div class="white fragment">
+<p>=IF(<span class="blue">A1=1</span>;<span class="green">“Un”</span>;<span>IF(<span class="blue">A1=2</span>;<span class="green">“Deux”</span>;IF(<span class="blue">A1=3</span>;<span class="green">“Trois”</span>;IF(<span class="blue">A1=4</span>;<span class="green">“Quatre”</span>;IF(<span class="blue">A1=5</span>;<span class="green">“Cinq”</span>;IF(<span class="blue">A1=6</span>;<span class="green">“Six”</span>; IF(<span class="blue">A1=7</span>;<span class="green">“Sept”</span>;IF(<span class="blue">A1=8</span>;<span class="green">“Huit”</span>;IF(<span class="blue">A1=9</span>;<span class="green">“Neuf”</span>;IF(<span class="blue">A1=10</span>;<span class="green">“Dix”</span>;IF(<span class="blue">A1=11</span>;<span class="green">“Onze”</span>;IF(<span class="blue">A1=12</span>;<span class="green">“Douze”</span>; IF(<span class="blue">A1=13</span>;<span class="green">“Treize”</span>;IF(<span class="blue">A1=14</span>;<span class="green">“Quatorze”</span>;IF(<span class="blue">A1=15</span>;<span class="green">“Quinze”</span>;IF(<span class="blue">A1=16</span>;<span class="green">“Seize”</span>;IF(<span class="blue">A1=17</span>;<span class="green">“Dix-sept”</span>;IF(<span class="blue">A1=18</span>;<span class="green">“Dix-huit”</span>;IF(<span class="blue">A1=19</span>;<span class="green">“Dix-neuf”</span>;IF(<span class="blue">A1=20</span>;<span class="green">“Vingt”</span>;<span class="red">“Il faudrait peut-être faire autrement”</span>)))))))))))))))))))</span>)</p>
 </div>
 </section>
 <section id="exemple-1" class="slide level2 hcenter">
@@ -587,23 +626,15 @@
 </tbody>
 </table>
 <p><br></p>
-<div class="Large blue fragment">
-<p>=<strong>IF</strong>(B2&gt;=10 <strong>;</strong> “Admis” <strong>;</strong> “Ajourné”)</p>
-</div>
-</section>
-<section id="section-8" class="slide level2 hcenter">
-<h2></h2>
-<p><br></p>
-<div class="Large blue">
-<p>=<strong>IF</strong>(B2<strong>&gt;=</strong>10 <strong>;</strong> “Admis” <strong>;</strong> “Ajourné”)</p>
-</div>
-<p><br><br></p>
-<div class="Large red fragment">
-<p>B2 <span class="glyph">=</span> 8 <span class="glyph arrow" style="font-size:1.2em;"></span> Ajourné</p>
+<div class="Large fragment">
+<p>=<strong>IF</strong>(<span class="blue">B2&gt;=10</span> <strong>;</strong> <span class="green">“Admis”</span> <strong>;</strong> <span class="red">“Ajourné”</span>)</p>
 </div>
 <p><br></p>
+<div class="Large fragment">
+<p><span class="blue">B3 <span class="glyph">=</span> 8</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="red">Ajourné</span></p>
+</div>
 <div class="Large green fragment">
-<p>B2 <span class="glyph">=</span> 12 <span class="glyph arrow" style="font-size:1.2em;"></span> Admis</p>
+<p><span class="blue">B4 <span class="glyph">=</span> 17</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="green">Admis</span></p>
 </div>
 </section>
 <section id="les-conditions-utilisent" class="slide level2">
@@ -649,16 +680,16 @@
 </section>
 <section id="plusieurs-exemples" class="slide level2">
 <h2>Plusieurs exemples</h2>
-<p><br><br><br></p>
-<div class="large blue">
-<p>=<strong>IF</strong>(B2<strong>=</strong>”A”;…) <span class="fragment green"><span class="glyph arrow" style="font-size:1.2em;"></span> compare du texte</span></p>
+<p><br><br></p>
+<div class="Large">
+<p>=<strong>IF</strong>(<span class="blue">B2<strong>=</strong>”A”</span>;…) <span class="fragment green"><span class="glyph arrow" style="font-size:1.2em;"></span> compare du texte</span></p>
 <p><br></p>
-<p>=<strong>IF</strong>(C2<strong>&gt;=</strong>10;…) <span class="fragment green"><span class="glyph arrow" style="font-size:1.2em;"></span> compare un nombre</span></p>
+<p>=<strong>IF</strong>(<span class="blue">C2<strong>&gt;=</strong>10</span>;…) <span class="fragment green"><span class="glyph arrow" style="font-size:1.2em;"></span> compare un nombre</span></p>
 <p><br></p>
-<p>=<strong>IF</strong>(D2<strong>=</strong>TRUE;…) <span class="fragment green"><span class="glyph arrow" style="font-size:1.2em;"></span> compare un état</span></p>
+<p>=<strong>IF</strong>(<span class="blue">D2<strong>=</strong>TRUE</span>;…) <span class="fragment green"><span class="glyph arrow" style="font-size:1.2em;"></span> compare un état</span></p>
 </div>
 </section>
-<section id="section-9" class="slide level2 conclusion">
+<section id="section-8" class="slide level2 conclusion">
 <h2></h2>
 <div class="LARGE green">
 <p>Une condition</p>
@@ -670,7 +701,7 @@
 <section id="que-produira-cette-formule" class="slide level2 quiz">
 <h2>Que produira cette formule ?</h2>
 <p>=<strong>IF</strong>(B2=“A” <strong>;</strong> “Groupe A” <strong>;</strong> “Autre groupe”)</p>
-<p>Si B2 contient <strong>B</strong> :</p>
+<p>Si B2 contient <strong>C</strong> :</p>
 <p><span class="smallsize"><code>A.</code></span> <span class="glyph"> </span> Groupe A</p>
 <p><span class="smallsize"><code>B.</code></span> <span class="glyph"> </span> Autre groupe</p>
 <p><span class="smallsize"><code>C.</code></span> <span class="glyph"> </span> B</p>
@@ -678,8 +709,8 @@
 </section>
 <section id="que-produira-cette-formule-1" class="slide level2 quiz">
 <h2>Que produira cette formule ?</h2>
-<p>=<strong>IF</strong>(B2&lt;&gt;“A” <strong>;</strong> “Jean” <strong>;</strong> “Bond”)</p>
-<p>Si B2 contient <strong>B</strong> :</p>
+<p>=<strong>IF</strong>(B2&lt;&gt;“C” <strong>;</strong> “Jean” <strong>;</strong> “Bond”)</p>
+<p>Si B2 contient <strong>C</strong> :</p>
 <p><span class="smallsize"><code>A.</code></span> <span class="glyph"> </span> Jean</p>
 <p><span class="smallsize"><code>B.</code></span> <span class="glyph"> </span> Bond</p>
 <p><span class="smallsize"><code>C.</code></span> <span class="glyph"> </span> Jambon</p>
@@ -690,15 +721,12 @@
 <section id="bloc-2" class="slide level2 bloc" data-name="Bloc 2">
 <h2>BLOC 2</h2>
 </section>
-<section id="section-10" class="slide level2 slide_black" data-background-color="#000000">
+<section id="section-9" class="slide level2 slide_black center" data-background-color="#000000">
 <h2></h2>
-<p><span class="greenneon big_title r-fit-text">Level 2</span></p>
-<div class="fragment">
-<p>Combien d’étudiants sont admis ?</p>
+<p><span class="greenneon big_title r-fit-text">COMPTER SELON UNE CONDITION</span></p>
+<div class="fragment LARGE">
+<p>La fonction COUNTIF (🤔)</p>
 </div>
-</section>
-<section id="et-si-on-voulait-compter-uniquement-les-données-qui-nous-intéressent" class="slide level2 question">
-<h2>Et si on voulait compter <code>uniquement</code> les données qui nous intéressent ?</h2>
 </section>
 <section id="exemple-2" class="slide level2">
 <h2>Exemple</h2>
@@ -736,43 +764,55 @@
 <p><br></p>
 <div class="fragment">
 <p>Question :</p>
-</div>
-<div class="fragment green Large">
+<div class="green Large">
 <p>Combien d’étudiants</p>
 <p>sont dans le groupe A ?</p>
 </div>
+</div>
 </section>
-<section id="à-la-main" class="slide level2 hcenter">
-<h2>À la main ?</h2>
-<p><br></p>
+<section id="section-10" class="slide level2 hcenter">
+<h2></h2>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="column large" style="width:40%;">
+<p>À la main ?</p>
+<p><br></p>
 <div class="blue">
 <p>Alice <span class="glyph"> </span><span class="green">✔</span></p>
 <p>Bob <span class="glyph"> </span><span class="red">✘</span></p>
 <p>Chloé <span class="glyph"> </span><span class="green">✔</span></p>
 <p>David <span class="glyph"> </span><span class="red">✘</span></p>
-<p><br></p>
 <p><span class="glyph arrow_down" style="font-size:1.2em;"></span></p>
 <p>2</p>
 <p><br></p>
 <p><span class="fragment green Large">Facile !</span></p>
 </div>
-</div><div class="column fragment red bold" style="width:60%;">
-<p><img data-src="content/image/table.png" style="width:40.0%"></p>
-<p>Mais si vous avez <code>200</code> personnes à compter ?…</p>
+</div><div class="column fragment red bold large" style="width:60%;">
+<p><img data-src="content/image/table.png" style="width:60.0%"></p>
+<p>Mais si vous avez</p>
+<p><code>200</code> personnes à compter ?…</p>
 </div></div>
 </section>
-<section id="la-fonction" class="slide level2 conclusion hcenter">
-<h2>La fonction</h2>
+<section id="on-pourrait-faire" class="slide level2 center">
+<h2>On pourrait faire</h2>
+<p><br></p>
+<div class="wrap-text">
+<p>=SUM(IF(<span class="blue">Alice=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Bob=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Chloé=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">David=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Emma=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Francis=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Gabriel=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Hugo=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Inès=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Julie=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Karim=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Léa=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Mehdi=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Nina=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Oscar=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Paul=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Quentin=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Romane=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Sarah=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Thomas=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Ulysse=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Valentine=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Walid=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Xavier=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Yasmine=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Zoé=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Antoine=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Clara=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Lucas=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Manon=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Nathan=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Océane=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Raphaël=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Sofia=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Théo=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Amélie=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Bastien=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Camille=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Damien=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Émilie=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Farid=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Gaëlle=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Hamza=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Iris=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Jules=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Louise=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Maxime=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Nora=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Simon=“A”</span>;<span class="green">1</span>;<span class="red">0</span>);IF(<span class="blue">Victor=“A”</span>;<span class="green">1</span>;<span class="red">0</span>); …)</p>
+</div>
+<p><br></p>
+<p><span class="Large">X 200</span></p>
+</section>
+<section id="ou-bien-utiliser" class="slide level2 conclusion hcenter">
+<h2>Ou bien utiliser</h2>
+<p><br></p>
+<p>la fonction</p>
 <p><span class="big_title Large">COUNTIF</span></p>
 <p><br><br></p>
-<div class="fragment Large blue">
-<p>=<strong>COUNTIF</strong>(plage <strong>;</strong> critère)</p>
+<div class="fragment Large">
+<p>=<strong>COUNTIF</strong>(<span class="orange">plage</span> <strong>;</strong> <span class="blue">critère</span>)</p>
 </div>
 <p><br><br></p>
 <div class="fragment">
-<p>Le fera pour vous.</p>
+<p>C’est un peu plus simple</p>
 </div>
 </section>
 <section id="section-11" class="slide level2 hcenter">
@@ -820,32 +860,36 @@
 </tbody>
 </table>
 <p><br></p>
-<div class="blue Large">
-<p>=<strong>COUNTIF</strong>(B2:B11 <strong>;</strong> “A”)</p>
+<div class="fragment">
+<div class="Large">
+<p>=<strong>COUNTIF</strong>(<span class="orange">B2:B11</span> <strong>;</strong> <span class="blue">“A”</span>)</p>
 </div>
+<p><br></p>
 <div class="green">
 <p><span class="blue">B2:B11</span> <span class="glyph arrow" style="font-size:1.2em;"></span> où chercher</p>
 <p><span class="blue">“A”</span> <span class="glyph arrow" style="font-size:1.2em;"></span> quoi compter</p>
+</div>
 </div>
 </section>
 <section id="exemples" class="slide level2">
 <h2>Exemples</h2>
 <p><br><br></p>
-<div class="blue">
-<p>=<strong>COUNTIF</strong>(B2:B11<strong>;</strong>”A”)</p>
+<div class="Large">
+<p>=<strong>COUNTIF</strong>(<span class="orange">B:B</span> <strong>;</strong> <span class="blue">“A”</span>)</p>
 <p><br></p>
-<p>=<strong>COUNTIF</strong>(C2:C11<strong>;</strong>”&gt;=10”)</p>
+<p>=<strong>COUNTIF</strong>(<span class="orange">C2:C11</span> <strong>;</strong> <span class="blue">“&gt;=10”</span>)</p>
 <p><br></p>
-<p>=<strong>COUNTIF</strong>(D2:D11<strong>;</strong>TRUE)</p>
+<p>=<strong>COUNTIF</strong>(<span class="orange">D2:D11</span> <strong>;</strong> <span class="blue">TRUE</span>)</p>
 </div>
 </section>
-<section id="section-12" class="slide level2 conclusion">
+<section id="section-12" class="slide level2 conclusion center">
 <h2></h2>
 <div class="Large green">
-<p><strong>COUNTIF</strong></p>
-<p>permet de répondre</p>
-<p>à une question</p>
-<p>de comptage.</p>
+<p><strong><code>COUNTIF</code></strong></p>
+<p><br></p>
+<p>permet de trouver</p>
+<p>combien <code>COUNT</code> d’éléments</p>
+<p>correspondent à une condition <code>IF</code></p>
 </div>
 </section>
 <section id="que-produit-cette-formule-1" class="slide level2 quiz">
@@ -869,11 +913,11 @@
 <section id="bloc-3" class="slide level2 bloc" data-name="Bloc 3">
 <h2>BLOC 3</h2>
 </section>
-<section id="section-13" class="slide level2 slide_black" data-background-color="#000000">
+<section id="section-13" class="slide level2 slide_black center" data-background-color="#000000">
 <h2></h2>
-<p><span class="greenneon big_title r-fit-text">Level 3</span></p>
-<div class="fragment">
-<p>Quelle est la moyenne des admis ?</p>
+<p><span class="greenneon big_title r-fit-text">RETROUVER UNE INFORMATION</span></p>
+<div class="fragment LARGE">
+<p>La fonction VLOOKUP (🧐)</p>
 </div>
 </section>
 <section id="bob" class="slide level2 question">
@@ -931,10 +975,33 @@
 </div><div class="column" style="width:50%;">
 <p><span class="HUGE orange">Et là ?</span></p>
 <p><br><br><br><br></p>
-<div class="fragment">
-<p>Un ordinateur ne lit pas un tableau comme nous. Il a besoin qu’on lui dise <code>quoi chercher</code>.</p>
+<div class="fragment Large">
+<p><code>Ctrl+F</code> : “Bob”.</p>
 </div>
 </div></div>
+</section>
+<section id="section-16" class="slide level2 center error LARGE bold">
+<h2></h2>
+<p>Mais si tous les étudiants</p>
+<p>demandent leur note ?</p>
+<p>😭</p>
+<div class="fragment spawn">
+<p><code>Ctrl+F</code></p>
+</div>
+</section>
+<section id="ou-bien-utiliser-1" class="slide level2 conclusion hcenter">
+<h2>Ou bien utiliser</h2>
+<p><br></p>
+<p>la fonction</p>
+<p><span class="big_title Large">VLOOKUP</span></p>
+<p><br><br></p>
+<div class="fragment Large">
+<p>=<strong>VLOOKUP</strong>(<span class="orange">clé</span> ; <span class="purple">zone_de_recherche</span> ; <span class="yellow">colonne_à_renvoyer</span> ; 0)</p>
+</div>
+<p><br><br></p>
+<div class="fragment">
+<p>C’est un peu plus simple</p>
+</div>
 </section>
 <section id="on-peut-avoir-besoin-de-rechercher" class="slide level2">
 <h2>On peut avoir besoin de rechercher</h2>
@@ -944,58 +1011,46 @@
 <p><br></p>
 <p>Code postal <span class="glyph arrow" style="font-size:1.2em;"></span> une ville</p>
 <p><br></p>
-<p>Coktail <span class="glyph arrow" style="font-size:1.2em;"></span> ses ingrédients</p>
-</div>
-</section>
-<section id="la-fonction-1" class="slide level2 conclusion hcenter">
-<h2>La fonction</h2>
-<p><span class="big_title Large">VLOOKUP</span></p>
-<p><br></p>
-<div class="fragment Large blue">
-<p>=<strong>VLOOKUP</strong>(clé ; tableau ; colonne ; …)</p>
-</div>
-<p><br></p>
-<div class="fragment">
-<p>Le fera pour vous.</p>
+<p>Cocktail <span class="glyph arrow" style="font-size:1.2em;"></span> ses ingrédients</p>
 </div>
 </section>
 <section id="exemple-3" class="slide level2">
 <h2>Exemple</h2>
 <p><br></p>
-<div class="blue Large">
-<p>=<strong>VLOOKUP</strong>(“Bob”<strong>;</strong>A2:C11<strong>;</strong>3<strong>;</strong>0)</p>
+<div class="Large">
+<p>=<strong>VLOOKUP</strong>(<span class="orange">“Bob”</span> ; <span class="purple">A2:C11</span> ; <span class="yellow">3</span> ; 0)</p>
 </div>
 <p><br><br></p>
-<div class="blue">
-<p>“Bob” <span class="glyph arrow" style="font-size:1.2em;"></span> <strong>ce que l’on cherche</strong></p>
-<p>A2:C11 <span class="glyph arrow" style="font-size:1.2em;"></span> <strong>où chercher</strong></p>
-<p>3 <span class="glyph arrow" style="font-size:1.2em;"></span> <strong>quelle colonne renvoyer</strong></p>
-<p>0 <span class="glyph arrow" style="font-size:1.2em;"></span> <strong>correspondance exacte</strong></p>
+<div class="large blue">
+<p><span class="orange">“Bob”</span> <span class="glyph arrow" style="font-size:1.2em;"></span> ce que l’on cherche</p>
+<p><span class="purple">A2:C11</span> <span class="glyph arrow" style="font-size:1.2em;"></span> où chercher</p>
+<p><span class="yellow">3</span> <span class="glyph arrow" style="font-size:1.2em;"></span> quelle colonne renvoyer</p>
+<p><span class="white">0</span> <span class="glyph arrow" style="font-size:1.2em;"></span> correspondance exacte</p>
 </div>
 </section>
 <section id="exemples-1" class="slide level2">
 <h2>Exemples</h2>
 <p><br><br></p>
-<div class="blue large">
-<p>=<strong>VLOOKUP</strong>(“Alice”<strong>;</strong>A2:C11<strong>;</strong>2<strong>;</strong>0)</p>
+<div class="large">
+<p>=<strong>VLOOKUP</strong>(<span class="orange">“Alice”</span> ; <span class="purple">A2:C11</span> ; <span class="yellow">2</span> ; 0)</p>
 <p><br></p>
-<p>=<strong>VLOOKUP</strong>(“David”<strong>;</strong>A2:C11<strong>;</strong>3<strong>;</strong>0)</p>
+<p>=<strong>VLOOKUP</strong>(<span class="orange">“David”</span> ; <span class="purple">A2:C11</span> ; <span class="yellow">3</span> ; 0)</p>
 <p><br></p>
-<p>=<strong>VLOOKUP</strong>(“Chloé”<strong>;</strong>A2:C11<strong>;</strong>2<strong>;</strong>0)</p>
+<p>=<strong>VLOOKUP</strong>(<span class="orange">“Chloé”</span> ; <span class="purple">A2:C11</span> ; <span class="yellow">2</span> ; 0)</p>
 </div>
 </section>
-<section id="section-16" class="slide level2 conclusion">
+<section id="section-17" class="slide level2 conclusion center">
 <h2></h2>
 <div class="Large green">
 <p><strong>VLOOKUP</strong></p>
-<p>permet de retrouver</p>
-<p>une information</p>
+<p><br></p>
+<p>permet de retrouver une information</p>
 <p>à partir d’une autre.</p>
 </div>
 </section>
 <section id="que-cherche-cette-formule" class="slide level2 quiz">
 <h2>Que cherche cette formule ?</h2>
-<p>=VLOOKUP(“Bob”;A2:C11;3;0)</p>
+<p>=VLOOKUP(<span class="orange">“Bob”</span>;<span class="purple">A2:C11</span>;<span class="yellow">3</span>;0)</p>
 <p><span class="smallsize"><code>A.</code></span> <span class="glyph"> </span> Alice</p>
 <p><span class="smallsize"><code>B.</code></span> <span class="glyph"> </span> Bob</p>
 <p><span class="smallsize"><code>C.</code></span> <span class="glyph"> </span> La colonne 3</p>
@@ -1003,7 +1058,7 @@
 </section>
 <section id="que-renvoie-cette-formule" class="slide level2 quiz">
 <h2>Que renvoie cette formule ?</h2>
-<p>=VLOOKUP(“Alice”;A2:C11;2;0)</p>
+<p>=VLOOKUP(<span class="orange">“Alice”</span>;<span class="purple">A2:C11</span>;<span class="yellow">2</span>;0)</p>
 <p><span class="smallsize"><code>A.</code></span> <span class="glyph"> </span> Alice</p>
 <p><span class="smallsize"><code>B.</code></span> <span class="glyph"> </span> A</p>
 <p><span class="smallsize"><code>C.</code></span> <span class="glyph"> </span> 14</p>
@@ -1014,14 +1069,14 @@
 <section id="bloc-4" class="slide level2 bloc" data-name="Bloc 4">
 <h2>BLOC 4</h2>
 </section>
-<section id="section-17" class="slide level2 slide_black" data-background-color="#000000">
+<section id="section-18" class="slide level2 slide_black center" data-background-color="#000000">
 <h2></h2>
-<p><span class="greenneon big_title r-fit-text">Level 4</span></p>
-<div class="fragment">
-<p>Quel groupe obtient les meilleurs résultats ?</p>
+<p><span class="greenneon big_title r-fit-text">SYNTHÉTISER DES DONNÉES</span></p>
+<div class="fragment LARGE">
+<p>Le tableau croisé dynamique (🤯)</p>
 </div>
 </section>
-<section id="section-18" class="slide level2 hcenter">
+<section id="section-19" class="slide level2 hcenter">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1095,7 +1150,7 @@
 </div>
 </div></div>
 </section>
-<section id="section-19" class="slide level2 hcenter">
+<section id="section-20" class="slide level2 hcenter">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1152,47 +1207,47 @@
 <p><span class="large green">Maintenant</span></p>
 <p><br></p>
 <div class="fragment">
-<p><span class="large orange">Quel groupe obtient les meilleurs résultats ?</span></p>
+<p><span class="Large">Quel groupe obtient les meilleurs résultats ?</span></p>
 </div>
 <p><br></p>
 <div class="fragment">
 <p>On pourrait faire</p>
-<p>=<span class="blue">AVERAGE</span>(<span class="blue">IF</span>(<span>$</span>B<span>$</span>2:<span>$</span>B<span>$</span>100=“a”;<span class="blue">VLOOKUP</span>(<span>$</span>A<span>$</span>2:<span>$</span>A<span>$</span>100;<span>$</span>A<span>$</span>2:<span>$</span>D<span>$</span>100;<span class="blue">MATCH</span>(“note”;<span>$</span>A<span>$</span>1:<span>$</span>D<span>$</span>1;0);FALSE)))</p>
+<p>=<span class="blue">AVERAGE</span>(<span class="blue">IF</span>(<span class="blue"><span>$</span>B<span>$</span>2:<span>$</span>B<span>$</span>100=“a”</span>;<span class="green"><span class="blue">VLOOKUP</span>(<span class="orange"><span>$</span>A<span>$</span>2:<span>$</span>A<span>$</span>100</span>;<span class="purple"><span>$</span>A<span>$</span>2:<span>$</span>D<span>$</span>100</span>;<span class="yellow">MATCH(“note”;<span>$</span>A<span>$</span>1:<span>$</span>D<span>$</span>1;0)</span>;FALSE)</span>;<span class="red">FALSE</span>))</p>
 </div>
 <p><br></p>
-<div class="fragment smallsize red">
-<p>Mais je trouve ça un peu compliqué…</p>
+<div class="fragment Large red">
+<p>Mais c’est un peu compliqué…</p>
 </div>
 </div></div>
 </section>
 <section id="et-si-je-voulais-aussi-savoir" class="slide level2">
 <h2>Et si je voulais aussi savoir :</h2>
-<p><br><br></p>
-<div class="blue large">
+<p><br></p>
+<div class="blue Large">
 <ul>
-<li class="fragment">combien d’admis ?</li>
-<li class="fragment">combien d’ajournés ?</li>
-<li class="fragment">combien de présents ?</li>
-<li class="fragment">combien d’étudiants par groupe ?</li>
-<li class="fragment">la meilleure note ?</li>
-<li class="fragment">la pire note ?</li>
+<li>combien d’admis ?</li>
+<li>combien d’ajournés ?</li>
+<li>combien de présents ?</li>
+<li>combien d’étudiants par groupe ?</li>
+<li>la meilleure note ?</li>
+<li>la pire note ?</li>
 </ul>
 </div>
 </section>
 <section id="et-encore" class="slide level2">
 <h2>Et encore :</h2>
-<p><br><br></p>
-<div class="blue large">
+<p><br></p>
+<div class="blue Large">
 <ul>
-<li class="fragment">moyenne par groupe</li>
-<li class="fragment">moyenne des présents</li>
-<li class="fragment">moyenne des admis</li>
-<li class="fragment">moyenne des présents du groupe A</li>
-<li class="fragment">…</li>
+<li>moyenne par groupe</li>
+<li>moyenne des présents</li>
+<li>moyenne des admis</li>
+<li>moyenne des présents du groupe A</li>
+<li>…</li>
 </ul>
 </div>
 </section>
-<section id="section-20" class="slide level2 conclusion hcenter">
+<section id="section-21" class="slide level2 conclusion hcenter">
 <h2></h2>
 <p><span class="HUGE">😵</span></p>
 <p><br></p>
@@ -1210,7 +1265,7 @@
 <p>autre chose.</p>
 </div>
 </section>
-<section id="section-21" class="slide level2 conclusion">
+<section id="section-22" class="slide level2 conclusion">
 <h2></h2>
 <div class="r-fit-text big_title">
 <p>Le <span class="blue fragment confetti" data-fragment-index="1">tableau</span></p>
@@ -1219,7 +1274,7 @@
 <p>croisé <span class="blue">dynamique</span></p>
 </div>
 </section>
-<section id="section-22" class="slide level2 conclusion hcenter">
+<section id="section-23" class="slide level2 conclusion hcenter">
 <h2><span class="LARGE">🤨</span></h2>
 <p><br><br></p>
 <div class="fragment Large">
@@ -1232,7 +1287,7 @@
 <div class="Large">
 <p><span class="bold fragment">C’est juste les données de départ</span></p>
 <p><br></p>
-<p><span class="fragment">qu’on restructure dynamiquement</span></p>
+<p><span class="fragment">qu’on restructure <code>dynamiquement</code></span></p>
 <p><br></p>
 <p><span class="bold fragment">dans un tableau</span></p>
 </div>
@@ -1340,11 +1395,11 @@
 <p><br><br></p>
 <div class="blue large">
 <ul>
-<li class="fragment">regrouper des observations</li>
-<li class="fragment">compter des éléments</li>
-<li class="fragment">calculer une somme</li>
-<li class="fragment">calculer une moyenne</li>
-<li class="fragment">comparer plusieurs catégories</li>
+<li>regrouper des observations</li>
+<li>compter des éléments</li>
+<li>calculer une somme</li>
+<li>calculer une moyenne</li>
+<li>comparer plusieurs catégories</li>
 </ul>
 </div>
 </section>
@@ -1368,10 +1423,10 @@
 </div>
 <p><br></p>
 <ul>
-<li class="fragment">une variable pour les lignes</li>
-<li class="fragment">éventuellement une variable pour les colonnes</li>
-<li class="fragment">une donnée à résumer</li>
-<li class="fragment">une opération à appliquer</li>
+<li>une variable pour les lignes</li>
+<li>éventuellement une variable pour les colonnes</li>
+<li>une donnée à résumer</li>
+<li>une opération à appliquer</li>
 </ul>
 </section>
 <section id="pour-notre-question" class="slide level2">
@@ -1483,10 +1538,10 @@
 </div>
 <p><br></p>
 <ul>
-<li class="fragment">changer les variables</li>
-<li class="fragment">changer l’opération</li>
-<li class="fragment">ajouter ou retirer un critère</li>
-<li class="fragment">produire une autre synthèse :::</li>
+<li>changer les variables</li>
+<li>changer l’opération</li>
+<li>ajouter ou retirer un critère</li>
+<li>produire une autre synthèse :::</li>
 </ul>
 </section>
 <section id="démonstration" class="slide level2 good Large">
@@ -1554,7 +1609,7 @@
 <p>On ne peut pas encore expliquer pourquoi.</p>
 </div>
 </section>
-<section id="section-23" class="slide level2 conclusion">
+<section id="section-24" class="slide level2 conclusion">
 <h2></h2>
 <div class="LARGE green">
 <p>Un tableau croisé dynamique</p>
@@ -1656,7 +1711,7 @@
 <p>La formule vient après.</p>
 </div>
 </section>
-<section id="section-24" class="slide level2 conclusion">
+<section id="section-25" class="slide level2 conclusion">
 <h2></h2>
 <p><br></p>
 <p>on n’utilise plus seulement le tableur</p>
@@ -1665,14 +1720,6 @@
 <p>on l’utilise aussi</p>
 <p>pour analyser</p>
 </section>
-<section id="section-25" class="slide level2 hcenter">
-<h2></h2>
-<p><br></p>
-<div class="fragment green Large">
-<p>Un nouvel étage est franchi.</p>
-</div>
-
-<img data-src="content/image/pyramide.png" style="width:80.0%" class="r-stretch"></section>
 <section id="la-prochaine-fois" class="slide level2">
 <h2>La prochaine fois</h2>
 <div class="Large">
@@ -1710,6 +1757,8 @@
   <script src="index_files/libs/revealjs/plugin/reveal-attribution/attribution.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-quiz/quiz.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="index_files/libs/revealjs/plugin/terminal/easter-eggs.js"></script>
+  <script src="index_files/libs/revealjs/plugin/terminal/terminal.js"></script>
   <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1905,13 +1954,43 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Chrono, Simplemenu, RevealLeaderline, RevealAttribution, RevealQuiz, RevealPointer, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Chrono, Simplemenu, RevealLeaderline, RevealAttribution, RevealQuiz, RevealPointer, Terminal, QuartoSupport,
 
           RevealMath,
           RevealNotes,
           RevealSearch,
           RevealZoom
         ]
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const root = document.querySelector(".reveal .slides");
+        if (!root || typeof twemoji === "undefined") return;
+
+        const excluded = new Set(["CODE", "PRE", "SCRIPT", "STYLE", "TEXTAREA"]);
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+          const node = walker.currentNode;
+          if (!excluded.has(node.parentElement?.tagName)) textNodes.push(node);
+        }
+
+        for (const node of textNodes) {
+          const html = twemoji.parse(node.data, {
+            base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/",
+            folder: "svg",
+            ext: ".svg",
+            className: "twemoji"
+          });
+
+          if (html === node.data) continue;
+          const template = document.createElement("template");
+          template.innerHTML = html;
+          node.replaceWith(template.content);
+        }
       });
     </script>
     <script type="text/javascript" id="code-annotation-fragments">

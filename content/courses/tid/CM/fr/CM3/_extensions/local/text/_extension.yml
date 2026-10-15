@@ -1,0 +1,9 @@
+title: Text
+version: 0.1.0
+contributes:
+  filters:
+    - text.lua
+  formats:
+    revealjs:
+      include-in-header:
+        - text.html

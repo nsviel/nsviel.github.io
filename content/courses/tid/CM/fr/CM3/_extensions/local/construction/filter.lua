@@ -16,7 +16,8 @@ function Header(el)
   end
 
   local attrs = el.attr.attributes
-  attrs["data-background-interactive"] = "true"
+  attrs["data-background-interactive"] = nil
+  attrs["data-background-iframe-sandbox"] = "allow-scripts"
   attrs["data-state"] = "hide-menubar"
   attrs["data-background-iframe"] = "_extensions/local/construction/index.html"
 

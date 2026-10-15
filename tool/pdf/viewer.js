@@ -566,6 +566,18 @@
   });
   attachDropTarget(reader);
   window.addEventListener("dragend", () => reader.classList.remove("is-dragging"));
+
+  const handleViewerLoaded = (event) => {
+    if (event.detail?.source !== frame.contentWindow) {
+      return;
+    }
+
+    document.removeEventListener("webviewerloaded", handleViewerLoaded);
+    buildCourseToolbar();
+    applyPdfTheme();
+  };
+
+  document.addEventListener("webviewerloaded", handleViewerLoaded);
   frame.addEventListener("load", () => {
     buildCourseToolbar();
     applyPdfTheme();
