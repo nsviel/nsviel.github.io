@@ -5,10 +5,14 @@ import * as THREE from "three";
 export function add_glyph(scene) {
     //---------------
 
-    const grid = add_grid(scene);
-    const axes = add_axes(scene);
+    const helpers = new THREE.Group();
+    helpers.name = "engine-helpers";
+    add_grid(helpers);
+    add_axes(helpers);
+    scene.add(helpers);
 
     //---------------
+    return helpers;
 }
 
 // Subfunction

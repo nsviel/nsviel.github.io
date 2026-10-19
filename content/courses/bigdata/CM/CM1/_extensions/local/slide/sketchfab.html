@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .frame {
+      width: 100vw;
+      height: 100vh;
+      border: 0;
+      display: block;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+  <iframe
+    id="sketchfab-frame"
+    class="frame"
+    title="Sketchfab viewer"
+    frameborder="0"
+    allowfullscreen
+    mozallowfullscreen="true"
+    webkitallowfullscreen="true"
+    allow="autoplay; fullscreen; xr-spatial-tracking"
+    xr-spatial-tracking
+    execution-while-out-of-viewport
+    execution-while-not-rendered
+    web-share
+  ></iframe>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const src = params.get('src');
+
+    if (src) {
+      document.getElementById('sketchfab-frame').src = src;
+    }
+  </script>
+</body>
+</html>

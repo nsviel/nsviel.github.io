@@ -16,7 +16,7 @@ reveal .slides section { position: relative; }
   pointer-events: auto; 
 }
 .chrono canvas {
-  width: 150%;
+  width: 200%;
   height: auto;
   background: #00000000;
   border: none;

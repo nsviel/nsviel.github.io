@@ -1,0 +1,11 @@
+contributes:
+  filters:
+    - background.lua
+    - image.lua
+    - video.lua
+    - youtube.lua
+    - website.lua
+    - html.lua
+    - iframe.lua
+    - iscene.lua
+    - sketchfab.lua

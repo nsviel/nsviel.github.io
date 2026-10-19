@@ -3,12 +3,12 @@ import { add_torus } from "./primitive.js";
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import { PLYLoader } from "three/addons/loaders/PLYLoader.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
+import { MeshoptDecoder } from "three/addons/libs/meshopt_decoder.module.js";
 
 
 // Main
 export async function load_entity(scene) {
-    //---------------
-
     const url = resolve_url();
     const format = get_format(url);
 
@@ -31,46 +31,34 @@ export async function load_entity(scene) {
     }
 
     scene.add(entity);
-
-    //---------------
     return entity;
 }
 
-//Subfunction
+// Subfunction
 function resolve_url() {
-    //---------------
-
     const params = new URLSearchParams(window.location.search);
     const objPath = params.get("path");
 
-    // Si pas d'objet → fallback torus
     if (!objPath) {
         return "";
     }
 
-    // Résolution du chemin relatif au document parent (slides)
     const base = (window.parent && window.parent.location)
         ? window.parent.location.href
         : window.location.href;
 
-    const url = new URL(objPath, base).toString();
-
-    //---------------
-    return url;
+    return new URL(objPath, base).toString();
 }
+
 function get_format(url) {
-    //---------------
-
-    const clean = url.split("?")[0]; // enlève query params
-
-    //---------------
+    const clean = url.split("?")[0];
     return clean.split(".").pop().toLowerCase();
 }
-async function load_obj(url) {
-    // -----------------------------
 
+async function load_obj(url) {
     const loader = new OBJLoader();
     const obj = await loader.loadAsync(url);
+
     obj.traverse((child) => {
         if (child.isMesh) {
             child.castShadow = true;
@@ -78,24 +66,19 @@ async function load_obj(url) {
         }
     });
 
-    //---------------
     return obj;
 }
 
 async function load_ply(url) {
-
     const loader = new PLYLoader();
     const geometry = await loader.loadAsync(url);
 
     geometry.computeVertexNormals();
 
-    // ----- INTENSITY → COLOR -----
     if (geometry.hasAttribute("intensity") && !geometry.hasAttribute("color")) {
-
         const intensityAttr = geometry.getAttribute("intensity");
         const count = intensityAttr.count;
 
-        // trouver min/max pour normalisation
         let min = Infinity;
         let max = -Infinity;
 
@@ -106,28 +89,23 @@ async function load_ply(url) {
         }
 
         const range = max - min || 1.0;
-
         const colors = new Float32Array(count * 3);
 
         for (let i = 0; i < count; i++) {
             const v = intensityAttr.getX(i);
-            const n = (v - min) / range; // normalisé 0..1
+            const n = (v - min) / range;
 
-            // grayscale
-            colors[i * 3 + 0] = n/255;
-            colors[i * 3 + 1] = n/255;
-            colors[i * 3 + 2] = n/255;
+            colors[i * 3 + 0] = n;
+            colors[i * 3 + 1] = n;
+            colors[i * 3 + 2] = n;
         }
 
         geometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
     }
 
-    // ----- Création objet -----
-
     let object;
 
     if (geometry.index !== null) {
-
         const material = new THREE.MeshStandardMaterial({
             color: 0xffffff,
             metalness: 0.0,
@@ -138,9 +116,7 @@ async function load_ply(url) {
         object = new THREE.Mesh(geometry, material);
         object.castShadow = true;
         object.receiveShadow = true;
-
     } else {
-
         const material = new THREE.PointsMaterial({
             size: 0.01,
             vertexColors: geometry.hasAttribute("color"),
@@ -153,11 +129,22 @@ async function load_ply(url) {
     return object;
 }
 
-async function load_glb(url) {
-    const loader = new GLTFLoader();
-    const gltf = await loader.loadAsync(url);
 
+async function load_glb(url) {
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath("draco/");
+    dracoLoader.preload();
+
+    const loader = new GLTFLoader();
+    loader.setDRACOLoader(dracoLoader);
+    loader.setMeshoptDecoder(MeshoptDecoder);
+
+    const gltf = await loader.loadAsync(url);
     const object = gltf.scene;
+
+    // glTF is Y-up. Convert it back to Blender's Z-up convention.
+    object.rotation.x = Math.PI / 2;
+    object.updateMatrixWorld(true);
 
     object.traverse((child) => {
         if (child.isMesh) {
@@ -170,5 +157,6 @@ async function load_glb(url) {
         }
     });
 
+    dracoLoader.dispose();
     return object;
 }

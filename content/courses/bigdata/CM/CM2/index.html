@@ -6,16 +6,16 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
 <script src="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
 <link href="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.css" rel="stylesheet">
 <script src="index_files/libs/quarto-contrib/roughnotation-flourish-bridge-1.0.0/flourish-bridge.js"></script>
 <link href="index_files/libs/quarto-contrib/quarto-gradio-1.0.0/quarto-gradio.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.27">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="nsv">
-  <meta name="dcterms.date" content="2026-03-08">
+  <meta name="dcterms.date" content="2026-10-19">
   <title>CM2 - Big Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -23,6 +23,9 @@
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -35,15 +38,15 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-435a69ffe18aceff0a6543168f182b7c.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-6dfbeca396136bdc6b00e9ef4c5f111e.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/chrono/chrono.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/simplemenu/simplemenu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-attribution/attribution.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-quiz/quiz.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/terminal/terminal.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet"><style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -130,7 +133,8 @@
       margin-left: auto;
       margin-right: 0; 
     }
-  </style><script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script>
+  </style><script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script><link rel="stylesheet" href="_extensions/local/text/text.css">
+  <script defer="" src="_extensions/local/text/text.js"></script><link rel="stylesheet" href="_extensions/local/effect/style.css">
   <!-- quarto-confetti-injected -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   <script>
@@ -189,10 +193,11 @@
     <div class="slides">
 
 
-<section id="section" class="slide level2" data-background-image="content/image/astronaut.jpg" data-state="hide-menubar">
+<section id="section" class="slide level2 terminal" data-state="hide-menubar">
 <h2></h2>
-<div class="titlebox topright">
-<p>Introduction au Big Data</p>
+<div class="titlebox topright big_title">
+<p>INTRODUCTION</p>
+<p>BIG DATA</p>
 </div>
 </section>
 <section id="comment-analyser-des-données-réelles-sans-se-perdre-dans-le-code-ni-les-outils" class="slide level2 question" data-state="hide-menubar">
@@ -244,7 +249,7 @@
       }</style></aside>
 <!-- BLOC: Bloc_1 15min -->
 </section>
-<section id="bloc-1" class="slide level2 block" data-name="Bloc 1">
+<section id="bloc-1" class="slide level2 bloc" data-name="Bloc 1">
 <h2>Bloc 1</h2>
 </section>
 <section id="quest-ce-que-faire-une-analyse-de-données" class="slide level2 question">
@@ -268,9 +273,9 @@
 <p>Analyser des données, ce n’est pas :</p>
 <div class="red highlight-last">
 <ul>
-<li class="fragment">appliquer une formule</li>
-<li class="fragment">lancer une commande magique</li>
-<li class="fragment">produire immédiatement un résultat</li>
+<li>appliquer une formule</li>
+<li>lancer une commande magique</li>
+<li>produire immédiatement un résultat</li>
 </ul>
 </div>
 <aside class="notes">
@@ -290,8 +295,7 @@
 <section id="concept-clé" class="slide level2">
 <h2>Concept clé</h2>
 <div class="green">
-<p><strong>Analyser des données, c’est transformer des données brutes<br>
-en informations compréhensibles.</strong></p>
+<p><strong>Analyser des données, c’est transformer des données brutes en informations compréhensibles.</strong></p>
 </div>
 </section>
 <section id="lanalyse-comme-processus" class="slide level2">
@@ -384,11 +388,11 @@ en informations compréhensibles.</strong></p>
 <p>Transformer des données, c’est par exemple :</p>
 <div class="blue">
 <ul>
-<li class="fragment">sélectionner des colonnes</li>
-<li class="fragment">filtrer des lignes</li>
-<li class="fragment">regrouper des valeurs</li>
-<li class="fragment">calculer des statistiques simples</li>
-<li class="fragment">résumer l’information</li>
+<li>sélectionner des colonnes</li>
+<li>filtrer des lignes</li>
+<li>regrouper des valeurs</li>
+<li>calculer des statistiques simples</li>
+<li>résumer l’information</li>
 </ul>
 </div>
 <div class="fragment">
@@ -410,8 +414,7 @@ en informations compréhensibles.</strong></p>
 </section>
 <section id="où-intervient-le-code" class="slide level2">
 <h2>Où intervient le code ?</h2>
-<p>Pour enchaîner ces transformations,<br>
-on a besoin d’un langage.</p>
+<p>Pour enchaîner ces transformations, on a besoin d’un langage.</p>
 <div class="fragment">
 <p>👉 En data science, ce langage est <span class="red"><strong>très</strong></span> souvent <strong>Python</strong>.</p>
 </div>
@@ -435,10 +438,10 @@ on a besoin d’un langage.</p>
 <p>On utilise des <strong>bibliothèques</strong>, c’est-à-dire :</p>
 <div class="blue">
 <ul>
-<li class="fragment">des outils spécialisés</li>
-<li class="fragment">déjà écrits</li>
-<li class="fragment">testés</li>
-<li class="fragment">réutilisables</li>
+<li>des outils spécialisés</li>
+<li>déjà écrits</li>
+<li>testés</li>
+<li>réutilisables</li>
 </ul>
 </div>
 <div class="fragment">
@@ -462,10 +465,10 @@ on a besoin d’un langage.</p>
 <h2>Exemples de bibliothèques (vue d’ensemble)</h2>
 <p>Sans entrer dans le détail :</p>
 <ul>
-<li class="fragment"><span class="blue"><strong>pandas</strong></span> → manipuler des données tabulaires</li>
-<li class="fragment"><span class="blue"><strong>numpy</strong></span> → calculs numériques</li>
-<li class="fragment"><span class="blue"><strong>matplotlib / seaborn</strong></span> → visualisation</li>
-<li class="fragment"><span class="blue"><strong>scikit-learn</strong></span> → modèles simples</li>
+<li><span class="blue"><strong>pandas</strong></span> → manipuler des données tabulaires</li>
+<li><span class="blue"><strong>numpy</strong></span> → calculs numériques</li>
+<li><span class="blue"><strong>matplotlib / seaborn</strong></span> → visualisation</li>
+<li><span class="blue"><strong>scikit-learn</strong></span> → modèles simples</li>
 </ul>
 <blockquote>
 <p>Chaque bibliothèque correspond à un type de transformation.</p>
@@ -479,12 +482,9 @@ on a besoin d’un langage.</p>
 <p>Elle prend plutôt la forme :</p>
 <ul>
 <li>données</li>
-<li>nettoyage<br>
-</li>
-<li>transformation<br>
-</li>
-<li>analyse<br>
-</li>
+<li>nettoyage</li>
+<li>transformation</li>
+<li>analyse</li>
 <li>résultats</li>
 </ul>
 </div>
@@ -507,8 +507,7 @@ on a besoin d’un langage.</p>
 </section>
 <section id="pipeline-définition-simple" class="slide level2">
 <h2>Pipeline (définition simple)</h2>
-<p>Un <strong>pipeline</strong> est une suite d’étapes organisées<br>
-qui transforment des données en résultats.</p>
+<p>Un <strong>pipeline</strong> est une suite d’étapes organisées qui transforment des données en résultats.</p>
 <blockquote>
 <p><strong>Même données + mêmes étapes = mêmes résultats</strong></p>
 </blockquote>
@@ -528,8 +527,7 @@ qui transforment des données en résultats.</p>
 </section>
 <section id="environnement" class="slide level2">
 <h2>Environnement</h2>
-<p>Pour travailler sur ce processus de façon efficace,<br>
-il faut un environnement adapté.</p>
+<p>Pour travailler sur ce processus de façon efficace, il faut un environnement adapté.</p>
 <blockquote>
 <p>C’est le role des notebooks</p>
 </blockquote>
@@ -550,8 +548,7 @@ il faut un environnement adapté.</p>
 <section id="phrase-à-retenir" class="slide level2">
 <h2>Phrase à retenir</h2>
 <blockquote>
-<p><strong>Analyser des données</strong>,<br>
-c’est enchaîner des transformations de manière cohérente</p>
+<p><strong>Analyser des données</strong>, c’est enchaîner des transformations de manière cohérente</p>
 </blockquote>
 <!-- BLOC: Bloc_2 15min --->
 </section>
@@ -568,26 +565,26 @@ c’est enchaîner des transformations de manière cohérente</p>
 <h2>Sans ça</h2>
 <div class="red">
 <ul>
-<li class="fragment">démarrage difficile</li>
-<li class="fragment">peu adapté à l’exploration</li>
-<li class="fragment">débogage lent</li>
-<li class="fragment">rigidité face aux essais / erreurs</li>
+<li>démarrage difficile</li>
+<li>peu adapté à l’exploration</li>
+<li>débogage lent</li>
+<li>rigidité face aux essais / erreurs</li>
 </ul>
 </div>
 </section>
 <section id="notebook-lenvironnement-de-travail-en-data" class="slide level2">
 <h2>Notebook : l’environnement de travail en data</h2>
-
-<img data-src="content/image/jupyter.webp" class="r-stretch"></section>
+<p><img data-src="content/image/jupyter.webp"></p>
+</section>
 <section id="quest-ce-quun-notebook" class="slide level2">
 <h2>Qu’est-ce qu’un notebook ?</h2>
 <p>Un <strong>notebook</strong> est un document interactif qui permet de :</p>
 <div class="green">
 <ul>
-<li class="fragment">écrire du code par étapes</li>
-<li class="fragment">exécuter ce code cellule par cellule</li>
-<li class="fragment">voir immédiatement les résultats</li>
-<li class="fragment">documenter le raisonnement</li>
+<li>écrire du code par étapes</li>
+<li>exécuter ce code cellule par cellule</li>
+<li>voir immédiatement les résultats</li>
+<li>documenter le raisonnement</li>
 </ul>
 </div>
 <blockquote>
@@ -614,24 +611,24 @@ c’est enchaîner des transformations de manière cohérente</p>
 </section>
 <section id="architecture" class="slide level2" data-background-color="#cac9c9">
 <h2>Architecture</h2>
-
-<img data-src="content/image/jupyter_ide_3.svg" class="r-stretch"></section>
+<p><img data-src="content/image/jupyter_ide_3.svg"></p>
+</section>
 <section id="ide-integrated-development-environment" class="slide level2" data-background-color="#cac9c9">
 <h2>IDE (Integrated Development Environment)</h2>
-
-<img data-src="content/image/ide.svg" class="r-stretch"></section>
+<p><img data-src="content/image/ide.svg"></p>
+</section>
 <section id="integrated-development-environment" class="slide level2" data-background-color="#cac9c9">
 <h2>Integrated Development Environment</h2>
-
-<img data-src="content/image/vscode.svg" class="r-stretch"></section>
+<p><img data-src="content/image/vscode.svg"></p>
+</section>
 <section id="integrated-development-environment-1" class="slide level2" data-background-color="#cac9c9">
 <h2>Integrated Development Environment</h2>
-
-<img data-src="content/image/jupyter.svg" class="r-stretch"></section>
+<p><img data-src="content/image/jupyter.svg"></p>
+</section>
 <section id="integrated-development-environment-2" class="slide level2" data-background-color="#cac9c9">
 <h2>Integrated Development Environment</h2>
-
-<img data-src="content/image/jupyter_lab.svg" class="r-stretch"></section>
+<p><img data-src="content/image/jupyter_lab.svg"></p>
+</section>
 <section id="jupyter-ide" class="slide level2">
 <h2>Jupyter IDE</h2>
 <div class="r-fit-text">
@@ -640,21 +637,21 @@ c’est enchaîner des transformations de manière cohérente</p>
 </section>
 <section id="jupyter-notebook" class="slide level2" data-background-color="#cac9c9">
 <h2>Jupyter Notebook</h2>
-
-<img data-src="content/image/jupyter_ide_2.svg" class="r-stretch"></section>
+<p><img data-src="content/image/jupyter_ide_2.svg"></p>
+</section>
 <section id="jupyter-lab" class="slide level2" data-background-color="#cac9c9">
 <h2>Jupyter Lab</h2>
-
-<img data-src="content/image/jupyter_ide_1.svg" class="r-stretch"></section>
+<p><img data-src="content/image/jupyter_ide_1.svg"></p>
+</section>
 <section id="analyse-réelle-dans-un-notebook" class="slide level2">
 <h2>Analyse réelle dans un notebook</h2>
 <div class="green">
 <ul>
-<li class="fragment">Charger les données</li>
-<li class="fragment">Regarder les premières lignes</li>
-<li class="fragment">Nettoyer progressivement</li>
-<li class="fragment">Calculer / résumer</li>
-<li class="fragment">Visualiser</li>
+<li>Charger les données</li>
+<li>Regarder les premières lignes</li>
+<li>Nettoyer progressivement</li>
+<li>Calculer / résumer</li>
+<li>Visualiser</li>
 </ul>
 </div>
 </section>
@@ -665,9 +662,9 @@ c’est enchaîner des transformations de manière cohérente</p>
 </div>
 <div class="blue">
 <ul>
-<li class="fragment">le raisonnement</li>
-<li class="fragment">les essais</li>
-<li class="fragment">les choix intermédiaires</li>
+<li>le raisonnement</li>
+<li>les essais</li>
+<li>les choix intermédiaires</li>
 </ul>
 </div>
 <blockquote>
@@ -679,14 +676,9 @@ c’est enchaîner des transformations de manière cohérente</p>
 </section>
 <section id="un-notebook-cest-loutil-pour-raccourcir-la-boucle-essai-résultat-ajustement." class="slide level2 center">
 <h2>Un notebook, c’est l’outil pour raccourcir la boucle essai → résultat → ajustement.</h2>
-<!-- BLOC: Pause 5min -->
-</section>
-<section id="pause" class="slide level2 block">
-<h2>Pause</h2>
-<p>5min</p>
 <!-- BLOC: bloc 3 (15–18 slides) -->
 </section>
-<section id="bloc-3" class="slide level2 block" data-name="Bloc 3">
+<section id="bloc-3" class="slide level2 bloc" data-name="Bloc 3">
 <h2>Bloc 3</h2>
 </section>
 <section id="avec-quoi-travaille-t-on-concrètement" class="slide level2 question">
@@ -704,9 +696,9 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p>Un <strong>DataFrame</strong>, c’est :</p>
 <div class="blue">
 <ul>
-<li class="fragment">une table</li>
-<li class="fragment">avec des lignes</li>
-<li class="fragment">et des colonnes</li>
+<li>une table</li>
+<li>avec des lignes</li>
+<li>et des colonnes</li>
 </ul>
 </div>
 <div class="fragment">
@@ -943,16 +935,16 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p>Un fichier (CSV, Excel…) :</p>
 <div class="red">
 <ul>
-<li class="fragment">est stocké sur le disque</li>
-<li class="fragment">est passif</li>
+<li>est stocké sur le disque</li>
+<li>est passif</li>
 </ul>
 </div>
 <p>Un DataFrame :</p>
 <div class="green">
 <ul>
-<li class="fragment">vit dans la mémoire du programme</li>
-<li class="fragment">peut être transformé</li>
-<li class="fragment">peut être recalculé</li>
+<li>vit dans la mémoire du programme</li>
+<li>peut être transformé</li>
+<li>peut être recalculé</li>
 </ul>
 </div>
 </section>
@@ -975,8 +967,8 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p>Un DataFrame contient :</p>
 <div class="blue">
 <ul>
-<li class="fragment">des <strong>colonnes</strong> → variables</li>
-<li class="fragment">des <strong>lignes</strong> → observations</li>
+<li>des <strong>colonnes</strong> → variables</li>
+<li>des <strong>lignes</strong> → observations</li>
 </ul>
 </div>
 <div class="fragment">
@@ -988,11 +980,11 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p>Chaque colonne correspond à une information :</p>
 <div class="green">
 <ul>
-<li class="fragment">date</li>
-<li class="fragment">prix</li>
-<li class="fragment">âge</li>
-<li class="fragment">pays</li>
-<li class="fragment">catégorie</li>
+<li>date</li>
+<li>prix</li>
+<li>âge</li>
+<li>pays</li>
+<li>catégorie</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1004,10 +996,10 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p>Chaque ligne représente :</p>
 <div class="blue">
 <ul>
-<li class="fragment">une vente</li>
-<li class="fragment">un client</li>
-<li class="fragment">un événement</li>
-<li class="fragment">une mesure</li>
+<li>une vente</li>
+<li>un client</li>
+<li>un événement</li>
+<li>une mesure</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1019,9 +1011,9 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p>Un DataFrame peut contenir :</p>
 <div class="blue">
 <ul>
-<li class="fragment">100 lignes</li>
-<li class="fragment">10 000 lignes</li>
-<li class="fragment">10 millions de lignes</li>
+<li>100 lignes</li>
+<li>10 000 lignes</li>
+<li>10 millions de lignes</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1043,9 +1035,9 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p>Quand le volume augmente :</p>
 <div class="red">
 <ul>
-<li class="fragment">lenteur</li>
-<li class="fragment">mémoire limitée</li>
-<li class="fragment">calculs coûteux</li>
+<li>lenteur</li>
+<li>mémoire limitée</li>
+<li>calculs coûteux</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1057,9 +1049,9 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p>Avant toute analyse, on fait presque toujours :</p>
 <div class="blue">
 <ul>
-<li class="fragment">afficher les premières lignes</li>
-<li class="fragment">vérifier les colonnes</li>
-<li class="fragment">regarder la taille</li>
+<li>afficher les premières lignes</li>
+<li>vérifier les colonnes</li>
+<li>regarder la taille</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1071,9 +1063,9 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p>Dans la vraie vie, un DataFrame contient souvent :</p>
 <div class="red">
 <ul>
-<li class="fragment">des valeurs manquantes</li>
-<li class="fragment">des erreurs</li>
-<li class="fragment">des formats incohérents</li>
+<li>des valeurs manquantes</li>
+<li>des erreurs</li>
+<li>des formats incohérents</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1085,14 +1077,14 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p>Nettoyer des données, ce n’est pas :</p>
 <div class="red">
 <ul>
-<li class="fragment">modifier la réalité</li>
+<li>modifier la réalité</li>
 </ul>
 </div>
 <p>C’est :</p>
 <div class="green">
 <ul>
-<li class="fragment">rendre les données exploitables</li>
-<li class="fragment">expliciter les choix</li>
+<li>rendre les données exploitables</li>
+<li>expliciter les choix</li>
 </ul>
 </div>
 </section>
@@ -1100,9 +1092,9 @@ c’est enchaîner des transformations de manière cohérente</p>
 <h2>Transformation ≠ analyse</h2>
 <div class="blue">
 <ul>
-<li class="fragment">Nettoyer</li>
-<li class="fragment">Filtrer</li>
-<li class="fragment">Regrouper</li>
+<li>Nettoyer</li>
+<li>Filtrer</li>
+<li>Regrouper</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1117,9 +1109,9 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p>On peut voir le DataFrame comme :</p>
 <div class="green">
 <ul>
-<li class="fragment">une matière brute</li>
-<li class="fragment">que l’on façonne</li>
-<li class="fragment">étape par étape</li>
+<li>une matière brute</li>
+<li>que l’on façonne</li>
+<li>étape par étape</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1132,9 +1124,9 @@ c’est enchaîner des transformations de manière cohérente</p>
 <p>Une analyse, c’est donc :</p>
 </div>
 <ul>
-<li class="fragment">partir d’un DataFrame</li>
-<li class="fragment">appliquer des transformations</li>
-<li class="fragment">produire des résultats</li>
+<li>partir d’un DataFrame</li>
+<li>appliquer des transformations</li>
+<li>produire des résultats</li>
 </ul>
 <div class="fragment">
 <p>👉 C’est exactement ce qu’on appelle un <strong>pipeline</strong></p>
@@ -1143,12 +1135,11 @@ c’est enchaîner des transformations de manière cohérente</p>
 <section id="phrase-à-retenir-1" class="slide level2">
 <h2>Phrase à retenir</h2>
 <blockquote>
-<p><strong>Le DataFrame est l’objet central<br>
-de toute analyse de données en Python.</strong></p>
+<p><strong>Le DataFrame est l’objet central de toute analyse de données en Python.</strong></p>
 </blockquote>
 <!-- BLOC: Bloc 4 15–20min -->
 </section>
-<section id="bloc-4" class="slide level2 block" data-name="Bloc 4">
+<section id="bloc-4" class="slide level2 bloc" data-name="Bloc 4">
 <h2>Bloc 4</h2>
 </section>
 <section id="pourquoi-structurer-une-analyse-en-pipeline" class="slide level2 question">
@@ -1159,9 +1150,9 @@ de toute analyse de données en Python.</strong></p>
 <p>Quand on analyse des données :</p>
 <div class="red">
 <ul>
-<li class="fragment">on fait des allers-retours</li>
-<li class="fragment">on modifie des étapes</li>
-<li class="fragment">on recommence souvent</li>
+<li>on fait des allers-retours</li>
+<li>on modifie des étapes</li>
+<li>on recommence souvent</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1171,9 +1162,7 @@ de toute analyse de données en Python.</strong></p>
 <section id="phrase-à-retenir-2" class="slide level2">
 <h2>Phrase à retenir</h2>
 <blockquote>
-<p><strong>En analyse de données,<br>
-ce n’est pas le pipeline qui compte d’abord,<br>
-mais la question qu’il sert.</strong></p>
+<p><strong>En analyse de données, ce n’est pas le pipeline qui compte d’abord, mais la question qu’il sert.</strong></p>
 </blockquote>
 <!-- BLOC: Conclusion-->
 </section>
@@ -1184,17 +1173,16 @@ mais la question qu’il sert.</strong></p>
 <h2>Ce qu’il faut retenir</h2>
 <p>Aujourd’hui, l’idée centrale est simple :</p>
 <div class="green">
-<p><strong>Une analyse de données, c’est un processus.</strong><br>
-Pas une commande magique.</p>
+<p><strong>Une analyse de données, c’est un processus.</strong> Pas une commande magique.</p>
 </div>
 </section>
 <section id="trois-repères" class="slide level2">
 <h2>Trois repères</h2>
 <div class="blue">
 <ul>
-<li class="fragment"><strong>1.</strong> On part d’une <strong>question</strong></li>
-<li class="fragment"><strong>2.</strong> On enchaîne des <strong>transformations cohérentes</strong></li>
-<li class="fragment"><strong>3.</strong> On structure le tout en <strong>pipeline</strong></li>
+<li><strong>1.</strong> On part d’une <strong>question</strong></li>
+<li><strong>2.</strong> On enchaîne des <strong>transformations cohérentes</strong></li>
+<li><strong>3.</strong> On structure le tout en <strong>pipeline</strong></li>
 </ul>
 </div>
 <div class="fragment">
@@ -1204,9 +1192,7 @@ Pas une commande magique.</p>
 <section id="la-règle-dor" class="slide level2">
 <h2>La règle d’or</h2>
 <blockquote>
-<p><strong>La question guide le pipeline,<br>
-le pipeline guide les transformations,<br>
-les transformations produisent les résultats.</strong></p>
+<p><strong>La question guide le pipeline, le pipeline guide les transformations, les transformations produisent les résultats.</strong></p>
 </blockquote>
 </section>
 <section id="ce-quon-va-faire-ensuite" class="slide level2">
@@ -1214,9 +1200,9 @@ les transformations produisent les résultats.</strong></p>
 <p>Dans la suite du cours, on va :</p>
 <div class="blue">
 <ul>
-<li class="fragment">ouvrir un notebook</li>
-<li class="fragment">charger un premier jeu de données</li>
-<li class="fragment">construire un mini-pipeline (nettoyage → transformation → analyse)</li>
+<li>ouvrir un notebook</li>
+<li>charger un premier jeu de données</li>
+<li>construire un mini-pipeline (nettoyage → transformation → analyse)</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1226,17 +1212,19 @@ les transformations produisent les résultats.</strong></p>
 <section id="réponse-à-la-question-de-départ" class="slide level2">
 <h2>Réponse à la question de départ</h2>
 <blockquote>
-<p><strong>On analyse des données réelles<br>
-en partant d’une question claire,<br>
-en structurant l’analyse en pipeline,<br>
-et en utilisant les outils comme des moyens —<br>
-jamais comme des objectifs.</strong></p>
+<p><strong>On analyse des données réelles en partant d’une question claire, en structurant l’analyse en pipeline, et en utilisant les outils comme des moyens — jamais comme des objectifs.</strong></p>
 </blockquote>
 <div class="fragment">
-<p>👉 <strong>En analyse de données,<br>
-le plus important n’est pas l’outil,<br>
-mais la question que l’on cherche à résoudre.</strong></p>
+<p>👉 <strong>En analyse de données, le plus important n’est pas l’outil, mais la question que l’on cherche à résoudre.</strong></p>
 </div>
+</section>
+<section id="section-2" class="slide level2 terminal" data-state="hide-menubar">
+<h2></h2>
+<div class="titlebox topright big_title">
+<p>C’est tout</p>
+<p>pour aujourd’hui</p>
+</div>
+<!-- /BLOC -->
 
 </section>
     </div>
@@ -1257,8 +1245,9 @@ mais la question que l’on cherche à résoudre.</strong></p>
   <script src="index_files/libs/revealjs/plugin/simplemenu/simplemenu.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-leaderline/reveal-leader-line.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-attribution/attribution.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-quiz/quiz.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="index_files/libs/revealjs/plugin/terminal/easter-eggs.js"></script>
+  <script src="index_files/libs/revealjs/plugin/terminal/terminal.js"></script>
   <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1282,7 +1271,6 @@ mais la question que l’on cherche à résoudre.</strong></p>
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'simplemenu': {"menubarclass":"menubar","menuclass":"menu","activeclass":"active","activeelement":"li","flat":true,"barhtml":{"header":"","footer":"<div class='menubar'><ul class='menu'></ul></div>"},"scale":0.4},
-'quiz': {"checkKey":"c","resetKey":"q","shuffleKey":"t","allowNumberKeys":true,"disableOnCheck":false,"shuffleOptions":true,"defaultCorrect":"","defaultIncorrect":"","includeScore":false,"disableReset":false},
 'pointer': {"key":"p","color":"#12ff00","pointerSize":16,"alwaysVisible":false,"pointsize":20},
 'smaller': false,
  
@@ -1429,9 +1417,9 @@ mais la question que l’on cherche à résoudre.</strong></p>
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1920,
+        width: '100%',
 
-        height: 1080,
+        height: '100%',
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
@@ -1454,13 +1442,43 @@ mais la question que l’on cherche à résoudre.</strong></p>
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Chrono, Simplemenu, RevealLeaderline, RevealAttribution, RevealQuiz, RevealPointer, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Chrono, Simplemenu, RevealLeaderline, RevealAttribution, RevealPointer, Terminal, QuartoSupport,
 
           RevealMath,
           RevealNotes,
           RevealSearch,
           RevealZoom
         ]
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const root = document.querySelector(".reveal .slides");
+        if (!root || typeof twemoji === "undefined") return;
+
+        const excluded = new Set(["CODE", "PRE", "SCRIPT", "STYLE", "TEXTAREA"]);
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+          const node = walker.currentNode;
+          if (!excluded.has(node.parentElement?.tagName)) textNodes.push(node);
+        }
+
+        for (const node of textNodes) {
+          const html = twemoji.parse(node.data, {
+            base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/",
+            folder: "svg",
+            ext: ".svg",
+            className: "twemoji"
+          });
+
+          if (html === node.data) continue;
+          const template = document.createElement("template");
+          template.innerHTML = html;
+          node.replaceWith(template.content);
+        }
       });
     </script>
     <script type="text/javascript" id="code-annotation-fragments">

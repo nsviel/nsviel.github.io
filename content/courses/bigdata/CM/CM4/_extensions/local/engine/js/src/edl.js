@@ -12,9 +12,16 @@ export function create_composer_with_edl(renderer, scene, camera) {
     const edlParam = params.get("edl");
     const enableEDL = (edlParam === "1" || edlParam === "true");
 
+    // Avoid allocating post-processing render targets when EDL is disabled.
+    if (!enableEDL) {
+        return {
+            render: () => renderer.render(scene, camera),
+            setSize: () => {},
+        };
+    }
 
-    // Supersampling léger (augmente si ta machine suit)
-    const SCALE = 1.5;
+    // Native resolution keeps the EDL cost predictable on high-DPI displays.
+    const SCALE = 1.0;
 
     function makeSize() {
         const w = Math.max(1, Math.floor(window.innerWidth * SCALE));
@@ -36,6 +43,7 @@ export function create_composer_with_edl(renderer, scene, camera) {
     rt.depthTexture.type = THREE.UnsignedShortType;
 
     const composer = new EffectComposer(renderer, rt);
+    composer.setPixelRatio(1);
     composer.addPass(new RenderPass(scene, camera));
 
     const edlPass = new ShaderPass(EDLShader);
@@ -51,22 +59,19 @@ export function create_composer_with_edl(renderer, scene, camera) {
 
     composer.addPass(edlPass);
 
-    function onResize() {
+    function setSize() {
         const { w: nw, h: nh } = makeSize();
 
-        rt.setSize(nw, nh);
-        rt.depthTexture.image.width = nw;
-        rt.depthTexture.image.height = nh;
-
         composer.setSize(nw, nh);
-
         edlPass.uniforms.resolution.value.set(nw, nh);
         edlPass.uniforms.cameraNear.value = camera.near;
         edlPass.uniforms.cameraFar.value = camera.far;
     }
 
-    //---------------
-    return composer;
+    return {
+        render: () => composer.render(),
+        setSize,
+    };
 }
 
 // Shader
