@@ -280,18 +280,11 @@
     "text": "Ce cours présente les principales méthodes permettant de reconstruire la géométrie tridimensionnelle d’un objet ou d’une scène à partir de plusieurs images. Il aborde les différentes étapes d’une chaîne de reconstruction, depuis la modélisation des caméras et la mise en correspondance des images jusqu’à la production de nuages de points et de maillages.\nL’objectif est de comprendre les principes géométriques sur lesquels reposent ces méthodes, mais aussi leurs limites face aux erreurs de calibration, aux occultations, aux variations d’éclairage ou aux surfaces difficiles à observer."
   },
   {
-    "objectID": "fr/teaching/reconstruction/index.html#contenu-du-cours",
-    "href": "fr/teaching/reconstruction/index.html#contenu-du-cours",
-    "title": "Reconstruction 3D",
-    "section": "Contenu du cours",
-    "text": "Contenu du cours\n\n\n\nCours\nContenu\n\n\n\n\nCM1\nRegistration\n\n\nCM2\nSurface reconstruction\n\n\nCM3\nSegmentation / Understanding\n\n\nCM4\nLearning-based reconstruction"
-  },
-  {
     "objectID": "fr/teaching/reconstruction/index.html#supports-de-cours",
     "href": "fr/teaching/reconstruction/index.html#supports-de-cours",
     "title": "Reconstruction 3D",
     "section": "Supports de cours",
-    "text": "Supports de cours\n\nCours 1\nCours 2\nCours 3\nCours 4"
+    "text": "Supports de cours\n\n\n\nCours\nContenu\n\n\n\n\nCours 1\nRegistration\n\n\nCours 2\nSurface reconstruction\n\n\nCours 3\nSegmentation / Understanding\n\n\nCours 4\nLearning-based reconstruction"
   },
   {
     "objectID": "fr/teaching/reconstruction/index.html#ateliers",
@@ -378,18 +371,11 @@
     "text": "This course introduces the main methods used to reconstruct the three-dimensional geometry of an object or scene from multiple images. It covers the different stages of a reconstruction pipeline, from camera modeling and image matching to the production of point clouds and meshes.\nThe objective is to understand the geometric principles behind these methods, as well as their limitations when dealing with calibration errors, occlusions, lighting variations, or surfaces that are difficult to observe."
   },
   {
-    "objectID": "en/teaching/reconstruction/index.html#course-content",
-    "href": "en/teaching/reconstruction/index.html#course-content",
-    "title": "3D Reconstruction",
-    "section": "Course content",
-    "text": "Course content\n\n\n\nLecture\nContent\n\n\n\n\nCM1\nRegistration\n\n\nCM2\nSurface reconstruction\n\n\nCM3\nSegmentation / Understanding\n\n\nCM4\nLearning-based reconstruction"
-  },
-  {
     "objectID": "en/teaching/reconstruction/index.html#course-materials",
     "href": "en/teaching/reconstruction/index.html#course-materials",
     "title": "3D Reconstruction",
     "section": "Course materials",
-    "text": "Course materials\n\nLecture 1\nLecture 2\nLecture 3\nLecture 4"
+    "text": "Course materials\n\n\n\nLecture\nContent\n\n\n\n\nLecture 1\nRegistration\n\n\nLecture 2\nSurface reconstruction\n\n\nLecture 3\nSegmentation / Understanding\n\n\nLecture 4\nLearning-based reconstruction"
   },
   {
     "objectID": "en/teaching/reconstruction/index.html#labs",
