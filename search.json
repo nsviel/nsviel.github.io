@@ -35,18 +35,25 @@
     "text": "Course materials\n\nLecture 1\nLecture 2\nLecture 3"
   },
   {
-    "objectID": "en/teaching/syntheseimage/index.html#workshops",
-    "href": "en/teaching/syntheseimage/index.html#workshops",
-    "title": "Inverse Rendering for Image Synthesis (IRIS)",
-    "section": "Workshops",
-    "text": "Workshops\n\nWorkshop 1\nWorkshop 2\nWorkshop 3"
-  },
-  {
     "objectID": "en/teaching/syntheseimage/index.html#practical-sessions",
     "href": "en/teaching/syntheseimage/index.html#practical-sessions",
     "title": "Inverse Rendering for Image Synthesis (IRIS)",
     "section": "Practical sessions",
-    "text": "Practical sessions\n\n\n\nActivity\nTopic\nData\n\n\n\n\nLab 1\nTopic\nData\n\n\nLab 2\nTopic\nData\n\n\nLab 3\nTopic\n—"
+    "text": "Practical sessions\n\n\n\nActivity\nTopic\nData\n\n\n\n\nLab 1\nSynthèse 2D à partir d’images\nData\n\n\nLab 2\nPhotogrammétrie & SfM\nData\n\n\nLab 3\nGaussian Splatting\n—"
+  },
+  {
+    "objectID": "en/teaching/syntheseimage/index.html#project",
+    "href": "en/teaching/syntheseimage/index.html#project",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
+    "section": "Project",
+    "text": "Project\n\nSubject\nWorkshop 1\nWorkshop 2\nWorkshop 3"
+  },
+  {
+    "objectID": "en/teaching/syntheseimage/index.html#projets-réalisés",
+    "href": "en/teaching/syntheseimage/index.html#projets-réalisés",
+    "title": "Inverse Rendering for Image Synthesis (IRIS)",
+    "section": "Projets réalisés",
+    "text": "Projets réalisés\n\n\n\nAnnée\nProjet 1\nProjet 2\nProjet 3\nProjet 4\n\n\n\n\n2026\nTHREEJS\nTHREEJS\nTHREEJS\nTHREEJS"
   },
   {
     "objectID": "en/teaching/gpgpu/index.html",
@@ -140,18 +147,18 @@
     "text": "Supports de cours\n\nCours 1\nCours 2\nCours 3"
   },
   {
-    "objectID": "fr/teaching/syntheseimage/index.html#ateliers",
-    "href": "fr/teaching/syntheseimage/index.html#ateliers",
-    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
-    "section": "Ateliers",
-    "text": "Ateliers\n\nAtelier 1\nAtelier 2\nAtelier 3"
-  },
-  {
     "objectID": "fr/teaching/syntheseimage/index.html#travaux-pratiques",
     "href": "fr/teaching/syntheseimage/index.html#travaux-pratiques",
     "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
     "section": "Travaux pratiques",
     "text": "Travaux pratiques\n\n\n\nActivité\nSujet\nDonnées\n\n\n\n\nTP 1\nSujet\nDonnées\n\n\nTP 2\nSujet\nDonnées\n\n\nTP 3\nSujet\n—"
+  },
+  {
+    "objectID": "fr/teaching/syntheseimage/index.html#projet",
+    "href": "fr/teaching/syntheseimage/index.html#projet",
+    "title": "Synthèse d’Images par Rendu Inverse (SIRI)",
+    "section": "Projet",
+    "text": "Projet\n\nSujet\nAtelier 1\nAtelier 2\nAtelier 3"
   },
   {
     "objectID": "fr/teaching/syntheseimage/index.html#projets-réalisés",
