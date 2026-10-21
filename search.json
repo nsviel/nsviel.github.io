@@ -298,7 +298,7 @@
     "href": "fr/teaching/reconstruction/index.html#ateliers",
     "title": "Reconstruction 3D",
     "section": "Ateliers",
-    "text": "Ateliers\n\n\n\nSujet\nThème\n\n\n\n\nTP 1\nGaussian Splatting"
+    "text": "Ateliers\n\n\n\nSujet\nThème\n\n\n\n\nRapport\n-\n\n\nTP 1\nGaussian Splatting"
   },
   {
     "objectID": "fr/teaching/tid/index.html",
@@ -389,7 +389,14 @@
     "href": "en/teaching/reconstruction/index.html#course-materials",
     "title": "3D Reconstruction",
     "section": "Course materials",
-    "text": "Course materials\n\nLecture 1\nLecture 2"
+    "text": "Course materials\n\nLecture 1\nLecture 2\nLecture 3\nLecture 4"
+  },
+  {
+    "objectID": "en/teaching/reconstruction/index.html#labs",
+    "href": "en/teaching/reconstruction/index.html#labs",
+    "title": "3D Reconstruction",
+    "section": "Labs",
+    "text": "Labs\n\n\n\nSubject\nTheme\n\n\n\n\nRapport\n-\n\n\nTP 1\nGaussian Splatting"
   },
   {
     "objectID": "en/teaching/tid/index.html",
