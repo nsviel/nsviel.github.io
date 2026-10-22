@@ -16,6 +16,30 @@
   text-align: left;
 }
 
+.reveal .slides section.quiz-answer-slide::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 0.22em;
+  background: var(--quiz-primary-color);
+  content: "";
+  pointer-events: none;
+}
+
+/* Keep question and answer content inside a 5% slide gutter. The vertical
+   value is 5% of the 16:9 slide height, expressed against its width. */
+.reveal .slides section.quiz-slide-content {
+  position: absolute;
+  left: 5% !important;
+  right: 5% !important;
+  box-sizing: border-box;
+  width: auto !important;
+  max-width: none;
+  padding: 2.8125% 0 !important;
+}
+
 .reveal .slides section.quiz-slide > h2 {
   width: fit-content;
   margin: 0 0 0.6em;
@@ -30,7 +54,7 @@
 }
 
 .reveal .slides section.quiz-answer-slide > h2 {
-  margin: -0.3em 0 0.35em;
+  margin: 0 0 0.35em;
   padding: 0.12em 0.4em 0.16em;
   background: var(--quiz-primary-color);
   color: #101510;
@@ -39,8 +63,8 @@
 
 .reveal .quiz-progress {
   position: absolute;
-  top: 0.2em;
-  right: 0;
+  top: 0;
+  right: 5% !important;
   z-index: 2;
   margin: 0;
   padding: 0.28em 0.7em;
@@ -67,15 +91,26 @@
 }
 
 .reveal .quiz-answer-content {
-  font-size: 0.9em;
+  font-size: clamp(0.72em, 1.45vw, 0.86em);
 }
 
 .reveal .quiz-slide-content h3 {
+  box-sizing: border-box;
+  max-width: 100%;
   margin: 0 0 0.7em;
   color: inherit;
-  font-size: 1.15em;
+  font-size: 1.05em;
   line-height: 1.18;
+  white-space: normal;
+  overflow-wrap: anywhere;
   text-transform: none;
+}
+
+.reveal .quiz-question-content {
+  top: 15% !important;
+  bottom: 5% !important;
+  height: auto !important;
+  overflow-x: hidden;
 }
 
 .reveal .quiz-answer-content h3 {
@@ -87,10 +122,10 @@
 .reveal .quiz-choices > ul,
 .reveal .quiz-choices > ol {
   display: flex;
-  height: clamp(9em, 48vh, 12em);
+  height: clamp(6em, 32vh, 8em);
   flex-direction: column;
-  gap: var(--quiz-card-gap);
-  margin: 0.7em 0 0;
+  gap: 0.12em;
+  margin: 0.55em 0 0;
   padding: 0;
   list-style: none;
   counter-reset: quiz-choice;
@@ -99,13 +134,14 @@
 .reveal .quiz-choices > ul > li,
 .reveal .quiz-choices > ol > li {
   display: grid;
+  box-sizing: border-box;
   grid-template-columns: 2em minmax(0, 1fr);
   position: relative;
   flex: 1 1 0;
   align-items: center;
-  min-height: 2.5em;
+  min-height: 1.45em;
   margin: 0;
-  padding: 0.55em 2.8em 0.55em 0.7em;
+  padding: 0.08em 2.3em 0.08em 0.6em;
   border: 1px solid var(--quiz-card-border);
   border-left: 0.16em solid var(--quiz-secondary-color);
   border-radius: var(--quiz-card-radius);
@@ -120,8 +156,8 @@
 .reveal .quiz-choices > ul > li::before,
 .reveal .quiz-choices > ol > li::before {
   display: grid;
-  width: 1.45em;
-  height: 1.45em;
+  width: 1.15em;
+  height: 1.15em;
   place-items: center;
   border-radius: 50%;
   background: var(--quiz-secondary-color);
@@ -186,6 +222,41 @@
   font-size: 0.65em;
 }
 
+.reveal .quiz-answer-content > p:has(> br:only-child) {
+  display: none;
+}
+
+.reveal .quiz-answer-content img {
+  max-width: 100%;
+  max-height: 48vh;
+  object-fit: contain;
+}
+
+@media (min-aspect-ratio: 16/10) {
+  .reveal .slides section.quiz-question-slide > h2 {
+    margin-bottom: 0.4em;
+    font-size: 1em;
+  }
+
+  .reveal .quiz-question-content h3 {
+    margin-bottom: 0.5em;
+    font-size: 0.84em;
+    line-height: 1.12;
+  }
+
+  .reveal .quiz-choices > ul,
+  .reveal .quiz-choices > ol {
+    height: clamp(6em, 32vh, 8em);
+  }
+
+  .reveal .quiz-choices > ul > li,
+  .reveal .quiz-choices > ol > li {
+    min-height: 1.45em;
+    padding: 0.08em 2.3em 0.08em 0.6em;
+    font-size: 0.62em;
+  }
+}
+
 .reveal .quiz-answer-content pre,
 .reveal .quiz-answer-content .cell-output {
   max-height: 45vh;
@@ -241,9 +312,23 @@
     display: block;
   }
 
-  .reveal .quiz-slide .column {
+.reveal .quiz-slide .column {
     width: 100% !important;
   }
+}
+
+/* Keep typography consistent across quiz titles, prompts, choices, and answers. */
+.reveal .slides section.quiz-slide {
+  font-size: 0.8em;
+}
+
+.reveal .slides section.quiz-slide * {
+  font-size: 1em !important;
+}
+
+.reveal .slides section.quiz-slide li::before,
+.reveal .slides section.quiz-slide .quiz-correct-marker {
+  font-size: 1em !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

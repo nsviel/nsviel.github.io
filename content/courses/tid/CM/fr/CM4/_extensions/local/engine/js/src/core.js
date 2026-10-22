@@ -9,6 +9,7 @@ import { add_control } from "./control.js";
 import { add_event } from "./event.js";
 import { add_object } from "./scene.js";
 import { run_loop } from "./loop.js";
+import { add_overlay } from "./ui.js";
 
 
 
@@ -26,17 +27,23 @@ export async function engine() {
     // Elements
     const camera = add_camera(renderer);
     const controls = add_control(scene, renderer, camera);
-    glyph.add_glyph(scene);
-    add_event(renderer, camera);
+    const visualHelpers = glyph.add_glyph(scene);
 
     // Scene
     add_light(scene);
     const entity = await loader.load_entity(scene);
-    process.processing_entity(controls, entity) 
+    process.processing_entity(camera, controls, entity)
 
-    // Loop
-    const composer = edl.create_composer_with_edl(renderer, scene, camera);
-    run_loop(composer, camera, scene, entity, controls);
+    // Rendering
+    const renderPipeline = edl.create_composer_with_edl(renderer, scene, camera);
+    add_event(renderer, camera, renderPipeline);
+    const requestRender = run_loop(renderPipeline, controls);
+    add_overlay(
+        [visualHelpers],
+        entity,
+        renderer,
+        requestRender
+    );
 
     //---------------
 }

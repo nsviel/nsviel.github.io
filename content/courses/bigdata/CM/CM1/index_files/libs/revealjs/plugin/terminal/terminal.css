@@ -26,6 +26,15 @@
   user-select: none;
 }
 
+/* Let the live terminal fill the slide; the status panel overlays the right. */
+.reveal .slides section.terminal-inline-host.status-terminal > .terminal-stream {
+  inset: 0;
+  width: auto;
+  padding: clamp(0.8rem, 2vw, 1.5rem);
+  border-radius: 0;
+  background: #000;
+}
+
 .reveal .terminal-line {
   display: grid;
   flex: 0 0 auto;
@@ -96,6 +105,77 @@
   color: #f4f4f4;
 }
 
+.reveal .slides section.status-terminal .terminal-status-panel {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+  inset: 0 0 0 auto;
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.42em;
+  padding: clamp(0.8rem, 2vw, 1.5rem);
+  overflow: hidden;
+  border-radius: 0.8rem;
+  background: #000;
+  color: #e7ebef;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(16px, 2.1vw, 28px);
+  line-height: 1.25;
+  text-align: left;
+}
+
+.reveal .slides section.status-terminal .terminal-status-panel p {
+  margin: 0;
+}
+
+.reveal .slides section.status-terminal .terminal-status-command,
+.reveal .slides section.status-terminal .terminal-status-prompt {
+  color: #92bda9;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.72em;
+}
+
+.reveal .slides section.status-terminal .terminal-status-cursor {
+  animation: terminal-status-cursor-blink 1.6s steps(2, start) infinite;
+}
+
+@keyframes terminal-status-cursor-blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal .slides section.status-terminal .terminal-status-cursor {
+    animation: none;
+  }
+}
+
+.reveal .slides section.status-terminal .terminal-status-command {
+  color: #7e8994;
+}
+
+.reveal .slides section.status-terminal .terminal-status-panel h2 {
+  margin: 0.05em 0 0.05em;
+  color: #e7ebef;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.45em;
+  font-weight: 700;
+  line-height: 1.1;
+  text-shadow: none;
+}
+
+.reveal .slides section.status-terminal .terminal-status-success {
+  color: #92bda9;
+}
+
+.reveal .slides section.status-terminal .terminal-status-next {
+  color: #a8b0b9;
+}
+
 .reveal .slides section.terminal h1,
 .reveal .slides section.terminal h2,
 .reveal .slides section.terminal h3,
@@ -117,7 +197,7 @@
   z-index: 0;
 }
 
-.reveal .slides section.terminal-inline-host > :not(.terminal-stream) {
+.reveal .slides section.terminal-inline-host > :not(.terminal-stream):not(.terminal-status-panel) {
   position: relative;
   z-index: 1;
 }

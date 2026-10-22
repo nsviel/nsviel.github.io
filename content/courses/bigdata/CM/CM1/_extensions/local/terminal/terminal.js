@@ -238,17 +238,25 @@ var Terminal = (function () {
   }
 
   TerminalController.prototype.createLayer = function () {
-    var background = typeof this.deck.getSlideBackground === "function"
-      ? this.deck.getSlideBackground(this.slide)
-      : this.slide.slideBackgroundElement;
     var parent;
 
-    if (background) {
-      background.classList.add("terminal-background");
-      parent = background.querySelector(".slide-background-content") || background;
-    } else {
+    if (this.slide.classList.contains("status-terminal")) {
+      // Keep the status slide's live stream in the slide itself. Reveal may
+      // not have created its background layer yet when this plugin starts.
       this.slide.classList.add("terminal-inline-host");
       parent = this.slide;
+    } else {
+      var background = typeof this.deck.getSlideBackground === "function"
+        ? this.deck.getSlideBackground(this.slide)
+        : this.slide.slideBackgroundElement;
+
+      if (background) {
+        background.classList.add("terminal-background");
+        parent = background.querySelector(".slide-background-content") || background;
+      } else {
+        this.slide.classList.add("terminal-inline-host");
+        parent = this.slide;
+      }
     }
 
     this.layer = document.createElement("div");
@@ -388,10 +396,48 @@ var Terminal = (function () {
     this.controllers = new Map();
     this.generator = new TerminalEventGenerator();
     this.inOverview = false;
+    var initialConfig = deck.getConfig();
+    this.baseSlideSize = {
+      width: Number(initialConfig.width),
+      height: Number(initialConfig.height)
+    };
     this.motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     this.onMotionChange = this.onMotionChange.bind(this);
+    this.fitFrame = null;
+    this.scheduleStatusFit = this.scheduleStatusFit.bind(this);
     this.motionQuery.addEventListener("change", this.onMotionChange);
+    window.addEventListener("resize", this.scheduleStatusFit);
   }
+
+  TerminalManager.prototype.scheduleStatusFit = function () {
+    var self = this;
+    if (this.fitFrame !== null) {
+      cancelAnimationFrame(this.fitFrame);
+    }
+    this.fitFrame = requestAnimationFrame(function () {
+      self.fitFrame = null;
+
+      var slide = self.deck.getCurrentSlide();
+      var viewport = typeof self.deck.getViewportElement === "function"
+        ? self.deck.getViewportElement()
+        : self.deck.getRevealElement();
+      if (!viewport) {
+        return;
+      }
+
+      var isStatusSlide = slide && slide.classList.contains("status-terminal");
+      var width = isStatusSlide ? viewport.clientWidth : self.baseSlideSize.width;
+      var height = isStatusSlide ? viewport.clientHeight : self.baseSlideSize.height;
+      if (!width || !height) {
+        return;
+      }
+
+      var config = self.deck.getConfig();
+      if (Number(config.width) !== width || Number(config.height) !== height) {
+        self.deck.configure({ width: width, height: height });
+      }
+    });
+  };
 
   TerminalManager.prototype.initialize = function () {
     var self = this;
@@ -401,6 +447,7 @@ var Terminal = (function () {
       }
     });
     this.activate(this.deck.getCurrentSlide());
+    this.scheduleStatusFit();
   };
 
   TerminalManager.prototype.activate = function (currentSlide) {
@@ -425,6 +472,11 @@ var Terminal = (function () {
 
   TerminalManager.prototype.destroy = function () {
     this.motionQuery.removeEventListener("change", this.onMotionChange);
+    window.removeEventListener("resize", this.scheduleStatusFit);
+    if (this.fitFrame !== null) {
+      cancelAnimationFrame(this.fitFrame);
+      this.fitFrame = null;
+    }
     this.controllers.forEach(function (controller) { controller.destroy(); });
     this.controllers.clear();
   };
@@ -442,8 +494,16 @@ var Terminal = (function () {
         manager.initialize();
       });
 
+      // Reveal can become ready before this plugin's handler runs. In that
+      // case the event has already passed, leaving status content visible but
+      // never creating its animated terminal stream until a later reload.
+      if (typeof deck.isReady === "function" && deck.isReady()) {
+        manager.initialize();
+      }
+
       deck.on("slidechanged", function (event) {
         manager.activate(event.currentSlide);
+        manager.scheduleStatusFit();
       });
 
       deck.on("overviewshown", function () {

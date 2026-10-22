@@ -1,0 +1,56 @@
+.glitch-line,
+span.glitch {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+  color: inherit;
+}
+
+.glitch-line::before,
+.glitch-line::after,
+span.glitch::before,
+span.glitch::after {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  content: attr(data-text);
+  pointer-events: none;
+  white-space: inherit;
+}
+
+.glitch-line::before,
+span.glitch::before {
+  color: #ff3158;
+  animation: glitch-red 2.8s steps(1, end) infinite;
+}
+
+.glitch-line::after,
+span.glitch::after {
+  color: #00e5ff;
+  animation: glitch-cyan 3.2s steps(1, end) infinite;
+}
+
+@keyframes glitch-red {
+  0%, 89%, 100% { clip-path: inset(50%); transform: translate(0); }
+  90% { clip-path: inset(12% 0 72% 0); transform: translate(-0.045em, -0.015em); }
+  92% { clip-path: inset(58% 0 25% 0); transform: translate(0.06em, 0.01em); }
+  94% { clip-path: inset(34% 0 52% 0); transform: translate(-0.025em, 0); }
+  96% { clip-path: inset(0 0 0 0); transform: translate(0); }
+}
+
+@keyframes glitch-cyan {
+  0%, 91%, 100% { clip-path: inset(50%); transform: translate(0); }
+  92% { clip-path: inset(68% 0 10% 0); transform: translate(0.05em, 0.015em); }
+  94% { clip-path: inset(21% 0 61% 0); transform: translate(-0.055em, 0); }
+  96% { clip-path: inset(46% 0 39% 0); transform: translate(0.025em, -0.01em); }
+  98% { clip-path: inset(0 0 0 0); transform: translate(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glitch-line::before,
+  .glitch-line::after,
+  span.glitch::before,
+  span.glitch::after {
+    animation: none;
+  }
+}
