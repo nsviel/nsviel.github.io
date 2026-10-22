@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
+  <link rel="stylesheet" href="./particle.css">
+
+</head>
+
+<body>
+  <canvas id="webgl"></canvas>
+  <div id="overlay"></div>
+
+  <script>
+    window.addEventListener("keydown", (e) => {
+      const ok =
+        ["ArrowLeft","ArrowRight","ArrowUp","ArrowDown","PageUp","PageDown"].includes(e.key) ||
+        e.code === "Space";
+
+      if (!ok) return;
+
+      e.preventDefault();
+      e.stopPropagation();
+      if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+
+      window.parent.postMessage(
+        { type: "reveal-nav", key: e.key, code: e.code },
+        "*"
+      );
+    }, true);
+
+  console.log("[particle] loaded");
+  </script>
+
+  <script type="module" src="./particle.js"></script>
+</body>
+</html>
+
