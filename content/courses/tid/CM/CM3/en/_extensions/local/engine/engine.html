@@ -10,7 +10,10 @@
 
 <body>
   <canvas id="webgl"></canvas>
-  <div id="overlay"></div>
+  <div id="overlay" role="group" aria-label="Options d’affichage">
+    <label><input id="toggle-helpers" type="checkbox" checked> Grid</label>
+    <label><input id="toggle-wireframe" type="checkbox"> Wireframe</label>
+  </div>
   <script type="module" src="./engine.js"></script>
 </body>
 </html>

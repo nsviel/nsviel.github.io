@@ -21,7 +21,12 @@ function header_class(element)
     -- lvl2 uniquement
     if element.level ~= 2 then return false end
 
-    -- doit contenir la classe "engine"
+    -- Syntaxe compacte : ## {engine=chemin/vers/fichier}
+    if element.attr.attributes["engine"] ~= nil then
+        return true
+    end
+
+    -- Ancienne syntaxe conservée : ## {.engine path="chemin/vers/fichier"}
     for _, c in ipairs(element.attr.classes) do
         if c == "engine" then
             return true
@@ -50,10 +55,12 @@ function add_argument(element)
     local base = "_extensions/local/engine/engine.html"
     local params = {}
 
-    -- ---- OBJ ----
-    local obj = attrs["path"]
+    -- ---- Fichier à ouvrir ----
+    -- Nouvelle syntaxe : {engine=chemin}; ancienne syntaxe : {.engine path=chemin}
+    local obj = attrs["engine"] or attrs["path"]
     if obj ~= nil then
         table.insert(params, "path=" .. obj)
+        attrs["engine"] = nil
         attrs["path"] = nil
     end
 
@@ -64,12 +71,7 @@ function add_argument(element)
         attrs["edl"] = nil
     end
 
-    -- ---- Autres futurs paramètres ici ----
-    -- local grid = attrs["grid"]
-    -- if grid ~= nil then
-    --   table.insert(params, "grid=" .. grid)
-    --   attrs["grid"] = nil
-    -- end
+
 
     -- Construction finale de l'URL
     local iframe = base

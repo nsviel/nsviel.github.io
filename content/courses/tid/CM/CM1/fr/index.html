@@ -6,7 +6,7 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
 <script src="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
 <link href="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.css" rel="stylesheet">
@@ -38,15 +38,15 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-9c1139ee88b199a4ecab6d01fdba5bdb.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-78864653e3e6fd0bce49aa820ed214d7.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/chrono/chrono.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/simplemenu/simplemenu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-attribution/attribution.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-quiz/quiz.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/terminal/terminal.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet"><style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -134,7 +134,9 @@
       margin-right: 0; 
     }
   </style><script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script><link rel="stylesheet" href="_extensions/local/text/text.css">
+  <link rel="stylesheet" href="_extensions/local/text/glitch.css">
   <script defer="" src="_extensions/local/text/text.js"></script>
+  <script defer="" src="_extensions/local/text/spawn.js"></script>
   <!-- quarto-confetti-injected -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   <script>
@@ -193,7 +195,7 @@
     <div class="slides">
 
 
-<section id="section" class="slide level2 matrix" data-state="hide-menubar" data-background-iframe-sandbox="allow-scripts" data-background-iframe="_extensions/local/matrix/matrix.html">
+<section id="section" class="slide level2 matrix" data-state="hide-menubar" data-background-iframe-sandbox="allow-scripts" data-background-iframe="_extensions/local/slide/matrix/matrix.html">
 <h2></h2>
 <p><br><br></p>
 <div class="quarto-layout-panel" data-layout-ncol="2">
@@ -1522,7 +1524,7 @@
 <p>Bienvenue dans le traitement informatique des données.</p>
 </div>
 </section>
-<section id="section-29" class="slide level2 matrix" data-background-iframe-sandbox="allow-scripts" data-state="hide-menubar" data-background-iframe="_extensions/local/matrix/matrix.html">
+<section id="section-29" class="slide level2 matrix" data-background-iframe-sandbox="allow-scripts" data-state="hide-menubar" data-background-iframe="_extensions/local/slide/matrix/matrix.html">
 <h2></h2>
 <p><br><br><br><br></p>
 <p><span class="Large big_title matrix">C’est tout pour aujourd’hui</span></p>
@@ -1546,8 +1548,9 @@
   <script src="index_files/libs/revealjs/plugin/simplemenu/simplemenu.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-leaderline/reveal-leader-line.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-attribution/attribution.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-quiz/quiz.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="index_files/libs/revealjs/plugin/terminal/easter-eggs.js"></script>
+  <script src="index_files/libs/revealjs/plugin/terminal/terminal.js"></script>
   <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1571,7 +1574,6 @@
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'simplemenu': {"menubarclass":"menubar","menuclass":"menu","activeclass":"active","activeelement":"li","flat":true,"barhtml":{"header":"","footer":"<div class='menubar'><ul class='menu'></ul></div>"},"scale":0.4},
-'quiz': {"checkKey":"c","resetKey":"q","shuffleKey":"t","allowNumberKeys":true,"disableOnCheck":false,"shuffleOptions":true,"defaultCorrect":"","defaultIncorrect":"","includeScore":false,"disableReset":false},
 'pointer': {"key":"p","color":"#12ff00","pointerSize":16,"alwaysVisible":false,"pointsize":20},
 'smaller': false,
  
@@ -1723,7 +1725,7 @@
         height: 1080,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.1,
+        margin: 0,
 
         math: {
           mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
@@ -1743,7 +1745,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Chrono, Simplemenu, RevealLeaderline, RevealAttribution, RevealQuiz, RevealPointer, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Chrono, Simplemenu, RevealLeaderline, RevealAttribution, RevealPointer, Terminal, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -1853,6 +1855,41 @@
 
     </script>
 
+    <script>
+    (() => {
+      const fitTextElements = document.querySelectorAll(".r-fit-text");
+
+      const fitToContentWidth = (element) => {
+        const parent = element.parentElement;
+        if (!parent) return;
+
+        const parentStyle = window.getComputedStyle(parent);
+        const horizontalPadding =
+          (parseFloat(parentStyle.paddingLeft) || 0) +
+          (parseFloat(parentStyle.paddingRight) || 0);
+        const availableWidth = parent.clientWidth - horizontalPadding;
+        const contentWidth = element.scrollWidth;
+        const fontSize = parseFloat(window.getComputedStyle(element).fontSize);
+
+        if (availableWidth > 0 && contentWidth > availableWidth && fontSize > 0) {
+          element.style.fontSize = `${fontSize * (availableWidth / contentWidth)}px`;
+        }
+      };
+
+      const fitAllToContentWidth = () => {
+        fitTextElements.forEach(fitToContentWidth);
+      };
+
+      fitTextElements.forEach((element) => {
+        element.addEventListener("fit", () => requestAnimationFrame(() => fitToContentWidth(element)));
+      });
+
+      window.addEventListener("load", fitAllToContentWidth);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(fitAllToContentWidth);
+      }
+    })();
+    </script>
     <script>
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll("iframe[allow]").forEach((f) => {

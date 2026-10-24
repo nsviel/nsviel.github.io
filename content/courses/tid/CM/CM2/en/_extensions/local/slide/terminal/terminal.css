@@ -1,0 +1,149 @@
+.reveal .slide-background.terminal-background,
+.reveal .slide-background.terminal-background .slide-background-content {
+  background-color: #000 !important;
+  background-image: none !important;
+}
+
+.reveal .terminal-stream {
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 1.5rem 2rem;
+  color: rgba(244, 244, 244, 0.68);
+  background: transparent;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: clamp(12px, 1.05vw, 20px);
+  font-variant-ligatures: none;
+  line-height: 1.42;
+  letter-spacing: 0.01em;
+  text-align: left;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Let the live terminal fill the slide; the status panel overlays the right. */
+.reveal .slides section.terminal-inline-host.status-terminal > .terminal-stream {
+  inset: 0;
+  width: auto;
+  padding: clamp(0.8rem, 2vw, 1.5rem);
+  border-radius: 0;
+  background: #000;
+}
+
+.reveal .terminal-line {
+  display: grid;
+  flex: 0 0 auto;
+  grid-template-columns: 13ch 22ch 18ch minmax(24ch, 1fr);
+  column-gap: 2ch;
+  min-width: max-content;
+}
+
+.reveal .terminal-line-new {
+  animation: terminal-line-arrival 120ms ease-out both;
+}
+
+.reveal .terminal-time {
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.reveal .terminal-source {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.reveal .terminal-event {
+  color: rgba(225, 225, 225, 0.68);
+}
+
+.reveal .terminal-value {
+  color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.reveal .terminal-progress-value {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+}
+
+.reveal .terminal-progress-track {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 26ch;
+  height: 0.72em;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.reveal .terminal-progress-fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.76);
+  transition: width 420ms ease-out;
+}
+
+.reveal .terminal-progress-percent {
+  display: inline-block;
+  width: 4ch;
+  color: rgba(255, 255, 255, 0.72);
+  text-align: right;
+}
+
+.reveal .terminal-progress-complete .terminal-progress-fill {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+/* Keep ordinary slide content legible over the generated background. */
+.reveal .slides section.terminal {
+  color: #f4f4f4;
+}
+
+.reveal .slides section.terminal h1,
+.reveal .slides section.terminal h2,
+.reveal .slides section.terminal h3,
+.reveal .slides section.terminal h4,
+.reveal .slides section.terminal h5,
+.reveal .slides section.terminal h6 {
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.85);
+}
+
+/* Only used as a defensive fallback if Reveal exposes no background element. */
+.reveal .slides section.terminal-inline-host {
+  background: #000 !important;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.reveal .slides section.terminal-inline-host > .terminal-stream {
+  z-index: 0;
+}
+
+.reveal .slides section.terminal-inline-host > :not(.terminal-stream):not(.terminal-status-panel) {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes terminal-line-arrival {
+  from {
+    opacity: 0;
+    transform: translateY(0.25em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal .terminal-line-new {
+    animation: none;
+  }
+}

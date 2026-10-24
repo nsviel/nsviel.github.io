@@ -6,16 +6,16 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
 <script src="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
 <link href="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.css" rel="stylesheet">
 <script src="index_files/libs/quarto-contrib/roughnotation-flourish-bridge-1.0.0/flourish-bridge.js"></script>
 <link href="index_files/libs/quarto-contrib/quarto-gradio-1.0.0/quarto-gradio.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="nsv">
-  <meta name="dcterms.date" content="2026-08-01">
+  <meta name="dcterms.date" content="2026-10-24">
   <title>TID - CM2</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -38,15 +38,15 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-5a3b020107d5ffe24490f5233be27a0a.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-78864653e3e6fd0bce49aa820ed214d7.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/chrono/chrono.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/simplemenu/simplemenu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-attribution/attribution.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-quiz/quiz.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/terminal/terminal.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet"><style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -133,7 +133,10 @@
       margin-left: auto;
       margin-right: 0; 
     }
-  </style><script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script>
+  </style><script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script><link rel="stylesheet" href="_extensions/local/text/text.css">
+  <link rel="stylesheet" href="_extensions/local/text/glitch.css">
+  <script defer="" src="_extensions/local/text/text.js"></script>
+  <script defer="" src="_extensions/local/text/spawn.js"></script>
   <!-- quarto-confetti-injected -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   <script>
@@ -192,7 +195,7 @@
     <div class="slides">
 
 
-<section id="section" class="slide level2 matrix" data-state="hide-menubar" data-background-iframe-sandbox="allow-scripts" data-background-iframe="_extensions/local/matrix/matrix.html">
+<section id="section" class="slide level2 matrix" data-state="hide-menubar" data-background-iframe-sandbox="allow-scripts" data-background-iframe="_extensions/local/slide/matrix/matrix.html">
 <h2></h2>
 <p><br><br></p>
 <div class="quarto-layout-panel" data-layout-ncol="2">
@@ -208,7 +211,7 @@
 
 </div></div>
 </div>
-<!-- BLOCKK: Introduction -->
+<!-- BLOCK: Introduction -->
 </section>
 <section id="section-1" class="slide level2 center" data-name="Intro">
 <h2></h2>
@@ -216,23 +219,19 @@
 <p><br></p>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="fragment">
+<div class="column fragment quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p>Last time:</p>
-</div>
 <div class="blue">
 <ul>
-<li class="fragment">a data item</li>
-<li class="fragment">a table</li>
-<li class="fragment">a cell</li>
-<li class="fragment">a formula</li>
+<li>a data item</li>
+<li>a table</li>
+<li>a cell</li>
+<li>a formula</li>
 </ul>
 </div>
-</div><div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="fragment">
+</div><div class="column fragment quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p>Today:</p>
-</div>
-<div class="fragment orange Large">
+<div class="orange Large">
 <p>we move on to actually working with data</p>
 </div>
 </div></div>
@@ -243,10 +242,10 @@
 <p><br><br><br></p>
 <div class="blue large">
 <ul>
-<li class="fragment">A data item <span class="glyph">=</span> an encoded observation</li>
-<li class="fragment">A table <span class="glyph">=</span> observations described by variables</li>
-<li class="fragment">Extracting / producing <span class="glyph">=</span> fundamental operations</li>
-<li class="fragment">A spreadsheet <span class="glyph">=</span> a tool for automating all of this</li>
+<li>A data item <span class="glyph">=</span> an encoded observation</li>
+<li>A table <span class="glyph">=</span> observations described by variables</li>
+<li>Extracting / producing <span class="glyph">=</span> fundamental operations</li>
+<li>A spreadsheet <span class="glyph">=</span> a tool for automating all of this</li>
 </ul>
 </div>
 </section>
@@ -256,9 +255,9 @@
 <p>We will learn:</p>
 <div class="blue large">
 <ul>
-<li class="fragment">how to write a formula</li>
-<li class="fragment">how to reference cells</li>
-<li class="fragment">how to use a few basic functions</li>
+<li>how to write a formula</li>
+<li>how to reference cells</li>
+<li>how to use a few basic functions</li>
 </ul>
 </div>
 <p><br></p>
@@ -287,6 +286,9 @@
 <p><span class="smallsize"><code>B.</code></span> <span class="glyph"> </span><span class="glyph">=</span></p>
 <p><span class="smallsize"><code>C.</code></span> <span class="glyph"> </span> + or -</p>
 <p><span class="smallsize"><code>D.</code></span> <span class="glyph"> </span> Nothing at all</p>
+<div class="fragment green">
+<p><strong>Answer:</strong> B and C</p>
+</div>
 </section>
 <section id="c" class="slide level2 quiz">
 <h2>23°C</h2>
@@ -294,6 +296,9 @@
 <p><span class="smallsize"><code>A.</code></span> <span class="glyph"> </span> a formula</p>
 <p><span class="smallsize"><code>B.</code></span> <span class="glyph"> </span> an encoded observation</p>
 <p><span class="smallsize"><code>C.</code></span> <span class="glyph"> </span> a table</p>
+<div class="fragment green">
+<p><strong>Answer:</strong> B</p>
+</div>
 </section>
 <section id="the-project-can-be-completed" class="slide level2 quiz">
 <h2>The project can be completed</h2>
@@ -301,6 +306,9 @@
 <p><span class="smallsize"><code>B.</code></span> <span class="glyph"> </span> in pairs</p>
 <p><span class="smallsize"><code>C.</code></span> <span class="glyph"> </span> in groups of three</p>
 <p><span class="smallsize"><code>D.</code></span> <span class="glyph"> </span> with your cat 🐈</p>
+<div class="fragment green">
+<p><strong>Answer:</strong> A, B, and D</p>
+</div>
 <!-- /BLOCK: -->
 <!-- BLOCK: 1 FUNCTION -->
 </section>
@@ -325,7 +333,7 @@
 </div>
 <p><br></p>
 <div class="fragment large orange">
-<p>Otherwise, Calc interprets it as text</p>
+<p>Otherwise, Calc reads text</p>
 </div>
 </section>
 <section id="a-formula-can-use" class="slide level2">
@@ -333,11 +341,11 @@
 <p><br><br></p>
 <div class="blue large">
 <ul>
-<li class="fragment">numbers <span class="glyph arrow" style="font-size:1.2em;"></span> <strong>25, 86, 12</strong></li>
-<li class="fragment">cells <span class="glyph arrow" style="font-size:1.2em;"></span> <strong>A1, C3, D8</strong></li>
-<li class="fragment">ranges <span class="glyph arrow" style="font-size:1.2em;"></span> <strong>B2:D4</strong></li>
-<li class="fragment">functions <span class="glyph arrow" style="font-size:1.2em;"></span> <strong>SUM, AVERAGE</strong></li>
-<li class="fragment">operators <span class="glyph arrow" style="font-size:1.2em;"></span> <strong><span class="glyph">+</span> <span class="glyph">−</span> /</strong></li>
+<li>numbers <span class="glyph arrow" style="font-size:1.2em;"></span> <strong>25, 86, 12</strong></li>
+<li>cells <span class="glyph arrow" style="font-size:1.2em;"></span> <strong>A1, C3, D8</strong></li>
+<li>ranges <span class="glyph arrow" style="font-size:1.2em;"></span> <strong>B2:D4</strong></li>
+<li>functions <span class="glyph arrow" style="font-size:1.2em;"></span> <strong>SUM, AVERAGE</strong></li>
+<li>operators <span class="glyph arrow" style="font-size:1.2em;"></span> <strong><span class="glyph">+</span> <span class="glyph">−</span> /</strong></li>
 </ul>
 </div>
 </section>
@@ -354,21 +362,21 @@
 <section id="but-the-real-benefit" class="slide level2">
 <h2>But the real benefit…</h2>
 <p><br><br></p>
-<div class="fragment Large">
+<div class="Large">
 <p>is not calculating with fixed numbers</p>
 </div>
 <p><br></p>
-<div class="fragment green Large">
-<p>it is calculating from data</p>
-</div>
+<div class="fragment">
+<p><span class="green Large">is calculating from data</span></p>
 <ul>
-<li class="fragment">plentiful</li>
-<li class="fragment">connected</li>
-<li class="fragment">sometimes dynamic</li>
+<li>numerous</li>
+<li>related</li>
+<li>sometimes dynamic</li>
 </ul>
+</div>
 </section>
-<section id="exemple" class="slide level2">
-<h2>Exemple</h2>
+<section id="example" class="slide level2">
+<h2>Example</h2>
 <div class="blue">
 <p>You entered your grades in a table</p>
 </div>
@@ -388,13 +396,13 @@
 <tr class="header">
 <th></th>
 <th style="text-align: right;">TID</th>
-<th style="text-align: right;">Algo</th>
+<th style="text-align: right;">Algorithms</th>
 <th style="text-align: right;">Math</th>
 <th style="text-align: right;">Networks</th>
 <th style="text-align: right;">English</th>
 <th style="text-align: right;">Chemistry</th>
 <th style="text-align: right;">History</th>
-<th style="text-align: right;">Rodéo</th>
+<th style="text-align: right;">Rodeo</th>
 </tr>
 </thead>
 <tbody>
@@ -417,28 +425,29 @@
 </div>
 <div class="fragment orange">
 <p>By hand?</p>
+<p><strong>14 + 16 + 12 + 15 + 13 + 5 + 2 + 20 = 97</strong></p>
 </div>
-<p><span class="fragment">14</span> <span class="fragment">+ 16</span> <span class="fragment">+ 12</span> <span class="fragment">+ 15</span> <span class="fragment">+ 13</span> <span class="fragment">+ 5</span> <span class="fragment">+ 2</span> <span class="fragment">+ 20</span> <span class="fragment">= 97</span></p>
 <div class="fragment">
 <p>97 / 8 = 12.125</p>
 </div>
+<p><br></p>
 <div class="fragment">
 <p>Or simply:</p>
-</div>
-<div class="fragment Large green">
+<div class="Large green">
 <p>=AVERAGE(B2:I2)</p>
+</div>
 </div>
 </section>
 <section id="why-use-a-function" class="slide level2">
 <h2>Why use a function?</h2>
 <p><br><br></p>
 <div class="blue r-fit-text">
-<p>Because a function encapsulates a sometimes complex calculation</p>
-<p>in a single, simple command.</p>
+<p>Because a function wraps up a sometimes complex calculation</p>
+<p>in a single simple command.</p>
 </div>
 <p><br></p>
 <div class="fragment green">
-<p>(which you will not have to perform again yourself)</p>
+<p>(which you won’t have to do yourself again)</p>
 </div>
 </section>
 <section id="there-are-simple-functions" class="slide level2">
@@ -469,6 +478,9 @@
 <p><span class="smallsize"><code>B.</code></span> <span class="glyph"> </span> 50</p>
 <p><span class="smallsize"><code>C.</code></span> <span class="glyph"> </span> 500</p>
 <p><span class="smallsize"><code>D.</code></span> <span class="glyph"> </span> 5000</p>
+<div class="fragment green">
+<p><strong>Answer:</strong> C</p>
+</div>
 </section>
 <section id="functions-have-arguments" class="slide level2">
 <h2>Functions have arguments</h2>
@@ -481,9 +493,9 @@
 <p><br></p>
 <div class="fragment">
 <p>Here:</p>
+<div class="blue Large">
+<p>B2:C3 <span class="glyph arrow" style="font-size:1.2em;"></span> cell range from B2 to C3</p>
 </div>
-<div class="blue Large fragment">
-<p>B2:C3 <span class="glyph arrow" style="font-size:1.2em;"></span> range of cells from B2 to C3</p>
 </div>
 </section>
 <section id="functions-have-arguments-1" class="slide level2">
@@ -491,33 +503,33 @@
 <p><br></p>
 <div class="fragment">
 <p>Some functions take several arguments:</p>
-</div>
 <p><br></p>
-<div class="fragment green Large">
+<div class="green Large">
 <p>=VLOOKUP(“Gladiator”; D:D; 3; 0)</p>
+</div>
 </div>
 <p><br></p>
 <div class="fragment blue">
 <p>The different arguments are separated by <code>;</code></p>
 </div>
 </section>
-<section id="exemple-1" class="slide level2">
-<h2>Exemple</h2>
+<section id="example-1" class="slide level2">
+<h2>Example</h2>
 <p><br></p>
 <div class="green">
 <p>=VLOOKUP(“Gladiator”; D:D; 3; 0)</p>
 </div>
 <p><br></p>
 <ul>
-<li class="fragment">“Gladiator” <span class="glyph arrow" style="font-size:1.2em;"></span> what we are looking for</li>
-<li class="fragment">D:D <span class="glyph arrow" style="font-size:1.2em;"></span> where to look</li>
-<li class="fragment">3 <span class="glyph arrow" style="font-size:1.2em;"></span> which column to return</li>
-<li class="fragment">0 <span class="glyph arrow" style="font-size:1.2em;"></span> exact match</li>
+<li>“Gladiator” <span class="glyph arrow" style="font-size:1.2em;"></span> what we are looking for</li>
+<li>D:D <span class="glyph arrow" style="font-size:1.2em;"></span> where to look</li>
+<li>3 <span class="glyph arrow" style="font-size:1.2em;"></span> which column to return</li>
+<li>0 <span class="glyph arrow" style="font-size:1.2em;"></span> exact match</li>
 </ul>
 <p><br></p>
 <div class="fragment orange">
-<p>There is no need to remember everything.</p>
-<p>The key is to understand the principle.</p>
+<p>You don’t need to remember everything.</p>
+<p>The important thing is to understand the principle.</p>
 </div>
 </section>
 <section id="section-4" class="slide level2 conclusion">
@@ -528,7 +540,7 @@
 <p>made easy to use.</p>
 </div>
 <!-- /BLOCK: -->
-<!-- BLOCK: 2 REFERENCING -->
+<!-- BLOCK: 2 REFERENCES -->
 </section>
 <section id="block-2" class="slide level2 bloc" data-name="Block 2">
 <h2>BLOCK 2</h2>
@@ -674,7 +686,7 @@
 </div>
 <p><br></p>
 <div class="fragment large">
-<p>A range <span class="glyph">=</span> several cells</p>
+<p>A range <span class="glyph">=</span> multiple cells</p>
 </div>
 </section>
 <section id="several-ranges" class="slide level2">
@@ -721,7 +733,7 @@
 </div>
 <p><br></p>
 <div class="fragment large">
-<p>We select several areas</p>
+<p>We select multiple areas</p>
 </div>
 </section>
 <section id="or-an-entire-column" class="slide level2">
@@ -768,7 +780,7 @@
 </div>
 <p><br></p>
 <div class="fragment large">
-<p>We select the entire B column</p>
+<p>We select the entire column B</p>
 </div>
 </section>
 <section id="relative-references" class="slide level2">
@@ -779,9 +791,7 @@
 </div>
 <p><br></p>
 <div class="fragment large">
-<p>When the formula is copied, the references change</p>
-</div>
-<div class="fragment">
+<p>When you copy the formula, the references change</p>
 <p><video data-src="content/video/slide.mp4" style="width:60.0%" controls=""><a href="content/video/slide.mp4">Video</a></video></p>
 </div>
 </section>
@@ -790,7 +800,7 @@
 <div class="LARGE bold">
 <p>But sometimes…</p>
 <p><br></p>
-<p>we do not want it to change</p>
+<p>we don’t want them to change</p>
 </div>
 </section>
 <section id="section-6" class="slide level2 good hcenter">
@@ -800,7 +810,7 @@
 </div>
 <p><br><br></p>
 <div class="fragment big_title huge">
-<p>The ABSOLUTE Reference</p>
+<p>Absolute References</p>
 </div>
 </section>
 <section id="section-7" class="slide level2 hcenter">
@@ -813,7 +823,7 @@
 </div>
 </section>
 <section id="the-lock-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20646f6c6c6172203e7d7d" class="slide level2 conclusion">
-<h2><span class="big_title">The LOCK <span>$</span></span></h2>
+<h2><span class="big_title">THE LOCK <span>$</span></span></h2>
 <p>This sign before the column letter or row number</p>
 <p><code>locks</code> the reference to the column or row</p>
 </section>
@@ -830,13 +840,13 @@
 <p><br></p>
 <div class="fragment">
 <p>But</p>
-</div>
-<div class="blue Large fragment">
+<div class="blue Large">
 <p><span class="glyph">=</span><span>$</span>B<span>$</span>2 <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="fragment"><span class="glyph">=</span><span>$</span>B<span>$</span>2</span></p>
+</div>
 </div>
 <p><br></p>
 <div class="fragment large">
-<p>The cell remains fixed</p>
+<p>The cell stays fixed</p>
 </div>
 </section>
 <section id="section-9" class="slide level2">
@@ -1112,13 +1122,13 @@
 <p><span class="glyph">=</span>B2 * <span>$</span>C<span>$</span>1 <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="fragment"><span class="glyph">=</span>C2 + <span>$</span>C<span>$</span>1</span></p>
 </div>
 <p><br></p>
-<div class="green fragment r-fit-text">
+<div class="fragment">
+<div class="green r-fit-text">
 <blockquote>
-<p><span>$</span> lets you control references</p>
+<p><span>$</span> lets us control references</p>
 </blockquote>
 </div>
 <p><br></p>
-<div class="fragment">
 <p><span class="blue">C1</span> : Relative reference</p>
 <p><span class="blue"><span>$</span>C<span>$</span>1</span> : Absolute reference</p>
 </div>
@@ -1128,9 +1138,9 @@
 <p><br></p>
 <div class="green Large">
 <ul>
-<li class="fragment">a cell (relatively or absolutely)</li>
-<li class="fragment">several cells</li>
-<li class="fragment">the result of another formula</li>
+<li>a cell (relatively or absolutely)</li>
+<li>multiple cells</li>
+<li>the result of another formula</li>
 </ul>
 </div>
 </section>
@@ -1146,9 +1156,12 @@
 <h2>D:D</h2>
 <p>What does this notation select?</p>
 <p><span class="smallsize"><code>A.</code></span> <span class="glyph"> </span> Row D</p>
-<p><span class="smallsize"><code>B.</code></span> <span class="glyph"> </span> Column D</p>
+<p><span class="smallsize"><code>B.</code></span> <span class="glyph"> </span> Answer D</p>
 <p><span class="smallsize"><code>C.</code></span> <span class="glyph"> </span> Cell D</p>
-<p><span class="smallsize"><code>D.</code></span> <span class="glyph"> </span> Answer D.</p>
+<p><span class="smallsize"><code>D.</code></span> <span class="glyph"> </span> Column D</p>
+<div class="fragment green">
+<p><strong>Answer:</strong> D</p>
+</div>
 </section>
 <section id="section-13" class="slide level2 quiz">
 <h2>3:3</h2>
@@ -1157,35 +1170,20 @@
 <p><span class="smallsize"><code>B.</code></span> <span class="glyph"> </span> The entire column 3</p>
 <p><span class="smallsize"><code>C.</code></span> <span class="glyph"> </span> Cell C3</p>
 <p><span class="smallsize"><code>D.</code></span> <span class="glyph"> </span> The first three rows</p>
+<div class="fragment green">
+<p><strong>Answer:</strong> A</p>
+</div>
 </section>
 <section id="b2d5" class="slide level2 quiz">
 <h2>B2:D5</h2>
 <p>This notation refers to:</p>
 <p><span class="smallsize"><code>A.</code></span> <span class="glyph"> </span> A cell</p>
-<p><span class="smallsize"><code>B.</code></span> <span class="glyph"> </span> A range of cells</p>
+<p><span class="smallsize"><code>B.</code></span> <span class="glyph"> </span> A cell range</p>
 <p><span class="smallsize"><code>C.</code></span> <span class="glyph"> </span> A column</p>
 <p><span class="smallsize"><code>D.</code></span> <span class="glyph"> </span> A function</p>
-</section>
-<section id="break" class="slide level2">
-<h2><span class="green">Break</span></h2>
-<div class="chrono">
-  <canvas class="chrono_canvas" width="1000" height="600"></canvas>
-
-  <div class="row">
-    <div class="parameter">
-      <button class="chrono_play">▶</button>
-      <button class="chrono_reset">↩</button>
-
-      <label class="duration">
-        <input class="chrono_min" type="number" value="2">
-        <span>min</span>
-        <input class="chrono_sec" type="number" value="0">
-        <span>s</span>
-      </label>
-    </div>
-  </div>
+<div class="fragment green">
+<p><strong>Answer:</strong> B</p>
 </div>
-
 <!-- /BLOCK: -->
 <!-- BLOCK: 3 DATA TYPES & OPERATORS -->
 </section>
@@ -1200,15 +1198,15 @@
 <p><br><br></p>
 <div class="green large">
 <ul>
-<li class="fragment">a number</li>
-<li class="fragment">text</li>
-<li class="fragment">a date</li>
-<li class="fragment">a Boolean (TRUE / FALSE)</li>
+<li>a number</li>
+<li>text</li>
+<li>a date</li>
+<li>a Boolean value (TRUE / FALSE)</li>
 </ul>
 </div>
 </section>
-<section id="exemple-2" class="slide level2">
-<h2>Exemple</h2>
+<section id="example-2" class="slide level2">
+<h2>Example</h2>
 <p><br><br></p>
 <table class="caption-top">
 <thead>
@@ -1235,11 +1233,11 @@
 </tbody>
 </table>
 <p><br><br></p>
-<div class="fragment blue">
+<div class="blue">
 <p>All these cells contain data.</p>
 </div>
 <div class="fragment orange Large">
-<p>But not the same type.</p>
+<p>But not of the same type.</p>
 </div>
 </section>
 <section id="operators" class="slide level2">
@@ -1273,7 +1271,7 @@
 </tr>
 <tr class="odd">
 <td><code>^</code></td>
-<td>exponentiation</td>
+<td>power</td>
 </tr>
 </tbody>
 </table>
@@ -1299,11 +1297,11 @@
 </tr>
 <tr class="odd">
 <td><code>&gt;</code></td>
-<td>greater than</td>
+<td>strictly greater than</td>
 </tr>
 <tr class="even">
 <td><code>&lt;</code></td>
-<td>less than</td>
+<td>strictly less than</td>
 </tr>
 <tr class="odd">
 <td><code>&gt;=</code></td>
@@ -1321,18 +1319,16 @@
 <section id="concatenating-text" class="slide level2 hcenter">
 <h2>Concatenating text</h2>
 <p><br><br><br></p>
-<p>“Jean” &nbsp; <span class="blue">&amp;</span> &nbsp; “&nbsp;&nbsp;&nbsp;” &nbsp; <span class="blue">&amp;</span> &nbsp; “Dupont”</p>
+<p>“John” &nbsp; <span class="blue">&amp;</span> &nbsp; “&nbsp;&nbsp;&nbsp;” &nbsp; <span class="blue">&amp;</span> &nbsp; “Smith”</p>
 <p><span class="glyph arrow_down" style="font-size:1.2em;"></span></p>
-<div class="fragment">
-<p>Jean Dupont</p>
-</div>
+<p>John Smith</p>
 <p><br><br><br></p>
 <div class="fragment green Large">
-<p><code>&amp;</code> joins several pieces of text.</p>
+<p><code>&amp;</code> lets you join multiple pieces of text.</p>
 </div>
 </section>
-<section id="exemple-3" class="slide level2">
-<h2>Exemple</h2>
+<section id="example-3" class="slide level2">
+<h2>Example</h2>
 <p><br><br></p>
 <table class="caption-top">
 <thead>
@@ -1347,7 +1343,7 @@
 <tr class="odd">
 <td>1</td>
 <td>First name</td>
-<td>Name</td>
+<td>Last name</td>
 <td>*</td>
 </tr>
 <tr class="even">
@@ -1393,7 +1389,7 @@
 <p><br></p>
 <p><span class="fragment Large blue">Are not quite numbers</span></p>
 <p><br></p>
-<p><span class="fragment Large purple">Ni text.</span></p>
+<p><span class="fragment Large purple">Nor text.</span></p>
 <div class="fragment green">
 <p>The spreadsheet recognizes it as a date.</p>
 </div>
@@ -1416,11 +1412,11 @@
 </div>
 <p><br></p>
 <div class="fragment orange Large">
-<p>We can perform calculations with dates.</p>
+<p>We can do calculations with dates.</p>
 </div>
 </section>
-<section id="exemple-4" class="slide level2">
-<h2>Exemple</h2>
+<section id="example-4" class="slide level2">
+<h2>Example</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1443,7 +1439,7 @@
 </tbody>
 </table>
 <p><br></p>
-<div class="fragment Large">
+<div class="Large">
 <p>= B2 - A2</p>
 </div>
 <p><span class="glyph arrow_down" style="font-size:1.2em;"></span></p>
@@ -1459,18 +1455,18 @@
 <p><br></p>
 <div class="fragment">
 <p>But</p>
-</div>
 <p><br></p>
 <div class="contenu green">
 <ul>
-<li class="fragment">numbers</li>
-<li class="fragment">text</li>
-<li class="fragment">dates</li>
-<li class="fragment">true / false values</li>
+<li>numbers</li>
+<li>text</li>
+<li>dates</li>
+<li>true / false values</li>
 </ul>
 </div>
+</div>
 <div class="fragment">
-<p>And combines them using operators.</p>
+<p>And it combines them using operators.</p>
 </div>
 <!-- /BLOCK: -->
 <!-- BLOCK: 4 BUILDING FORMULAS -->
@@ -1490,10 +1486,10 @@
 <p><br></p>
 <div class="fragment">
 <p>or sometimes simply</p>
-</div>
 <p><br></p>
-<div class="fragment Large blue">
+<div class="Large blue">
 <p>= B2 + C2</p>
+</div>
 </div>
 </section>
 <section id="a-formula-is-made-up-of" class="slide level2">
@@ -1501,10 +1497,10 @@
 <p><br></p>
 <div class="blue">
 <ul>
-<li class="fragment">references</li>
-<li class="fragment">functions</li>
-<li class="fragment">operators</li>
-<li class="fragment">constants</li>
+<li>references</li>
+<li>functions</li>
+<li>operators</li>
+<li>constants</li>
 </ul>
 </div>
 <p><br></p>
@@ -1512,8 +1508,8 @@
 <p>Like Lego bricks.</p>
 </div>
 </section>
-<section id="exemple-5" class="slide level2 hcenter">
-<h2>Exemple</h2>
+<section id="example-5" class="slide level2 hcenter">
+<h2>Example</h2>
 <p><br></p>
 <div class="Large blue">
 <p><span class="glyph">=</span>A2<span class="glyph">+</span>B2</p>
@@ -1528,8 +1524,8 @@
 <p>81</p>
 </div>
 </section>
-<section id="exemple-6" class="slide level2 hcenter">
-<h2>Exemple</h2>
+<section id="example-6" class="slide level2 hcenter">
+<h2>Example</h2>
 <div class="Large blue">
 <p><span class="glyph">=</span>AVERAGE(B2:B10)</p>
 </div>
@@ -1564,12 +1560,12 @@
 <p><span class="glyph arrow_down" style="font-size:1.2em;"></span></p>
 <p><br></p>
 <div class="green Large">
-<p>We control the order of operations.</p>
+<p>We control the order of calculations.</p>
 </div>
 </div>
 </section>
-<section id="lire-a-formula" class="slide level2 hcenter">
-<h2>lire a formula</h2>
+<section id="read-a-formula" class="slide level2 hcenter">
+<h2>Read a formula</h2>
 <div class="Large blue">
 <p>=AVERAGE(B2:B10)</p>
 </div>
@@ -1578,11 +1574,11 @@
 </div>
 <p>I calculate</p>
 <p>the average</p>
-<p>cells</p>
+<p>of the cells</p>
 <p>from B2 to B10.</p>
 </section>
-<section id="construire-a-formula" class="slide level2 hcenter">
-<h2>Construire a formula</h2>
+<section id="building-a-formula" class="slide level2 hcenter">
+<h2>Building a formula</h2>
 <div class="blue">
 <p><span class="glyph">=</span></p>
 <p><span class="glyph arrow_down" style="font-size:1.2em;"></span></p>
@@ -1625,10 +1621,10 @@
 <p><br></p>
 <div class="blue Large">
 <ul>
-<li class="fragment">A reference refers to one data item</li>
-<li class="fragment">A range refers to several data items</li>
-<li class="fragment">A function applies an operation</li>
-<li class="fragment">A formula produces a new data item</li>
+<li>A reference identifies a data item</li>
+<li>A range identifies multiple data items</li>
+<li>A function applies an operation</li>
+<li>A formula produces a new data item</li>
 </ul>
 </div>
 </section>
@@ -1637,26 +1633,24 @@
 <p><br></p>
 <div class="blue Large">
 <ul>
-<li class="fragment">lire a formula</li>
-<li class="fragment">write a simple formula</li>
-<li class="fragment">use a reference</li>
-<li class="fragment">use a range</li>
-<li class="fragment">use basic functions</li>
+<li>read a formula</li>
+<li>write a simple formula</li>
+<li>use a reference</li>
+<li>use a range</li>
+<li>use basic functions</li>
 </ul>
 </div>
 </section>
 <section id="next-time" class="slide level2">
 <h2>Next time…</h2>
 <p><br></p>
-<div class="fragment">
 <p>We will learn how to…</p>
-</div>
 <p><br></p>
 <div class="blue Large">
 <ul>
-<li class="fragment">make decisions</li>
-<li class="fragment">look up information</li>
-<li class="fragment">analyze tables</li>
+<li>make decisions</li>
+<li>look up information</li>
+<li>analyze tables</li>
 </ul>
 </div>
 </section>
@@ -1665,11 +1659,14 @@
 </section>
 <section id="which-formula-would-you-choose" class="slide level2 quiz">
 <h2>Which formula would you choose?</h2>
-<p>You want to calculate the average of cells B2 through B10.</p>
+<p>You want to calculate the average of cells B2 to B10.</p>
 <p><span class="smallsize"><code>A.</code></span> <span class="glyph"> </span> =AVERAGE(B2:B10)</p>
 <p><span class="smallsize"><code>B.</code></span> <span class="glyph"> </span> =AVERAGE(B2;B10)</p>
 <p><span class="smallsize"><code>C.</code></span> <span class="glyph"> </span> =B2:B10</p>
 <p><span class="smallsize"><code>D.</code></span> <span class="glyph"> </span> =SUM(B2:B10)</p>
+<div class="fragment green">
+<p><strong>Answer:</strong> A</p>
+</div>
 </section>
 <section id="what-does-this-formula-produce" class="slide level2 quiz">
 <h2>What does this formula produce?</h2>
@@ -1678,6 +1675,9 @@
 <p><span class="smallsize"><code>B.</code></span> <span class="glyph"> </span> Text</p>
 <p><span class="smallsize"><code>C.</code></span> <span class="glyph"> </span> A date</p>
 <p><span class="smallsize"><code>D.</code></span> <span class="glyph"> </span> A self-driving car &nbsp;&nbsp; 🛻</p>
+<div class="fragment green">
+<p><strong>Answer:</strong> B</p>
+</div>
 </section>
 <section id="section-17" class="slide level2 conclusion">
 <h2></h2>
@@ -1688,9 +1688,9 @@
 </div>
 <!-- /BLOCK: -->
 </section>
-<section id="section-18" class="slide level2 matrix center" data-background-iframe-sandbox="allow-scripts" data-state="hide-menubar" data-background-iframe="_extensions/local/matrix/matrix.html">
+<section id="section-18" class="slide level2 matrix center" data-background-iframe-sandbox="allow-scripts" data-state="hide-menubar" data-background-iframe="_extensions/local/slide/matrix/matrix.html">
 <h2></h2>
-<p><span class="Large big_title matrix">That is all for today</span></p>
+<p><span class="Large big_title matrix">That’s all for today</span></p>
 
 </section>
     </div>
@@ -1711,8 +1711,9 @@
   <script src="index_files/libs/revealjs/plugin/simplemenu/simplemenu.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-leaderline/reveal-leader-line.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-attribution/attribution.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-quiz/quiz.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="index_files/libs/revealjs/plugin/terminal/easter-eggs.js"></script>
+  <script src="index_files/libs/revealjs/plugin/terminal/terminal.js"></script>
   <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1736,7 +1737,6 @@
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'simplemenu': {"menubarclass":"menubar","menuclass":"menu","activeclass":"active","activeelement":"li","flat":true,"barhtml":{"header":"","footer":"<div class='menubar'><ul class='menu'></ul></div>"},"scale":0.4},
-'quiz': {"checkKey":"c","resetKey":"q","shuffleKey":"t","allowNumberKeys":true,"disableOnCheck":false,"shuffleOptions":true,"defaultCorrect":"","defaultIncorrect":"","includeScore":false,"disableReset":false},
 'pointer': {"key":"p","color":"#12ff00","pointerSize":16,"alwaysVisible":false,"pointsize":20},
 'smaller': false,
  
@@ -1888,7 +1888,7 @@
         height: 1080,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.1,
+        margin: 0,
 
         math: {
           mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
@@ -1908,13 +1908,43 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Chrono, Simplemenu, RevealLeaderline, RevealAttribution, RevealQuiz, RevealPointer, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Chrono, Simplemenu, RevealLeaderline, RevealAttribution, RevealPointer, Terminal, QuartoSupport,
 
           RevealMath,
           RevealNotes,
           RevealSearch,
           RevealZoom
         ]
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const root = document.querySelector(".reveal .slides");
+        if (!root || typeof twemoji === "undefined") return;
+
+        const excluded = new Set(["CODE", "PRE", "SCRIPT", "STYLE", "TEXTAREA"]);
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+          const node = walker.currentNode;
+          if (!excluded.has(node.parentElement?.tagName)) textNodes.push(node);
+        }
+
+        for (const node of textNodes) {
+          const html = twemoji.parse(node.data, {
+            base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/",
+            folder: "svg",
+            ext: ".svg",
+            className: "twemoji"
+          });
+
+          if (html === node.data) continue;
+          const template = document.createElement("template");
+          template.innerHTML = html;
+          node.replaceWith(template.content);
+        }
       });
     </script>
     <script type="text/javascript" id="code-annotation-fragments">
@@ -1988,6 +2018,41 @@
 
     </script>
 
+    <script>
+    (() => {
+      const fitTextElements = document.querySelectorAll(".r-fit-text");
+
+      const fitToContentWidth = (element) => {
+        const parent = element.parentElement;
+        if (!parent) return;
+
+        const parentStyle = window.getComputedStyle(parent);
+        const horizontalPadding =
+          (parseFloat(parentStyle.paddingLeft) || 0) +
+          (parseFloat(parentStyle.paddingRight) || 0);
+        const availableWidth = parent.clientWidth - horizontalPadding;
+        const contentWidth = element.scrollWidth;
+        const fontSize = parseFloat(window.getComputedStyle(element).fontSize);
+
+        if (availableWidth > 0 && contentWidth > availableWidth && fontSize > 0) {
+          element.style.fontSize = `${fontSize * (availableWidth / contentWidth)}px`;
+        }
+      };
+
+      const fitAllToContentWidth = () => {
+        fitTextElements.forEach(fitToContentWidth);
+      };
+
+      fitTextElements.forEach((element) => {
+        element.addEventListener("fit", () => requestAnimationFrame(() => fitToContentWidth(element)));
+      });
+
+      window.addEventListener("load", fitAllToContentWidth);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(fitAllToContentWidth);
+      }
+    })();
+    </script>
     <script>
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll("iframe[allow]").forEach((f) => {

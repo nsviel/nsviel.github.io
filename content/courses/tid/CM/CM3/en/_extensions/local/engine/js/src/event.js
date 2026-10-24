@@ -2,17 +2,17 @@ import * as THREE from "three";
 
 
 // Main function
-export function add_event(renderer, camera){
+export function add_event(renderer, camera, renderPipeline){
     //---------------
 
-    event_resize(renderer, camera);
+    event_resize(renderer, camera, renderPipeline);
     event_keyboard();
 
     //---------------
 }
 
 // Subfunction
-function event_resize(renderer, camera){
+function event_resize(renderer, camera, renderPipeline){
     //---------------
 
     function resize() {
@@ -21,6 +21,7 @@ function event_resize(renderer, camera){
         renderer.setSize(w, h, false);
         camera.aspect = w / h;
         camera.updateProjectionMatrix();
+        renderPipeline.setSize();
     }
 
     window.addEventListener("resize", resize);

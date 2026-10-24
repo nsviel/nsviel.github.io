@@ -142,6 +142,10 @@ async function load_glb(url) {
     const gltf = await loader.loadAsync(url);
     const object = gltf.scene;
 
+    // glTF is Y-up. Convert it back to Blender's Z-up convention.
+    object.rotation.x = Math.PI / 2;
+    object.updateMatrixWorld(true);
+
     object.traverse((child) => {
         if (child.isMesh) {
             child.castShadow = true;

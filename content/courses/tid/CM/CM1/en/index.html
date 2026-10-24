@@ -6,16 +6,16 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
 <script src="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
 <link href="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.css" rel="stylesheet">
 <script src="index_files/libs/quarto-contrib/roughnotation-flourish-bridge-1.0.0/flourish-bridge.js"></script>
 <link href="index_files/libs/quarto-contrib/quarto-gradio-1.0.0/quarto-gradio.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="nsv">
-  <meta name="dcterms.date" content="2026-08-01">
+  <meta name="dcterms.date" content="2026-10-24">
   <title>TID - CM1</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -38,15 +38,15 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-5a3b020107d5ffe24490f5233be27a0a.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-78864653e3e6fd0bce49aa820ed214d7.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/chrono/chrono.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/simplemenu/simplemenu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-attribution/attribution.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-quiz/quiz.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/terminal/terminal.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet"><style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -133,7 +133,10 @@
       margin-left: auto;
       margin-right: 0; 
     }
-  </style><script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script>
+  </style><script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script><link rel="stylesheet" href="_extensions/local/text/text.css">
+  <link rel="stylesheet" href="_extensions/local/text/glitch.css">
+  <script defer="" src="_extensions/local/text/text.js"></script>
+  <script defer="" src="_extensions/local/text/spawn.js"></script>
   <!-- quarto-confetti-injected -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   <script>
@@ -192,7 +195,7 @@
     <div class="slides">
 
 
-<section id="section" class="slide level2 matrix" data-state="hide-menubar" data-background-iframe-sandbox="allow-scripts" data-background-iframe="_extensions/local/matrix/matrix.html">
+<section id="section" class="slide level2 matrix" data-state="hide-menubar" data-background-iframe-sandbox="allow-scripts" data-background-iframe="_extensions/local/slide/matrix/matrix.html">
 <h2></h2>
 <p><br><br></p>
 <div class="quarto-layout-panel" data-layout-ncol="2">
@@ -225,15 +228,15 @@
 <h2><strong>The rules</strong> (in my class)</h2>
 <div class="blue large">
 <ul>
-<li class="fragment">Be considerate</li>
-<li class="fragment">Keep noise to a minimum</li>
-<li class="fragment">Everything you will need is online</li>
-<li class="fragment">You may leave the room freely (<strong>within reason</strong>)</li>
-<li class="fragment">Use AI as a tutor, not as a servant</li>
+<li>Be considerate</li>
+<li>Keep noise to a minimum</li>
+<li>Everything you will need is online</li>
+<li>You may leave freely (<strong>within reason</strong>)</li>
+<li>Use AI as a tutor, not as a servant</li>
 </ul>
 </div>
 </section>
-<section id="ok" class="slide level2 vcenter good Huge">
+<section id="ok" class="slide level2 center good Huge">
 <h2>OK</h2>
 </section>
 <section id="what-this-course-is-about" class="slide level2">
@@ -241,7 +244,7 @@
 <p><br></p>
 <p>What we are going to study:</p>
 <div class="fragment r-fit-text bold green">
-<p>The computer processing</p>
+<p>Computer processing</p>
 <p>of data</p>
 </div>
 <p><br></p>
@@ -264,7 +267,7 @@
 <li><code>Second-year Chemistry students</code></li>
 </ul>
 <div class="fragment">
-<p>~70–80% of researchers use spreadsheets <span class="blue">(Excel, Google Sheets…)</span> in their workflow</p>
+<p>~70–80 % of researchers use spreadsheets <span class="blue">(Excel, Google Sheets…)</span> in their workflow</p>
 </div>
 </div>
 </section>
@@ -288,7 +291,7 @@
 <li><strong>A Forrester study</strong></li>
 </ul>
 <blockquote>
-<p><span class="blue">~81% of businesses use Excel as their primary analytics tool</span></p>
+<p><span class="blue">~81 % of businesses use Excel as their primary analytics tool</span></p>
 </blockquote>
 </div>
 <div class="fragment">
@@ -296,7 +299,7 @@
 <li><strong>A UK survey (FCA)</strong></li>
 </ul>
 <blockquote>
-<p><span class="blue">~90% of large companies rely on business-critical Excel spreadsheets</span></p>
+<p><span class="blue">~90 % of large companies rely on business-critical Excel spreadsheets</span></p>
 </blockquote>
 </div>
 </div>
@@ -327,7 +330,7 @@
 <p><br></p>
 <p>➡️ The loss becomes a profit.</p>
 <p><br></p>
-<p>💸 The dividend amount is off by <strong>$2.6 billion</strong>.</p>
+<p>💸 The dividend amount is wrong by <strong>$2.6 billion</strong>.</p>
 <p><br></p>
 <div class="fragment red bold Large">
 <p>A single-character error!</p>
@@ -337,12 +340,12 @@
 <h2>A copy-and-paste error that changes careers</h2>
 <p><br><br></p>
 <div class="blue">
-<p>In the United Kingdom, candidates are interviewed to become anesthetists.</p>
+<p>In the United Kingdom, candidates are interviewed to become anaesthetists.</p>
 </div>
 <p><br></p>
-<p>❌ When the Excel files are merged, the <strong>wrong column</strong> is copied.</p>
+<p>❌ When the Excel files are merged, a <strong>wrong column</strong> is copied.</p>
 <p><br></p>
-<p>➡️ The candidates’ ranking replaces their score.</p>
+<p>➡️ The candidates’ rankings replace their scores.</p>
 <p><br></p>
 <p>👨‍⚕️ Some excellent candidates are rejected.</p>
 <p><br></p>
@@ -388,16 +391,16 @@
 <p>Even modern programming languages use tabular structures</p>
 </div>
 </section>
-<section id="but-a-major-and-well-known-limitation" class="slide level2">
-<h2>BUT: a major (and well-known) limitation</h2>
+<section id="but-a-major-well-known-limitation" class="slide level2">
+<h2>BUT: a major, well-known limitation</h2>
 <p><br><br></p>
-<p>A significant share of scientific errors comes from… Excel</p>
+<p>A significant number of scientific errors come from Excel…</p>
 <div class="blue">
-<p>(e.g., genes renamed automatically <span class="glyph arrow" style="font-size:1.2em;"></span> known bugs)</p>
+<p>(e.g.&nbsp;genes renamed automatically <span class="glyph arrow" style="font-size:1.2em;"></span> known bugs)</p>
 </div>
 <p><br><br></p>
 <div class="fragment">
-<p>Hence the paradox:</p>
+<p>So, a paradox:</p>
 </div>
 <div class="fragment bold">
 <p><span class="green Large">dominant tool</span></p>
@@ -406,20 +409,20 @@
 <p><span class="red Large">but methodologically fragile</span></p>
 </div>
 </section>
-<section id="so-this-course-will-cover-all-of-this" class="slide level2 vcenter image good large" data-path="content/image/happy.svg">
-<h2><strong>So this course will cover all of this</strong></h2>
+<section id="so-in-this-course-well-work-on-all-of-this" class="slide level2 vcenter image good large" data-path="content/image/happy.svg">
+<h2><strong>So in this course, we’ll work on all of this</strong></h2>
 </section>
-<section id="learning-objectives" class="slide level2">
-<h2>Learning objectives</h2>
+<section id="objectives" class="slide level2">
+<h2>Objectives</h2>
 <p><br></p>
 <div class="blue large">
 <ul>
-<li class="fragment">Tame the beast</li>
-<li class="fragment">Avoid common mistakes</li>
-<li class="fragment">Produce a clear, defensible analysis</li>
-<li class="fragment">Understand the implicit and explicit rules</li>
-<li class="fragment">remember them</li>
-<li class="fragment">and apply them</li>
+<li>Tame the beast</li>
+<li>Avoid common mistakes</li>
+<li>Produce a clear, defensible analysis</li>
+<li>Understand implicit and explicit rules</li>
+<li>Remember them</li>
+<li>And apply them</li>
 </ul>
 </div>
 </section>
@@ -428,24 +431,21 @@
 <p><br><br></p>
 <div class="blue large">
 <ul>
-<li class="fragment">understand concepts<br>
-</li>
-<li class="fragment">apply them<br>
-</li>
-<li class="fragment">make mistakes<br>
-</li>
+<li>understand concepts</li>
+<li>apply them</li>
+<li>make mistakes</li>
 </ul>
 </div>
 <p><br><br></p>
 <div class="fragment">
-<p>(and that is perfectly normal)</p>
+<p>(and that’s normal)</p>
 </div>
 </section>
 <section id="section-3" class="slide level2 conclusion">
 <h2></h2>
 <div class="r-fit-text green">
-<p>Think of this as an introduction</p>
-<p>to the academic and professional worlds</p>
+<p>Think of this as an introduction to</p>
+<p>the academic and professional world</p>
 </div>
 <div class="fragment">
 <p>You will need to read documentation, understand concepts, and apply them</p>
@@ -456,84 +456,84 @@
 <section id="block-1" class="slide level2 bloc" data-name="Block 1">
 <h2>BLOCK 1</h2>
 </section>
-<section id="how-will-this-course-work" class="slide level2 question">
-<h2>How will this course work?</h2>
+<section id="how-will-this-work" class="slide level2 question">
+<h2>How will this work?</h2>
 </section>
-<section id="we-will-be-working-with" class="slide level2">
-<h2>We will be working with</h2>
+<section id="we-will-work-with" class="slide level2">
+<h2>We will work with</h2>
 <p><br></p>
 <p><span class="big_title green Large">LibreOffice Calc</span></p>
 <div class="fragment">
 <p>(English version)</p>
 </div>
 <p><br></p>
+<div class="fragment">
 <ul>
-<li class="fragment">OS-independent 🦴 <span class="fragment blue">(Linux, Windows, Mac)</span></li>
+<li><strong>OS-independent</strong> 🦴 <span class="blue">(Linux, Windows, Mac)</span></li>
 </ul>
+</div>
 <p><br></p>
 <div class="fragment">
-<p>And why not Excel?</p>
-</div>
+<p>Why not Excel?</p>
 <div class="red">
 <ul>
-<li class="fragment">Not free</li>
-<li class="fragment">Not OS-independent</li>
-<li class="fragment">Works in a similar way</li>
+<li>Not free</li>
+<li>Not OS-independent</li>
+<li>Works similarly</li>
 </ul>
 </div>
+</div>
 </section>
-<section id="section-4" class="slide level2 website" data-background-iframe="https://nsviel.github.io/fr/teaching/tid/" data-background-interactive="true">
+<section id="section-4" class="slide level2" data-background-image="content/image/siteweb.png" data-background-size="cover">
 <h2></h2>
 <div class="titlebox bottomright">
 <p>All course materials are here</p>
 </div>
 </section>
-<section id="section-5" class="slide level2" data-background-image="content/image/community.png" data-background-size="cover">
+<section id="section-5" class="slide level2 slide_white" data-background-color="#ffffff" data-background-image="content/image/community.png" data-background-size="cover">
 <h2></h2>
-<div class="titlebox bottomright">
-<p>Submissions and some additional information are here</p>
+<div class="titlebox bottomright white">
+<p>Submissions and some information are here</p>
 </div>
 </section>
 <section id="but" class="slide level2 warning Large">
 <h2>But</h2>
-<p><span class="big_title">Important</span></p>
+<p><span class="big_title">Caution</span></p>
 </section>
-<section id="you-need-an-enrollment-key" class="slide level2 error Large">
-<h2>You need an enrollment key</h2>
+<section id="you-need-an-enrolment-key" class="slide level2 error Large">
+<h2>You need an enrolment key</h2>
 </section>
-<section id="you-need-an-enrollment-key-1" class="slide level2">
-<h2>You need an enrollment key</h2>
+<section id="you-need-an-enrolment-key-1" class="slide level2">
+<h2>You need an enrolment key</h2>
 <p><br></p>
 <p><span class="big_title r-fit-text fragment">TID_2026</span></p>
 <p><br><br></p>
 <div class="fragment">
-<p><span class="red">(Enroll now)</span></p>
+<p><span class="red">(Enrol now)</span></p>
 <p>https://community-sciences.unilim.fr/course/view.php?id=1873</p>
 </div>
 </section>
-<section id="how-will-you-be-graded" class="slide level2">
-<h2>How will you be graded?</h2>
+<section id="how-is-the-course-graded" class="slide level2">
+<h2>How is the course graded?</h2>
 <p><br></p>
 <h3 id="written-exam-67">Written exam: <strong>67%</strong></h3>
 <div class="blue">
 <ul>
-<li class="fragment">1 hour 30 minutes, in class</li>
-<li class="fragment">After the winter break</li>
+<li>1.5-hour in-person exam</li>
+<li>After the winter break</li>
 </ul>
 </div>
 <p><br></p>
 <div class="fragment">
 <p>AND</p>
-</div>
 <p><br></p>
-<div class="fragment">
 <h3 id="a-fun-project-33">A (fun) project: <strong>33%</strong></h3>
-</div>
 <div class="blue">
 <ul>
-<li class="fragment">individually or in pairs</li>
-<li class="fragment">one month to complete it</li>
+<li>in a team or individually</li>
+<li>1 month to complete it</li>
 </ul>
+</div>
 </div>
 </section>
 <section id="the-written-exam-67" class="slide level2">
@@ -541,19 +541,16 @@
 <p><br></p>
 <div class="blue large">
 <ul>
-<li class="fragment">write formulas<br>
-</li>
-<li class="fragment">understand what you are doing<br>
-</li>
-<li class="fragment">solve simple problems<br>
-</li>
+<li>write formulas</li>
+<li>understand what you are doing</li>
+<li>solve simple problems</li>
 </ul>
 </div>
 <p><br></p>
-<div class="green large">
-<p><span class="fragment">If you have understood the course</span></p>
-<p><span class="fragment">And have practiced a little</span></p>
-<p><span class="fragment">you will be fine <strong>:)</strong></span></p>
+<div class="green large fragment">
+<p>If you have understood the course</p>
+<p>and done a little practice</p>
+<p>you’ll be fine <strong>:)</strong></p>
 </div>
 </section>
 <section id="a-n-d" class="slide level2 slide_black hcenter" data-background-color="#000000">
@@ -566,7 +563,7 @@
 <p>you enjoy</p>
 </div>
 </section>
-<section id="section-6" class="slide level2" data-background-video="content/video/miner.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
+<section id="section-6" class="slide level2 slide_white" data-background-color="#ffffff" data-background-video="content/video/miner.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="cover">
 <h2></h2>
 </section>
 <section id="the-project" class="slide level2">
@@ -574,11 +571,11 @@
 <p><br></p>
 <div class="blue large">
 <ul>
-<li class="fragment">a game</li>
-<li class="fragment">a simulator</li>
-<li class="fragment">a management tool</li>
-<li class="fragment">animated pixel art</li>
-<li class="fragment"><span class="big_title white">or any other idea you like</span></li>
+<li>a game</li>
+<li>a simulator</li>
+<li>a management tool</li>
+<li>an animated pixel-art piece</li>
+<li><span class="big_title white">or any other idea you like</span></li>
 </ul>
 </div>
 </section>
@@ -597,71 +594,71 @@
 </section>
 <section id="the-project-1" class="slide level2">
 <h2>The project</h2>
-<p><span class="large"><code>Individually or in pairs</code></span></p>
+<p><span class="large"><code>Individually or in a team</code></span></p>
 <p><br></p>
 <div class="fragment">
-<h3 id="what-to-submit">What to submit</h3>
+<h3 id="to-submit">To submit</h3>
 <p>A single spreadsheet file:</p>
-</div>
 <ul>
-<li class="fragment"><code>.ods</code></li>
-<li class="fragment"><code>.xlsx</code></li>
-<li class="fragment"><code>or a Google Sheets link</code></li>
+<li><code>.ods</code></li>
+<li><code>.xlsx</code></li>
+<li><code>or a Google Sheets link</code></li>
 </ul>
+</div>
 <p><br></p>
 <div class="fragment">
 <h3 id="the-file-must-contain">The file must contain:</h3>
-</div>
 <ol type="1">
-<li class="fragment">The main project</li>
-<li class="fragment">A report sheet named <code>README</code> or <code>Presentation</code></li>
+<li>The main project</li>
+<li>A report sheet <code>README</code> or <code>Presentation</code></li>
 </ol>
+</div>
 </section>
 <section id="the-report-sheet-must-include" class="slide level2">
 <h2>The report sheet must include</h2>
 <p><br></p>
 <ul>
-<li class="fragment"><span class="blue large">LAST NAME (UPPERCASE) / First name <code>for each individual or pair member</code></span></li>
-<li class="fragment"><span class="blue large">The project concept</span></li>
-<li class="fragment"><span class="blue large">The features provided</span></li>
-<li class="fragment"><span class="blue large">The key formulas used</span></li>
-<li class="fragment"><span class="blue large">Any resources or assistance used:</span>
+<li><span class="blue large">LAST NAME (CAPITALS) / First name <code>of each team member</code></span></li>
+<li><span class="blue large">The project idea</span></li>
+<li><span class="blue large">The proposed features</span></li>
+<li><span class="blue large">The key formulas used</span></li>
+<li><span class="blue large">Any resources used:</span>
 <ul>
-<li class="fragment">AI</li>
-<li class="fragment">Tutorials</li>
-<li class="fragment">Documentation</li>
-<li class="fragment">Other</li>
+<li>The internet</li>
+<li>Tutorials</li>
+<li>Documentation</li>
+<li>Other</li>
 </ul></li>
 </ul>
 </section>
-<section id="lets-get-back-to-the-course" class="slide level2 vcenter Large good">
-<h2>Let’s get back to the course</h2>
+<section id="back-to-the-course" class="slide level2 vcenter Large good">
+<h2>Back to the course</h2>
 </section>
-<section id="the-course-progression" class="slide level2">
-<h2>The course progression</h2>
+<section id="the-challenge-of-this-course" class="slide level2">
+<h2>The challenge of this course</h2>
 <p><br></p>
 <div class="large blue">
 <ol type="1">
-<li class="fragment">what is data?</li>
-<li class="fragment">structure a table</li>
-<li class="fragment">write a formula</li>
-<li class="fragment">perform a simple analysis</li>
-<li class="fragment">go further</li>
+<li>what is data?</li>
+<li>structure a table</li>
+<li>write a formula</li>
+<li>perform a simple analysis</li>
+<li>go further</li>
 </ol>
 </div>
 <p><br></p>
 <div class="fragment green vcenter large">
-<p>(step by step)</p>
+<p>(gradually)</p>
 </div>
 </section>
-<section id="section-7" class="slide level2 conclusion">
+<section id="section-7" class="slide level2 conclusion center">
 <h2></h2>
 <div class="large">
 <p>At first:</p>
-<p><span class="green Large">it is simple</span></p>
+<p><span class="green Large">it’s simple</span></p>
 <p><br></p>
 <p>By the end:</p>
-<p><span class="blue Large big_title">it is powerful</span></p>
+<p><span class="blue Large big_title">it’s powerful</span></p>
 </div>
 </section>
 <section id="section-8" class="slide level2 good">
@@ -676,38 +673,35 @@
 <section id="block-2" class="slide level2 bloc" data-name="Block 2">
 <h2>BLOCK 2</h2>
 </section>
-<section id="what-exactly-is-a-piece-of-data" class="slide level2 question">
-<h2>What exactly is a piece of <code>data</code>?</h2>
+<section id="what-is-data-really" class="slide level2 question">
+<h2>What is <code>data</code>, really?</h2>
 <div class="fragment">
-<p>(Not as obvious as it may seem)</p>
+<p>(It’s not that obvious)</p>
 </div>
 </section>
-<section id="what-exactly-is-a-piece-of-data-1" class="slide level2">
-<h2>What exactly is a piece of data?</h2>
+<section id="what-is-data-really-1" class="slide level2 center">
+<h2>What is data, really?</h2>
 <div class="hvcenter green LARGE fragment">
 <p><span class="glyph">=</span> an encoded observation</p>
 </div>
 </section>
-<section id="examples" class="slide level2">
+<section id="examples" class="slide level2 vcenter">
 <h2>Examples</h2>
 <p><br></p>
 <div class="fragment">
-<p>Measured temperature: <span class="Large">23°C</span><br>
-<span class="glyph arrow" style="font-size:1.2em;"></span> <span class="blue Large">data: <strong>23</strong></span></p>
+<p>Measured temperature: <span class="Large">23°C</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="blue Large">data: <strong>23</strong></span></p>
 </div>
 <p><br></p>
 <div class="fragment">
-<p>A student scores <span class="Large">14/20</span><br>
-<span class="glyph arrow" style="font-size:1.2em;"></span> <span class="blue Large">data: <strong>14</strong></span></p>
+<p>A student scores <span class="Large">14/20</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="blue Large">data: <strong>14</strong></span></p>
 </div>
 <p><br></p>
 <div class="fragment green">
-<p>Data is not reality itself<br>
-it is a trace of reality</p>
+<p>Data is not reality it is a trace of reality</p>
 </div>
 </section>
-<section id="a-piece-of-data" class="slide level2">
-<h2>A piece of data</h2>
+<section id="a-data-point" class="slide level2">
+<h2>A data point</h2>
 <p><br></p>
 <div class="Huge">
 <p>23°C</p>
@@ -719,21 +713,18 @@ it is a trace of reality</p>
 </blockquote>
 </div>
 <div class="fragment">
-<p>Can be</p>
-</div>
+<p>It can be a</p>
 <div class="blue">
 <ul>
-<li class="fragment">a number<br>
-</li>
-<li class="fragment">text<br>
-</li>
-<li class="fragment">a date<br>
-</li>
+<li>number</li>
+<li>text</li>
+<li>date</li>
 </ul>
 </div>
+</div>
 </section>
-<section id="data-is-often-time-based" class="slide level2">
-<h2>Data is often time-based</h2>
+<section id="often-data-is-time-based" class="slide level2">
+<h2>Often, data is time-based</h2>
 <p><br></p>
 <div class="blue">
 <p>Yesterday: <span class="Large"><strong>21°C</strong></span></p>
@@ -742,17 +733,17 @@ it is a trace of reality</p>
 </div>
 <p><br></p>
 <div class="fragment">
-<p>Is this still a single piece of data?</p>
-</div>
-<div class="fragment red Large">
+<p>Is this still a single data point?</p>
+<div class="red Large">
 <p>Nope</p>
 </div>
-<div class="fragment green">
-<p><span class="glyph arrow" style="font-size:1.2em;"></span> Multiple observations</p>
+<div class="green">
+<p><span class="glyph arrow" style="font-size:1.2em;"></span> Several observations</p>
+</div>
 </div>
 </section>
-<section id="data-is-often-time-based-1" class="slide level2">
-<h2>Data is often time-based</h2>
+<section id="often-data-is-time-based-1" class="slide level2">
+<h2>Often, data is time-based</h2>
 <p><br></p>
 <div class="blue">
 <p>Yesterday: <span class="Large"><strong>21°C</strong></span></p>
@@ -760,19 +751,17 @@ it is a trace of reality</p>
 <p>Tomorrow: <span class="Large"><strong>25°C</strong></span></p>
 </div>
 <p><br></p>
-<div class="fragment">
-<p>This is still manageable, but…</p>
-</div>
+<p>So far, so good, but…</p>
 <p><br></p>
 <div class="fragment">
-<p>A problem is beginning to emerge: <span class="red">it is not well structured</span></p>
+<p>We’re starting to see a problem: <span class="red">It’s messy</span></p>
+<div class="orange Large big_title">
+<p>And it’s becoming hard to read</p>
 </div>
-<div class="fragment orange Large big_title">
-<p>And it is becoming difficult to read</p>
 </div>
 </section>
-<section id="we-need-a-better-structure" class="slide level2">
-<h2>We need a better structure</h2>
+<section id="we-should-structure-this-a-little-better" class="slide level2">
+<h2>We should structure this a little better</h2>
 <p><br><br></p>
 <div class="quarto-layout-panel" data-layout-ncol="3">
 <div class="quarto-layout-row">
@@ -780,9 +769,9 @@ it is a trace of reality</p>
 <p>Yesterday: <span class="Large"><strong>21°C</strong></span></p>
 <p>Today: <span class="Large"><strong>23°C</strong></span></p>
 <p>Tomorrow: <span class="Large"><strong>25°C</strong></span></p>
-</div><div class="column fragment huge quarto-layout-cell" style="flex-basis: 21.1%;justify-content: flex-start;">
+</div><div class="column huge quarto-layout-cell" style="flex-basis: 21.1%;justify-content: flex-start;">
 <p><span class="glyph arrow" style="font-size:1.2em;"></span></p>
-</div><div class="column fragment quarto-layout-cell" style="flex-basis: 47.4%;justify-content: center;">
+</div><div class="column quarto-layout-cell" style="flex-basis: 47.4%;justify-content: center;">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -810,22 +799,20 @@ it is a trace of reality</p>
 <p><br><br></p>
 <div class="fragment">
 <blockquote>
-<p>We have just invented… a table</p>
+<p>We’ve just invented… a table</p>
 </blockquote>
 </div>
 </section>
-<section id="much-better" class="slide level2">
-<h2>Much better!</h2>
+<section id="thats-already-better" class="slide level2">
+<h2>That’s already better!</h2>
 <p><br><br><br></p>
 <div class="fragment green r-fit-text">
-<p>What if we add another variable?</p>
+<p>What if we add a variable?</p>
 </div>
 </section>
-<section id="what-if-we-add-another-variable" class="slide level2">
-<h2>What if we add another variable?</h2>
+<section id="what-if-we-add-a-variable" class="slide level2">
+<h2>What if we add a variable?</h2>
 <p><br><br></p>
-<div class="r-stack">
-<div class="fragment fade-in-then-out">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -848,8 +835,10 @@ it is a trace of reality</p>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="fragment fade-in">
+</section>
+<section id="what-if-we-add-a-variable-1" class="slide level2">
+<h2>What if we add a variable?</h2>
+<p><br><br></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -876,13 +865,11 @@ it is a trace of reality</p>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
 <p><br><br></p>
 <div class="fragment blue">
 <blockquote>
-<p>Each row <span class="glyph">=</span> one observation</p>
-<p>Each column <span class="glyph">=</span> one variable</p>
+<p>Each row <span class="glyph">=</span> an observation</p>
+<p>Each column <span class="glyph">=</span> a variable</p>
 </blockquote>
 </div>
 </section>
@@ -894,7 +881,7 @@ it is a trace of reality</p>
 <p><span class="blue fragment">described by variables</span></p>
 </div>
 </section>
-<section id="section-10" class="slide level2 warning vcenter">
+<section id="section-10" class="slide level2 warning center">
 <h2></h2>
 <p><span class="Large">Also…</span></p>
 <div class="fragment r-fit-text bold">
@@ -933,8 +920,8 @@ it is a trace of reality</p>
 </table>
 <p><br></p>
 <blockquote>
-<p>Observation in a <code>row</code></p>
-<p>Variable in a <code>column</code></p>
+<p>Observation in <code>row</code></p>
+<p>Variable in <code>column</code></p>
 </blockquote>
 </section>
 <section id="table-orientation-1" class="slide level2">
@@ -966,91 +953,65 @@ it is a trace of reality</p>
 </table>
 <p><br></p>
 <blockquote>
-<p>Observation in a <code>column</code></p>
-<p>Variable in a <code>row</code></p>
+<p>Observation in <code>column</code></p>
+<p>Variable in <code>row</code></p>
 </blockquote>
 <p><br></p>
 <div class="fragment">
-<p><span class="big_title green">This is the most common orientation!</span><br>
-(and the one we will use)</p>
+<p><span class="big_title green">This is the most common one!</span> (and the one we will use)</p>
 </div>
 </section>
 <section id="section-11" class="slide level2">
 <h2></h2>
-<p>There is no single <strong>RIGHT</strong> orientation</p>
+<p>There is no <strong>ONE</strong> right orientation</p>
 <p><br></p>
 <div class="fragment">
 <p>But one orientation is more practical:</p>
 <div class="green">
-<p>Observation <span class="glyph">=</span> row<br>
-Variable <span class="glyph">=</span> column</p>
+<p>Observation <span class="glyph">=</span> row Variable <span class="glyph">=</span> column</p>
 </div>
 </div>
 <p><br></p>
 <div class="fragment">
 <p>Why?</p>
-</div>
 <div class="blue">
 <ul>
-<li class="fragment">simpler calculations<br>
-</li>
-<li class="fragment">clear structure<br>
-</li>
-<li class="fragment">optimized tools<br>
-</li>
-<li class="fragment">more efficient reading (vertical comparison)</li>
+<li>simpler calculations</li>
+<li>clear structure</li>
+<li>optimized tools</li>
+<li>more effective reading (vertical comparison)</li>
 </ul>
+</div>
 </div>
 </section>
 <section id="section-12" class="slide level2">
 <h2></h2>
 <div class="r-fit-text">
-<p>One row</p>
-<p><span class="glyph">=</span> <span class="green">one situation</span></p>
+<p>A row</p>
+<p><span class="glyph">=</span> <span class="green">a situation</span></p>
 </div>
 </section>
 <section id="section-13" class="slide level2">
 <h2></h2>
 <div class="r-fit-text">
-<p>One column</p>
-<p><span class="glyph">=</span> <span class="green">one piece of information</span></p>
+<p>A column</p>
+<p><span class="glyph">=</span> <span class="green">a piece of information</span></p>
 </div>
 </section>
 <section id="section-14" class="slide level2 conclusion">
 <h2></h2>
 <div class="r-fit-text green">
-<p>A table is not merely a tool…</p>
+<p>A table is not a tool…</p>
 <p>it is a <code>consequence</code></p>
 </div>
-</section>
-<section id="break" class="slide level2">
-<h2><span class="green">Break</span></h2>
-<div class="chrono">
-  <canvas class="chrono_canvas" width="1000" height="600"></canvas>
-
-  <div class="row">
-    <div class="parameter">
-      <button class="chrono_play">▶</button>
-      <button class="chrono_reset">↩</button>
-
-      <label class="duration">
-        <input class="chrono_min" type="number" value="5">
-        <span>min</span>
-        <input class="chrono_sec" type="number" value="0">
-        <span>s</span>
-      </label>
-    </div>
-  </div>
-</div>
-
 <!-- /BLOCK: -->
-<!-- BLOCK: 3 TABLES -->
+<!-- BLOCK: 3 TABLE -->
 </section>
 <section id="block-3" class="slide level2 bloc" data-name="Block 3">
 <h2>BLOCK 3</h2>
 </section>
-<section id="now-that-we-have-a-table-what-can-we-do-with-it" class="slide level2 question">
-<h2>Now that we have a <code>table</code>… what can we do with it?</h2>
+<section id="now-that-we-have-a-table-what-do-we-do-with-it" class="slide level2 question">
+<h2>Now that we have a <code>table</code>… what do we do with it?</h2>
 </section>
 <section id="section-15" class="slide level2">
 <h2></h2>
@@ -1082,26 +1043,26 @@ Variable <span class="glyph">=</span> column</p>
 </tbody>
 </table>
 <p><br></p>
-<div class="fragment large">
+<div class="large">
 <p><strong>What can we do with this?</strong></p>
 </div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="fragment quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="green quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
-<li class="fragment">What is the average temperature?</li>
-<li class="fragment">Which day is the warmest?</li>
-<li class="fragment">Is humidity decreasing?</li>
+<li>What is the average temperature?</li>
+<li>Which day is the warmest?</li>
+<li>Is the humidity decreasing?</li>
 </ul>
 </div>
 <div class="orange fragment quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><span class="big_title"><span class="glyph arrow" style="font-size:1.2em;"></span> We can analyze the data!</span></p>
+<p><span class="big_title"><span class="glyph arrow" style="font-size:1.2em;"></span> We can analyze things!</span></p>
 </div>
 </div>
 </div>
 </section>
-<section id="overall" class="slide level2">
-<h2>Overall</h2>
+<section id="in-general" class="slide level2">
+<h2>In general</h2>
 <p><br></p>
 <p>There are <code>two</code> fundamental operations:</p>
 <p><br></p>
@@ -1116,21 +1077,21 @@ Variable <span class="glyph">=</span> column</p>
 <h2>Operation 1 - <code>EXTRACT</code></h2>
 <p><br></p>
 <div class="blue large">
-<p>Extract <span class="glyph">=</span> select information that is already present</p>
+<p>Extract <span class="glyph">=</span> select information that is already there</p>
 </div>
 <p><br></p>
 <div class="fragment">
 <p>Example:</p>
-</div>
 <ul>
-<li class="fragment">today’s temperature <span class="glyph arrow" style="font-size:1.2em;"></span> 23</li>
-<li class="fragment">yesterday’s humidity <span class="glyph arrow" style="font-size:1.2em;"></span> 60</li>
+<li>today’s temperature <span class="glyph arrow" style="font-size:1.2em;"></span> 23</li>
+<li>yesterday’s humidity <span class="glyph arrow" style="font-size:1.2em;"></span> 60</li>
 </ul>
+</div>
 <p><br></p>
 <div class="fragment">
 <blockquote>
-<p>👉 key idea:</p>
-<p>retrieve a value</p>
+<p>👉 idea:</p>
+<p>look up a value</p>
 </blockquote>
 </div>
 </section>
@@ -1138,20 +1099,20 @@ Variable <span class="glyph">=</span> column</p>
 <h2>Operation 2 - <code>PRODUCE</code></h2>
 <p><br></p>
 <div class="blue large">
-<p>Produce <span class="glyph">=</span> create new information</p>
+<p>Produce <span class="glyph">=</span> create information</p>
 </div>
 <p><br></p>
 <div class="fragment">
 <p>Example:</p>
-</div>
 <ul>
-<li class="fragment">average temperature</li>
-<li class="fragment">difference between days</li>
+<li>average temperature</li>
+<li>difference between days</li>
 </ul>
+</div>
 <p><br></p>
 <div class="fragment">
 <blockquote>
-<p>👉 key idea:</p>
+<p>👉 idea:</p>
 <p>calculation / transformation</p>
 </blockquote>
 </div>
@@ -1198,7 +1159,7 @@ Variable <span class="glyph">=</span> column</p>
 <section id="section-16" class="slide level2 conclusion">
 <h2></h2>
 <div class="r-fit-text green">
-<p>Computer processing of data</p>
+<p>Computer data processing</p>
 <p><span class="glyph">=</span></p>
 <p><code>automating</code> these operations</p>
 </div>
@@ -1207,7 +1168,7 @@ Variable <span class="glyph">=</span> column</p>
 <h2></h2>
 <div class="r-fit-text green">
 <p>A table is not just for storing data</p>
-<p>It also helps us answer questions</p>
+<p>It also helps answer questions</p>
 </div>
 <!-- /BLOCK: -->
 <!-- BLOCK: 4 CALC -->
@@ -1224,48 +1185,48 @@ Variable <span class="glyph">=</span> column</p>
 <p><br><br></p>
 <div class="Large blue">
 <ul>
-<li class="fragment">Excel</li>
-<li class="fragment">Google Sheets</li>
-<li class="fragment">Calc</li>
-<li class="fragment">etc.</li>
+<li>Excel</li>
+<li>Google Sheets</li>
+<li>Calc</li>
+<li>etc</li>
 </ul>
 </div>
 <p><span class="fragment diag_text HUGEE red">?</span></p>
 </section>
 <section id="section-18" class="slide level2 slide_white bold hcenter" data-background-color="#ffffff">
 <h2>1970’</h2>
-
-<img data-src="content/image/history_1.png" style="width:100.0%" class="r-stretch"></section>
+<p><img data-src="content/image/history_1.png" style="width:100.0%"></p>
+</section>
 <section id="section-19" class="slide level2 slide_white bold hcenter" data-background-color="#ffffff">
 <h2>1970’</h2>
-
-<img data-src="content/image/history_2.png" style="width:100.0%" class="r-stretch"></section>
+<p><img data-src="content/image/history_2.png" style="width:100.0%"></p>
+</section>
 <section id="section-20" class="slide level2 slide_white bold hcenter" data-background-color="#ffffff">
 <h2>1970’</h2>
-
-<img data-src="content/image/history_3.png" style="width:100.0%" class="r-stretch"></section>
-<section id="section-21" class="slide level2 vcenter" data-background-image="content/image/visicalc.png" data-background-size="cover">
+<p><img data-src="content/image/history_3.png" style="width:100.0%"></p>
+</section>
+<section id="section-21" class="slide level2 center" data-background-image="content/image/visicalc.png" data-background-size="cover">
 <h2></h2>
 <p><br><br><br></p>
 <div class="fragment confetti HUGE big_title">
 <p>VISICALC</p>
 </div>
 <div class="fragment LARGE">
-<p>The very first spreadsheet program</p>
+<p>The first spreadsheet ever</p>
 </div>
 <div class="fragment large">
-<p>(on Mac)</p>
+<p>(on the Mac)</p>
 </div>
 </section>
-<section id="from-that-point-onward-1979" class="slide level2 conclusion large">
-<h2>From that point onward (1979)</h2>
+<section id="from-that-point-on-1979" class="slide level2 conclusion large">
+<h2>From that point on (1979)</h2>
 <p><br><br></p>
 <div class="blue large">
-<p>Computing was no longer just for geeks</p>
+<p>Computing is no longer just for geeks</p>
 </div>
 <p><br><br></p>
 <div class="fragment green Large">
-<p>It became a workplace tool</p>
+<p>It becomes a work tool</p>
 </div>
 </section>
 <section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206172726f77203e7d7d-today" class="slide level2 hcenter">
@@ -1283,11 +1244,11 @@ Variable <span class="glyph">=</span> column</p>
 <p><br></p>
 <div class="fragment green large">
 <p>The software has changed.</p>
-<p>The underlying principles have remained the same.</p>
+<p>The principles, however, have stayed the same.</p>
 </div>
 </section>
-<section id="well-then" class="slide level2 good Large">
-<h2>Well then</h2>
+<section id="all-right" class="slide level2 good Large">
+<h2>All right</h2>
 <div class="fragment large bold">
 <p>Let’s see how it works</p>
 </div>
@@ -1298,9 +1259,9 @@ Variable <span class="glyph">=</span> column</p>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="blue LARGE quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>One piece of data</p>
+<p>A data point</p>
 <p><span class="glyph">=</span></p>
-<p>one cell</p>
+<p>a cell</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><video data-src="content/video/tableur.mp4" controls=""><a href="content/video/tableur.mp4">Video</a></video></p>
@@ -1311,11 +1272,11 @@ Variable <span class="glyph">=</span> column</p>
 <section id="think-of-each-cell" class="slide level2 hcenter">
 <h2>Think of each cell</h2>
 <p><span class="Large blue">as the display of a calculator</span></p>
-
-<img data-src="content/image/calculatrice.png" style="width:100.0%" class="r-stretch"></section>
+<p><img data-src="content/image/calculatrice.png" style="width:40.0%"></p>
+</section>
 <section id="this-gives-us" class="slide level2 hcenter">
 <h2>This gives us</h2>
-<p><span class="Large blue">a considerable number of calculators that can be linked together.</span></p>
+<p><span class="Large blue">a huge number of calculators that can be connected to one another.</span></p>
 <div class="columns">
 <div class="column" style="width:45%;">
 <p><img data-src="content/image/calc.png" style="width:100.0%"></p>
@@ -1344,21 +1305,19 @@ Variable <span class="glyph">=</span> column</p>
 <p><br></p>
 <p><video data-src="content/video/extraire.mp4" style="width:60.0%" controls=""><a href="content/video/extraire.mp4">Video</a></video></p>
 </section>
-<section id="important" class="slide level2">
-<h2>Important</h2>
+<section id="caution" class="slide level2">
+<h2>Caution</h2>
 <div class="r-fit-text green">
-<p>Every operation begins with one of <span class="Large"><span class="glyph">=</span> <span class="glyph">+</span> <span class="glyph">−</span></span></p>
+<p>Every operation starts with a <span class="Large"><span class="glyph">=</span> <span class="glyph">+</span> <span class="glyph">−</span></span></p>
 </div>
 <div class="fragment red Large">
 <p>otherwise <span class="glyph arrow" style="font-size:1.2em;"></span> text</p>
-</div>
 <p><br></p>
-<div class="fragment">
 <p><video data-src="content/video/equation.mp4" style="width:60.0%" controls=""><a href="content/video/equation.mp4">Video</a></video></p>
 </div>
 </section>
-<section id="extract-using-a-formula" class="slide level2">
-<h2>Extract using a formula</h2>
+<section id="extracting-with-a-formula" class="slide level2">
+<h2>Extracting with a formula</h2>
 <p><br></p>
 <div class="Large blue">
 <p><strong>=B2</strong> <span class="glyph arrow" style="font-size:1.2em;"></span> 21</p>
@@ -1366,9 +1325,7 @@ Variable <span class="glyph">=</span> column</p>
 <p><br></p>
 <div class="fragment green Large">
 <p>A formula can also simply</p>
-<p>reference a cell</p>
-</div>
-<div class="fragment">
+<p>refer to a cell</p>
 <p><video data-src="content/video/pluie.mp4" style="width:60.0%" controls=""><a href="content/video/pluie.mp4">Video</a></video></p>
 </div>
 </section>
@@ -1376,7 +1333,7 @@ Variable <span class="glyph">=</span> column</p>
 <h2>Produce <span class="glyph">=</span> create information</h2>
 <div class="Large blue">
 <p>A formula <span class="glyph">=</span></p>
-<p>one way to produce data</p>
+<p>a way to produce data</p>
 </div>
 <p><br></p>
 <p><video data-src="content/video/produire.mp4" style="width:60.0%" controls=""><a href="content/video/produire.mp4">Video</a></video></p>
@@ -1385,25 +1342,19 @@ Variable <span class="glyph">=</span> column</p>
 <h2>A cell can contain:</h2>
 <div class="blue large">
 <ul>
-<li class="fragment">data (<strong>23</strong>)</li>
-<li class="fragment">or a formula (<strong>=AVERAGE(…)</strong>)</li>
+<li>data (<strong>23</strong>)</li>
+<li>or a formula (<strong>=AVERAGE(…)</strong>)</li>
 </ul>
 </div>
-<div class="green">
-<div class="fragment">
-<p>One advantage of this kind of tool is that:</p>
-</div>
-<div class="fragment">
-<p>If a value changes, <span class="big_title"><strong>everything updates automatically</strong></span></p>
-</div>
-</div>
+<div class="green fragment">
+<p>The great thing about these tools:</p>
+<p>If a data point changes, <span class="big_title"><strong>everything updates automatically</strong></span></p>
 <p><br></p>
-<div class="fragment">
 <p><video data-src="content/video/update.mp4" style="width:40.0%" controls=""><a href="content/video/update.mp4">Video</a></video></p>
 </div>
 </section>
-<section id="a-range-of-cells" class="slide level2">
-<h2>A range of cells</h2>
+<section id="a-cell-range" class="slide level2">
+<h2>A cell range</h2>
 <p><br></p>
 <div class="Large blue hcenter">
 <p>B2<strong>:</strong>B4</p>
@@ -1411,9 +1362,7 @@ Variable <span class="glyph">=</span> column</p>
 <p><br></p>
 <div class="fragment Large green">
 <p><span class="glyph">=</span> from B2 to B4 (<strong>multiple cells</strong>)</p>
-</div>
 <p><br></p>
-<div class="fragment">
 <p><video data-src="content/video/plage.mp4" style="width:60.0%" controls=""><a href="content/video/plage.mp4">Video</a></video></p>
 </div>
 </section>
@@ -1429,8 +1378,8 @@ Variable <span class="glyph">=</span> column</p>
 <p>to <code>multiple</code> cells</p>
 </div>
 </section>
-<section id="what-about-the-average-temperature" class="slide level2">
-<h2>What about the average temperature?</h2>
+<section id="and-what-about-the-average-temperature" class="slide level2">
+<h2>And what about the average temperature?</h2>
 <p><br></p>
 <table class="caption-top">
 <thead>
@@ -1489,15 +1438,15 @@ Variable <span class="glyph">=</span> column</p>
 </div>
 <p><br></p>
 <div class="red fragment large">
-<p>Phew, it is not too hot at the moment 🤔</p>
+<p>Phew, it’s not too hot at the moment 🤔</p>
 </div>
 </section>
 <section id="section-23" class="slide level2 conclusion">
 <h2></h2>
 <div class="Large green">
-<p>We are not merely performing calculations</p>
+<p>We don’t just do calculations</p>
 <p><br></p>
-<p>We are building <code>relationships</code> between data</p>
+<p>We build <code>relationships</code> between data</p>
 </div>
 </section>
 <section id="section-24" class="slide level2">
@@ -1506,33 +1455,30 @@ Variable <span class="glyph">=</span> column</p>
 <div class="Large">
 <p>We use <span class="big_title green">Calc</span>, but what you learn works everywhere</p>
 <p><br></p>
-<p>In the practical sessions, we will mainly use <span class="big_title green">Calc</span>, but Google Sheets and Excel work too.</p>
+<p>For practicals, we will mainly use <span class="big_title green">Calc</span> but Google Sheets or Excel work too.</p>
 </div>
 </section>
 <section id="section-25" class="slide level2 conclusion">
 <h2></h2>
 <div class="class Large green">
-<p>A cell is not just a box…</p>
+<p>A cell is not a box…</p>
 <p>it is a <code>variable</code>.</p>
 </div>
 <!-- /BLOCK -->
-<!-- BLOCK: Block 5 CONCLUSION -->
+<!-- BLOCK: 5 CONCLUSION -->
 </section>
 <section id="conclusion" class="slide level2 bloc" data-name="Conclusion">
 <h2>Conclusion</h2>
 </section>
-<section id="in-summary" class="slide level2">
-<h2>In summary</h2>
+<section id="to-sum-up" class="slide level2">
+<h2>To sum up</h2>
 <p><br><br></p>
 <div class="blue large">
 <ul>
-<li class="fragment">Data <span class="glyph">=</span> encoded observation<br>
-</li>
-<li class="fragment">A table <span class="glyph">=</span> structure<br>
-</li>
-<li class="fragment">Extract / produce <span class="glyph">=</span> operations<br>
-</li>
-<li class="fragment">A spreadsheet <span class="glyph">=</span> tool</li>
+<li>A data point <span class="glyph">=</span> encoded observation</li>
+<li>A table <span class="glyph">=</span> structure</li>
+<li>Extract / produce <span class="glyph">=</span> operations</li>
+<li>A spreadsheet <span class="glyph">=</span> tool</li>
 </ul>
 </div>
 </section>
@@ -1540,26 +1486,26 @@ Variable <span class="glyph">=</span> column</p>
 <h2></h2>
 <div class="green">
 <p>A table is not just for storing data</p>
-<p>It is used to <code>answer</code> questions</p>
+<p>It helps <code>answer</code> questions</p>
 </div>
 </section>
 <section id="section-27" class="slide level2 conclusion Large">
 <h2></h2>
 <div class="green">
-<p>We are not merely performing calculations</p>
-<p>We are building <code>relationships</code> between data</p>
+<p>We don’t just do calculations</p>
+<p>We build <code>relationships</code> between data</p>
 </div>
 </section>
 <section id="section-28" class="slide level2 conclusion Large">
 <h2></h2>
 <p>We now have</p>
-<p>the foundations…</p>
+<p>the basics…</p>
 </section>
 <section id="to-recap" class="slide level2 conclusion hcenter">
 <h2>To recap</h2>
 <p><br></p>
 <div class="blue">
-<p>Data</p>
+<p>A data point</p>
 <div class="fragment">
 <p><span class="glyph arrow_down" style="font-size:1.2em;"></span></p>
 <p>A table</p>
@@ -1575,10 +1521,10 @@ Variable <span class="glyph">=</span> column</p>
 </div>
 <p><br></p>
 <div class="fragment green Large">
-<p>Welcome to computer-based data processing.</p>
+<p>Welcome to computer data processing.</p>
 </div>
 </section>
-<section id="section-29" class="slide level2 matrix" data-background-iframe-sandbox="allow-scripts" data-state="hide-menubar" data-background-iframe="_extensions/local/matrix/matrix.html">
+<section id="section-29" class="slide level2 matrix" data-background-iframe-sandbox="allow-scripts" data-state="hide-menubar" data-background-iframe="_extensions/local/slide/matrix/matrix.html">
 <h2></h2>
 <p><br><br><br><br></p>
 <p><span class="Large big_title matrix">That’s all for today</span></p>
@@ -1602,8 +1548,9 @@ Variable <span class="glyph">=</span> column</p>
   <script src="index_files/libs/revealjs/plugin/simplemenu/simplemenu.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-leaderline/reveal-leader-line.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-attribution/attribution.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-quiz/quiz.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="index_files/libs/revealjs/plugin/terminal/easter-eggs.js"></script>
+  <script src="index_files/libs/revealjs/plugin/terminal/terminal.js"></script>
   <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1627,7 +1574,6 @@ Variable <span class="glyph">=</span> column</p>
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'simplemenu': {"menubarclass":"menubar","menuclass":"menu","activeclass":"active","activeelement":"li","flat":true,"barhtml":{"header":"","footer":"<div class='menubar'><ul class='menu'></ul></div>"},"scale":0.4},
-'quiz': {"checkKey":"c","resetKey":"q","shuffleKey":"t","allowNumberKeys":true,"disableOnCheck":false,"shuffleOptions":true,"defaultCorrect":"","defaultIncorrect":"","includeScore":false,"disableReset":false},
 'pointer': {"key":"p","color":"#12ff00","pointerSize":16,"alwaysVisible":false,"pointsize":20},
 'smaller': false,
  
@@ -1779,7 +1725,7 @@ Variable <span class="glyph">=</span> column</p>
         height: 1080,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.1,
+        margin: 0,
 
         math: {
           mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
@@ -1799,13 +1745,43 @@ Variable <span class="glyph">=</span> column</p>
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Chrono, Simplemenu, RevealLeaderline, RevealAttribution, RevealQuiz, RevealPointer, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Chrono, Simplemenu, RevealLeaderline, RevealAttribution, RevealPointer, Terminal, QuartoSupport,
 
           RevealMath,
           RevealNotes,
           RevealSearch,
           RevealZoom
         ]
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const root = document.querySelector(".reveal .slides");
+        if (!root || typeof twemoji === "undefined") return;
+
+        const excluded = new Set(["CODE", "PRE", "SCRIPT", "STYLE", "TEXTAREA"]);
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+          const node = walker.currentNode;
+          if (!excluded.has(node.parentElement?.tagName)) textNodes.push(node);
+        }
+
+        for (const node of textNodes) {
+          const html = twemoji.parse(node.data, {
+            base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/",
+            folder: "svg",
+            ext: ".svg",
+            className: "twemoji"
+          });
+
+          if (html === node.data) continue;
+          const template = document.createElement("template");
+          template.innerHTML = html;
+          node.replaceWith(template.content);
+        }
       });
     </script>
     <script type="text/javascript" id="code-annotation-fragments">
@@ -1879,6 +1855,41 @@ Variable <span class="glyph">=</span> column</p>
 
     </script>
 
+    <script>
+    (() => {
+      const fitTextElements = document.querySelectorAll(".r-fit-text");
+
+      const fitToContentWidth = (element) => {
+        const parent = element.parentElement;
+        if (!parent) return;
+
+        const parentStyle = window.getComputedStyle(parent);
+        const horizontalPadding =
+          (parseFloat(parentStyle.paddingLeft) || 0) +
+          (parseFloat(parentStyle.paddingRight) || 0);
+        const availableWidth = parent.clientWidth - horizontalPadding;
+        const contentWidth = element.scrollWidth;
+        const fontSize = parseFloat(window.getComputedStyle(element).fontSize);
+
+        if (availableWidth > 0 && contentWidth > availableWidth && fontSize > 0) {
+          element.style.fontSize = `${fontSize * (availableWidth / contentWidth)}px`;
+        }
+      };
+
+      const fitAllToContentWidth = () => {
+        fitTextElements.forEach(fitToContentWidth);
+      };
+
+      fitTextElements.forEach((element) => {
+        element.addEventListener("fit", () => requestAnimationFrame(() => fitToContentWidth(element)));
+      });
+
+      window.addEventListener("load", fitAllToContentWidth);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(fitAllToContentWidth);
+      }
+    })();
+    </script>
     <script>
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll("iframe[allow]").forEach((f) => {
