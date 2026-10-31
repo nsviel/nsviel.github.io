@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated NPU Icon</title>
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    svg {
+      width: min(92vw, 560px);
+      height: auto;
+      overflow: visible;
+      font-family: Arial, Helvetica, sans-serif;
+      transform: translateX(300px);
+    }
+
+    .pulse {
+      animation: pulse 1.8s ease-in-out infinite;
+    }
+
+    .flow-a {
+      animation: flowA 1.6s linear infinite;
+    }
+
+    .flow-b {
+      animation: flowB 2.2s linear infinite;
+    }
+
+    .node {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: nodeGlow 1.7s ease-in-out infinite;
+    }
+
+    .node.delay-1 { animation-delay: 0.2s; }
+    .node.delay-2 { animation-delay: 0.4s; }
+    .node.delay-3 { animation-delay: 0.6s; }
+    .node.delay-4 { animation-delay: 0.8s; }
+    .node.delay-5 { animation-delay: 1s; }
+
+    .chip-glow {
+      animation: chipGlow 1.5s ease-in-out infinite;
+    }
+
+    .scan {
+      animation: scanMove 5s ease-in-out infinite;
+    }
+
+    .infer-ring {
+      stroke-dasharray: 6 10;
+      animation: dashMove 1.6s linear infinite;
+    }
+
+    .text-flicker {
+      animation: textFlicker 2s steps(1) infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.55; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes nodeGlow {
+      0%, 100% { opacity: 0.65; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.18); }
+    }
+
+    @keyframes chipGlow {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes dashMove {
+      from { stroke-dashoffset: 0; }
+      to { stroke-dashoffset: -32; }
+    }
+
+    @keyframes scanMove {
+      0% { transform: translateX(-28px); opacity: 0; }
+      20% { opacity: 0.3; }
+      40% { transform: translateX(50px); opacity: 0.5; }
+      60% { opacity: 0.3; }
+      80% { opacity: 0.3; }
+      100% { transform: translateX(170px); opacity: 0; }
+    }
+
+    @keyframes flowA {
+      0% { transform: translateX(0px); opacity: 0.15; }
+      25% { opacity: 0.9; }
+      100% { transform: translateX(74px); opacity: 0.1; }
+    }
+
+    @keyframes flowB {
+      0% { transform: translateX(0px); opacity: 0.15; }
+      35% { opacity: 1; }
+      100% { transform: translateX(118px); opacity: 0.08; }
+    }
+
+    @keyframes textFlicker {
+      0%, 70%, 100% { opacity: 1; }
+      71%, 78% { opacity: 0.35; }
+    }
+  </style>
+</head>
+<body>
+  <svg viewBox="0 0 560 430" aria-label="Icône NPU animée avec réseau de neurones au-dessus">
+    <defs>
+      <linearGradient id="npuBody" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#1f2430"/>
+        <stop offset="100%" stop-color="#12151d"/>
+      </linearGradient>
+      <linearGradient id="panelBg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#151a22"/>
+        <stop offset="100%" stop-color="#0a0e15"/>
+      </linearGradient>
+      <linearGradient id="trace" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#46d4ff"/>
+        <stop offset="100%" stop-color="#74ffb9"/>
+      </linearGradient>
+      <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.28"/>
+      </filter>
+    </defs>
+
+    <!-- Neural network panel -->
+    <g filter="url(#softShadow)">
+      <rect x="125" y="18" rx="20" ry="20" width="310" height="145" fill="url(#panelBg)" stroke="#394252" stroke-width="3"/>
+      <rect x="142" y="35" rx="12" width="276" height="111" fill="#0b1017"/>
+
+      <!-- status text -->
+      <text class="text-flicker" x="158" y="56" font-size="13" fill="#82f3c4">NPU // inference graph</text>
+      <circle class="pulse" cx="400" cy="50" r="5" fill="#74ffb9" opacity="1"/>
+
+      <!-- connections -->
+      <g stroke="url(#trace)" stroke-width="2.6" fill="none" opacity="0.7">
+        <!-- layer 1 -> 2 -->
+        <path d="M180 80 C205 80, 220 88, 246 92.5"/>
+        <path d="M180 80 C205 90, 220 100, 246 117.5"/>
+
+        <path d="M180 105 C205 100, 220 95, 246 92.5"/>
+        <path d="M180 105 C205 110, 220 112, 246 117.5"/>
+
+        <path d="M180 130 C205 120, 220 105, 246 92.5"/>
+        <path d="M180 130 C205 125, 220 122, 246 117.5"/>
+
+        <!-- layer 2 -> 3 -->
+        <path d="M258 92.5 C286 92.5, 300 92.5, 328 92.5"/>
+        <path d="M258 92.5 C286 105, 300 110, 328 117.5"/>
+
+        <path d="M258 117.5 C286 110, 300 105, 328 92.5"/>
+        <path d="M258 117.5 C286 117.5, 300 117.5, 328 117.5"/>
+
+        <!-- layer 3 -> output -->
+        <path d="M340 92.5 C362 92.5, 374 100, 392 105"/>
+        <path d="M340 117.5 C362 117.5, 374 110, 392 105"/>
+      </g>
+      <!-- flowing dots on paths -->
+      <g>
+        <circle class="flow-a" cx="196" cy="76" r="3.5" fill="#8cf9d1"/>
+        <circle class="flow-b" cx="196" cy="102" r="3.5" fill="#4ad6ff"/>
+        <circle class="flow-a" cx="274" cy="86" r="3.5" fill="#8cf9d1" style="animation-delay:0.3s"/>
+        <circle class="flow-b" cx="344" cy="92" r="3.5" fill="#4ad6ff" style="animation-delay:0.5s"/>
+      </g>
+
+      <!-- nodes -->
+      <g>
+        <!-- input -->
+        <circle class="node" cx="170" cy="80" r="9" fill="#46d4ff"/>
+        <circle class="node delay-1" cx="170" cy="105" r="9" fill="#46d4ff"/>
+        <circle class="node delay-2" cx="170" cy="130" r="9" fill="#46d4ff"/>
+        <!-- hidden 1 -->
+        <circle class="node delay-1" cx="252" cy="92.5" r="9" fill="#7e8cff"/>
+        <circle class="node delay-2" cx="252" cy="117.5" r="9" fill="#7e8cff"/>
+        <!-- hidden 2 -->
+        <circle class="node delay-3" cx="334" cy="92.5" r="9" fill="#ff79c8"/>
+        <circle class="node delay-4" cx="334" cy="117.5" r="9" fill="#ff79c8"/>
+        <!-- output -->
+        <circle class="node delay-5" cx="398" cy="105" r="10" fill="#74ffb9"/>
+        <circle class="infer-ring" cx="398" cy="105" r="18" fill="none" stroke="#74ffb9" stroke-width="2" opacity="0.75"/>
+      </g>
+
+      <!-- scan line -->
+      <rect class="scan" x="200" y="35" width="46" height="111" fill="#7fffd4" opacity="0.08"/>
+    </g>
+
+    <!-- cable -->
+    <path d="M280 163 C280 188, 280 195, 280 214" fill="none" stroke="#556173" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- NPU board -->
+    <g filter="url(#softShadow)">
+      <rect x="82" y="210" rx="24" ry="24" width="396" height="160" fill="url(#npuBody)" stroke="#4c5667" stroke-width="3"/>
+      <rect x="478" y="242" width="24" height="100" rx="4" fill="#d6b36a"/>
+      <rect x="488" y="248" width="3" height="10" fill="#8a6b31"/>
+      <rect x="488" y="264" width="3" height="10" fill="#8a6b31"/>
+      <rect x="488" y="280" width="3" height="10" fill="#8a6b31"/>
+      <rect x="488" y="296" width="3" height="10" fill="#8a6b31"/>
+
+      <!-- chip area -->
+      <rect x="155" y="238" rx="16" width="170" height="102" fill="#111723" stroke="#586378" stroke-width="2.5"/>
+      <rect x="185" y="258" rx="10" width="110" height="62" fill="#1b2330" stroke="#6f7b8f"/>
+      <rect class="chip-glow" x="198" y="270" rx="8" width="84" height="38" fill="#172634" stroke="#74ffb9" opacity="0.95"/>
+      <text x="240" y="294" text-anchor="middle" font-size="20" font-weight="700" fill="#9ef7d5">NPU</text>
+
+      <!-- chip pins -->
+      <g fill="#79859a">
+        <rect x="176" y="246" width="4" height="10" rx="2"/>
+        <rect x="191" y="246" width="4" height="10" rx="2"/>
+        <rect x="206" y="246" width="4" height="10" rx="2"/>
+        <rect x="221" y="246" width="4" height="10" rx="2"/>
+        <rect x="236" y="246" width="4" height="10" rx="2"/>
+        <rect x="251" y="246" width="4" height="10" rx="2"/>
+        <rect x="266" y="246" width="4" height="10" rx="2"/>
+        <rect x="281" y="246" width="4" height="10" rx="2"/>
+
+        <rect x="176" y="322" width="4" height="10" rx="2"/>
+        <rect x="191" y="322" width="4" height="10" rx="2"/>
+        <rect x="206" y="322" width="4" height="10" rx="2"/>
+        <rect x="221" y="322" width="4" height="10" rx="2"/>
+        <rect x="236" y="322" width="4" height="10" rx="2"/>
+        <rect x="251" y="322" width="4" height="10" rx="2"/>
+        <rect x="266" y="322" width="4" height="10" rx="2"/>
+        <rect x="281" y="322" width="4" height="10" rx="2"/>
+      </g>
+
+      <!-- traces -->
+      <g stroke="url(#trace)" stroke-width="3" fill="none" opacity="0.9">
+        <path d="M325 262 C350 262, 358 254, 378 248"/>
+        <path d="M325 288 C350 288, 358 294, 378 302"/>
+        <path d="M155 262 C135 262, 126 254, 108 248"/>
+        <path d="M155 288 C135 288, 126 296, 108 308"/>
+      </g>
+
+      <g>
+        <circle class="pulse" cx="378" cy="248" r="6" fill="#74ffb9"/>
+        <circle class="pulse" cx="378" cy="302" r="6" fill="#46d4ff" style="animation-delay:0.5s"/>
+        <circle class="pulse" cx="108" cy="248" r="6" fill="#46d4ff" style="animation-delay:0.2s"/>
+        <circle class="pulse" cx="108" cy="308" r="6" fill="#74ffb9" style="animation-delay:0.7s"/>
+      </g>
+
+      <!-- label / details -->
+      <rect x="355" y="232" rx="10" width="95" height="18" fill="#313949"/>
+      <rect x="355" y="322" rx="10" width="70" height="12" fill="#313949"/>
+      <rect x="96" y="228" rx="10" width="34" height="8" fill="#313949"/>
+      <rect x="96" y="342" rx="10" width="132" height="10" fill="#313949"/>
+    </g>
+  </svg>
+</body>
+</html>

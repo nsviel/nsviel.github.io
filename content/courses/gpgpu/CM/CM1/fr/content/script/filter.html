@@ -1,0 +1,241 @@
+<div class="gpu-filter-widget">
+  <style>
+    .gpu-filter-widget {
+      --cell: 24px;
+      --gap: 4px;
+      --pad: 18px;
+      --grid-size: 8;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: transparent;
+      font-family: Arial, sans-serif;
+      position: relative;
+    }
+
+    .gpu-filter-widget *,
+    .gpu-filter-widget *::before,
+    .gpu-filter-widget *::after {
+      box-sizing: border-box;
+    }
+
+    .gpu-filter-widget .panel {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .gpu-filter-widget .grid-wrap {
+      position: relative;
+      display: inline-block;
+    }
+
+    .gpu-filter-widget .grid {
+      display: grid;
+      grid-template-columns: repeat(var(--grid-size), var(--cell));
+      grid-template-rows: repeat(var(--grid-size), var(--cell));
+      gap: var(--gap);
+      padding: var(--pad);
+      border: 1px solid rgba(120, 180, 255, 0.25);
+      background: rgba(10, 20, 40, 0.18);
+      clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+      backdrop-filter: blur(1px);
+    }
+
+    .gpu-filter-widget .cell {
+      width: var(--cell);
+      height: var(--cell);
+      background: rgba(120, 160, 220, 0.18);
+      border: 1px solid rgba(180, 220, 255, 0.08);
+      transition:
+        transform 0.22s ease,
+        background 0.22s ease,
+        box-shadow 0.22s ease;
+    }
+
+    .gpu-filter-widget .cell.active {
+      background: rgba(90, 170, 255, 0.92);
+      box-shadow: 0 0 12px rgba(90, 170, 255, 0.70);
+      transform: scale(1.08);
+    }
+
+    .gpu-filter-widget .cell.done {
+      background: rgba(120, 220, 180, 0.95);
+      box-shadow: 0 0 10px rgba(120, 220, 180, 0.40);
+    }
+
+    .gpu-filter-widget .label {
+      color: rgba(220, 235, 255, 0.92);
+      font-size: 20px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-align: center;
+      user-select: none;
+    }
+
+    .gpu-filter-widget .arrow-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: visible;
+    }
+
+    .gpu-filter-widget .arrow {
+      position: absolute;
+      width: 2px;
+      height: 18px;
+      background: linear-gradient(to bottom, rgba(90,170,255,0), rgba(90,170,255,0.95));
+      opacity: 0;
+      animation: gpu-filter-pulse 1.6s ease-in-out infinite;
+      filter: drop-shadow(0 0 6px rgba(90,170,255,0.45));
+    }
+
+    .gpu-filter-widget .arrow::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -1px;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid rgba(90,170,255,0.95);
+      border-bottom: 2px solid rgba(90,170,255,0.95);
+      transform: translateX(-50%) rotate(45deg);
+      transform-origin: center;
+    }
+
+    @keyframes gpu-filter-pulse {
+      0%, 100% { opacity: 0; transform: translateY(-2px); }
+      20%, 70% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <div class="panel">
+    <div class="grid-wrap">
+      <div class="arrow-layer"></div>
+      <div class="grid"></div>
+    </div>
+    <div class="label">Image filtering</div>
+  </div>
+
+  <script>
+    (function () {
+      const root = document.currentScript.closest(".gpu-filter-widget");
+      if (!root || root.dataset.initialized === "true") return;
+      root.dataset.initialized = "true";
+
+      const grid = root.querySelector(".grid");
+      const arrows = root.querySelector(".arrow-layer");
+
+      const size = 8;
+      const cells = [];
+      let intervalId = null;
+      let timeoutIds = [];
+
+      function clearTimers() {
+        timeoutIds.forEach(clearTimeout);
+        timeoutIds = [];
+      }
+
+      function schedule(fn, delay) {
+        const id = setTimeout(fn, delay);
+        timeoutIds.push(id);
+        return id;
+      }
+
+      function buildGrid() {
+        grid.innerHTML = "";
+        cells.length = 0;
+
+        for (let i = 0; i < size * size; i++) {
+          const cell = document.createElement("div");
+          cell.className = "cell";
+          grid.appendChild(cell);
+          cells.push(cell);
+        }
+      }
+
+      function makeArrows() {
+        arrows.innerHTML = "";
+
+        const gridRect = grid.getBoundingClientRect();
+        const wrapRect = grid.parentElement.getBoundingClientRect();
+        const stepX = gridRect.width / size;
+
+        for (let col = 0; col < size; col++) {
+          const arrow = document.createElement("div");
+          arrow.className = "arrow";
+          arrow.style.left = `${gridRect.left - wrapRect.left + stepX * (col + 0.5) - 1}px`;
+          arrow.style.top = `${gridRect.top - wrapRect.top - 22}px`;
+          arrow.style.animationDelay = `${col * 0.08}s`;
+          arrows.appendChild(arrow);
+        }
+      }
+
+      function resetCells() {
+        cells.forEach(cell => cell.classList.remove("active", "done"));
+      }
+
+      function animateWave() {
+        resetCells();
+
+        for (let row = 0; row < size; row++) {
+          schedule(() => {
+            for (let col = 0; col < size; col++) {
+              cells[row * size + col].classList.add("active");
+            }
+
+            schedule(() => {
+              for (let col = 0; col < size; col++) {
+                const cell = cells[row * size + col];
+                cell.classList.remove("active");
+                cell.classList.add("done");
+              }
+            }, 220);
+          }, row * 180);
+        }
+
+        schedule(resetCells, 2200);
+      }
+
+      function start() {
+        buildGrid();
+        makeArrows();
+        animateWave();
+        intervalId = setInterval(animateWave, 2600);
+      }
+
+      function restart() {
+        if (intervalId) {
+          clearInterval(intervalId);
+          intervalId = null;
+        }
+        clearTimers();
+        start();
+      }
+
+      const onResize = () => makeArrows();
+      window.addEventListener("resize", onResize);
+
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+          }
+          clearTimers();
+        } else {
+          restart();
+        }
+      });
+
+      start();
+    })();
+  </script>
+</div>

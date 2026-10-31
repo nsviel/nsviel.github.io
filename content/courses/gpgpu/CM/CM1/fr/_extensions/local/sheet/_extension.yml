@@ -1,0 +1,6 @@
+title: "Sheet"
+version: "0.1.0"
+contributes:
+  filters:
+    - sheet.lua
+
