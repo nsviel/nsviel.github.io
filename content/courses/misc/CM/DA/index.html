@@ -1,0 +1,2366 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
+<script src="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
+<link href="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.css" rel="stylesheet">
+<script src="index_files/libs/quarto-contrib/roughnotation-flourish-bridge-1.0.0/flourish-bridge.js"></script>
+<link href="index_files/libs/quarto-contrib/quarto-gradio-1.0.0/quarto-gradio.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <meta name="author" content="nsv">
+  <meta name="dcterms.date" content="2026-10-31">
+  <title>Développement agentique</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #e1e4e8; background-color: #24292e; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #e1e4e8; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #f97583; } /* Attribute */
+    code span.bn { color: #79b8ff; } /* BaseN */
+    code span.bu { color: #f97583; } /* BuiltIn */
+    code span.cf { color: #f97583; } /* ControlFlow */
+    code span.ch { color: #9ecbff; } /* Char */
+    code span.cn { color: #79b8ff; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #f97583; } /* DataType */
+    code span.dv { color: #79b8ff; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #f97583; font-weight: bold; } /* Extension */
+    code span.fl { color: #79b8ff; } /* Float */
+    code span.fu { color: #b392f0; } /* Function */
+    code span.im { color: #9ecbff; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #f97583; } /* Keyword */
+    code span.op { color: #e1e4e8; } /* Operator */
+    code span.ot { color: #b392f0; } /* Other */
+    code span.pp { color: #f97583; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #79b8ff; } /* SpecialChar */
+    code span.ss { color: #9ecbff; } /* SpecialString */
+    code span.st { color: #9ecbff; } /* String */
+    code span.va { color: #ffab70; } /* Variable */
+    code span.vs { color: #9ecbff; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-8f590f88799535d35980c6a5afca5ff9.css">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/chrono/chrono.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/simplemenu/simplemenu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-attribution/attribution.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/terminal/terminal.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet"><style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style><script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script><link rel="stylesheet" href="_extensions/local/text/text.css">
+  <link rel="stylesheet" href="_extensions/local/text/glitch.css">
+  <script defer="" src="_extensions/local/text/text.js"></script>
+  <script defer="" src="_extensions/local/text/spawn.js"></script>
+  <!-- quarto-confetti-injected -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script>
+  (function () {
+    if (window.__quarto_confetti_init__) return;
+    window.__quarto_confetti_init__ = true;
+
+    // Debug (décommente si besoin)
+    // console.log("[confetti] init ok");
+
+    window.confettiBurst = function (opts) {
+      if (typeof window.confetti !== "function") return;
+
+      // Ajustés pour limiter le fade perceptible
+      var defaults = {
+        particleCount: 200,
+        spread: 100,
+        origin: { y: 0.7 }
+
+      };
+
+      try {
+        window.confetti(Object.assign({}, defaults, (opts || {})));
+      } catch (e) {}
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!window.Reveal) return;
+
+      function parseMaybeJSON(s) {
+        if (!s) return {};
+        var t = String(s).trim();
+        if (t === "") return {};
+        try { return JSON.parse(t); } catch (e) { return {}; }
+      }
+
+      Reveal.on("fragmentshown", function (event) {
+        var frag = event && event.fragment;
+        if (!frag) return;
+
+        // Option 3: class ".confetti"
+        if (!frag.classList || !frag.classList.contains("confetti")) return;
+
+        // Optional overrides
+        var optsText =
+          (frag.getAttribute && (frag.getAttribute("data-confetti") || frag.getAttribute("confetti"))) || "";
+
+        window.confettiBurst(parseMaybeJSON(optsText));
+      });
+    });
+  })();
+  </script>
+</head>
+<body class="quarto-dark">
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="section" class="slide level2 gpgpu vcenter" data-background-interactive="true" data-state="hide-menubar" data-background-iframe="_extensions/local/slide/gpgpu/index.html">
+<h2></h2>
+<p><span class="HUGE big_title outline">Develloppement Agentique</span></p>
+<!-- BLOC: Introduction -->
+</section>
+<section id="développement-agentique" class="slide level2 center question" data-name="Introduction">
+<h2><span class="big_title">Développement agentique</span></h2>
+<p><br></p>
+<div class="Large">
+<p>Un nouveau langage de programmation ?</p>
+</div>
+<div class="Large">
+<p>Un meilleur autocompléteur ?</p>
+</div>
+<div class="Large">
+<p>Des agents qui codent à notre place ?</p>
+</div>
+</section>
+<section id="développement-agentique-1" class="slide level2 center large">
+<h2>Développement agentique</h2>
+<p><br></p>
+<p>En quelques mots</p>
+<p><span class="blue">C’est l’art de diriger des agents</span></p>
+<p><span class="green">pour faire des logiciels.</span></p>
+</section>
+<section id="attention" class="slide level2 center Large">
+<h2>Attention</h2>
+<p><br></p>
+<p>Il ne s’agit pas de faire du</p>
+<p><span class="red big_title">Vibe coding</span></p>
+<p><br></p>
+<div class="fragment green">
+<p>Mais d’aller plus loin, plus vite, et avec méthode.</p>
+</div>
+</section>
+<section id="vous-pouvez-demander-à-un-agent" class="slide level2 center">
+<h2>Vous pouvez demander à un agent</h2>
+<p><br></p>
+<div class="blue">
+<ul>
+<li>Fais-moi une musique ou une image</li>
+<li>Fais-moi un site internet</li>
+<li>Fais-moi un logiciel</li>
+<li>Fais-moi un cours sur le développement agentique</li>
+</ul>
+</div>
+<p><br></p>
+<div class="fragment">
+<p><span class="red Large"><span class="glyph arrow" style="font-size:1.2em;"></span> Le résultat sera souvent générique.</span></p>
+<p><span class="Huge">🥱</span></p>
+</div>
+</section>
+<section id="mais-pourquoi" class="slide level2 center Large">
+<h2>Mais pourquoi ?</h2>
+<p><br></p>
+<div class="blue">
+<p>Parce que sans direction précise,</p>
+<p>l’IA tend à produire des solutions conventionnelles.</p>
+</div>
+<p><br></p>
+<p><span class="red fragment">Et surtout, son contexte est limité.</span></p>
+<p><br></p>
+<p><span class="fragment orange">Et chaque interaction a un coût.</span></p>
+</section>
+<section id="plan-du-cours" class="slide level2 center Large">
+<h2>Plan du cours</h2>
+<div class="blue">
+<ol type="1">
+<li>Comprendre et préparer</li>
+<li>Décomposer et déléguer</li>
+<li>Vérifier et intégrer</li>
+<li>Power Userness</li>
+</ol>
+</div>
+<!-- /BLOC -->
+<!-- BLOC: Fondamentaux -->
+</section>
+<section id="bloc-1" class="slide level2 bloc" data-name="Bloc 1">
+<h2>Bloc 1</h2>
+<p><span class="Large">Comprendre et préparer</span></p>
+</section>
+<section id="le-développement-logiciel-classique" class="slide level2 vcenter">
+<h2>Le développement logiciel classique</h2>
+<p><br></p>
+<div class="blue">
+<ul>
+<li>Comprendre un besoin</li>
+<li>Concevoir une solution</li>
+<li>Écrire le code</li>
+<li>Tester et corriger</li>
+<li>Maintenir le système</li>
+</ul>
+</div>
+<p><br></p>
+<div class="fragment green">
+<p><span class="glyph arrow" style="font-size:1.2em;"></span> Le développeur réalise directement une grande partie de ces étapes.</p>
+</div>
+</section>
+<section id="avec-un-assistant-de-code" class="slide level2 vcenter">
+<h2>Avec un assistant de code</h2>
+<p><br></p>
+<ul>
+<li>Le développeur garde l’initiative</li>
+<li>L’IA suggère une fonction, une correction, un test</li>
+<li>Le développeur sélectionne et intègre</li>
+</ul>
+<p><br></p>
+<div class="blue">
+<p><span class="glyph arrow" style="font-size:1.2em;"></span> L’IA assiste une action locale.</p>
+</div>
+</section>
+<section id="avec-un-agent" class="slide level2 vcenter">
+<h2>Avec un agent</h2>
+<p><br></p>
+<div class="green">
+<ul>
+<li>Il explore le dépôt</li>
+<li>Il choisit des fichiers à modifier</li>
+<li>Il utilise des outils</li>
+<li>Il lance des commandes et des tests</li>
+<li>Il tente de corriger ses erreurs</li>
+</ul>
+</div>
+<p><br></p>
+<div class="fragment orange">
+<p>On délègue une <strong>séquence d’actions</strong>, pas seulement une réponse textuelle.</p>
+</div>
+</section>
+<section id="lagent-un-modèle-et-une-boucle" class="slide level2 center">
+<h2>L’agent : un modèle et une boucle</h2>
+<p><br></p>
+<p><span class="blue">Observer</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="orange">Décider</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="purple">Agir</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="blue">Observer</span></p>
+<p><br><br></p>
+<div class="fragment">
+<p>Le modèle raisonne sur un contexte</p>
+<p>les outils lui permettent d’agir sur l’environnement.</p>
+</div>
+</section>
+<section id="agent-autonomie-illimitée" class="slide level2 center">
+<h2>Agent ≠ autonomie illimitée</h2>
+<p><br><br></p>
+<p><span class="Large bold">Un agent a besoin de limites.</span></p>
+<div class="fragment">
+<p>Périmètre, autorisations, critères d’arrêt</p>
+<p><span class="green">et surtout de pouvoir faire des vérification.</span></p>
+</div>
+</section>
+<section id="un-premier-exemple" class="slide level2 center large">
+<h2>Un premier exemple</h2>
+<p><br></p>
+<blockquote>
+<p>« Ajoute un système de sauvegarde à cette application. »</p>
+</blockquote>
+<p><br></p>
+<div class="fragment orange">
+<p>Qu’est-ce que cela signifie exactement ?</p>
+</div>
+</section>
+<section id="que-manque-t-il" class="slide level2 quiz">
+<h2>Que manque-t-il ?</h2>
+<p><code>A.</code> <span class="glyph"> </span> Le format des données</p>
+<p><code>B.</code> <span class="glyph"> </span> Les comportements en cas d’erreur</p>
+<p><code>C.</code> <span class="glyph"> </span> Les critères permettant de valider le résultat</p>
+<p><code>D.</code> <span class="glyph"> </span> Tout ce qui précède</p>
+<div class="fragment green">
+<p><strong>Réponse : D.</strong> Une demande compréhensible ne constitue pas nécessairement une spécification vérifiable.</p>
+</div>
+</section>
+<section id="le-risque" class="slide level2 center">
+<h2>Le risque</h2>
+<p><br></p>
+<p>L’agent peut produire quelque chose qui <span class="orange">a l’air terminé</span>.</p>
+<p><br></p>
+<div class="fragment Large">
+<p>Mais pas nécessairement ce que nous attendions.</p>
+</div>
+</section>
+<section id="trois-responsabilités" class="slide level2 center">
+<h2>Trois responsabilités</h2>
+<p><br></p>
+<p><span class="blue">Concevoir</span> <span class="glyph"> </span> <span class="orange">Déléguer</span> <span class="glyph"> </span> <span class="green">Vérifier</span></p>
+<p><br></p>
+<div class="fragment">
+<p>Le développeur <u>ne disparaît pas</u> : son travail change de niveau.</p>
+<p>Il devient <code>pilote</code></p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>Ses <span class="bold">connaissances</span>, son <span class="bold">esprit critique</span></p>
+<p>et sa <span class="bold">créativité</span> deviennent plus importants que jamais.</p>
+</div>
+</section>
+<section id="bon-ok" class="slide level2 center">
+<h2>Bon ok</h2>
+<p><span class="Large blue">Mais comment on s’en sert ?</span></p>
+</section>
+<section id="er-probléme" class="slide level2 vcenter">
+<h2>1er probléme</h2>
+<p>Le contexte est limité</p>
+<p><br></p>
+<ul>
+<li>Un agent n’a pas automatiquement toute la connaissance du projet</li>
+<li>Une conversation peut être interrompue ou remplacée</li>
+<li>Un long historique peut devenir coûteux et difficile à exploiter</li>
+<li>Une information importante peut être oubliée ou mal interprétée</li>
+</ul>
+</section>
+<section id="il-nous-faut-donc-une-zone-mémoire" class="slide level2 center">
+<h2>il nous faut donc une zone mémoire</h2>
+<p>où doit vivre la connaissance.</p>
+<p><br><br></p>
+<div class="fragment">
+<p><span class="Large green">Dans le dépôt, autant que possible.</span></p>
+<p>Et pas uniquement dans une conversation.</p>
+</div>
+</section>
+<section id="ème-problème" class="slide level2 vcenter">
+<h2>2ème problème</h2>
+<p>L’agent a besoin d’une méthode stable</p>
+<p><br></p>
+<ul>
+<li>Il peut adopter des approches différentes d’une conversation à l’autre</li>
+<li>Il ne connaît pas forcément nos conventions de développement</li>
+<li>Il peut modifier du code au-delà de ce qui est demandé</li>
+<li>Il peut considérer une tâche terminée sans l’avoir correctement vérifiée</li>
+</ul>
+</section>
+<section id="il-nous-faut-donc-des-instructions-permanentes" class="slide level2 center">
+<h2>Il nous faut donc des instructions permanentes</h2>
+<p>Comment doit-il travailler ?</p>
+<p><br><br></p>
+<div class="fragment">
+<p><span class="Large green">Dans le dépôt, également.</span></p>
+<p>Et pas uniquement dans nos prompts.</p>
+</div>
+</section>
+<section id="ème-problème-1" class="slide level2 vcenter">
+<h2>3ème problème</h2>
+<p>L’agent peut se tromper</p>
+<p><br></p>
+<ul>
+<li>Il peut produire du code qui compile, mais ne fonctionne pas</li>
+<li>Il peut introduire des régressions</li>
+<li>Il peut écrire des tests qui ne vérifient pas les bonnes choses</li>
+<li>Il peut affirmer avoir terminé sans preuve suffisante</li>
+</ul>
+</section>
+<section id="il-nous-faut-donc-des-tests" class="slide level2 center">
+<h2>Il nous faut donc des tests</h2>
+<p>Comment savoir si son travail est correct ?</p>
+<p><br><br></p>
+<div class="fragment">
+<p><span class="Large green">Des vérifications reproductibles et indépendantes.</span></p>
+<p>Et pas uniquement faire confiance à l’agent.</p>
+</div>
+</section>
+<section id="trois-besoins-trois-répertoires" class="slide level2 center">
+<h2>Trois besoins, trois répertoires</h2>
+<p><br><br></p>
+<p><span class="blue big_title">docs/</span> <span class="glyph"> </span> <span class="orange big_title">agents/</span> <span class="glyph"> </span> <span class="green big_title">tests/</span></p>
+<p><br><br></p>
+<ul>
+<li><span class="blue">docs/</span> : Ce que l’agent doit savoir</li>
+<li><span class="orange">agents/</span> : Comment l’agent doit travailler</li>
+<li><span class="green">tests/</span> : Comment vérifier son travail</li>
+</ul>
+</section>
+<section id="le-point-dentrée-agents.md" class="slide level2">
+<h2>Le point d’entrée : AGENTS.md</h2>
+<div class="blue">
+<ul>
+<li>Où trouver les informations essentielles ?</li>
+<li>Comment construire et tester le projet ?</li>
+<li>Quelles sont les règles non négociables ?</li>
+<li>Où sont documentées les responsabilités ?</li>
+</ul>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>Une <strong>convention possible</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href=""></a>mon-projet/</span>
+<span id="cb1-2"><a href=""></a>├── AGENTS.md</span>
+<span id="cb1-3"><a href=""></a>├── agents/</span>
+<span id="cb1-4"><a href=""></a>├── docs/</span>
+<span id="cb1-5"><a href=""></a>├── src/</span>
+<span id="cb1-6"><a href=""></a>└── tests/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<h3 id="agents-les-méthodes-de-travail"><code>agents/</code> : les méthodes de travail</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href=""></a>agents/</span>
+<span id="cb2-2"><a href=""></a>├── workflow.md</span>
+<span id="cb2-3"><a href=""></a>├── testing.md</span>
+<span id="cb2-4"><a href=""></a>├── git.md</span>
+<span id="cb2-5"><a href=""></a>└── roles/</span>
+<span id="cb2-6"><a href=""></a>    ├── lead.md</span>
+<span id="cb2-7"><a href=""></a>    └── worker.md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>On y formalise <strong>les pratiques</strong>, pas l’état du logiciel.</p>
+<p><br></p>
+<div class="fragment">
+<h3 id="docs-la-mémoire-du-projet"><code>docs/</code> : la mémoire du projet</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href=""></a>docs/</span>
+<span id="cb3-2"><a href=""></a>├── architecture.md</span>
+<span id="cb3-3"><a href=""></a>├── modules/</span>
+<span id="cb3-4"><a href=""></a>│   ├── storage.md</span>
+<span id="cb3-5"><a href=""></a>│   └── ui.md</span>
+<span id="cb3-6"><a href=""></a>├── decisions/</span>
+<span id="cb3-7"><a href=""></a>└── roadmap.md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>On y conserve <strong>l’architecture, les contrats et les décisions</strong>.</p>
+</div>
+</section>
+<section id="documenter-une-décision" class="slide level2 center">
+<h2>Documenter une décision</h2>
+<p><br></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href=""></a><span class="fu"># Décision : sauvegarde en JSON</span></span>
+<span id="cb4-2"><a href=""></a>Contexte : besoin d'un format inspectable.</span>
+<span id="cb4-3"><a href=""></a>Choix : JSON versionné avec champ schema_version.</span>
+<span id="cb4-4"><a href=""></a>Alternatives : binaire, SQLite.</span>
+<span id="cb4-5"><a href=""></a>Conséquence : validation stricte au chargement.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="blue">
+<p>Une décision doit conserver aussi son <strong>pourquoi</strong>.</p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p><span class="red Large">Attention</span></p>
+<p><br></p>
+<p><span class="Large orange">Plus de documentation ≠ meilleur contexte</span></p>
+<p>Un agent doit retrouver rapidement les informations pertinentes.</p>
+</div>
+</section>
+<section id="mémoire-persistante-contexte-sélectif" class="slide level2 vcenter">
+<h2>Mémoire persistante, contexte sélectif</h2>
+<p><br></p>
+<div class="blue">
+<ul>
+<li>Documenter les connaissances durables</li>
+<li>Référencer plutôt que recopier</li>
+<li>Charger les documents nécessaires à la tâche</li>
+<li>Mettre à jour les contrats lorsque le code change</li>
+<li>Supprimer ou corriger les informations obsolètes</li>
+</ul>
+</div>
+</section>
+<section id="un-piège" class="slide level2 quiz">
+<h2>Un piège</h2>
+<p>Un agent modifie une API, mais les tests passent. Que faire de la documentation ?</p>
+<p><code>A.</code> <span class="glyph"> </span> Rien : les tests suffisent</p>
+<p><code>B.</code> <span class="glyph"> </span> La mettre à jour si le contrat a changé</p>
+<p><code>C.</code> <span class="glyph"> </span> Recopier toute la conversation dans docs/</p>
+<p><code>D.</code> <span class="glyph"> </span> Supprimer docs/ pour éviter les contradictions</p>
+<div class="fragment green">
+<p><strong>Réponse : B.</strong> Une documentation obsolète induira en erreur les futurs agents et les humains.</p>
+</div>
+</section>
+<section id="ce-que-lagent-doit-recevoir" class="slide level2 center conclusion">
+<h2>Ce que l’agent doit recevoir</h2>
+<p><br></p>
+<p><span class="blue">Une tâche</span> + <span class="orange">un contexte ciblé</span> + <span class="purple">des contraintes</span></p>
+<p><br></p>
+<div class="green">
+<p>Et un moyen de vérifier son travail.</p>
+</div>
+<!-- /BLOC -->
+<!-- BLOC: Délégation -->
+</section>
+<section id="bloc-2" class="slide level2 bloc" data-name="Bloc 2">
+<h2>Bloc 2</h2>
+<p><span class="Large">Décomposer et déléguer</span></p>
+</section>
+<section id="une-demande-nest-pas-une-tâche" class="slide level2 center">
+<h2>Une demande n’est pas une tâche</h2>
+<p><br></p>
+<p>Prenons cet exemple :</p>
+<p><br></p>
+<p>« Améliore le système de sauvegarde. »</p>
+<p><br></p>
+<div class="fragment orange">
+<p>Impossible de savoir exactement quand cette demande sera terminée.</p>
+<p>Et si ça correspondra à ce que l’on veut vraiment</p>
+</div>
+</section>
+<section id="du-besoin-au-travail-exécutable" class="slide level2 center">
+<h2>Du besoin au travail exécutable</h2>
+<p><span class="blue">Objectif</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="orange">Décomposition</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="purple">Tâches</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="green">Vérification</span></p>
+<p><br></p>
+<div class="fragment">
+<p>Chaque tâche doit avoir un résultat observable.</p>
+<p>Et vérifié</p>
+</div>
+</section>
+<section id="objectif-sauvegarder-une-scène" class="slide level2 vcenter">
+<h2>Objectif : sauvegarder une scène</h2>
+<p>Il nous faut :</p>
+<ol type="1">
+<li><strong>Décomposer</strong> le travail par responsabilités</li>
+<li><strong>Délimiter</strong> le périmètre (<em>scope</em>) de chaque tâche</li>
+<li><strong>Organiser</strong> les dépendances entre les tâches</li>
+<li><strong>Définir</strong> comment vérifier chaque résultat</li>
+</ol>
+</section>
+<section id="décomposer-par-responsabilités" class="slide level2 center">
+<h2>Décomposer par responsabilités</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href=""></a>Sauvegarde d'une scène</span>
+<span id="cb5-2"><a href=""></a>├── Format et validation</span>
+<span id="cb5-3"><a href=""></a>├── Écriture des fichiers</span>
+<span id="cb5-4"><a href=""></a>├── Lecture des fichiers</span>
+<span id="cb5-5"><a href=""></a>├── Interface utilisateur</span>
+<span id="cb5-6"><a href=""></a>└── Tests et documentation</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br></p>
+<h3 id="une-tâche-atomique">Une tâche atomique</h3>
+<p><span class="blue">Un périmètre explicite</span></p>
+<p><span class="orange">Un résultat attendu</span></p>
+<p><span class="green">Un critère d’acceptation</span></p>
+<div class="fragment">
+<p>« Atomique » ne veut pas dire minuscule :</p>
+<p>cela veut dire <strong>cohérent et vérifiable</strong>.</p>
+</div>
+</section>
+<section id="définir-un-scope" class="slide level2">
+<h2>2. Définir un scope</h2>
+<p>Chaque tâche doit préciser :</p>
+<ul>
+<li>Ce que l’agent doit réaliser</li>
+<li>Les fichiers et modules qu’il peut modifier</li>
+<li>Les contraintes à respecter</li>
+<li>Les critères de validation</li>
+</ul>
+<div class="fragment green">
+<p>Une tâche doit être limitée et vérifiable.</p>
+</div>
+<p><br></p>
+<p><strong>Qu’est-ce que l’agent a le droit de modifier ?</strong></p>
+<div class="fragment">
+<p>Fichiers, modules, interfaces, dépendances, tests, documentation.</p>
+</div>
+</section>
+<section id="pourquoi-limiter-le-scope" class="slide level2">
+<h2>Pourquoi limiter le scope ?</h2>
+<ul>
+<li>Réduire les effets de bord</li>
+<li>Faciliter la revue du diff</li>
+<li>Rendre les responsabilités visibles</li>
+<li>Limiter les conflits entre agents</li>
+<li>Simplifier le retour arrière</li>
+</ul>
+</section>
+<section id="organiser-les-dépendances" class="slide level2">
+<h2>3. Organiser les dépendances</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a href=""></a>Définir le format</span>
+<span id="cb6-2"><a href=""></a>        ↓</span>
+<span id="cb6-3"><a href=""></a>Implémenter lecture / écriture</span>
+<span id="cb6-4"><a href=""></a>        ↓</span>
+<span id="cb6-5"><a href=""></a>Ajouter l'interface</span>
+<span id="cb6-6"><a href=""></a>        ↓</span>
+<span id="cb6-7"><a href=""></a>Valider le système complet</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ah mais attends, maybe que ça pourrait etre fait en parraléle ?</p>
+<p>🤔</p>
+</section>
+<section id="deux-tâches-indépendantes" class="slide level2">
+<h2>Deux tâches indépendantes ?</h2>
+<h3 id="tâche-1-sauvegarder">Tâche 1 — Sauvegarder</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href=""></a>Objectif : implémenter save(scene, path).</span>
+<span id="cb7-2"><a href=""></a>Scope : src/storage/writer.py</span>
+<span id="cb7-3"><a href=""></a>Contrat : écrire une scène au format JSON défini.</span>
+<span id="cb7-4"><a href=""></a>Contraintes : ne pas modifier l'API Scene.</span>
+<span id="cb7-5"><a href=""></a>Oracle : tests de sauvegarde.</span>
+<span id="cb7-6"><a href=""></a>Livrable : commit + résultats des tests.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<h3 id="tâche-2-charger">Tâche 2 — Charger</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href=""></a>Objectif : implémenter load(path).</span>
+<span id="cb8-2"><a href=""></a>Scope : src/storage/reader.py</span>
+<span id="cb8-3"><a href=""></a>Contrat : reconstruire une Scene depuis le JSON défini.</span>
+<span id="cb8-4"><a href=""></a>Contraintes : ne pas modifier l'API Scene.</span>
+<span id="cb8-5"><a href=""></a>Oracle : tests de chargement.</span>
+<span id="cb8-6"><a href=""></a>Livrable : commit + résultats des tests.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="paralléliser-oui-mais-quand" class="slide level2 quiz">
+<h2>Paralléliser : oui, mais quand ?</h2>
+<p>Deux agents doivent modifier la même API publique. Que privilégier ?</p>
+<p><code>A.</code> <span class="glyph"> </span> Les lancer simultanément sans coordination</p>
+<p><code>B.</code> <span class="glyph"> </span> Fixer d’abord le contrat de l’API</p>
+<p><code>C.</code> <span class="glyph"> </span> Leur demander de fusionner eux-mêmes au hasard</p>
+<p><code>D.</code> <span class="glyph"> </span> Supprimer les tests</p>
+<div class="fragment green">
+<p><strong>Réponse : B.</strong> On stabilise les interfaces avant de déléguer des implémentations indépendantes.</p>
+</div>
+</section>
+<section id="contrat-dentrée-et-de-sortie" class="slide level2">
+<h2>Contrat d’entrée et de sortie</h2>
+<ul>
+<li><strong>Entrées</strong> : fichiers, formats, interfaces, contraintes</li>
+<li><strong>Sorties</strong> : code, tests, documentation, commit</li>
+<li><strong>Erreurs</strong> : comportements attendus</li>
+<li><strong>Validation</strong> : oracles requis</li>
+</ul>
+</section>
+<section id="quand-arrêter-lagent" class="slide level2">
+<h2>Quand arrêter l’agent ?</h2>
+<ul>
+<li>Le résultat demandé est atteint</li>
+<li>Le périmètre serait dépassé</li>
+<li>Une hypothèse essentielle manque</li>
+<li>Un test échoue sans diagnostic fiable</li>
+<li>Une décision architecturale exige arbitrage</li>
+</ul>
+</section>
+<section id="ok" class="slide level2 center conclusion">
+<h2>OK</h2>
+<p><br></p>
+<p>L’agent a livré son code.</p>
+<p><br></p>
+<div class="fragment Large orange">
+<p>Comment le vérifier sans lui faire confiance sur parole ?</p>
+</div>
+<!-- /BLOC -->
+<!-- BLOC: Vérification -->
+</section>
+<section id="bloc-3" class="slide level2 bloc" data-name="Bloc 3">
+<h2>Bloc 3</h2>
+<p><span class="Large">Oracles et vérification</span></p>
+</section>
+<section id="prévoir-la-vérification" class="slide level2 vcenter">
+<h2>4. Prévoir la vérification</h2>
+<p><br></p>
+<p>Pour chaque tâche, il faut savoir :</p>
+<div class="blue">
+<ul>
+<li>Quel résultat est attendu ?</li>
+<li>Comment le tester ?</li>
+<li>Quels cas d’erreur considérer ?</li>
+<li>Qui valide le résultat ?</li>
+</ul>
+</div>
+<p><br></p>
+<div class="fragment green">
+<p><span class="glyph arrow" style="font-size:1.2em;"></span> Les critères de réussite doivent être définis avant de déléguer.</p>
+</div>
+</section>
+<section id="section-2" class="slide level2 center Large">
+<h2></h2>
+<p>Pour cela il nous faut nous appuyer</p>
+<p><br></p>
+<p><span class="blue">sur une batterie de tests</span></p>
+<p><br></p>
+<p><span class="green">Couvrant au <code>maximum</code> l’état voulu du systéme</span></p>
+</section>
+<section id="section-3" class="slide level2 center smallsize">
+<h2></h2>
+<p><span class="green">Niveaux de test</span></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Élément</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Unitaire</td>
+<td>Vérifier un composant isolé</td>
+</tr>
+<tr class="even">
+<td>Intégration</td>
+<td>Vérifier plusieurs composants ensemble</td>
+</tr>
+<tr class="odd">
+<td>Système / E2E</td>
+<td>Vérifier un scénario complet</td>
+</tr>
+<tr class="even">
+<td>Régression</td>
+<td>Détecter les comportements cassés</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><span class="green">Composants d’un test</span></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Élément</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fixture</td>
+<td>Préparer les conditions initiales</td>
+</tr>
+<tr class="even">
+<td><code>Oracle</code></td>
+<td>Déterminer si le résultat est correct</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="quest-ce-quun-oracle" class="slide level2 center">
+<h2>Qu’est-ce qu’un oracle ?</h2>
+<p>Un moyen de déterminer si un résultat satisfait une <span class="green">propriété attendue</span>.</p>
+<p>L’oracle peut être automatique, partiel ou humain.</p>
+<p><br></p>
+<div class="fragment Large blue big_title">
+<p>L’oracle est la clé de la délégation</p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>Il permet de confier l’implémentation à un agent</p>
+<p>sans lui confier le jugement de sa propre réussite.</p>
+<p><br></p>
+<p><span class="green">Le reste peut largement être délégué aux agents.</span></p>
+</div>
+</section>
+<section id="différentes-formes-doracles" class="slide level2 center smallsize">
+<h2>Différentes formes d’oracles</h2>
+<p><br></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Oracle</th>
+<th>Ce qu’il vérifie</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Compilation</td>
+<td>Le code respecte les contraintes du compilateur</td>
+</tr>
+<tr class="even">
+<td>Valeur attendue</td>
+<td>Un résultat correspond à une référence</td>
+</tr>
+<tr class="odd">
+<td>Invariant</td>
+<td>Une propriété reste vraie</td>
+</tr>
+<tr class="even">
+<td>Différentiel</td>
+<td>Deux implémentations donnent des résultats compatibles</td>
+</tr>
+<tr class="odd">
+<td>Performance</td>
+<td>Une mesure respecte un seuil défini</td>
+</tr>
+<tr class="even">
+<td>Visuel</td>
+<td>Un rendu respecte des critères visuels</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="compilation-correction" class="slide level2 center">
+<h2>Compilation ≠ correction</h2>
+<p><br></p>
+<p><span class="green">Ça compile !</span></p>
+<p><br></p>
+<div class="fragment orange Large">
+<p>Et alors ?</p>
+</div>
+</section>
+<section id="définissons-notre-oracle" class="slide level2 center">
+<h2>Définissons notre oracle</h2>
+<p><br></p>
+<p>Après une sauvegarde puis un chargement,</p>
+<p>on doit retrouver <span class="green">exactement la même scène</span>.</p>
+<p><br><br></p>
+<p><span class="blue">Scène initiale</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="orange">Save</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="orange">Load</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="green">Scène restaurée</span></p>
+<p><br></p>
+<div class="fragment">
+<p><code>Oracle</code> : les deux scènes doivent être équivalentes.</p>
+</div>
+</section>
+<section id="implémentons-cet-oracle" class="slide level2 vcenter">
+<h2>Implémentons cet oracle</h2>
+<p><br></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href=""></a><span class="kw">def</span> test_round_trip(tmp_path):</span>
+<span id="cb9-2"><a href=""></a>    scene <span class="op">=</span> Scene(objects<span class="op">=</span>[Cube(position<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>))])</span>
+<span id="cb9-3"><a href=""></a>    path <span class="op">=</span> tmp_path <span class="op">/</span> <span class="st">"scene.json"</span></span>
+<span id="cb9-4"><a href=""></a></span>
+<span id="cb9-5"><a href=""></a>    save(scene, path)</span>
+<span id="cb9-6"><a href=""></a>    restored <span class="op">=</span> load(path)</span>
+<span id="cb9-7"><a href=""></a></span>
+<span id="cb9-8"><a href=""></a>    <span class="cf">assert</span> restored <span class="op">==</span> scene</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br></p>
+<div class="fragment green">
+<p>L’oracle est ici la comparaison avec la scène initiale.</p>
+</div>
+</section>
+<section id="mais-cet-oracle-est-il-suffisant" class="slide level2 center">
+<h2>Mais cet oracle est-il suffisant ?</h2>
+<p><br></p>
+<p>Et si <code>save()</code> et <code>load()</code> partageaient la même erreur ?</p>
+<p><br><br></p>
+<div class="fragment orange">
+<p>Les deux fonctions pourraient être compatibles entre elles,</p>
+<p>tout en ne respectant pas le format de sauvegarde attendu.</p>
+</div>
+</section>
+<section id="ajoutons-un-oracle-indépendant" class="slide level2 vcenter">
+<h2>Ajoutons un oracle indépendant</h2>
+<p><br></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href=""></a><span class="kw">def</span> test_saved_format(tmp_path):</span>
+<span id="cb10-2"><a href=""></a>    scene <span class="op">=</span> Scene(objects<span class="op">=</span>[Cube(position<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>))])</span>
+<span id="cb10-3"><a href=""></a>    path <span class="op">=</span> tmp_path <span class="op">/</span> <span class="st">"scene.json"</span></span>
+<span id="cb10-4"><a href=""></a></span>
+<span id="cb10-5"><a href=""></a>    save(scene, path)</span>
+<span id="cb10-6"><a href=""></a>    data <span class="op">=</span> json.loads(path.read_text())</span>
+<span id="cb10-7"><a href=""></a></span>
+<span id="cb10-8"><a href=""></a>    <span class="cf">assert</span> data[<span class="st">"objects"</span>][<span class="dv">0</span>][<span class="st">"position"</span>] <span class="op">==</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br></p>
+<div class="fragment green">
+<p>On vérifie maintenant une propriété du fichier produit,</p>
+<p>indépendamment de <code>load()</code>.</p>
+</div>
+</section>
+<section id="mais-même-avec-deux-oracles" class="slide level2 center">
+<h2>Mais même avec deux oracles…</h2>
+<p><br></p>
+<p>Avons-nous vérifié tous les cas ?</p>
+<div class="fragment blue">
+<ul>
+<li>Scène vide ?</li>
+<li>Fichier corrompu ?</li>
+<li>Version incompatible ?</li>
+<li>Sauvegarde interrompue ?</li>
+</ul>
+</div>
+<p><br></p>
+<div class="fragment orange Large">
+<p>Un oracle ne vérifie que ce pour quoi il a été conçu.</p>
+</div>
+</section>
+<section id="qui-vérifie-le-vérificateur" class="slide level2 center">
+<h2>Qui vérifie le vérificateur ?</h2>
+<p><br><br></p>
+<p><span class="Large orange">Un oracle peut lui-même être incomplet ou incorrect.</span></p>
+<p><br><br></p>
+<div class="fragment">
+<p>Et si l’agent écrit à la fois le code et les tests,</p>
+<p>il peut reproduire la même erreur dans les deux.</p>
+</div>
+</section>
+<section id="une-question-délicate" class="slide level2 quiz">
+<h2>Une question délicate</h2>
+<p>L’agent écrit son code <strong>et</strong> ses tests. Tous les tests passent.</p>
+<p><code>A.</code> <span class="glyph"> </span> La fonctionnalité est nécessairement correcte</p>
+<p><code>B.</code> <span class="glyph"> </span> Il faut confronter les tests aux exigences</p>
+<p><code>C.</code> <span class="glyph"> </span> Les tests ne servent à rien</p>
+<p><code>D.</code> <span class="glyph"> </span> La compilation remplace les tests</p>
+<div class="fragment green">
+<p><strong>Réponse : B.</strong> Les tests peuvent partager les mêmes erreurs que l’implémentation.</p>
+</div>
+</section>
+<section id="comment-fiabiliser-nos-oracles" class="slide level2 vcenter">
+<h2>Comment fiabiliser nos oracles ?</h2>
+<p><br></p>
+<ul>
+<li>Définir les propriétés attendues <strong>avant l’implémentation</strong></li>
+<li>Tester les cas limites et les erreurs</li>
+<li>Utiliser plusieurs vérifications indépendantes</li>
+<li>Faire relire les critères par un humain ou un autre agent</li>
+</ul>
+<p><br></p>
+<div class="fragment green">
+<p>On peut déléguer l’écriture des oracles,</p>
+<p>mais il faut garder le contrôle sur ce qu’ils vérifient.</p>
+</div>
+</section>
+<section id="lagent-annonce-terminé" class="slide level2 center">
+<h2>L’agent annonce : « Terminé ! »</h2>
+<p><br><br></p>
+<div class="fragment green">
+<p>« 12 tests réussis ! »</p>
+</div>
+<p><br><br></p>
+<div class="fragment orange Large">
+<p>Est-ce suffisant ?</p>
+</div>
+</section>
+<section id="une-affirmation-nest-pas-une-preuve" class="slide level2 center">
+<h2>Une affirmation n’est pas une preuve</h2>
+<p><br></p>
+<div class="blue">
+<p>L’agent doit fournir des résultats vérifiables :</p>
+</div>
+<ul>
+<li>Les tests exécutés</li>
+<li>Les résultats obtenus</li>
+<li>Les éventuels échecs</li>
+<li>Les vérifications non réalisées</li>
+</ul>
+<p><br><br></p>
+<div class="fragment green">
+<p>Et idéalement, nous devons pouvoir les reproduire.</p>
+</div>
+</section>
+<section id="rejouer-la-validation" class="slide level2 vcenter">
+<h2>Rejouer la validation</h2>
+<p><br></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href=""></a><span class="fu">git</span> diff <span class="at">--check</span></span>
+<span id="cb11-2"><a href=""></a><span class="ex">pytest</span> tests/storage/</span>
+<span id="cb11-3"><a href=""></a><span class="ex">pytest</span> tests/integration/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br></p>
+<div class="fragment">
+<p>On ne se contente pas du compte rendu de l’agent.</p>
+<p>On vérifie son travail indépendamment.</p>
+</div>
+</section>
+<section id="et-maintenant-on-intègre" class="slide level2 center">
+<h2>Et maintenant, on intègre ?</h2>
+<p><br><br></p>
+<p>L’agent a terminé son travail.</p>
+<p>Les tests passent.</p>
+<p><br><br></p>
+<div class="fragment orange Large">
+<p>Mais est-ce que le code est propre ?</p>
+</div>
+</section>
+<section id="les-tests-ne-suffisent-pas" class="slide level2 vcenter">
+<h2>Les tests ne suffisent pas</h2>
+<p><br></p>
+<ul>
+<li>Le code respecte-t-il l’architecture du projet ?</li>
+<li>A-t-il introduit des dépendances inutiles ?</li>
+<li>Du code dupliqué ou inutile ?</li>
+<li>Des modifications hors du périmètre prévu ?</li>
+<li>La documentation est-elle à jour ?</li>
+</ul>
+<p><br></p>
+<div class="fragment green">
+<p>Un code peut être fonctionnel, mais difficile à maintenir.</p>
+</div>
+</section>
+<section id="git-comme-système-transactionnel" class="slide level2 vcenter">
+<h2>Git comme système transactionnel</h2>
+<p><br></p>
+<ul>
+<li><strong>Isoler</strong> les modifications</li>
+<li><strong>Examiner</strong> les différences (<em>diff</em>)</li>
+<li><strong>Identifier</strong> un état par un commit</li>
+<li><strong>Revenir en arrière</strong> si nécessaire</li>
+<li><strong>Intégrer</strong> uniquement le travail validé</li>
+</ul>
+<p><br><br></p>
+<div class="fragment orange">
+<p>Un commit garantit la traçabilité, pas la correction.</p>
+</div>
+</section>
+<section id="quand-une-tâche-est-elle-terminée" class="slide level2 center">
+<h2>Quand une tâche est-elle terminée ?</h2>
+<p><br></p>
+<ul>
+<li>Le contrat est respecté</li>
+<li>Les oracles pertinents passent</li>
+<li>Les régressions sont contrôlées</li>
+<li>Le code respecte l’architecture</li>
+<li>La documentation est à jour</li>
+</ul>
+<p><br><br></p>
+<div class="fragment green Large">
+<p>Alors seulement, on peut intégrer.</p>
+</div>
+</section>
+<section id="section-4" class="slide level2 center conclusion">
+<h2></h2>
+<p><span class="green big_title Huge">OK</span></p>
+<p><br></p>
+<div class="fragment">
+<p>Nous savons maintenant :</p>
+<p><span class="blue">Décomposer</span> <span class="glyph"> </span> <span class="orange">Déléguer</span> <span class="glyph"> </span> <span class="green">Vérifier</span></p>
+<p><br><br></p>
+<div class="Large">
+<p>Mais comment faire tout cela à grande échelle ?</p>
+</div>
+</div>
+<p><br></p>
+<div class="fragment big_title">
+<p><span class="glyph arrow" style="font-size:1.2em;"></span> Power Userness <span class="glyph arrow_back" style="font-size:1.2em;"></span></p>
+</div>
+<!-- /BLOC -->
+<!-- BLOC: Power User -->
+</section>
+<section id="bloc-4" class="slide level2 bloc" data-name="Bloc 4">
+<h2>Bloc 4</h2>
+<p><span class="Large">Power Userness</span></p>
+<p><span>Orchestrer et intégrer</span></p>
+</section>
+<section id="un-agent-ou-plusieurs" class="slide level2 center">
+<h2>Un agent ou plusieurs ?</h2>
+<p><br></p>
+<div class="fragment">
+<p>Multiplier les agents augmente potentiellement le parallélisme…</p>
+</div>
+<div class="fragment orange">
+<p>…mais aussi les conflits, le coût et la supervision.</p>
+</div>
+</section>
+<section id="architecture-simple" class="slide level2 vcenter">
+<h2>Architecture simple</h2>
+<p><span class="blue">Humain</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="orange">Agent</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="purple">Outils</span></p>
+<p>Convient à de nombreuses tâches ciblées.</p>
+<p><br></p>
+<div class="fragment">
+<p><span class="green bold">Mais on pourrait aussi faire</span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a href=""></a>             Humain</span>
+<span id="cb12-2"><a href=""></a>                |</span>
+<span id="cb12-3"><a href=""></a>              Lead</span>
+<span id="cb12-4"><a href=""></a>      /         |           \</span>
+<span id="cb12-5"><a href=""></a>   Worker A   Worker B    Worker C</span>
+<span id="cb12-6"><a href=""></a>      \         |           /</span>
+<span id="cb12-7"><a href=""></a>           Vérification</span>
+<span id="cb12-8"><a href=""></a>                |</span>
+<span id="cb12-9"><a href=""></a>            Intégration</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="ou-encore-plus-fort" class="slide level2 vcenter">
+<h2><span class="big_title green">Ou encore plus fort</span></h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a href=""></a>                             Humain</span>
+<span id="cb13-2"><a href=""></a>                                |</span>
+<span id="cb13-3"><a href=""></a>                           Architecte</span>
+<span id="cb13-4"><a href=""></a>                                |</span>
+<span id="cb13-5"><a href=""></a>        -------------------------------------------------</span>
+<span id="cb13-6"><a href=""></a>        |                       |                       |</span>
+<span id="cb13-7"><a href=""></a>      Lead A                  Lead B                  Lead C</span>
+<span id="cb13-8"><a href=""></a>        |                       |                       |</span>
+<span id="cb13-9"><a href=""></a>   -------------           -------------           -------------</span>
+<span id="cb13-10"><a href=""></a>   |     |     |           |     |     |           |     |     |</span>
+<span id="cb13-11"><a href=""></a>  W A1  W A2  W A3        W B1  W B2  W B3        W C1  W C2  W C3</span>
+<span id="cb13-12"><a href=""></a>   |     |     |           |     |     |           |     |     |</span>
+<span id="cb13-13"><a href=""></a>   -------------           -------------           -------------</span>
+<span id="cb13-14"><a href=""></a>        |                       |                       |</span>
+<span id="cb13-15"><a href=""></a>   Validation A            Validation B            Validation C</span>
+<span id="cb13-16"><a href=""></a>        \                       |                       /</span>
+<span id="cb13-17"><a href=""></a>         \                      |                      /</span>
+<span id="cb13-18"><a href=""></a>          ---------------------------------------------</span>
+<span id="cb13-19"><a href=""></a>                                |</span>
+<span id="cb13-20"><a href=""></a>                      Vérification globale</span>
+<span id="cb13-21"><a href=""></a>                                |</span>
+<span id="cb13-22"><a href=""></a>                           Intégration</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="un-bureau-détudes-personnel" class="slide level2 center">
+<h2>Un bureau d’études personnel</h2>
+<p><br></p>
+<ul>
+<li><strong>Architecte</strong> : conserve la vision globale, les contrats et la documentation</li>
+<li><strong>Leads</strong> : pilotent chacun un chantier particulier</li>
+<li><strong>Workers</strong> : exécutent des tâches locales, limitées et vérifiables</li>
+</ul>
+<p><br><br></p>
+<div class="fragment green">
+<p>Chaque niveau possède ses responsabilités et son contexte.</p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>Et utilise un modèle adapté à la complexité de son travail.</p>
+</div>
+</section>
+<section id="à-chaque-rôle-son-modèle" class="slide level2 center">
+<h2>À chaque rôle son modèle</h2>
+<p><br></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Rôle</th>
+<th>Besoin principal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Architecte</td>
+<td>Raisonnement global et décisions complexes</td>
+</tr>
+<tr class="even">
+<td>Lead</td>
+<td>Planification, coordination et intégration</td>
+</tr>
+<tr class="odd">
+<td>Worker</td>
+<td>Exécution ciblée et vérification locale</td>
+</tr>
+</tbody>
+</table>
+<p><br><br></p>
+<div class="fragment green">
+<p>Utiliser la puissance de raisonnement là où elle apporte de la valeur.</p>
+</div>
+<p><br></p>
+<div class="fragment orange">
+<p>Le meilleur modèle partout n’est pas nécessairement la meilleure stratégie.</p>
+</div>
+</section>
+<section id="cest-un-peu-léquivalent" class="slide level2 conclusion center Large">
+<h2>C’est un peu l’équivalent</h2>
+<p><br></p>
+<p>du passage</p>
+<p><span class="blue big_title">CPU</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="green big_title">GPU</span></p>
+<p><br></p>
+<div class="fragment">
+<p>Décomposer pour paralléliser massivement.</p>
+</div>
+</section>
+<section id="mais-attention" class="slide level2 center">
+<h2>Mais attention</h2>
+<p><br><br></p>
+<p><span class="Large red">10 agents <span class="glyph">≠</span> 10 fois plus rapide</span></p>
+<p><br><br></p>
+<div class="fragment">
+<p>Comme sur GPU, il faut suffisamment de travail indépendant</p>
+<p>pour que le parallélisme soit intéressant.</p>
+</div>
+</section>
+<section id="quand-paralléliser" class="slide level2 quiz">
+<h2>Quand paralléliser ?</h2>
+<p>Quelles tâches sont les plus adaptées à deux agents en parallèle ?</p>
+<p><code>A.</code> <span class="glyph"> </span> Deux modifications concurrentes du même fichier</p>
+<p><code>B.</code> <span class="glyph"> </span> Deux modules indépendants avec des interfaces définies</p>
+<p><code>C.</code> <span class="glyph"> </span> Deux modifications incompatibles de la même API</p>
+<p><code>D.</code> <span class="glyph"> </span> Deux refontes globales sans coordination</p>
+<div class="fragment green">
+<p><strong>Réponse : B.</strong> Des responsabilités indépendantes et des contrats stables.</p>
+</div>
+</section>
+<section id="un-problème-le-même-dépôt" class="slide level2 center">
+<h2>Un problème : le même dépôt</h2>
+<p><br></p>
+<p>Que se passe-t-il si plusieurs agents</p>
+<p>modifient les mêmes fichiers ?</p>
+<p><br><br></p>
+<div class="fragment red Large">
+<p>Conflits, modifications écrasées, résultats incohérents…</p>
+</div>
+</section>
+<section id="une-solution-git-worktrees" class="slide level2 center">
+<h2>Une solution : Git Worktrees</h2>
+<p><br></p>
+<p>Chaque agent travaille dans son propre espace.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a href=""></a>Projet</span>
+<span id="cb14-2"><a href=""></a>├── main/</span>
+<span id="cb14-3"><a href=""></a>├── worktree-worker-A/</span>
+<span id="cb14-4"><a href=""></a>├── worktree-worker-B/</span>
+<span id="cb14-5"><a href=""></a>└── worktree-worker-C/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br></p>
+<div class="fragment green">
+<p>Des espaces isolés, mais un historique Git partagé.</p>
+</div>
+</section>
+<section id="branch-worktree" class="slide level2 center">
+<h2>Branch ≠ Worktree</h2>
+<p><br></p>
+<p><span class="blue Large">Branch</span> : une branche de développement</p>
+<p><span class="green Large">Worktree</span> : un espace de travail indépendant</p>
+<p><br><br></p>
+<div class="fragment">
+<p>Une branche permet d’isoler les <strong>commits</strong>.</p>
+<p>Un worktree permet aussi d’isoler les <strong>fichiers de travail</strong>.</p>
+</div>
+<p><br><br></p>
+<div class="fragment orange">
+<p>Idéal pour faire travailler plusieurs agents en parallèle.</p>
+</div>
+</section>
+<section id="mais-lisolation-ne-suffit-pas" class="slide level2 center">
+<h2>Mais l’isolation ne suffit pas</h2>
+<p><br><br></p>
+<p>Deux agents peuvent modifier indépendamment</p>
+<p>des composants qui dépendent l’un de l’autre.</p>
+<p><br><br></p>
+<div class="fragment orange">
+<p>Il faut définir les contrats et les responsabilités</p>
+<p>avant de lancer les travaux parallèles.</p>
+</div>
+</section>
+<section id="et-si-le-projet-dure-plusieurs-mois" class="slide level2 center">
+<h2>Et si le projet dure plusieurs mois ?</h2>
+<p><br><br></p>
+<p>Les agents changent.</p>
+<p>Les conversations s’accumulent.</p>
+<p>Les décisions évoluent.</p>
+<p><br><br></p>
+<div class="fragment red Large">
+<p>Comment garder la vision globale ?</p>
+</div>
+</section>
+<section id="deux-niveaux-de-mémoire" class="slide level2 center">
+<h2>Deux niveaux de mémoire</h2>
+<p><br></p>
+<p><span class="blue Large">Conversation stratégique</span></p>
+<p>Pour réfléchir, comparer les options,</p>
+<p>suivre les objectifs et prendre du recul.</p>
+<p><br><br></p>
+<p><span class="green Large">Documentation dans le dépôt</span></p>
+<p>Pour conserver l’architecture,</p>
+<p>les contrats et les décisions techniques.</p>
+<p><br><br></p>
+<div class="fragment orange">
+<p>La conversation aide à piloter.</p>
+<p>Le dépôt reste la référence technique.</p>
+</div>
+</section>
+<section id="mon-organisation-personnelle" class="slide level2 center">
+<h2>Mon organisation personnelle</h2>
+<p><br></p>
+<p><span class="blue">Conversation web</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="orange">Vision stratégique</span></p>
+<p><br></p>
+<p><span class="purple">Architecte</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="green">Architecture et cohérence</span></p>
+<p><br></p>
+<p><span class="blue">Leads / Workers</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="orange">Développement</span></p>
+<p><br><br></p>
+<div class="fragment">
+<p>L’humain conserve les décisions importantes,</p>
+<p>sans devoir suivre chaque ligne de code.</p>
+</div>
+</section>
+<section id="mais-qui-surveille-larchitecture" class="slide level2 center">
+<h2>Mais qui surveille l’architecture ?</h2>
+<p><br><br></p>
+<p>Les agents ajoutent du code.</p>
+<p>Les fonctionnalités s’accumulent.</p>
+<p>Les tests passent.</p>
+<p><br><br></p>
+<div class="fragment red Large">
+<p>Et pourtant, le projet peut devenir ingérable.</p>
+</div>
+</section>
+<section id="un-agent-architecte" class="slide level2 center">
+<h2>Un agent architecte</h2>
+<p><br></p>
+<p>Son rôle n’est pas nécessairement de coder.</p>
+<p>Mais d’examiner régulièrement :</p>
+<ul>
+<li>La structure des modules</li>
+<li>Les dépendances et les interfaces</li>
+<li>Les duplications et le code mort</li>
+<li>La cohérence de la documentation</li>
+<li>La complexité du système</li>
+</ul>
+<p><br><br></p>
+<div class="fragment green">
+<p>Il peut proposer de ne rien changer.</p>
+</div>
+</section>
+<section id="ne-demandez-pas" class="slide level2 center">
+<h2>Ne demandez pas</h2>
+<p><br><br></p>
+<p><span class="red Large">« Refactorise toute mon architecture ! »</span></p>
+<p><br><br></p>
+<div class="fragment green">
+<p>Mais commencez par demander :</p>
+<p>« Audite mon architecture et identifie</p>
+<p>les problèmes concrets, sans modifier le code. »</p>
+</div>
+</section>
+<section id="une-méthode-de-supervision" class="slide level2 center">
+<h2>Une méthode de supervision</h2>
+<p><br><br></p>
+<p><span class="blue">Audit</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="orange">Proposition</span></p>
+<p><br><br></p>
+<p><span class="purple">Lancement</span> <span class="glyph arrow" style="font-size:1.2em;"></span> <span class="green">Vérification</span></p>
+<p><br><br></p>
+<div class="fragment">
+<p>On sépare l’analyse, la décision,</p>
+<p>l’exécution et la validation.</p>
+</div>
+</section>
+<section id="audit" class="slide level2 vcenter">
+<h2>1. Audit</h2>
+<p><br></p>
+<p>L’agent examine l’état actuel du projet.</p>
+<ul>
+<li>Explorer le code et les dépendances</li>
+<li>Identifier les problèmes concrets</li>
+<li>Justifier les observations</li>
+<li>Évaluer les conséquences possibles</li>
+</ul>
+<p><br><br></p>
+<div class="fragment red">
+<p>Aucune modification du code.</p>
+</div>
+</section>
+<section id="proposition" class="slide level2 vcenter">
+<h2>2. Proposition</h2>
+<p><br></p>
+<p>L’agent propose un plan.</p>
+<ul>
+<li>Les changements envisagés</li>
+<li>Les modules concernés</li>
+<li>Les risques et les dépendances</li>
+<li>Les vérifications nécessaires</li>
+</ul>
+<p><br><br></p>
+<div class="fragment orange">
+<p>L’humain valide le plan avant l’exécution.</p>
+</div>
+</section>
+<section id="lancement" class="slide level2 vcenter">
+<h2>3. Lancement</h2>
+<p><br></p>
+<p>On délègue le travail.</p>
+<ul>
+<li>Le Lead décompose le chantier</li>
+<li>Les Workers exécutent leurs tâches</li>
+<li>Les modifications sont isolées</li>
+<li>Les tests et la documentation sont mis à jour</li>
+</ul>
+<p><br><br></p>
+<div class="fragment blue">
+<p>Chaque tâche produit un résultat identifiable.</p>
+</div>
+</section>
+<section id="vérification" class="slide level2 vcenter">
+<h2>4. Vérification</h2>
+<p><br></p>
+<p>On examine ce qui a réellement changé.</p>
+<ul>
+<li>Les oracles passent-ils ?</li>
+<li>L’architecture est-elle toujours cohérente ?</li>
+<li>Le code est-il propre ?</li>
+<li>Y a-t-il des régressions ?</li>
+<li>La documentation est-elle à jour ?</li>
+</ul>
+<p><br><br></p>
+<div class="fragment green">
+<p>Alors seulement, on intègre.</p>
+</div>
+</section>
+<section id="le-véritable-power-user" class="slide level2 center">
+<h2>Le véritable Power User</h2>
+<p><br><br></p>
+<p>Ce n’est pas celui qui lance</p>
+<p><span class="red Large">le plus d’agents</span>.</p>
+<p><br><br></p>
+<div class="fragment green Large">
+<p>C’est celui qui sait organiser,</p>
+<p>orienter et vérifier leur travail.</p>
+</div>
+<!-- /BLOC -->
+<!-- BLOC: Conclusion -->
+</section>
+<section id="conclusion" class="slide level2 bloc" data-name="Conclusion">
+<h2>Conclusion</h2>
+<p><span class="Large">Qu’apprend-on à maîtriser ?</span></p>
+</section>
+<section id="le-développeur-reste-responsable" class="slide level2">
+<h2>Le développeur reste responsable</h2>
+<ul>
+<li>De la compréhension du problème</li>
+<li>Des choix architecturaux</li>
+<li>De la spécification des tâches</li>
+<li>Des preuves attendues</li>
+<li>De la décision finale d’intégration</li>
+</ul>
+</section>
+<section id="le-dépôt-devient-une-infrastructure" class="slide level2">
+<h2>Le dépôt devient une infrastructure</h2>
+<p><span class="blue">agents/</span> <span class="glyph arrow" style="font-size:1.2em;"></span> Méthodes</p>
+<p><span class="orange">docs/</span> <span class="glyph arrow" style="font-size:1.2em;"></span> Mémoire</p>
+<p><span class="green">tests/</span> <span class="glyph arrow" style="font-size:1.2em;"></span> Oracles</p>
+<div class="fragment">
+<p>Une infrastructure utile aux <strong>agents et aux humains</strong>.</p>
+</div>
+<p>Et avec un peu de travaille</p>
+<p>Un bureau d’étude</p>
+</section>
+<section id="le-principe-à-retenir" class="slide level2 center">
+<h2>Le principe à retenir</h2>
+<p><br><br></p>
+<p><span class="Large">Ne pas seulement demander du code.</span></p>
+<p><br></p>
+<div class="fragment green Large bold">
+<p>Construire les conditions permettant de vérifier ce code.</p>
+</div>
+</section>
+<section id="et-surtout" class="slide level2 center">
+<h2>Et surtout…</h2>
+<p><br><br></p>
+<p><span class="Large orange">Un agent efficace n’est pas nécessairement un agent fiable.</span></p>
+<div class="fragment">
+<p>La fiabilité vient du système complet : spécification, contexte, contrôles et validation.</p>
+</div>
+</section>
+<section id="loracle-ultime" class="slide level2 quiz">
+<h2>L’oracle ultime</h2>
+<p><br></p>
+<p>Comment vérifier que vous avez compris ce cours ?</p>
+<p><code>A.</code> <span class="glyph"> </span> Demander à un agent de confirmer</p>
+<p><code>B.</code> <span class="glyph"> </span> Relire les slides jusqu’à les connaître par cœur</p>
+<p><code>C.</code> <span class="glyph"> </span> Concevoir un oracle pour vérifier vos connaissances</p>
+<p><code>D.</code> <span class="glyph"> </span> Lancer 10 agents pour répondre à votre place</p>
+<div class="fragment green">
+<p><strong>Réponse : A.</strong> Welcome dans la Matrice. 🐇</p>
+</div>
+</section>
+<section id="section-5" class="slide level2" data-background-iframe="https://www.youtube.com/embed/CLLp3ey-9VI?autoplay=1&amp;mute=0&amp;controls=1&amp;rel=0&amp;cc_load_policy=0" data-background-iframe-sandbox="allow-scripts">
+<h2></h2>
+</section>
+<section id="section-6" class="slide level2 gpgpu vcenter" data-background-interactive="true" data-state="hide-menubar" data-background-iframe="_extensions/local/slide/gpgpu/index.html">
+<h2></h2>
+<p><span class="Large big_title outline">C’est tout pour aujourd’hui</span></p>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/chrono/chrono.js"></script>
+  <script src="index_files/libs/revealjs/plugin/simplemenu/simplemenu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-leaderline/reveal-leader-line.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-attribution/attribution.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="index_files/libs/revealjs/plugin/terminal/easter-eggs.js"></script>
+  <script src="index_files/libs/revealjs/plugin/terminal/terminal.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
+'simplemenu': {"menubarclass":"menubar","menuclass":"menu","activeclass":"active","activeelement":"li","flat":true,"barhtml":{"header":"","footer":"<div class='menubar'><ul class='menu'></ul></div>"},"scale":0.4},
+'pointer': {"key":"p","color":"#12ff00","pointerSize":16,"alwaysVisible":false,"pointsize":20},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: false,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: true,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: true,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1920,
+
+        height: 1080,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Chrono, Simplemenu, RevealLeaderline, RevealAttribution, RevealPointer, Terminal, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const root = document.querySelector(".reveal .slides");
+        if (!root || typeof twemoji === "undefined") return;
+
+        const excluded = new Set(["CODE", "PRE", "SCRIPT", "STYLE", "TEXTAREA"]);
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+          const node = walker.currentNode;
+          if (!excluded.has(node.parentElement?.tagName)) textNodes.push(node);
+        }
+
+        for (const node of textNodes) {
+          const html = twemoji.parse(node.data, {
+            base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/",
+            folder: "svg",
+            ext: ".svg",
+            className: "twemoji"
+          });
+
+          if (html === node.data) continue;
+          const template = document.createElement("template");
+          template.innerHTML = html;
+          node.replaceWith(template.content);
+        }
+      });
+    </script>
+    <script type="text/javascript" id="code-annotation-fragments">
+      function hideAllTippy() {
+        document.querySelectorAll('.code-annotation-anchor').forEach(anchor => {
+          const tippyInstance = anchor._tippy;
+          if (tippyInstance) {
+            tippyInstance.hide();
+          }
+        });
+      }
+
+      Reveal.on('fragmentshown', (event) => {
+        hideAllTippy();
+
+        const fragment = event.fragment;
+        const classesToCheck = ['has-line-highlights', 'visible', 'current-fragment'];
+        if (classesToCheck.some(cls => fragment.classList.contains(cls))) {
+          const codeAnnotationAnchors = fragment.querySelectorAll('.code-annotation-anchor');
+          let matchCount = 0;
+          for (const anchor of codeAnnotationAnchors) {
+            const nextElement = anchor.nextElementSibling;
+            if (
+              nextElement &&
+              nextElement.classList.contains('code-annotation-target') &&
+              nextElement.classList.contains('highlight-line')
+            ) {
+              matchCount++;
+              if (matchCount > 1) break;
+            }
+          }
+          if (matchCount === 1) {
+            for (const anchor of codeAnnotationAnchors) {
+              const nextElement = anchor.nextElementSibling;
+              if (
+                nextElement &&
+                nextElement.classList.contains('code-annotation-target') &&
+                nextElement.classList.contains('highlight-line')
+              ) {
+                const tippyInstance = anchor._tippy;
+                if (tippyInstance) {
+                  tippyInstance.show();
+                  break;
+                }
+              }
+            }
+          }
+        }
+      });
+
+      Reveal.on('fragmenthidden', () => {
+        hideAllTippy();
+      });
+    </script>
+
+    <script>
+
+    window.addEventListener("message", (ev) => {
+      const msg = ev.data;
+      if (!msg || msg.type !== "reveal-nav") return;
+      if (typeof Reveal === "undefined") return;
+
+      const k = msg.key;
+      const isSpace = msg.code === "Space" || k === " ";
+
+      if (k === "ArrowLeft" || k === "PageUp") Reveal.navigateLeft();
+      else if (k === "ArrowRight" || k === "PageDown" || isSpace) Reveal.navigateRight();
+      else if (k === "ArrowUp") Reveal.navigateUp();
+      else if (k === "ArrowDown") Reveal.navigateDown();
+    });
+
+    </script>
+
+    <script>
+    (() => {
+      const fitTextElements = document.querySelectorAll(".r-fit-text");
+
+      const fitToContentWidth = (element) => {
+        const parent = element.parentElement;
+        if (!parent) return;
+
+        const parentStyle = window.getComputedStyle(parent);
+        const horizontalPadding =
+          (parseFloat(parentStyle.paddingLeft) || 0) +
+          (parseFloat(parentStyle.paddingRight) || 0);
+        const availableWidth = parent.clientWidth - horizontalPadding;
+        const contentWidth = element.scrollWidth;
+        const fontSize = parseFloat(window.getComputedStyle(element).fontSize);
+
+        if (availableWidth > 0 && contentWidth > availableWidth && fontSize > 0) {
+          element.style.fontSize = `${fontSize * (availableWidth / contentWidth)}px`;
+        }
+      };
+
+      const fitAllToContentWidth = () => {
+        fitTextElements.forEach(fitToContentWidth);
+      };
+
+      fitTextElements.forEach((element) => {
+        element.addEventListener("fit", () => requestAnimationFrame(() => fitToContentWidth(element)));
+      });
+
+      window.addEventListener("load", fitAllToContentWidth);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(fitAllToContentWidth);
+      }
+    })();
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("iframe[allow]").forEach((f) => {
+        const cleaned = f
+          .getAttribute("allow")
+          .split(";")
+          .map(s => s.trim())
+          .filter(s => s && s !== "autoplay");
+
+        f.setAttribute("allow", cleaned.join("; "));
+      });
+    });
+    </script>
+
+    <style>
+    #excalidraw-overlay{
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: none;
+      background: rgba(0,0,0,0.35);
+    }
+
+    #excalidraw-panel{
+      position: absolute;
+      inset: 0;
+      background: #1c1c1c;
+    }
+
+    #excalidraw-overlay iframe{
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: #1c1c1c;
+    }
+
+    /* bouton quitter */
+    #excalidraw-close{
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 100000;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.45);
+      color: #fff;
+      font-size: 26px;
+      line-height: 42px;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    #excalidraw-close:hover{
+      background: rgba(255,255,255,0.10);
+    }
+    </style>
+
+    <div id="excalidraw-overlay" aria-hidden="true">
+      <div id="excalidraw-panel">
+        <div id="excalidraw-close" title="Quitter (Esc)">✕</div>
+        <iframe id="excalidraw-iframe"></iframe>
+      </div>
+    </div>
+
+    <script>
+    (() => {
+      const overlay = document.getElementById("excalidraw-overlay");
+      const panel   = document.getElementById("excalidraw-panel");
+      const closeBt = document.getElementById("excalidraw-close");
+      const iframe  = document.getElementById("excalidraw-iframe");
+
+      function openBoard(){
+        if (overlay.style.display === "block") return;
+
+        iframe.src = window.location.origin + "/_extensions/external/excalidraw/excalidraw.html";
+        overlay.style.display = "block";
+        overlay.setAttribute("aria-hidden","false");
+      }
+
+      function closeBoard(){
+        overlay.style.display = "none";
+        overlay.setAttribute("aria-hidden","true");
+        iframe.src = "about:blank";
+
+        // IMPORTANT: si Reveal s'est mis en pause, on reprend
+        if (window.Reveal && typeof Reveal.isPaused === "function" && Reveal.isPaused()) {
+          Reveal.resume();
+        }
+
+        // Redonner le focus à la présentation
+        const r = document.querySelector(".reveal");
+        if (r) r.focus();
+      }
+
+      // B pour ouvrir
+      window.addEventListener("keydown", (e) => {
+        if ((e.key === "w" || e.key === "W") && !e.ctrlKey && !e.metaKey && !e.altKey) {
+          e.preventDefault();
+          openBoard();
+        }
+      }, true);
+
+      // ESC pour fermer (capture, marche même si focus dans l'iframe)
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeBoard();
+      }, true);
+
+      // bouton quitter
+      closeBt.addEventListener("click", closeBoard);
+    })();
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+            let selectedAnnoteEl;
+            const selectorForAnnotation = ( cell, annotation) => {
+              let cellAttr = 'data-code-cell="' + cell + '"';
+              let lineAttr = 'data-code-annotation="' +  annotation + '"';
+              const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+              return selector;
+            }
+            const selectCodeLines = (annoteEl) => {
+              const doc = window.document;
+              const targetCell = annoteEl.getAttribute("data-target-cell");
+              const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+              const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+              const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+              const lineIds = lines.map((line) => {
+                return targetCell + "-" + line;
+              })
+              let top = null;
+              let height = null;
+              let parent = null;
+              if (lineIds.length > 0) {
+                  //compute the position of the single el (top and bottom and make a div)
+                  const el = window.document.getElementById(lineIds[0]);
+                  top = el.offsetTop;
+                  height = el.offsetHeight;
+                  parent = el.parentElement.parentElement;
+                if (lineIds.length > 1) {
+                  const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+                  const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+                  height = bottom - top;
+                }
+                if (top !== null && height !== null && parent !== null) {
+                  // cook up a div (if necessary) and position it 
+                  let div = window.document.getElementById("code-annotation-line-highlight");
+                  if (div === null) {
+                    div = window.document.createElement("div");
+                    div.setAttribute("id", "code-annotation-line-highlight");
+                    div.style.position = 'absolute';
+                    parent.appendChild(div);
+                  }
+                  div.style.top = top - 2 + "px";
+                  div.style.height = height + 4 + "px";
+                  div.style.left = 0;
+                  let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+                  if (gutterDiv === null) {
+                    gutterDiv = window.document.createElement("div");
+                    gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                    gutterDiv.style.position = 'absolute';
+                    const codeCell = window.document.getElementById(targetCell);
+                    const gutter = codeCell.querySelector('.code-annotation-gutter');
+                    gutter.appendChild(gutterDiv);
+                  }
+                  gutterDiv.style.top = top - 2 + "px";
+                  gutterDiv.style.height = height + 4 + "px";
+                }
+                selectedAnnoteEl = annoteEl;
+              }
+            };
+            const unselectCodeLines = () => {
+              const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+              elementsIds.forEach((elId) => {
+                const div = window.document.getElementById(elId);
+                if (div) {
+                  div.remove();
+                }
+              });
+              selectedAnnoteEl = undefined;
+            };
+              // Handle positioning of the toggle
+          window.addEventListener(
+            "resize",
+            throttle(() => {
+              elRect = undefined;
+              if (selectedAnnoteEl) {
+                selectCodeLines(selectedAnnoteEl);
+              }
+            }, 10)
+          );
+          function throttle(fn, ms) {
+          let throttle = false;
+          let timer;
+            return (...args) => {
+              if(!throttle) { // first call gets through
+                  fn.apply(this, args);
+                  throttle = true;
+              } else { // all the others get throttled
+                  if(timer) clearTimeout(timer); // cancel #2
+                  timer = setTimeout(() => {
+                    fn.apply(this, args);
+                    timer = throttle = false;
+                  }, ms);
+              }
+            };
+          }
+            const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+            for (let i=0; i<annoteTargets.length; i++) {
+              const annoteTarget = annoteTargets[i];
+              const targetCell = annoteTarget.getAttribute("data-target-cell");
+              const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+              const contentFn = () => {
+                const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+                if (content) {
+                  const tipContent = content.cloneNode(true);
+                  tipContent.classList.add("code-annotation-tip-content");
+                  return tipContent.outerHTML;
+                }
+              }
+              const config = {
+                allowHTML: true,
+                content: contentFn,
+                onShow: (instance) => {
+                  selectCodeLines(instance.reference);
+                  instance.reference.classList.add('code-annotation-active');
+                  window.tippy.hideAll();
+                },
+                onHide: (instance) => {
+                  unselectCodeLines();
+                  instance.reference.classList.remove('code-annotation-active');
+                },
+                maxWidth: 300,
+                delay: [50, 0],
+                duration: [200, 0],
+                offset: [5, 10],
+                arrow: true,
+                trigger: 'click',
+                appendTo: function(el) {
+                  return el.parentElement.parentElement.parentElement;
+                },
+                interactive: true,
+                interactiveBorder: 10,
+                theme: 'light-border',
+                placement: 'right',
+                positionFixed: true,
+                popperOptions: {
+                  modifiers: [
+                  {
+                    name: 'flip',
+                    options: {
+                      flipVariations: false, // true by default
+                      allowedAutoPlacements: ['right'],
+                      fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+                    },
+                  },
+                  {
+                    name: 'preventOverflow',
+                    options: {
+                      mainAxis: false,
+                      altAxis: false
+                    }
+                  }
+                  ]        
+                }      
+              };
+              window.tippy(annoteTarget, config); 
+            }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
