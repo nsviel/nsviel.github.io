@@ -193,21 +193,14 @@
     "href": "fr/teaching/bigdata/index.html",
     "title": "Introduction au Big Data",
     "section": "",
-    "text": "Ce cours introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets."
+    "text": "Ce cours propose une introduction au traitement et à l’analyse des données, depuis leur collecte et leur préparation jusqu’à leur exploitation pour produire des connaissances et prendre des décisions. Il aborde les notions fondamentales de représentation, d’abstraction et de manipulation des données, ainsi que les outils permettant de les nettoyer, de les explorer, de les synthétiser et de les analyser.\nL’enseignement s’appuie sur des exemples concrets, des travaux pratiques et des mises en situation mobilisant notamment les tableurs et Python. L’évaluation repose sur un projet d’analyse de données, réalisé individuellement ou en binôme, comprenant une synthèse écrite et une présentation interactive des résultats."
   },
   {
     "objectID": "fr/teaching/bigdata/index.html#présentation",
     "href": "fr/teaching/bigdata/index.html#présentation",
     "title": "Introduction au Big Data",
     "section": "",
-    "text": "Ce cours introduit les fondamentaux de la recherche d’information à partir des données. Il aborde des notions clés telles que la distinction entre données, information et connaissance, ainsi que le principe d’abstraction en informatique. Ces concepts sont illustrés par des applications concrètes et mis en pratique à travers des projets inspirés de situations professionnelles.\nL’enseignement est principalement autonome et l’évaluation repose exclusivement sur la réalisation de deux projets."
-  },
-  {
-    "objectID": "fr/teaching/bigdata/index.html#organisation",
-    "href": "fr/teaching/bigdata/index.html#organisation",
-    "title": "Introduction au Big Data",
-    "section": "Organisation",
-    "text": "Organisation\n\n\n\n\nPériode\nContenu\n\n\n\n\nMois 1\nTravaux pratiques\n\n\nMois 2\nProjet 1\n\n\nMois 3\nProjet 2"
+    "text": "Ce cours propose une introduction au traitement et à l’analyse des données, depuis leur collecte et leur préparation jusqu’à leur exploitation pour produire des connaissances et prendre des décisions. Il aborde les notions fondamentales de représentation, d’abstraction et de manipulation des données, ainsi que les outils permettant de les nettoyer, de les explorer, de les synthétiser et de les analyser.\nL’enseignement s’appuie sur des exemples concrets, des travaux pratiques et des mises en situation mobilisant notamment les tableurs et Python. L’évaluation repose sur un projet d’analyse de données, réalisé individuellement ou en binôme, comprenant une synthèse écrite et une présentation interactive des résultats."
   },
   {
     "objectID": "fr/teaching/bigdata/index.html#supports-de-cours",
@@ -333,21 +326,14 @@
     "href": "en/teaching/bigdata/index.html",
     "title": "Introduction to Big Data",
     "section": "",
-    "text": "This course introduces the fundamentals of information retrieval from data. It covers key concepts such as the distinction between data, information, and knowledge, as well as the principle of abstraction in computer science. These concepts are illustrated through concrete applications and put into practice through projects inspired by real-world professional scenarios.\nThe course is primarily self-directed, and assessment is based exclusively on the completion of two projects."
+    "text": "This course provides an introduction to data processing and analysis, from data collection and preparation to the extraction of knowledge and support for decision-making. It covers fundamental concepts such as data representation, abstraction, and manipulation, as well as the tools used to clean, explore, summarize, and analyze data.\nThe course combines practical examples, hands-on exercises, and real-world scenarios, using spreadsheets and Python. Assessment is based on a data analysis project, completed individually or in pairs, involving a written summary and an interactive presentation of the results."
   },
   {
     "objectID": "en/teaching/bigdata/index.html#overview",
     "href": "en/teaching/bigdata/index.html#overview",
     "title": "Introduction to Big Data",
     "section": "",
-    "text": "This course introduces the fundamentals of information retrieval from data. It covers key concepts such as the distinction between data, information, and knowledge, as well as the principle of abstraction in computer science. These concepts are illustrated through concrete applications and put into practice through projects inspired by real-world professional scenarios.\nThe course is primarily self-directed, and assessment is based exclusively on the completion of two projects."
-  },
-  {
-    "objectID": "en/teaching/bigdata/index.html#organization",
-    "href": "en/teaching/bigdata/index.html#organization",
-    "title": "Introduction to Big Data",
-    "section": "Organization",
-    "text": "Organization\n\n\n\n\nPeriod\nContent\n\n\n\n\nMonth 1\nLabs\n\n\nMonth 2\nProject 1\n\n\nMonth 3\nProject 2"
+    "text": "This course provides an introduction to data processing and analysis, from data collection and preparation to the extraction of knowledge and support for decision-making. It covers fundamental concepts such as data representation, abstraction, and manipulation, as well as the tools used to clean, explore, summarize, and analyze data.\nThe course combines practical examples, hands-on exercises, and real-world scenarios, using spreadsheets and Python. Assessment is based on a data analysis project, completed individually or in pairs, involving a written summary and an interactive presentation of the results."
   },
   {
     "objectID": "en/teaching/bigdata/index.html#course-materials",
