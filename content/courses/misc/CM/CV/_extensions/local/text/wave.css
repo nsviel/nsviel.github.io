@@ -1,0 +1,29 @@
+.wave .wave-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.wave .wave-char {
+  display: inline-block;
+  animation: text-wave var(--wave-duration, 1.6s) ease-in-out infinite;
+  animation-delay: calc(var(--wave-index) * -0.08s);
+}
+
+@keyframes text-wave {
+  0%, 100% {
+    transform: translateY(var(--wave-amplitude, 0.12em));
+  }
+  50% {
+    transform: translateY(calc(-1 * var(--wave-amplitude, 0.12em)));
+  }
+}
+
+.reveal .slides section:not(.present) .wave-char {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave .wave-char {
+    animation: none;
+  }
+}

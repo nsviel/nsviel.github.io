@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="103.2301mm"
+   height="74.556511mm"
+   viewBox="0 0 103.2301 74.556511"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   sodipodi:docname="agentic_loop.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.3157341"
+     inkscape:cx="223.90308"
+     inkscape:cy="205.33446"
+     inkscape:window-width="2560"
+     inkscape:window-height="1440"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect13"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect12"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect11"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-25.519836,-69.543596)">
+    <rect
+       style="font-variation-settings:'opsz' 32, 'wght' 700;fill:#ebf4f8;fill-opacity:1;stroke:#ffffff;stroke-width:0.3"
+       id="rect1"
+       width="32.600689"
+       height="11.808125"
+       x="42.226883"
+       y="69.693596"
+       ry="5.9040623" />
+    <rect
+       style="font-variation-settings:'opsz' 32, 'wght' 700;fill:#ebf4f8;fill-opacity:1;stroke:#ffffff;stroke-width:0.3"
+       id="rect1-6"
+       width="32.600689"
+       height="11.808125"
+       x="95.999252"
+       y="131.65581"
+       ry="5.9040623" />
+    <rect
+       style="font-variation-settings:'opsz' 32, 'wght' 700;fill:#a0c2de;fill-opacity:1;stroke:#ffffff;stroke-width:0.232816"
+       id="rect2"
+       width="21.116449"
+       height="21.116449"
+       x="46.813858"
+       y="89.425789" />
+    <rect
+       style="font-variation-settings:'opsz' 32, 'wght' 700;fill:#a0c2de;fill-opacity:1;stroke:#ffffff;stroke-width:0.246109"
+       id="rect3"
+       width="29.060802"
+       height="12.003376"
+       x="43.996826"
+       y="131.97368" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans, @opsz=32,wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'opsz' 32, 'wght' 700;writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+       x="52.226402"
+       y="77.293457"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans, @opsz=32,wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'opsz' 32, 'wght' 700;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+         x="52.226402"
+         y="77.293457">input</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans, @opsz=32,wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'opsz' 32, 'wght' 700;writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+       x="50.184528"
+       y="102.03759"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans, @opsz=32,wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'opsz' 32, 'wght' 700;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+         x="50.184528"
+         y="102.03759">model</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans, @opsz=32,wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'opsz' 32, 'wght' 700;writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+       x="52.623161"
+       y="139.77225"
+       id="text7"><tspan
+         sodipodi:role="line"
+         id="tspan7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans, @opsz=32,wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'opsz' 32, 'wght' 700;stroke-width:0.3"
+         x="52.623161"
+         y="139.77225">tools</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans, @opsz=32,wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'opsz' 32, 'wght' 700;writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+       x="104.09119"
+       y="139.13049"
+       id="text8"><tspan
+         sodipodi:role="line"
+         id="tspan8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans, @opsz=32,wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'opsz' 32, 'wght' 700;stroke-width:0.3"
+         x="104.09119"
+         y="139.13049">output</tspan></text>
+    <path
+       style="font-variation-settings:'opsz' 32, 'wght' 700;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:0.3;stroke-opacity:1;marker-end:url(#marker1)"
+       d="m 57.372083,81.886776 v 6.545807"
+       id="path10" />
+    <path
+       style="font-variation-settings:'opsz' 32, 'wght' 700;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.3;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="m 46.205703,100.7541 c -5.690147,6.97364 -11.380179,13.94714 -11.95776,19.9155 -0.577581,5.96836 3.957332,10.93109 8.492332,15.89392"
+       id="path11"
+       inkscape:path-effect="#path-effect11"
+       inkscape:original-d="m 46.205703,100.7541 c -5.690148,6.97364 -11.380178,13.94714 -17.07044,20.92092 4.535096,4.96294 9.070013,9.92567 13.605012,14.8885"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="font-variation-settings:'opsz' 32, 'wght' 700;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.3;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="m 73.465723,137.33406 c 2.589774,-6.66486 5.179544,-13.32971 4.398761,-19.65186 -0.780783,-6.32215 -4.931948,-12.30135 -9.0832,-18.280677"
+       id="path12"
+       inkscape:path-effect="#path-effect12"
+       inkscape:original-d="m 73.465723,137.33406 c 2.589771,-6.66486 5.179542,-13.32971 7.769315,-19.99456 -4.151336,-5.97945 -8.302503,-11.95865 -12.453754,-17.937977" />
+    <path
+       style="font-variation-settings:'opsz' 32, 'wght' 700;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.3;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="m 69.809573,96.316648 c 13.634389,8.112082 27.26877,16.224152 34.028837,21.994052 6.76006,5.76989 6.64581,9.19746 6.53156,12.6251"
+       id="path13"
+       inkscape:path-effect="#path-effect13"
+       inkscape:original-d="m 69.809573,96.316648 c 13.634387,8.112082 27.268771,16.224152 40.903157,24.336232 -0.11426,3.42771 -0.22851,6.85528 -0.34276,10.28292" />
+    <rect
+       style="font-variation-settings:'opsz' 32, 'wght' 700;fill:#def0d1;fill-opacity:1;stroke:#ffffff;stroke-width:0.3"
+       id="rect4-1"
+       width="29.520311"
+       height="7.4442525"
+       x="95.585739"
+       y="117.61711" />
+    <rect
+       style="font-variation-settings:'opsz' 32, 'wght' 700;fill:#def0d1;fill-opacity:1;stroke:#ffffff;stroke-width:0.3"
+       id="rect4"
+       width="29.520311"
+       height="7.4442525"
+       x="25.669836"
+       y="117.82454" />
+    <rect
+       style="font-variation-settings:'opsz' 32, 'wght' 700;fill:#def0d1;fill-opacity:1;stroke:#ffffff;stroke-width:0.306913"
+       id="rect4-7"
+       width="30.92524"
+       height="7.4373393"
+       x="61.37252"
+       y="117.66787" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans, @opsz=32,wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'opsz' 32, 'wght' 700;writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+       x="31.958942"
+       y="122.83016"
+       id="text6"><tspan
+         sodipodi:role="line"
+         id="tspan6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans, @opsz=32,wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'opsz' 32, 'wght' 700;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+         x="31.958942"
+         y="122.83016">action</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans, @opsz=32,wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'opsz' 32, 'wght' 700;writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+       x="63.404495"
+       y="123.08686"
+       id="text9"><tspan
+         sodipodi:role="line"
+         id="tspan9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans, @opsz=32,wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'opsz' 32, 'wght' 700;stroke-width:0.3"
+         x="63.404495"
+         y="123.08686">observation</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans, @opsz=32,wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'opsz' 32, 'wght' 700;writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+       x="103.32109"
+       y="123.21522"
+       id="text10"><tspan
+         sodipodi:role="line"
+         id="tspan10"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans, @opsz=32,wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'opsz' 32, 'wght' 700;stroke-width:0.3"
+         x="103.32109"
+         y="123.21522">finish</tspan></text>
+  </g>
+</svg>
