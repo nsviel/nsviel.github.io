@@ -60,14 +60,21 @@
     "href": "en/teaching/misc/index.html",
     "title": "Misc",
     "section": "",
-    "text": "Lecture\nContent\n\n\n\n\nLecture\nAgentic Development\n\n\nLecture\nMake a good CV"
+    "text": "Some uncategorized courses about uncategorized things."
+  },
+  {
+    "objectID": "en/teaching/misc/index.html#presentation",
+    "href": "en/teaching/misc/index.html#presentation",
+    "title": "Misc",
+    "section": "",
+    "text": "Some uncategorized courses about uncategorized things."
   },
   {
     "objectID": "en/teaching/misc/index.html#course-materials",
     "href": "en/teaching/misc/index.html#course-materials",
     "title": "Misc",
-    "section": "",
-    "text": "Lecture\nContent\n\n\n\n\nLecture\nAgentic Development\n\n\nLecture\nMake a good CV"
+    "section": "Course materials",
+    "text": "Course materials\n\n\n\nLecture\nContent\n\n\n\n\nLecture\nAgentic development\n\n\nLecture\nMake a good CV"
   },
   {
     "objectID": "en/teaching/deeplearning/index.html",
@@ -228,7 +235,7 @@
     "href": "fr/index.html",
     "title": "TEACHING",
     "section": "",
-    "text": "Cours\nAcronyme\nNiveau\n\n\n\n\nTraitement Informatique des Données\nTID\nL1\n\n\nIntroduction au Big Data\nIBD\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nSIRI\nM1\n\n\nGeneral-Purpose computing on Graphics Processing Units\nGPGPU\nM1\n\n\nReconstruction 3D\nR3D\nM2\n\n\nDeep Learning\nDL\nM2\n\n\nDivers\nMI\nM1-2"
+    "text": "Cours\nAcronyme\nNiveau\n\n\n\n\nTraitement Informatique des Données\nTID\nL1\n\n\nIntroduction au Big Data\nIBD\nL3\n\n\nSynthèse d’Images par Rendu Inverse\nSIRI\nM1\n\n\nGeneral-Purpose computing on Graphics Processing Units\nGPGPU\nM1\n\n\nReconstruction 3D\nR3D\nM2\n\n\nDeep Learning\nDL\nM2\n\n\nDivers\n-\nM1-2"
   },
   {
     "objectID": "fr/teaching/deeplearning/index.html",
@@ -263,14 +270,21 @@
     "href": "fr/teaching/misc/index.html",
     "title": "Misc",
     "section": "",
-    "text": "Cours\nContenu\n\n\n\n\nCours\nDéveloppement Agentique\n\n\nCours\nFaire un bon CV"
+    "text": "Quelques cours inclassables sur des sujets tout aussi inclassables."
+  },
+  {
+    "objectID": "fr/teaching/misc/index.html#présentation",
+    "href": "fr/teaching/misc/index.html#présentation",
+    "title": "Misc",
+    "section": "",
+    "text": "Quelques cours inclassables sur des sujets tout aussi inclassables."
   },
   {
     "objectID": "fr/teaching/misc/index.html#supports",
     "href": "fr/teaching/misc/index.html#supports",
     "title": "Misc",
-    "section": "",
-    "text": "Cours\nContenu\n\n\n\n\nCours\nDéveloppement Agentique\n\n\nCours\nFaire un bon CV"
+    "section": "Supports",
+    "text": "Supports\n\n\n\nCours\nContenu\n\n\n\n\nCours\nDéveloppement agentique\n\n\nCours\nFaire un bon CV"
   },
   {
     "objectID": "fr/teaching/syntheseimage/index.html",
