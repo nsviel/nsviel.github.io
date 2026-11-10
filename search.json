@@ -109,7 +109,7 @@
     "href": "en/index.html",
     "title": "TEACHING",
     "section": "",
-    "text": "Course\nAcronym\nLevel\n\n\n\n\nComputer-Based Data Processing\nTID\nL1\n\n\nIntroduction to Big Data\nIBD\nL3\n\n\nInverse Rendering for Image Synthesis\nSIRI\nM1\n\n\nGeneral-Purpose Computing on Graphics Processing Units\nGPGPU\nM1\n\n\n3D Reconstruction\nR3D\nM2\n\n\nDeep Learning\nDL\nM2\n\n\nMisc\nMI\nM1-2"
+    "text": "Course\nAcronym\nLevel\n\n\n\n\nComputer-Based Data Processing\nTID\nL1\n\n\nIntroduction to Big Data\nIBD\nL3\n\n\nInverse Rendering for Image Synthesis\nSIRI\nM1\n\n\nGeneral-Purpose Computing on Graphics Processing Units\nGPGPU\nM1\n\n\n3D Reconstruction\nR3D\nM2\n\n\nDeep Learning\nDL\nM2\n\n\nMisc\n-\nM1-2"
   },
   {
     "objectID": "fr/teaching/tid/index.html",
@@ -268,21 +268,21 @@
   {
     "objectID": "fr/teaching/misc/index.html",
     "href": "fr/teaching/misc/index.html",
-    "title": "Misc",
+    "title": "Divers",
     "section": "",
     "text": "Quelques cours inclassables sur des sujets tout aussi inclassables."
   },
   {
     "objectID": "fr/teaching/misc/index.html#présentation",
     "href": "fr/teaching/misc/index.html#présentation",
-    "title": "Misc",
+    "title": "Divers",
     "section": "",
     "text": "Quelques cours inclassables sur des sujets tout aussi inclassables."
   },
   {
     "objectID": "fr/teaching/misc/index.html#supports",
     "href": "fr/teaching/misc/index.html#supports",
-    "title": "Misc",
+    "title": "Divers",
     "section": "Supports",
     "text": "Supports\n\n\n\nCours\nContenu\n\n\n\n\nCours\nDéveloppement agentique\n\n\nCours\nFaire un bon CV"
   },

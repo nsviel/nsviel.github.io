@@ -1,0 +1,286 @@
+<div class="linkedlist-widget">
+  <style>
+    .linkedlist-widget {
+      --node-size: 52px;
+      --pad-x: 26px;
+      --pad-y: 20px;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .linkedlist-widget *,
+    .linkedlist-widget *::before,
+    .linkedlist-widget *::after {
+      box-sizing: border-box;
+    }
+
+    .linkedlist-widget .panel {
+      width: 100%;
+      height: 100%;
+    }
+
+    .linkedlist-widget .chain-wrap {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 120px;
+      padding: var(--pad-y) var(--pad-x);
+      overflow: visible;
+    }
+
+    .linkedlist-widget .node {
+      position: absolute;
+      top: 50%;
+      width: var(--node-size);
+      height: var(--node-size);
+      margin-top: calc(var(--node-size) / -2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(235, 240, 255, 0.92);
+      font-size: 18px;
+      background: rgba(120, 140, 180, 0.18);
+      border: 1px solid rgba(200, 220, 255, 0.1);
+      transition:
+        left 0.5s ease,
+        margin-top 0.25s ease,
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        color 0.25s ease;
+      z-index: 2;
+      user-select: none;
+    }
+
+    .linkedlist-widget .node.active {
+      background: rgba(255, 110, 110, 0.95);
+      box-shadow: 0 0 14px rgba(255, 110, 110, 0.6);
+      transform: scale(1.06);
+      margin-top: calc(var(--node-size) / -2 - 6px);
+      color: #000;
+    }
+
+    .linkedlist-widget .node.done {
+      background: rgba(255, 190, 120, 0.92);
+      box-shadow: 0 0 10px rgba(255, 190, 120, 0.35);
+      color: #000;
+    }
+
+    .linkedlist-widget .link {
+      position: absolute;
+      top: 50%;
+      height: 2px;
+      margin-top: -1px;
+      background: rgba(180, 200, 255, 0.45);
+      transition:
+        left 0.5s ease,
+        width 0.5s ease,
+        background 0.25s ease,
+        opacity 0.25s ease;
+      z-index: 1;
+      opacity: 0.9;
+    }
+
+    .linkedlist-widget .link::after {
+      content: "";
+      position: absolute;
+      right: -1px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-left: 8px solid rgba(180, 200, 255, 0.45);
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      transition: border-left-color 0.25s ease;
+    }
+
+    .linkedlist-widget .link.active {
+      background: rgba(255, 110, 110, 0.95);
+    }
+
+    .linkedlist-widget .link.active::after {
+      border-left-color: rgba(255, 110, 110, 0.95);
+    }
+  </style>
+
+  <div class="panel">
+    <div class="chain-wrap"></div>
+  </div>
+
+  <script>
+    (function () {
+      const root = document.currentScript.closest(".linkedlist-widget");
+      if (!root || root.dataset.initialized === "true") return;
+      root.dataset.initialized = "true";
+
+      const wrap = root.querySelector(".chain-wrap");
+
+      const initialValues = [7, 3, 9, 1, 5, 8];
+      const state = initialValues.map((value, id) => ({ value, id }));
+
+      const nodes = new Map();
+      let links = [];
+
+      let step = 110;
+      let left0 = 40;
+      let nodeSize = 52;
+
+      let stopped = false;
+      let timeoutIds = [];
+
+      function clearTimers() {
+        timeoutIds.forEach(clearTimeout);
+        timeoutIds = [];
+      }
+
+      function sleep(ms) {
+        return new Promise(resolve => {
+          const id = setTimeout(resolve, ms);
+          timeoutIds.push(id);
+        });
+      }
+
+      function xOf(i) {
+        return left0 + i * step;
+      }
+
+      function computeLayout() {
+        const styles = getComputedStyle(root);
+        nodeSize = parseFloat(styles.getPropertyValue("--node-size")) || 52;
+
+        const count = state.length;
+        const innerWidth = wrap.clientWidth - 2 * (parseFloat(styles.getPropertyValue("--pad-x")) || 26);
+        const available = innerWidth - nodeSize;
+
+        step = Math.min(110, available / Math.max(1, count - 1));
+        left0 = Math.max(0, (innerWidth - (nodeSize + step * (count - 1))) / 2)
+          + (parseFloat(styles.getPropertyValue("--pad-x")) || 26);
+      }
+
+      function createScene() {
+        wrap.innerHTML = "";
+        nodes.clear();
+        links = [];
+
+        state.forEach((item) => {
+          const node = document.createElement("div");
+          node.className = "node";
+          node.textContent = item.value;
+          wrap.appendChild(node);
+          nodes.set(item.id, node);
+        });
+
+        for (let i = 0; i < state.length - 1; i++) {
+          const link = document.createElement("div");
+          link.className = "link";
+          wrap.appendChild(link);
+          links.push(link);
+        }
+
+        computeLayout();
+        render();
+      }
+
+      function render(activePair = null, doneFrom = null) {
+        computeLayout();
+
+        state.forEach((item, i) => {
+          const node = nodes.get(item.id);
+          node.style.left = `${xOf(i)}px`;
+          node.className = "node";
+
+          if (doneFrom !== null && i >= doneFrom) {
+            node.classList.add("done");
+          }
+        });
+
+        for (let i = 0; i < links.length; i++) {
+          const x1 = xOf(i) + nodeSize;
+          const x2 = xOf(i + 1);
+          const link = links[i];
+          link.style.left = `${x1}px`;
+          link.style.width = `${Math.max(8, x2 - x1)}px`;
+          link.className = "link";
+        }
+
+        if (activePair) {
+          const [i, j] = activePair;
+          nodes.get(state[i].id).classList.add("active");
+          nodes.get(state[j].id).classList.add("active");
+          if (i < links.length) links[i].classList.add("active");
+        }
+      }
+
+      async function compareAndMaybeSwap(i, doneFrom) {
+        if (stopped) return;
+
+        render([i, i + 1], doneFrom);
+        await sleep(650);
+        if (stopped) return;
+
+        if (state[i].value > state[i + 1].value) {
+          [state[i], state[i + 1]] = [state[i + 1], state[i]];
+          render([i, i + 1], doneFrom);
+          await sleep(700);
+        }
+      }
+
+      async function runSort() {
+        while (!stopped) {
+          for (let pass = 0; pass < state.length - 1; pass++) {
+            const doneFrom = state.length - pass;
+
+            for (let i = 0; i < state.length - 1 - pass; i++) {
+              await compareAndMaybeSwap(i, doneFrom);
+              if (stopped) return;
+            }
+
+            render(null, state.length - 1 - pass);
+            await sleep(700);
+            if (stopped) return;
+          }
+
+          render(null, 0);
+          await sleep(1400);
+          if (stopped) return;
+
+          for (let i = 0; i < initialValues.length; i++) {
+            state[i] = { value: initialValues[i], id: i };
+          }
+
+          render();
+          await sleep(800);
+        }
+      }
+
+      function restart() {
+        stopped = true;
+        clearTimers();
+
+        for (let i = 0; i < initialValues.length; i++) {
+          state[i] = { value: initialValues[i], id: i };
+        }
+
+        stopped = false;
+        createScene();
+        runSort();
+      }
+
+      window.addEventListener("resize", () => render());
+
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          stopped = true;
+          clearTimers();
+        } else {
+          restart();
+        }
+      });
+
+      createScene();
+      runSort();
+    })();
+  </script>
+</div>
